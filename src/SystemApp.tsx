@@ -30,7 +30,7 @@ import { book27 } from "./book27";
 import { book28 } from "./book28";
 import { book29 } from "./book29";
 import { book30 } from "./book30";
-import { chapters, conceptNodes, contentSources } from "./data";
+import { chapters, conceptNodes, contentSources, quarters } from "./data";
 import type { Chapter, DeepReading, VisualModel } from "./data";
 import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
 
@@ -883,6 +883,128 @@ function FoodMeasures({
   );
 }
 
+
+const bookTotalNodes = (item: SystemBook) => item.journeys.reduce((sum, journey) => sum + journey.nodes.length, 0);
+
+function Library({
+  available,
+  currentBookId,
+  visited,
+  bookmarks,
+  onSelectBook,
+  onClose,
+}: {
+  available: SystemBook[];
+  currentBookId: number;
+  visited: string[];
+  bookmarks: string[];
+  onSelectBook: (bookId: number) => void;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  const byId = new Map(available.map((item) => [item.id, item]));
+  const readyTotal = available.reduce((sum, item) => sum + bookTotalNodes(item), 0);
+  const readySeen = available.reduce(
+    (sum, item) => sum + visited.filter((key) => key.startsWith(`${item.id}:`)).length,
+    0,
+  );
+
+  return (
+    <div className="library-backdrop" role="presentation" onClick={onClose}>
+      <div className="library" role="dialog" aria-modal="true" aria-labelledby="library-title" onClick={(event) => event.stopPropagation()}>
+        <header className="library-header">
+          <div>
+            <span>The library</span>
+            <h2 id="library-title">Forty books, four quarters</h2>
+            <p>
+              {available.length} of 40 books are prepared. Books without reviewed interactive content are shown closed
+              rather than filled with generated placeholder text.
+            </p>
+          </div>
+          <button className="library-close" onClick={onClose} aria-label="Close the library"><X size={17} weight="bold" /></button>
+        </header>
+
+        <div className="library-progress">
+          <span className="library-meter"><i style={{ width: `${readyTotal ? (readySeen / readyTotal) * 100 : 0}%` }} /></span>
+          <span><strong>{readySeen}</strong> of {readyTotal} ideas seen across the prepared books</span>
+        </div>
+
+        <div className="library-quarters">
+          {quarters.map((quarter) => {
+            const ready = quarter.books.filter((entry) => byId.has(entry.id));
+            const complete = ready.length === quarter.books.length;
+            return (
+              <section key={quarter.id} className={`library-quarter${complete ? " complete" : ""}${ready.length ? "" : " empty"}`}>
+                <div className="library-quarter-head">
+                  <div>
+                    <span>{complete ? "Complete" : ready.length ? `${ready.length} of ${quarter.books.length} prepared` : "Not yet prepared"}</span>
+                    <h3>{quarter.title}</h3>
+                    <p>{quarter.focus}</p>
+                  </div>
+                  <span className="library-quarter-count" aria-hidden="true">
+                    {quarter.books.map((entry) => <i key={entry.id} className={byId.has(entry.id) ? "ready" : ""} />)}
+                  </span>
+                </div>
+
+                <ul className="library-books">
+                  {quarter.books.map((entry) => {
+                    const prepared = byId.get(entry.id);
+                    if (!prepared) {
+                      return (
+                        <li key={entry.id} className="library-book closed">
+                          <span className="library-book-number">{entry.id}</span>
+                          <span className="library-book-body">
+                            <strong>{entry.title}</strong>
+                            <em>Not yet prepared</em>
+                          </span>
+                        </li>
+                      );
+                    }
+                    const total = bookTotalNodes(prepared);
+                    const seen = visited.filter((key) => key.startsWith(`${prepared.id}:`)).length;
+                    const marks = bookmarks.filter((key) => key.startsWith(`${prepared.id}:`)).length;
+                    const isCurrent = prepared.id === currentBookId;
+                    return (
+                      <li key={entry.id} className={`library-book ready${isCurrent ? " current" : ""}`}>
+                        <button onClick={() => onSelectBook(prepared.id)} aria-current={isCurrent ? "true" : undefined}>
+                          <span className="library-book-number">{prepared.id}</span>
+                          <span className="library-book-body">
+                            <strong>{prepared.title}</strong>
+                            <em>
+                              {prepared.chapters.length} sections · {prepared.journeys.length} journeys
+                              {marks ? ` · ${marks} saved` : ""}
+                            </em>
+                            <span className="library-book-meter"><i style={{ width: `${total ? (seen / total) * 100 : 0}%` }} /></span>
+                          </span>
+                          <span className="library-book-progress">{seen}/{total}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            );
+          })}
+        </div>
+
+        <footer className="library-footer">
+          <p>
+            Each prepared book is an original English synthesis made from a complete reading of the public Arabic text.
+            It is not a translation and does not replace one. Every book carries its own source ledger and editorial note.
+          </p>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
 function AudienceChamber({
   chamber,
   chapterId,
@@ -1054,6 +1176,7 @@ function initialState(): SavedState {
 function SystemApp() {
   const [saved, setSaved] = useState<SavedState>(initialState);
   const [activeConcept, setActiveConcept] = useState<string | null>(null);
+  const [libraryOpen, setLibraryOpen] = useState(false);
   const [activeTaxonomy, setActiveTaxonomy] = useState("all");
   const [activeProcess, setActiveProcess] = useState("all");
   const book = books.find((item) => item.id === saved.bookId) ?? book30;
@@ -1091,6 +1214,7 @@ function SystemApp() {
   }, [saved]);
 
   const selectBook = (bookId: number) => {
+    setLibraryOpen(false);
     const nextBook = books.find((item) => item.id === bookId);
     if (!nextBook) return;
     const nextJourney = nextBook.journeys.find((item) => item.id === nextBook.defaultJourneyId) ?? nextBook.journeys[0];
@@ -1191,18 +1315,16 @@ function SystemApp() {
         </div>
 
         <div className="book-identity">
-          <label className="book-select-shell">
+          <button
+            className="library-trigger"
+            onClick={() => setLibraryOpen(true)}
+            aria-haspopup="dialog"
+            aria-expanded={libraryOpen}
+          >
+            <ListBullets size={14} weight="bold" />
             <span>Book {book.id} of 40</span>
-            <select
-              aria-label="Choose an available book"
-              value={book.id}
-              onChange={(event) => selectBook(Number(event.target.value))}
-            >
-              {books.map((item) => (
-                <option value={item.id} key={item.id}>Book {item.id}: {item.shortTitle}</option>
-              ))}
-            </select>
-          </label>
+            <em>{books.length} prepared</em>
+          </button>
           <strong>{book.title}</strong>
         </div>
 
@@ -1213,6 +1335,17 @@ function SystemApp() {
           <span>{bookmarksInBook}</span>
         </div>
       </header>
+
+      {libraryOpen && (
+        <Library
+          available={books}
+          currentBookId={book.id}
+          visited={saved.visited}
+          bookmarks={saved.bookmarks}
+          onSelectBook={selectBook}
+          onClose={() => setLibraryOpen(false)}
+        />
+      )}
 
       <main className="system-workspace" id="system-main">
         <aside className="question-panel" aria-label="Learning journeys">

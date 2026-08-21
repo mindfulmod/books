@@ -55,6 +55,7 @@ Shared across every book:
 - Named distinctions, misreading guards, reflections, and a self-audit per section
 - Visual argument models beside the reading copy
 - Editorial navigation filters that preserve each book's own source order
+- A four-quarter library showing all forty books, with honest closed states and per-book progress
 - Bookmarks and read progress saved in the browser
 - Desktop and mobile layouts
 - A per-book source ledger and an editorial note stating what the synthesis is and is not
