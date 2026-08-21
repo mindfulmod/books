@@ -34,6 +34,7 @@ import { book31 } from "./book31";
 import { book32 } from "./book32";
 import { book33 } from "./book33";
 import { book34 } from "./book34";
+import { book35 } from "./book35";
 import { chapters, conceptNodes, contentSources, quarters } from "./data";
 import type { Chapter, DeepReading, VisualModel } from "./data";
 import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
@@ -48,7 +49,7 @@ type SavedState = {
 };
 
 
-const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33, book34];
+const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33, book34, book35];
 
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
   { id: "glance", label: "30 seconds", short: "30s" },
