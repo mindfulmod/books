@@ -188,6 +188,36 @@ export type MirrorSubject = {
   obstructions: MirrorObstruction[];
 };
 
+export type FaultMirror = {
+  id: string;
+  label: string;
+  route: string;
+  requires: string;
+  reveals: string;
+  failure: string;
+  question: string;
+  open: string;
+  closed: string;
+  chapterId: number;
+};
+
+export type MeasureDegree = {
+  id: string;
+  label: string;
+  body: string;
+  role: "support" | "balance" | "warning";
+};
+
+export type FoodMeasure = {
+  id: string;
+  label: string;
+  duty: string;
+  note: string;
+  method: string;
+  degrees: MeasureDegree[];
+  chapterId: number;
+};
+
 export type SystemBook = {
   id: number;
   title: string;
@@ -236,6 +266,16 @@ export type SystemBook = {
     title: string;
     note: string;
     items: MirrorSubject[];
+  };
+  faultMirrors?: {
+    title: string;
+    note: string;
+    items: FaultMirror[];
+  };
+  foodMeasures?: {
+    title: string;
+    note: string;
+    items: FoodMeasure[];
   };
   editorialNote?: string;
 };

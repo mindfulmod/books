@@ -1,8 +1,8 @@
 import { assetUrl } from "./assetUrl";
-import type { Chapter, ConceptNode } from "./data";
-import type { Journey, SourceLink, SystemBook } from "./systemTypes";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { FaultMirror, Journey, SourceLink, SystemBook } from "./systemTypes";
 
-export const book22Chapters: Chapter[] = [
+const book22Base: Chapter[] = [
   {
     id: 1,
     shortTitle: "Why character matters",
@@ -1071,6 +1071,166 @@ export const book22Sources: SourceLink[] = [
   },
 ];
 
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({
+  kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
+});
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({
+  kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
+});
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({
+  kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
+});
+
+type Extra = { model: VisualModel; closer: Array<{ title: string; body: string }>; audit: string[] };
+
+const book22Extras: Record<number, Extra> = {
+  1: {
+    model: pair("Two ways to read a good moment", "The section's whole purpose is to make the second question askable.", [["A settled disposition", "The conduct issues easily and repeatedly, because it comes from a formed state.", "support"], ["A polished occasion", "The conduct appeared once, under favourable conditions, and proves nothing yet.", "warning"]]),
+    closer: [
+      { title: "Why testimony comes before technique", body: "Ghazali opens with reports rather than method because the reader has to be persuaded that inward formation is worth sustained attention before any of the diagnosis or treatment that follows will be taken seriously." },
+      { title: "The register he chooses", body: "Bad character is presented as an illness rather than a social inconvenience, which sets up the medical frame he uses for the rest of the book: balance is health, deviation is sickness, and treatment is by opposites." },
+    ],
+    audit: ["Which of my good qualities has only ever been tested cheaply?", "What appears in me when patience becomes expensive?", "Do I treat character as decoration or as condition?", "Whose account of my character am I relying on?"],
+  },
+  2: {
+    model: chain("The four pillars", "Beauty of the inward form requires all four, as beauty of a face requires every feature.", [["Knowledge", "Discerning truth from falsehood in belief and right from wrong in action; its virtue is wisdom.", "support"], ["Anger", "Its contraction and expansion held to what wisdom requires; its virtue is courage.", "balance"], ["Appetite", "Disciplined under the direction of intellect and Law; its virtue is continence.", "balance"], ["Justice", "The power that holds the other two to wisdom's direction; its opposite is not excess but injustice.", "support"]]),
+    closer: [
+      { title: "The four things character is not", body: "Ghazali separates the act, the power, the knowledge, and the state of the soul, and identifies character as only the fourth. A generous man may not give, for want of money; a miser may give, for a motive or for show. Power stands equally toward giving and withholding, and knowledge stands equally toward the beautiful and the ugly." },
+      { title: "Why justice has only one opposite", body: "Every other virtue is a mean with a vice on each side: anger's excess is recklessness and its defect cowardice, appetite's excess is greed and its defect frigidity, wisdom's excess is cunning and its defect stupidity. Justice alone has no two extremes; when it is lost there is one thing opposite it, and that is injustice." },
+    ],
+    audit: ["Which of the four pillars is weakest in me?", "Am I judging my character by acts or by what produces them?", "Where do I lean to excess, and where to defect?", "What would it cost me to do this easily rather than with effort?"],
+  },
+  3: {
+    model: chain("Four ranks of difficulty", "Ghazali grades them by how much has to be undone before anything can be built.", [["Ignorant", "Distinguishes nothing yet and has not settled into appetite; needs only a teacher and a motive.", "support"], ["Ignorant and astray", "Knows the ugliness and is habituated to it; must uproot one habit and plant another.", "balance"], ["And corrupt", "Believes the ugly traits are obligatory and beautiful, and was raised on them.", "warning"], ["And evil", "Sees excellence in doing much harm and boasts of it; the hardest rank of all.", "warning"]]),
+    closer: [
+      { title: "The date-stone", body: "Ghazali's answer to the claim that natures do not change. A date-stone is neither an apple nor a palm, but it was created such that it can become a palm if cultivation is added, and it will never become an apple, not even with cultivation. Anger and appetite cannot be uprooted; they can be made tractable." },
+      { title: "Why appetite is the hardest", body: "Two things make dispositions differ: the strength of the innate drive together with how long it has existed, and reinforcement by repetition and by believing the trait good. Appetite is oldest, created in the child at the beginning; anger comes around seven; discernment later. The oldest is the most disobedient to change." },
+    ],
+    audit: ["Which rank am I actually in?", "What am I calling my nature that is really my habit?", "Have I mistaken governing a drive for uprooting it?", "How long has this been in me, and does that change the method?"],
+  },
+  4: {
+    model: chain("How a trait is acquired", "The route runs through effort and ends in ease, which is the test that it worked.", [["Choose the trait", "Name the disposition wanted rather than the single act.", "support"], ["Force the act", "Do what the generous person does, deliberately and against resistance.", "balance"], ["Persist", "Continue long enough that the resistance stops being the main fact.", "balance"], ["It becomes pleasant", "The generous person is the one who takes pleasure in giving, not the one who gives with dislike.", "support"]]),
+    closer: [
+      { title: "The two routes in", body: "Some are given the balance at the outset by divine generosity and completeness of nature, so that they know without being taught and are disciplined without discipline. Everyone else acquires it by struggle, which means carrying the soul to the acts the wanted disposition requires." },
+      { title: "Where the method ends", body: "The stated goal is that the act issuing from a person becomes pleasurable to him. This is the same test Ghazali applies at the end of Book 29: an act still heavy while being done shows a person forcing himself, not yet a person formed." },
+    ],
+    audit: ["Which act am I performing that has not yet become easy?", "Have I persisted long enough for the question to be fair?", "Do I take pleasure in this, or only credit for it?", "What am I waiting to be given that I could be acquiring?"],
+  },
+  5: {
+    model: pair("Two conditions, two tasks", "Ghazali takes the physician's division and applies it directly.", [["A sound soul", "The work is to lay down the regimen that preserves it and adds to its clarity.", "support"], ["A sick soul", "The work is to bring health to it, which means removing what is deviating and installing its opposite.", "balance"]]),
+    closer: [
+      { title: "Born balanced", body: "As the stomach is sound by nature and takes harm from what befalls it, every child is born balanced and sound in disposition, and the vices are acquired by habituation and teaching. This is why the treatment is described as a return rather than a construction." },
+      { title: "Deficient and capable", body: "The body is not created complete but is perfected by growth and nourishment; the soul is created deficient and capable of perfection, and is perfected by upbringing, refinement of character, and nourishment by knowledge. The parallel governs the whole treatment section." },
+    ],
+    audit: ["Am I preserving or repairing right now?", "What dose does this particular fault need?", "Which of my remedies is fitted to someone else's illness?", "Where have I applied a general rule to a specific case?"],
+  },
+  6: {
+    model: chain("Diagnosis by function", "Ghazali derives the heart's illness from what the heart was made to do.", [["Every organ has an act", "It was created for a specific function.", "support"], ["Illness is failure of that act", "The hand's illness is that it cannot grasp; the eye's, that it cannot see.", "balance"], ["The heart's act", "Knowledge, wisdom, love of God, and delight in remembrance preferred above every appetite.", "support"], ["So the heart's illness", "Something else has become dearer, or the appetite for its own food has fallen away.", "warning"]]),
+    closer: [
+      { title: "The stomach that prefers clay", body: "The sign of knowing God is love, and the sign of love is that nothing is preferred to Him. Whoever has something dearer to him than God has a sick heart, as any stomach to which clay has become dearer than bread and water, or whose appetite for bread and water has fallen away, is sick." },
+      { title: "Why the disease became chronic", body: "Ghazali gives a chain of failures. Most do not know the heart's illness; if they know it, the bitterness of the remedy is hard, since the remedy is opposing appetites; and if they can bear that, they find no skilled physician, because the physicians are the scholars and the illness has taken them too. A sick physician rarely attends to his own cure." },
+    ],
+    audit: ["What is currently dearer to me than what I say is dearest?", "Has my appetite for the heart's own food fallen away?", "Do I know this illness, or only know of it?", "Whom am I taking treatment from, and are they well?"],
+  },
+  7: {
+    model: chain("Four routes to a hidden fault", "Ghazali lists them in descending order of reliability and ascending order of availability.", [["A discerning teacher", "One who sees the soul's faults and is given authority over you; rare in this age.", "support"], ["A truthful friend", "Set as a watcher over your states, who tells you what he dislikes.", "balance"], ["Your enemies", "An angry eye brings out the ugly, so the hostile tongue reports what affection conceals.", "balance"], ["People generally", "Attribute to yourself whatever you find blameworthy among them, since natures are alike.", "support"]]),
+    closer: [
+      { title: "How the second route actually looked", body: "Umar used to say: God have mercy on a man who brings me my faults as a gift. He pressed Salman until he answered that he had joined two dishes at one table and kept two garments, one for day and one for night; and he asked Hudhayfa, who knew the hypocrites, whether he saw any mark of hypocrisy on him. Ghazali's comment is that the more complete a person's intellect and the higher his station, the less he admired himself and the more he suspected himself." },
+      { title: "Why the routes are hard to keep open", body: "Friends are rarely usable: some envy, some have an interest and see as a fault what is not, and some flatter and conceal. Dawud al-Ta'i withdrew from people, asking what he should do with those who hide his faults from him. Ghazali adds that matters have reached the point where the most hateful person to us is the one who counsels us and names our faults, and that this almost declares a weakness of faith." },
+    ],
+    audit: ["Which of the four is actually open to me?", "When someone last named a fault of mine, what did I feel?", "What have my enemies said that was true?", "What do I dislike in others that is mine?"],
+  },
+  8: {
+    model: pair("What the testimony establishes", "The point of the gathered reports is a method, not an atmosphere.", [["Treatment by opposition", "The remedy for a deviation is deliberate movement toward its contrary, carried until the mean is reached.", "support"], ["Treatment by resolve", "A wish to be better, held without any specific opposition being practised.", "warning"]]),
+    closer: [
+      { title: "Why this section is testimony rather than argument", body: "The method of opposing appetite has already been argued. What this section adds is that those who took the route reported the same thing independently, which is offered as evidence of a road rather than as a further proof." },
+      { title: "The bitterness is the point", body: "Ghazali has already said the remedy of the heart is opposing appetites, and that this is the reason most people who recognise the illness still go untreated. The testimony gathered here is meant to make that cost look survivable." },
+    ],
+    audit: ["Which appetite is currently ruling this trait?", "What is its exact contrary, in an act I could do this week?", "Am I opposing it, or resolving to?", "What have I stopped doing because it was bitter?"],
+  },
+  9: {
+    model: chain("How the sign is read", "Ghazali makes the test external so that it cannot be settled by feeling.", [["The premature verdict", "A little struggle leaves gross sins, and the person concludes he is refined.", "warning"], ["The stated equivalence", "Good character is faith and bad character is hypocrisy.", "support"], ["The described traits", "The Book describes the believers and the hypocrites, and those descriptions are the fruits of each.", "balance"], ["Present yourself", "Find all of them, none, or some, and work at what is missing while keeping what is there.", "support"]]),
+    closer: [
+      { title: "Why the test had to be written down", body: "The section exists because a person who has left obvious sins will suppose he has finished. Ghazali answers by giving a list that is not his own and against which the reader can be measured without consulting his own impression." },
+      { title: "Partial results are expected", body: "The presence of all the traits is the sign of good character and the absence of all is the sign of its opposite; the presence of some indicates some. The instruction is to acquire what is missing and preserve what is present, which assumes a mixed result as the normal case." },
+    ],
+    audit: ["Which of the described traits do I actually have?", "Which did I assume I had?", "What did I conclude after leaving my most obvious fault?", "Am I measuring myself against a description or a feeling?"],
+  },
+  10: {
+    model: chain("Why the early years carry so much", "Ghazali treats the child's heart as the most consequential thing entrusted to anyone.", [["A pure substance", "The child's heart is a precious jewel, empty of engraving and receptive to everything.", "support"], ["It inclines where it is bent", "Habituation and company decide which of the two directions become easy.", "balance"], ["The trust", "The child is a trust with those who raise him, and what is planted early is the hardest to change later.", "warning"], ["Gradual formation", "Instruction, company, and habit are applied by degrees rather than imposed at once.", "support"]]),
+    closer: [
+      { title: "Where this section sits in the argument", body: "It follows directly from the account of why dispositions differ. If a trait is reinforced by repetition and by believing it good, then the period in which repetition begins and beliefs are formed is the period in which the most is decided." },
+      { title: "Why it is placed so late", body: "Ghazali gives the definition, the possibility of change, the method, and the diagnosis first. Only after the reader knows what character is and how it moves does the account of upbringing become instructions rather than sentiment." },
+    ],
+    audit: ["What am I habituating in someone who is watching me?", "What was habituated in me before I could examine it?", "Which of my beliefs about what is good was inherited whole?", "What am I imposing at once that should be given by degrees?"],
+  },
+  11: {
+    model: chain("Why arrival fails", "Ghazali runs the failure backwards to its root.", [["No arrival", "The destination is not reached.", "warning"], ["Because no travelling", "The road is not actually being walked.", "warning"], ["Because no will", "Nothing in the person is pulling toward it.", "warning"], ["Because no faith", "Not the tongue's movement, but a seeing that makes the trade obvious.", "warning"]]),
+    closer: [
+      { title: "The bead and the jewel", body: "Whoever has a glass bead and sees a precious jewel loses his desire for the bead, and his will to trade it strengthens. Ghazali's point is that will is not summoned but follows sight, which is why he treats weak will as a symptom rather than a fault to be scolded." },
+      { title: "What he means by faith here", body: "Not the speech of the soul and the tongue's movement with the two testimonies without truthfulness. That resembles a man who affirms the jewel is better than the bead while knowing only the word for the jewel, and such a man, being used to the bead, may well not let it go." },
+    ],
+    audit: ["Do I want this, or want to want it?", "What have I affirmed without having seen?", "Which bead am I used to?", "Who was supposed to show me the road, and did they?"],
+  },
+};
+
+export const book22Chapters: Chapter[] = book22Base.map((chapter) => {
+  const extra = book22Extras[chapter.id];
+  if (!extra) return chapter;
+  return {
+    ...chapter,
+    visualModel: extra.model,
+    deep: chapter.deep ? { ...chapter.deep, closeReading: extra.closer, selfAudit: extra.audit } : chapter.deep,
+  };
+});
+
+export const book22FaultMirrors: FaultMirror[] = [
+  {
+    id: "teacher", label: "A discerning teacher",
+    route: "Sit before a teacher who sees the faults of the soul and is aware of the hidden banes, give him authority over yourself, and follow his direction in your struggle.",
+    requires: "Someone who can actually see this kind of fault, and a genuine surrender of judgment to him about yourself.",
+    reveals: "Not only the fault but the route of its treatment, which is what distinguishes this route from the other three.",
+    failure: "Ghazali says plainly that such a person has become rare in this age, so the route most often fails by having no one to occupy it.",
+    question: "Is there a person whose reading of your character you would accept against your own?",
+    open: "This is the strongest of the four, because it returns a treatment and not only a diagnosis. Use it before the others.",
+    closed: "Then this route is shut, which Ghazali expects. Do not treat the other three as inferior substitutes; they are what he offers next.",
+    chapterId: 7,
+  },
+  {
+    id: "friend", label: "A truthful friend",
+    route: "Seek a truthful, discerning, religious friend and set him as a watcher over your states and actions, to tell you whatever he dislikes in your character, conduct, and inward and outward faults.",
+    requires: "A friend willing to lose your goodwill, and your own willingness to hear it without repayment.",
+    reveals: "What sustained proximity shows, which is mostly the ordinary and repeated rather than the dramatic.",
+    failure: "Friends are rarely usable: some envy and overstate, some have an interest and call a fault what is not, and some flatter and conceal. Ghazali says few will drop the flattery.",
+    question: "Has anyone told you an unwelcome truth about yourself in the last year, and did they suffer for it?",
+    open: "Then protect it. Umar asked Salman directly what he had heard, and pressed him when he tried to be excused.",
+    closed: "Dawud al-Ta'i withdrew from people asking what he should do with those who hide his faults from him. If no one will tell you, that is a fact about your company or about how you receive it.",
+    chapterId: 7,
+  },
+  {
+    id: "enemies", label: "Your enemies",
+    route: "Benefit from the tongues of your enemies, since the eye of displeasure brings out the ugly, and a person may gain more from a hostile enemy who names his faults than from a flattering friend who conceals them.",
+    requires: "The discipline to separate the content of an accusation from the manner and motive of the one making it.",
+    reveals: "Precisely what affection suppresses, which is why Ghazali ranks it above the friend who flatters.",
+    failure: "The obvious one: hostility exaggerates, and the temptation is to dismiss the whole report because part of it is unfair or because of who made it.",
+    question: "What have people who dislike you said about you that you have never seriously examined?",
+    open: "Then take the accusation apart. Ask only whether the thing itself is true, and leave the motive entirely out of that question.",
+    closed: "If no one opposes you at all, you may simply not be visible enough to be corrected, which is not the same as being without fault.",
+    chapterId: 7,
+  },
+  {
+    id: "people", label: "People generally",
+    route: "Mix with people, and whatever you find blameworthy among them, attribute it to yourself and demand it of yourself, since believers are one another's mirrors and natures are alike in following one another.",
+    requires: "Nothing but company, which is why Ghazali places it last and why it remains available when the others are shut.",
+    reveals: "Faults you can recognise easily in another and cannot see directly in yourself, which is the specific problem this route solves.",
+    failure: "It inverts with almost no resistance into a survey of other people's faults, at which point it has stopped working entirely.",
+    question: "What did you find objectionable in someone this week?",
+    open: "Then turn the finding around before you do anything else with it. The route only works in that direction.",
+    closed: "If nothing in anyone struck you as objectionable, either you were not paying attention or you have no material, and the first is more likely.",
+    chapterId: 7,
+  },
+];
+
 export const book22: SystemBook = {
   id: 22,
   title: "Disciplining the Soul and Refining Character",
@@ -1080,4 +1240,9 @@ export const book22: SystemBook = {
   conceptNodes: book22ConceptNodes,
   journeys: book22Journeys,
   sources: book22Sources,
+  faultMirrors: {
+    title: "The four mirrors",
+    note: "Ghazali gives four routes by which a person comes to know his own faults, and notes that the first two have become rare. Work out which are actually open to you. The routes report faults; they do not treat them, and the treatment is the subject of the sections around this one.",
+    items: book22FaultMirrors,
+  },
 };

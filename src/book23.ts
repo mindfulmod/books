@@ -1,8 +1,8 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode } from "./data";
-import type { Journey, SourceLink, SystemBook } from "./systemTypes";
+import type { FoodMeasure, Journey, SourceLink, SystemBook } from "./systemTypes";
 
-export const book23Chapters: Chapter[] = [
+const book23Base: Chapter[] = [
   {
     id: 1,
     shortTitle: "Why hunger enters the argument",
@@ -1073,6 +1073,116 @@ export const book23Sources: SourceLink[] = [
   },
 ];
 
+type Extra23 = { closer: Array<{ title: string; body: string }>; audit: string[] };
+
+const book23Extras: Record<number, Extra23> = {
+  1: {
+    closer: [
+      { title: "Why the book begins here", body: "Ghazali places appetite for food first because he treats it as the earliest root. It is created in the child before anger and long before discernment, which in Book 22 he gives as the reason it is the most disobedient of the drives to change." },
+      { title: "The register of the opening", body: "This section gathers reports rather than method, and its work is to create urgency about satiety before the measures arrive. The argument for how much and when comes two sections later." },
+    ],
+    audit: ["When did I last feel hunger without treating it as an emergency?", "What does a full stomach make easy in me?", "Which other appetite gets stronger when this one is fed?", "Have I ever tested this, or only read about it?"],
+  },
+  2: {
+    closer: [
+      { title: "The benefits are stated as effects, not as merits", body: "Ghazali's list works by consequence: what clearing the stomach does to the clarity of the heart, the lightness of the body, the quieting of the other appetites, and the capacity to stand at night. The argument is mechanical rather than devotional." },
+      { title: "Why satiety is treated as a cause", body: "The harms of fullness are not presented as a separate vice but as the condition in which the other faults become available. This is what earns appetite its position at the head of the quarter's practical books." },
+    ],
+    audit: ["What does fullness cost me that I have never counted?", "Which of the stated benefits could I check this week?", "Do I eat to remove hunger or to reach pleasure?", "What happens to my thinking when I am heavy?"],
+  },
+  3: {
+    closer: [
+      { title: "The gradual method", body: "Ghazali is specific about how the amount is reduced. One who eats two loaves and wants one should subtract a twenty-eighth or a thirtieth of a loaf each day, reaching a single loaf within a month without harm and without the change showing. A sudden move is refused because the temperament will not bear it." },
+      { title: "Why the kind matters as well as the amount", body: "Everything delicious a person craves and eats produces exultation in the soul, hardness in the heart, and familiarity with the world's pleasures, until he loves them and hates death, so that the world becomes his garden and death his prison. Denying the soul reverses the arrangement." },
+    ],
+    audit: ["Which of the four measures have I never applied at all?", "Am I trying to move suddenly where he prescribes degrees?", "What would a thirtieth of a loaf a day look like in my case?", "Is my food lawful, before any of the rest is worth calibrating?"],
+  },
+  4: {
+    closer: [
+      { title: "Why the rule varies", body: "Ghazali refuses a single figure. The measure of need differs by age, by person, and by occupation, so what counts as sufficiency for one is stinting for another and extravagance for a third. The four degrees are positions on a scale, not a prescription." },
+      { title: "The condition that limits it", body: "Sahl's rule is quoted as the boundary: God has bound His servants by life, intellect, and strength. If a person fears for the first two he eats, and breaks his fast if fasting, and seeks provision if poor. Only the third may be allowed to weaken." },
+    ],
+    audit: ["Which degree is honestly mine, and which am I comparing myself to?", "Am I in a state of health, work, or need that changes the rule?", "Have I taken someone else's measure as my own?", "What am I risking that the rule does not permit me to risk?"],
+  },
+  5: {
+    closer: [
+      { title: "Why this section exists at all", body: "Having supplied a method for eating less, Ghazali immediately supplies the way it goes wrong. The whole apparatus of measured food is unusually visible, and a visible discipline is available as a claim on other people." },
+      { title: "How the fault is detected", body: "The test he uses throughout the quarter applies exactly here: what happens to the discipline when no one can see it, and what happens to the person when someone else's abstinence is praised instead of his own." },
+    ],
+    audit: ["Would I keep this measure on a day nobody could observe?", "Do I mention what I do not eat?", "How do I feel when another person's restraint is noticed?", "Is the discipline serving the heart or the reputation?"],
+  },
+  6: {
+    closer: [
+      { title: "Why the two desires are treated together", body: "Ghazali's structure links them causally rather than thematically. The stomach is the earlier root, and the second desire draws its force from the first, which is why the book treats food at length before arriving here." },
+      { title: "The governed middle", body: "As with anger in Book 22, the treatment is not eradication but return to the mean. Deficiency and excess are both named as faults, and the aim is a drive that submits to the direction of intellect and Law." },
+    ],
+    audit: ["Where does this drive draw its strength from in my day?", "Which is my failure, excess or deficiency?", "What have I left ungoverned because I called it natural?", "What would the mean look like here, concretely?"],
+  },
+  7: {
+    closer: [
+      { title: "Why it is decided case by case", body: "Ghazali does not answer whether the aspirant should marry. He gives the considerations on both sides and makes the answer depend on the person's condition, which is the same refusal of a single figure he made about the measure of food." },
+      { title: "What tips the decision", body: "The governing question is which choice leaves the heart freer for what it was aiming at. Marriage may remove a preoccupation or install one, and the same is true of abstaining, so the reasoning has to be done about the actual person rather than in general." },
+    ],
+    audit: ["Which choice would leave my attention freer, honestly?", "Am I generalising from someone else's case?", "What am I avoiding rather than deciding?", "Have I described my own condition accurately to anyone?"],
+  },
+};
+
+export const book23Chapters: Chapter[] = book23Base.map((chapter) => {
+  const extra = book23Extras[chapter.id];
+  if (!extra) return chapter;
+  return { ...chapter, deep: chapter.deep ? { ...chapter.deep, closeReading: extra.closer, selfAudit: extra.audit } : chapter.deep };
+});
+
+export const book23FoodMeasures: FoodMeasure[] = [
+  {
+    id: "lawful", label: "Lawfulness", duty: "That he eat nothing but what is lawful",
+    note: "Ghazali puts this first and treats it as the precondition rather than one of the three measures. Worship together with unlawful food, he says, is like building upon the waves of the sea.",
+    method: "This one is not calibrated by degrees. It is settled before the others are worth adjusting, and the grades of scrupulousness belong to the book on the lawful and the unlawful.",
+    degrees: [
+      { id: "settled", label: "Settled", body: "The source of what you eat is known and sound, so the remaining three measures can be applied to something that will hold.", role: "support" },
+      { id: "mixed", label: "Mixed", body: "Some of it is doubtful and has not been examined. Ghazali treats this as the place to work before refining amount, timing, or kind.", role: "balance" },
+      { id: "unexamined", label: "Unexamined", body: "The question has not been asked. Calibrating the other three on this foundation is the building on waves that he describes.", role: "warning" },
+    ],
+    chapterId: 3,
+  },
+  {
+    id: "amount", label: "Amount", duty: "The measure of the food, in littleness and abundance",
+    note: "The first of the three measures proper. Ghazali gives four degrees and expects most readers to sit at the third or beyond.",
+    method: "The reduction must be gradual. One who eats two loaves and wants one should subtract about a thirtieth of a loaf each day, arriving at a single loaf within a month without harm and without the change showing. A sudden move is refused, since the temperament will not bear it and the difficulty becomes great.",
+    degrees: [
+      { id: "sustenance", label: "Bare sustenance", body: "Reduced to the measure below which one cannot subsist. Ghazali calls this the practice of the truthful and cites Sahl al-Tustari, whose provision for a year was three dirhams.", role: "support" },
+      { id: "half-mudd", label: "Half a mudd", body: "A loaf and a little in a day and night, which is about a third of the belly for most people. Umar's habit of seven or nine morsels is placed here.", role: "support" },
+      { id: "mudd", label: "A mudd", body: "Two and a half loaves. This exceeds a third of the belly and approaches two thirds, leaving a third for drink and, Ghazali notes, nothing for remembrance.", role: "balance" },
+      { id: "beyond", label: "Beyond a mudd", body: "Rising toward a mann. Ghazali says what lies past this resembles the extravagance the Quran forbids, for most people.", role: "warning" },
+    ],
+    chapterId: 3,
+  },
+  {
+    id: "timing", label: "Timing", duty: "The measure of its time, in delaying and hastening",
+    note: "The second measure. Ghazali gives three degrees and is explicit that the third is the floor rather than an achievement.",
+    method: "If you are at one meal a day, he prefers it taken before dawn, so that the day's hunger serves the fast and the night's hunger serves the standing. If the thought of food after sunset disturbs the night prayer, split the portion: one part at breaking the fast to help the standing, one at the pre-dawn meal to help the fast.",
+    degrees: [
+      { id: "three-days", label: "Folding three days", body: "Ghazali calls this a great degree that few reach, and only one absorbed in what has cut him from his nature and made him forget his hunger.", role: "support" },
+      { id: "two-days", label: "Two to three days", body: "Not outside ordinary custom, and reachable with seriousness and struggle.", role: "support" },
+      { id: "one-meal", label: "One meal a day", body: "The least of the degrees. Two meals in a day is extravagance, one meal every two days is stinting, and one meal a day is the balance between them.", role: "balance" },
+      { id: "continual", label: "Never hungry", body: "More than one meal, so that no state of hunger occurs at all. Ghazali names this the practice of the pampered and far from the way.", role: "warning" },
+    ],
+    chapterId: 3,
+  },
+  {
+    id: "kind", label: "Kind", duty: "Designating the kind eaten, in taking or leaving what is desired",
+    note: "The third measure, and the one Ghazali argues for by its effect rather than its quantity.",
+    method: "The reason given is causal. Everything delicious a person craves and eats produces exultation in the soul, hardness in the heart, and familiarity with the world's pleasures, until he loves them and hates death, so the world becomes his garden and death his prison. Denying the soul reverses the arrangement.",
+    degrees: [
+      { id: "plainest", label: "Plainest", body: "Unsifted barley, with salt or vinegar as the relish. Ghazali gives this as the lowest of the food and the lowest of the relish.", role: "support" },
+      { id: "middle", label: "Middle", body: "Sifted barley, with vegetable dishes dressed in oils and without meat.", role: "balance" },
+      { id: "highest", label: "Highest", body: "The pith of wheat, with meat and sweets. Sifted, Ghazali calls it the height of luxury.", role: "warning" },
+      { id: "sought", label: "Sought out", body: "Not merely eaten when present but pursued. This is the case his causal argument is aimed at.", role: "warning" },
+    ],
+    chapterId: 3,
+  },
+];
+
 export const book23: SystemBook = {
   id: 23,
   title: "Breaking the Two Desires",
@@ -1082,6 +1192,11 @@ export const book23: SystemBook = {
   conceptNodes: book23ConceptNodes,
   journeys: book23Journeys,
   sources: book23Sources,
+  foodMeasures: {
+    title: "The four measures",
+    note: "Ghazali gives the aspirant four duties regarding the stomach: lawfulness first, then amount, timing, and kind. Set where you actually are on each. The degrees are positions on a scale rather than a prescription, and he is explicit that the measure of need differs by age, person, and occupation.",
+    items: book23FoodMeasures,
+  },
   editorialNote:
     "This synthesis reports Ghazali's argument and historical ascetic practices. It does not authenticate every cited report or convert period-specific fasting, medical, or marriage material into general modern advice.",
 };

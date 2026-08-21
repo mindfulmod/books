@@ -10,6 +10,8 @@ type ChapterDraft = Omit<Chapter, "deep" | "visualModel"> & {
   misreading: string;
   sourceAnchor: string;
   model: VisualModel;
+  closer?: Array<{ title: string; body: string }>;
+  audit?: string[];
 };
 
 const chapter = (draft: ChapterDraft): Chapter => ({
@@ -28,11 +30,13 @@ const chapter = (draft: ChapterDraft): Chapter => ({
     distinction: draft.distinction,
     misreading: draft.misreading,
     observation: draft.reflection,
+    closeReading: draft.closer,
+    selfAudit: draft.audit,
     sourceAnchor: draft.sourceAnchor,
   },
 });
 
-export const book24Chapters: Chapter[] = [
+const book24Base: Chapter[] = [
   chapter({
     id: 1,
     shortTitle: "The danger and gift of speech",
@@ -599,6 +603,171 @@ export const book24Chapters: Chapter[] = [
     ], caption: "The ladder is an editorial synthesis of Ghazali's pedagogical concern. It presents serious learning as a prepared path, not a forbidden summit." },
   }),
 ];
+
+type Extra24 = { closer: Array<{ title: string; body: string }>; audit: string[] };
+
+const book24Extras: Record<number, Extra24> = {
+  1: {
+    closer: [
+      { title: "Why speech gets a book of its own", body: "The tongue is the one organ whose range is unlimited and whose cost is nothing. Every other faculty needs an occasion, an instrument, or an expense; speech needs only the willingness, which is why Ghazali treats its banes as the widest field in the quarter." },
+      { title: "The remedy is stated before the catalogue", body: "Silence is offered first, not as a virtue in itself but because the safe use of an unlimited faculty cannot be secured by rules alone. The twenty banes that follow are what silence is being weighed against." },
+    ],
+    audit: ["What did I say today that cost me nothing and cost someone else something?", "Where do I speak because I can rather than because I should?", "What would I have lost by staying silent?", "Which of my words would I want read back to me?"],
+  },
+  2: {
+    closer: [
+      { title: "The test is narrow on purpose", body: "The measure is not whether the speech is sinful but whether it concerns you. A great deal of harmless talk fails this test, which is why Ghazali places it first among the twenty rather than among the graver ones." },
+      { title: "What counts as concerning you", body: "The boundary is set by need rather than by interest. A matter can be genuinely interesting, genuinely true, and still be none of your affair, and the bane consists exactly in the ease with which those three are confused." },
+    ],
+    audit: ["Did this concern me, or merely interest me?", "What need was served by my knowing it?", "Whose business did I enter today?", "Would I have sought this out if it were dull?"],
+  },
+  3: {
+    closer: [
+      { title: "Excess measured against purpose", body: "This bane is not about talking much in general but about words beyond what the purpose required. A short speech can be excessive and a long one sufficient, so the measure is always taken against the aim rather than against a length." },
+      { title: "Why it follows the first", body: "The first bane concerns speech that should not have begun; this one concerns speech that began rightly and did not stop. Ghazali orders them so that the reader sees the two failures as separate rather than as degrees of the same one." },
+    ],
+    audit: ["What was the purpose, and where did I pass it?", "Which of today's sentences were surplus?", "Do I keep talking to fill a silence or to finish a thought?", "Could I have said that in half the words?"],
+  },
+  4: {
+    closer: [
+      { title: "The object rather than the manner", body: "What is censured here is entering talk about what is morally false in itself. It is possible to discuss such matters calmly, briefly, and truthfully, and still be doing the thing this bane names." },
+      { title: "Why the company matters", body: "Ghazali's treatment attends to what a conversation makes ordinary. Repeated entry into false talk shifts what a person can hear without objection, which is a slower harm than any single instance." },
+    ],
+    audit: ["What did I discuss that should not have been a subject?", "What has become ordinary in my hearing?", "Did I object, change the subject, or join in?", "Whose company decides what I talk about?"],
+  },
+  5: {
+    closer: [
+      { title: "Where the fault sits", body: "Not in disagreement, which may be required, but in the aim of prevailing. Ghazali's marker is what happens when the truth appears on the other side, which is the same test Book 29 makes its first trial." },
+      { title: "The religious dressing", body: "This bane is hardest to see because it wears the clothes of seriousness about the truth. A person defending a correct position for the pleasure of winning has the content on his side and the fault intact." },
+    ],
+    audit: ["Was I hunting the truth or the win?", "What did I do when the other person was right?", "Would I have conceded as readily in private?", "Do I enjoy this more than I want to admit?"],
+  },
+  6: {
+    closer: [
+      { title: "A real right can still be pursued wrongly", body: "This bane concerns someone who is actually owed something. Ghazali's point is that having a claim does not license the manner of pursuing it, and that contentiousness is a fault even where the underlying right is genuine." },
+      { title: "Why it is separated from the previous bane", body: "Disputation seeks victory in an argument; this seeks a right through conflict. The two look alike from outside and have different remedies, which is why they are given separate treatment." },
+    ],
+    audit: ["Is my right real, and is my manner of pursuing it?", "What am I recovering, and what am I punishing?", "Would I accept this settled quietly?", "How much of this is the claim and how much the fight?"],
+  },
+  7: {
+    closer: [
+      { title: "The faculty is not the fault", body: "Eloquence is a gift, and the bane is its use for display. Ghazali is consistent here with the whole quarter: the capacity is examined by what it is being made to do, not condemned in itself." },
+      { title: "How it is detected", body: "The characteristic sign is speech shaped to be admired rather than understood, which shows in the choosing of words that impress at the cost of words that carry." },
+    ],
+    audit: ["Am I being understood or admired?", "Which word did I choose for effect?", "Would I speak this way to one plain listener?", "What is the sentence actually for?"],
+  },
+  8: {
+    closer: [
+      { title: "The harm is in the naming", body: "Foul speech does not merely report a fault; it fixes it to a person in terms designed to wound. Ghazali treats the choice of expression as the offence, distinct from whatever grievance prompted it." },
+      { title: "Where it comes from", body: "The bane is traced to a settled coarseness rather than to a moment of anger, which is why the treatment belongs to character rather than to rules of speech." },
+    ],
+    audit: ["What did I call someone that I would not repeat to them?", "Was the grievance real and the language chosen anyway?", "Where has coarseness become my ordinary register?", "Whom do I speak to worst?"],
+  },
+  9: {
+    closer: [
+      { title: "Habit is the specific fault", body: "Ghazali's concern is the cursing that has become a reflex, detached from any judgment. A word that once carried a claim about someone's standing becomes punctuation, and the person using it no longer means anything by it." },
+      { title: "Why the reflex matters", body: "The words in question make claims about where someone stands with God, and Ghazali treats making such claims automatically as a graver matter than making them angrily." },
+    ],
+    audit: ["What do I say without meaning it?", "Have I made a verdict into a reflex?", "Whom have I consigned somewhere in passing?", "What would I have to believe for that to be true?"],
+  },
+  10: {
+    closer: [
+      { title: "Judged by content, not by form", body: "Ghazali refuses to rule on poetry or song as such. What is examined is what the words say and what they do to the hearer, which puts the same piece in different categories in different mouths." },
+      { title: "Why the distinction is needed", body: "A blanket ruling either way would be easier and would misdescribe the material, which contains wisdom, ordinary delight, and things that corrupt, sometimes in the same tradition." },
+    ],
+    audit: ["What do the words I repeat actually say?", "What does this leave in me afterwards?", "Am I judging the form to avoid judging the content?", "What would I not want quoted back?"],
+  },
+  11: {
+    closer: [
+      { title: "Permitted and bounded", body: "Ghazali affirms playfulness rather than forbidding it, and then sets the limit. What passes the limit is not more jest but jest that has begun to do something else, usually at a particular person's expense." },
+      { title: "How the limit is found", body: "The boundary is located by asking who pays for the amusement. Shared delight and delight taken from someone are the two things this bane keeps apart." },
+    ],
+    audit: ["Who paid for the laugh?", "Would the subject have laughed?", "Am I joking or landing something?", "Where does my humour reliably go?"],
+  },
+  12: {
+    closer: [
+      { title: "The mechanism named", body: "Ridicule works by making a person small in front of others, and its effectiveness is exactly its offence. Ghazali treats the diminishment as the act rather than as a side effect of the joke." },
+      { title: "Why it is placed after playfulness", body: "The two are adjacent and are constantly confused by the person doing them. Placing them in sequence makes the reader compare the case he would defend with the case he would not." },
+    ],
+    audit: ["Whom did I make smaller today?", "In front of whom?", "Would I call it a joke if it were done to me?", "What was I gaining by it?"],
+  },
+  13: {
+    closer: [
+      { title: "Held in trust", body: "The category is not privacy in general but something handed over on the understanding that it would be kept. Ghazali's framing as a trust makes disclosure a breach of an obligation rather than an indiscretion." },
+      { title: "When the trust is implied", body: "A confidence need not be stated to exist. The circumstances of the telling can create it, which is why the bane catches a great deal of speech the speaker never thought of as a disclosure." },
+    ],
+    audit: ["What was I told in confidence that I have repeated?", "Was the trust stated or implied, and does that change anything?", "Whom do I tell things to, and why them?", "What did I gain by passing it on?"],
+  },
+  14: {
+    closer: [
+      { title: "Three cases, one appearance", body: "A promise unkept may have been made without intention to keep it, made sincerely and then abandoned, or made sincerely and defeated by genuine inability. From outside they are identical, and Ghazali separates them because the fault is only in the first two." },
+      { title: "Where the person can be honest", body: "Since only the promiser knows which case applies, this bane is one of the several in the book that can be settled by no one else, which is why it is treated as a matter of self-examination rather than of adjudication." },
+    ],
+    audit: ["Did I mean it when I said it?", "What defeated it, my circumstances or my will?", "How many of my promises are still open?", "Do I promise to end conversations?"],
+  },
+  15: {
+    closer: [
+      { title: "The necessity that qualifies it", body: "Ghazali does not treat truthfulness as a rule without conditions. He examines the cases in which speech may be withheld or turned, and marks the difference between a permission grounded in necessity and one taken for convenience." },
+      { title: "Why restraint is the usual answer", body: "Most of the situations in which people reach for a falsehood can be met by saying less, which is why silence recurs as the remedy rather than a doctrine of permitted untruth." },
+    ],
+    audit: ["Which of my untruths were convenient rather than necessary?", "Could silence have served instead?", "What would it have cost me to be exact?", "Where do I round in my own favour?"],
+  },
+  16: {
+    closer: [
+      { title: "The definition is wider than expected", body: "The offence is mentioning an absent person with what he would dislike, whether or not it is true. Truth is what distinguishes backbiting from slander rather than what makes it permissible." },
+      { title: "The purposes that lift it", body: "Ghazali lists the specific ends for which speech about an absent person is allowed, and the list is short and purpose-bound. Each of them is a reason for saying something to a particular person who can act, not a licence to discuss." },
+    ],
+    audit: ["Would he dislike hearing what I said?", "Was it true, and does that settle anything?", "Which permitted purpose was I serving, exactly?", "Did I tell someone who could act?"],
+  },
+  17: {
+    closer: [
+      { title: "Why the causes are treated separately", body: "Ghazali gives the ruling and then, in a second movement, the motives that make it attractive. Knowing that it is forbidden has plainly not been sufficient, so the treatment addresses what the speech is doing for the speaker." },
+      { title: "The reliable disguises", body: "The motives named tend to arrive already dressed as something else: concern, warning, amusement, or agreement with the company. The disguise is what makes the bane survive being understood." },
+    ],
+    audit: ["What did that conversation do for me?", "Which motive was mine, under the reason I gave?", "Was I warning someone or enjoying it?", "Did I join in to belong?"],
+  },
+  18: {
+    closer: [
+      { title: "The instruction is to stop it", body: "Ghazali's treatment of tale-bearing is unusual in being addressed to the receiver rather than the carrier. The report arrives, and what is asked is that it end there rather than be believed, relayed, or acted on." },
+      { title: "Why it is treated so severely", body: "The reports gathered here place the carrier among the worst, because the harm is not to a reputation but to a relationship, and it is done to someone who has no way of answering." },
+    ],
+    audit: ["What was carried to me, and where did it go next?", "Did I believe it because of who brought it?", "Have I acted on something the other person never heard?", "Am I someone people bring things to?"],
+  },
+  19: {
+    closer: [
+      { title: "The two faces defined", body: "The fault is not adapting one's manner to different people but carrying a different substance to each, so that both believe they have the speaker's agreement. Ghazali marks it as a form of hypocrisy rather than of tact." },
+      { title: "The permitted case beside it", body: "Truthful mediation between two people is placed immediately alongside, since it looks the same from outside. What separates them is whether the aim is repair and whether what is said is true on both sides." },
+    ],
+    audit: ["Do both of them think I agree with them?", "Am I mediating or managing?", "What have I said in one room that I would not repeat in the other?", "Is my aim their repair or my position?"],
+  },
+  20: {
+    closer: [
+      { title: "Six banes, four and two", body: "Ghazali counts precisely: four faults in the praiser and two in the praised. The praiser may overstate to the point of lying; may show a love he does not hold, which makes him ostentatious; may assert what he has no way of knowing; and may harm the one praised." },
+      { title: "Umar's questions", body: "Hearing a man commend another, Umar asked whether he had travelled with him, and whether he had dealt with him in buying and selling. Ghazali uses this to separate praise by absolute qualities, which are known only by inference, from reporting what was witnessed: I saw him pray at night, give charity, make the pilgrimage. The prescribed formula is to say one reckons so-and-so to be such, without exonerating anyone before God." },
+    ],
+    audit: ["Do I know this, or am I inferring it?", "Have I travelled with him or dealt with him?", "Am I showing a warmth I do not hold?", "What will this praise do to him?"],
+  },
+  21: {
+    closer: [
+      { title: "Precision as a duty", body: "Where speech reports what God or His Messenger said, inexactness is not a stylistic matter. Ghazali treats approximate quotation and confident paraphrase as a distinct bane because the words carry authority the speaker did not generate." },
+      { title: "The ordinary form of the fault", body: "It rarely appears as deliberate invention. It appears as repeating what one heard, extending a ruling to a case it did not cover, or stating as settled what is disputed." },
+    ],
+    audit: ["Do I know the wording, or the gist?", "Have I attributed to religion what is my own view?", "Where did I hear this, and did I check?", "Am I stating a dispute as settled?"],
+  },
+  22: {
+    closer: [
+      { title: "The last bane is about readiness", body: "Ghazali closes with speculation entered without preparation, particularly about the divine attributes. The fault is not curiosity but taking up a question whose tools one does not have, in public, where the error travels." },
+      { title: "How it connects to the rest of the quarter", body: "The same counsel appears at the end of Book 29 and inside Book 30: hold your own opinion under suspicion, and for one who will not spend his life on knowledge, do not plunge into the schools. The tongue is where an unprepared judgment becomes other people's problem." },
+    ],
+    audit: ["Do I have the tools for this question?", "Am I reasoning or repeating?", "Whom does my error reach?", "What would it cost me to say I do not know?"],
+  },
+};
+
+export const book24Chapters: Chapter[] = book24Base.map((chapter) => {
+  const extra = book24Extras[chapter.id];
+  if (!extra) return chapter;
+  return { ...chapter, deep: chapter.deep ? { ...chapter.deep, closeReading: extra.closer, selfAudit: extra.audit } : chapter.deep };
+});
 
 export const book24ConceptNodes: ConceptNode[] = [
   { id: "tongue", label: "Tongue", kicker: "A small instrument with broad reach", description: "Ghazali uses tongue for the faculty of speech whose ease and range make it unusually powerful.", position: "left" },

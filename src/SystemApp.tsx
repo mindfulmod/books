@@ -715,6 +715,174 @@ function MirrorObstructions({
   );
 }
 
+
+function FaultMirrors({
+  test,
+  onSelectChapter,
+}: {
+  test: NonNullable<SystemBook["faultMirrors"]>;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const [activeId, setActiveId] = useState(test.items[0].id);
+  const [states, setStates] = useState<Record<string, boolean>>({});
+  const active = test.items.find((item) => item.id === activeId) ?? test.items[0];
+  const state = states[active.id];
+  const answered = test.items.filter((item) => states[item.id] !== undefined).length;
+  const openCount = test.items.filter((item) => states[item.id] === true).length;
+
+  const summary = answered < test.items.length
+    ? `Work through all four. ${answered} of ${test.items.length} considered so far.`
+    : openCount === 0
+      ? "None of the four is open to you. Ghazali expects the first two to be rare, but not all four to be shut, and the fourth needs nothing but company. That result is itself the finding."
+      : openCount === 1
+        ? "One route is open. Use it deliberately rather than waiting for a better one, since the two he ranks highest are the two he says have become rare."
+        : `${openCount} routes are open. They report different things, so the one that is most comfortable is unlikely to be the one that shows the most.`;
+
+  return (
+    <section className="fault-mirrors" aria-labelledby="fault-mirrors-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="fault-mirrors-title">{test.title}</h4>
+        <p>{test.note}</p>
+      </header>
+
+      <div className="fault-mirror-tabs" role="tablist" aria-label="Four routes to knowing a fault">
+        {test.items.map((item, index) => (
+          <button key={item.id} className={`${item.id === active.id ? "active" : ""}${states[item.id] === true ? " open" : states[item.id] === false ? " shut" : ""}`} onClick={() => setActiveId(item.id)} role="tab" aria-selected={item.id === active.id}>
+            <span className="fault-mirror-face" aria-hidden="true"><i /></span>
+            <small>Route {String(index + 1).padStart(2, "0")}</small>
+            <strong>{item.label}</strong>
+            <em>{states[item.id] === true ? "open" : states[item.id] === false ? "shut" : "unconsidered"}</em>
+          </button>
+        ))}
+      </div>
+
+      <div className="fault-mirror-reading" role="tabpanel">
+        <div className="fault-mirror-route">
+          <span>Ghazali's description</span>
+          <p>{active.route}</p>
+        </div>
+        <div className="fault-mirror-grid">
+          <div><span>What it requires</span><p>{active.requires}</p></div>
+          <div><span>What it reveals</span><p>{active.reveals}</p></div>
+          <div><span>How it fails</span><p>{active.failure}</p></div>
+        </div>
+        <div className="fault-mirror-question">
+          <h5>{active.question}</h5>
+          <div className="fault-mirror-answer-buttons" aria-label="Is this route open to you?">
+            <button className={state === true ? "active open" : "open"} onClick={() => setStates((c) => ({ ...c, [active.id]: true }))} aria-pressed={state === true}>
+              <span aria-hidden="true" />Open to me
+            </button>
+            <button className={state === false ? "active shut" : "shut"} onClick={() => setStates((c) => ({ ...c, [active.id]: false }))} aria-pressed={state === false}>
+              <span aria-hidden="true" />Shut to me
+            </button>
+          </div>
+        </div>
+        <div className={`fault-mirror-interpretation ${state === true ? "open" : state === false ? "shut" : "empty"}`} aria-live="polite">
+          <p>{state === undefined ? "Decide whether this route is actually available to you, rather than whether it sounds good." : state ? active.open : active.closed}</p>
+          {state !== undefined && (
+            <button onClick={() => onSelectChapter(active.chapterId)}>Read the source section <ArrowRight size={15} weight="bold" /></button>
+          )}
+        </div>
+      </div>
+
+      <div className={`fault-mirror-summary ${answered === test.items.length ? "complete" : ""}`}>
+        <div className="fault-mirror-plan" aria-hidden="true">
+          {test.items.map((item) => <span key={item.id} className={states[item.id] === true ? "open" : states[item.id] === false ? "shut" : "empty"}><i /></span>)}
+        </div>
+        <div>
+          <span>{answered} of {test.items.length} considered</span>
+          <strong>{summary}</strong>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+function FoodMeasures({
+  test,
+  onSelectChapter,
+}: {
+  test: NonNullable<SystemBook["foodMeasures"]>;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const [activeId, setActiveId] = useState(test.items[0].id);
+  const [picks, setPicks] = useState<Record<string, string>>({});
+  const active = test.items.find((item) => item.id === activeId) ?? test.items[0];
+  const picked = picks[active.id];
+  const pickedDegree = active.degrees.find((d) => d.id === picked);
+  const set = test.items.filter((item) => picks[item.id]).length;
+  const warned = test.items.filter((item) => {
+    const p = picks[item.id];
+    return p && item.degrees.find((d) => d.id === p)?.role === "warning";
+  });
+
+  const summary = set < test.items.length
+    ? `Set all four to see them together. ${set} of ${test.items.length} placed so far.`
+    : warned.length === 0
+      ? "None of the four sits in the outer band. Keep the reading provisional, and note that Ghazali expects the measure to shift with age, work, and health rather than to be settled once."
+      : `${warned.length} of the four sit in the outer band: ${warned.map((m) => m.label.toLowerCase()).join(", ")}. Take the earliest of them first, and move by degrees rather than at once.`;
+
+  return (
+    <section className="food-measures" aria-labelledby="food-measures-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="food-measures-title">{test.title}</h4>
+        <p>{test.note}</p>
+      </header>
+
+      <div className="measure-tabs" role="tablist" aria-label="Four measures">
+        {test.items.map((item) => {
+          const p = picks[item.id];
+          const role = p ? item.degrees.find((d) => d.id === p)?.role : undefined;
+          return (
+            <button key={item.id} className={`${item.id === active.id ? "active" : ""}${role ? ` ${role}` : ""}`} onClick={() => setActiveId(item.id)} role="tab" aria-selected={item.id === active.id}>
+              <strong>{item.label}</strong>
+              <em>{p ? item.degrees.find((d) => d.id === p)?.label : "unset"}</em>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="measure-duty">
+        <span>{active.duty}</span>
+        <p><strong>Why it is a measure</strong>{active.note}</p>
+      </div>
+
+      <div className="measure-scale" role="group" aria-label={`Degrees for ${active.label}`}>
+        {active.degrees.map((degree, index) => (
+          <button key={degree.id} className={`${degree.role}${picked === degree.id ? " active" : ""}`} onClick={() => setPicks((c) => ({ ...c, [active.id]: degree.id }))} aria-pressed={picked === degree.id}>
+            <i aria-hidden="true" />
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            <strong>{degree.label}</strong>
+          </button>
+        ))}
+      </div>
+
+      <div className={`measure-reading ${pickedDegree?.role ?? "empty"}`} aria-live="polite">
+        <p>{pickedDegree ? pickedDegree.body : "Choose the degree that actually describes you, not the one you intend."}</p>
+        <div><span>Ghazali's method here</span><strong>{active.method}</strong></div>
+        <button onClick={() => onSelectChapter(active.chapterId)}>Read the source section <ArrowRight size={15} weight="bold" /></button>
+      </div>
+
+      <div className={`measure-summary ${set === test.items.length ? "complete" : ""}`}>
+        <div className="measure-plan" aria-hidden="true">
+          {test.items.map((item) => {
+            const p = picks[item.id];
+            const role = p ? item.degrees.find((d) => d.id === p)?.role : "empty";
+            return <span key={item.id} className={role}><i /></span>;
+          })}
+        </div>
+        <div>
+          <span>{set} of {test.items.length} placed</span>
+          <strong>{summary}</strong>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AudienceChamber({
   chamber,
   chapterId,
@@ -1360,6 +1528,22 @@ function SystemApp() {
                     key={`solitude-test:${book.id}`}
                     test={book.solitudeTest}
                     chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.foodMeasures && (
+                  <FoodMeasures
+                    key={`food-measures:${book.id}`}
+                    test={book.foodMeasures}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.faultMirrors && (
+                  <FaultMirrors
+                    key={`fault-mirrors:${book.id}`}
+                    test={book.faultMirrors}
                     onSelectChapter={selectChapter}
                   />
                 )}

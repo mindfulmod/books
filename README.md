@@ -35,9 +35,9 @@ The System edition currently carries **ten books, 21 through 30**, which is the 
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
-| 21 | The Wonders of the Heart | 15 | 4 | — |
-| 22 | Disciplining the Soul and Refining Character | 11 | 5 | — |
-| 23 | Breaking the Two Desires | 7 | 4 | — |
+| 21 | The Wonders of the Heart | 15 | 4 | Five obstructions |
+| 22 | Disciplining the Soul and Refining Character | 11 | 5 | Four mirrors |
+| 23 | Breaking the Two Desires | 7 | 4 | Four measures |
 | 24 | The Banes of the Tongue | 22 | 7 | Speech atlas |
 | 25 | Anger, Rancour, and Envy | 14 | 5 | Moral-state path |
 | 26 | The Censure of This World | 15 | 5 | World lens |
@@ -45,6 +45,8 @@ The System edition currently carries **ten books, 21 through 30**, which is the 
 | 28 | The Censure of Status and Ostentation | 22 | 5 | Audience chamber |
 | 29 | The Censure of Pride and Conceit | 17 | 5 | Solitude test |
 | 30 | The Censure of Delusion | 17 | 5 | Substitution test |
+
+Every book now carries the same layers, so the quarter reads at one depth throughout.
 
 Shared across every book:
 
