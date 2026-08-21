@@ -2866,6 +2866,130 @@ body.system-page {
 
 .repentance-summary > div strong { color: #57452e; font-size: 10px; font-weight: 560; line-height: 1.6; }
 
+.duty-finder { margin-top: 52px; padding-top: 27px; border-top: 1px solid #dfc69d; }
+
+.duty-finder > header > span {
+  display: block; color: color-mix(in srgb, var(--journey) 76%, #986426);
+  font-size: 8px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase;
+}
+
+.duty-finder > header h4 {
+  margin-top: 5px; color: #3f3120;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(25px, 2.5vw, 36px); font-weight: 600; letter-spacing: -0.036em; line-height: 1.06;
+}
+
+.duty-finder > header p { max-width: 72ch; margin-top: 10px; color: #746047; font-size: 11px; line-height: 1.62; }
+
+.duty-cases { display: flex; gap: 6px; margin-top: 22px; padding-bottom: 5px; overflow-x: auto; scrollbar-color: #cdb58d transparent; scrollbar-width: thin; }
+
+.duty-cases button {
+  flex: 0 0 auto; padding: 8px 13px; border: 1px solid #dbc29a; border-radius: 999px;
+  color: #766046; background: #fff9ed; font-size: 9px; font-weight: 750; cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.duty-cases button:hover, .duty-cases button.active {
+  border-color: color-mix(in srgb, var(--journey) 55%, #caab78); color: #3e3020;
+  background: color-mix(in srgb, var(--journey) 8%, #fff9ed);
+}
+
+.duty-cases button:active { transform: scale(0.97); }
+
+.duty-condition {
+  display: grid; grid-template-columns: minmax(145px, 0.48fr) minmax(280px, 1.52fr); gap: 23px; align-items: center;
+  margin-top: 15px; padding: 16px 18px; border: 1px solid #e1cba8; border-left: 4px solid var(--journey);
+  background: linear-gradient(120deg, rgba(255,255,255,0.64), transparent 48%), color-mix(in srgb, var(--journey) 7%, #f8ead3);
+}
+
+.duty-condition > span { color: #493723; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 16px; font-weight: 620; line-height: 1.25; }
+.duty-condition p { color: #695740; font-size: 10px; line-height: 1.58; }
+.duty-condition p strong {
+  display: block; margin-bottom: 4px; color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px; font-weight: 820; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.duty-steps { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; list-style: none; }
+
+.duty-steps > li {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: center;
+  padding: 15px 18px; border: 1px solid #e3d1b5; border-left: 3px solid #ddc7a4; background: #fffcf5;
+  transition: border-left-color 170ms ease, background 170ms ease;
+}
+
+.duty-steps > li.yes { border-left-color: #cf9340; }
+.duty-steps > li.no { border-left-color: #7fa9c4; }
+
+.duty-step-head small {
+  display: block; margin-bottom: 4px; color: #9c8462;
+  font-size: 7px; font-weight: 820; letter-spacing: 0.11em; text-transform: uppercase;
+}
+
+.duty-step-head h5 {
+  max-width: 62ch; color: #443423;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(15px, 1.3vw, 19px); font-weight: 600; line-height: 1.3;
+}
+
+.duty-step-buttons { display: flex; gap: 7px; }
+
+.duty-step-buttons button {
+  display: inline-flex; gap: 7px; align-items: center; padding: 8px 15px;
+  border: 1px solid #dcc49d; border-radius: 999px; color: #766046; background: #fff9ed;
+  font-size: 9px; font-weight: 760; cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.duty-step-buttons button span { width: 8px; height: 8px; border: 1px solid #ceb489; border-radius: 50%; }
+.duty-step-buttons button.yes:hover span, .duty-step-buttons button.active.yes span { border-color: #cf9340; background: #cf9340; }
+.duty-step-buttons button.no:hover span, .duty-step-buttons button.active.no span { border-color: #7fa9c4; background: #7fa9c4; }
+.duty-step-buttons button.active { color: #3e3020; border-color: #c9ab78; background: #fff4e0; }
+
+.duty-step-reading {
+  grid-column: 1 / -1; padding-top: 10px; margin-top: 2px; border-top: 1px solid #efe2ca;
+  color: #6b5941; font-size: 10px; line-height: 1.62;
+}
+
+.duty-verdict {
+  display: flex; flex-direction: column; gap: 11px; align-items: flex-start;
+  margin-top: 14px; padding: 19px 20px; border: 1px solid #e1cba8; border-left: 4px solid #ddc7a4;
+  border-radius: 4px 18px 4px 18px; background: #fffaf0;
+}
+
+.duty-verdict.leave { border-left-color: #be6655; }
+.duty-verdict.remove { border-left-color: #7fa9c4; }
+.duty-verdict.patience { border-left-color: #cf9340; }
+.duty-verdict.both { border-left-color: #4d9a7c; }
+
+.duty-verdict-head > span {
+  display: block; color: #8a7357; font-size: 7px; font-weight: 820; letter-spacing: 0.11em; text-transform: uppercase;
+}
+
+.duty-verdict-head > strong {
+  display: block; margin-top: 4px; color: #3f3120;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 21px; font-weight: 620; letter-spacing: -0.02em;
+}
+
+.duty-verdict > p { max-width: 74ch; color: #6b5941; font-size: 11px; line-height: 1.66; }
+.duty-verdict.empty > p { color: #8b7658; font-style: italic; }
+.duty-verdict > div:not(.duty-verdict-head) { align-self: stretch; padding: 13px 15px; border: 1px solid #e6d6bc; background: #fdf4e6; }
+
+.duty-verdict > div:not(.duty-verdict-head) span {
+  display: block; margin-bottom: 4px; color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px; font-weight: 820; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.duty-verdict > div:not(.duty-verdict-head) strong { color: #57452e; font-size: 10px; font-weight: 560; line-height: 1.6; }
+
+.duty-verdict > button {
+  display: inline-flex; gap: 7px; align-items: center; padding: 9px 15px;
+  border: 1px solid #d3b98f; border-radius: 999px; color: #4d3b25; background: #fff5e4;
+  font-size: 9px; font-weight: 760; cursor: pointer; transition: border-color 160ms ease, background 160ms ease;
+}
+
+.duty-verdict > button:hover { border-color: color-mix(in srgb, var(--journey) 55%, #c6a672); background: color-mix(in srgb, var(--journey) 9%, #fff5e4); }
+
 @media (max-width: 1030px) {
   body.system-page { overflow: auto; }
 
@@ -6779,6 +6903,19 @@ body.system-page {
   .repentance-interpretation > div { border-top: 1px solid #e6d6bc; border-left: 0; }
   .repentance-summary { justify-items: start; gap: 12px; }
   .repentance-controls { justify-content: flex-start; }
+
+  .duty-finder { margin-top: 42px; }
+
+  .duty-cases {
+    margin-right: -18px; margin-left: -18px; padding-right: 18px; padding-left: 18px;
+    scroll-padding-left: 18px; scroll-snap-type: x mandatory; scrollbar-width: none;
+  }
+
+  .duty-cases::-webkit-scrollbar { display: none; }
+  .duty-cases button { scroll-snap-align: start; }
+  .duty-condition { grid-template-columns: 1fr; gap: 8px; }
+  .duty-steps > li { grid-template-columns: 1fr; gap: 11px; }
+  .duty-step-buttons { justify-content: flex-start; }
 }
 
 
@@ -6802,7 +6939,8 @@ body.system-page {
   .fault-mirrors button,
   .fault-mirror-face,
   .food-measures button,
-  .repentance-check button {
+  .repentance-check button,
+  .duty-finder button {
     animation: none;
     transition: none;
   }

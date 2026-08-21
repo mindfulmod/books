@@ -31,6 +31,7 @@ import { book28 } from "./book28";
 import { book29 } from "./book29";
 import { book30 } from "./book30";
 import { book31 } from "./book31";
+import { book32 } from "./book32";
 import { chapters, conceptNodes, contentSources, quarters } from "./data";
 import type { Chapter, DeepReading, VisualModel } from "./data";
 import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
@@ -45,7 +46,7 @@ type SavedState = {
 };
 
 
-const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31];
+const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32];
 
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
   { id: "glance", label: "30 seconds", short: "30s" },
@@ -1115,6 +1116,111 @@ function RepentanceCheck({
   );
 }
 
+
+function DutyFinder({
+  test,
+  onSelectChapter,
+}: {
+  test: NonNullable<SystemBook["dutyFinder"]>;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const [activeId, setActiveId] = useState(test.items[0].id);
+  const [answers, setAnswers] = useState<Record<string, boolean>>({});
+  const active = test.items.find((item) => item.id === activeId) ?? test.items[0];
+
+  const answerOf = (stepId: string) => answers[`${active.id}:${stepId}`];
+  const absolute = answerOf("absolute");
+  const removable = answerOf("removable");
+  const blessing = answerOf("blessing");
+
+  const verdictId = absolute === undefined
+    ? undefined
+    : absolute
+      ? "leave"
+      : removable === undefined
+        ? undefined
+        : removable
+          ? "remove"
+          : blessing === undefined
+            ? undefined
+            : blessing
+              ? "both"
+              : "patience";
+  const verdict = verdictId ? active.verdicts.find((item) => item.id === verdictId) : undefined;
+
+  const visible = active.steps.filter((step) => {
+    if (step.id === "absolute") return true;
+    if (step.id === "removable") return absolute === false;
+    return absolute === false && removable === false;
+  });
+
+  const chooseItem = (itemId: string) => {
+    setActiveId(itemId);
+  };
+
+  return (
+    <section className="duty-finder" aria-labelledby="duty-finder-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="duty-finder-title">{test.title}</h4>
+        <p>{test.note}</p>
+      </header>
+
+      <div className="duty-cases" role="tablist" aria-label="Choose what to sort">
+        {test.items.map((item) => (
+          <button key={item.id} className={item.id === active.id ? "active" : ""} onClick={() => chooseItem(item.id)} role="tab" aria-selected={item.id === active.id}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="duty-condition">
+        <span>{active.condition}</span>
+        <p><strong>Before you begin</strong>{active.note}</p>
+      </div>
+
+      <ol className="duty-steps">
+        {visible.map((step, index) => {
+          const value = answerOf(step.id);
+          return (
+            <li key={step.id} className={value === undefined ? "" : value ? "yes" : "no"}>
+              <div className="duty-step-head">
+                <small>Question {index + 1}</small>
+                <h5>{step.question}</h5>
+              </div>
+              <div className="duty-step-buttons" aria-label={step.label}>
+                <button className={value === true ? "active yes" : "yes"} onClick={() => setAnswers((c) => ({ ...c, [`${active.id}:${step.id}`]: true }))} aria-pressed={value === true}>
+                  <span aria-hidden="true" />Yes
+                </button>
+                <button className={value === false ? "active no" : "no"} onClick={() => setAnswers((c) => ({ ...c, [`${active.id}:${step.id}`]: false }))} aria-pressed={value === false}>
+                  <span aria-hidden="true" />No
+                </button>
+              </div>
+              {value !== undefined && <p className="duty-step-reading">{value ? step.yes : step.no}</p>}
+            </li>
+          );
+        })}
+      </ol>
+
+      <div className={`duty-verdict ${verdictId ?? "empty"}`} aria-live="polite">
+        {verdict ? (
+          <>
+            <div className="duty-verdict-head">
+              <span>The duty here</span>
+              <strong>{verdict.name}</strong>
+            </div>
+            <p>{verdict.body}</p>
+            <div><span>What this means</span><strong>{verdict.action}</strong></div>
+            <button onClick={() => onSelectChapter(verdict.chapterId)}>Read the source section <ArrowRight size={15} weight="bold" /></button>
+          </>
+        ) : (
+          <p>Answer the questions in order. The later ones only apply if the earlier ones did not already settle the case.</p>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function AudienceChamber({
   chamber,
   chapterId,
@@ -1771,6 +1877,14 @@ function SystemApp() {
                     key={`solitude-test:${book.id}`}
                     test={book.solitudeTest}
                     chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.dutyFinder && (
+                  <DutyFinder
+                    key={`duty-finder:${book.id}`}
+                    test={book.dutyFinder}
                     onSelectChapter={selectChapter}
                   />
                 )}

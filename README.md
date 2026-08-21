@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **eleven books**: the complete Quarter of Perils, books 21 to 30, and the opening book of the Quarter of Deliverance.
+The System edition currently carries **twelve books**: the complete Quarter of Perils, books 21 to 30, and the first two books of the Quarter of Deliverance.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -46,6 +46,7 @@ The System edition currently carries **eleven books**: the complete Quarter of P
 | 29 | The Censure of Pride and Conceit | 17 | 5 | Solitude test |
 | 30 | The Censure of Delusion | 17 | 5 | Substitution test |
 | 31 | Repentance | 17 | 5 | Three-part check |
+| 32 | Patience and Gratitude | 22 | 6 | Duty finder |
 
 Every book now carries the same layers, so the quarter reads at one depth throughout.
 
@@ -65,6 +66,6 @@ Each book's reading copy is an original English synthesis made from a complete r
 
 ## Visual asset note
 
-Books 29, 30, and 31 ship without their journey plates. `artwork/BOOK29-ART-MANIFEST.md`, `artwork/BOOK30-ART-MANIFEST.md`, and `artwork/BOOK31-ART-MANIFEST.md` list the exact filenames, dimensions, and the argument each plate has to carry; the app already references those paths, so dropping the files in requires no code change.
+Books 29 through 32 ship without their journey plates. The manifests in `artwork/` list the exact filenames, dimensions, and the argument each plate has to carry; the app already references those paths, so dropping the files in requires no code change.
 
 The four concept plates in `public/assets/` are optimized display copies of interpretive illustrations generated for this prototype. Full-resolution PNG masters are preserved in `artwork/source/`. They do not claim to reproduce real mosques or depict unseen realities. All architectural forms used as built references are named and linked inside the source ledger.

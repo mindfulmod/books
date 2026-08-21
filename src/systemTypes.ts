@@ -239,6 +239,34 @@ export type RepentanceSubject = {
   parts: RepentancePart[];
 };
 
+export type DutyVerdictId = "leave" | "remove" | "patience" | "both";
+
+export type DutyStep = {
+  id: "absolute" | "removable" | "blessing";
+  label: string;
+  question: string;
+  yes: string;
+  no: string;
+  chapterId: number;
+};
+
+export type DutyVerdict = {
+  id: DutyVerdictId;
+  name: string;
+  body: string;
+  action: string;
+  chapterId: number;
+};
+
+export type DutyCase = {
+  id: string;
+  label: string;
+  condition: string;
+  note: string;
+  steps: DutyStep[];
+  verdicts: DutyVerdict[];
+};
+
 export type SystemBook = {
   id: number;
   title: string;
@@ -302,6 +330,11 @@ export type SystemBook = {
     title: string;
     note: string;
     items: RepentanceSubject[];
+  };
+  dutyFinder?: {
+    title: string;
+    note: string;
+    items: DutyCase[];
   };
   editorialNote?: string;
 };
