@@ -30,6 +30,7 @@ import { book27 } from "./book27";
 import { book28 } from "./book28";
 import { book29 } from "./book29";
 import { book30 } from "./book30";
+import { book31 } from "./book31";
 import { chapters, conceptNodes, contentSources, quarters } from "./data";
 import type { Chapter, DeepReading, VisualModel } from "./data";
 import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
@@ -44,7 +45,7 @@ type SavedState = {
 };
 
 
-const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30];
+const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31];
 
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
   { id: "glance", label: "30 seconds", short: "30s" },
@@ -1005,6 +1006,115 @@ function Library({
   );
 }
 
+
+function RepentanceCheck({
+  test,
+  onSelectChapter,
+}: {
+  test: NonNullable<SystemBook["repentanceCheck"]>;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const [activeId, setActiveId] = useState(test.items[0].id);
+  const [activePartId, setActivePartId] = useState(test.items[0].parts[0].id);
+  const [marks, setMarks] = useState<Record<string, boolean>>({});
+  const active = test.items.find((item) => item.id === activeId) ?? test.items[0];
+  const activePart = active.parts.find((part) => part.id === activePartId) ?? active.parts[0];
+  const markKey = `${active.id}:${activePart.id}`;
+  const mark = marks[markKey];
+  const answered = active.parts.filter((part) => marks[`${active.id}:${part.id}`] !== undefined).length;
+  const missing = active.parts.filter((part) => marks[`${active.id}:${part.id}`] === false);
+
+  const chooseItem = (itemId: string) => {
+    const next = test.items.find((item) => item.id === itemId);
+    if (!next) return;
+    setActiveId(itemId);
+    setActivePartId(next.parts[0].id);
+  };
+
+  const summary = answered < active.parts.length
+    ? `Work all five in order. ${answered} of ${active.parts.length} checked so far.`
+    : missing.length === 0
+      ? "All five are present by your own reading. Ghazali's guarantee attaches to a repentance that met its conditions, so hold the result as a description of the work rather than a verdict on the outcome."
+      : missing.length === 1
+        ? `One limb is missing: ${missing[0].label.toLowerCase()}. On Ghazali's account the parts are ordered, so this is the one to supply rather than redoubling the others.`
+        : `${missing.length} limbs are missing: ${missing.map((part) => part.label.toLowerCase()).join(", ")}. Take the earliest of them, since each part is produced by the one before it.`;
+
+  return (
+    <section className="repentance-check" aria-labelledby="repentance-check-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="repentance-check-title">{test.title}</h4>
+        <p>{test.note}</p>
+      </header>
+
+      <div className="repentance-subjects" role="tablist" aria-label="Choose what to check">
+        {test.items.map((item) => (
+          <button key={item.id} className={item.id === active.id ? "active" : ""} onClick={() => chooseItem(item.id)} role="tab" aria-selected={item.id === active.id}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="repentance-subject">
+        <span>{active.subject}</span>
+        <p><strong>Before you begin</strong>{active.note}</p>
+      </div>
+
+      <div className="repentance-parts" role="tablist" aria-label={`Five points for ${active.label}`}>
+        {active.parts.map((part) => {
+          const state = marks[`${active.id}:${part.id}`];
+          return (
+            <button key={part.id} className={`${part.id === activePart.id ? "active" : ""}${state === true ? " present" : state === false ? " missing" : ""}`} onClick={() => setActivePartId(part.id)} role="tab" aria-selected={part.id === activePart.id}>
+              <small>{part.limb}</small>
+              <strong>{part.label}</strong>
+              <em>{state === true ? "present" : state === false ? "missing" : "unchecked"}</em>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="repentance-reading" role="tabpanel">
+        <div className="repentance-question">
+          <h5>{activePart.question}</h5>
+        </div>
+        <div className="repentance-answer-buttons" aria-label="Is this part present?">
+          <button className={mark === true ? "active present" : "present"} onClick={() => setMarks((c) => ({ ...c, [markKey]: true }))} aria-pressed={mark === true}>
+            <span aria-hidden="true" />Present
+          </button>
+          <button className={mark === false ? "active missing" : "missing"} onClick={() => setMarks((c) => ({ ...c, [markKey]: false }))} aria-pressed={mark === false}>
+            <span aria-hidden="true" />Missing
+          </button>
+        </div>
+        <div className={`repentance-interpretation ${mark === true ? "present" : mark === false ? "missing" : "empty"}`} aria-live="polite">
+          <p>{mark === undefined ? "Answer for this part before moving on. You are locating a missing limb, not deciding whether you were forgiven." : mark ? activePart.present : activePart.absent}</p>
+          {mark === false && <div><span>What this asks of you</span><strong>{activePart.remedy}</strong></div>}
+        </div>
+        <div className="repentance-controls">
+          <button onClick={() => setActivePartId(active.parts[Math.max(0, active.parts.indexOf(activePart) - 1)].id)} disabled={active.parts.indexOf(activePart) === 0} aria-label="Previous part"><ArrowLeft size={15} weight="bold" /></button>
+          {active.parts.indexOf(activePart) < active.parts.length - 1 ? (
+            <button onClick={() => setActivePartId(active.parts[active.parts.indexOf(activePart) + 1].id)}>Next part <ArrowRight size={15} weight="bold" /></button>
+          ) : (
+            <button onClick={() => onSelectChapter(activePart.chapterId)}>Open the source section <ArrowRight size={15} weight="bold" /></button>
+          )}
+        </div>
+      </div>
+
+      <div className={`repentance-summary ${answered === active.parts.length ? "complete" : ""}`}>
+        <div className="repentance-plan" aria-hidden="true">
+          {active.parts.map((part) => {
+            const state = marks[`${active.id}:${part.id}`];
+            return <span key={part.id} className={state === true ? "present" : state === false ? "missing" : "empty"}><i /></span>;
+          })}
+        </div>
+        <div>
+          <span>{answered} of {active.parts.length} checked</span>
+          <strong>{summary}</strong>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AudienceChamber({
   chamber,
   chapterId,
@@ -1542,8 +1652,8 @@ function SystemApp() {
                 <p>This prototype uses original English synthesis. It is designed to preserve the section's distinctions while guiding the reader back to primary and published texts.</p>
                 {book.editorialNote && <p className="editorial-note"><Shield size={16} weight="duotone" /> {book.editorialNote}</p>}
                 <div className="source-list">
-                  {book.sources.map((source) => (
-                    <a href={source.url} key={source.url} target="_blank" rel="noreferrer">
+                  {book.sources.map((source, index) => (
+                    <a href={source.url} key={`${source.label}:${index}`} target="_blank" rel="noreferrer">
                       <span><strong>{source.label}</strong><small>{source.note}</small></span>
                       <ArrowRight size={16} weight="bold" />
                     </a>
@@ -1665,6 +1775,14 @@ function SystemApp() {
                   />
                 )}
 
+                {book.repentanceCheck && (
+                  <RepentanceCheck
+                    key={`repentance-check:${book.id}`}
+                    test={book.repentanceCheck}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
                 {book.foodMeasures && (
                   <FoodMeasures
                     key={`food-measures:${book.id}`}
@@ -1779,8 +1897,8 @@ function SystemApp() {
                   <p>This page uses original English synthesis. Use these links to inspect the primary text and edition record.</p>
                   {book.editorialNote && <p className="deep-editorial-note"><Shield size={15} weight="duotone" /> {book.editorialNote}</p>}
                   <div className="deep-source-links">
-                    {book.sources.map((source) => (
-                      <a href={source.url} key={source.url} target="_blank" rel="noreferrer">
+                    {book.sources.map((source, index) => (
+                      <a href={source.url} key={`${source.label}:${index}`} target="_blank" rel="noreferrer">
                         <span><strong>{source.label}</strong><small>{source.note}</small></span>
                         <ArrowRight size={16} weight="bold" />
                       </a>

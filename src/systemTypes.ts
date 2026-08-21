@@ -218,6 +218,27 @@ export type FoodMeasure = {
   chapterId: number;
 };
 
+export type RepentancePartId = "knowledge" | "regret" | "present" | "future" | "past";
+
+export type RepentancePart = {
+  id: RepentancePartId;
+  label: string;
+  limb: string;
+  question: string;
+  present: string;
+  absent: string;
+  remedy: string;
+  chapterId: number;
+};
+
+export type RepentanceSubject = {
+  id: string;
+  label: string;
+  subject: string;
+  note: string;
+  parts: RepentancePart[];
+};
+
 export type SystemBook = {
   id: number;
   title: string;
@@ -276,6 +297,11 @@ export type SystemBook = {
     title: string;
     note: string;
     items: FoodMeasure[];
+  };
+  repentanceCheck?: {
+    title: string;
+    note: string;
+    items: RepentanceSubject[];
   };
   editorialNote?: string;
 };
