@@ -32,6 +32,7 @@ import { book29 } from "./book29";
 import { book30 } from "./book30";
 import { book31 } from "./book31";
 import { book32 } from "./book32";
+import { book33 } from "./book33";
 import { chapters, conceptNodes, contentSources, quarters } from "./data";
 import type { Chapter, DeepReading, VisualModel } from "./data";
 import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
@@ -46,7 +47,7 @@ type SavedState = {
 };
 
 
-const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32];
+const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33];
 
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
   { id: "glance", label: "30 seconds", short: "30s" },
@@ -1221,6 +1222,92 @@ function DutyFinder({
   );
 }
 
+
+function InstrumentPanel({
+  instrument,
+  onSelectChapter,
+}: {
+  instrument: NonNullable<SystemBook["instrument"]>;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const [activeId, setActiveId] = useState(instrument.items[0].id);
+  const [picks, setPicks] = useState<Record<string, string>>({});
+  const active = instrument.items.find((item) => item.id === activeId) ?? instrument.items[0];
+
+  const chosen = active.axes.map((axis) => picks[`${active.id}:${axis.id}`]);
+  const complete = chosen.every(Boolean);
+  const verdict = complete
+    ? active.verdicts.find((candidate) =>
+        candidate.key.split("|").every((part, index) => part === "*" || part === chosen[index]),
+      )
+    : undefined;
+
+  return (
+    <section className="instrument" aria-labelledby="instrument-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="instrument-title">{instrument.title}</h4>
+        <p>{instrument.note}</p>
+      </header>
+
+      {instrument.items.length > 1 && (
+        <div className="instrument-tabs" role="tablist" aria-label="Choose a case">
+          {instrument.items.map((item) => (
+            <button key={item.id} className={item.id === active.id ? "active" : ""} onClick={() => setActiveId(item.id)} role="tab" aria-selected={item.id === active.id}>
+              {item.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div className="instrument-lede">
+        <span>{active.lede}</span>
+        <p><strong>Before you begin</strong>{active.note}</p>
+      </div>
+
+      <div className="instrument-axes">
+        {active.axes.map((axis) => {
+          const key = `${active.id}:${axis.id}`;
+          const picked = picks[key];
+          return (
+            <div key={axis.id} className={`instrument-axis${picked ? " answered" : ""}`}>
+              <span>{axis.kicker}</span>
+              <h5>{axis.question}</h5>
+              <div className="instrument-options" role="group" aria-label={axis.kicker}>
+                {axis.options.map((option) => (
+                  <button key={option.id} className={picked === option.id ? "active" : ""} onClick={() => setPicks((current) => ({ ...current, [key]: option.id }))} aria-pressed={picked === option.id}>
+                    <i aria-hidden="true" />
+                    <span>
+                      <strong>{option.label}</strong>
+                      <small>{option.note}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className={`instrument-verdict ${verdict ? verdict.role : "empty"}`} aria-live="polite">
+        {verdict ? (
+          <>
+            <div className="instrument-verdict-head">
+              <span>What this indicates</span>
+              <strong>{verdict.name}</strong>
+            </div>
+            <p>{verdict.body}</p>
+            <div><span>What follows from it</span><strong>{verdict.action}</strong></div>
+            <button onClick={() => onSelectChapter(verdict.chapterId)}>Read the source section <ArrowRight size={15} weight="bold" /></button>
+          </>
+        ) : (
+          <p>Answer every question above. You are locating a condition so that the fitting response can begin, not settling anything about your standing.</p>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function AudienceChamber({
   chamber,
   chapterId,
@@ -1877,6 +1964,14 @@ function SystemApp() {
                     key={`solitude-test:${book.id}`}
                     test={book.solitudeTest}
                     chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.instrument && (
+                  <InstrumentPanel
+                    key={`instrument:${book.id}`}
+                    instrument={book.instrument}
                     onSelectChapter={selectChapter}
                   />
                 )}

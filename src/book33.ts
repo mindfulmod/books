@@ -1,0 +1,483 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = {
+  id: number; shortTitle: string; formalTitle: string; overview: string;
+  moves: Array<{ title: string; body: string }>;
+  closer: Array<{ title: string; body: string }>;
+  distinction: [string, string, string, string, string];
+  misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel;
+};
+
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((move) => move.body),
+  reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: {
+    thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 33, ${seed.id <= 5 ? "Part One, on hope" : "Part Two, on fear"}, ${seed.formalTitle}.`,
+  },
+});
+
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book33Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "Hope has a definition", formalTitle: "The reality of hope",
+    overview: "Ghazali opens by separating a station from a state, then locates hope by a temporal analysis, and arrives at a definition with a condition attached that decides everything else in the book.",
+    moves: [
+      { title: "Separate station from state", body: "A quality is called a station when it settles and abides, and a state when it is passing and quick to depart. Yellowness is fixed in gold, quick to pass in a frightened face, and intermediate in a sick man, and the heart's qualities divide the same way." },
+      { title: "Sort by time", body: "Whatever meets you is present, past, or awaited. What is past and occurs to you is memory; what is present is finding and tasting; what is awaited and comes to dominate the heart is anticipation." },
+      { title: "Divide the anticipated", body: "If what is awaited is disliked, a pain arises in the heart, and that is fear. If it is loved, an ease and delight arise at anticipating it, and that ease is hope." },
+      { title: "Attach the condition", body: "The anticipated good must have a cause. If it is anticipated because most of its causes are present, the name hope is truthful. If it is anticipated while its causes are broken and disordered, the name delusion and folly is truer than hope. If the causes are neither known present nor known absent, the name wishing is truer, since it is anticipation without a cause." },
+    ],
+    closer: [
+      { title: "Where doubt is required", body: "Neither hope nor fear is used of what is certain. One does not say I hope the sun will rise at sunrise, or I fear it will set at sunset. Both words belong to what is genuinely open." },
+      { title: "What this settles", body: "Book 30 defined delusion and deferred the full account of hope to this book. The condition of causes is the account: the difference between hope and delusion is not the intensity of the expectation but whether its causes are actually in place." },
+    ],
+    distinction: ["Three anticipations of the same good", "Hope", "Most of its causes are present, so the anticipation has a ground.", "Delusion or wishing", "The causes are broken, or are simply unknown, and the expectation floats free of them."],
+    misreading: "Do not conclude that hope requires certainty of the outcome. It requires that the causes be in place, which is a different and checkable thing.",
+    reflection: "Take something you say you hope for and list its causes. The list is the whole test.",
+    audit: ["What am I hoping for?", "Which of its causes are actually present?", "Have I confused wanting it badly with having grounds?", "Would I call someone else's version of this hope?"],
+    nodes: ["raja", "causes", "tamanni"],
+    model: chain("Sorting an anticipation", "The name follows the causes, not the feeling.", [["Anticipated and loved", "The expectation produces ease in the heart.", "balance"], ["Causes present", "The anticipation has a ground, and the name hope is truthful.", "support"], ["Causes broken", "The name delusion is truer, however strong the expectation.", "warning"], ["Causes unknown", "The name wishing is truer, since there is no cause at all.", "warning"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "The farmer's measure", formalTitle: "Measuring a hope by the sower's",
+    overview: "Ghazali gives the image that makes the condition of causes usable. Hope for forgiveness is to be measured exactly as a farmer measures his hope for a crop.",
+    moves: [
+      { title: "Set the terms", body: "The world is the tillage of the hereafter, the heart is the ground, faith is the seed, and acts of obedience run as the tilling and clearing of the ground and the digging of channels and the bringing of water to it." },
+      { title: "Name the failure case", body: "A heart absorbed in the world is like salt ground in which the seed does not grow, and faith does not grow with a corrupt heart and bad character any more than seed grows in salt ground." },
+      { title: "Set the harvest", body: "The Day of Rising is the harvest, and no one reaps but what he sowed, and no crop grows except from a seed." },
+      { title: "Give the measure", body: "A servant's hope for forgiveness is to be compared with the hope of one who owns a crop. Whoever sought good ground, cast good seed that was neither rotten nor worm-eaten, supplied it with water at its times, and cleared away the thorns, and then sat waiting, is hoping. Anyone else is wishing." },
+    ],
+    closer: [
+      { title: "Why an agricultural image", body: "Farming is the standing case of a legitimate expectation about something not yet in hand. The farmer neither controls the outcome nor is merely wishing, which is exactly the position of the person this book is written for." },
+      { title: "What it lets a reader do", body: "It converts an unanswerable question into an answerable one. Instead of asking whether he will be forgiven, a person can ask which of the sower's actions he has actually performed." },
+    ],
+    distinction: ["Two people awaiting a harvest", "The sower", "Ground prepared, seed cast, water brought, thorns cleared, and then waiting.", "The onlooker", "Nothing was done to the ground, and the waiting is identical from outside."],
+    misreading: "Do not read the image as making forgiveness a mechanical return on effort. Ghazali's farmer still has no guarantee, which is why hope rather than certainty is the word throughout.",
+    reflection: "Ask which of the four acts you have done with respect to the thing you are hoping for.",
+    audit: ["What ground have I prepared?", "What seed did I actually cast?", "When did I last water it?", "What thorns have I left standing?"],
+    nodes: ["raja", "causes", "tillage"],
+    model: chain("The sower's four acts", "Each is checkable, which is what makes the hope checkable.", [["Good ground", "A heart not so absorbed that nothing grows in it.", "support"], ["Sound seed", "Faith that is neither rotten nor worm-eaten.", "support"], ["Water in season", "Acts of obedience supplied at their times.", "support"], ["Thorns cleared", "What would otherwise choke the crop is removed.", "support"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "Why hope is praised", formalTitle: "The excellence of hope and the encouragement toward it",
+    overview: "Having defined hope and bounded it, Ghazali gathers what is said in its praise, and the order matters: the boundary was set before the encouragement was offered.",
+    moves: [
+      { title: "Gather the testimony", body: "The verses and reports on the breadth of mercy are assembled, and they are considerable." },
+      { title: "Note the placement", body: "They come after the definition rather than before it, so that a reader who arrives at them already knows the difference between hope and wishing." },
+      { title: "Keep the office of hope in view", body: "Hope is praised for what it does, which is to move a person toward the ground and the seed rather than to excuse him from them." },
+      { title: "Mark the danger", body: "The same material read without the definition produces exactly the delusion Book 30 anatomises, which is why the order of the sections is itself an argument." },
+    ],
+    closer: [
+      { title: "The two offices of hope", body: "Book 30 named them: hope suppresses the despair that blocks repentance, and it rouses the energy that has slackened to the bare minimum. Everything gathered here serves one of those two." },
+      { title: "Why the encouragement is so strong", body: "Because despair is genuinely destructive and is the failure this half of the book exists to treat. The strength of the language is calibrated to that danger rather than to the opposite one." },
+    ],
+    distinction: ["Two ways to receive an encouragement", "As a summons", "It moves the person toward the acts the previous section listed.", "As a permission", "It relieves him of them, which the previous section was written to prevent."],
+    misreading: "Do not take the breadth of what is promised as making the conditions optional. Ghazali has just spent two sections establishing that hope without causes has a different name.",
+    reflection: "Notice whether this material moves you or settles you. That test is the whole of Book 30 in one question.",
+    audit: ["Did this move me or relieve me?", "What have I stopped doing because I felt secure?", "Am I in danger of despair or of security?", "Which of hope's two offices do I need?"],
+    nodes: ["raja", "despair"],
+    model: pair("One body of reports, two readings", "The definition decides which reading a person gives it.", [["Read as a summons", "It rouses effort and defeats despair, which are hope's two offices.", "support"], ["Read as a permission", "It produces slackness, which is delusion rather than hope.", "warning"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "How hope is produced", formalTitle: "The remedy of hope and the way its state is obtained",
+    overview: "Hope is a state, and states cannot be summoned directly. Ghazali therefore treats it as something produced by working on its cause, exactly as he treated regret in Book 31.",
+    moves: [
+      { title: "State the method", body: "Since the state follows knowledge, the way to obtain hope is to supply the knowledge that produces it rather than to command the feeling." },
+      { title: "Identify who needs it", body: "The treatment is aimed at the person in whom despair dominates, or the one whose effort has collapsed, and not at the person already inclined to feel secure." },
+      { title: "Work on the causes", body: "Since hope was defined by the presence of causes, part of producing it is actually establishing the causes, which returns the reader to the sower's four acts." },
+      { title: "Keep the dosage in view", body: "Because hope is a remedy rather than a good in itself, its measure depends on the disease present, which is the question the second half of the book takes up directly." },
+    ],
+    closer: [
+      { title: "Why despair is treated as the disease", body: "Despair ends the striving on which everything depends, which is why Book 30 paired it with delusion as the two conditions that stop a person moving. Hope's whole office is to defeat it." },
+      { title: "The remedy is not reassurance", body: "Supplying grounds is different from supplying comfort. On Ghazali's definition, telling a person his causes are in place when they are not produces delusion rather than hope." },
+    ],
+    distinction: ["Two ways to raise someone's hope", "By supplying grounds", "The causes are established or pointed out, and the state follows the knowledge.", "By supplying comfort", "The feeling is encouraged directly, which produces the state without its ground."],
+    misreading: "Do not conclude that a person in despair should simply be told to hope. The section treats the state as an effect, and the work belongs at its cause.",
+    reflection: "If you need hope, ask whether you need grounds or reassurance. They are not the same request.",
+    audit: ["Am I short of grounds or short of comfort?", "What cause could I actually establish this week?", "Whom do I ask for reassurance instead of help?", "Has my despair stopped me acting?"],
+    nodes: ["raja", "despair", "causes"],
+    model: chain("Producing a state", "The same method as regret in Book 31.", [["Work at the knowledge", "The state follows what is known, and cannot be summoned directly.", "support"], ["Establish the causes", "Hope was defined by their presence, so supplying them is part of the cure.", "support"], ["The state follows", "Ease at an anticipation that now has a ground.", "balance"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "Above both", formalTitle: "The condition in which neither fear nor hope remains",
+    overview: "Before turning to fear, Ghazali records a position that would make his whole subject provisional, and answers it by naming where in the path he is writing.",
+    moves: [
+      { title: "State the position", body: "One who has become intimate with God, whose heart the Real possesses and who has become the son of his moment, witnessing continuously, has no turning toward the future left, and therefore neither fear nor hope." },
+      { title: "Give the reason", body: "Fear and hope are both temporal, both concerned with what is awaited, and both restrain the soul from its own excesses. Where the future has dropped out of view, neither has anything to attach to." },
+      { title: "Report the strongest form", body: "Al-Wasiti said that fear is a veil between God and the servant, and that when the Real appears upon the innermost parts no room remains in them for hope or fear." },
+      { title: "Answer it by location", body: "Ghazali does not dispute the description. He says: we are now speaking of the beginnings of the stations. The book is written for the road rather than for its end." },
+    ],
+    closer: [
+      { title: "Why he includes it at all", body: "Including a position that appears to make his subject unnecessary, and answering it by placing rather than refuting it, is characteristic. It tells the reader what kind of book he is holding." },
+      { title: "The lover's case", body: "The reasoning given is that when a lover's heart is occupied in witnessing the beloved by the fear of separation, that is a deficiency in the witnessing, and continuous witnessing is the furthest of the stations. Book 36 is where that is taken up." },
+    ],
+    distinction: ["Two reasons for having no fear", "Beyond it", "The future has dropped from view because something present has wholly occupied the heart.", "Short of it", "The future has dropped from view because nothing is being attended to at all."],
+    misreading: "Do not use this section to excuse yourself from fear or hope. Ghazali cites it and immediately says he is writing about the beginnings, which is where the reader is.",
+    reflection: "Notice how attractive it is to identify with the state that needs neither, and what that attraction is made of.",
+    audit: ["Where on the road am I actually standing?", "Do I claim a station I have not travelled to?", "Is my lack of fear from fullness or from inattention?", "What would honest location look like here?"],
+    nodes: ["stations", "raja", "khawf"],
+    model: pair("Two absences of fear", "They look identical from outside and are opposite conditions.", [["From fullness", "Continuous witnessing leaves no room for either, which is the end of the road.", "support"], ["From inattention", "Nothing is being attended to, which is where most such claims come from.", "warning"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "Fear has a cause", formalTitle: "The reality of fear",
+    overview: "Part Two builds fear on the same architecture and locates its knowledge precisely: fear tracks what a person knows about the causes leading to what he dislikes.",
+    moves: [
+      { title: "Give the three parts", body: "Fear is composed of knowledge, a state, and an act. The knowledge is knowledge of the cause leading to the disliked outcome, and the burning of the heart that follows is fear itself." },
+      { title: "Give the analogy", body: "One who has offended a king and fallen into his hands fears execution while pardon remains possible, and the pain of his fear tracks the strength of the causes: the gravity of the offence, whether the king is vengeful, whether he is surrounded by those urging revenge, and whether the offender has any intercessor or any merit that would efface what he did." },
+      { title: "Add the other source", body: "Fear may arise not from an offence but from the nature of what is feared, as one who falls into a lion's claws fears it for what a lion is, or as water is feared for flowing and fire for burning." },
+      { title: "Apply it", body: "So fear of God arises sometimes from knowing God and His attributes, and that were He to destroy the worlds He would not mind and nothing would prevent Him; sometimes from the multitude of one's own offences; and sometimes from both together." },
+    ],
+    closer: [
+      { title: "The consequence Ghazali draws", body: "The most fearful of people toward his Lord is the one who knows himself and his Lord best, which is why the words are attributed to the one who said I am the most fearful of you toward God, and why the verse says that only those of His servants who know fear Him." },
+      { title: "Why this makes fear a knowledge problem", body: "If fear tracks knowledge of the causes, then a person with little fear has either little knowledge of himself or little knowledge of his Lord, which is a diagnosis rather than a reproach." },
+    ],
+    distinction: ["Two sources of the same fear", "From one's own record", "The offences are many and the causes leading to the disliked outcome are correspondingly strong.", "From the One feared", "Nothing prevents Him and He is not questioned, which produces fear without reference to any particular offence."],
+    misreading: "Do not read fear as an emotional temperament some people have. On this account it is an effect of knowledge, which is why its absence is treated as informative.",
+    reflection: "Ask whether your fear, such as it is, comes from your record or from what you know of the One feared. Most people have only the first.",
+    audit: ["Which of the two sources is mine?", "What does my level of fear say about my knowledge?", "Do I have any intercessor or merit in view?", "Am I fearing consequences or fearing Him?"],
+    nodes: ["khawf", "knowledge", "causes"],
+    model: chain("What the fear tracks", "Each factor in the analogy raises or lowers it.", [["The offence", "Its gravity, which the person alone can weigh.", "warning"], ["The One offended", "His attributes, and that nothing prevents Him.", "warning"], ["Any intercessor", "Whether anything stands between the offence and its consequence.", "balance"], ["Any merit", "Whether anything effaces the mark of what was done.", "balance"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "The whip", formalTitle: "The degrees of fear and its variation in strength and weakness",
+    overview: "The most immediately useful section of the book. Fear is praiseworthy, and one might therefore suppose more is always better; Ghazali says plainly that this is an error, and supplies the test.",
+    moves: [
+      { title: "Give the image", body: "Fear is God's whip, by which He drives His servants to persevere in knowledge and action so that they may reach nearness by them. It is best that a beast not be without a whip, and likewise a child, but that does not show that excess in beating is praiseworthy." },
+      { title: "Name the three degrees", body: "Fear has deficiency, excess, and balance, and the praiseworthy is the balance and the middle." },
+      { title: "Describe the deficient", body: "It runs as a tenderness that occurs at hearing a verse and produces weeping and flowing tears, and when the cause is out of sight the heart returns to heedlessness. It is like a weak switch used on a strong beast, which does not pain it enough to drive it anywhere. Ghazali says this is the fear of all people except the knowers." },
+      { title: "Give the test", body: "Fudayl said that if you are asked whether you fear God you should be silent, since if you say no you have disbelieved and if you say yes you have lied. He meant that fear is what restrains the limbs from sins and binds them to obedience, and whatever does not reach the limbs is a talk of the soul and a movement of a passing thought that does not deserve the name." },
+    ],
+    closer: [
+      { title: "The excessive degree", body: "Fear that passes the bound of balance goes out into despair, which ends the striving it was supposed to produce. Both failures therefore have the same result by opposite routes." },
+      { title: "The aside about scholars", body: "Ghazali specifies that by the knowers he does not mean those decorated with the marks and names of scholars, since they are the furthest of people from fear. The remark belongs to the same argument as Book 30's first class of the deluded." },
+    ],
+    distinction: ["Two things that feel like fear", "Fear that drives", "It reaches the limbs, restraining them from sins and binding them to obedience.", "Fear that moves nothing", "It produces tears at the moment and heedlessness afterwards, and does not deserve the name."],
+    misreading: "Do not conclude that being moved to tears is worthless. Ghazali's point is that it is not yet fear in the sense that matters, not that it is a fault.",
+    reflection: "Ask what your fear changed this week. If nothing, the section has told you which degree you are at.",
+    audit: ["What did my fear stop me doing?", "What did it make me do?", "Does it survive the verse being over?", "Has it passed into despair anywhere?"],
+    nodes: ["khawf", "degrees", "limbs"],
+    model: spectrum("Three degrees of the whip", "Both extremes end the striving, by opposite routes.", [["Deficient", "Tears at the moment, heedlessness after; it reaches no limb.", "warning"], ["Balanced", "It restrains the limbs from sins and binds them to obedience.", "support"], ["Excessive", "It passes into despair, which ends the effort it was to produce.", "warning"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "What is feared", formalTitle: "The kinds of fear according to what is feared",
+    overview: "Ghazali sorts fear by its object, and the sorting matters because the objects differ enormously in what they should produce.",
+    moves: [
+      { title: "Sort by object", body: "Fear takes its character from what is feared, and the same word covers conditions that have almost nothing else in common." },
+      { title: "Distinguish fearing consequences from fearing Him", body: "Fear of punishment and fear of the One are different in kind, and Ghazali ranks them accordingly." },
+      { title: "Name the fear of the end", body: "Fear about how one will finish is treated as a distinct object, and it is the fear that dominates the accounts of the early community that close the book." },
+      { title: "Include the fear of the veil", body: "The highest of the objects is separation itself, which is feared without reference to any punishment, and which connects this book to Book 36." },
+    ],
+    closer: [
+      { title: "Why the sorting is practical", body: "A person can discover that his fear, which he had thought of as religious, is entirely fear of consequences, and that discovery indicates what he knows and does not know." },
+      { title: "The link to what follows", body: "Once the objects are separated, the question of which is more beneficial can be asked properly, since the answer differs by what a person is actually afraid of." },
+    ],
+    distinction: ["Two objects of one word", "Fearing an outcome", "What is feared is a punishment, and the fear would end if the punishment were lifted.", "Fearing the One", "What is feared is separation and His majesty, and the lifting of a punishment would not touch it."],
+    misreading: "Do not treat fear of consequences as illegitimate. Ghazali ranks the objects rather than dismissing any of them, and the whip works on those who feel the lash.",
+    reflection: "Ask what would have to be guaranteed for your fear to disappear. The answer names its object.",
+    audit: ["What exactly am I afraid of?", "Would a guarantee of safety end it?", "Do I fear an outcome or a separation?", "Which object have I never once feared?"],
+    nodes: ["khawf", "objects"],
+    model: chain("Objects of fear, ascending", "The word covers conditions that differ in kind.", [["Punishment", "The outcome is feared, and safety would end the fear.", "balance"], ["The end", "How one will finish, which no present condition settles.", "balance"], ["Separation", "The veil itself, feared without reference to any punishment.", "support"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "Why fear is praised", formalTitle: "The excellence of fear and the encouragement toward it",
+    overview: "The counterpart to the section on hope's excellence, and Ghazali gathers a considerable body of material, which sets up the comparison that follows.",
+    moves: [
+      { title: "Gather the testimony", body: "The verses and reports praising fear are assembled, and Ghazali notes that they are numerous, which is part of the argument of the section on which is more beneficial." },
+      { title: "Keep the office in view", body: "Fear is praised for what it produces: perseverance in knowledge and action, and restraint of the limbs. The praise attaches to the working whip rather than to the sensation." },
+      { title: "Connect it to knowledge", body: "The reports that tie fear to knowledge are given weight, since the section on fear's reality made fear an effect of knowing." },
+      { title: "Prepare the comparison", body: "Having gathered praise for both states, the question of their relative rank can no longer be avoided, and the next section takes it." },
+    ],
+    closer: [
+      { title: "Why both were praised so strongly", body: "Because both diseases are real and widespread. Material praising fear is aimed at security, and material praising hope at despair, and a reader who takes either as a general ranking has misread the office of both." },
+      { title: "The problem this creates", body: "A reader who has now read strong praise of both is genuinely uncertain which to seek, which is exactly the confusion the next section opens by naming." },
+    ],
+    distinction: ["Two ways to read strong praise", "As a prescription", "It is aimed at a disease, and applies to the person who has that disease.", "As a ranking", "It settles which state is higher in general, which the next section calls a corrupt question."],
+    misreading: "Do not read the volume of material on fear as settling that fear is the higher state. Ghazali addresses that inference directly and qualifies it carefully.",
+    reflection: "Notice which of the two bodies of material you find more comfortable, and consider that this may indicate which one you need.",
+    audit: ["Which praise do I enjoy hearing?", "Which do I skip over?", "What does that preference indicate?", "Am I collecting reassurance or treatment?"],
+    nodes: ["khawf", "raja"],
+    model: pair("Two bodies of praise", "Each is aimed at a different disease.", [["Praise of fear", "Aimed at security and delusion, which are the commoner failure.", "balance"], ["Praise of hope", "Aimed at despair, which ends striving just as surely.", "balance"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "A corrupt question", formalTitle: "Whether the better is the dominance of fear, of hope, or their balance",
+    overview: "The pivot of the whole book. Ghazali refuses the question as posed and replaces it with a better one, and the replacement is the most transferable thing in either half.",
+    moves: [
+      { title: "Refuse the question", body: "Asking whether fear is better than hope is a corrupt question, resembling asking whether bread is better than water. Bread is better for the hungry and water for the thirsty; if both are present, look to which need is stronger; and if they are equal, the two are equal." },
+      { title: "Give the reason", body: "Whatever is wanted for a purpose has its merit appear by reference to that purpose and not to itself. Fear and hope are two remedies by which hearts are treated, so their merit is according to the disease present." },
+      { title: "Apply it", body: "If what dominates the heart is feeling secure from God's devising, fear is better. If despair dominates, hope is better. If disobedience dominates, fear is better." },
+      { title: "Correct the vocabulary", body: "For what is wanted for something else, the word to use is more beneficial rather than better. Ghazali says: for most people fear is more beneficial than hope, because of the prevalence of sins." },
+    ],
+    closer: [
+      { title: "The one general ranking he allows", body: "Looking to their sources rather than their uses, hope is better, because it is drawn from the sea of mercy and fear from the sea of wrath, and whoever observes the attributes requiring gentleness has love dominating him. And beyond love, Ghazali says, there is no station." },
+      { title: "The balanced case", body: "For the God-fearing person who has left the outward and inward of sin, the more beneficial is that fear and hope be balanced, and it was said that if the believer's fear and hope were weighed they would balance." },
+    ],
+    distinction: ["Two questions about a remedy", "Which is better", "A question about the things themselves, which Ghazali calls corrupt for anything wanted for a purpose.", "Which is more beneficial", "A question about this person's present disease, which is answerable."],
+    misreading: "Do not extract a general rule that fear should dominate. Ghazali says it is more beneficial for most people because sins are prevalent, which is a claim about the patients rather than the medicines.",
+    reflection: "Diagnose yourself before choosing: security, despair, or disobedience. The prescription follows from the diagnosis and not from preference.",
+    audit: ["Which disease actually dominates me?", "Have I been seeking the remedy for someone else's condition?", "Do I use better where I should use more beneficial?", "If both are balanced in me, is that true or is it inattention?"],
+    nodes: ["balance", "khawf", "raja", "remedy"],
+    model: chain("Diagnose, then prescribe", "The prescription follows the disease, not the preference.", [["Security dominates", "Feeling safe from His devising; fear is the more beneficial.", "warning"], ["Despair dominates", "The striving has ended; hope is the more beneficial.", "warning"], ["Disobedience dominates", "Fear again, since it is what reaches the limbs.", "warning"], ["Nothing dominates", "For the one who has left sin, the balance of both.", "support"]]),
+  }),
+  makeChapter({
+    id: 11, shortTitle: "How fear is produced", formalTitle: "The remedy by which the state of fear is obtained",
+    overview: "As with hope, fear is a state and cannot be commanded. Ghazali gives the way it is produced, which follows from having made it an effect of knowledge.",
+    moves: [
+      { title: "State the method", body: "Since fear follows knowledge of the causes leading to what is disliked, the way to obtain it is to supply that knowledge rather than to demand the feeling." },
+      { title: "Work on both sources", body: "The two sources named in the reality section give two lines of work: knowing one's own record, and knowing the One feared. Most people have access to the first and neglect the second." },
+      { title: "Aim it correctly", body: "The treatment is for the person in whom security dominates, and applying it to someone already in despair would deepen the disease rather than treat it." },
+      { title: "Watch the measure", body: "Since excess passes into despair, the remedy has a dose, and the section on degrees is what tells a person when to stop." },
+    ],
+    closer: [
+      { title: "Why this is short", body: "The substance of the remedy was already given in the reality section. What remains here is the application, which is why the section functions as an instruction rather than an argument." },
+      { title: "The check that goes with it", body: "The test remains the one Fudayl gave: whether it reaches the limbs. A treatment that produces feeling without reaching conduct has not produced fear on this account." },
+    ],
+    distinction: ["Two ways to raise fear", "By supplying knowledge", "The causes are made clear, and the state follows what is known.", "By supplying alarm", "The feeling is provoked directly, which produces the deficient degree rather than the balanced one."],
+    misreading: "Do not read this as licence to frighten people, or yourself, indiscriminately. The section is explicit that the remedy is aimed at a disease and has a dose.",
+    reflection: "Ask which of the two sources of fear you have never worked on, and spend an hour there.",
+    audit: ["Which source have I neglected?", "Am I applying this to the right disease?", "Where has alarm substituted for knowledge?", "Do I know when to stop?"],
+    nodes: ["khawf", "remedy", "knowledge"],
+    model: pair("Two lines of work", "Both were named when fear was defined.", [["Knowing yourself", "The record and its causes, which most people have some access to.", "balance"], ["Knowing the One feared", "His attributes, which Ghazali says produces the stronger fear.", "support"]]),
+  }),
+  makeChapter({
+    id: 12, shortTitle: "A bad end", formalTitle: "The meaning of a bad ending",
+    overview: "Most of the fear recorded in this book returns to fear about how a person will finish. Ghazali therefore explains what that means, and distinguishes two ranks of it.",
+    moves: [
+      { title: "Give the graver rank", body: "That at the throes of death, when its terrors appear, doubt or denial should come to dominate the heart, and the soul be taken in that state, so that what dominated becomes a veil between the person and God permanently." },
+      { title: "Give the lesser rank", body: "That at death the love of some worldly matter or an appetite for it should dominate the heart, so that it is represented there and absorbs him until no room remains in that state for anything else." },
+      { title: "Explain why it is feared", body: "Because neither rank is a verdict on a life as a whole but a condition at a moment, and no present state guarantees what that moment will hold." },
+      { title: "Draw the practical consequence", body: "What can be worked on is not the moment but what a person is habitually full of, since what dominates at the end is what dominated before it." },
+    ],
+    closer: [
+      { title: "Why the second rank is the practical one", body: "The first is catastrophic and rare in the reader's imagination; the second is continuous with ordinary life, since it consists of being full of something at the end because one was full of it throughout." },
+      { title: "The link to the closing sections", body: "The accounts of the prophets, the companions, and the early community that follow are all accounts of people who feared this specifically, which is why Ghazali places the explanation immediately before them." },
+    ],
+    distinction: ["Two ranks of the same fear", "Doubt at the end", "Denial or doubt dominates at the throes and becomes a permanent veil.", "Absorption at the end", "A worldly love dominates and fills the moment, which is continuous with ordinary life."],
+    misreading: "Do not treat the fear of a bad end as a reason to despair. Ghazali's own treatment points at what a person is habitually full of, which is workable, rather than at the moment itself, which is not.",
+    reflection: "Ask what you are most often full of. On this account that is the honest forecast.",
+    audit: ["What occupies me most?", "What would fill the moment if it came now?", "Am I working on the moment or on the habit?", "Has this fear ever changed anything I did?"],
+    nodes: ["khatima", "khawf"],
+    model: pair("Two ranks of a bad ending", "The second is the one continuous with ordinary life.", [["Doubt or denial", "Dominates at the throes and becomes a permanent veil.", "warning"], ["Worldly absorption", "Fills the moment because it filled the years before it.", "warning"]]),
+  }),
+  makeChapter({
+    id: 13, shortTitle: "Those who feared most", formalTitle: "The fear of the prophets and the angels",
+    overview: "Ghazali closes with two long collections of accounts, and the first is of those whose standing would seem to exempt them, which is the point of gathering it.",
+    moves: [
+      { title: "Choose the hardest cases", body: "The accounts are of prophets and angels, whose position would appear to remove the ground of fear, and who are reported as fearing most." },
+      { title: "Draw the inference", body: "If fear tracks knowledge of oneself and of the One feared, then those who know most fear most, which is what the collection is assembled to display." },
+      { title: "Refuse the comfortable reading", body: "The accounts are not offered as extraordinary feats to be admired from a distance but as evidence for the claim made in the section on fear's reality." },
+      { title: "Set up the second collection", body: "The following section moves from prophets and angels to the companions and the early community, which brings the same argument within a reader's reach." },
+    ],
+    closer: [
+      { title: "Why this is the right placement", body: "Following the explanation of a bad ending with those who feared it most makes the fear intelligible rather than morbid. It is what the knowledge produces in those who have it." },
+      { title: "The material is reported, not graded", body: "As throughout, the accounts are presented as what Ghazali gathered, and this synthesis reports his gathering without independently grading each narration." },
+    ],
+    distinction: ["Two ways of reading these accounts", "As evidence", "They confirm that fear tracks knowledge, since those who knew most feared most.", "As spectacle", "They are admired as extraordinary and used to excuse the reader from the ordinary case."],
+    misreading: "Do not read the intensity of these accounts as a standard against which to despair. Ghazali has already said the praiseworthy degree is the balance and that excess ends in despair.",
+    reflection: "Ask what it would mean if fear really did track knowledge, and what your own level indicates.",
+    audit: ["What does my fear indicate about my knowledge?", "Do I read these as evidence or as spectacle?", "What would I have to know to fear more?", "Have I used others' intensity to excuse my own inattention?"],
+    nodes: ["khawf", "knowledge"],
+    model: pair("What the collection is for", "The reading decides whether it does any work.", [["Evidence", "Those who knew most feared most, confirming the account of fear's cause.", "support"], ["Spectacle", "An extraordinary standard, admired and set aside.", "warning"]]),
+  }),
+  makeChapter({
+    id: 14, shortTitle: "Within reach", formalTitle: "The fear of the companions and the early community",
+    overview: "The book ends with accounts of people the reader can more nearly imagine being, and it ends there deliberately.",
+    moves: [
+      { title: "Bring the argument closer", body: "Having shown the claim in prophets and angels, Ghazali gathers the same evidence in people whose circumstances a reader can recognise." },
+      { title: "Show fear reaching the limbs", body: "The accounts are chosen for what the fear produced rather than for what it felt like, which is the test the section on degrees supplied." },
+      { title: "Keep the measure", body: "The lives gathered are not lives of despair; they are lives of sustained action, which is what the balanced degree was defined to produce." },
+      { title: "Close the book", body: "The last word of a book on fear and hope is a set of examples in which both were operating, which is the practical answer to the question the book refused to settle abstractly." },
+    ],
+    closer: [
+      { title: "Why the two collections are ordered this way", body: "Prophets first would allow the reader to place the whole subject at an unreachable height. Ending with the companions removes that exit." },
+      { title: "What the reader is left holding", body: "Not a ranking of fear over hope, but a diagnosis, a prescription that depends on it, a test of whether the remedy is working, and examples of it working." },
+    ],
+    distinction: ["Two things these lives display", "Fear that drove", "It reached the limbs and produced sustained action over years.", "Fear that consumed", "It would have ended in despair, which the book has already excluded."],
+    misreading: "Do not conclude that the early community were characterised by misery. Ghazali's own criterion is that fear is the whip that drives toward knowledge and action, and these are the lives it drove.",
+    reflection: "Take the diagnosis from the section on which is more beneficial, and pick one thing to do this week on the strength of it.",
+    audit: ["What is my prescription, on my own diagnosis?", "What will I do differently this week?", "Is my fear producing action or paralysis?", "Would my life read as evidence of either state?"],
+    nodes: ["khawf", "raja", "balance"],
+    model: chain("What the book leaves you with", "A procedure rather than a ranking.", [["Diagnose", "Security, despair, disobedience, or none dominant.", "support"], ["Prescribe", "Fear, hope, or the balance of both, by the disease.", "support"], ["Test", "Whether it reaches the limbs, which is the only check offered.", "balance"], ["Adjust", "Since excess in either direction ends the striving.", "balance"]]),
+  }),
+];
+
+export const book33ConceptNodes: ConceptNode[] = [
+  ["raja", "Hope", "Ease at an expected good", "The heart's ease at anticipating what it loves, when the causes are actually present."],
+  ["causes", "The causes", "What decides the name", "Present causes make it hope; broken causes make it delusion; absent causes make it wishing."],
+  ["tamanni", "Wishing", "Anticipation with no cause", "Expectation that floats free of any ground, which Ghazali refuses to call hope."],
+  ["tillage", "The tillage", "Ground, seed, water, thorns", "Hope for forgiveness is measured exactly as a farmer measures his hope for a crop."],
+  ["despair", "Despair", "The disease hope treats", "It ends the striving on which everything depends, which is why hope is praised so strongly."],
+  ["stations", "Station and state", "Settled or passing", "A quality is a station when it abides and a state when it is quick to depart."],
+  ["khawf", "Fear", "The burning that follows knowing", "Knowledge of the causes leading to what is disliked, and the pain that arises from it."],
+  ["knowledge", "Knowledge", "What fear tracks", "The most fearful is the one who knows himself and his Lord best."],
+  ["degrees", "Three degrees", "Deficient, balanced, excessive", "Both extremes end the striving, by opposite routes."],
+  ["limbs", "The limbs", "The only test offered", "What does not restrain the limbs is a talk of the soul and does not deserve the name."],
+  ["objects", "Objects of fear", "Punishment, the end, separation", "The same word covers conditions that differ in kind."],
+  ["balance", "More beneficial", "Not which is better", "For what is wanted for a purpose, the question is which the present disease requires."],
+  ["remedy", "Remedies", "Bread and water", "Fear and hope are treatments, and their merit is according to the disease present."],
+  ["khatima", "The ending", "Two ranks", "Doubt at the throes, or absorption in a worldly love that filled the years before."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book33Journeys: Journey[] = [
+  {
+    id: "hope-or-wishing", number: "01", question: "Is this hope or am I wishing?", title: "Measure an expectation by its causes",
+    description: "Define hope by the temporal analysis, attach the condition that separates it from delusion and from wishing, and learn to measure your own expectation as a farmer measures his crop.",
+    payoff: "You gain the criterion Book 30 promised and deferred to this book.",
+    image: assetUrl("assets/system/book33-tillage.jpg"), imageAlt: "A sunlit terraced field where one plot is tilled, watered, and cleared while an identical untended plot waits beside it.", minutes: 12, color: "#278d91",
+    nodes: [
+      node("sort-by-time", "Sort by time", "Past, present, awaited", "Memory, tasting, and anticipation; and the anticipated divides by whether it is loved or disliked.", "Neither word is used of what is certain.", 1, "order"),
+      node("define-hope", "Define hope", "Ease at an expected good", "The heart's ease at anticipating what it loves.", "The definition is not finished until the condition is attached.", 1, "name"),
+      node("attach-causes", "Attach the causes", "Present, broken, or unknown", "Present causes make it hope; broken causes delusion; absent causes wishing.", "The test is the causes, not the strength of the feeling.", 1, "diagnose"),
+      node("measure-farmer", "Measure it as a farmer", "Ground, seed, water, thorns", "Whoever did the sower's four acts and then waited is hoping; anyone else is wishing.", "The farmer still has no guarantee, which is why it is hope.", 2, "cultivate"),
+      node("read-the-praise", "Read the praise rightly", "Summons or permission", "The same reports move one reader and settle another, and the definition decides which.", "Breadth of mercy does not make the conditions optional.", 3, "mirror"),
+    ],
+  },
+  {
+    id: "what-is-fear", number: "02", question: "What is fear actually made of?", title: "Trace fear back to what you know",
+    description: "Build fear from knowledge of the causes, find its two sources, sort it by what is actually feared, and see why its absence is treated as information rather than temperament.",
+    payoff: "Your level of fear becomes a reading on your knowledge rather than a fact about your personality.",
+    image: assetUrl("assets/system/book33-before-the-king.jpg"), imageAlt: "A luminous audience hall where a single figure's empty place stands before a raised seat, with no intercessor's bench beside it.", minutes: 13, color: "#c25f50",
+    nodes: [
+      node("three-parts-fear", "Take the three parts", "Knowledge, state, act", "Knowledge of the cause leading to the disliked outcome, and the burning that follows it.", "The same architecture as hope, patience, and repentance.", 6, "order"),
+      node("king-analogy", "Weigh the causes", "The offence and the offended", "Gravity of the offence, the disposition of the One offended, any intercessor, any merit.", "Each factor raises or lowers the fear.", 6, "balance"),
+      node("two-sources", "Find the two sources", "Your record, or Him", "Fear arises from the multitude of offences, from the attributes of the One feared, or both.", "Most people have only the first.", 6, "know"),
+      node("most-fearful", "Read the consequence", "Knowing most, fearing most", "The most fearful is the one who knows himself and his Lord best.", "Low fear is a diagnosis rather than a reproach.", 6, "mirror"),
+      node("sort-objects", "Sort the objects", "Punishment, end, separation", "Ask what would have to be guaranteed for the fear to disappear.", "Fear of consequences is not thereby illegitimate.", 8, "pattern"),
+    ],
+  },
+  {
+    id: "is-mine-working", number: "03", question: "Is my fear doing anything?", title: "Test the whip against the limbs",
+    description: "Take Ghazali's image of fear as a whip, learn the three degrees, and apply the one test he offers: whether it reaches the limbs or stops at feeling.",
+    payoff: "You can tell working fear from the tears that change nothing.",
+    image: assetUrl("assets/system/book33-the-whip.jpg"), imageAlt: "A bright stable court where a slender switch hangs beside a heavy harness, with a worn path leading out through an open arch.", minutes: 11, color: "#586fa8",
+    nodes: [
+      node("take-the-image", "Take the image", "God's whip", "Fear drives the servant to persevere in knowledge and action.", "That a beast needs a whip does not praise excess in beating.", 7, "name"),
+      node("three-degrees", "Learn the three degrees", "Deficient, balanced, excessive", "The praiseworthy is the middle, and both extremes end the striving.", "Being moved to tears is not a fault, only not yet fear.", 7, "pattern"),
+      node("apply-the-test", "Apply the test", "Does it reach the limbs?", "What does not restrain the limbs is a talk of the soul that does not deserve the name.", "Fudayl's answer was silence, not yes or no.", 7, "diagnose"),
+      node("watch-for-despair", "Watch for despair", "Excess ends the effort", "Fear beyond the balance goes out into despair, producing the same paralysis as its absence.", "Both failures have one result by opposite routes.", 7, "guard"),
+      node("produce-it", "Produce it properly", "Knowledge, not alarm", "The state follows knowing, so the work is at the two sources rather than at the feeling.", "The remedy has a dose and is aimed at a disease.", 11, "learn"),
+    ],
+  },
+  {
+    id: "which-do-i-need", number: "04", question: "Which of the two do I need?", title: "Diagnose before you prescribe",
+    description: "Watch Ghazali refuse the question of which is better, replace it with a question about the present disease, and correct the vocabulary that made the original question look answerable.",
+    payoff: "You stop seeking the remedy for someone else's condition.",
+    image: assetUrl("assets/system/book33-bread-and-water.jpg"), imageAlt: "An ivory refectory sill where a loaf and a water jug stand side by side under even light, neither raised above the other.", minutes: 13, color: "#bf7a35",
+    nodes: [
+      node("refuse-question", "Refuse the question", "Bread or water", "Asking which is better resembles asking whether bread is better than water.", "The refusal is not evasion; a replacement follows.", 10, "clear"),
+      node("give-reason", "Give the reason", "Merit by purpose", "What is wanted for a purpose has its merit by reference to that purpose, not to itself.", "This applies to anything instrumental, not only to these two.", 10, "know"),
+      node("diagnose-first", "Diagnose first", "Security, despair, sin", "Fear for security and for disobedience, hope for despair, balance for the one who has left sin.", "The claim is about patients, not about medicines.", 10, "diagnose"),
+      node("fix-vocabulary", "Fix the vocabulary", "More beneficial", "For instrumental things the right word is more beneficial rather than better.", "Ghazali still allows one general ranking, by their sources.", 10, "name"),
+      node("hear-the-exception", "Hear the exception", "Hope from mercy", "By source, hope is better, being drawn from the sea of mercy; and beyond love there is no station.", "This is a ranking of sources, not of uses.", 10, "receive"),
+    ],
+  },
+  {
+    id: "how-will-i-end", number: "05", question: "What are they all afraid of?", title: "Follow the fear of the ending",
+    description: "Find what most of the fear in this book actually attaches to, learn the two ranks of a bad ending, and see what the accounts of those who feared most are gathered to prove.",
+    payoff: "A fear that could be morbid becomes a question about what you are habitually full of.",
+    image: assetUrl("assets/system/book33-what-fills-it.jpg"), imageAlt: "A quiet lamplit chamber at dusk where a single vessel stands filled to the brim, its contents unnamed and steady.", minutes: 13, color: "#a97837",
+    nodes: [
+      node("graver-rank", "See the graver rank", "Doubt at the throes", "Denial or doubt dominating at the end and becoming a permanent veil.", "This is not a verdict on a life but a condition at a moment.", 12, "witness"),
+      node("lesser-rank", "See the lesser rank", "Absorbed in something else", "A worldly love filling the moment so that no room remains in it.", "This one is continuous with ordinary life.", 12, "attend"),
+      node("workable-part", "Find the workable part", "What fills you now", "What dominates at the end is what dominated before it, and that can be worked on.", "The moment itself cannot be arranged.", 12, "practice"),
+      node("read-the-accounts", "Read the accounts rightly", "Evidence, not spectacle", "Those who knew most feared most, which is what the collections are gathered to show.", "Their intensity is not a standard for despair.", 13, "mirror"),
+      node("end-within-reach", "End within reach", "Lives that were driven", "The book closes with fear that produced sustained action rather than paralysis.", "The balanced degree is what these lives display.", 14, "steady"),
+    ],
+  },
+];
+
+export const book33Movements: TaxonomyGroup[] = [
+  ["reality-hope", "1. The reality of hope", "Station and state, the temporal sort, and the condition of causes.", [1]],
+  ["tillage", "2. The farmer's measure", "Ground, seed, water, and thorns as the test of a hope.", [2]],
+  ["excellence-hope", "3. The excellence of hope", "The testimony, placed after the definition on purpose.", [3]],
+  ["remedy-hope", "4. Producing hope", "Supplying grounds rather than comfort.", [4]],
+  ["above-both", "5. Above fear and hope", "The station in which neither remains, and where this book is written.", [5]],
+  ["reality-fear", "6. The reality of fear", "Knowledge of the causes, and the two sources.", [6]],
+  ["degrees", "7. The degrees of fear", "The whip, the three degrees, and the test of the limbs.", [7]],
+  ["objects", "8. Kinds of fear", "Punishment, the ending, and separation.", [8]],
+  ["excellence-fear", "9. The excellence of fear", "The testimony, and the problem it creates.", [9]],
+  ["comparison", "10. Which is more beneficial", "The corrupt question, and the diagnosis that replaces it.", [10]],
+  ["remedy-fear", "11. Producing fear", "Knowledge rather than alarm, with a dose.", [11]],
+  ["khatima", "12. A bad ending", "Two ranks, and the part that can be worked on.", [12]],
+  ["prophets", "13. The prophets and angels", "The hardest cases, gathered as evidence.", [13]],
+  ["companions", "14. The early community", "The same argument brought within reach.", [14]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50", "#586fa8", "#a97837"][index % 5] })) as TaxonomyGroup[];
+
+export const book33Instrument: Instrument = {
+  title: "Diagnose before you prescribe",
+  note: "Ghazali refuses the question of whether fear or hope is better and replaces it with a question about the disease present. Place yourself on both axes: what your hope is actually resting on, and what your fear is actually reaching. The reading names which remedy is more beneficial for you now, in his sense of that word rather than better.",
+  items: [
+    {
+      id: "now", label: "Your present condition", lede: "Where you actually stand today, not in general",
+      note: "Both axes are Ghazali's own. The hope axis is the condition of causes from the reality of hope; the fear axis is the three degrees and the test of whether it reaches the limbs.",
+      axes: [
+        {
+          id: "hope", kicker: "The hope axis", question: "What is your expectation of forgiveness actually resting on?",
+          options: [
+            { id: "despair", label: "Nothing; I have stopped expecting", note: "The striving has ended, which is the disease hope exists to treat." },
+            { id: "wishing", label: "Nothing in particular", note: "Anticipation without a cause, which Ghazali names wishing rather than hope." },
+            { id: "broken", label: "Grounds I know are not in place", note: "The causes are broken and the expectation continues; the truer name is delusion." },
+            { id: "grounded", label: "Causes I could actually name", note: "Ground prepared, seed cast, water brought, thorns cleared; the name hope is truthful." },
+          ],
+        },
+        {
+          id: "fear", kicker: "The fear axis", question: "What does your fear actually reach?",
+          options: [
+            { id: "none", label: "Nothing; I feel secure", note: "Feeling safe from His devising, which Ghazali names as the commonest disease." },
+            { id: "feeling", label: "Feeling, and no further", note: "Tears at a verse and heedlessness afterwards; the deficient degree." },
+            { id: "limbs", label: "My conduct", note: "It restrains the limbs from sins and binds them to obedience; the balanced degree." },
+            { id: "despairing", label: "Past conduct into paralysis", note: "It has passed the balance into despair, which ends the striving it was to produce." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "despair|despairing", name: "Hope, urgently", role: "warning", chapterId: 4, body: "Both axes report the same collapse. On Ghazali's account despair ends the striving on which everything depends, and fear that has passed into despair produces exactly the paralysis its absence would.", action: "Hope is the more beneficial remedy here, and the way to produce it is to supply grounds rather than comfort. Begin with one of the sower's four acts, since establishing a cause is what makes hope truthful rather than merely felt." },
+        { key: "despair|*", name: "Hope", role: "balance", chapterId: 4, body: "The expectation has stopped. Whatever your fear is doing, the disease that dominates is the one hope was given to treat.", action: "Work at the causes rather than at the feeling. Doing one of the sower's acts changes the ground of the expectation, which is what the state follows." },
+        { key: "*|despairing", name: "Hope, to restore the measure", role: "warning", chapterId: 10, body: "Fear has passed the balance. Ghazali is explicit that excess in fear goes out into despair and ends the effort it was supposed to drive.", action: "The prescription is hope, not more fear. The measure matters as much as the direction, and the section on degrees is where the dose is set." },
+        { key: "broken|none", name: "Fear", role: "warning", chapterId: 10, body: "The expectation rests on grounds you know are not in place, and nothing restrains the conduct. This is the pairing Ghazali calls being deluded about God, and it is the case the whole of Book 30 was written against.", action: "Fear is the more beneficial remedy. Produce it by working on the two sources named when fear was defined, and check it by whether it reaches your conduct." },
+        { key: "broken|*", name: "Fear", role: "warning", chapterId: 1, body: "Your expectation is continuing while its causes are broken, which is the definition of delusion rather than hope, however strong the feeling.", action: "Either establish the causes or stop calling it hope. Ghazali allows no third option, and the farmer's measure is how the causes are checked." },
+        { key: "wishing|*", name: "Establish a cause first", role: "balance", chapterId: 2, body: "Anticipation without any cause is what Ghazali names wishing. It is not condemned so much as misnamed, and misnaming it prevents the work that would make it hope.", action: "Do one of the sower's four acts this week. Hope on this account is not a feeling to be worked up but an expectation with a ground, and grounds are built rather than found." },
+        { key: "grounded|none", name: "Fear", role: "balance", chapterId: 10, body: "You can name real causes, and nothing is currently restraining your conduct. Ghazali's diagnosis for security is fear, regardless of how well founded the hope is.", action: "Fear is the more beneficial remedy while security dominates. The check is Fudayl's: whether it reaches the limbs, since what stops at feeling does not yet deserve the name." },
+        { key: "grounded|feeling", name: "Fear, in working measure", role: "balance", chapterId: 7, body: "The hope has grounds and the fear has not yet reached the limbs. Ghazali calls this deficient fear and likens it to a weak switch on a strong beast.", action: "Work at the knowledge rather than the feeling, and take the test as the target: what did the fear stop you doing, and what did it make you do?" },
+        { key: "grounded|limbs", name: "The balance", role: "support", chapterId: 10, body: "Grounds you can name, and fear that reaches your conduct. Ghazali says that for one who has left the outward and inward of sin, the more beneficial is that fear and hope be balanced, and that if the believer's fear and hope were weighed they would balance.", action: "Hold the result provisionally and keep both working. Note that by their sources Ghazali ranks hope higher, since it is drawn from the sea of mercy, and beyond love there is no station." },
+        { key: "*|*", name: "Read both axes together", role: "balance", chapterId: 10, body: "The two readings do not point the same way, which is the ordinary case. Ghazali's rule is to look to which need is stronger, exactly as with hunger and thirst.", action: "Take the more urgent of the two and treat that first. The vocabulary matters: ask which is more beneficial for you now rather than which is better in itself." },
+      ],
+    },
+  ],
+};
+
+export const book33Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 33 was read in full and used to establish the definition of hope and its condition of causes, the reality and degrees of fear, and the resolution of the comparison between them.", url: "https://shamela.ws/book/9472/1301" },
+  { label: "The farmer's measure", note: "The passage in which hope for forgiveness is measured against the sower's: good ground, sound seed, water at its times, and thorns cleared away.", url: "https://shamela.ws/book/9472/1302" },
+  { label: "The degrees of fear", note: "The passage giving fear as God's whip, naming its three degrees, and supplying Fudayl's test of whether it reaches the limbs.", url: "https://shamela.ws/book/9472/1316" },
+  { label: "Which is more beneficial", note: "The passage refusing the comparison as posed, giving the analogy of bread and water, and correcting better to more beneficial.", url: "https://shamela.ws/book/9472/1323" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 33 as the third book of the Quarter of Deliverance and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book33: SystemBook = {
+  id: 33,
+  title: "Fear and Hope",
+  shortTitle: "Fear and Hope",
+  defaultJourneyId: "hope-or-wishing",
+  chapters: book33Chapters,
+  conceptNodes: book33ConceptNodes,
+  journeys: book33Journeys,
+  sources: book33Sources,
+  taxonomy: {
+    title: "Fourteen source movements",
+    note: "Five movements on hope and nine on fear, following Ghazali's own two parts. His long treatments of hope's remedy and of the meaning of a bad ending are each presented as a single reading rather than split, since his text supplies no internal joints there.",
+    groups: book33Movements,
+  },
+  instrument: book33Instrument,
+  editorialNote: "The five journeys, fourteen reading sections, visual models, and diagnostic are editorial learning aids. The sequence preserves Ghazali's two parts, hope first and then fear. The English is an original synthesis made from a complete reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. This book treats despair, the fear of dying badly, and states of severe distress. Ghazali is explicit that fear passing beyond the balance goes out into despair and ends the striving it was meant to produce, and that the praiseworthy degree is the middle; nothing here recommends the intensification of fear without measure. The diagnostic locates a condition so that a fitting emphasis can begin. It cannot pronounce on forgiveness, acceptance, or anyone's standing, and it is not a substitute for help where distress is severe.",
+};

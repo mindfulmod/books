@@ -2990,6 +2990,119 @@ body.system-page {
 
 .duty-verdict > button:hover { border-color: color-mix(in srgb, var(--journey) 55%, #c6a672); background: color-mix(in srgb, var(--journey) 9%, #fff5e4); }
 
+/* Shared instrument chrome, used by books 33 onward. Existing panels keep their own rules. */
+.instrument { margin-top: 52px; padding-top: 27px; border-top: 1px solid #dfc69d; }
+
+.instrument > header > span {
+  display: block; color: color-mix(in srgb, var(--journey) 76%, #986426);
+  font-size: 8px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase;
+}
+
+.instrument > header h4 {
+  margin-top: 5px; color: #3f3120;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(25px, 2.5vw, 36px); font-weight: 600; letter-spacing: -0.036em; line-height: 1.06;
+}
+
+.instrument > header p { max-width: 72ch; margin-top: 10px; color: #746047; font-size: 11px; line-height: 1.62; }
+
+.instrument-tabs { display: flex; gap: 6px; margin-top: 22px; padding-bottom: 5px; overflow-x: auto; scrollbar-color: #cdb58d transparent; scrollbar-width: thin; }
+
+.instrument-tabs button {
+  flex: 0 0 auto; padding: 8px 13px; border: 1px solid #dbc29a; border-radius: 999px;
+  color: #766046; background: #fff9ed; font-size: 9px; font-weight: 750; cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.instrument-tabs button:hover, .instrument-tabs button.active {
+  border-color: color-mix(in srgb, var(--journey) 55%, #caab78); color: #3e3020;
+  background: color-mix(in srgb, var(--journey) 8%, #fff9ed);
+}
+
+.instrument-tabs button:active { transform: scale(0.97); }
+
+.instrument-lede {
+  display: grid; grid-template-columns: minmax(145px, 0.48fr) minmax(280px, 1.52fr); gap: 23px; align-items: center;
+  margin-top: 15px; padding: 16px 18px; border: 1px solid #e1cba8; border-left: 4px solid var(--journey);
+  background: linear-gradient(120deg, rgba(255,255,255,0.64), transparent 48%), color-mix(in srgb, var(--journey) 7%, #f8ead3);
+}
+
+.instrument-lede > span { color: #493723; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 16px; font-weight: 620; line-height: 1.25; }
+.instrument-lede p { color: #695740; font-size: 10px; line-height: 1.58; }
+.instrument-lede p strong {
+  display: block; margin-bottom: 4px; color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px; font-weight: 820; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.instrument-axes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 15px; }
+
+.instrument-axis { padding: 16px 17px; border: 1px solid #e3d1b5; border-top: 3px solid #ddc7a4; background: #fffcf5; }
+.instrument-axis.answered { border-top-color: var(--journey); }
+
+.instrument-axis > span {
+  display: block; margin-bottom: 5px; color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px; font-weight: 820; letter-spacing: 0.11em; text-transform: uppercase;
+}
+
+.instrument-axis h5 {
+  color: #443423; font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(15px, 1.3vw, 18px); font-weight: 600; line-height: 1.3;
+}
+
+.instrument-options { display: flex; flex-direction: column; gap: 6px; margin-top: 11px; }
+
+.instrument-options button {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 9px; align-items: center;
+  padding: 9px 12px; border: 1px solid #e0cda9; border-radius: 6px; background: #fffdf8;
+  text-align: left; cursor: pointer; transition: border-color 160ms ease, background 160ms ease;
+}
+
+.instrument-options button i { width: 9px; height: 9px; border: 1px solid #ceb489; border-radius: 50%; }
+.instrument-options button strong { color: #453423; font-size: 11px; font-weight: 620; }
+.instrument-options button small { display: block; margin-top: 2px; color: #8b7658; font-size: 9px; font-weight: 500; line-height: 1.5; }
+.instrument-options button:hover { border-color: #c6a672; background: #fff8ec; }
+.instrument-options button.active { border-color: var(--journey); background: color-mix(in srgb, var(--journey) 7%, #fffdf8); }
+.instrument-options button.active i { border-color: var(--journey); background: var(--journey); }
+
+.instrument-verdict {
+  display: flex; flex-direction: column; gap: 11px; align-items: flex-start;
+  margin-top: 14px; padding: 19px 20px; border: 1px solid #e1cba8; border-left: 4px solid #ddc7a4;
+  border-radius: 4px 18px 4px 18px; background: #fffaf0;
+}
+
+.instrument-verdict.support { border-left-color: #4d9a7c; }
+.instrument-verdict.balance { border-left-color: #cf9340; }
+.instrument-verdict.warning { border-left-color: #be6655; }
+
+.instrument-verdict-head > span {
+  display: block; color: #8a7357; font-size: 7px; font-weight: 820; letter-spacing: 0.11em; text-transform: uppercase;
+}
+
+.instrument-verdict-head > strong {
+  display: block; margin-top: 4px; color: #3f3120;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 21px; font-weight: 620; letter-spacing: -0.02em;
+}
+
+.instrument-verdict > p { max-width: 74ch; color: #6b5941; font-size: 11px; line-height: 1.66; }
+.instrument-verdict.empty > p { color: #8b7658; font-style: italic; }
+.instrument-verdict > div:not(.instrument-verdict-head) { align-self: stretch; padding: 13px 15px; border: 1px solid #e6d6bc; background: #fdf4e6; }
+
+.instrument-verdict > div:not(.instrument-verdict-head) span {
+  display: block; margin-bottom: 4px; color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px; font-weight: 820; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.instrument-verdict > div:not(.instrument-verdict-head) strong { color: #57452e; font-size: 10px; font-weight: 560; line-height: 1.6; }
+
+.instrument-verdict > button {
+  display: inline-flex; gap: 7px; align-items: center; padding: 9px 15px;
+  border: 1px solid #d3b98f; border-radius: 999px; color: #4d3b25; background: #fff5e4;
+  font-size: 9px; font-weight: 760; cursor: pointer; transition: border-color 160ms ease, background 160ms ease;
+}
+
+.instrument-verdict > button:hover { border-color: color-mix(in srgb, var(--journey) 55%, #c6a672); background: color-mix(in srgb, var(--journey) 9%, #fff5e4); }
+
 @media (max-width: 1030px) {
   body.system-page { overflow: auto; }
 
@@ -6916,6 +7029,18 @@ body.system-page {
   .duty-condition { grid-template-columns: 1fr; gap: 8px; }
   .duty-steps > li { grid-template-columns: 1fr; gap: 11px; }
   .duty-step-buttons { justify-content: flex-start; }
+
+  .instrument { margin-top: 42px; }
+
+  .instrument-tabs {
+    margin-right: -18px; margin-left: -18px; padding-right: 18px; padding-left: 18px;
+    scroll-padding-left: 18px; scroll-snap-type: x mandatory; scrollbar-width: none;
+  }
+
+  .instrument-tabs::-webkit-scrollbar { display: none; }
+  .instrument-tabs button { scroll-snap-align: start; }
+  .instrument-lede, .instrument-axes { grid-template-columns: 1fr; gap: 8px; }
+  .instrument-axes { gap: 11px; }
 }
 
 
@@ -6940,7 +7065,8 @@ body.system-page {
   .fault-mirror-face,
   .food-measures button,
   .repentance-check button,
-  .duty-finder button {
+  .duty-finder button,
+  .instrument button {
     animation: none;
     transition: none;
   }

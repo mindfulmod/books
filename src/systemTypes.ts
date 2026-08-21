@@ -267,6 +267,45 @@ export type DutyCase = {
   verdicts: DutyVerdict[];
 };
 
+export type InstrumentRole = "support" | "balance" | "warning";
+
+export type AxisOption = {
+  id: string;
+  label: string;
+  note: string;
+};
+
+export type InstrumentAxis = {
+  id: string;
+  kicker: string;
+  question: string;
+  options: AxisOption[];
+};
+
+export type InstrumentVerdict = {
+  key: string;
+  name: string;
+  body: string;
+  action: string;
+  role: InstrumentRole;
+  chapterId: number;
+};
+
+export type InstrumentCase = {
+  id: string;
+  label: string;
+  lede: string;
+  note: string;
+  axes: InstrumentAxis[];
+  verdicts: InstrumentVerdict[];
+};
+
+export type Instrument = {
+  title: string;
+  note: string;
+  items: InstrumentCase[];
+};
+
 export type SystemBook = {
   id: number;
   title: string;
@@ -336,5 +375,6 @@ export type SystemBook = {
     note: string;
     items: DutyCase[];
   };
+  instrument?: Instrument;
   editorialNote?: string;
 };

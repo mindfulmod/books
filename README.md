@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **twelve books**: the complete Quarter of Perils, books 21 to 30, and the first two books of the Quarter of Deliverance.
+The System edition currently carries **thirteen books**: the complete Quarter of Perils, books 21 to 30, and the first three books of the Quarter of Deliverance.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -47,6 +47,7 @@ The System edition currently carries **twelve books**: the complete Quarter of P
 | 30 | The Censure of Delusion | 17 | 5 | Substitution test |
 | 31 | Repentance | 17 | 5 | Three-part check |
 | 32 | Patience and Gratitude | 22 | 6 | Duty finder |
+| 33 | Fear and Hope | 14 | 5 | Fear and hope diagnostic |
 
 Every book now carries the same layers, so the quarter reads at one depth throughout.
 
