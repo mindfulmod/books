@@ -167,6 +167,27 @@ export type SubstitutionItem = {
   swaps: SubstitutionSwap[];
 };
 
+export type MirrorObstructionId = "unformed" | "tarnished" | "turned-away" | "veiled" | "misdirected";
+
+export type MirrorObstruction = {
+  id: MirrorObstructionId;
+  label: string;
+  mirrorImage: string;
+  question: string;
+  present: string;
+  absent: string;
+  remedy: string;
+  chapterId: number;
+};
+
+export type MirrorSubject = {
+  id: string;
+  label: string;
+  subject: string;
+  note: string;
+  obstructions: MirrorObstruction[];
+};
+
 export type SystemBook = {
   id: number;
   title: string;
@@ -210,6 +231,11 @@ export type SystemBook = {
     title: string;
     note: string;
     items: SubstitutionItem[];
+  };
+  mirrorObstructions?: {
+    title: string;
+    note: string;
+    items: MirrorSubject[];
   };
   editorialNote?: string;
 };

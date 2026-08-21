@@ -1861,6 +1861,313 @@ body.system-page {
   line-height: 1.6;
 }
 
+.mirror-obstructions {
+  margin-top: 52px;
+  padding-top: 27px;
+  border-top: 1px solid #dfc69d;
+}
+
+.mirror-obstructions > header > span {
+  display: block;
+  color: color-mix(in srgb, var(--journey) 76%, #986426);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.mirror-obstructions > header h4 {
+  margin-top: 5px;
+  color: #3f3120;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.036em;
+  line-height: 1.06;
+}
+
+.mirror-obstructions > header p {
+  max-width: 72ch;
+  margin-top: 10px;
+  color: #746047;
+  font-size: 11px;
+  line-height: 1.62;
+}
+
+.mirror-subjects {
+  display: flex;
+  gap: 6px;
+  margin-top: 22px;
+  padding-bottom: 5px;
+  overflow-x: auto;
+  scrollbar-color: #cdb58d transparent;
+  scrollbar-width: thin;
+}
+
+.mirror-subjects button {
+  flex: 0 0 auto;
+  padding: 8px 13px;
+  border: 1px solid #dbc29a;
+  border-radius: 999px;
+  color: #766046;
+  background: #fff9ed;
+  font-size: 9px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.mirror-subjects button:hover,
+.mirror-subjects button.active {
+  border-color: color-mix(in srgb, var(--journey) 55%, #caab78);
+  color: #3e3020;
+  background: color-mix(in srgb, var(--journey) 8%, #fff9ed);
+}
+
+.mirror-subjects button:active { transform: scale(0.97); }
+
+.mirror-subject {
+  display: grid;
+  grid-template-columns: minmax(145px, 0.48fr) minmax(280px, 1.52fr);
+  gap: 23px;
+  align-items: center;
+  margin-top: 15px;
+  padding: 16px 18px;
+  border: 1px solid #e1cba8;
+  border-left: 4px solid var(--journey);
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.64), transparent 48%),
+    color-mix(in srgb, var(--journey) 7%, #f8ead3);
+}
+
+.mirror-subject > span {
+  color: #493723;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 16px;
+  font-weight: 620;
+  line-height: 1.25;
+}
+
+.mirror-subject p { color: #695740; font-size: 10px; line-height: 1.58; }
+
+.mirror-subject p strong {
+  display: block;
+  margin-bottom: 4px;
+  color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px;
+  font-weight: 820;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mirror-steps {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.mirror-steps > button {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  padding: 13px 12px;
+  border: 1px solid #e0cda9;
+  background: #fffcf5;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 170ms ease, background 170ms ease;
+}
+
+.mirror-glass {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 3px;
+  border: 1px solid #d8bf95;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #fffdf8 38%, #efe0c6);
+  transition: border-color 170ms ease, background 170ms ease, opacity 170ms ease;
+}
+
+.mirror-glass i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #e3d2b3;
+  transition: background 170ms ease;
+}
+
+.mirror-steps button small {
+  color: #9c8462;
+  font-size: 7px;
+  font-weight: 820;
+  letter-spacing: 0.11em;
+}
+
+.mirror-steps button > strong {
+  color: #453423;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 14px;
+  font-weight: 610;
+  line-height: 1.16;
+}
+
+.mirror-steps button em {
+  color: #937b59;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mirror-steps button:hover,
+.mirror-steps button.active { border-color: var(--journey); background: color-mix(in srgb, var(--journey) 5%, #fffcf5); }
+.mirror-steps button.active .mirror-glass { border-color: var(--journey); }
+.mirror-steps button.present .mirror-glass { border-color: #be6655; background: linear-gradient(140deg, #fdf1ee 38%, #e8c4bb); }
+.mirror-steps button.present .mirror-glass i { background: #be6655; }
+.mirror-steps button.absent .mirror-glass { border-color: #4d9a7c; background: linear-gradient(140deg, #f2faf6 38%, #cfe6db); }
+.mirror-steps button.absent .mirror-glass i { background: #4d9a7c; }
+
+.mirror-reading {
+  margin-top: 14px;
+  border: 1px solid #e1cba8;
+  border-radius: 18px 5px 18px 5px;
+  background: #fffaf0;
+  overflow: hidden;
+}
+
+.mirror-question { padding: 18px 20px 14px; border-bottom: 1px solid #ecdcc1; }
+
+.mirror-question > span {
+  display: block;
+  margin-bottom: 5px;
+  color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px;
+  font-weight: 820;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.mirror-question h5 {
+  max-width: 68ch;
+  color: #443423;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.mirror-answer-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 14px 20px; }
+
+.mirror-answer-buttons button {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 12px;
+  border: 1px solid #dcc49d;
+  border-radius: 999px;
+  color: #766046;
+  background: #fff9ed;
+  font-size: 9px;
+  font-weight: 760;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.mirror-answer-buttons button span { width: 8px; height: 8px; border: 1px solid #ceb489; border-radius: 50%; }
+.mirror-answer-buttons button.present:hover span, .mirror-answer-buttons button.active.present span { border-color: #be6655; background: #be6655; }
+.mirror-answer-buttons button.absent:hover span, .mirror-answer-buttons button.active.absent span { border-color: #4d9a7c; background: #4d9a7c; }
+.mirror-answer-buttons button.active { color: #3e3020; border-color: #c9ab78; background: #fff4e0; }
+
+.mirror-interpretation {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  border-top: 1px solid #ecdcc1;
+  background: #fdf4e6;
+}
+
+.mirror-interpretation > p { padding: 16px 20px; color: #6b5941; font-size: 11px; line-height: 1.66; }
+.mirror-interpretation.empty > p { color: #8b7658; font-style: italic; }
+.mirror-interpretation > div { padding: 16px 20px; border-left: 1px solid #e6d6bc; }
+
+.mirror-interpretation > div span {
+  display: block;
+  margin-bottom: 4px;
+  color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px;
+  font-weight: 820;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mirror-interpretation > div strong { color: #57452e; font-size: 10px; font-weight: 560; line-height: 1.6; }
+
+.mirror-controls { display: flex; gap: 8px; justify-content: flex-end; padding: 14px 20px; border-top: 1px solid #ecdcc1; }
+
+.mirror-controls button {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  padding: 9px 15px;
+  border: 1px solid #d3b98f;
+  border-radius: 999px;
+  color: #4d3b25;
+  background: #fff5e4;
+  font-size: 9px;
+  font-weight: 760;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, opacity 160ms ease;
+}
+
+.mirror-controls button:disabled { opacity: 0.4; cursor: default; }
+.mirror-controls button:not(:disabled):hover { border-color: color-mix(in srgb, var(--journey) 55%, #c6a672); background: color-mix(in srgb, var(--journey) 9%, #fff5e4); }
+
+.mirror-summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 17px;
+  align-items: center;
+  margin-top: 13px;
+  padding: 15px 18px;
+  border: 1px solid #e4d2b7;
+  background: #fdf7ec;
+}
+
+.mirror-summary.complete { border-color: color-mix(in srgb, var(--journey) 38%, #ddc7a4); background: color-mix(in srgb, var(--journey) 6%, #fdf7ec); }
+
+.mirror-summary-plan { display: flex; gap: 5px; }
+
+.mirror-summary-plan > span {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #d9c19b;
+  border-radius: 50%;
+}
+
+.mirror-summary-plan > span i { width: 7px; height: 7px; border-radius: 50%; background: #e2d0b2; }
+.mirror-summary-plan > span.present i { background: #be6655; }
+.mirror-summary-plan > span.absent i { background: #4d9a7c; }
+
+.mirror-summary > div span {
+  display: block;
+  margin-bottom: 4px;
+  color: color-mix(in srgb, var(--journey) 78%, #865822);
+  font-size: 7px;
+  font-weight: 820;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mirror-summary > div strong { color: #57452e; font-size: 10px; font-weight: 560; line-height: 1.6; }
+
 @media (max-width: 1030px) {
   body.system-page { overflow: auto; }
 
@@ -5710,6 +6017,38 @@ body.system-page {
     justify-items: start;
     gap: 12px;
   }
+
+  .mirror-obstructions { margin-top: 42px; }
+
+  .mirror-subjects,
+  .mirror-steps {
+    margin-right: -18px;
+    margin-left: -18px;
+    padding-right: 18px;
+    padding-left: 18px;
+    overflow-x: auto;
+    scroll-padding-left: 18px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .mirror-subjects::-webkit-scrollbar,
+  .mirror-steps::-webkit-scrollbar { display: none; }
+
+  .mirror-subjects button,
+  .mirror-steps button { scroll-snap-align: start; }
+
+  .mirror-steps { grid-auto-columns: 46%; }
+
+  .mirror-subject,
+  .mirror-interpretation,
+  .mirror-summary { grid-template-columns: 1fr; gap: 8px; }
+
+  .mirror-interpretation > div { border-top: 1px solid #e6d6bc; border-left: 0; }
+
+  .mirror-summary { justify-items: start; gap: 12px; }
+
+  .mirror-controls { justify-content: flex-start; }
 }
 
 
@@ -5727,7 +6066,9 @@ body.system-page {
   .audience-chamber button,
   .audience-room-arch,
   .solitude-test button,
-  .substitution-test button {
+  .substitution-test button,
+  .mirror-obstructions button,
+  .mirror-glass {
     animation: none;
     transition: none;
   }
