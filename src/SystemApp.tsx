@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   ArrowRight,
   BookmarkSimple,
   BookOpenText,
@@ -19,36 +20,21 @@ import {
 } from "@phosphor-icons/react";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { assetUrl } from "./assetUrl";
+import { book22 } from "./book22";
+import { book23 } from "./book23";
+import { book24 } from "./book24";
+import { book25 } from "./book25";
+import { book26 } from "./book26";
+import { book27 } from "./book27";
+import { book28 } from "./book28";
+import { book29 } from "./book29";
+import { book30 } from "./book30";
 import { chapters, conceptNodes, contentSources } from "./data";
-
-type Depth = "glance" | "understand" | "deep" | "sources";
-type Glyph = "name" | "forces" | "order" | "know" | "pattern" | "receive" | "clear" | "learn" | "prepare" | "witness" | "arrive" | "leverage" | "attend" | "assent" | "resolve" | "act" | "guard" | "remember" | "steady";
-
-type JourneyNode = {
-  id: string;
-  label: string;
-  micro: string;
-  summary: string;
-  guardrail: string;
-  chapterId: number;
-  glyph: Glyph;
-};
-
-type Journey = {
-  id: string;
-  number: string;
-  question: string;
-  title: string;
-  description: string;
-  payoff: string;
-  image: string;
-  imageAlt: string;
-  minutes: number;
-  color: string;
-  nodes: JourneyNode[];
-};
+import type { Chapter, DeepReading, VisualModel } from "./data";
+import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
 
 type SavedState = {
+  bookId: number;
   journeyId: string;
   nodeId: string;
   depth: Depth;
@@ -75,7 +61,7 @@ const journeys: Journey[] = [
         label: "Name the faculty",
         micro: "Meaning before metaphor",
         summary:
-          "Ghazali's main subject is the subtle human faculty that knows, perceives, directs, and is morally addressed—not merely the bodily organ.",
+          "Ghazali's main subject is the subtle human faculty that knows, perceives, directs, and is morally addressed, not merely the bodily organ.",
         guardrail: "One word can carry bodily and inward meanings.",
         chapterId: 1,
         glyph: "name",
@@ -170,7 +156,7 @@ const journeys: Journey[] = [
         label: "Learn by evidence",
         micro: "Instruction, reflection, inference",
         summary:
-          "Ordinary learning proceeds through effort, instruction, evidence, reflection, and inference—the route whose steps a learner can trace.",
+          "Ordinary learning proceeds through effort, instruction, evidence, reflection, and inference, a route whose steps the learner can trace.",
         guardrail: "The account never licenses neglect of disciplined learning.",
         chapterId: 8,
         glyph: "learn",
@@ -349,6 +335,19 @@ const journeys: Journey[] = [
   },
 ];
 
+const book21: SystemBook = {
+  id: 21,
+  title: "The Wonders of the Heart",
+  shortTitle: "Wonders of the Heart",
+  defaultJourneyId: "action",
+  chapters,
+  conceptNodes,
+  journeys,
+  sources: contentSources,
+};
+
+const books = [book21, book22, book23, book24, book25, book26, book27, book28, book29, book30];
+
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
   { id: "glance", label: "30 seconds", short: "30s" },
   { id: "understand", label: "Understand", short: "Core" },
@@ -357,6 +356,12 @@ const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
 ];
 
 const mapPositions = {
+  4: [
+    [12, 25],
+    [43, 25],
+    [80, 35],
+    [58, 77],
+  ],
   5: [
     [12, 25],
     [36, 25],
@@ -374,7 +379,34 @@ const mapPositions = {
   ],
 } as const;
 
-const STORAGE_KEY = "ihya-system-state-v1";
+const STORAGE_KEY = "ihya-system-state-v2";
+const LEGACY_STORAGE_KEY = "ihya-system-state-v1";
+
+const ideaKey = (bookId: number, journeyId: string, nodeId: string) =>
+  `${bookId}:${journeyId}:${nodeId}`;
+
+function fallbackDeepReading(chapter: Chapter, node: JourneyNode, book: SystemBook): DeepReading {
+  return {
+    thesis: chapter.overview,
+    context:
+      `This section belongs to ${book.title}. Its argument is presented here as an original English synthesis, organized to preserve the distinction selected on the map.`,
+    moves: chapter.points.map((point, index) => ({
+      title: `Argument move ${String(index + 1).padStart(2, "0")}`,
+      body: point,
+    })),
+    distinction: {
+      title: "Keep the selected distinction intact",
+      firstLabel: "The core claim",
+      first: node.summary,
+      secondLabel: "What it does not mean",
+      second: node.guardrail,
+    },
+    misreading:
+      "A concise synthesis can show the argument's structure, but it should not be treated as a replacement for every detail, report, or qualification in the source text.",
+    observation: chapter.reflection,
+    sourceAnchor: `Book ${book.id}, section ${chapter.id}, ${chapter.formalTitle}.`,
+  };
+}
 
 function glyphFor(kind: Glyph) {
   const props = { size: 25, weight: "duotone" as const };
@@ -415,31 +447,627 @@ function glyphFor(kind: Glyph) {
       return <Sparkle {...props} />;
     case "steady":
       return <Compass {...props} />;
+    case "balance":
+      return <Target {...props} />;
+    case "practice":
+      return <Footprints {...props} />;
+    case "diagnose":
+    case "mirror":
+      return <Eye {...props} />;
+    case "health":
+    case "cultivate":
+      return <Sparkle {...props} />;
+    case "company":
+      return <LinkSimple {...props} />;
   }
 }
 
+function ConceptModel({ model, compact = false }: { model: VisualModel; compact?: boolean }) {
+  const [activeIndex, setActiveIndex] = useState(
+    Math.max(0, model.items.findIndex((item) => item.role === "balance")),
+  );
+  const activeItem = model.items[activeIndex] ?? model.items[0];
+
+  return (
+    <section className={`concept-model concept-model-${model.kind}${compact ? " concept-model-compact" : ""}`}>
+      <header>
+        <span>Visual logic</span>
+        <h4>{model.title}</h4>
+      </header>
+      <div
+        className="concept-model-track"
+        role="tablist"
+        aria-label={model.title}
+        style={{
+          "--model-count": model.items.length,
+          "--model-edge": `${50 / model.items.length}%`,
+        } as CSSProperties}
+      >
+        {model.items.map((item, index) => (
+          <button
+            className={`${item.role ?? "support"}${index === activeIndex ? " active" : ""}`}
+            key={`${item.label}:${index}`}
+            onClick={() => setActiveIndex(index)}
+            role="tab"
+            aria-selected={index === activeIndex}
+          >
+            <i aria-hidden="true"><span /></i>
+            <strong>{item.label}</strong>
+          </button>
+        ))}
+      </div>
+      <div className={`concept-model-reading ${activeItem.role ?? "support"}`} role="tabpanel">
+        <span>{String(activeIndex + 1).padStart(2, "0")} / {String(model.items.length).padStart(2, "0")}</span>
+        <p>{activeItem.body}</p>
+        <div className="concept-model-pager" aria-label="Move through visual logic">
+          <button
+            onClick={() => setActiveIndex((current) => Math.max(0, current - 1))}
+            disabled={activeIndex === 0}
+            aria-label="Previous step"
+          ><ArrowLeft size={15} weight="bold" /></button>
+          <button
+            onClick={() => setActiveIndex((current) => Math.min(model.items.length - 1, current + 1))}
+            disabled={activeIndex === model.items.length - 1}
+            aria-label="Next step"
+          ><ArrowRight size={15} weight="bold" /></button>
+        </div>
+      </div>
+      {!compact && <p className="concept-model-caption">{model.caption}</p>}
+    </section>
+  );
+}
+
+function WorldLens({
+  lens,
+  chapterId,
+  onSelectChapter,
+}: {
+  lens: NonNullable<SystemBook["relationLens"]>;
+  chapterId: number;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const initialItem = lens.items.find((item) => item.chapterId === chapterId) ?? lens.items[0];
+  const [activeItemId, setActiveItemId] = useState(initialItem.id);
+  const [activeStateId, setActiveStateId] = useState<"fruit" | "means" | "attachment">("means");
+  const activeItem = lens.items.find((item) => item.id === activeItemId) ?? lens.items[0];
+  const activeState = activeItem.states.find((state) => state.id === activeStateId) ?? activeItem.states[0];
+
+  return (
+    <section className="world-lens" aria-labelledby="world-lens-title">
+      <header>
+        <span>Applied distinction</span>
+        <h4 id="world-lens-title">{lens.title}</h4>
+        <p>{lens.note}</p>
+      </header>
+
+      <div className="world-lens-subjects" role="tablist" aria-label="Choose an ordinary share">
+        {lens.items.map((item) => (
+          <button
+            key={item.id}
+            className={item.id === activeItem.id ? "active" : ""}
+            onClick={() => setActiveItemId(item.id)}
+            role="tab"
+            aria-selected={item.id === activeItem.id}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="world-lens-question">
+        <span>Hold the object still. Change the relation.</span>
+        <strong>{activeItem.question}</strong>
+      </div>
+
+      <div className="world-lens-gates" role="tablist" aria-label={`Relations to ${activeItem.label}`}>
+        {activeItem.states.map((state, index) => (
+          <button
+            key={state.id}
+            className={`${state.role}${state.id === activeState.id ? " active" : ""}`}
+            onClick={() => setActiveStateId(state.id)}
+            role="tab"
+            aria-selected={state.id === activeState.id}
+          >
+            <span className="lens-gate" aria-hidden="true"><i /></span>
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            <strong>{state.label}</strong>
+          </button>
+        ))}
+      </div>
+
+      <div className={`world-lens-reading ${activeState.role}`} role="tabpanel">
+        <div>
+          <span>{activeItem.label} · {activeState.label}</span>
+          <strong>{activeState.signal}</strong>
+        </div>
+        <p>{activeState.body}</p>
+        <button onClick={() => onSelectChapter(activeItem.chapterId)}>
+          Open related section <ArrowRight size={15} weight="bold" />
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function WealthAudit({
+  audit,
+  chapterId,
+  onSelectChapter,
+}: {
+  audit: NonNullable<SystemBook["wealthAudit"]>;
+  chapterId: number;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const initialItem = audit.items.find((item) => item.gates.some((gate) => gate.chapterId === chapterId)) ?? audit.items[0];
+  const initialGateIndex = Math.max(0, initialItem.gates.findIndex((gate) => gate.chapterId === chapterId));
+  const [activeItemId, setActiveItemId] = useState(initialItem.id);
+  const [activeGateIndex, setActiveGateIndex] = useState(initialGateIndex);
+  const activeItem = audit.items.find((item) => item.id === activeItemId) ?? audit.items[0];
+  const activeGate = activeItem.gates[activeGateIndex] ?? activeItem.gates[0];
+
+  const chooseItem = (itemId: string) => {
+    setActiveItemId(itemId);
+    setActiveGateIndex(0);
+  };
+
+  return (
+    <section className="wealth-audit" aria-labelledby="wealth-audit-title">
+      <header>
+        <span>Applied diagnosis</span>
+        <h4 id="wealth-audit-title">{audit.title}</h4>
+        <p>{audit.note}</p>
+      </header>
+
+      <div className="wealth-audit-subjects" role="tablist" aria-label="Choose a financial situation">
+        {audit.items.map((item) => (
+          <button
+            key={item.id}
+            className={item.id === activeItem.id ? "active" : ""}
+            onClick={() => chooseItem(item.id)}
+            role="tab"
+            aria-selected={item.id === activeItem.id}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="wealth-audit-scenario">
+        <span>{activeItem.scenario}</span>
+        <p>{activeItem.opening}</p>
+      </div>
+
+      <div className="wealth-audit-gates" role="tablist" aria-label={`Five duties applied to ${activeItem.label}`}>
+        {activeItem.gates.map((gate, index) => (
+          <button
+            key={gate.id}
+            className={index === activeGateIndex ? "active" : ""}
+            onClick={() => setActiveGateIndex(index)}
+            role="tab"
+            aria-selected={index === activeGateIndex}
+          >
+            <span className="audit-gate-arch" aria-hidden="true"><i /></span>
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            <strong>{gate.label}</strong>
+          </button>
+        ))}
+      </div>
+
+      <div className="wealth-audit-reading" role="tabpanel">
+        <div className="audit-reading-question">
+          <span>Gate {activeGateIndex + 1} of {activeItem.gates.length}</span>
+          <h5>{activeGate.question}</h5>
+        </div>
+        <div className="audit-reading-signs">
+          <div className="clear">
+            <span>Clear sign</span>
+            <p>{activeGate.clearSign}</p>
+          </div>
+          <div className="danger">
+            <span>Warning sign</span>
+            <p>{activeGate.dangerSign}</p>
+          </div>
+        </div>
+        <div className="audit-reading-action">
+          <div>
+            <span>One next action</span>
+            <strong>{activeGate.nextAction}</strong>
+          </div>
+          <div className="audit-reading-controls">
+            <button
+              onClick={() => setActiveGateIndex((current) => Math.max(0, current - 1))}
+              disabled={activeGateIndex === 0}
+              aria-label="Previous wealth gate"
+            ><ArrowLeft size={15} weight="bold" /></button>
+            {activeGateIndex < activeItem.gates.length - 1 ? (
+              <button onClick={() => setActiveGateIndex((current) => Math.min(activeItem.gates.length - 1, current + 1))}>
+                Next gate <ArrowRight size={15} weight="bold" />
+              </button>
+            ) : (
+              <button onClick={() => onSelectChapter(activeGate.chapterId)}>
+                Open related section <ArrowRight size={15} weight="bold" />
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+function SolitudeTest({
+  test,
+  chapterId,
+  onSelectChapter,
+}: {
+  test: NonNullable<SystemBook["solitudeTest"]>;
+  chapterId: number;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const firstItem = test.items.find((item) => item.chapterId === chapterId) ?? test.items[0];
+  const [activeItemId, setActiveItemId] = useState(firstItem.id);
+  const [answers, setAnswers] = useState<Record<string, boolean>>({});
+  const activeItem = test.items.find((item) => item.id === activeItemId) ?? test.items[0];
+  const companyKey = `${activeItem.id}:company`;
+  const solitudeKey = `${activeItem.id}:solitude`;
+  const company = answers[companyKey];
+  const solitude = answers[solitudeKey];
+  const answered = company !== undefined && solitude !== undefined;
+  const reading: SolitudeReading | undefined = answered
+    ? company && solitude
+      ? "both"
+      : solitude
+        ? "pride"
+        : company
+          ? "ostentation"
+          : "sound"
+    : undefined;
+  const verdict = reading ? activeItem.verdicts.find((item) => item.id === reading) : undefined;
+
+  const chooseItem = (itemId: string) => setActiveItemId(itemId);
+  const record = (key: string, value: boolean) =>
+    setAnswers((current) => ({ ...current, [key]: current[key] === value ? undefined as unknown as boolean : value }));
+
+  const rows: Array<[string, string, boolean | undefined]> = [
+    [companyKey, activeItem.companyQuestion, company],
+    [solitudeKey, activeItem.solitudeQuestion, solitude],
+  ];
+
+  return (
+    <section className="solitude-test" aria-labelledby="solitude-test-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="solitude-test-title">{test.title}</h4>
+        <p>{test.note}</p>
+      </header>
+
+      <div className="solitude-trials" role="tablist" aria-label="Choose a trial">
+        {test.items.map((item) => (
+          <button key={item.id} className={item.id === activeItem.id ? "active" : ""} onClick={() => chooseItem(item.id)} role="tab" aria-selected={item.id === activeItem.id}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="solitude-purpose">
+        <span>{activeItem.trial}</span>
+        <p><strong>Why this trial</strong>{activeItem.purpose}</p>
+      </div>
+
+      <div className="solitude-questions">
+        {rows.map(([key, question, value], index) => (
+          <div key={key} className={`solitude-question${value === undefined ? "" : value ? " heavy" : " light"}`}>
+            <span>{index === 0 ? "Before people" : "In solitude"}</span>
+            <h5>{question}</h5>
+            <div className="solitude-answer-buttons" aria-label={index === 0 ? "Answer for company" : "Answer for solitude"}>
+              <button className={value === true ? "active heavy" : "heavy"} onClick={() => record(key, true)} aria-pressed={value === true}>
+                <span aria-hidden="true" />Heavy
+              </button>
+              <button className={value === false ? "active light" : "light"} onClick={() => record(key, false)} aria-pressed={value === false}>
+                <span aria-hidden="true" />Light
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className={`solitude-verdict ${reading ?? "empty"}`} aria-live="polite">
+        {verdict ? (
+          <>
+            <div className="solitude-verdict-head">
+              <span>{verdict.label}</span>
+              <strong>{verdict.name}</strong>
+            </div>
+            <p>{verdict.body}</p>
+            <div><span>What to treat</span><strong>{verdict.repair}</strong></div>
+            <button onClick={() => onSelectChapter(verdict.chapterId)}>Read the closest source movement <ArrowRight size={15} weight="bold" /></button>
+          </>
+        ) : (
+          <p>Answer both questions for this trial. You are recording where the heaviness sits, not proving anything about your heart.</p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+
+function SubstitutionTest({
+  test,
+  chapterId,
+  onSelectChapter,
+}: {
+  test: NonNullable<SystemBook["substitutionTest"]>;
+  chapterId: number;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const firstItem = test.items.find((item) => item.swaps.some((swap) => swap.chapterId === chapterId)) ?? test.items[0];
+  const [activeItemId, setActiveItemId] = useState(firstItem.id);
+  const [activeSwapId, setActiveSwapId] = useState(firstItem.swaps[0].id);
+  const [answers, setAnswers] = useState<Record<string, SubstitutionResponse>>({});
+  const activeItem = test.items.find((item) => item.id === activeItemId) ?? test.items[0];
+  const activeSwap = activeItem.swaps.find((swap) => swap.id === activeSwapId) ?? activeItem.swaps[0];
+  const answerKey = `${activeItem.id}:${activeSwap.id}`;
+  const answer = answers[answerKey];
+  const itemAnswers = activeItem.swaps.map((swap) => answers[`${activeItem.id}:${swap.id}`]);
+  const completed = itemAnswers.filter(Boolean).length;
+
+  const chooseItem = (itemId: string) => {
+    const next = test.items.find((item) => item.id === itemId);
+    if (!next) return;
+    setActiveItemId(itemId);
+    setActiveSwapId(next.swaps[0].id);
+  };
+
+  const reading = answer === "intact"
+    ? activeSwap.intact
+    : answer === "partial"
+      ? activeSwap.partial
+      : answer === "collapsed"
+        ? activeSwap.collapsed
+        : "Answer honestly for this swap. You are checking whether a stated purpose survives your removal, not proving anything about your heart.";
+
+  const verdict = completed < activeItem.swaps.length
+    ? `Work all ${activeItem.swaps.length} swaps for this claim to see the pattern rather than a single reaction.`
+    : itemAnswers.includes("collapsed")
+      ? "At least one swap collapsed the claim. What vanished when you were removed is the thing that was actually wanted, and that is the part to treat."
+      : itemAnswers.includes("partial")
+        ? "The claim survived with a residue. Ghazali expects the residue rather than its absence; note it and keep looking rather than declaring the matter closed."
+        : "The claim held across every swap. Keep the result provisional, and remember that the satisfaction of having passed is itself the last trap in this book.";
+
+  return (
+    <section className="substitution-test" aria-labelledby="substitution-test-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="substitution-test-title">{test.title}</h4>
+        <p>{test.note}</p>
+      </header>
+
+      <div className="substitution-claims" role="tablist" aria-label="Choose a claimed purpose">
+        {test.items.map((item) => (
+          <button key={item.id} className={item.id === activeItem.id ? "active" : ""} onClick={() => chooseItem(item.id)} role="tab" aria-selected={item.id === activeItem.id}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="substitution-claim">
+        <span>{activeItem.claim}</span>
+        <p><strong>The setting</strong>{activeItem.setting}</p>
+      </div>
+
+      <div className="substitution-swaps" role="tablist" aria-label={`Swaps for ${activeItem.label}`}>
+        {activeItem.swaps.map((swap, index) => {
+          const swapAnswer = answers[`${activeItem.id}:${swap.id}`];
+          return (
+            <button key={swap.id} className={`${swap.id === activeSwap.id ? "active" : ""}${swapAnswer ? ` ${swapAnswer}` : ""}`} onClick={() => setActiveSwapId(swap.id)} role="tab" aria-selected={swap.id === activeSwap.id}>
+              <small>Swap {String(index + 1).padStart(2, "0")}</small>
+              <strong>{swap.label}</strong>
+              <em>{swapAnswer ?? "untested"}</em>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="substitution-reading" role="tabpanel">
+        <div className="substitution-prompt">
+          <span>Remove yourself and look</span>
+          <h5>{activeSwap.prompt}</h5>
+        </div>
+        <div className="substitution-answer-buttons" aria-label="Record what happens to the purpose">
+          {([
+            ["intact", "Purpose intact"],
+            ["partial", "Something drops"],
+            ["collapsed", "It collapses"],
+          ] as Array<[SubstitutionResponse, string]>).map(([value, label]) => (
+            <button key={value} className={answer === value ? `active ${value}` : value} onClick={() => setAnswers((current) => ({ ...current, [answerKey]: value }))} aria-pressed={answer === value}>
+              <span aria-hidden="true" />{label}
+            </button>
+          ))}
+        </div>
+        <div className={`substitution-interpretation ${answer ?? "empty"}`} aria-live="polite">
+          <p>{reading}</p>
+          {answer && (
+            <button onClick={() => onSelectChapter(activeSwap.chapterId)}>Read the closest source movement <ArrowRight size={15} weight="bold" /></button>
+          )}
+        </div>
+      </div>
+
+      <div className={`substitution-verdict ${completed === activeItem.swaps.length ? "complete" : ""}`}>
+        <div className="substitution-verdict-plan" aria-hidden="true">
+          {activeItem.swaps.map((swap) => <span key={swap.id} className={answers[`${activeItem.id}:${swap.id}`] ?? "empty"}><i /></span>)}
+        </div>
+        <div>
+          <span>{completed} of {activeItem.swaps.length} swaps tested</span>
+          <strong>{verdict}</strong>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AudienceChamber({
+  chamber,
+  chapterId,
+  onSelectChapter,
+}: {
+  chamber: NonNullable<SystemBook["audienceChamber"]>;
+  chapterId: number;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const firstItem = chamber.items.find((item) => item.stages.some((stage) => stage.chapterId === chapterId)) ?? chamber.items[0];
+  const firstStage = firstItem.stages.find((stage) => stage.chapterId === chapterId) ?? firstItem.stages[0];
+  const [activeItemId, setActiveItemId] = useState(firstItem.id);
+  const [activeStageId, setActiveStageId] = useState(firstStage.id);
+  const [responses, setResponses] = useState<Record<string, AudienceResponse>>({});
+  const activeItem = chamber.items.find((item) => item.id === activeItemId) ?? chamber.items[0];
+  const activeStage = activeItem.stages.find((stage) => stage.id === activeStageId) ?? activeItem.stages[0];
+  const responseKey = `${activeItem.id}:${activeStage.id}`;
+  const activeResponse = responses[responseKey];
+  const itemResponses = activeItem.stages.map((stage) => responses[`${activeItem.id}:${stage.id}`]);
+  const completed = itemResponses.filter(Boolean).length;
+  const strongestStage = [...activeItem.stages].reverse().find((stage) => responses[`${activeItem.id}:${stage.id}`] === "audience-led")
+    ?? [...activeItem.stages].reverse().find((stage) => responses[`${activeItem.id}:${stage.id}`] === "shifted")
+    ?? activeItem.stages[activeItem.stages.length - 1];
+  const trace = itemResponses.includes("audience-led")
+    ? "At least one room became audience-led. That is a place to slow down, restore the private purpose, and read the related source movement closely."
+    : itemResponses.includes("shifted")
+      ? "The act survives, but visibility changes its energy or emotional return. The shift is useful evidence for treatment, not a verdict on sincerity."
+      : completed === activeItem.stages.length
+        ? "The act appeared steady across these four observations. Keep the result provisional and continue ordinary vigilance before, during, and after."
+        : "Complete all four rooms to compare the same act across privacy, visibility, praise, and being overlooked.";
+
+  const chooseItem = (itemId: string) => {
+    setActiveItemId(itemId);
+    setActiveStageId("alone");
+  };
+
+  const responseCopy = activeResponse === "steady"
+    ? activeStage.steady
+    : activeResponse === "shifted"
+      ? activeStage.shifted
+      : activeResponse === "audience-led"
+        ? activeStage.audienceLed
+        : "Choose the closest observation. You are recording variance, not proving a hidden intention.";
+
+  return (
+    <section className="audience-chamber" aria-labelledby="audience-chamber-title">
+      <header>
+        <span>Applied self-observation</span>
+        <h4 id="audience-chamber-title">{chamber.title}</h4>
+        <p>{chamber.note}</p>
+      </header>
+
+      <div className="audience-chamber-subjects" role="tablist" aria-label="Choose an act to observe">
+        {chamber.items.map((item) => (
+          <button key={item.id} className={item.id === activeItem.id ? "active" : ""} onClick={() => chooseItem(item.id)} role="tab" aria-selected={item.id === activeItem.id}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="audience-purpose">
+        <span>{activeItem.scenario}</span>
+        <p><strong>Private purpose</strong>{activeItem.privatePurpose}</p>
+      </div>
+
+      <div className="audience-rooms" role="tablist" aria-label={`Four audience conditions for ${activeItem.label}`}>
+        {activeItem.stages.map((stage, index) => {
+          const stageResponse = responses[`${activeItem.id}:${stage.id}`];
+          return (
+            <button key={stage.id} className={`${stage.id === activeStage.id ? "active" : ""}${stageResponse ? ` ${stageResponse}` : ""}`} onClick={() => setActiveStageId(stage.id)} role="tab" aria-selected={stage.id === activeStage.id}>
+              <span className="audience-room-arch" aria-hidden="true"><i /><b /></span>
+              <small>{String(index + 1).padStart(2, "0")}</small>
+              <strong>{stage.label}</strong>
+              <em>{stageResponse ? stageResponse.replace("-", " ") : "unobserved"}</em>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="audience-reading" role="tabpanel">
+        <div className="audience-question">
+          <span>Room {activeItem.stages.indexOf(activeStage) + 1} of {activeItem.stages.length}</span>
+          <h5>{activeStage.question}</h5>
+        </div>
+        <div className="audience-response-buttons" aria-label="Record the closest observation">
+          {([
+            ["steady", "Stayed steady"],
+            ["shifted", "Shifted slightly"],
+            ["audience-led", "Audience-led"],
+          ] as Array<[AudienceResponse, string]>).map(([value, label]) => (
+            <button key={value} className={activeResponse === value ? `active ${value}` : value} onClick={() => setResponses((current) => ({ ...current, [responseKey]: value }))} aria-pressed={activeResponse === value}>
+              <span aria-hidden="true" />{label}
+            </button>
+          ))}
+        </div>
+        <div className={`audience-interpretation ${activeResponse ?? "empty"}`} aria-live="polite">
+          <p>{responseCopy}</p>
+          {activeResponse && <div><span>Return the act to purpose</span><strong>{activeStage.repair}</strong></div>}
+        </div>
+        <div className="audience-controls">
+          <button onClick={() => setActiveStageId(activeItem.stages[Math.max(0, activeItem.stages.indexOf(activeStage) - 1)].id)} disabled={activeItem.stages.indexOf(activeStage) === 0} aria-label="Previous audience room"><ArrowLeft size={15} weight="bold" /></button>
+          {activeItem.stages.indexOf(activeStage) < activeItem.stages.length - 1 ? (
+            <button onClick={() => setActiveStageId(activeItem.stages[Math.min(activeItem.stages.length - 1, activeItem.stages.indexOf(activeStage) + 1)].id)}>Next room <ArrowRight size={15} weight="bold" /></button>
+          ) : (
+            <button onClick={() => onSelectChapter(activeStage.chapterId)}>Open this section <ArrowRight size={15} weight="bold" /></button>
+          )}
+        </div>
+      </div>
+
+      <div className={`motive-trace ${completed === activeItem.stages.length ? "complete" : ""}`}>
+        <div className="motive-trace-plan" aria-hidden="true">
+          {activeItem.stages.map((stage) => <span key={stage.id} className={responses[`${activeItem.id}:${stage.id}`] ?? "empty"}><i /></span>)}
+        </div>
+        <div>
+          <span>Motive trace · {completed} of {activeItem.stages.length} rooms observed</span>
+          <strong>{trace}</strong>
+        </div>
+        {completed === activeItem.stages.length && (
+          <button onClick={() => onSelectChapter(strongestStage.chapterId)}>Read the closest source movement <ArrowRight size={15} weight="bold" /></button>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function initialState(): SavedState {
+  const fallbackJourney = book30.journeys.find((item) => item.id === book30.defaultJourneyId) ?? book30.journeys[0];
+  const fallbackNode = fallbackJourney.nodes[0];
   const fallback: SavedState = {
-    journeyId: "action",
-    nodeId: "prompting-arrives",
+    bookId: book30.id,
+    journeyId: fallbackJourney.id,
+    nodeId: fallbackNode.id,
     depth: "glance",
-    visited: ["action:prompting-arrives"],
+    visited: [ideaKey(book30.id, fallbackJourney.id, fallbackNode.id)],
     bookmarks: [],
   };
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const current = window.localStorage.getItem(STORAGE_KEY);
+    const raw = current ?? window.localStorage.getItem(LEGACY_STORAGE_KEY);
     if (!raw) return fallback;
     const parsed = JSON.parse(raw) as Partial<SavedState>;
-    const journey = journeys.find((item) => item.id === parsed.journeyId);
+    const book = books.find((item) => item.id === parsed.bookId) ?? book30;
+    const journey = book.journeys.find((item) => item.id === parsed.journeyId)
+      ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
+      ?? book.journeys[0];
     const node = journey?.nodes.find((item) => item.id === parsed.nodeId);
-    if (!journey || !node) return fallback;
+    const resolvedNode = node ?? journey.nodes[0];
+    const normalizeKeys = (keys: unknown) =>
+      Array.isArray(keys)
+        ? keys.filter((item): item is string => typeof item === "string").map((item) =>
+            item.split(":").length === 2 ? `21:${item}` : item)
+        : [];
+    const normalizedVisited = normalizeKeys(parsed.visited);
+    const currentKey = ideaKey(book.id, journey.id, resolvedNode.id);
     return {
+      bookId: book.id,
       journeyId: journey.id,
-      nodeId: node.id,
-      depth: depthOptions.some((item) => item.id === parsed.depth) ? parsed.depth! : "glance",
-      visited: Array.isArray(parsed.visited) ? parsed.visited : [],
-      bookmarks: Array.isArray(parsed.bookmarks) ? parsed.bookmarks : [],
+      nodeId: resolvedNode.id,
+      depth: current && depthOptions.some((item) => item.id === parsed.depth) ? parsed.depth! : "glance",
+      visited: normalizedVisited.includes(currentKey) ? normalizedVisited : [...normalizedVisited, currentKey],
+      bookmarks: normalizeKeys(parsed.bookmarks),
     };
   } catch {
     return fallback;
@@ -449,18 +1077,32 @@ function initialState(): SavedState {
 function SystemApp() {
   const [saved, setSaved] = useState<SavedState>(initialState);
   const [activeConcept, setActiveConcept] = useState<string | null>(null);
-  const journey = journeys.find((item) => item.id === saved.journeyId) ?? journeys[2];
+  const [activeTaxonomy, setActiveTaxonomy] = useState("all");
+  const [activeProcess, setActiveProcess] = useState("all");
+  const book = books.find((item) => item.id === saved.bookId) ?? book30;
+  const journey = book.journeys.find((item) => item.id === saved.journeyId)
+    ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
+    ?? book.journeys[0];
   const node = journey.nodes.find((item) => item.id === saved.nodeId) ?? journey.nodes[0];
-  const chapter = chapters.find((item) => item.id === node.chapterId)!;
-  const nodeKey = `${journey.id}:${node.id}`;
+  const chapter = book.chapters.find((item) => item.id === node.chapterId)!;
+  const nodeKey = ideaKey(book.id, journey.id, node.id);
   const isBookmarked = saved.bookmarks.includes(nodeKey);
-  const positions = mapPositions[journey.nodes.length as 5 | 6];
+  const positions = mapPositions[journey.nodes.length as 4 | 5 | 6];
   const relatedConcepts = useMemo(
-    () => conceptNodes.filter((concept) => chapter.relatedNodes.includes(concept.id)),
-    [chapter],
+    () => book.conceptNodes.filter((concept) => chapter.relatedNodes.includes(concept.id)),
+    [book, chapter],
   );
-  const concept = conceptNodes.find((item) => item.id === activeConcept) ?? null;
-  const totalNodes = journeys.reduce((total, item) => total + item.nodes.length, 0);
+  const concept = book.conceptNodes.find((item) => item.id === activeConcept) ?? null;
+  const totalNodes = book.journeys.reduce((total, item) => total + item.nodes.length, 0);
+  const visitedInBook = saved.visited.filter((item) => item.startsWith(`${book.id}:`)).length;
+  const bookmarksInBook = saved.bookmarks.filter((item) => item.startsWith(`${book.id}:`)).length;
+  const deepReading = chapter.deep ?? fallbackDeepReading(chapter, node, book);
+  const activeTaxonomyGroup = book.taxonomy?.groups.find((group) => group.id === activeTaxonomy);
+  const activeProcessStage = book.process?.stages.find((stage) => stage.id === activeProcess);
+  const activeSectionGroup = activeTaxonomyGroup ?? activeProcessStage;
+  const displayedChapters = activeSectionGroup
+    ? book.chapters.filter((item) => activeSectionGroup.chapterIds.includes(item.id))
+    : book.chapters;
 
   useEffect(() => {
     document.body.classList.add("system-page");
@@ -471,10 +1113,35 @@ function SystemApp() {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
   }, [saved]);
 
+  const selectBook = (bookId: number) => {
+    const nextBook = books.find((item) => item.id === bookId);
+    if (!nextBook) return;
+    const nextJourney = nextBook.journeys.find((item) => item.id === nextBook.defaultJourneyId) ?? nextBook.journeys[0];
+    const nextNode = nextJourney.nodes[0];
+    const key = ideaKey(nextBook.id, nextJourney.id, nextNode.id);
+    setActiveConcept(null);
+    setActiveTaxonomy("all");
+    setActiveProcess("all");
+    setSaved((current) => ({
+      ...current,
+      bookId: nextBook.id,
+      journeyId: nextJourney.id,
+      nodeId: nextNode.id,
+      depth: "glance",
+      visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
+    }));
+  };
+
   const selectJourney = (next: Journey) => {
     const first = next.nodes[0];
-    const key = `${next.id}:${first.id}`;
+    const key = ideaKey(book.id, next.id, first.id);
     setActiveConcept(null);
+    if (activeTaxonomy !== "all") {
+      setActiveTaxonomy(book.taxonomy?.groups.find((group) => group.chapterIds.includes(first.chapterId))?.id ?? "all");
+    }
+    if (activeProcess !== "all") {
+      setActiveProcess(book.process?.stages.find((stage) => stage.chapterIds.includes(first.chapterId))?.id ?? "all");
+    }
     setSaved((current) => ({
       ...current,
       journeyId: next.id,
@@ -484,8 +1151,14 @@ function SystemApp() {
   };
 
   const selectNode = (next: JourneyNode) => {
-    const key = `${journey.id}:${next.id}`;
+    const key = ideaKey(book.id, journey.id, next.id);
     setActiveConcept(null);
+    if (activeTaxonomy !== "all") {
+      setActiveTaxonomy(book.taxonomy?.groups.find((group) => group.chapterIds.includes(next.chapterId))?.id ?? "all");
+    }
+    if (activeProcess !== "all") {
+      setActiveProcess(book.process?.stages.find((stage) => stage.chapterIds.includes(next.chapterId))?.id ?? "all");
+    }
     setSaved((current) => ({
       ...current,
       nodeId: next.id,
@@ -494,11 +1167,17 @@ function SystemApp() {
   };
 
   const selectChapter = (chapterId: number) => {
-    const nextJourney = journeys.find((item) => item.nodes.some((itemNode) => itemNode.chapterId === chapterId));
+    const nextJourney = book.journeys.find((item) => item.nodes.some((itemNode) => itemNode.chapterId === chapterId));
     const nextNode = nextJourney?.nodes.find((item) => item.chapterId === chapterId);
     if (!nextJourney || !nextNode) return;
-    const key = `${nextJourney.id}:${nextNode.id}`;
+    const key = ideaKey(book.id, nextJourney.id, nextNode.id);
     setActiveConcept(null);
+    if (activeTaxonomy !== "all") {
+      setActiveTaxonomy(book.taxonomy?.groups.find((group) => group.chapterIds.includes(chapterId))?.id ?? "all");
+    }
+    if (activeProcess !== "all") {
+      setActiveProcess(book.process?.stages.find((stage) => stage.chapterIds.includes(chapterId))?.id ?? "all");
+    }
     setSaved((current) => ({
       ...current,
       journeyId: nextJourney.id,
@@ -535,15 +1214,26 @@ function SystemApp() {
         </div>
 
         <div className="book-identity">
-          <span>Book 21 of 40</span>
-          <strong>The Wonders of the Heart</strong>
+          <label className="book-select-shell">
+            <span>Book {book.id} of 40</span>
+            <select
+              aria-label="Choose an available book"
+              value={book.id}
+              onChange={(event) => selectBook(Number(event.target.value))}
+            >
+              {books.map((item) => (
+                <option value={item.id} key={item.id}>Book {item.id}: {item.shortTitle}</option>
+              ))}
+            </select>
+          </label>
+          <strong>{book.title}</strong>
         </div>
 
         <div className="system-status" aria-label="Saved reading progress">
-          <span className="status-meter"><i style={{ width: `${(saved.visited.length / totalNodes) * 100}%` }} /></span>
-          <span><strong>{saved.visited.length}</strong> of {totalNodes} ideas seen</span>
-          <BookmarkSimple size={18} weight={saved.bookmarks.length ? "fill" : "regular"} />
-          <span>{saved.bookmarks.length}</span>
+          <span className="status-meter"><i style={{ width: `${(visitedInBook / totalNodes) * 100}%` }} /></span>
+          <span><strong>{visitedInBook}</strong> of {totalNodes} ideas seen</span>
+          <BookmarkSimple size={18} weight={bookmarksInBook ? "fill" : "regular"} />
+          <span>{bookmarksInBook}</span>
         </div>
       </header>
 
@@ -557,9 +1247,9 @@ function SystemApp() {
           <p className="question-intro">Choose the confusion you want Ghazali to resolve.</p>
 
           <nav className="question-list">
-            {journeys.map((item) => {
+            {book.journeys.map((item) => {
               const isActive = item.id === journey.id;
-              const seen = item.nodes.filter((itemNode) => saved.visited.includes(`${item.id}:${itemNode.id}`)).length;
+              const seen = item.nodes.filter((itemNode) => saved.visited.includes(ideaKey(book.id, item.id, itemNode.id))).length;
               return (
                 <button
                   className={isActive ? "question-card active" : "question-card"}
@@ -588,6 +1278,7 @@ function SystemApp() {
           </div>
         </aside>
 
+        {saved.depth !== "deep" && (
         <section className="map-panel" aria-labelledby="journey-question">
           <header className="map-header">
             <div>
@@ -620,7 +1311,7 @@ function SystemApp() {
             {journey.nodes.map((item, index) => {
               const [x, y] = positions[index];
               const isActive = item.id === node.id;
-              const wasVisited = saved.visited.includes(`${journey.id}:${item.id}`);
+              const wasVisited = saved.visited.includes(ideaKey(book.id, journey.id, item.id));
               return (
                 <button
                   className={`map-node${isActive ? " active" : ""}${wasVisited ? " visited" : ""}`}
@@ -641,7 +1332,7 @@ function SystemApp() {
             })}
 
             <div className="concept-dock">
-              <span>Forces in this section</span>
+              <span>Concepts in this section</span>
               <div>
                 {relatedConcepts.map((item) => (
                   <button
@@ -667,7 +1358,9 @@ function SystemApp() {
             )}
           </div>
         </section>
+        )}
 
+        {saved.depth !== "deep" && (
         <aside className="depth-panel" aria-label="Explanation depth">
           <div className="depth-heading">
             <span>Choose resolution</span>
@@ -711,6 +1404,13 @@ function SystemApp() {
             {saved.depth === "understand" && (
               <div className="depth-content understand-content">
                 <p>{chapter.overview}</p>
+                {chapter.visualModel && (
+                  <ConceptModel
+                    key={`compact:${book.id}:${chapter.id}`}
+                    model={chapter.visualModel}
+                    compact
+                  />
+                )}
                 <div className="core-points">
                   <span>Three things to hold</span>
                   {chapter.points.map((point, index) => (
@@ -723,36 +1423,16 @@ function SystemApp() {
               </div>
             )}
 
-            {saved.depth === "deep" && (
-              <div className="depth-content deep-content">
-                <div className="formal-title">
-                  <span>In the text's sequence</span>
-                  <strong>{chapter.formalTitle}</strong>
-                </div>
-                <p>{chapter.overview}</p>
-                <ul>
-                  {chapter.points.map((point) => <li key={point}>{point}</li>)}
-                </ul>
-                <blockquote>
-                  <span>Reflect</span>
-                  {chapter.reflection}
-                </blockquote>
-                <details className="self-explain">
-                  <summary>Pause and put the distinction in your own words</summary>
-                  <p>What changes between this stage and the one before it? If you cannot say it simply yet, revisit the mechanism map.</p>
-                </details>
-              </div>
-            )}
-
             {saved.depth === "sources" && (
               <div className="depth-content source-content">
                 <div className="grounding-label">
                   <BookOpenText size={21} weight="duotone" />
-                  <p><strong>Grounded to Book 21, section {chapter.id}</strong><span>{chapter.formalTitle}</span></p>
+                  <p><strong>Grounded to Book {book.id}, section {chapter.id}</strong><span>{chapter.formalTitle}</span></p>
                 </div>
                 <p>This prototype uses original English synthesis. It is designed to preserve the section's distinctions while guiding the reader back to primary and published texts.</p>
+                {book.editorialNote && <p className="editorial-note"><Shield size={16} weight="duotone" /> {book.editorialNote}</p>}
                 <div className="source-list">
-                  {contentSources.map((source) => (
+                  {book.sources.map((source) => (
                     <a href={source.url} key={source.url} target="_blank" rel="noreferrer">
                       <span><strong>{source.label}</strong><small>{source.note}</small></span>
                       <ArrowRight size={16} weight="bold" />
@@ -769,26 +1449,274 @@ function SystemApp() {
             {isBookmarked ? "Saved to your return list" : "Save this distinction"}
           </button>
         </aside>
+        )}
+
+        {saved.depth === "deep" && (
+          <section className="deep-reader" aria-labelledby="deep-reader-title">
+            <header className="deep-reader-top">
+              <div>
+                <span>Book {book.id} · Section {chapter.id} · Journey {journey.number}</span>
+                <h2 id="deep-reader-title">{chapter.formalTitle}</h2>
+              </div>
+              <div className="deep-reader-controls">
+                <div className="depth-tabs deep-reader-tabs" role="tablist" aria-label="Reading depth">
+                  {depthOptions.map((option) => (
+                    <button
+                      key={option.id}
+                      className={saved.depth === option.id ? "active" : ""}
+                      onClick={() => setSaved((current) => ({ ...current, depth: option.id }))}
+                      role="tab"
+                      aria-selected={saved.depth === option.id}
+                    >
+                      <span className="depth-full">{option.label}</span>
+                      <span className="depth-short">{option.short}</span>
+                    </button>
+                  ))}
+                </div>
+                <button
+                  className="deep-close"
+                  onClick={() => setSaved((current) => ({ ...current, depth: "understand" }))}
+                  aria-label="Return to the concept map"
+                >
+                  <X size={18} weight="bold" />
+                </button>
+              </div>
+            </header>
+
+            <div className="deep-reader-body">
+              <aside className="deep-reader-summary">
+                <figure>
+                  <img src={journey.image} alt={journey.imageAlt} />
+                  <figcaption><Sparkle size={14} weight="fill" /> Journey {journey.number} symbolic plate</figcaption>
+                </figure>
+                <div className="deep-stage-label">
+                  <span>Selected stage</span>
+                  <strong>{String(journey.nodes.indexOf(node) + 1).padStart(2, "0")} / {String(journey.nodes.length).padStart(2, "0")}</strong>
+                </div>
+                <h3>{node.label}</h3>
+                <p>{node.summary}</p>
+                <div className="deep-guardrail">
+                  <span>Do not collapse this</span>
+                  <strong>{node.guardrail}</strong>
+                </div>
+                <button className={isBookmarked ? "bookmark-action active" : "bookmark-action"} onClick={toggleBookmark}>
+                  <BookmarkSimple size={19} weight={isBookmarked ? "fill" : "regular"} />
+                  {isBookmarked ? "Saved to your return list" : "Save this distinction"}
+                </button>
+              </aside>
+
+              <article className="deep-reader-article">
+                <header className="deep-thesis">
+                  <span>The argument</span>
+                  <h3>{deepReading.thesis}</h3>
+                  <p>{deepReading.context}</p>
+                </header>
+
+                {chapter.visualModel && (
+                  <ConceptModel
+                    key={`deep:${book.id}:${chapter.id}`}
+                    model={chapter.visualModel}
+                  />
+                )}
+
+                {book.relationLens && (
+                  <WorldLens
+                    key={`lens:${book.id}:${chapter.id}`}
+                    lens={book.relationLens}
+                    chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.wealthAudit && (
+                  <WealthAudit
+                    key={`wealth-audit:${book.id}:${chapter.id}`}
+                    audit={book.wealthAudit}
+                    chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.audienceChamber && (
+                  <AudienceChamber
+                    key={`audience-chamber:${book.id}`}
+                    chamber={book.audienceChamber}
+                    chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.solitudeTest && (
+                  <SolitudeTest
+                    key={`solitude-test:${book.id}`}
+                    test={book.solitudeTest}
+                    chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                {book.substitutionTest && (
+                  <SubstitutionTest
+                    key={`substitution-test:${book.id}`}
+                    test={book.substitutionTest}
+                    chapterId={chapter.id}
+                    onSelectChapter={selectChapter}
+                  />
+                )}
+
+                <section className="reasoning-section" aria-labelledby="reasoning-heading">
+                  <div className="deep-section-heading">
+                    <span>Reasoning sequence</span>
+                    <h4 id="reasoning-heading">Follow how the claim is built</h4>
+                  </div>
+                  <div className="reasoning-moves">
+                    {deepReading.moves.map((move, index) => (
+                      <div className="reasoning-move" key={move.title}>
+                        <span>{String(index + 1).padStart(2, "0")}</span>
+                        <div><strong>{move.title}</strong><p>{move.body}</p></div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {deepReading.closeReading && deepReading.closeReading.length > 0 && (
+                  <section className="close-reading-section" aria-labelledby="close-reading-heading">
+                    <div className="deep-section-heading">
+                      <span>Closer reading</span>
+                      <h4 id="close-reading-heading">Stay with what the argument changes</h4>
+                    </div>
+                    <div className="close-reading-grid">
+                      {deepReading.closeReading.map((item, index) => (
+                        <article key={item.title}>
+                          <span>{String(index + 1).padStart(2, "0")}</span>
+                          <h5>{item.title}</h5>
+                          <p>{item.body}</p>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                <section className="deep-distinction" aria-labelledby="distinction-heading">
+                  <div className="deep-section-heading">
+                    <span>Key distinction</span>
+                    <h4 id="distinction-heading">{deepReading.distinction.title}</h4>
+                  </div>
+                  <div className="distinction-pair">
+                    <div>
+                      <span>{deepReading.distinction.firstLabel}</span>
+                      <p>{deepReading.distinction.first}</p>
+                    </div>
+                    <div>
+                      <span>{deepReading.distinction.secondLabel}</span>
+                      <p>{deepReading.distinction.second}</p>
+                    </div>
+                  </div>
+                </section>
+
+                <div className="deep-practice-grid">
+                  <section className="misreading-note">
+                    <span><Shield size={16} weight="duotone" /> Common misreading</span>
+                    <p>{deepReading.misreading}</p>
+                  </section>
+                  <section className="observation-note">
+                    <span><Eye size={16} weight="duotone" /> Observe in life</span>
+                    <p>{deepReading.observation}</p>
+                  </section>
+                </div>
+
+                {deepReading.selfAudit && deepReading.selfAudit.length > 0 && (
+                  <section className="self-audit" aria-labelledby="self-audit-heading">
+                    <div className="deep-section-heading">
+                      <span>Carry into observation</span>
+                      <h4 id="self-audit-heading">Questions for honest self-reading</h4>
+                    </div>
+                    <ol>
+                      {deepReading.selfAudit.map((question) => <li key={question}>{question}</li>)}
+                    </ol>
+                  </section>
+                )}
+
+                <section className="deep-grounding" aria-labelledby="grounding-heading">
+                  <div className="deep-section-heading">
+                    <span>Source anchor</span>
+                    <h4 id="grounding-heading">{deepReading.sourceAnchor}</h4>
+                  </div>
+                  <p>This page uses original English synthesis. Use these links to inspect the primary text and edition record.</p>
+                  {book.editorialNote && <p className="deep-editorial-note"><Shield size={15} weight="duotone" /> {book.editorialNote}</p>}
+                  <div className="deep-source-links">
+                    {book.sources.map((source) => (
+                      <a href={source.url} key={source.url} target="_blank" rel="noreferrer">
+                        <span><strong>{source.label}</strong><small>{source.note}</small></span>
+                        <ArrowRight size={16} weight="bold" />
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              </article>
+            </div>
+          </section>
+        )}
       </main>
 
-      <footer className="sequence-rail" aria-label="Original section sequence">
+      <footer className={`sequence-rail${book.taxonomy ? " has-taxonomy" : ""}${book.process ? " has-process" : ""}`} aria-label="Reading section sequence">
         <div className="sequence-title">
           <ListBullets size={18} weight="duotone" />
-          <span><strong>Text sequence</strong><small>Jump to any of the 15 sections</small></span>
+          <span>
+            <strong>{book.taxonomy?.title ?? book.process?.title ?? "Text sequence"}</strong>
+            <small>{book.taxonomy || book.process ? "Editorial navigation · source order preserved" : `Jump to any of the ${book.chapters.length} sections`}</small>
+          </span>
         </div>
-        <div className="sequence-track">
-          {chapters.map((item) => (
-            <button
-              key={item.id}
-              className={item.id === chapter.id ? "active" : ""}
-              onClick={() => selectChapter(item.id)}
-              aria-label={`Section ${item.id}: ${item.shortTitle}`}
-              title={item.shortTitle}
-            >
-              <span>{item.id}</span>
-              <i />
-            </button>
-          ))}
+        <div className="sequence-center">
+          {book.taxonomy && (
+            <div className="taxonomy-filters" aria-label="Filter sections by speech mechanism">
+              <button className={activeTaxonomy === "all" ? "active" : ""} onClick={() => setActiveTaxonomy("all")}>All {book.chapters.length}</button>
+              {book.taxonomy.groups.map((group) => (
+                <button
+                  key={group.id}
+                  className={activeTaxonomy === group.id ? "active" : ""}
+                  style={{ "--filter-color": group.color } as CSSProperties}
+                  onClick={() => setActiveTaxonomy(group.id)}
+                  title={group.description}
+                >
+                  {group.label}
+                </button>
+              ))}
+            </div>
+          )}
+          {book.process && (
+            <div className="process-path" aria-label="Filter sections by moral state">
+              <button className={activeProcess === "all" ? "active all-stage" : "all-stage"} onClick={() => setActiveProcess("all")}>All {book.chapters.length}</button>
+              {book.process.stages.map((stage, index) => (
+                <span className="process-step" key={stage.id}>
+                  {index > 0 && <ArrowRight size={11} weight="bold" aria-hidden="true" />}
+                  <button
+                    className={activeProcess === stage.id ? "active" : ""}
+                    style={{ "--filter-color": stage.color } as CSSProperties}
+                    onClick={() => setActiveProcess(stage.id)}
+                    title={stage.description}
+                  >
+                    <i>{String(index + 1).padStart(2, "0")}</i>
+                    <span>{stage.label}</span>
+                  </button>
+                </span>
+              ))}
+            </div>
+          )}
+          <div className="sequence-track">
+            {displayedChapters.map((item) => (
+              <button
+                key={item.id}
+                className={item.id === chapter.id ? "active" : ""}
+                onClick={() => selectChapter(item.id)}
+                aria-label={`Section ${item.id}: ${item.shortTitle}`}
+                title={item.shortTitle}
+              >
+                <span>{item.id}</span>
+                <i />
+              </button>
+            ))}
+          </div>
         </div>
         <div className="sequence-current">
           <span>{String(chapter.id).padStart(2, "0")}</span>

@@ -1,5 +1,40 @@
 export type RouteStyle = "isfahan" | "world";
 
+export type DeepReading = {
+  thesis: string;
+  context: string;
+  moves: Array<{
+    title: string;
+    body: string;
+  }>;
+  closeReading?: Array<{
+    title: string;
+    body: string;
+  }>;
+  distinction: {
+    title: string;
+    firstLabel: string;
+    first: string;
+    secondLabel: string;
+    second: string;
+  };
+  misreading: string;
+  observation: string;
+  selfAudit?: string[];
+  sourceAnchor: string;
+};
+
+export type VisualModel = {
+  kind: "spectrum" | "chain" | "pair";
+  title: string;
+  items: Array<{
+    label: string;
+    body: string;
+    role?: "warning" | "balance" | "support";
+  }>;
+  caption: string;
+};
+
 export type Chapter = {
   id: number;
   shortTitle: string;
@@ -8,6 +43,8 @@ export type Chapter = {
   points: string[];
   reflection: string;
   relatedNodes: string[];
+  deep?: DeepReading;
+  visualModel?: VisualModel;
 };
 
 export type ConceptNode = {
