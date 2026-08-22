@@ -1,0 +1,475 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const part = (id: number) => (id <= 6 ? "Part One, on intention" : id <= 11 ? "Part Two, on sincerity" : "Part Three, on truthfulness");
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 37, ${part(seed.id)}, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book37Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "The excellence of intention", formalTitle: "The excellence of intention",
+    overview: "The book opens on the most quoted sentence in the tradition, and Ghazali's first job is to keep it from being read as a slogan.",
+    moves: [
+      { title: "Gather the testimony", body: "The verses and reports on intention are assembled first, headed by the report that acts are only by intentions, which the following chapters will spend most of their effort qualifying." },
+      { title: "Announce the three parts", body: "The book has a part on the reality of intention and its meaning, a part on sincerity and its realities, and a part on truthfulness and its reality. The three are treated as one subject examined at increasing depth." },
+      { title: "Say why they belong together", body: "Sincerity turns out to be the purity of an intention, and one of the six meanings of truthfulness turns out to be sincerity itself, so the parts are nested rather than merely adjacent." },
+      { title: "Note the danger being set up", body: "A report that makes everything depend on intention is the easiest report in the tradition to misuse, and Chapters 5 and 6 exist to close the two ways it is normally misused." },
+    ],
+    closer: [
+      { title: "Why the excellence comes first", body: "The same order as the neighbouring books: establish that the thing is real and weighty, then define it, then answer the misreadings. Establishing the weight first is what makes the later restrictions read as protections rather than as deflations." },
+      { title: "What the reader should be watching for", body: "The book will say that intention outweighs action, that it cannot convert a wrong act, and that it cannot be produced by declaring it. All three follow from one definition, which arrives in the next chapter." },
+    ],
+    distinction: ["Two ways to take the founding report", "As a definition to be worked out", "Acts take their ruling from their motive, which requires knowing what a motive is.", "As a licence", "Anything is acceptable if meant well, which the book spends two chapters refusing."],
+    misreading: "Do not read the opening as settling anything. Almost every practical question the report raises is answered later, and several of the answers are restrictive.",
+    reflection: "Notice how you have used this report in the past, and whether you used it to open a question or to close one.",
+    audit: ["How have I used this report?", "Did I use it to excuse or to examine?", "What do I think an intention is?", "Which of the three parts do I most need?"],
+    nodes: ["niyya", "structure"],
+    model: chain("Three parts, nested", "Each part turns out to be contained in the next.", [["Intention", "The heart's rousing toward what it takes to serve its purpose.", "support"], ["Sincerity", "That rousing purified of admixture, which is a property of an intention.", "support"], ["Truthfulness", "Six meanings, one of which is sincerity itself.", "support"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "Knowledge, will, power", formalTitle: "The reality of intention",
+    overview: "The definition the whole book runs on. Ghazali builds it out of an analysis of any voluntary act at all, which is what lets him say later that an intention cannot be manufactured.",
+    moves: [
+      { title: "Collapse the vocabulary", body: "Intention, will, and purpose are expressions converging on one meaning: a state and attribute of the heart, flanked by two things, a knowledge and an act." },
+      { title: "Order the two", body: "The knowledge precedes it, because it is its root and its condition. The act follows it, because it is its fruit and its branch. The order is not incidental; the rest of the book depends on it." },
+      { title: "Analyse any voluntary act", body: "Every act, meaning every voluntary motion or stillness, is completed only by three things: knowledge, will, and power. A person does not will what he does not know, so knowledge is necessary; and he does not act unless he wills, so will is necessary." },
+      { title: "Define will", body: "The meaning of will is the heart's being roused toward what it sees as agreeing with its purpose, whether at the moment or in what follows." },
+    ],
+    closer: [
+      { title: "Why perception is prior", body: "A person is created so that some things agree with him and some conflict with him, so he needs to draw the agreeable toward himself and repel the harmful. He therefore needs, necessarily, knowledge of what harms and what benefits: one who does not see food cannot take it, and one who does not see fire cannot flee it." },
+      { title: "The step that decides the book", body: "Even if he sees the food and knows that it agrees with him, that is not enough for him to take it unless there is in him an inclination toward it and a desire rousing him to it. Ghazali's example is a sick man, who sees the food and knows what it is and does not move. Knowledge does not produce inclination, and this is what Chapter 6 will build on." },
+    ],
+    distinction: ["Two things a person can have about an act", "Knowledge that it is good", "Available by learning, and by itself it moves nothing, as the sick man shows.", "Inclination toward it", "The rousing that actually produces the act, and which is not available by learning."],
+    misreading: "Do not read intention as a mental act performed before an action. It is defined here as a state of the heart with a knowledge behind it and an act in front of it, which is a different thing from a moment of resolve.",
+    reflection: "Take something you know to be good and have not done, and notice which of the three components is missing.",
+    audit: ["Which of the three is missing here?", "Do I have the knowledge but not the inclination?", "Have I treated resolve as the whole thing?", "What would supply the inclination?"],
+    nodes: ["niyya", "irada", "knowledge"],
+    model: chain("What every voluntary act requires", "Missing any one of the three, nothing happens.", [["Knowledge", "Nothing is willed that is not known, which is why it is the root and condition.", "support"], ["Will", "The heart roused toward what it takes to serve its purpose, now or later.", "support"], ["Power", "The capacity without which the will produces no act.", "support"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "The act takes its ruling", formalTitle: "The classes of intentions",
+    overview: "A short bridge chapter that states the mechanism the founding report describes, in one sentence, and it is the sentence the whole book is a commentary on.",
+    moves: [
+      { title: "State the mechanism", body: "The act follows the motive behind it and acquires its ruling from it. This is what the report about acts and intentions is asserting, put as a rule about causes." },
+      { title: "Note what follows immediately", body: "If the act takes its ruling from the motive, then two people performing identical acts may be in wholly different positions, and one person performing an act may be in a different position at the end of it than at the start." },
+      { title: "Note what does not follow", body: "It does not follow that the motive can make any act into any other. Chapter 5 will show that one whole class of acts is untouched by the rule, and the exception is stated in the strongest terms in the book." },
+      { title: "Set up the arithmetic", body: "Because the ruling is taken from the motive, a motive that is mixed produces a mixed ruling, and Chapter 11 turns this into an explicit calculation rather than leaving it as a warning." },
+    ],
+    closer: [
+      { title: "The chapter's brevity", body: "It is one of the shortest passages in the book, and its function is structural. Everything before it defines what a motive is, and everything after it works out what follows from acts taking their ruling from motives." },
+      { title: "Why classes rather than a single rule", body: "Because the answer differs by the kind of act. The following two chapters divide acts into three classes and then divide intentions by their availability, and neither division would be needed if the rule applied uniformly." },
+    ],
+    distinction: ["Two things the rule could mean", "The ruling is taken from the motive", "How an act is assessed follows what roused it, which is Ghazali's reading.", "The motive constitutes the act", "The act is whatever it is meant to be, which the next chapters refute at length."],
+    misreading: "Do not extend the rule past what it says. It concerns where an act's ruling comes from, not whether the act can be redescribed by the person doing it.",
+    reflection: "Take an act you performed twice with different motives and ask whether they were really the same act.",
+    audit: ["What roused this act?", "Would the same act count differently from someone else?", "Am I extending the rule past its statement?", "Where does my motive change mid-act?"],
+    nodes: ["niyya", "motive"],
+    model: pair("Where the ruling comes from", "The distinction is between assessment and constitution.", [["From the motive", "The act is assessed by what roused it, which is the rule as stated.", "support"], ["From the description", "The act becomes what it is called, which is the extension the book refuses.", "warning"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "Better than the act", formalTitle: "The secret of the saying that the believer's intention is better than his action",
+    overview: "A model of Ghazali's method. He takes a famous saying, walks through three plausible explanations of it, breaks each one, and only then gives his own.",
+    moves: [
+      { title: "The first explanation, and its break", body: "One might suppose the preference is because intention is a secret that none but God sees while the act is outward, and secret acts have merit. This is true in itself but is not what is meant: if a person intended to remember God in his heart, the generality of the saying would make the intention to reflect better than the reflecting." },
+      { title: "The second, and its break", body: "One might suppose it is because the intention lasts to the end of the act while acts do not last. This is weak, because it reduces to saying that much action is better than little. And it is not even so: the intention in prayer may last only a few moments while the acts continue." },
+      { title: "The third, and its break", body: "It may be said that intention by itself is better than action by itself without intention. That is so, but it is far from what is meant, since action without intention or in heedlessness has no good in it at all, while intention by itself is good, and a stated preference is evidently between two things sharing in the root of good." },
+      { title: "Ghazali's own reading", body: "Every act of obedience is composed of an intention and an act. The intention is among the goods and the act is among the goods, but the intention, as a part of the obedience, is better than the act. Each of the two has an effect on the aim, and the effect of the intention is greater than the effect of the act." },
+    ],
+    closer: [
+      { title: "What the three broken explanations have in common", body: "Each of them explains the preference by something incidental: secrecy, duration, or the absence of a rival. Ghazali's reading explains it by the contribution each part makes to the same aim, which is the only reading on which the saying is about intention rather than about circumstances." },
+      { title: "Why the method is worth more than the conclusion", body: "The three rejected readings are all ones a careful reader would have arrived at. Showing where each one breaks is what makes the fourth persuasive, and this is the same procedure the book uses on sincerity in Chapter 9." },
+    ],
+    distinction: ["Two ways to explain the preference", "By contribution", "Both parts serve the same aim and one contributes more, which is Ghazali's reading.", "By circumstance", "Secrecy or duration, each of which produces a consequence the saying will not bear."],
+    misreading: "Do not conclude that action is dispensable. The reading Ghazali adopts requires that both parts be present and both be good, and is a comparison of contributions within a single act of obedience.",
+    reflection: "Test the three broken explanations on yourself before reading the fourth. Most readers hold one of them.",
+    audit: ["Which explanation did I hold?", "Where does it break?", "Do I treat intention as a substitute?", "What is the aim both parts serve?"],
+    nodes: ["niyya", "motive"],
+    model: spectrum("Three readings broken, one kept", "Each break is a specific consequence the saying cannot bear.", [["Secrecy", "Would make intending to reflect better than reflecting.", "warning"], ["Duration", "Reduces to more being better, and is false of prayer anyway.", "warning"], ["No rival", "Compares good with nothing, when the saying compares two goods.", "warning"], ["Contribution", "Both parts serve the aim and one contributes more.", "support"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "What cannot be converted", formalTitle: "The detail of the acts connected with intention",
+    overview: "The first of the two great restrictions. Ghazali divides all acts into three classes and states flatly that one of them is outside the reach of intention entirely.",
+    moves: [
+      { title: "Divide the acts", body: "Acts, however many kinds they divide into, are three classes: acts of disobedience, acts of obedience, and permissible acts. The three are governed differently, which is why the general rule needed this chapter." },
+      { title: "State the restriction", body: "Acts of disobedience do not change from their place by intention. The ignorant should not understand from the generality of the report that a wrong act turns into an act of obedience by intention." },
+      { title: "Give the cases", body: "One who backbites a person out of consideration for another's feelings, or feeds a poor man from someone else's money, or builds a school, a mosque, or a hostel with unlawful wealth intending good. All of this is ignorance, and the intention has no effect in taking it out of being wrongdoing, transgression, and disobedience." },
+      { title: "Add the second charge", body: "Rather, his intending good by means of evil, against what the Law requires, is a further evil. If he knew this, he is opposing the Law. If he was ignorant of it, he is disobedient by his ignorance, since seeking knowledge is an obligation on every Muslim, and good things are known to be good only by the Law." },
+    ],
+    closer: [
+      { title: "Why the examples are what they are", body: "Every one of them is a case where the intended good is real and visible. A mosque is built, a poor man is fed, someone's feelings are spared. Ghazali chose cases where the good outcome is not in doubt, because the argument is about the route and not about the result." },
+      { title: "The clause about ignorance", body: "The exit through not knowing is closed in the same breath it is opened. Since good is known to be good only by the Law, a person who did not know is being told that the not-knowing was itself the failure, which is among the firmest statements of that principle in the Ihya." },
+    ],
+    distinction: ["Two things a good intention can do", "Assess an act that is open", "Obedience and permissible acts take their ruling from the motive, which is the rule's real field.", "Convert an act that is closed", "Disobedience made into obedience by meaning well, which Ghazali calls ignorance and a second evil."],
+    misreading: "Do not soften this by noting that the outcomes in the examples are genuinely good. Ghazali picked them for that reason, and the argument is that a good outcome does not license the route.",
+    reflection: "Look for the place where you have used a good aim to authorise something you would not otherwise do.",
+    audit: ["Where have I converted by intending?", "Is the good outcome doing the arguing?", "Did I know, or did I avoid knowing?", "Which of the three classes is this act in?"],
+    nodes: ["motive", "conversion", "knowledge"],
+    model: chain("Three classes, one exception", "The rule about motives has a field, and this class is outside it.", [["Disobedience", "Untouched by intention, and meaning well by it is a further evil.", "warning"], ["Obedience", "Takes its ruling from the motive, which is where the rule works.", "support"], ["The permissible", "Also open to the motive, which is where most of a life actually sits.", "balance"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "You cannot just decide", formalTitle: "That intention is not subject to choice",
+    overview: "The chapter that changes how the rest of the book is read. Ghazali describes exactly what most people do when told to have a good intention, and says it is not an intention at all.",
+    moves: [
+      { title: "Describe the mistake", body: "The ignorant hears the counsel to improve and multiply intentions, along with the report that acts are only by intentions, and says to himself, at his teaching or his trading or his eating, that he intends to teach for God or to eat for God, and supposes that to be an intention." },
+      { title: "Refuse it", body: "Far from it. That is talk of the self and talk of the tongue and thought, or a passage from one passing notion to another, and intention is far removed from all of that. Intention is only the rousing of the soul and its turning and inclining toward what has appeared to it to hold its purpose, immediately or later." },
+      { title: "State the impossibility", body: "An inclination, if it is not there, cannot be invented and acquired by mere willing. It is like a full man saying that he intends to have an appetite for food, or an idle man saying that he intends to fall in love with someone and to magnify him in his heart. That is impossible." },
+      { title: "Give the only route", body: "There is no way to acquire the turning of the heart toward a thing and its inclining and orienting toward it except by acquiring its causes, and that is sometimes within a person's power and sometimes not." },
+    ],
+    closer: [
+      { title: "Why the two examples are chosen", body: "Appetite and love are the two inclinations everyone knows they cannot summon. Ghazali does not argue that intention resembles them; he says it is the same kind of thing, and the reader's own certainty about the examples carries the point." },
+      { title: "What is left for a person to do", body: "The soul is roused to an act only in answer to a purpose that agrees with it, and a person is not roused unless he believes his purpose is bound up with the act. So the work is on the belief and the causes, not on the declaration, and the last clause admits plainly that even then it does not always succeed." },
+    ],
+    distinction: ["Two things that happen before an act", "A declaration", "Talk of the tongue and the self, which Ghazali says is not an intention at all.", "An inclination", "The soul actually roused and turned toward the act, which is the whole of what the word means."],
+    misreading: "Do not read this as making intention hopeless. It relocates the work rather than removing it: the causes of an inclination are partly available, and the book's other chapters are largely about them.",
+    reflection: "Recall the last time you formed an intention. Almost certainly you said something to yourself, which is exactly what this chapter is about.",
+    audit: ["Did I declare or was I roused?", "What causes could I actually arrange?", "Do I believe my purpose is bound up with this?", "Where am I full and claiming appetite?"],
+    nodes: ["irada", "niyya", "causes"],
+    model: pair("What a declaration is not", "The two examples are chosen because no one doubts them.", [["Saying it", "Talk of the tongue, like the full man intending to be hungry.", "warning"], ["Arranging the causes", "The only route to an inclination, and it does not always succeed.", "support"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "The excellence of sincerity", formalTitle: "The excellence of sincerity",
+    overview: "Part Two opens. The testimony is gathered again, and one report in it becomes the hinge of the argument in Part Three.",
+    moves: [
+      { title: "Gather the testimony", body: "The verses and reports commending sincerity are assembled, including the command to worship God making the religion sincerely His, before any definition is given." },
+      { title: "Carry the report of the three", body: "Among the reports is the one about the first three brought to judgement, in which a scholar is asked what he did with what he knew and answers truthfully as to the deeds, and is told that he lies, because he wanted it said that he was a scholar." },
+      { title: "Note what that report establishes", body: "The deeds were not denied and he was not told that he had not done them. He was denied in his will and his intention, which is how Part Three will show that sincerity is one of the meanings of truthfulness." },
+      { title: "Set the direction of the part", body: "Having established the weight, the part proceeds to the reality, then to the masters' definitions, then to the degrees of the blights, then to the arithmetic of a mixed act. The order moves steadily from praise to calculation." },
+    ],
+    closer: [
+      { title: "Why the report of the three does so much work", body: "It is the clearest case in the tradition of a true statement being called a lie. That single feature is what lets Ghazali argue later that lying is not only a property of sentences, and it is why he places the report here rather than in Part Three where he uses it." },
+      { title: "The shape of the part", body: "Part Two is the only part of the book that ends in a calculation. Everything from the reality onward narrows toward the question of what a partly sincere act is actually worth, which is the question most readers arrive with." },
+    ],
+    distinction: ["Two ways a person can be denied", "In what he said", "The statement does not match the fact, which is the ordinary case.", "In what he wanted", "The statement matches the fact and the will does not, which is what the report of the three shows."],
+    misreading: "Do not read the report of the three as being about deception of others. The scholar told the truth about his deeds; what was denied was what he had wanted by them.",
+    reflection: "Ask what you would answer if asked what you did with what you know, and then ask what would be said about the answer.",
+    audit: ["Would my report of my deeds be true?", "Would my account of my aim be?", "What do I want said about me?", "Which of the two denials would apply?"],
+    nodes: ["ikhlas", "riya", "sidq"],
+    model: chain("Where Part Two is going", "It is the only part that ends in a calculation.", [["The weight", "Testimony gathered, including the report of the three.", "support"], ["The definition", "Purity from admixture, with a surprising consequence.", "support"], ["The blights", "Two grades of showing off, one of them disguised as good.", "warning"], ["The arithmetic", "What a mixed act is actually worth, stated as a rule.", "balance"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "Pure milk", formalTitle: "The reality of sincerity",
+    overview: "The definition, and one of the most startling analytic moves in the Ihya. Ghazali defines sincerity so strictly by its form that it produces a conclusion he states without flinching.",
+    moves: [
+      { title: "Define by purity", body: "Everything that can be mixed with something else, when it is clarified of the admixture and freed from it, is called pure, and the act so clarified is called sincerity. The Quranic image is pure milk, between dung and blood, palatable to the drinkers; its purity is that there be in it no admixture of anything that could mingle with it." },
+      { title: "Name the opposite", body: "Sincerity is opposed by associating, so whoever is not sincere is associating, except that association has degrees, some hidden and some plain." },
+      { title: "Locate it", body: "Sincerity and its opposite meet upon the heart, so its seat is the heart, and it occurs in aims and intentions. This is why Part Two follows Part One rather than standing on its own." },
+      { title: "State the consequence", body: "Since intention returns to answering motives, then whenever the motive is one and unaccompanied, the act issuing from it is called sincerity relative to what was intended. So one who gives charity for pure show is sincere, and one whose aim is purely nearness is sincere." },
+    ],
+    closer: [
+      { title: "Why the consequence is stated at all", body: "It could easily have been suppressed. Ghazali states it because the definition is formal and he will not exempt his own case from it, and because it shows that the word carries a moral direction only by convention, which the next sentence says outright." },
+      { title: "The parallel he gives", body: "Usage has specialised the name of sincerity to the isolating of the aim of nearness from every admixture, just as deviation means inclination in itself and usage has specialised it to inclination away from the truth. The moral content sits in the convention, and the analysis sits underneath it." },
+    ],
+    distinction: ["Two things the word carries", "A structure", "One unmixed motive, which is what the definition actually states.", "A direction", "That the motive be nearness, which the definition gets from usage rather than from its form."],
+    misreading: "Do not take the remark about the pure hypocrite as provocation or as approval. It is a consequence of a formal definition, stated so that the reader sees where the definition's moral content actually comes from.",
+    reflection: "Ask whether your acts have one motive or several, before asking anything about which motive.",
+    audit: ["How many motives does this act have?", "Am I mixed, or singly wrong?", "Where does the word's direction come from?", "What could mingle with this?"],
+    nodes: ["ikhlas", "motive", "riya"],
+    model: pair("Two components of the word", "Separating them is what makes the definition usable.", [["Unmixed", "One motive with nothing else in it, which is the form of the word.", "balance"], ["Toward nearness", "Which motive it is, supplied by usage rather than by the analysis.", "support"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "What the masters said", formalTitle: "The sayings of the masters on sincerity",
+    overview: "A collection that is really an argument. Ghazali gathers the famous definitions and, for each one, says which single blight it addresses, so that the collection becomes a map instead of a list.",
+    moves: [
+      { title: "The first saying and its scope", body: "Al-Susi said that sincerity is the loss of seeing your sincerity, since one who witnesses sincerity in his sincerity has a sincerity that needs a sincerity. Ghazali reads it as pointing to purifying the act of self-admiration in the act, and notes that it addresses one blight only." },
+      { title: "The comprehensive one", body: "Sahl said that sincerity is that the servant's stillness and movements be for God alone. Ghazali calls this a gathering word, encompassing the aim, and puts Ibrahim ibn Adham's saying that sincerity is truthfulness of intention with God in the same place." },
+      { title: "The hardest one", body: "Ruwaym said that sincerity in an act is that its owner want no recompense for it in either abode. Ghazali reads this as pointing out that the soul's shares are a blight deferred as well as immediate, and that one who worships for the enjoyment of appetites in the Garden is defective." },
+      { title: "The concession", body: "As for one who acts out of hope for the Garden and fear of the Fire, he is sincere relative to the immediate shares, and otherwise he is seeking the share of the belly. The absolute sincerity, in which nothing is intended but the face of God, is the sincerity of the truthful, and Ghazali names it as a rank rather than as a requirement." },
+    ],
+    closer: [
+      { title: "Why the assignment matters", body: "Read as a list, the sayings look like competing definitions and the strictest one wins. Read as Ghazali arranges them, each one is a treatment for a particular blight, and a reader can ask which of them addresses his own case rather than trying to satisfy all of them." },
+      { title: "Sahl's answer about difficulty", body: "Asked what is hardest on the soul, Sahl answered sincerity, because the soul has no share in it. The remark explains why the chapter needs so many definitions: what has no share for the soul is what the soul is most inventive about." },
+    ],
+    distinction: ["Two ways to read a collection of definitions", "As competing", "The strictest is correct and the rest are approximations, which makes them a standard.", "As assigned", "Each addresses one blight, which makes them a diagnostic set."],
+    misreading: "Do not measure yourself against Ruwaym's saying and conclude that hope of the Garden disqualifies you. Ghazali explicitly calls that a sincerity relative to the immediate shares, and names the absolute as the rank of the truthful.",
+    reflection: "Find which of the sayings addresses the blight you actually have, rather than the one you find most demanding.",
+    audit: ["Which blight is mine?", "Do I look at my own sincerity?", "What recompense am I working for?", "Am I holding myself to a rank or to a rule?"],
+    nodes: ["ikhlas", "ujb", "riya"],
+    model: spectrum("Each saying to its blight", "The arrangement turns a list into a diagnostic set.", [["Not seeing it", "Addresses self-admiration in the act, and one blight only.", "balance"], ["Stillness and movement", "A gathering word covering the whole aim.", "support"], ["No recompense", "Addresses the soul's shares, deferred as well as immediate.", "balance"], ["The absolute", "Nothing intended but the face of God, named as a rank.", "support"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "The second grade", formalTitle: "The degrees of the admixtures and blights that trouble sincerity",
+    overview: "The most practically useful chapter in the book, and the one that catches serious readers. Ghazali describes two grades of showing off, and the second is dressed as a good.",
+    moves: [
+      { title: "Sort the blights", body: "The blights that disturb sincerity are some plain and some hidden, some weak along with being plain, and some strong along with being hidden. The differences in degree are not understood except by an example." },
+      { title: "The first grade", body: "The devil enters upon a man praying, sincere in his prayer, when a group looks at him or someone comes in, and says: beautify your prayer, so that this person present looks at you with an eye of dignity and does not disdain you or speak against you. So his limbs become humble, his extremities still, and his prayer beautiful. This is manifest showing off, and it is not hidden even from beginners." },
+      { title: "The second grade", body: "The aspirant has understood that blight and taken his guard against it, and no longer obeys the devil in it. So the devil comes in the dress of good and says: you are followed and imitated and looked at, and what you do is transmitted from you, so you have the reward of their deeds if you do well and the burden if you do badly. Beautify your act before him, so that he may imitate you in humility." },
+      { title: "State what it is", body: "This is more obscure than the first, and one who is not deceived by the first may be deceived by this. And it too is showing off itself, and it nullifies sincerity." },
+    ],
+    closer: [
+      { title: "Why the second grade is the dangerous one", body: "Its content is true. The person may genuinely be imitated, and there may genuinely be a reward in setting an example. Ghazali does not deny any of that; he says the motive it produces is the same motive as the first grade wearing better clothes, and the test is whether the beautifying tracks the presence of the observer." },
+      { title: "What the chapter asks of the reader", body: "Not vigilance in general but a specific question at a specific moment: did this improvement appear when someone came in. The first grade is caught by shame and the second only by that question, which is why it needed its own description." },
+    ],
+    distinction: ["Two reasons an act improves when watched", "For the eye that is watching", "The first grade, which beginners recognise, and which shame usually catches.", "For the good of the watcher", "The second grade, whose reasoning is true and whose motive is the same, and which Ghazali says nullifies sincerity."],
+    misreading: "Do not conclude that being an example is itself a blight. What is named is the beautifying that appears because of the observer, and the chapter's test is timing rather than the content of the thought.",
+    reflection: "Notice whether anything about your practice improves when someone comes into the room, and then notice what reason you give for it.",
+    audit: ["Did this improve when watched?", "What reason did I give myself?", "Is the reason true and still the wrong motive?", "Which grade catches me?"],
+    nodes: ["riya", "ikhlas", "motive"],
+    model: chain("Two grades", "The second is built out of a true thought.", [["Manifest", "Beautified so the observer thinks well of you; recognised by beginners.", "warning"], ["The guard", "The aspirant understands the first and no longer obeys it.", "balance"], ["Hidden", "Beautified so the observer benefits, which is true reasoning and the same motive.", "warning"]]),
+  }),
+  makeChapter({
+    id: 11, shortTitle: "The arithmetic", formalTitle: "The ruling on a mixed act and the meriting of reward by it",
+    overview: "Ghazali refuses to leave the question of a partly sincere act as a warning, and gives an explicit rule with four outcomes. He also marks it as his own judgement.",
+    moves: [
+      { title: "Frame the disagreement", body: "When an act is not pure and an admixture of showing off or of the soul's shares mingles with it, people have differed over whether it merits reward, or punishment, or nothing at all, so that it is neither for a person nor against him." },
+      { title: "Settle the clear cases", body: "One who intended nothing but showing off, it is against him definitely, and it is a cause of detestation and punishment. One whose act is pure for the face of God, it is a cause of reward. The question is only about the mixed." },
+      { title: "Give the rule", body: "The outward reports indicate that there is no reward for it, and the reports are not free of conflict on it. What occurs to Ghazali, and he says explicitly that the knowledge is with God, is to look at the measure of the strength of the motive." },
+      { title: "State the four outcomes", body: "If the religious motive equals the motive of the self, they cancel and fall away, and the act is neither for him nor against him. If the motive of showing off is preponderant and stronger, it is not beneficial and is moreover harmful and leads to punishment. If the aim of nearness is preponderant, he has reward to the measure of the excess of the strength of the religious motive." },
+    ],
+    closer: [
+      { title: "The clause that makes it bearable", body: "Where showing off predominates, he adds that the punishment in it is lighter than the punishment of an act stripped bare for showing off with no admixture of seeking nearness at all. The scale is continuous in both directions, which is what distinguishes a calculation from a verdict." },
+      { title: "The grounding", body: "He grounds the whole rule on two verses: that whoever does an atom's weight of good will see it and whoever does an atom's weight of evil will see it, and that God does not wrong by an atom's weight. The choice of an atom is doing the work, since a rule of proportion needs a smallest unit." },
+    ],
+    distinction: ["Two ways to rule on a mixed act", "By proportion", "The excess of one motive over the other, weighed to an atom, which is Ghazali's rule.", "By threshold", "Any admixture voids the act, which is the outward sense of the reports and which he declines to adopt."],
+    misreading: "Do not use the rule to reassure yourself. Its middle outcome is that a genuinely balanced act comes to nothing, and its lower outcome is punishment; the proportion cuts both ways, which is what makes it a scale.",
+    reflection: "Take one act and try to say honestly which motive is heavier. The difficulty of answering is itself part of what this chapter is teaching.",
+    audit: ["Which motive is heavier here?", "Am I guessing in my own favour?", "Would I accept this reading from someone else?", "What would move the balance?"],
+    nodes: ["ikhlas", "riya", "motive"],
+    model: spectrum("Four outcomes", "A continuous scale rather than a threshold.", [["Bare showing off", "Against him definitely, and the heaviest case.", "warning"], ["Showing off preponderant", "Harmful, though lighter than the bare case.", "warning"], ["Equal", "The two cancel and fall away; neither for him nor against him.", "balance"], ["Nearness preponderant", "Reward to the measure of the excess of the religious motive.", "support"]]),
+  }),
+  makeChapter({
+    id: 12, shortTitle: "The excellence of truthfulness", formalTitle: "The excellence of truthfulness",
+    overview: "Part Three opens on what looks like the simplest of the three subjects and turns out to be the widest.",
+    moves: [
+      { title: "Gather the testimony", body: "The verses and reports commending truthfulness are assembled, and the rank of the truthful is placed immediately after the rank of the prophets in the ordering the Quran gives." },
+      { title: "Signal the widening", body: "The next chapter will show that the word is used in six meanings, of which speech is only the first, so the testimony gathered here is not testimony about honesty alone." },
+      { title: "Name the intensive", body: "One characterised by truthfulness in all six is called a siddiq, since the word is an intensive form of truthfulness. The title is therefore earned by breadth rather than by degree in any one meaning." },
+      { title: "Keep the degrees open", body: "They are also in degrees, and whoever has a share of truthfulness in some part of the list is truthful relative to that in which his truthfulness lies. The part opens by making partial truthfulness a real thing rather than a failure." },
+    ],
+    closer: [
+      { title: "Why the widening is the point", body: "A reader arriving at a chapter on truthfulness expects a treatment of lying. The next two chapters spend most of their length on resolve, fulfilment, and action, and the placement of speech first is what makes the widening visible." },
+      { title: "How it joins the first two parts", body: "One of the six meanings turns out to be sincerity, and sincerity turned out to be a property of intention. The three parts of the book close into each other here rather than merely ending in sequence." },
+    ],
+    distinction: ["Two ways to read the rank of the truthful", "As honesty perfected", "The best of those who do not lie, which the six meanings show to be too narrow.", "As breadth across six", "Characterised in speech, intention, resolve, fulfilment, action, and the stations."],
+    misreading: "Do not read this part as a chapter on lying appended to a book on intention. Sincerity is one of its six meanings, which means Part Three contains Part Two rather than following it.",
+    reflection: "Before reading the six, write down what you would have said truthfulness covers.",
+    audit: ["What did I think this word covered?", "Which meaning do I have a share in?", "Am I truthful in speech and nowhere else?", "What would breadth here require?"],
+    nodes: ["sidq", "siddiq", "ikhlas"],
+    model: chain("Why Part Three is last", "It contains what came before it.", [["Intention", "The heart's rousing, treated in Part One.", "support"], ["Sincerity", "Purity of that rousing, and the second of the six meanings here.", "support"], ["Truthfulness", "Six meanings, of which sincerity is one and speech is another.", "support"]]),
+  }),
+  makeChapter({
+    id: 13, shortTitle: "Speech, intention, resolve", formalTitle: "The reality of truthfulness, its meaning and its degrees: the first three",
+    overview: "The first half of Ghazali's list. The three are ordered by how much of a person they involve, and the second of them turns out to be sincerity under another name.",
+    moves: [
+      { title: "Enumerate the six", body: "Truthfulness is used in six meanings: in speech, in intention and will, in resolve, in fulfilling the resolve, in action, and in realising all the stations of religion. Whoever is characterised by all of them is a siddiq." },
+      { title: "The first: speech", body: "Truthfulness of the tongue is only in reporting, or in what entails a report and points to it, and the report concerns either the past or the future, and into the future enters keeping a promise and breaking it. It is a right upon every servant to guard his words and speak only truth, and this is the best known and most manifest of the kinds." },
+      { title: "Its perfection", body: "This truthfulness has a perfection, which is guarding against equivocations. It has been said that in equivocations there is a way out from lying, and Ghazali's answer is that they stand in the place of lying, since what is guarded against in lying is making something understood otherwise than it is." },
+      { title: "The second: intention", body: "Truthfulness in intention and will returns to sincerity: that he have no motive in his movements and stillnesses except God. If an admixture of the soul's shares mingles with it, the truthfulness of the intention is void, and its owner may be called a liar." },
+    ],
+    closer: [
+      { title: "The evidence for calling it a lie", body: "The report of the three, where the scholar is told that he lies although he did not misreport his deeds; and the verse that God bears witness the hypocrites are liars, though what they said was that he is God's messenger, which is true. They were denied not in the tongue's utterance but in the heart's inward, because a statement entails a report by the evidence of the circumstance, and they lied in what the circumstance indicated about their hearts." },
+      { title: "The third: resolve", body: "A person may put resolve before an act and say to himself that if God grants him wealth he will give all of it or half in charity, or that if he meets an enemy in God's path he will fight and not care though he be killed. Truthfulness here is that the resolve be complete and unhesitating, and the next chapter takes up what happens when the time comes." },
+    ],
+    distinction: ["Two ways a true statement can be a lie", "In the sentence", "The words do not match the fact, which is the only case most readers count.", "In what it indicates", "The words match and the circumstance indicates something about the heart that is false, which is how the hypocrites' true statement was denied."],
+    misreading: "Do not treat equivocation as a permitted device on the strength of the saying about it. Ghazali cites the saying and then explains why the device stands in the place of the thing it avoids.",
+    reflection: "Test yourself on the second meaning rather than the first. Almost everyone reading is more careful about sentences than about aims.",
+    audit: ["Am I careful in words and loose in aims?", "Do I use equivocation as a way out?", "What does my circumstance indicate?", "Is my resolve complete or hedged?"],
+    nodes: ["sidq", "ikhlas", "azm"],
+    model: chain("The first three", "Ordered by how much of a person is involved.", [["Speech", "Reports and what entails them, perfected by leaving equivocation.", "support"], ["Intention", "Sincerity under another name; a mixed motive voids it.", "support"], ["Resolve", "The undertaking made before the occasion arrives.", "balance"]]),
+  }),
+  makeChapter({
+    id: 14, shortTitle: "Fulfilment, action, stations", formalTitle: "The reality of truthfulness, its meaning and its degrees: the last three",
+    overview: "The second half of the list, and the closing of the book. The fourth meaning is harder than the third, the fifth inverts the treatment for showing off, and the sixth is named as rare.",
+    moves: [
+      { title: "The fourth: fulfilment", body: "Truthfulness in fulfilling the resolve is harder than truthfulness in the resolve, because people are generous with resolve and then flinch at fulfilment, from its severity and from the stirring of appetite when the occasion and the means arrive." },
+      { title: "Give the Quranic case", body: "Among them are those who covenanted with God that if He gave them of His bounty they would give charity and be among the righteous; and when He gave them of His bounty they were miserly with it and turned away. So He made the resolve a covenant, made breaking it a lie, and made fulfilling it truthfulness." },
+      { title: "The fifth: action", body: "Truthfulness in actions is that a person strive so that his outward acts do not indicate something in his inward that he is not characterised by. Not by leaving the acts, but by drawing the inward toward confirming the outward, which is why this differs from the treatment for showing off." },
+      { title: "The sixth: the stations", body: "Truthfulness in realising all the stations of religion, such as fear, hope, reverence, contentment, reliance, and love. Each has a root and a reality, and one truthful in it is one in whom the reality of the station is verified and not only its name." },
+    ],
+    closer: [
+      { title: "Umar's exception", body: "He said that to be brought forward and have his neck struck was dearer to him than to be set over a people among whom was Abu Bakr, and then added: unless my soul present me, at the moment of killing, with something I do not find now, for I am not safe from that becoming heavy on it so that it changes from its resolve. Ghazali cites the exception to show the severity of fulfilment, not the weakness of the resolve." },
+      { title: "How the sixth is measured", body: "Ghazali reports an account of a man who said that he had never followed a funeral and spoken to himself of anything other than what the dead say and what is said to them, and that he never heard the Messenger say a word without knowing it was true; and Ibn al-Musayyib said he had not thought these traits gathered except in a prophet. Ghazali adds that many of the eminent Companions prayed and followed funerals and did not reach this measure, which is what makes the sixth a rank rather than a requirement." },
+    ],
+    distinction: ["Two treatments for a gap between inward and outward", "Leave the act", "The treatment for showing off, where the act is being done for the observer.", "Draw the inward up", "The treatment here, where the act is right and the inward has not caught up with it."],
+    misreading: "Do not read the fifth meaning as licensing an appearance you have not earned. Ghazali is explicit that the remedy is to bring the inward to confirm the outward, and that the alternative remedy, leaving the act, belongs to a different diagnosis.",
+    reflection: "Look for a resolve you made in comfort and have not yet been asked to keep, and notice that the chapter says the second part is the harder one.",
+    audit: ["Which resolve am I carrying unfulfilled?", "Does my outward indicate what I am not?", "Which of the two remedies fits my case?", "Which station do I have the name of only?"],
+    nodes: ["sidq", "azm", "siddiq", "riya"],
+    model: spectrum("The last three", "Each is harder than the one before it, and the last is named as rare.", [["Fulfilment", "Harder than resolve, because the occasion brings the appetite with it.", "balance"], ["Action", "The outward not indicating what the inward lacks, remedied upward.", "support"], ["The stations", "The realities of fear, hope, contentment, reliance, and love verified rather than named.", "support"]]),
+  }),
+];
+
+export const book37ConceptNodes: ConceptNode[] = [
+  ["niyya", "Intention", "A state of the heart", "Flanked by a knowledge that precedes it and an act that follows it."],
+  ["structure", "Three parts", "Nested, not adjacent", "Sincerity is a property of intention; sincerity is one of the six meanings of truthfulness."],
+  ["irada", "Will", "The heart roused", "The rousing toward what is seen as agreeing with the purpose, now or later."],
+  ["knowledge", "Knowledge", "Root and condition", "Nothing is willed that is not known, and knowing alone moves nothing."],
+  ["motive", "The motive", "Where the ruling comes from", "The act follows what roused it and acquires its ruling from it."],
+  ["conversion", "Conversion", "What cannot be done", "Disobedience is untouched by intention, and meaning well by it is a further evil."],
+  ["causes", "The causes", "The only route", "An inclination cannot be invented by willing; only its causes can be arranged."],
+  ["ikhlas", "Sincerity", "Purity from admixture", "Defined formally, which produces a consequence Ghazali states without flinching."],
+  ["riya", "Showing off", "Two grades", "The second is built out of a true thought and catches those the first does not."],
+  ["ujb", "Self-admiration", "A blight of its own", "Looking at your own sincerity is what al-Susi's saying addresses."],
+  ["sidq", "Truthfulness", "Six meanings", "Speech, intention, resolve, fulfilment, action, and the stations of religion."],
+  ["azm", "Resolve", "And its fulfilment", "Counted as two meanings, because people are generous with the first and flinch at the second."],
+  ["siddiq", "The siddiq", "An intensive", "Earned by breadth across all six rather than by depth in any one."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book37Journeys: Journey[] = [
+  {
+    id: "what-is-an-intention", number: "01", question: "What is an intention, actually?", title: "Take it apart before using it",
+    description: "Collapse three words into one meaning, find the three components of any voluntary act, and watch a famous saying survive three explanations that do not work.",
+    payoff: "You get a definition that explains why the rest of the book has to restrict the rule.",
+    image: assetUrl("assets/system/book37-three-components.jpg"), imageAlt: "A pale workbench where a lamp, a key and a hand-tool lie in a row, arranged so that none can be used without the others.", minutes: 13, color: "#278d91",
+    nodes: [
+      node("three-words", "Collapse the vocabulary", "One meaning", "Intention, will, and purpose converge on a single state of the heart.", "A state, not a moment of resolve before an act.", 2, "know"),
+      node("three-parts", "Find the components", "Knowledge, will, power", "No voluntary act is completed without all three.", "The order is load-bearing for the whole book.", 2, "order"),
+      node("the-sick-man", "Notice the sick man", "Knowing is not moving", "He sees the food, knows it agrees with him, and does not reach.", "Knowledge does not produce inclination, which Chapter 6 builds on.", 2, "diagnose"),
+      node("the-mechanism", "State the mechanism", "The ruling follows the motive", "Two identical acts may stand in wholly different positions.", "This is about assessment, not about redescription.", 3, "pattern"),
+      node("three-breaks", "Break three readings", "Secrecy, duration, no rival", "Each produces a consequence the famous saying cannot bear.", "All three are readings a careful person would reach.", 4, "clear"),
+      node("contribution", "Keep the fourth", "Effect on the aim", "Both parts are good and one contributes more to the same aim.", "It requires both to be present, so action is not dispensable.", 4, "steady"),
+    ],
+  },
+  {
+    id: "cannot-decide", number: "02", question: "Can I just decide to mean it?", title: "Meet the two restrictions",
+    description: "Follow the two chapters that stop the founding report from becoming a licence: one class of acts intention cannot touch, and one thing a declaration cannot produce.",
+    payoff: "You stop doing the thing almost everyone does when told to have a good intention.",
+    image: assetUrl("assets/system/book37-full-man.jpg"), imageAlt: "A cleared table after a meal, the plate empty and pushed back, a second untouched dish set down beside it.", minutes: 12, color: "#c25f50",
+    nodes: [
+      node("three-classes", "Divide the acts", "Three classes", "Disobedience, obedience, and the permissible are governed differently.", "The rule about motives has a field, and one class is outside it.", 5, "order"),
+      node("no-conversion", "Take the restriction", "Not by intending", "A mosque built with unlawful wealth is not converted by meaning good.", "Every example is one where the good outcome is real.", 5, "guard"),
+      node("second-evil", "Note the second charge", "The route, not the result", "Intending good by evil against the Law is a further evil.", "The exit through ignorance is closed in the same breath.", 5, "clear"),
+      node("the-declaration", "Catch the declaration", "Talk of the tongue", "Saying you intend to eat for God is not an intention at all.", "This is what most people do, which is why it needed a chapter.", 6, "diagnose"),
+      node("full-man", "Test the impossibility", "Intending to be hungry", "An inclination cannot be invented by willing, as appetite cannot.", "Ghazali does not argue by resemblance; he says it is the same thing.", 6, "witness"),
+      node("the-causes", "Find the real work", "Arrange the causes", "The only route to an inclination is acquiring its causes.", "He admits plainly that this is not always within reach.", 6, "forces"),
+    ],
+  },
+  {
+    id: "what-counts-as-sincere", number: "03", question: "What counts as sincere?", title: "Separate the form from the direction",
+    description: "Define sincerity by its structure, follow the consequence Ghazali refuses to suppress, and read the masters' definitions as a diagnostic set rather than a standard.",
+    payoff: "You learn where the word's moral weight actually comes from, and which definition addresses your case.",
+    image: assetUrl("assets/system/book37-pure-milk.jpg"), imageAlt: "A shallow white bowl of milk on a scrubbed stone counter, perfectly still and unclouded, in level daylight.", minutes: 13, color: "#586fa8",
+    nodes: [
+      node("the-milk", "Take the image", "Nothing mingled", "Purity is the absence of any admixture that could mix in.", "The image defines a form, not yet a direction.", 8, "know"),
+      node("consequence", "Follow the consequence", "Sincere in showing off", "A single unmixed motive satisfies the definition whatever the motive is.", "Stated as a consequence, not as provocation.", 8, "clear"),
+      node("the-convention", "Locate the direction", "Supplied by usage", "The moral content sits in the convention, as with the word for deviation.", "This is what makes the definition usable rather than merely strict.", 8, "pattern"),
+      node("assign-sayings", "Assign the sayings", "One blight each", "Al-Susi addresses self-admiration; Sahl gives the gathering word.", "Read as competing, they become a standard nobody meets.", 9, "order"),
+      node("the-concession", "Take the concession", "Relative sincerity", "Acting from hope of the Garden is sincere relative to the immediate shares.", "The absolute is named as a rank, not imposed as a rule.", 9, "balance"),
+    ],
+  },
+  {
+    id: "how-mixed", number: "04", question: "How mixed is too mixed?", title: "Weigh it to an atom",
+    description: "Learn the grade of showing off that catches people who have already caught the obvious one, then take Ghazali's own arithmetic for what a mixed act is worth.",
+    payoff: "You get a rule with four outcomes instead of a warning, and a test you can apply at the moment it matters.",
+    image: assetUrl("assets/system/book37-the-atom.jpg"), imageAlt: "A small brass balance on an ivory sill, its two pans holding almost equal weights, the beam very slightly tipped.", minutes: 14, color: "#bf7a35",
+    nodes: [
+      node("sort-blights", "Sort the blights", "Plain, hidden, weak, strong", "Degree of hiddenness and degree of strength are separate axes.", "Understood only by example, which is why the chapter is a scene.", 10, "pattern"),
+      node("first-grade", "See the first grade", "So he thinks well of you", "The limbs become humble when someone comes in.", "Not hidden even from beginners, and usually caught by shame.", 10, "diagnose"),
+      node("second-grade", "Catch the second", "Dressed as good", "Beautify it so he may imitate you, which is true and is the same motive.", "One who is not deceived by the first may be deceived by this.", 10, "guard"),
+      node("the-timing", "Use the test", "Did it appear then", "The question is whether the improvement tracked the observer.", "Timing rather than the content of the thought.", 10, "witness"),
+      node("the-rule", "Take the rule", "By the strength of the motive", "Ghazali marks it as his own judgement and says the knowledge is with God.", "The outward reports say no reward; he does not simply follow them.", 11, "know"),
+      node("four-outcomes", "Hold the four outcomes", "Down to an atom", "Cancel, harm, reward by the excess, and a lightened case at the bottom.", "The proportion cuts both ways, which is what makes it a scale.", 11, "balance"),
+    ],
+  },
+  {
+    id: "six-meanings", number: "05", question: "What does truthfulness actually cover?", title: "Widen the word to six",
+    description: "Find that speech is only the first of six meanings, that a true statement can be a lie, that fulfilment is harder than resolve, and that one remedy runs the opposite way to the remedy for showing off.",
+    payoff: "You leave with the six as a checklist and with the two remedies distinguished.",
+    image: assetUrl("assets/system/book37-six-meanings.jpg"), imageAlt: "Six shallow niches cut into one plastered wall, each holding a plain unmarked token, lit evenly from the left.", minutes: 14, color: "#a97837",
+    nodes: [
+      node("the-widening", "Notice the widening", "Speech is only first", "Six meanings, of which sincerity is the second.", "Part Three contains Part Two rather than following it.", 12, "order"),
+      node("equivocation", "Close the loophole", "A way out that is not one", "Equivocations stand in the place of lying, since the harm is the misleading.", "Ghazali cites the permission and then explains it away.", 13, "guard"),
+      node("true-and-false", "See the true lie", "Denied in the will", "The scholar reported his deeds correctly and was told that he lies.", "The circumstance entails a report about the heart.", 13, "diagnose"),
+      node("fulfilment", "Weigh the fourth", "Harder than the third", "People are generous with resolve and flinch when the means arrive.", "Umar's own exception is cited to show the severity.", 14, "balance"),
+      node("two-remedies", "Separate the remedies", "Leave it, or catch up", "Showing off is treated by leaving the act; this by drawing the inward up.", "Applying the wrong one produces the opposite of the cure.", 14, "clear"),
+      node("the-sixth", "Read the sixth as a rank", "Verified, not named", "The stations realised rather than only called by their names.", "Eminent Companions are said not to have reached this measure.", 14, "steady"),
+    ],
+  },
+];
+
+export const book37Movements: TaxonomyGroup[] = [
+  ["fadl-niyya", "1. The excellence of intention", "The testimony, and the three nested parts.", [1]],
+  ["haqiqa-niyya", "2. The reality of intention", "Knowledge, will, and power, and the sick man.", [2]],
+  ["aqsam", "3. The classes of intentions", "The act takes its ruling from its motive.", [3]],
+  ["khayr", "4. Better than the action", "Three explanations broken, and the fourth kept.", [4]],
+  ["tafsil", "5. The detail of the acts", "Three classes, and the one intention cannot reach.", [5]],
+  ["ikhtiyar", "6. Not subject to choice", "A declaration is not an intention.", [6]],
+  ["fadl-ikhlas", "7. The excellence of sincerity", "The testimony, and the report of the three.", [7]],
+  ["haqiqa-ikhlas", "8. The reality of sincerity", "Pure milk, and the consequence of a formal definition.", [8]],
+  ["aqawil", "9. The sayings of the masters", "Each definition assigned to the blight it treats.", [9]],
+  ["shawaib", "10. The degrees of the blights", "Two grades of showing off, the second dressed as good.", [10]],
+  ["mashub", "11. The mixed act", "Four outcomes, weighed to an atom.", [11]],
+  ["fadl-sidq", "12. The excellence of truthfulness", "The rank, and the intensive that names it.", [12]],
+  ["sidq-1", "13. The first three meanings", "Speech, intention, and resolve.", [13]],
+  ["sidq-2", "14. The last three meanings", "Fulfilment, action, and the stations.", [14]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50", "#586fa8", "#a97837"][index % 5] })) as TaxonomyGroup[];
+
+export const book37Instrument: Instrument = {
+  title: "Weighing the motive",
+  note: "Ghazali refuses to leave the mixed act as a warning and gives a rule with four outcomes, weighed to an atom, which he marks as his own judgement. The second axis is the chapter that says an intention cannot be produced by declaring one. Take a single act you have actually performed, not a category of act, and answer both.",
+  items: [
+    {
+      id: "act", label: "One act you actually performed", lede: "Recent, specific, and one you would rather not have chosen",
+      note: "The first axis is Ghazali's arithmetic from the chapter on the mixed act. The second is from the chapter on intention not being subject to choice, where he says that saying you intend something is talk of the tongue and that the only route to an inclination is acquiring its causes.",
+      axes: [
+        {
+          id: "balance", kicker: "The strength of the motive", question: "Of the two motives behind it, which was heavier?",
+          options: [
+            { id: "religious", label: "The religious motive, clearly", note: "Preponderant relative to the other, which is the case Ghazali rewards by the excess." },
+            { id: "equal", label: "They were about even", note: "The case in which he says the two cancel and fall away." },
+            { id: "worldly", label: "The motive of the self, clearly", note: "Preponderant showing off or the soul's share, which he says is harmful though lighter than the bare case." },
+            { id: "unclear", label: "I genuinely cannot tell", note: "The most common honest answer, and the one the second axis reads." },
+          ],
+        },
+        {
+          id: "how", kicker: "How the intention arose", question: "What did you actually do about the intention?",
+          options: [
+            { id: "declared", label: "I said it to myself before starting", note: "The exact case Chapter 6 describes: intending to teach for God, or to eat for God." },
+            { id: "causes", label: "I had worked at the causes beforehand", note: "The only route Ghazali allows, and he says it does not always succeed." },
+            { id: "present", label: "The inclination was simply there", note: "Nothing was done, and something was present, which is a real answer and not a lesser one." },
+            { id: "nothing", label: "I did not think about it at all", note: "The act happened and the question never arose, which is where most acts actually sit." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "religious|*", name: "Reward to the measure of the excess", role: "support", chapterId: 11, body: "Ghazali's rule for this case is explicit: if the aim of nearness is preponderant relative to the other motive, there is reward to the measure of the excess of the strength of the religious motive. He grounds it on the atom's weight of good being seen, which is what makes it a proportion rather than a pass.", action: "Take the reading and not the reassurance. The rule he chose over the outward sense of the reports is a scale, so the honest question is not whether the religious motive won but by how much, and the answer to that is what he says is counted." },
+        { key: "worldly|*", name: "Against you, and lighter than the bare case", role: "warning", chapterId: 11, body: "Where the motive of showing off is preponderant and stronger, Ghazali says it is not beneficial, and is moreover harmful and leads to punishment. He immediately adds that the punishment in it is lighter than that of an act stripped bare for showing off with no admixture of seeking nearness at all.", action: "That added clause is not consolation, it is the same scale running downward. The chapter on the second grade of showing off is the one to read next, because the motive that is easiest to misweigh is the one that arrived with a true thought attached to it." },
+        { key: "equal|declared", name: "They cancel, and the declaring did nothing", role: "warning", chapterId: 6, body: "Two readings meet here. Ghazali says that where the religious motive equals the motive of the self they cancel and fall away, so the act is neither for you nor against you. And what you did about the intention was to say it, which he says is talk of the tongue and not an intention at all.", action: "The declaration was never going to move the balance, so do not repeat it more firmly. What moves an inclination is acquiring its causes, and the useful question is which cause of this particular inclination was available to you and was not arranged." },
+        { key: "equal|*", name: "They cancel and fall away", role: "balance", chapterId: 11, body: "Ghazali's middle outcome, stated plainly: if the religious motive equals the motive of the self, the two cancel and fall away, and the act is neither for you nor against you. He does not soften it and does not treat a balanced act as a partial success.", action: "This is the outcome that shows the rule is a scale and not a reassurance. What changes it is not doing the act more but changing what weighs on it, which is the subject of the whole of Part One." },
+        { key: "unclear|causes", name: "You are doing the only work there is", role: "support", chapterId: 6, body: "You cannot weigh the motive, and what you did was work at the causes beforehand. Ghazali says there is no route to acquiring the heart's turning toward a thing except by acquiring its causes, and he adds that this is sometimes within a person's power and sometimes not. Not being able to weigh the result does not undo the work.", action: "Leave the weighing. Al-Susi's saying is the one that applies: whoever witnesses sincerity in his sincerity has a sincerity that needs a sincerity, and Ghazali reads it as pointing at self-admiration in the act. The inability to audit your own motive is not the worst position to be in." },
+        { key: "unclear|declared", name: "That was talk of the tongue", role: "warning", chapterId: 6, body: "You cannot weigh the motive, and what you did was say the intention to yourself. Ghazali describes exactly this and refuses it: that is talk of the self and talk of the tongue, and intention is far removed from all of it. The two answers are connected, since nothing was done that would have produced anything to weigh.", action: "His comparison is the full man saying he intends to have an appetite. Stop treating the declaration as the work and ask what would actually rouse you toward this act, then ask which of those causes you can arrange. He is honest that the answer is sometimes none." },
+        { key: "unclear|*", name: "Find the balance before anything else", role: "balance", chapterId: 11, body: "The rule Ghazali gives runs entirely on which motive is heavier, so an act whose balance is unknown cannot be read by it. That is a real position and not an evasion; the chapter on the second grade of showing off exists because the balance is genuinely hard to see.", action: "Use the timing test rather than introspection. The question that catches the hidden grade is not what you were thinking but whether the act improved when someone came into the room, and that is a fact about the act rather than a judgement about yourself." },
+        { key: "*|*", name: "Read the two together", role: "balance", chapterId: 11, body: "A balance of motives, and a particular way the intention arose. Ghazali's two chapters answer different questions: one says what a mixed act is worth, and the other says what a person can actually do about it beforehand.", action: "Take the first as the assessment and the second as the work. Nothing in the book lets a declaration change the first, which is the point of putting the chapter on choice at the end of Part One." },
+      ],
+    },
+  ],
+};
+
+export const book37Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 37 was read and used to establish the definition of intention, the three classes of act, the account of sincerity, the two grades of showing off, and the six meanings of truthfulness.", url: "https://shamela.ws/book/9472/1520" },
+  { label: "The reality of intention", note: "The passage collapsing intention, will, and purpose into one meaning, and analysing every voluntary act into knowledge, will, and power.", url: "https://shamela.ws/book/9472/1524" },
+  { label: "That intention is not subject to choice", note: "The passage refusing the declared intention as talk of the tongue, and stating that the only route to an inclination is acquiring its causes.", url: "https://shamela.ws/book/9472/1532" },
+  { label: "The reality of sincerity", note: "The passage defining sincerity by the image of pure milk and drawing the consequence that a single unmixed motive satisfies the definition whatever the motive is.", url: "https://shamela.ws/book/9472/1538" },
+  { label: "The ruling on a mixed act", note: "The passage giving Ghazali's own rule for a mixed act, weighed by the strength of the motive and grounded on the atom's weight of good and evil.", url: "https://shamela.ws/book/9472/1543" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 37 as the seventh book of the Quarter of Deliverance and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book37: SystemBook = {
+  id: 37,
+  title: "Intention, Sincerity, and Truthfulness",
+  shortTitle: "Intention and Sincerity",
+  defaultJourneyId: "what-is-an-intention",
+  chapters: book37Chapters,
+  conceptNodes: book37ConceptNodes,
+  journeys: book37Journeys,
+  sources: book37Sources,
+  taxonomy: {
+    title: "Fourteen source movements",
+    note: "Ghazali's three announced parts, in his order: six movements on intention, five on sincerity, and three on truthfulness. His single exposition of the six meanings of truthfulness is presented here as two consecutive readings, which is the only place this edition divides one of his movements.",
+    groups: book37Movements,
+  },
+  instrument: book37Instrument,
+  editorialNote: "The five journeys, fourteen reading sections, visual models, and diagnostic are editorial learning aids. The sections follow Ghazali's three parts and his own expositions in order; the one division made here is that his exposition of the six meanings of truthfulness is presented as two consecutive readings, and the movements list marks where the seam falls. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. The chapter on the detail of the acts is presented in full because the report that acts are only by intentions is most often misused in exactly the way that chapter forbids, and the chapter's second charge, that intending good by a forbidden route is a further evil, is stated as Ghazali states it. The rule for a mixed act is Ghazali's own judgement rather than a settled position; he says so himself, notes that the outward sense of the reports runs the other way, and adds that the knowledge is with God, and all of that is preserved here. His remark that one who gives charity purely for show satisfies the formal definition of sincerity is a consequence of that definition and is included because he includes it and immediately explains where the word's moral direction comes from. The diagnostic applies his stated rule to a pair of answers the reader supplies about a single act and cannot pronounce on anyone's state.",
+};

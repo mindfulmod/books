@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **sixteen books**: the complete Quarter of Perils, books 21 to 30, and the first six books of the Quarter of Deliverance.
+The System edition currently carries **seventeen books**: the complete Quarter of Perils, books 21 to 30, and the first seven books of the Quarter of Deliverance.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -51,6 +51,7 @@ The System edition currently carries **sixteen books**: the complete Quarter of 
 | 34 | Poverty and Abstinence | 18 | 5 | Two ladders |
 | 35 | Unity and Trust | 15 | 5 | The advocate's conditions |
 | 36 | Love, Longing, Intimacy, and Contentment | 18 | 5 | Where the gaze rests |
+| 37 | Intention, Sincerity, and Truthfulness | 14 | 5 | Weighing the motive |
 
 Every book now carries the same layers, so the quarter reads at one depth throughout.
 
