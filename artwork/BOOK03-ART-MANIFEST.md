@@ -42,3 +42,22 @@ Alt text is already written into `src/book03.ts` and is what each plate has to d
 - **Accent colour** `#586fa8`
 - **Must depict** A washed pale bowl upturned on a cloth beside a small pair of shears and a folded towel, everything spotless.
 - **Argument it carries** The easiest rank to perfect, given in the finest detail in the book — and capable of being done exactly while the third rank is untouched. Everything must be *immaculate*: this is a plate about something done perfectly. The mild unease should come only from how complete it looks, never from anything visibly wrong.
+
+---
+
+## ADDED 2026-08-22 — journey 05 plate (not yet generated)
+
+### `assets/system/book03-bride-and-ruin.jpg` (+ `-thumb.jpg`)
+
+**Journey 05 — "The sharpest pages in the book"**
+A polished brass ewer standing on a spotless folded cloth, in front of a wall
+whose plaster has fallen away to expose bare rubble behind it. The ewer is
+immaculate and catches the light; the wall behind it is a ruin. Both fully in
+focus, even flat light, no people.
+
+Carries: Ghazali's charge that people "call fussiness cleanliness" and decorate
+their outsides "like a hairdresser working on a bride, while the inside is a
+ruin." The plate fails if the ewer looks neglected or the wall looks
+picturesque — the contrast has to read as *maintained front, collapsed back*.
+
+Colour anchor: `#a97837`.

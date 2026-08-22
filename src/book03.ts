@@ -380,7 +380,7 @@ export const book03Journeys: Journey[] = [
     id: "fussiness", number: "05", question: "Can being clean become the problem?", title: "The sharpest pages in the book",
     description: "Ghazali describes people scrupulous about washing and wrecked inside, says nobody finds it strange, and then gives a test for when care about cleanliness counts for you and when it counts against you.",
     payoff: "A four-part test you can run on your own habits, and the reason obsessiveness is a symptom rather than a virtue.",
-    image: assetUrl("assets/system/book03-unchanged-water.jpg"), imageAlt: "A plain earthenware jar of clear water on a doorstep in strong daylight, entirely still and unattended.", minutes: 11, color: "#a97837",
+    image: assetUrl("assets/system/book03-bride-and-ruin.jpg"), imageAlt: "A polished brass ewer standing on a clean cloth in front of a wall whose plaster has fallen away, exposing bare rubble behind it.", minutes: 11, color: "#a97837",
     nodes: [
       node("rind-kernel", "Take the image", "Rind and kernel", "Someone who cannot see the levels takes the outermost for the whole.", "He is working hard. That is what makes it uncomfortable.", 3, "diagnose"),
       node("fussiness", "Take the line", "They call fussiness cleanliness", "Outsides decorated like a bride; insides a ruin.", "And nobody involved finds that strange.", 5, "clear"),

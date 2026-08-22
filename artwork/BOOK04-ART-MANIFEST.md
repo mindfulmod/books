@@ -48,3 +48,21 @@ Alt text is already written into `src/book04.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** Four concentric rings scored into a stone floor, the outermost broken by a single gap.
 - **Argument it carries** Day, week, year, and occasion — four cycles covering every rhythm a life has. Three rings must be closed and unbroken; the outermost has one clean gap, which is the occasioned prayer that answers an event rather than a calendar. Without that gap the scheme is only a timetable, which is precisely what the fourth division prevents.
+
+---
+
+## ADDED 2026-08-22 — journey 06 plate (not yet generated)
+
+### `assets/system/book04-presence.jpg` (+ `-thumb.jpg`)
+
+**Journey 06 — "Walk the prayer from the inside"**
+A plain prayer mat laid perfectly square on a stone floor, empty, lit from one
+side so the weave reads and a long soft shadow falls across it. Nothing else in
+frame. No figure, no shoes, no objects placed on it.
+
+Carries: the chapter on what should be present in the heart at each part of the
+prayer — and specifically Ghazali's exercise of imagining someone you respect
+watching you. The emptiness is the point: the mat is set, and the question is
+what is actually brought to it.
+
+Colour anchor: `#a97837`.
