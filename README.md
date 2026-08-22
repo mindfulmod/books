@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **thirty-seven books**: three complete quarters — the Quarter of Worship, books 1 to 10; the Quarter of Perils, books 21 to 30; and the Quarter of Deliverance, books 31 to 40 — and the first seven books of the Quarter of Customs.
+The System edition carries **all forty books** — the complete Ihya': the Quarter of Worship, books 1 to 10; the Quarter of Customs, books 11 to 20; the Quarter of Perils, books 21 to 30; and the Quarter of Deliverance, books 31 to 40.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -54,6 +54,7 @@ The System edition currently carries **thirty-seven books**: three complete quar
 | 17 | The Etiquette of Travel | 10 | 2 | Flight, or seeking |
 | 18 | The Etiquette of Listening and Ecstasy | 11 | 2 | Four listeners, one sound |
 | 19 | Enjoining Right and Forbidding Wrong | 14 | 3 | How far up the ladder |
+| 20 | The Manners of Living and the Character of Prophecy | 13 | 3 | Which end are you working from |
 | 21 | The Wonders of the Heart | 15 | 4 | Five obstructions |
 | 22 | Disciplining the Soul and Refining Character | 11 | 5 | Four mirrors |
 | 23 | Breaking the Two Desires | 7 | 4 | Four measures |
