@@ -3,7 +3,7 @@ import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
-const bab = (id: number) => (id <= 6 ? "the first chapter, on the litanies and their arrangement" : "the second chapter, on the night vigil");
+const bab = (id: number) => (id <= 7 ? "the first chapter, on the litanies and their arrangement" : "the second chapter, on the night vigil");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
@@ -78,27 +78,47 @@ export const book10Chapters: Chapter[] = [
     model: pair("Two accounts of an ordered sky", "One is denied as the aim, not as a use.", [["To measure devotion", "So the times may be known and occupied.", "support"], ["For worldly affairs", "A real use, and not what the ordering is for.", "balance"]]),
   }),
   makeChapter({
-    id: 4, shortTitle: "Seven parts", formalTitle: "The divisions of the day",
-    overview: "The day is divided into seven, and the divisions are marked by the sun rather than by the clock — which makes them a received structure rather than an invented one.",
+    id: 4, shortTitle: "Dawn to noon", formalTitle: "The seven portions of the day: the first three",
+    overview: "Ghazali counts the day in seven portions and the night in four, marked by the sun rather than by a clock — a structure a person receives rather than designs.",
     moves: [
-      { title: "The first three", body: "From the breaking of dawn to sunrise, which is a noble time; from sunrise to mid-forenoon; and from mid-forenoon to the sun's decline." },
-      { title: "The fourth", body: "From the decline to the finishing of the midday prayer and its attached units — and this is the shortest of the day's litanies and the best of them." },
-      { title: "The fifth and sixth", body: "From then to the afternoon prayer, in which retreat in the mosque is recommended, occupied with remembrance and prayer; and then the afternoon, which is the time God swore by." },
-      { title: "The seventh", body: "When the sun yellows and comes near the earth. And the first division is paired with it: from dawn to sunrise is before the rising as this is before the setting, and both are named in the verse about glorifying before them." },
+      { title: "Give the count", body: "Dawn to sunrise is one portion. Sunrise to noon is two. Noon to Asr is two. Asr to sunset is two. That is seven. The night divides into four: two from sunset to when people sleep, and two from the second half of the night until dawn." },
+      { title: "First: dawn to sunrise", body: "He calls this a noble time and spends more on it than on any other. It carries the dawn prayer, and then the practice of staying where you prayed until the sun is up — supplication, remembrance, recitation, and the transmitted formulas of the morning." },
+      { title: "Second: sunrise to mid-morning", body: "The forenoon, meaning the midpoint between sunrise and noon. Alongside the private practices he places a second duty here: the good done for other people that customarily happens early in the day." },
+      { title: "Third: mid-morning to noon", body: "The same four kinds of practice as before, with two things added — occupation with earning a living being one of them. Work is placed inside the arrangement rather than treated as an interruption to it." },
     ],
     closer: [
-      { title: "Why the marks are solar", body: "Dawn, sunrise, mid-forenoon, decline, afternoon, yellowing, sunset. Every boundary is something visible, which means the schedule is legible without an instrument and identical for everyone in a place — and it is the same set of marks the prayers are fixed by." },
-      { title: "The shortest and the best", body: "That the fourth is both the shortest and the best is the most useful thing in the section. It detaches worth from duration in a book entirely about the allocation of time, and it does so at the exact midpoint of the seven." },
+      { title: "Why the sun and not a clock", body: "Every boundary here is an observable event: the sky lightening, the disc clearing the horizon, the shadow turning. That makes the divisions the same for everyone present and impossible to negotiate with. A schedule you set is a schedule you can move; this one arrives." },
+      { title: "What the third portion settles", body: "Putting earning inside the day's arrangement, as one of the things belonging to that portion, quietly answers a question the whole quarter raises. The devotional life is not being fitted around work, and work is not an intrusion into it. Both are portions of one day that was divided before either began." },
     ],
-    distinction: ["Two ways to divide a day", "By what is visible", "Dawn, sunrise, decline, yellowing — the same marks the prayers are fixed by.", "By measured hours", "Which would make the divisions an imposition rather than a structure received."],
-    misreading: "Do not read the seven as requiring seven separate exertions. The book's principle is variation, and several of the divisions are given to reading, teaching, or retreat rather than to a further devotion.",
-    reflection: "Count how many of the seven boundaries you could identify today without a clock.",
-    audit: ["Which of the seven do I use?", "Could I mark them by the sun?", "Which is my emptiest?", "Have I equated length with worth?"],
-    nodes: ["awrad", "awqat", "tanawwu"],
-    model: spectrum("Seven divisions, solar marks", "The fourth is the shortest and the best.", [["Dawn to sunrise", "A noble time, paired with the seventh.", "support"], ["To mid-forenoon", "The second.", "balance"], ["To the decline", "The third.", "balance"], ["To the end of the midday prayer", "The shortest, and the best.", "support"], ["To the afternoon", "Retreat in the mosque is recommended in it.", "balance"], ["The afternoon", "The time God swore by.", "support"], ["The yellowing", "Before the setting, as the first is before the rising.", "support"]]),
+    distinction: ["Two ways to have a daily order", "Received", "Marked by the sun, identical for everyone, and not adjustable by preference.", "Devised", "A schedule you set, which you can also move — which is how most attempts at regularity end."],
+    misreading: "Seven portions is not seven obligations. Ghazali is describing where the day's natural joints are and what suits each, not adding to what anyone owes.",
+    reflection: "Notice which boundaries of your own day you can move, and which arrive whether or not you are ready.",
+    audit: ["Which portion am I in now?", "What arrives, and what do I set?", "Where does work sit in my day?", "Have I ever used the first portion?"],
+    nodes: ["awrad", "waqt", "tartib"],
+    model: chain("The first three portions", "Marked by the sun, in order.", [["Dawn to sunrise", "The noble one; he gives it the most.", "support"], ["Sunrise to mid-morning", "Private practice, plus the good done for others.", "support"], ["Mid-morning to noon", "The same four kinds, plus earning a living.", "balance"]]),
   }),
   makeChapter({
-    id: 5, shortTitle: "Not all devotion", formalTitle: "What fills the divisions",
+    id: 5, shortTitle: "Noon to sunset", formalTitle: "The seven portions of the day: the last four",
+    overview: "The afternoon portions, one of which God swears by and one of which has no prescribed prayer in it at all.",
+    moves: [
+      { title: "Fourth: noon to the end of Zuhr", body: "The shortest portion of the day — from the sun's decline until the prayer and what follows it are done. Short, and named anyway, because the scheme counts joints rather than durations." },
+      { title: "Fifth: until Asr", body: "Here he recommends staying in the mosque, occupied with remembrance and prayer. He also notes this is a time when people are generally inattentive, which he treats as making it more valuable rather than less." },
+      { title: "Sixth: from Asr", body: "“This is the one God swore by — By the afternoon.” And a detail worth noticing: there is no prescribed prayer inside this portion. It is a stretch of the day defined by what it is rather than by an obligation sitting in it." },
+      { title: "Seventh: when the sun yellows", body: "When the sun comes near the earth so that its light covers the haze rising off the ground and a yellowness shows in its glow. He pairs it explicitly with the first: “this is like the first portion, from dawn to sunrise, because it comes before the setting as that comes before the rising.”" },
+    ],
+    closer: [
+      { title: "Why the day is bracketed", body: "The first portion and the seventh are the same shape at opposite ends — the light changing, before rising and before setting. That is why the verse about glorifying “before the rising of the sun and before its setting” names both. The day is not a line with a start; it is bracketed, and the two brackets do the same job." },
+      { title: "The portion with nothing prescribed in it", body: "The sixth is worth sitting with. God swears by it, and it contains no required prayer. Which means the arrangement is not simply a container for obligations — some portions are named because of what they are, and what you do in them is left to you. That is the difference between an order and a timetable." },
+    ],
+    distinction: ["Two reasons a portion gets named", "For what it is", "Sworn by, or marked by the light changing — with nothing prescribed inside it.", "For what sits in it", "A prayer that falls due, which is how most people divide a day."],
+    misreading: "Do not read the empty portion as free time. It is named and sworn by; what is absent is a prescribed act, not a reason to attend to it.",
+    reflection: "Ask what you generally do in the hour before sunset, and whether you had ever thought of it as a part of the day.",
+    audit: ["Do I notice the light changing?", "What fills my sixth portion?", "Which portions do I lose entirely?", "Order, or timetable?"],
+    nodes: ["awrad", "waqt", "ghafla"],
+    model: pair("The day's two brackets", "The same shape at either end.", [["Dawn to sunrise", "Before the rising — the first portion.", "support"], ["The sun yellowing", "Before the setting — the seventh, and explicitly paired with it.", "support"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "Not all devotion", formalTitle: "What fills the divisions",
     overview: "The most practical feature of the arrangement, and the one that keeps it from being impossible: several of the seven are given to things that are not private devotion.",
     moves: [
       { title: "Give the range", body: "The divisions are filled with different kinds: supplication, remembrance, recitation, prayer, praise, and glorification — and Ghazali notes of one arrangement that it gathers all of these together with the nobility of the time." },
@@ -118,7 +138,7 @@ export const book10Chapters: Chapter[] = [
     model: pair("Two things that can be kept", "One of them survives a change of circumstance.", [["The structure", "The division held, its content substituted as the hour requires.", "support"], ["The act", "One particular devotion, which leaves a gap when it is unavailable.", "warning"]]),
   }),
   makeChapter({
-    id: 6, shortTitle: "The shortest and the best", formalTitle: "That worth is not duration",
+    id: 7, shortTitle: "The shortest and the best", formalTitle: "That worth is not duration",
     overview: "A single observation from the fourth division, which is worth separating because a book about allocating time could easily imply the opposite.",
     moves: [
       { title: "State it", body: "The fourth division — from the sun's decline to the finishing of the midday prayer with its attached units — is the shortest of the day's litanies and the best of them." },
@@ -138,7 +158,7 @@ export const book10Chapters: Chapter[] = [
     model: pair("Two things being measured", "The fourth division is high on one and low on the other.", [["Nobility and presence", "What the sentence measures by.", "support"], ["Length", "Which the fourth division is lowest in, and which is not the measure.", "balance"]]),
   }),
   makeChapter({
-    id: 7, shortTitle: "Between the two", formalTitle: "The hour between the evening prayers",
+    id: 8, shortTitle: "Between the two", formalTitle: "The hour between the evening prayers",
     overview: "The second chapter opens not at the night vigil but at the hour before it, which is where the book locates the practical entry to the whole thing.",
     moves: [
       { title: "Name the chapter", body: "The second chapter treats the causes that make rising at night easy, the nights whose vigil is recommended, the excellence of the night vigil and of the hour between the two evening prayers, and how the night is divided." },
@@ -158,7 +178,7 @@ export const book10Chapters: Chapter[] = [
     model: chain("Where the chapter starts", "At the hour requiring no arrangement.", [["The sunset prayer", "Sealing the day and opening the night; not shortened for anyone.", "support"], ["The hour after it", "A person already awake, at home, with nothing to reorganise.", "support"], ["Then the vigil", "Which requires waking, and is approached second.", "balance"]]),
   }),
   makeChapter({
-    id: 8, shortTitle: "What makes it possible", formalTitle: "The causes that ease rising at night",
+    id: 9, shortTitle: "What makes it possible", formalTitle: "The causes that ease rising at night",
     overview: "The chapter's title names causes rather than exhortations, and the difference is the whole approach.",
     moves: [
       { title: "Note what is being asked for", body: "The chapter treats the causes that make rising at night easy — not the excellence of rising, which is treated separately, and not the resolve to rise." },
@@ -178,7 +198,7 @@ export const book10Chapters: Chapter[] = [
     model: pair("Two kinds of cause", "One of them cannot be installed.", [["Arrangeable", "Food, daytime effort, a daytime portion of sleep, avoiding sins.", "support"], ["Not arrangeable", "A fear or a longing occupying the person, which is listed anyway.", "balance"]]),
   }),
   makeChapter({
-    id: 9, shortTitle: "Dividing the night", formalTitle: "The night's portions, and which nights",
+    id: 10, shortTitle: "Dividing the night", formalTitle: "The night's portions, and which nights",
     overview: "The night receives the same treatment the day received: it is divided, and particular nights are singled out.",
     moves: [
       { title: "Divide the night", body: "The chapter treats how the night is divided, so that a person keeps a portion of it rather than facing it as a single undivided stretch." },
@@ -198,7 +218,7 @@ export const book10Chapters: Chapter[] = [
     model: spectrum("Three scales of the night practice", "The smallest is available every day.", [["An hour after sunset", "Between the two evening prayers, requiring no arrangement.", "support"], ["A portion of the night", "Which makes partial keeping possible.", "support"], ["Particular nights", "Singled out by occasion rather than by rotation.", "balance"]]),
   }),
   makeChapter({
-    id: 10, shortTitle: "How the quarter ends", formalTitle: "What the Quarter of Worship has built",
+    id: 11, shortTitle: "How the quarter ends", formalTitle: "What the Quarter of Worship has built",
     overview: "The last book of the quarter closes, and what it leaves a reader with is not a further act but a shape for the time he already has.",
     moves: [
       { title: "Note what the book supplied", body: "A derivation from the goal down to a timetable; a principle of variation; seven divisions of the day marked by the sun; three scales of night practice; and the causes that make the hardest of them possible." },
@@ -262,9 +282,9 @@ export const book10Journeys: Journey[] = [
       node("what-for", "Ask what the sky is for", "Not for affairs", "The ordering is so the measures of times may be known and occupied.", "A real use is being denied as the aim, not as a use.", 3, "clear"),
       node("succession", "Take the verse", "Remembrance and thanks", "One succeeds the other so what was missed may be made up.", "The one verse that states a purpose.", 3, "know"),
       node("seven", "Take the seven", "Marked by the sun", "Dawn, sunrise, forenoon, decline, afternoon, yellowing.", "Legible without an instrument, and the same marks as the prayers.", 4, "order"),
-      node("shortest-best", "Note the fourth", "Shortest and best", "Which denies in passing that duration is the measure.", "A fact about that hour, not a rule about brevity.", 6, "witness"),
-      node("teaching", "Note what counts", "Teaching, retreat, reading", "One division goes to benefiting others if anyone is present to benefit.", "A division spent teaching is not a gap.", 5, "balance"),
-      node("substitution", "Watch a substitution", "Structure over act", "Where prayer is not permitted at an hour, recitation takes its place.", "Which shows what is actually being kept.", 5, "pattern"),
+      node("shortest-best", "Note the fourth", "Shortest of the seven", "Named anyway, because the scheme counts joints and not durations.", "And the sixth has no prescribed prayer in it at all.", 5, "witness"),
+      node("teaching", "Note what counts", "Teaching, retreat, reading", "One division goes to benefiting others if anyone is present to benefit.", "A division spent teaching is not a gap.", 6, "balance"),
+      node("substitution", "Watch a substitution", "Structure over act", "Where prayer is not permitted at an hour, recitation takes its place.", "Which shows what is actually being kept.", 6, "pattern"),
     ],
   },
   {
@@ -273,20 +293,20 @@ export const book10Journeys: Journey[] = [
     payoff: "You leave with three scales of night practice and a diagnosis for why resolve has not worked.",
     image: assetUrl("assets/system/book10-the-portion.jpg"), imageAlt: "A dark room with a single lamp lit on a low table and a folded blanket set aside, the bed still made.", minutes: 11, color: "#c25f50",
     nodes: [
-      node("start-easy", "Note where it starts", "The hour after sunset", "A chapter about the hardest practice opens at the easiest hour.", "A person already awake, at home, arranging nothing.", 7, "receive"),
-      node("the-grading", "Note the apparatus", "Several marked weak", "The printed text grades a number of these reports.", "Carried here rather than passed over.", 7, "guard"),
-      node("causes-not-resolve", "Take the title seriously", "Causes that make it easy", "Not the excellence of rising, and not the resolve to rise.", "The same method as Book 37 on intention.", 8, "diagnose"),
-      node("the-outward", "Take the outward causes", "Food, effort, daytime sleep", "Conditions that make the practice easy when arranged.", "Resolve is otherwise doing a schedule's work.", 8, "clear"),
-      node("the-limit", "Note the limit", "One cannot be installed", "A fear or a longing that occupies a person, listed anyway.", "Which marks what arrangement can and cannot do.", 8, "balance"),
-      node("in-portions", "Divide the block", "Kept in part", "A night in portions can be partly kept; a block is kept or missed.", "The variation principle applied to one stretch of time.", 9, "steady"),
+      node("start-easy", "Note where it starts", "The hour after sunset", "A chapter about the hardest practice opens at the easiest hour.", "A person already awake, at home, arranging nothing.", 8, "receive"),
+      node("the-grading", "Note the apparatus", "Several marked weak", "The printed text grades a number of these reports.", "Carried here rather than passed over.", 8, "guard"),
+      node("causes-not-resolve", "Take the title seriously", "Causes that make it easy", "Not the excellence of rising, and not the resolve to rise.", "The same method as Book 37 on intention.", 9, "diagnose"),
+      node("the-outward", "Take the outward causes", "Food, effort, daytime sleep", "Conditions that make the practice easy when arranged.", "Resolve is otherwise doing a schedule's work.", 9, "clear"),
+      node("the-limit", "Note the limit", "One cannot be installed", "A fear or a longing that occupies a person, listed anyway.", "Which marks what arrangement can and cannot do.", 9, "balance"),
+      node("in-portions", "Divide the block", "Kept in part", "A night in portions can be partly kept; a block is kept or missed.", "The variation principle applied to one stretch of time.", 10, "steady"),
     ],
   },
 ];
 
 export const book10Movements: TaxonomyGroup[] = [
-  ["bab1", "1. The litanies and their arrangement", "The derivation, the variation principle, and seven divisions of the day.", [1, 2, 3, 4, 5, 6]],
-  ["bab2", "2. The night vigil", "The hour between the evening prayers, the causes that ease rising, and the night in portions.", [7, 8, 9]],
-  ["khatm", "The close of the quarter", "What ten books of arranged practice leave a reader with.", [10]],
+  ["bab1", "1. The litanies and their arrangement", "The derivation, the variation principle, and all seven portions of the day.", [1, 2, 3, 4, 5, 6, 7]],
+  ["bab2", "2. The night vigil", "The hour between the evening prayers, the causes that ease rising, and the night in portions.", [8, 9, 10]],
+  ["khatm", "The close of the quarter", "What ten books of arranged practice leave a reader with.", [11]],
 ].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50"][index % 3] })) as TaxonomyGroup[];
 
 export const book10Instrument: Instrument = {
@@ -320,9 +340,9 @@ export const book10Instrument: Instrument = {
         { key: "holding|varied", name: "This is his mechanism", role: "support", chapterId: 2, body: "Ghazali gives the sequence exactly: by the moving its pleasure is plentiful, and by the pleasure its desire is great, and by the continuance of the desire its perseverance endures. A practice that varies and holds is not lucky — it is doing the thing he says produces perseverance.", action: "The next scale up is the day rather than the practice. His seven divisions are marked by the sun — dawn, sunrise, mid-forenoon, decline, afternoon, yellowing — and the arrangement varies what fills them, including giving one to teaching if anyone is present to benefit. Variation between the hours is the same principle at a larger scale." },
         { key: "holding|*", name: "Ask what is holding it", role: "balance", chapterId: 2, body: "Something is sustaining it, and Ghazali's account names only one mechanism: movement from kind to kind, producing pleasure, then desire, then perseverance. If your practice is holding without variation, either it has variety you have not noticed, or one of the causes he lists elsewhere is doing the work.", action: "Worth knowing which, because the day it stops holding you will want to know what to restore. And note his other claim while it is going well: the shortest of the day's litanies is also called the best of them, so whatever is holding is not held by its length." },
         { key: "*|varied", name: "You did what he prescribes", role: "support", chapterId: 2, body: "Changing the kind is his remedy, stated as a necessity of kindness toward a soul that was created with weariness in it. Note that he does not present this as a concession made when discipline fails — variation is the mechanism by which perseverance is produced at all.", action: "If the varied version also lapsed, look at the scale. He varies not only the act but the time, and gives each of seven divisions of the day a different kind of filling. A single practice varied within itself has less room to move than a day with seven differently filled parts." },
-        { key: "*|harder", name: "Resolve is doing a schedule's work", role: "warning", chapterId: 8, body: "Ghazali's whole approach is against this. His chapter on the night vigil is titled for the causes that make rising easy, not for the excellence of rising or the resolve to rise — and the causes he names are a diet, a daytime portion of sleep, and not exhausting the body in the day with what is not needed.", action: "So the question is not whether you tried hard enough but which condition was missing. And on the practice that lapsed, his first chapter's answer is different again: a soul returned to one pattern shows boredom and finds the thing heavy, and the remedy for that is movement rather than force." },
+        { key: "*|harder", name: "Resolve is doing a schedule's work", role: "warning", chapterId: 9, body: "Ghazali's whole approach is against this. His chapter on the night vigil is titled for the causes that make rising easy, not for the excellence of rising or the resolve to rise — and the causes he names are a diet, a daytime portion of sleep, and not exhausting the body in the day with what is not needed.", action: "So the question is not whether you tried hard enough but which condition was missing. And on the practice that lapsed, his first chapter's answer is different again: a soul returned to one pattern shows boredom and finds the thing heavy, and the remedy for that is movement rather than force." },
         { key: "*|lighter", name: "A reasonable move, not his", role: "balance", chapterId: 2, body: "Reducing a practice keeps its kind and shortens it. Ghazali's diagnosis is about kind rather than quantity: the soul does not endure one kind of the means that assist remembrance and thought, and when returned to one pattern it wearies of it — a shorter version of the same pattern is still that pattern.", action: "Try substitution rather than reduction. He gives an example within the day: where prayer is not permitted at an hour, the time is given to recitation and the division is kept. What survives there is the structure, not the act, and that is what he means by moving from kind to kind." },
-        { key: "lapsed|nothing", name: "Where most of them are", role: "balance", chapterId: 9, body: "A quiet lapse has no moment to point at, which is why nothing was done about it. Ghazali's structural answer is division: the day into seven parts and the night into portions, so that a practice can be partly kept. A block is kept entirely or missed entirely, and a missed block leaves nothing to resume.", action: "Start at the smallest of his three scales rather than the one that lapsed. The hour between the two evening prayers requires no arrangement at all — a person is already awake, at home, with nothing to reorganise — and it is where his chapter on the hardest practice in the book chooses to begin." },
+        { key: "lapsed|nothing", name: "Where most of them are", role: "balance", chapterId: 10, body: "A quiet lapse has no moment to point at, which is why nothing was done about it. Ghazali's structural answer is division: the day into seven parts and the night into portions, so that a practice can be partly kept. A block is kept entirely or missed entirely, and a missed block leaves nothing to resume.", action: "Start at the smallest of his three scales rather than the one that lapsed. The hour between the two evening prayers requires no arrangement at all — a person is already awake, at home, with nothing to reorganise — and it is where his chapter on the hardest practice in the book chooses to begin." },
         { key: "*|nothing", name: "The diagnosis is available", role: "balance", chapterId: 2, body: "Ghazali's account of how a practice ends is specific enough to act on: a soul returned to one pattern shows boredom and finds the thing heavy. That is not a description of a failure of character; it is a description of what souls do, offered as the reason practices have to be designed rather than merely undertaken.", action: "His remedy is one sentence and it can be tried this week: move from one kind to another according to each time. And his phrase for it is worth keeping — of the necessity of kindness toward it — which places the accommodation of your own weariness inside the practice rather than against it." },
         { key: "*|*", name: "Read the ending with the response", role: "balance", chapterId: 2, body: "How it ended, and what you did. Ghazali's first chapter gives a single account of both: the soul will not endure one pattern, and the remedy is movement from kind to kind, which produces pleasure, then desire, then perseverance.", action: "Take the ending as the diagnosis and the response as what to change. And note where his whole scheme starts, because it changes what a lapse means: the chain runs from the meeting, through loving and knowing, through continuity, down to the times of the day. The schedule is the last link, not the first demand." },
       ],
