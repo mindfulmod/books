@@ -2613,6 +2613,8 @@ body.system-page {
 
 .library-progress strong { color: #40311f; }
 
+.library-quarter-nav { display: none; }
+
 .library-meter {
   position: relative;
   flex: 0 0 190px;
@@ -4410,6 +4412,7 @@ body.system-page {
 .deep-stage-label strong {
   color: var(--journey);
   font-size: 10px;
+  white-space: nowrap;
 }
 
 .deep-reader-summary h3 {
@@ -6993,14 +6996,53 @@ body.system-page {
   .measure-summary { justify-items: start; gap: 12px; }
 
   .library-backdrop { padding: 0; }
-  .library { max-height: 100vh; border-radius: 0; border-width: 0; }
+  .library { height: 100dvh; max-height: 100dvh; border-radius: 0; border-width: 0; }
   .library-header { grid-template-columns: minmax(0, 1fr) auto; padding: 18px 18px 14px; }
+  .library-header p { display: none; }
   .library-progress { padding: 12px 18px; }
   .library-meter { flex-basis: 96px; }
-  .library-quarters { padding: 4px 18px 16px; }
+  .library-quarter-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecdcc1;
+    background: #fffaf0;
+  }
+  .library-quarter-nav button {
+    display: flex;
+    min-width: 0;
+    min-height: 44px;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 2px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #7b6549;
+    background: transparent;
+    font-size: 9px;
+    font-weight: 720;
+    cursor: pointer;
+  }
+  .library-quarter-nav button span {
+    color: #a4753a;
+    font-size: 8px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.08em;
+  }
+  .library-quarter-nav button.active {
+    border-color: #d9c39f;
+    color: #40311f;
+    background: #f8ead3;
+  }
+  .library-quarters { padding: 4px 18px 16px; overscroll-behavior: contain; }
+  .library-quarter { display: none; padding-top: 14px; }
+  .library-quarter.selected { display: block; }
   .library-quarter-head { grid-template-columns: 1fr; gap: 8px; }
   .library-books { grid-template-columns: 1fr; }
-  .library-footer { padding: 12px 18px 16px; }
+  .library-footer { display: none; }
 
   .repentance-check { margin-top: 42px; }
 
@@ -7117,8 +7159,7 @@ body.system-page {
 
   /* The depth control is the reason to be on the Read tab; keep it in reach. */
   .mobile-shell.tab-read .depth-panel {
-    position: sticky;
-    top: 0;
+    position: static;
     z-index: 20;
     background: var(--surface, #fbf8f2);
     padding: 10px 14px 8px;
@@ -7128,6 +7169,9 @@ body.system-page {
   }
   .mobile-shell .depth-heading { display: none; }
   .mobile-shell .depth-tabs {
+    position: sticky;
+    top: 70px;
+    z-index: 22;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
@@ -7142,6 +7186,7 @@ body.system-page {
 
   .mobile-shell .explanation-card,
   .mobile-shell .deep-reader { padding: 16px 14px 8px; }
+  .mobile-shell .explanation-card { min-height: 0; }
   .mobile-shell .deep-reader-body { display: block; }
   .mobile-shell .deep-reader-summary { margin-bottom: 18px; }
 
@@ -7320,6 +7365,12 @@ body.system-page {
   }
   .mobile-tabbar button.active { color: var(--journey, #278d91); font-weight: 600; }
   .mobile-tabbar button.active svg { transform: translateY(-1px); }
+
+  .mobile-tabbar button:active,
+  .mobile-stepper button:not(:disabled):active,
+  .mobile-section-group button:active,
+  .library-quarter-nav button:active,
+  .library-book.ready button:active { transform: scale(0.98); }
 
   /* Give every remaining control a real target. The interactives were built as desktop
      chip rows, so their option buttons need the floor applied generically. */

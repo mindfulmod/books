@@ -19,7 +19,7 @@ import {
   Target,
   X,
 } from "@phosphor-icons/react";
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { assetUrl } from "./assetUrl";
 import { book01 } from "./book01";
 import { book02 } from "./book02";
@@ -943,6 +943,11 @@ function FoodMeasures({
 
 
 const bookTotalNodes = (item: SystemBook) => item.journeys.reduce((sum, journey) => sum + journey.nodes.length, 0);
+const bookTotalIdeas = (item: SystemBook) => {
+  const journeyChapterIds = new Set(item.journeys.flatMap((journey) => journey.nodes.map((node) => node.chapterId)));
+  const directSections = item.chapters.filter((chapter) => !journeyChapterIds.has(chapter.id)).length;
+  return bookTotalNodes(item) + directSections;
+};
 
 function Library({
   available,
@@ -959,16 +964,25 @@ function Library({
   onSelectBook: (bookId: number) => void;
   onClose: () => void;
 }) {
+  const currentQuarter = quarters.find((quarter) => quarter.books.some((entry) => entry.id === currentBookId));
+  const [activeQuarter, setActiveQuarter] = useState(currentQuarter?.id ?? quarters[0].id);
+  const quarterListRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
     };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
   }, [onClose]);
 
   const byId = new Map(available.map((item) => [item.id, item]));
-  const readyTotal = available.reduce((sum, item) => sum + bookTotalNodes(item), 0);
+  const readyTotal = available.reduce((sum, item) => sum + bookTotalIdeas(item), 0);
   const readySeen = available.reduce(
     (sum, item) => sum + visited.filter((key) => key.startsWith(`${item.id}:`)).length,
     0,
@@ -994,12 +1008,29 @@ function Library({
           <span><strong>{readySeen}</strong> of {readyTotal} ideas seen across the prepared books</span>
         </div>
 
-        <div className="library-quarters">
+        <nav className="library-quarter-nav" aria-label="Library quarters">
+          {quarters.map((quarter, index) => (
+            <button
+              key={quarter.id}
+              className={activeQuarter === quarter.id ? "active" : ""}
+              onClick={() => {
+                setActiveQuarter(quarter.id);
+                if (quarterListRef.current) quarterListRef.current.scrollTop = 0;
+              }}
+              aria-pressed={activeQuarter === quarter.id}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {quarter.title.replace("The Quarter of ", "")}
+            </button>
+          ))}
+        </nav>
+
+        <div ref={quarterListRef} className="library-quarters">
           {quarters.map((quarter) => {
             const ready = quarter.books.filter((entry) => byId.has(entry.id));
             const complete = ready.length === quarter.books.length;
             return (
-              <section key={quarter.id} className={`library-quarter${complete ? " complete" : ""}${ready.length ? "" : " empty"}`}>
+              <section key={quarter.id} className={`library-quarter${complete ? " complete" : ""}${ready.length ? "" : " empty"}${activeQuarter === quarter.id ? " selected" : ""}`}>
                 <div className="library-quarter-head">
                   <div>
                     <span>{complete ? "Complete" : ready.length ? `${ready.length} of ${quarter.books.length} prepared` : "Not yet prepared"}</span>
@@ -1025,7 +1056,7 @@ function Library({
                         </li>
                       );
                     }
-                    const total = bookTotalNodes(prepared);
+                    const total = bookTotalIdeas(prepared);
                     const seen = visited.filter((key) => key.startsWith(`${prepared.id}:`)).length;
                     const marks = bookmarks.filter((key) => key.startsWith(`${prepared.id}:`)).length;
                     const isCurrent = prepared.id === currentBookId;
@@ -1556,7 +1587,7 @@ function SystemApp() {
     [book, chapter],
   );
   const concept = book.conceptNodes.find((item) => item.id === activeConcept) ?? null;
-  const totalNodes = book.journeys.reduce((total, item) => total + item.nodes.length, 0);
+  const totalIdeas = bookTotalIdeas(book);
   const visitedInBook = saved.visited.filter((item) => item.startsWith(`${book.id}:`)).length;
   const bookmarksInBook = saved.bookmarks.filter((item) => item.startsWith(`${book.id}:`)).length;
   const deepReading = chapter.deep ?? fallbackDeepReading(chapter, node, book);
@@ -1667,7 +1698,12 @@ function SystemApp() {
     }));
   };
 
-    // Every bespoke interactive and the generic instrument. On desktop these sit inside the
+  const openSection = (chapterId: number) => {
+    selectChapter(chapterId);
+    if (isMobile) setMobileTab("read");
+  };
+
+  // Every bespoke interactive and the generic instrument. On desktop these sit inside the
   // deep reader; on mobile they are the Tool tab, so they have to be renderable in either
   // place from one definition.
   const interactives = (
@@ -1677,7 +1713,7 @@ function SystemApp() {
               key={`lens:${book.id}:${chapter.id}`}
               lens={book.relationLens}
               chapterId={chapter.id}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1686,7 +1722,7 @@ function SystemApp() {
               key={`wealth-audit:${book.id}:${chapter.id}`}
               audit={book.wealthAudit}
               chapterId={chapter.id}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1695,7 +1731,7 @@ function SystemApp() {
               key={`audience-chamber:${book.id}`}
               chamber={book.audienceChamber}
               chapterId={chapter.id}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1704,7 +1740,7 @@ function SystemApp() {
               key={`solitude-test:${book.id}`}
               test={book.solitudeTest}
               chapterId={chapter.id}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1712,7 +1748,7 @@ function SystemApp() {
             <InstrumentPanel
               key={`instrument:${book.id}`}
               instrument={book.instrument}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1720,7 +1756,7 @@ function SystemApp() {
             <DutyFinder
               key={`duty-finder:${book.id}`}
               test={book.dutyFinder}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1728,7 +1764,7 @@ function SystemApp() {
             <RepentanceCheck
               key={`repentance-check:${book.id}`}
               test={book.repentanceCheck}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1736,7 +1772,7 @@ function SystemApp() {
             <FoodMeasures
               key={`food-measures:${book.id}`}
               test={book.foodMeasures}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1744,7 +1780,7 @@ function SystemApp() {
             <FaultMirrors
               key={`fault-mirrors:${book.id}`}
               test={book.faultMirrors}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1752,7 +1788,7 @@ function SystemApp() {
             <MirrorObstructions
               key={`mirror-obstructions:${book.id}`}
               test={book.mirrorObstructions}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
 
@@ -1761,7 +1797,7 @@ function SystemApp() {
               key={`substitution-test:${book.id}`}
               test={book.substitutionTest}
               chapterId={chapter.id}
-              onSelectChapter={selectChapter}
+              onSelectChapter={openSection}
             />
           )}
     </>
@@ -1788,10 +1824,11 @@ function SystemApp() {
   const activeMobileTab: MobileTab = !isMobile
     ? "read"
     : mobileTabs.some((item) => item.id === mobileTab) ? mobileTab : "read";
-  const openSection = (chapterId: number) => {
-    selectChapter(chapterId);
-    setMobileTab("read");
-  };
+  useEffect(() => {
+    if (!isMobile) return;
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [isMobile, activeMobileTab, book.id, chapter.id, journey.id, node.id, saved.depth]);
 
 return (
     <div
@@ -1829,8 +1866,8 @@ return (
         </div>
 
         <div className="system-status" aria-label="Saved reading progress">
-          <span className="status-meter"><i style={{ width: `${(visitedInBook / totalNodes) * 100}%` }} /></span>
-          <span><strong>{visitedInBook}</strong> of {totalNodes} ideas seen</span>
+          <span className="status-meter"><i style={{ width: `${(visitedInBook / totalIdeas) * 100}%` }} /></span>
+          <span><strong>{visitedInBook}</strong> of {totalIdeas} ideas seen</span>
           <BookmarkSimple size={18} weight={bookmarksInBook ? "fill" : "regular"} />
           <span>{bookmarksInBook}</span>
         </div>
@@ -1970,7 +2007,7 @@ return (
         </section>
         )}
 
-        {(isMobile || saved.depth !== "deep") && (
+        {saved.depth !== "deep" && (
         <aside className="depth-panel" aria-label="Explanation depth">
           <div className="depth-heading">
             <span>Choose resolution</span>
@@ -1991,7 +2028,6 @@ return (
             ))}
           </div>
 
-          {saved.depth !== "deep" && (
           <article className="explanation-card" role="tabpanel">
             <header>
               {/* An off-journey section has no stage, and the node belongs to a different
@@ -2060,7 +2096,6 @@ return (
               </div>
             )}
           </article>
-          )}
 
           <button className={isBookmarked ? "bookmark-action active" : "bookmark-action"} onClick={toggleBookmark}>
             <BookmarkSimple size={19} weight={isBookmarked ? "fill" : "regular"} />
