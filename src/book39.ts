@@ -1,0 +1,385 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 39, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book39Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "The excellence of thought", formalTitle: "The excellence of reflection",
+    overview: "The shortest book in the quarter opens the way the others do, and the testimony it gathers is doing something specific: establishing that reflection is an act and not a mood.",
+    moves: [
+      { title: "Gather the testimony", body: "The verses and reports commending reflection are assembled, including the reports that an hour of it outweighs long stretches of other worship, and the account is kept short because the analytic chapters follow immediately." },
+      { title: "Signal the structure", body: "The book has four parts: the excellence, the reality of reflection and its fruit, the channels along which it runs, and how to reflect on the creation. Two of the four are definitions." },
+      { title: "Name what is at stake", body: "If reflection is a state that comes over a person, it cannot be taught, and a book about it can only encourage. The next chapter defines it as an operation with parts, which is what makes the rest of the book instructional." },
+      { title: "Place it in the quarter", body: "It comes second to last, after vigilance and reckoning, and its position matters: those stations require knowing which of your attributes are wanted and which are not, and this book is where that knowledge is said to come from." },
+    ],
+    closer: [
+      { title: "Why the excellence is brief here", body: "Book 36 spent a long opening establishing that love is literal, because someone denied it. Nobody denies that reflection is praised, so the testimony is gathered and the book moves quickly to the harder question of what it actually is." },
+      { title: "The claim that arrives in Chapter 3", body: "The book will end by saying that thought is the beginning and the key. That is a strong claim about priority, and the excellence chapter is laying the ground for a reader to accept it." },
+    ],
+    distinction: ["Two things reflection could be", "An operation", "Something with parts that can be described and therefore taught, which is the book's position.", "A disposition", "A contemplative mood that arrives, about which a book could only exhort."],
+    misreading: "Do not take the praise of a single hour of reflection as a claim that it is easy. The next chapter's definition has a specific structure, and an hour spent without it is not what is being praised.",
+    reflection: "Ask what you have meant by the word until now, and whether you meant an operation or a mood.",
+    audit: ["What have I called reflection?", "Could I describe its parts?", "Do I expect a method here?", "Why does this book come after vigilance?"],
+    nodes: ["fikr", "structure"],
+    model: pair("What kind of thing it is", "The whole book depends on the first answer.", [["An operation", "Parts that can be named, which is what makes it teachable.", "support"], ["A mood", "Something that arrives, about which only encouragement is possible.", "warning"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "Two knowledges", formalTitle: "The reality of reflection",
+    overview: "The definition, and it is one of the most precise sentences in the Ihya. Ghazali gives it in a line and then works a single example all the way through.",
+    moves: [
+      { title: "Give the definition", body: "The meaning of thought is bringing two knowledges present in the heart, in order to derive from them a third knowledge." },
+      { title: "Set the example", body: "Someone inclined to the immediate, who prefers the life of this world, wants to know that the hereafter is more worthy of being preferred. Ghazali says he has two routes." },
+      { title: "The first route", body: "He hears from another that the hereafter is more worthy of preference, and imitates him and believes him, without insight into the reality of the matter, so that he leans in his action toward preferring it on the strength of that word alone. This is called imitation and is not called knowledge." },
+      { title: "The second route", body: "He knows that what is more lasting is more worthy of preference. Then he knows that the hereafter is more lasting. From these two knowledges a third results: that the hereafter is more worthy of preference. And that third knowledge cannot be realised except by the two before it." },
+    ],
+    closer: [
+      { title: "What the definition rules out", body: "It rules out reflection as dwelling on something. Two specific knowledges have to be present at once, and their being present at once is what produces the third. A person who thinks about the hereafter for an hour without both premises in view has not performed the operation at all." },
+      { title: "The concession about expression", body: "Ghazali adds that a reflector may have these knowledges present and gain the fruit without noticing how it happened and without being able to express it, for lack of practice in the craft of expression. How many a person knows truly that the hereafter is more worthy of preference and could not, if asked, produce the reason, though his knowledge came from nowhere else." },
+    ],
+    distinction: ["Two ways to hold the same conclusion", "By imitation", "Received from someone and believed on his word, which Ghazali says is not knowledge.", "By derivation", "Produced from two knowledges you hold, which is what makes it yours."],
+    misreading: "Do not read the passage as disparaging those who cannot state their premises. Ghazali says explicitly that many hold real knowledge and cannot express it, and he attributes that to a lack of practice in expression rather than a defect in the knowing.",
+    reflection: "Take one conviction you hold about the hereafter and try to name the two knowledges under it. The attempt is the chapter.",
+    audit: ["Can I name the two knowledges?", "Did I derive this or receive it?", "Which of my convictions are imitation?", "Have I called dwelling on something reflection?"],
+    nodes: ["fikr", "taqlid", "marifa"],
+    model: chain("The operation", "Two present at once, producing a third.", [["The more lasting is preferable", "The first knowledge, general and already held.", "support"], ["The hereafter is more lasting", "The second knowledge, particular and already held.", "support"], ["So the hereafter is preferable", "The third, which cannot be realised except by the two.", "support"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "The beginning and the key", formalTitle: "The fruit of reflection",
+    overview: "The chapter that earns the book its position in the quarter. Ghazali names the specific fruit narrowly and then shows what follows from it.",
+    moves: [
+      { title: "Name the fruits broadly", body: "The fruit of reflection is knowledges, states, and acts. That is the full list, and Ghazali immediately narrows it." },
+      { title: "Name the specific fruit", body: "But its particular fruit is knowledge and nothing else. The other two are consequences rather than products, and the distinction is what the rest of the chapter runs on." },
+      { title: "Give the sequence", body: "When knowledge occurs in the heart, the state of the heart changes; and when the state of the heart changes, the acts of the limbs change. So the act follows the state, and the state follows the knowledge, and the knowledge follows the thought." },
+      { title: "Draw the conclusion", body: "Thought is therefore the beginning and the key. The claim is about order rather than about worth, and it explains why a book on reflection sits this late in a quarter concerned with practice." },
+    ],
+    closer: [
+      { title: "How this completes Book 38", body: "Book 38 defined vigilance as a state of the heart that a kind of knowledge fruits, and which itself fruits acts in the limbs. This chapter adds the link before it. The full sequence across the two books is thought, knowledge, state, act, and each book supplies the half the other assumes." },
+      { title: "Why the narrowing matters", body: "If reflection produced states directly, one could reflect one's way into a condition. Ghazali's narrowing means the only thing you can aim at is the knowledge, and the state is what follows. That is the same restriction Book 37 placed on intention and Book 36 on love." },
+    ],
+    distinction: ["Two accounts of what reflection produces", "Knowledge, and then the rest", "The specific fruit is knowledge; the state and the acts follow from it in order.", "A state directly", "Reflection producing a condition, which would make it a technique for feeling."],
+    misreading: "Do not read the sequence as guaranteeing that knowledge produces the state. Book 38 said plainly that undoubted knowledge often fails to govern, and the two books have to be held together.",
+    reflection: "Notice where you have tried to reach a state by thinking about it, and where the chain says you actually were.",
+    audit: ["What am I aiming at when I reflect?", "Have I tried to produce a state directly?", "Where in the chain do I stall?", "What knowledge is missing rather than what feeling?"],
+    nodes: ["fikr", "marifa", "chain"],
+    model: chain("Four links", "The two books between them supply all four.", [["Thought", "The beginning and the key, and the subject of this book.", "support"], ["Knowledge", "The specific fruit, and the only thing that can be aimed at.", "support"], ["The state", "Which the knowledge changes, and which Book 38 treats.", "balance"], ["The act", "Which the state changes, and which the limbs perform.", "support"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "The sword's three names", formalTitle: "The six names of one operation",
+    overview: "A short lexical passage that is easy to skim and repays not skimming, because it is a lesson in how Ghazali reads vocabulary throughout the Ihya.",
+    moves: [
+      { title: "List the names", body: "Bringing the two knowledges present in order to reach the third is called reflection, consideration, recollection, examination, contemplation, and pondering. Six words for one operation." },
+      { title: "Sort them", body: "Pondering, contemplation, and reflection are synonyms upon one meaning with no different meanings beneath them. Recollection, consideration, and examination differ in meaning, although the thing named is one." },
+      { title: "Give the analogy", body: "As the words for a blade, a keen edge, and a blade of Indian make all fall upon a single thing but under different considerations: one indicates the sword insofar as it cuts, one indicates it by its relation to where it came from, and one indicates it absolutely without signalling those additions." },
+      { title: "Apply it", body: "So consideration applies to bringing the two knowledges present insofar as one crosses over from them to a third, and the other names pick out other aspects of the same act." },
+    ],
+    closer: [
+      { title: "Why the passage is here", body: "Six words that all get translated the same way would let a reader think the tradition has six practices. Ghazali is telling him there is one operation described from different angles, which prevents the search for a technique behind each word." },
+      { title: "The method it exhibits", body: "The same move appears throughout the Ihya: a word is analysed for what it names and then for what usage has added to it. Book 37 does exactly this with the word for sincerity, saying that its moral direction comes from convention rather than from the analysis." },
+    ],
+    distinction: ["Two ways six words can relate", "Aspects of one act", "One operation picked out under different considerations, as with the names of a sword.", "Six practices", "Distinct disciplines each needing its own method, which the passage forecloses."],
+    misreading: "Do not treat the distinctions as merely verbal. Ghazali holds that three of the six are genuinely synonymous and three are not, and that difference is a claim about the operation rather than about usage.",
+    reflection: "Notice whether you have been looking for a different technique behind each of these words.",
+    audit: ["Have I sought six practices?", "Which aspect is my word picking out?", "What does the operation itself consist of?", "Where else does this method appear?"],
+    nodes: ["fikr", "names"],
+    model: spectrum("One act, several aspects", "The sword is the model for the whole analysis.", [["Absolutely", "The thing named, with nothing additional signalled.", "balance"], ["As it cuts", "Named by what it does, which is one aspect.", "support"], ["By where it came from", "Named by its relation, which is another.", "support"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "Four channels", formalTitle: "The channels along which reflection runs",
+    overview: "The map, and Ghazali claims it is exhaustive. He then proves the exhaustiveness with an argument rather than asserting it.",
+    moves: [
+      { title: "Set the boundary", body: "Thought may run in a matter connected with religion and may run in what is not, and only the first is the book's concern. By religion he means the transaction between the servant and the Lord." },
+      { title: "Give the first division", body: "All the servant's thoughts either concern the servant, his attributes and his states, or concern the One worshipped, His attributes and His acts. It is not possible to fall outside these two." },
+      { title: "Divide each", body: "What concerns the servant is either an examination of what is beloved to the Lord or of what is hated by Him, and there is no need for thought in anything besides these two. What concerns the Lord is either an examination of His essence, attributes, and beautiful names, or of His acts, His dominion, and everything in the heavens and the earth." },
+      { title: "Name the four", body: "So the channels are four: my own attributes that are hated, my own attributes that are beloved, His acts and creation, and His essence and names. The rest of the book treats the last two, since the first two were the business of the preceding quarters." },
+    ],
+    closer: [
+      { title: "The lover's proof", body: "The exhaustiveness is disclosed by an example. One travelling to God and longing to meet Him thinks either about the beloved or about himself. If about the beloved, then either about his beauty in itself, to enjoy the thought, or about his fine acts that indicate his character, so that the pleasure is doubled and the love strengthened. If about himself, then either about the attributes that drop him from his beloved's eye, so that he may be free of them, or about the attributes that bring him near, so that he may be characterised by them." },
+      { title: "The clause at the end of it", body: "And if he reflects on something outside these divisions, that is outside the bounds of love and is a deficiency in it, because complete love is what absorbs the lover. The map is therefore not a filing system; the claim is that a thought falling outside it is evidence about the state of the one thinking." },
+    ],
+    distinction: ["Two things the fourfold map is", "A test of the state", "A thought outside it indicates a deficiency in the love, which is what the lover's argument concludes.", "A filing system", "A tidy way of sorting subjects, which would make the closing clause pointless."],
+    misreading: "Do not read the exclusion of non-religious thought as disparaging ordinary thinking. Ghazali sets it aside as outside the book's purpose in a single clause, without argument and without criticism.",
+    reflection: "Take the last thing you genuinely turned over in your mind and try to place it in one of the four.",
+    audit: ["Which channel do I use most?", "Which have I never entered?", "Where did my last real reflection fall?", "What does that placement indicate?"],
+    nodes: ["channels", "fikr", "mahabba"],
+    model: spectrum("Four channels", "Two concern the servant and two concern the Lord.", [["My hated attributes", "So that he may be free of them; the business of the Quarter of Perils.", "balance"], ["My beloved attributes", "So that he may be characterised by them; the Quarter of Deliverance.", "support"], ["His acts and creation", "The field this book spends more than half its length in.", "support"], ["His essence and names", "The channel the book fences, and the subject of Chapter 9.", "warning"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "Three questions", formalTitle: "Reflecting on one's own attributes",
+    overview: "The procedure for the first two channels, and it is exact enough to run. Ghazali sorts what is to be examined and then gives three questions to put to each item.",
+    moves: [
+      { title: "Sort what is examined", body: "Each of what is hated and what is beloved divides into the outward, which is acts of obedience and disobedience, and the inward, which is the saving and destroying attributes whose seat is the heart, set out in the two quarters." },
+      { title: "Sort the outward further", body: "Acts of disobedience divide into what belongs to the seven limbs and what is ascribed to the whole body, such as fleeing from battle, disobeying parents, and settling in a forbidden dwelling. The division is given so that nothing falls outside the audit." },
+      { title: "The first two questions", body: "In each of the hated things three matters must be reflected on. First, whether it is hated by God or not, for many a thing's being hated is not apparent and is grasped only by fine consideration. Second, if it is hated, what the way of guarding against it is." },
+      { title: "The third question", body: "Third, whether this hated thing is one he is characterised by now, so that he leaves it; or one he is exposed to in the future, so that he guards against it; or one he committed in the past, so that he needs to make it good. And every one of the beloved things divides the same way." },
+    ],
+    closer: [
+      { title: "Why the first question is not obvious", body: "Ghazali says explicitly that many a thing's being hated does not show, and is grasped only by fine consideration. That is a claim about the need for the operation defined in Chapter 2: the judgement is derived rather than recognised, which is why this is a book about reflection and not a list." },
+      { title: "The relation to repentance", body: "The third question sorts by present, future, and past, which is exactly the tripartition Book 31 gave for repentance. This chapter is where the sorting is performed and that book is where its consequences are worked out; the overlap is deliberate rather than repetitive." },
+    ],
+    distinction: ["Two ways to examine an attribute", "By the three questions", "Whether it is hated, how it is guarded against, and whether it is present, future, or past.", "By noticing it", "Recognising that something is wrong, which answers only the part Ghazali says is often not apparent."],
+    misreading: "Do not run only the third question. Most readers arrive knowing what they did and skip whether it is actually hated and by what route it is guarded against, which are the two that require the operation.",
+    reflection: "Take one attribute and put all three questions to it in order, including the first, which will feel unnecessary and often is not.",
+    audit: ["Have I established that it is hated?", "Do I know the route of guarding?", "Is this present, future, or past?", "Which of the three do I always skip?"],
+    nodes: ["channels", "triage", "tawba"],
+    model: chain("Three questions, one item", "The first is the one most readers assume is answered.", [["Is it hated?", "Often not apparent, and grasped only by fine consideration.", "support"], ["How is it guarded against?", "The route, which is a separate question from the judgement.", "support"], ["Present, future, or past?", "Leave it, guard against it, or make it good.", "balance"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "The descent", formalTitle: "Reflection in the state of fear",
+    overview: "A worked example of the operation applied to a single state, and its form is as instructive as its content: an ordered descent with each stage supplying the next.",
+    moves: [
+      { title: "Set the starting point", body: "If he wants the state of fear, let him look first at his sins, the outward and the inward. The sequence begins with something he actually possesses rather than with an imagined scene." },
+      { title: "Move outward in time", body: "Then let him look at death and its throes, then at what follows it, then at the terror of the call, then at the terror of the gathering when the creatures are assembled on one ground." },
+      { title: "Reach the reckoning", body: "Then at the exactness of the accounting, down to the smallest thing; then at the bridge, its fineness and its sharpness; then at the danger of the matter there, that he is turned to the left or turned to the right." },
+      { title: "Name what the passage is", body: "It is a chain of images in a fixed order, each following the last in time, and it is offered as the way a particular state is produced rather than as a doctrine to assent to." },
+    ],
+    closer: [
+      { title: "Why it starts with his own sins", body: "The whole sequence is anchored at the one point the reflector can verify. Beginning at the terrors would make the passage an exercise of imagination; beginning at what he has actually done makes each subsequent stage a consequence rather than a picture." },
+      { title: "How this differs from Book 33", body: "Book 33 defined fear as the pain of the heart at an expected harm and argued that it is proportioned to knowledge rather than to temperament. This chapter is the practical counterpart: it does not argue that fear follows knowledge, it supplies the knowledge in the order that produces it." },
+    ],
+    distinction: ["Two ways to arrive at a state", "By supplying the knowledge", "The images given in order, each following the last, with the state as the consequence.", "By summoning the feeling", "Attempting the state directly, which Chapter 3's sequence says is not available."],
+    misreading: "Do not read the vividness as the mechanism. What produces the state on Ghazali's account is the knowledge arriving in order, and the same passage read as a set of images to be dwelt on is the mood the book distinguished itself from in Chapter 1.",
+    reflection: "Notice that the passage begins with what you have done and not with what may happen. That order is the instruction.",
+    audit: ["Where does my fear start from?", "Am I supplying knowledge or images?", "Do I skip my own sins and go to the terrors?", "Is the sequence in order?"],
+    nodes: ["khawf", "channels", "fikr"],
+    model: chain("An ordered descent", "Anchored at the one point that can be verified.", [["His own sins", "Outward and inward, which he actually possesses.", "support"], ["Death and after it", "The throes, and the questioning that follows.", "balance"], ["The gathering", "The creatures assembled on one ground.", "balance"], ["The reckoning", "Exact to the smallest thing, and the crossing after it.", "warning"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "The bat and the sun", formalTitle: "The higher station, and why it is closed",
+    overview: "The most striking passage in the book. Ghazali names the highest possible object of reflection, and then spends the chapter arguing that almost nobody should attempt it.",
+    moves: [
+      { title: "Name the station", body: "The second division is reflection on God's majesty, greatness, and might, and in it are two stations. The higher station is reflection on His essence, His attributes, and the meanings of His names." },
+      { title: "State the prohibition", body: "This is among what was forbidden, where it was said: reflect on God's creation and do not reflect on God's essence. And the reason is given rather than left as an instruction: because intellects are bewildered in it." },
+      { title: "Give the bat", body: "None can bear to stretch his sight to it but the truthful, and then they cannot bear the looking to continue. The states of the rest of creation, relative to that majesty, are like the bat's sight relative to the light of the sun: it cannot bear it at all, hides by day, and goes about at night looking at what remains of the sun's light where it has fallen on the earth." },
+      { title: "Give the second image", body: "And the state of the truthful is like a person looking at the sun: he is able to look and cannot bear its continuance, and fears for his sight if he prolongs it, and his snatched glance leaves him dim-sighted and scatters his vision." },
+    ],
+    closer: [
+      { title: "The evidence he offers", body: "The small amount some scholars stated plainly, that God is holy above place and free of regions and directions, and is neither inside the world nor outside it, neither joined to it nor separate from it, bewildered the intellects of whole peoples until they denied it, because they could not bear to hear it. And a group was too weak for less than that, and denied it when told that He is far above having a head, a foot, a hand, an eye, or a limb, and above being a body with a measure and a volume." },
+      { title: "What kind of restriction this is", body: "It is not a claim that the subject is forbidden knowledge. It is a claim about capacity, argued from an observed fact: people presented with the least of it have refused it. The right course, he concludes, is not to expose oneself to these channels, because most intellects cannot bear them." },
+    ],
+    distinction: ["Two kinds of restriction", "By capacity", "The subject is not withheld but the sight cannot bear it, which is what the bat argues.", "By prohibition", "The knowledge is forbidden in itself, which is not the reason Ghazali gives."],
+    misreading: "Do not read the bat as an insult to ordinary people. The bat is not blamed for its eyes, and the same paragraph says that even the truthful cannot sustain the look and are harmed by prolonging it.",
+    reflection: "Notice how much of what you have wanted to think about falls in the channel this chapter closes.",
+    audit: ["Have I been working in the closed channel?", "Was I after knowledge or after a feeling of depth?", "Which of the two images describes me?", "Where is the light I can actually look at?"],
+    nodes: ["essence", "channels", "capacity"],
+    model: spectrum("Three capacities before one light", "The restriction is about the eye, not about the light.", [["The bat", "Cannot bear it at all, and goes about by night in what remains of it.", "warning"], ["The truthful", "Able to look, unable to sustain it, and harmed by prolonging it.", "balance"], ["The light", "Unchanged in all three cases, which is what makes this a claim about capacity.", "support"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "What is nearest", formalTitle: "How to reflect on the creation",
+    overview: "The lower station and the book's largest part. Ghazali opens it with a method, and the method is a deliberate movement toward the ordinary.",
+    moves: [
+      { title: "State the field", body: "Everything in existence other than God is His act and His creation, and every atom of it, of substance and accident and attribute and thing qualified, holds wonders in which His wisdom, power, majesty, and greatness appear." },
+      { title: "Admit that it cannot be finished", body: "Enumerating that is not possible, for if the sea were ink for it the sea would run out before a tenth of a tenth of it ran out. So he will point to summaries, to serve as an example for what is not mentioned." },
+      { title: "Make the first cut", body: "Created things divide into those whose very origin is not known, so that we cannot reflect on them at all, and how many such there are; and those whose origin and generality are known but whose detail is not, so that we can reflect on the detail." },
+      { title: "Make the second cut", body: "And those divide into what we perceive by sight and what we do not. What we do not perceive by sight is like the angels, the jinn, the Throne, and the Footstool, and the field of thought in these is narrow and obscure. So let us turn to what is nearer to understandings, which is what sight perceives." },
+    ],
+    closer: [
+      { title: "Why the movement is toward the ordinary", body: "The chapter had every opportunity to go upward. Instead it eliminates two categories in succession and lands on the heavens and the earth and what is between them, on the stated ground that the field of thought elsewhere is narrow. Difficulty of subject and depth of reflection are separated here, and the whole rest of the book acts on that separation." },
+      { title: "The scale of what follows", body: "More than half of Book 39 is the working out of this instruction, running through the heavens, the earth, water, air, animals, plants, and the human body. This edition presents the method and its principle rather than reproducing that survey, which is a decision recorded in the editorial note." },
+    ],
+    distinction: ["Two ways to choose an object of reflection", "By nearness", "What sight perceives, chosen because the field of thought there is wide.", "By loftiness", "The angels, the Throne, and what is hidden, where Ghazali says the field is narrow and obscure."],
+    misreading: "Do not conclude that the unseen is unimportant. What is said is that thought has little room to move there, which is a statement about the operation defined in Chapter 2 and not about the rank of the subject.",
+    reflection: "Pick the least impressive thing in front of you and try the operation on it. That is the chapter's own instruction.",
+    audit: ["Do I reach for the lofty when I reflect?", "What is nearest to me right now?", "Where does thought actually have room?", "Have I confused difficulty with depth?"],
+    nodes: ["creation", "channels", "nearness"],
+    model: chain("Two cuts, one destination", "Each cut removes a field where thought has no room.", [["Origin unknown", "Cannot be reflected on at all, and there are many such.", "warning"], ["Origin known, detail unknown", "Can be reflected on, and this is where the operation works.", "support"], ["Not seen", "Angels, the Throne; the field of thought is narrow and obscure.", "warning"], ["Seen", "The heavens, the earth, and what is between; nearest to understandings.", "support"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "Knowing the author", formalTitle: "The knots of the summaries",
+    overview: "The closing chapter, and it states plainly what the whole survey of creation has been for, using an analogy any reader can check against his own experience.",
+    moves: [
+      { title: "State what the survey is not", body: "There is in these summaries no reflection on God's essence, which keeps the closing consistent with the fence set in the earlier chapter." },
+      { title: "State what it produces", body: "But there is inevitably gained, from reflection on the creation, knowledge of the Creator and of His greatness, His majesty, and His power. And the more you gather of knowing the wonder of His making, the more complete your knowledge of His majesty becomes." },
+      { title: "Give the analogy", body: "This is as you magnify a learned man because of your knowledge of his learning: you keep coming upon something remarkable of his composition or his verse, and your knowledge of him increases, and your regard and reverence increase with it." },
+      { title: "Push the analogy", body: "Until every word of his words and every remarkable line of his verse raises his place in your heart and calls up reverence for him in you. So contemplate God's creation in this way; and the looking and thinking in it never comes to an end." },
+    ],
+    closer: [
+      { title: "Why the analogy is the right closing", body: "It answers the objection the fence in Chapter 8 invites. If the essence is closed, what is the survey of creation for? The answer is that you come to know an author through the work, and that this is not a lesser substitute for knowing him but the ordinary way it is done." },
+      { title: "The word that ends it", body: "The looking and thinking never come to an end. Ghazali closes an operation he defined with complete precision by saying that it has no terminus, which is why the book has no summary of results and why the last thing it does is hand the reader a method." },
+    ],
+    distinction: ["Two ways to reach knowledge of an author", "Through the work", "Each remarkable thing raising his place, which Ghazali says is the ordinary way.", "By addressing the person", "Which the earlier chapter closed on grounds of capacity."],
+    misreading: "Do not treat the analogy as reducing the matter to appreciation. Its whole force is that regard rises with acquaintance, which is the same claim Book 36 made when it said that love follows knowledge.",
+    reflection: "Recall an author whose regard in you rose line by line. Ghazali is arguing from that and not past it.",
+    audit: ["Has my regard risen with acquaintance?", "What have I actually looked at closely?", "Do I treat this as a substitute?", "Where would I begin, given that it does not end?"],
+    nodes: ["creation", "marifa", "mahabba"],
+    model: pair("Two routes to knowing", "One of them was closed two chapters ago.", [["Through the work", "Acquaintance accumulating, and regard rising with it.", "support"], ["Through the essence", "Closed on grounds of capacity, not of rank.", "warning"]]),
+  }),
+];
+
+export const book39ConceptNodes: ConceptNode[] = [
+  ["fikr", "Reflection", "Two knowledges, a third", "An operation with parts, which is what makes the book instructional rather than hortatory."],
+  ["structure", "Four parts", "Two of them definitions", "Excellence, reality and fruit, channels, and how to reflect on creation."],
+  ["taqlid", "Imitation", "Not knowledge", "Received on another's word without insight into the reality of the matter."],
+  ["marifa", "Knowledge", "The specific fruit", "The only thing reflection produces directly; the state and the acts follow."],
+  ["chain", "The chain", "Thought, knowledge, state, act", "Book 39 supplies the first link and Book 38 the rest."],
+  ["names", "Six names", "One operation", "Three genuine synonyms and three aspects, as with the names of a sword."],
+  ["channels", "Four channels", "Claimed exhaustive", "Two concerning the servant and two concerning the Lord, proved by the lover's argument."],
+  ["triage", "Present, future, past", "Leave, guard, make good", "The third of the three questions put to any attribute."],
+  ["tawba", "Repentance", "The same tripartition", "Book 31 works out what this chapter's third question sorts."],
+  ["khawf", "Fear", "Produced in order", "Book 33 argues that it follows knowledge; this book supplies the knowledge in sequence."],
+  ["essence", "The essence", "The closed channel", "Not forbidden knowledge but a light the sight cannot bear."],
+  ["capacity", "Capacity", "The bat and the sun", "The restriction is about the eye, and the light is unchanged in every case."],
+  ["creation", "The creation", "Where thought has room", "Chosen by nearness rather than loftiness, on the stated ground of room to move."],
+  ["nearness", "Nearness", "The method's direction", "Two cuts eliminating what cannot be thought about, landing on what sight perceives."],
+  ["mahabba", "Love", "Follows knowledge", "The closing analogy is the same claim Book 36 makes about acquaintance."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book39Journeys: Journey[] = [
+  {
+    id: "what-is-reflection", number: "01", question: "What is reflection, actually?", title: "Take the operation apart",
+    description: "Find out whether this is a mood or an operation, get the definition in one line, and watch a single example run all the way through it.",
+    payoff: "You can tell the difference between having derived a conviction and having received one.",
+    image: assetUrl("assets/system/book39-two-knowledges.jpg"), imageAlt: "Two shallow brass dishes on a pale sill, each holding a single seed, with a third empty dish set between and below them.", minutes: 12, color: "#278d91",
+    nodes: [
+      node("operation-or-mood", "Settle what it is", "Parts, or weather", "An operation can be taught; a disposition can only be encouraged.", "The whole book depends on the first answer.", 1, "know"),
+      node("the-definition", "Take the definition", "Two make a third", "Bringing two knowledges present in order to derive a third from them.", "Both must be present at once; dwelling on a subject is not this.", 2, "pattern"),
+      node("the-two-routes", "Separate the routes", "Imitation is not knowledge", "The same conclusion held on another's word, without insight into the matter.", "Not a criticism of those who cannot express their premises.", 2, "diagnose"),
+      node("cannot-say", "Take the concession", "Held, but unstateable", "Many know truly and could not produce the reason if asked.", "Ghazali blames the craft of expression, not the knowing.", 2, "balance"),
+      node("six-names", "Sort the six names", "The sword", "Three synonyms and three aspects of one operation.", "There are not six practices to look for.", 4, "clear"),
+    ],
+  },
+  {
+    id: "why-it-comes-first", number: "02", question: "Why would thought come first?", title: "Follow the chain to the act",
+    description: "Watch Ghazali narrow the fruit of reflection to one thing, then follow the sequence that makes thought the beginning, and see how it completes the book before it.",
+    payoff: "You learn what can actually be aimed at, and why aiming at anything else stalls.",
+    image: assetUrl("assets/system/book39-the-key.jpg"), imageAlt: "A single iron key resting on a closed ledger at the end of a row of four plain doors, only the first ajar.", minutes: 11, color: "#bf7a35",
+    nodes: [
+      node("narrow-the-fruit", "Narrow the fruit", "Knowledge, nothing else", "States and acts are consequences rather than products.", "This is what stops reflection being a technique for feeling.", 3, "order"),
+      node("the-sequence", "Take the sequence", "Four links", "Act follows state, state follows knowledge, knowledge follows thought.", "Book 38 warned that knowledge often fails to govern; hold both.", 3, "pattern"),
+      node("the-key", "Draw the conclusion", "Beginning and key", "A claim about order rather than about worth.", "It explains the book's position this late in the quarter.", 3, "steady"),
+      node("completes-38", "Join it to Book 38", "The missing link", "Vigilance was defined as a state fruited by a knowledge.", "The two books each supply what the other assumes.", 3, "know"),
+      node("what-stalls", "Find where you stall", "Knowledge, not feeling", "The question becomes which knowledge is missing.", "Trying to reach a state directly is the common error.", 3, "diagnose"),
+    ],
+  },
+  {
+    id: "where-does-it-run", number: "03", question: "Where is thought allowed to run?", title: "Map the four channels",
+    description: "Take the map Ghazali claims is exhaustive, follow the argument he proves it with, and get the three questions that make the first two channels workable.",
+    payoff: "You get a placement test for your own thinking and a procedure you can actually run on one attribute.",
+    image: assetUrl("assets/system/book39-four-channels.jpg"), imageAlt: "A stone water-course splitting into four level channels of equal width, cut into pale flagstones.", minutes: 13, color: "#c25f50",
+    nodes: [
+      node("the-boundary", "Set the boundary", "The transaction", "Religion here means what passes between the servant and the Lord.", "Non-religious thought is set aside without criticism.", 5, "order"),
+      node("the-four", "Take the four", "Servant and Lord", "His hated attributes, his beloved ones, God's acts, God's essence.", "Claimed exhaustive, and the claim is argued.", 5, "pattern"),
+      node("lovers-proof", "Follow the proof", "What a lover thinks about", "Beauty, fine acts, what repels, what endears.", "A thought outside the four indicates a deficiency in the love.", 5, "witness"),
+      node("first-question", "Ask the first", "Is it even hated?", "Many a thing's being hated is not apparent and takes fine consideration.", "This is the question readers assume is answered.", 6, "know"),
+      node("the-route", "Ask the second", "By what route", "Knowing something is wrong is not knowing how it is guarded against.", "A separate question from the judgement.", 6, "clear"),
+      node("triage", "Ask the third", "Now, ahead, or behind", "Leave it, guard against it, or make it good.", "The same tripartition Book 31 works out for repentance.", 6, "balance"),
+    ],
+  },
+  {
+    id: "the-closed-channel", number: "04", question: "Why can I not think about that?", title: "Meet the bat and the sun",
+    description: "Enter the highest channel, find that Ghazali closes it, and follow the reason he gives — which is about the eye rather than about the light.",
+    payoff: "You get a restriction with an argument attached, and a clear account of what it does and does not forbid.",
+    image: assetUrl("assets/system/book39-bat-and-sun.jpg"), imageAlt: "A bright wall at midday with one small dark aperture, a slant of sunlight falling across the stone below it.", minutes: 11, color: "#586fa8",
+    nodes: [
+      node("name-the-station", "Name the higher station", "Essence and names", "The highest possible object of reflection, named before it is closed.", "Named rather than omitted, which is the chapter's method.", 8, "know"),
+      node("the-reason", "Take the reason", "Intellects are bewildered", "The prohibition arrives with its ground stated.", "Not a claim that the knowledge is forbidden.", 8, "order"),
+      node("the-bat", "Take the bat", "Cannot bear it at all", "It hides by day and goes about in what remains of the light.", "The bat is not blamed for its eyes.", 8, "witness"),
+      node("even-the-truthful", "Note who else", "Cannot sustain it", "The truthful can look and are harmed by prolonging the look.", "The restriction reaches the highest rank too.", 8, "balance"),
+      node("the-evidence", "Weigh the evidence", "People refused the least of it", "The mildest formulations bewildered whole peoples until they denied them.", "An observed fact, offered as the argument.", 8, "diagnose"),
+    ],
+  },
+  {
+    id: "where-do-i-start", number: "05", question: "So where do I actually start?", title: "Go toward what is nearest",
+    description: "Follow two cuts that eliminate most of existence as an object of thought, land where Ghazali lands, and take the analogy that says what the whole survey is for.",
+    payoff: "You leave with a starting point that is deliberately unimpressive, and a reason it is the right one.",
+    image: assetUrl("assets/system/book39-nearest-thing.jpg"), imageAlt: "A single unremarkable pebble on a wide swept stone floor, lit plainly from above, with nothing else in the frame.", minutes: 12, color: "#a97837",
+    nodes: [
+      node("admit-the-scale", "Admit the scale", "The sea would run out", "Enumeration is impossible, so summaries stand as examples.", "The admission is what licenses starting anywhere.", 9, "receive"),
+      node("first-cut", "Make the first cut", "Origin unknown", "What we do not know the origin of cannot be reflected on at all.", "The operation needs something to hold as a premise.", 9, "clear"),
+      node("second-cut", "Make the second", "Not seen", "Angels and the Throne, where the field of thought is narrow and obscure.", "A statement about room to move, not about rank.", 9, "clear"),
+      node("the-nearest", "Land on the near", "What sight perceives", "The heavens, the earth, and what is between them.", "Difficulty of subject and depth of reflection are separated here.", 9, "steady"),
+      node("the-author", "Take the analogy", "Knowing a writer", "Every remarkable line raises his place, and regard rises with acquaintance.", "The ordinary way, not a lesser substitute.", 10, "know"),
+      node("no-terminus", "Note the ending", "It never ends", "A precisely defined operation closed with the statement that it has no terminus.", "Which is why the book ends in a method and not a summary.", 10, "witness"),
+    ],
+  },
+];
+
+export const book39Movements: TaxonomyGroup[] = [
+  ["fadl", "1. The excellence of reflection", "The testimony, and what kind of thing reflection is.", [1]],
+  ["haqiqa", "2. The reality of reflection and its fruit", "Two knowledges making a third, the six names, and the chain to the act.", [2, 3, 4]],
+  ["majari", "3. The channels of reflection", "Four channels claimed exhaustive, the three questions, and fear as a worked example.", [5, 6, 7]],
+  ["khalq", "4. Reflecting on the creation", "The closed channel, the method of nearness, and what the survey is for.", [8, 9, 10]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50", "#586fa8"][index % 4] })) as TaxonomyGroup[];
+
+export const book39Instrument: Instrument = {
+  title: "Two knowledges, or someone's word",
+  note: "Ghazali defines reflection as bringing two knowledges present in the heart so that a third is derived from them, and says that the same conclusion received on another's word is imitation and is not knowledge. Take one conviction you actually hold about religion — not one you think you should hold — and answer how you hold it and which channel it belongs to.",
+  items: [
+    {
+      id: "conviction", label: "One conviction you hold", lede: "Something you would act on, stated as a claim",
+      note: "Both questions are Ghazali's own. The second is his fourfold map of the channels along which thought runs, which he claims is exhaustive and proves with the argument about what a lover thinks about. One of the four he closes, and that closing overrides the other reading.",
+      axes: [
+        {
+          id: "how", kicker: "The reality of reflection", question: "How do you hold this conviction?",
+          options: [
+            { id: "premises", label: "I can name the two knowledges under it", note: "The second route: a third knowledge derived from two you already hold." },
+            { id: "unstateable", label: "I hold it truly but could not say why", note: "Ghazali names this case explicitly and does not treat it as a failure." },
+            { id: "heard", label: "I heard it and believed it", note: "The first route: received on another's word without insight into the reality of the matter." },
+            { id: "notheld", label: "I say it more than I hold it", note: "The honest answer for a great many stated convictions." },
+          ],
+        },
+        {
+          id: "channel", kicker: "The channels", question: "Which of the four channels is it in?",
+          options: [
+            { id: "hated", label: "An attribute of mine that is disliked", note: "The first channel: examined so that he may be free of it." },
+            { id: "beloved", label: "An attribute of mine that is wanted", note: "The second: examined so that he may come to be characterised by it." },
+            { id: "acts", label: "His acts, His creation, what is made", note: "The third, and where more than half of Book 39 is spent." },
+            { id: "essence", label: "His essence, His attributes, His names", note: "The fourth, and the one Ghazali closes to almost everyone." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "*|essence", name: "This is the closed channel", role: "warning", chapterId: 8, body: "Whatever route you hold it by, this conviction sits in the one channel Ghazali fences. His words are that intellects are bewildered in it, that none can bear to stretch his sight to it but the truthful, and that even they cannot bear the looking to continue.", action: "Read the two images before deciding what to do. The bat is not blamed for its eyes, and the restriction is about capacity rather than about forbidden knowledge — which means the remedy is not to try harder here but to work in the third channel, where the closing chapter says knowledge of the Maker is gained anyway." },
+        { key: "heard|*", name: "Ghazali's word for this is imitation", role: "warning", chapterId: 2, body: "You received the conclusion on another's word and believed it without insight into the reality of the matter. He is unusually blunt about this case: it is called imitation and it is not called knowledge, even though a person may lean in his action toward it exactly as if it were.", action: "Do not discard the conviction — try to supply its two knowledges. His own worked example is the model: what is more lasting is more worthy of preference, and the hereafter is more lasting. Find the general knowledge and the particular one that your conclusion would follow from." },
+        { key: "notheld|*", name: "Before the operation begins", role: "balance", chapterId: 1, body: "A conviction you state more than you hold is not yet in the book's subject matter at all. Reflection is defined as bringing two knowledges present, and there is nothing here yet to bring.", action: "This is a more useful position than imitation, because nothing false is being carried. Start where Chapter 9 starts, at what is nearest rather than at what is most impressive, and let the third knowledge be one you arrive at rather than one you are trying to reach." },
+        { key: "unstateable|*", name: "Ghazali expects this", role: "support", chapterId: 2, body: "You hold it truly and cannot produce the reason. He names this case in the same passage as the definition: how many a person knows truly that the hereafter is more worthy of preference and, if asked the cause of his knowing, could not produce it — although his knowledge came from nowhere but the two prior knowledges.", action: "He attributes the silence to little practice in the craft of expression rather than to a defect in the knowing, so the conviction stands. If you want the premises anyway, work backward: what would have to be true for this to follow, and do you in fact hold it?" },
+        { key: "premises|acts", name: "The channel the book spends itself on", role: "support", chapterId: 9, body: "You hold it by derivation and it concerns His acts and what is made. This is the third channel, and more than half of Book 39 is the working out of it, which is where Ghazali sends the reader after closing the fourth.", action: "Take the method rather than the survey. Two cuts remove what has no origin you know and what sight does not reach, and what remains is what is nearest to understandings. His instruction is to start at the unimpressive thing in front of you, and his closing analogy says why: an author is known through the work, line by line." },
+        { key: "premises|hated", name: "Run the three questions", role: "balance", chapterId: 6, body: "You hold it by derivation and it concerns an attribute of yours that is disliked. Ghazali gives three questions for exactly this, and most readers arrive having answered only the last of them.", action: "Ask all three in his order. Whether it is actually hated, which he says is often not apparent and takes fine consideration; then by what route it is guarded against, which is a separate question; then whether it is present, coming, or past — leave it, guard against it, or make it good." },
+        { key: "premises|beloved", name: "The same three, the other way", role: "support", chapterId: 6, body: "You hold it by derivation and it concerns an attribute you want to be characterised by. Ghazali says explicitly that every one of the beloved things divides into the same divisions as the hated ones, so the procedure is identical and the direction is reversed.", action: "Ask whether it is in fact beloved to God rather than merely admired, which is the first question and the one that gets skipped; then the route by which it is acquired; then whether you have it now, are approaching it, or once had it. The third answer is the one that decides what to do next." },
+        { key: "*|*", name: "Read the two together", role: "balance", chapterId: 5, body: "A route by which the conviction is held, and a channel it belongs to. Ghazali's map claims to be exhaustive, and his argument for that is worth more than the map itself: a thought falling outside the four indicates something about the state of the one thinking.", action: "Take the route as the diagnosis and the channel as the address. The chapter that treats your channel is where the work is, and Chapter 2 is where you find out whether what you are carrying is knowledge or someone else's word." },
+      ],
+    },
+  ],
+};
+
+export const book39Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 39 was read and used to establish the definition of reflection, its fruit, the fourfold map of its channels, and the method for reflecting on the creation.", url: "https://shamela.ws/book/9472/1582" },
+  { label: "The reality of reflection", note: "The passage defining reflection as bringing two knowledges present in order to derive a third, with the worked example and the distinction from imitation.", url: "https://shamela.ws/book/9472/1584" },
+  { label: "The fruit of reflection", note: "The passage narrowing the specific fruit to knowledge and giving the sequence by which act follows state, state follows knowledge, and knowledge follows thought.", url: "https://shamela.ws/book/9472/1585" },
+  { label: "The channels of reflection", note: "The passage dividing thought into four channels, proving the division exhaustive by the argument about what a lover thinks about.", url: "https://shamela.ws/book/9472/1586" },
+  { label: "The higher station", note: "The passage closing reflection on the divine essence, with the images of the bat and of a person looking at the sun.", url: "https://shamela.ws/book/9472/1593" },
+  { label: "How to reflect on the creation", note: "The passage making the two cuts that eliminate what cannot be reflected on and directing thought toward what is nearest to understandings.", url: "https://shamela.ws/book/9472/1594" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 39 as the ninth book of the Quarter of Deliverance and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book39: SystemBook = {
+  id: 39,
+  title: "Reflection",
+  shortTitle: "Reflection",
+  defaultJourneyId: "what-is-reflection",
+  chapters: book39Chapters,
+  conceptNodes: book39ConceptNodes,
+  journeys: book39Journeys,
+  sources: book39Sources,
+  taxonomy: {
+    title: "Four source movements",
+    note: "Ghazali's own four parts. The ten reading sections are grouped under them, and the fourth part is by far the longest in the Arabic — most of it is a survey of the created world, which this edition presents through its method rather than by reproducing it.",
+    groups: book39Movements,
+  },
+  instrument: book39Instrument,
+  editorialNote: "The five journeys, ten reading sections, visual models, and diagnostic are editorial learning aids. The sections follow Ghazali's four parts in his order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. One editorial decision should be stated plainly: more than half of Book 39 in the Arabic is a sustained survey of the created world — the heavens, the earth, water and air, animals and plants, and the human body — offered by Ghazali himself as summaries standing for what cannot be enumerated. This edition presents the method that governs that survey and the principle he closes it with, rather than reproducing the survey, and a reader who wants it should go to the text. Ghazali's closing of reflection on the divine essence is given here as he gives it, with the reason he attaches: it is a claim about the capacity of intellects and not about forbidden knowledge, and the same passage says that even the truthful cannot sustain the look. The diagnostic applies his own definition and his own fourfold map to a conviction the reader supplies and cannot pronounce on anyone's state.",
+};
