@@ -31,11 +31,12 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **twenty-one books**: two complete quarters — the Quarter of Perils, books 21 to 30, and the Quarter of Deliverance, books 31 to 40 — and the Quarter of Worship has been opened at Book 1.
+The System edition currently carries **twenty-two books**: two complete quarters — the Quarter of Perils, books 21 to 30, and the Quarter of Deliverance, books 31 to 40 — and the Quarter of Worship has been opened at Book 1.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
 | 1 | Knowledge | 16 | 5 | What is obligatory on you now |
+| 2 | The Principles of the Creed | 13 | 5 | How much argument does this call for? |
 | 21 | The Wonders of the Heart | 15 | 4 | Five obstructions |
 | 22 | Disciplining the Soul and Refining Character | 11 | 5 | Four mirrors |
 | 23 | Breaking the Two Desires | 7 | 4 | Four measures |

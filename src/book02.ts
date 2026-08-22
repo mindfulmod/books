@@ -1,0 +1,454 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const fasl = (id: number) => (id === 1 ? "the first section, the creed itself" : id <= 8 ? "the second section, on graduation and the degrees of belief" : id <= 11 ? "the third section, on the flashes of the evidences" : "the fourth section, on faith and submission");
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 2, ${fasl(seed.id)}, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book02Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "The statement", formalTitle: "The exposition of the creed in the two words of the testimony",
+    overview: "The book opens with a creed set out in full, and the striking thing is what Ghazali does with it afterwards: three of the four sections are about how it is to be taught rather than about what it says.",
+    moves: [
+      { title: "Give the statement", body: "The first section is a continuous exposition of the Sunni creed, organised around the two words of the testimony, which are one of the foundations of Islam. It is written to be read as a whole rather than argued through." },
+      { title: "Note the absence of proofs", body: "The section carries almost no demonstration. The evidences are held back for the third section, and the separation is deliberate: a creed and the arguments for a creed are treated as two different objects with two different audiences." },
+      { title: "Announce the four sections", body: "The exposition; the way of graduating toward guidance and the ordering of the degrees of belief; the flashes of the evidences for the creed just expounded; and faith and submission and what lies between them." },
+      { title: "Note the proportion", body: "The creed itself is the shortest of the four. Most of the book is about pedagogy, about how much argument to give to whom, and about a lexical dispute — which makes this a book about handling belief rather than a book of belief." },
+    ],
+    closer: [
+      { title: "Why the separation matters", body: "Placing the evidences in a separate section makes it possible to give one without the other, which is the whole subject of the second section. A creed with its proofs woven in could not be administered in doses, and doses are exactly what Ghazali is about to prescribe." },
+      { title: "What this book is for", body: "It follows Book 1, which argued that what is individually obligatory in belief is the two testimonies and their meaning rather than the demonstrations. This book supplies that content and then spends most of its length policing the boundary Book 1 drew." },
+    ],
+    distinction: ["Two ways to present a creed", "With the proofs separated", "The statement given whole and the evidences held for a later section and a different reader.", "With the proofs woven in", "A single document, which could not then be given in the graduated doses the next section requires."],
+    misreading: "Do not read the creed section as the book. It is the shortest of the four, and the three that follow are about who should be given what, and when.",
+    reflection: "Notice that a book called the principles of belief spends most of its length on how belief is handled rather than on what it contains.",
+    audit: ["What did I expect this book to be?", "Why are the proofs separated?", "Whom is each section for?", "What does the proportion claim?"],
+    nodes: ["aqida", "structure", "shahada"],
+    model: chain("Four sections", "The creed is the shortest of them.", [["The creed", "Set out whole, with almost no demonstration in it.", "support"], ["Graduation", "Who should be given what, and in what order.", "support"], ["The evidences", "Four pillars of ten principles each, held back for this section.", "balance"], ["Faith and submission", "A lexical dispute resolved by separating three questions.", "balance"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "Memorise first", formalTitle: "The order of the degrees of belief",
+    overview: "The second section opens with a developmental sequence, and its first step is the one modern readers find hardest to accept.",
+    moves: [
+      { title: "Give the instruction", body: "What we have set down in the exposition of the creed should be presented to the child at the beginning of his growth, so that he memorises it by rote." },
+      { title: "Give what follows", body: "Then its meaning does not cease to unfold to him in his maturity, little by little. So his beginning is memorising, then understanding, then belief and certainty and assent to it." },
+      { title: "State the claim", body: "And that occurs in the child without proof. The sequence is offered as a description of what actually happens rather than as a concession to immaturity." },
+      { title: "Call it a grace", body: "It is of God's grace upon the human heart that He expanded it, at the beginning of its growth, for faith, without need of argument and proof." },
+    ],
+    closer: [
+      { title: "Why the order is memorise first", body: "Understanding is placed second, not first, which inverts the order most teaching assumes. The thing memorised is a form that meaning can later fill, and Ghazali's phrase is that the meaning keeps unfolding — which requires that something already be there for it to unfold within." },
+      { title: "The observation he adds", body: "How could that be denied, when the beginnings of all the beliefs of the common people are pure instruction and sheer imitation? The claim is empirical: whatever anyone thinks belief ought to rest on, this is in fact how everyone's began." },
+    ],
+    distinction: ["Two orders of teaching", "Memorise, then understand", "A form held first, into which meaning unfolds over years.", "Understand, then hold", "Comprehension as the entry condition, which the chapter says describes nobody's actual beginning."],
+    misreading: "Do not read this as endorsing unexamined belief permanently. The next chapter says plainly that belief arising from imitation alone is not free of a kind of weakness, and prescribes what to do about it.",
+    reflection: "Trace your own earliest beliefs and ask honestly whether any of them began with a proof.",
+    audit: ["How did my belief actually begin?", "Do I require understanding before holding?", "What have I memorised that later unfolded?", "Is my account of belief empirical or ideal?"],
+    nodes: ["talqin", "aqida", "taqlid"],
+    model: chain("Four stages", "The order is not the one teaching usually assumes.", [["Memorising", "By rote, at the beginning of growth.", "support"], ["Understanding", "Unfolding little by little as he matures.", "support"], ["Belief and certainty", "Arrived at without proof, which is stated as a grace.", "support"], ["Assent", "The settled condition the sequence produces.", "support"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "A specific weakness", formalTitle: "What imitation leaves undone",
+    overview: "Ghazali does not defend imitation as sufficient. He names its defect precisely, and the precision is what makes the remedy in the next chapter follow.",
+    moves: [
+      { title: "Concede the weakness", body: "Yes — the belief resulting from mere imitation is not free of a kind of weakness at the beginning." },
+      { title: "Say exactly what the weakness is", body: "In the sense that it admits of removal by its contrary, if that were cast at him. The defect is not that the belief is false, or shallow, or unfelt; it is that it can be dislodged." },
+      { title: "State the task", body: "So it must be strengthened and established in the soul of the child and of the common man, until it takes root and does not waver." },
+      { title: "Note what the diagnosis implies", body: "If the defect is dislodgeability, then the remedy is whatever produces rootedness. It does not follow that the remedy is argument, and the next chapter says outright that it is not." },
+    ],
+    closer: [
+      { title: "Why naming the defect precisely matters", body: "A vague charge that imitation is inadequate invites the answer that it should be replaced by demonstration. A specific charge that it is dislodgeable invites the question of what makes a belief hard to dislodge, and that is an empirical question with a surprising answer." },
+      { title: "The condition it attaches to", body: "The removal happens if the contrary is cast at him. So the weakness is latent and becomes relevant only on contact with a challenge, which is why the following chapters make the whole prescription depend on whether such contact has occurred." },
+    ],
+    distinction: ["Two things could be wrong with imitation", "It can be dislodged", "The belief is true and held and can be removed by its contrary, which is Ghazali's charge.", "It is not really belief", "A stronger charge that would require replacement rather than strengthening."],
+    misreading: "Do not read the concession as agreeing that imitation must give way to proof. Ghazali concedes a weakness and then names four remedies for it, none of which is proof.",
+    reflection: "Ask what would actually dislodge a belief of yours, and whether an argument is the likeliest candidate.",
+    audit: ["Which of my beliefs could be dislodged?", "By what, specifically?", "Have I assumed the remedy is argument?", "Has the contrary actually been cast at me?"],
+    nodes: ["taqlid", "rusukh", "aqida"],
+    model: pair("The defect, precisely", "The remedy follows from which one it is.", [["Dislodgeable", "True and held, and removable by its contrary if cast at him.", "balance"], ["Absent", "Not belief at all, which is not what Ghazali says.", "warning"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "Four strengtheners", formalTitle: "How belief is made to take root",
+    overview: "The most counter-intuitive sentence in the book, and then four remedies that no reader would guess from the diagnosis.",
+    moves: [
+      { title: "Rule out the obvious remedy", body: "And the way to strengthen it and establish it is not that he be taught the craft of dialectic and theology." },
+      { title: "Give the first two", body: "Rather he should occupy himself with reciting the Quran and its exegesis, and with reading the reports and their meanings." },
+      { title: "Give the third", body: "And busy himself with the duties of the acts of worship, so that his belief keeps increasing in rootedness by the lights of those acts and their offices." },
+      { title: "Give the fourth", body: "And by what passes into him from witnessing the righteous and sitting with them — their bearing, their manner, and what is heard from them." },
+    ],
+    closer: [
+      { title: "Why four causes and not an argument", body: "The diagnosis was that the belief is dislodgeable. Rootedness is a matter of how many things a belief is attached to, and each of the four remedies attaches it to something further: a text, a report, a practice, and a company. An argument attaches it to one thing only, and to the weakest kind of thing, since an argument can be met by another argument." },
+      { title: "The proofs that do reach him", body: "Ghazali does not exclude proof entirely from the picture — his phrase is that belief keeps taking root by the proofs of the Quran that strike his hearing and the testimonies of the reports that come to him. What is excluded is the craft: the technique of dialectic pursued as a discipline." },
+    ],
+    distinction: ["Two ways to strengthen a belief", "Attach it to more", "A text, a practice, a report, a company — four independent holds.", "Prove it", "One hold, of the kind that another argument can take away."],
+    misreading: "Do not read the exclusion of dialectic as anti-rational. Ghazali wrote works of theology himself and prescribes them by name in the next chapter, under conditions.",
+    reflection: "Ask which of the four your own belief is actually attached to, and how many.",
+    audit: ["How many holds does my belief have?", "Which of the four do I lack?", "Have I mistaken the craft for the proofs?", "Whose company is doing this work for me?"],
+    nodes: ["rusukh", "kalam", "suhba"],
+    model: spectrum("Four holds", "None of them is an argument, and none can be argued away.", [["The Quran", "Its recitation and its exegesis, and the proofs that strike his hearing.", "support"], ["The reports", "Their reading and their meanings.", "support"], ["The acts", "The offices of worship, and the light that comes from them.", "support"], ["The company", "Witnessing the righteous, sitting with them, their bearing and manner.", "support"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "Titrate the dose", formalTitle: "The graduated measure of argument",
+    overview: "The heart of the book. Ghazali treats theological argument as a drug, doubt as a symptom, and prescribes explicitly by indication and dose.",
+    moves: [
+      { title: "The first dose, and its indication", body: "There is no harm in their being taught the measure deposited in the Jerusalem Epistle, so that it may serve to repel the effect of the innovators' disputations if those reach them. It is a brief measure, and it is included in this book because it is brief." },
+      { title: "The escalation, and its trigger", body: "If there is intelligence in him, and by his intelligence he is alerted to a place where a question arises, or a doubt stirs in his soul — then the feared malady has appeared and the disease has shown itself. There is no harm in his ascending to the measure in the book of Moderation in Belief, which is about fifty leaves." },
+      { title: "The stopping rule", body: "If that convinces him, stop there." },
+      { title: "The failure case", body: "And if it does not convince him, the malady has become chronic and the disease dominant and the sickness has spread. Let the physician be gentle with him as far as he is able, and await God's decree in him — until the truth is disclosed to him by an alerting from God, or he continues in doubt to what was decreed for him." },
+    ],
+    closer: [
+      { title: "What the medical frame commits him to", body: "If argument is a drug, then it is indicated by a symptom and not by a level of education, its dose is bounded, and giving it to someone with no symptom is not neutral. Every one of those follows, and Ghazali accepts all of them, including the last." },
+      { title: "The gentleness at the end", body: "The failure case does not end in condemnation. The instruction is that the physician be gentle as far as he is able and wait, and the two outcomes named are an alerting from God or a continuing doubt — neither of which is in the physician's hands. It is the most restrained thing in the book." },
+    ],
+    distinction: ["Two ways to decide how much argument to give", "By symptom", "A question has actually arisen, and the dose is matched to it and bounded.", "By capacity", "Give more to those who can take more, which the medical frame rules out entirely."],
+    misreading: "Do not read the escalation as reluctant. Ghazali names two of his own works as the two doses, so the prescription is confident about what argument can do within its indication.",
+    reflection: "Ask whether the argument you are reaching for is treating a symptom that has actually appeared.",
+    audit: ["Has a question actually arisen?", "In whom — me, or someone else?", "Am I dosing by symptom or by capacity?", "Where would I stop?"],
+    nodes: ["kalam", "tadrij", "shubha"],
+    model: chain("Three doses and a stop", "Each step is triggered by a symptom, not by a level.", [["The creed", "The default, and what almost everyone is left with.", "support"], ["Brief evidences", "Indicated where innovation is spreading and disturbance is feared.", "balance"], ["Fifty leaves", "Indicated when a doubt has actually stirred in him.", "balance"], ["Stop", "If that convinces him. And if not, gentleness and waiting.", "warning"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "Past the dose", formalTitle: "What lies beyond the measure that benefits",
+    overview: "Having prescribed two of his own books, Ghazali describes what lies past them, and the passage is the most openly contemptuous in the book.",
+    moves: [
+      { title: "Set the boundary", body: "The measure that book contains, and its kind among the writings, is what benefit is hoped from. What lies outside it falls into two divisions." },
+      { title: "The first division", body: "Inquiry into matters that are not the principles of belief at all — and he gives the examples: inquiry into reliances, into beings, into perceptions." },
+      { title: "Give the specimen", body: "And plunging into whether vision has a contrary called prevention or blindness; and if it has, whether that is one prevention covering everything not seen, or whether a prevention is established for each visible thing according to its number." },
+      { title: "Name it", body: "And other such nonsense that misleads. The second division is a further establishing of the same evidences within the principles, with more questions and more answers — which he calls an exhaustiveness that increases nothing but error and ignorance." },
+    ],
+    closer: [
+      { title: "Why he reproduces the example in full", body: "He could have referred to scholastic minutiae in general. Instead he sets out one question in its actual technical form, at length, and lets it convict itself. A reader who has followed the sentence to its end has already had the experience the argument is about." },
+      { title: "How this connects to Book 1", body: "Book 1 placed some genuinely good knowledge in a third class: praised up to the measure of sufficiency and not beyond, on the analogy of giving that becomes extravagance. This chapter is that class applied to theology, by an author who worked in it." },
+    ],
+    distinction: ["Two ways to go past the dose", "Outside the principles", "Questions that are not about belief at all, of which the example is given in full.", "Deeper inside them", "More proofs of the same points, which he calls an exhaustiveness that increases only error."],
+    misreading: "Do not take the contempt as covering theology as such. The chapter sits immediately after one prescribing two theological works by name, and the charge is about measure and about subject, not about the discipline.",
+    reflection: "Read the specimen question slowly to the end. That experience is the chapter's argument.",
+    audit: ["Where does my inquiry stop being about the thing?", "Am I proving what is already settled?", "Have I confused thoroughness with depth?", "Would I recognise the boundary?"],
+    nodes: ["kalam", "measure", "shubha"],
+    model: pair("Two kinds of excess", "One leaves the subject and one drowns it.", [["Outside the principles", "Reliances, beings, perceptions, and the contrary of vision.", "warning"], ["Deeper within them", "More questions and answers on settled points; exhaustiveness that misleads.", "warning"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "Five reticences", formalTitle: "Why the prophets and the truthful withheld things",
+    overview: "A remarkable passage in which Ghazali sorts the reasons anything true might be left unsaid, and he is describing his own practice as much as anyone's.",
+    moves: [
+      { title: "The first", body: "That the thing is in itself subtle, and most understandings fail at grasping it, so that its grasp is confined to the elect — and it is upon them not to divulge it to those who are not its people." },
+      { title: "The second", body: "That it is understandable in itself, and understanding does not fail at it, but mentioning it harms most people. The reason for silence is the effect rather than the difficulty." },
+      { title: "The third", body: "That it is such that if stated plainly it would be understood and there would be no harm in it — but it is expressed obliquely, by way of metaphor and symbol, so that its impact may be greater." },
+      { title: "The fourth", body: "That a person grasps the thing in summary and then grasps it in detail, by verification and by taste, so that it becomes a state clothing him. The two knowledges then differ, and the second is not conveyable by stating the first." },
+    ],
+    closer: [
+      { title: "Why the third is the interesting one", body: "It is the only one where nothing is being withheld. The content could be said plainly and harmlessly, and is not, because the indirect form lands harder. That is a claim about how understanding works rather than about who deserves what." },
+      { title: "What the fourth explains", body: "It accounts for a pattern the whole Ihya depends on: that a thing can be told to someone and be true and be received and still not have been conveyed. The difference between a summary and a taste is not a difference in the content, and no amount of clearer statement closes it." },
+    ],
+    distinction: ["Two reasons a true thing goes unsaid", "It would not be understood", "The first two: too subtle, or harmful to most, which are about the hearer.", "It would not be conveyed", "The third and fourth: the plain form lands less, and a tasted knowledge is not transmissible as a summary."],
+    misreading: "Do not read the list as a defence of esotericism in general. Two of the five concern the form of expression rather than the withholding of content, and one concerns what statement cannot transmit at all.",
+    reflection: "Recall something you understood in summary for years and then understood differently. Nothing about the words had changed.",
+    audit: ["Which of the five have I met?", "Have I heard something true and not received it?", "What do I hold in summary only?", "Am I using this to justify silence?"],
+    nodes: ["kitman", "dhawq", "aqida"],
+    model: spectrum("Four of the five", "The first two concern the hearer; the last two concern conveying.", [["Too subtle", "Most understandings fail; confined to those who are its people.", "balance"], ["Harmful to say", "Understandable, and mentioning it damages most people.", "warning"], ["Said obliquely", "Could be plain and harmless; the indirect form lands harder.", "support"], ["Held in summary", "Detail comes by verification and taste, and is not conveyable as a statement.", "support"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "No hidden doctrine", formalTitle: "That the inward agrees with the outward",
+    overview: "The conclusion Ghazali draws from the five reticences, and it forecloses the reading they most invite.",
+    moves: [
+      { title: "State the conclusion", body: "Many things have become disclosed by these five divisions — and the heading under which he gathers them is that the inward agrees with the outward and is not at variance with it." },
+      { title: "Say what that rules out", body: "The five explain why something might be unsaid, said obliquely, or held back from most people. None of them permits an inward doctrine that contradicts the outward one." },
+      { title: "Apply it to the common people", body: "So we see fit to restrict all the common people to the exposition of the creed we have set down, and that they be burdened with nothing more in the first degree." },
+      { title: "Give the exception", body: "Except where there is fear of disturbance because of the spread of innovation — in which case he ascends, in the second degree, to a creed containing brief flashes of the evidences, without depth." },
+    ],
+    closer: [
+      { title: "Why the heading is necessary", body: "A chapter arguing that the truthful withhold things is one sentence away from a doctrine of two teachings. Ghazali writes that sentence himself and makes it the heading, which is a stronger move than leaving the point implicit." },
+      { title: "The exception's condition", body: "The escalation is triggered by the spread of innovation and the fear of disturbance — a condition of the environment rather than of the person. That is a different trigger from the one in the previous chapter, where a doubt had actually stirred in the individual, and the two are meant to be distinguished." },
+    ],
+    distinction: ["Two things reticence could mean", "The same doctrine, unsaid", "Withheld, deferred, or expressed obliquely, with no second teaching behind it.", "A different doctrine", "An inward teaching at variance with the outward, which the heading of this passage denies."],
+    misreading: "Do not detach the five reticences from this heading. Ghazali placed the denial of a contrary inward doctrine directly after them, and reading the five without it inverts the passage.",
+    reflection: "Notice how quickly a doctrine of degrees becomes a doctrine of two truths, and what stops it here.",
+    audit: ["Have I assumed a hidden teaching?", "What triggers escalation, on his account?", "Is my trigger the person or the environment?", "Does my inward agree with my outward?"],
+    nodes: ["kitman", "aqida", "tadrij"],
+    model: pair("What the five do and do not license", "The heading is the guard.", [["Withholding", "Unsaid, deferred, or put obliquely, with one doctrine throughout.", "support"], ["Contradicting", "An inward teaching at variance with the outward, which is denied here.", "warning"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "Forty principles", formalTitle: "The architecture of the evidences",
+    overview: "The third section, and its architecture is exact: four pillars, each turning on ten principles, covering essence, attributes, acts, and what is known only by report.",
+    moves: [
+      { title: "The first pillar", body: "Knowledge of God's essence, turning on ten principles: knowledge of His existence, His pre-eternity, His everlastingness; that He is not a substance, nor a body, nor an accident; that He is not specified by a direction nor settled upon a place; that He is seen; and that He is one." },
+      { title: "The second pillar", body: "His attributes, comprising ten principles: knowledge of His being living, knowing, powerful, willing, hearing, seeing, and speaking; His being above the inherence of originated things; and that His speech, His knowledge, and His will are pre-eternal." },
+      { title: "Note the order of the first two", body: "The essence is treated by negations and the attributes by affirmations. Seven of the ten in the first pillar say what God is not, and nine of the ten in the second say what He is." },
+      { title: "Say what the architecture is for", body: "Forty numbered principles arranged in four groups make a creed auditable: a reader can locate any disputed point, see which pillar it belongs to, and see what else stands or falls with it." },
+    ],
+    closer: [
+      { title: "The one that carries the most weight", body: "That He is seen sits among the negations of the first pillar and is the only affirmation in that group besides existence and oneness. Its placement there rather than among the attributes is itself a position, and Book 36 of the Ihya spends a long chapter on what that seeing is." },
+      { title: "Why the pillars are separated at all", body: "Essence, attributes, acts, and the transmitted are four different kinds of claim with four different kinds of warrant. The fourth in particular is established by report alone, which is why it is named for that rather than for its subject matter." },
+    ],
+    distinction: ["Two ways to state a creed", "As numbered principles in groups", "Auditable: each point locatable, and its dependencies visible.", "As continuous exposition", "The form of the first section, which is meant to be held rather than examined."],
+    misreading: "Do not read the four pillars as ranked. They are sorted by the kind of warrant each rests on, not by importance, which is why the transmitted matters are named for how they are known.",
+    reflection: "Notice how much of the first pillar is negation, and what that implies about the kind of knowledge it is.",
+    audit: ["Which pillar does my question belong to?", "What warrant does that pillar rest on?", "What else stands or falls with this point?", "Am I ranking what is sorted?"],
+    nodes: ["arkan", "sifat", "aqida"],
+    model: pair("The first two pillars", "One proceeds by denial and the other by affirmation.", [["The essence", "Not a substance, not a body, not an accident, not in a direction or a place.", "balance"], ["The attributes", "Living, knowing, powerful, willing, hearing, seeing, speaking, and pre-eternal in speech, knowledge, and will.", "support"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "The hard pillar", formalTitle: "The pillar of the divine acts",
+    overview: "The third pillar, and the one where Ghazali's school takes its most uncomfortable positions. He states them flatly and without softening.",
+    moves: [
+      { title: "The first three principles", body: "That the acts of servants are created by God; that they are acquired by the servants; and that they are willed by God. The second is what keeps the first from being fatalism, and the pillar depends on holding all three." },
+      { title: "The uncomfortable ones", body: "That He may impose what is beyond capacity. That He may cause pain to the innocent. That it is not obligatory upon Him to observe what is most beneficial." },
+      { title: "The principle underneath them", body: "And that there is no obligation except by the Law. The three preceding claims follow from this one: if moral obligation is constituted by the Law rather than discovered by reason, then nothing is owed by God prior to it." },
+      { title: "The last three", body: "That He is bounteous in creating and originating; that the sending of prophets is possible; and that the prophethood of Muhammad is established and supported by miracle." },
+    ],
+    closer: [
+      { title: "Why these are stated so baldly", body: "Each is the denial of a position held by the school Ghazali is arguing against, which held that reason discovers obligations binding on God. Stated as principles rather than as arguments, they read harshly; stated with their ground — that there is no obligation except by the Law — they are consequences of a single claim about where obligation comes from." },
+      { title: "Where the Ihya softens the edge", body: "Nothing here is retracted elsewhere, but Book 35 marks the point at which the question of the decree touches what Ghazali says was withheld from disclosure, and Book 40 ends the whole work on the breadth of mercy. This pillar states what may be; the rest of the Ihya is largely about what is." },
+    ],
+    distinction: ["Two sources of obligation", "Constituted by the Law", "Which makes the three hard principles consequences rather than separate assertions.", "Discovered by reason", "Which would make each of the three a distinct and shocking claim, as they read out of context."],
+    misreading: "Do not read the hard principles as descriptions of what God does. They are claims about what is possible and about where obligation comes from, and the Ihya's own account of what actually happens is given elsewhere and is not this.",
+    reflection: "Notice that the discomfort concentrates on three principles that all follow from a fourth about the source of obligation.",
+    audit: ["Where do I think obligation comes from?", "Have I read possibility as description?", "Which of the three troubles me most?", "What does it depend on?"],
+    nodes: ["afal", "kasb", "arkan"],
+    model: chain("One root, three consequences", "The discomfort concentrates where the root is not seen.", [["No obligation but by the Law", "The principle the other three rest on.", "support"], ["Imposing beyond capacity", "Possible, because nothing prior binds.", "warning"], ["Pain to the innocent", "Possible on the same ground.", "warning"], ["No duty of the most beneficial", "The same claim in its third form.", "warning"]]),
+  }),
+  makeChapter({
+    id: 11, shortTitle: "Known by report", formalTitle: "The pillar of the transmitted matters",
+    overview: "The fourth pillar, named not for its subject but for how it is known, and its last three principles are unlike anything else in the creed.",
+    moves: [
+      { title: "The eschatological principles", body: "Establishing the gathering and the raising; the questioning of the two who come; the punishment of the grave; the Balance; the Bridge; and the creation of the Garden and the Fire." },
+      { title: "The political ones", body: "The rulings of the leadership; that the merit of the Companions follows their order; and the conditions of the leadership." },
+      { title: "Note what the pillar is named for", body: "It is called the transmitted matters, after the warrant rather than the subject. These are things reason does not reach, and their whole standing rests on assent to what the Messenger reported." },
+      { title: "Note what that implies", body: "The pillar therefore depends on the last principle of the third pillar, that the prophethood is established and supported by miracle. The order of the four pillars is load-bearing: this one cannot stand before that one is granted." },
+    ],
+    closer: [
+      { title: "Why the political principles are here", body: "Questions of leadership and of the Companions' ranking sit alongside the Balance and the Bridge because they too were settled by report rather than by reason. Ghazali is sorting by warrant with complete consistency, even where the result groups things a modern reader would separate." },
+      { title: "What Book 40 does with the first six", body: "The eschatological principles are stated here in a line each. Book 40, the last and longest book of the Ihya, is their working out, and it opens by defining death as only a change of state — which is what makes a questioning in the grave intelligible rather than merely asserted." },
+    ],
+    distinction: ["Two ways to group a creed's contents", "By warrant", "What reason reaches and what only report reaches, which is Ghazali's principle here.", "By subject", "Grouping the eschatological together and the political separately, which he does not do."],
+    misreading: "Do not treat this pillar as a lesser one for resting on report. Its warrant was established in the pillar before it, and on that basis it is held with the same firmness as the rest.",
+    reflection: "Notice how consistently the sorting by warrant is carried through, including where the result is surprising.",
+    audit: ["What warrant does this rest on?", "Have I sorted by subject instead?", "What must be granted before this pillar?", "Which of these have I examined?"],
+    nodes: ["samiyyat", "arkan", "nubuwwa"],
+    model: chain("Why this pillar comes last", "It cannot stand before the one before it.", [["Prophethood established", "The last principle of the third pillar, supported by miracle.", "support"], ["Report becomes warrant", "What the Messenger conveyed is thereby held.", "support"], ["The ten follow", "Gathering, questioning, Balance, Bridge, Garden and Fire, and the leadership.", "support"]]),
+  }),
+  makeChapter({
+    id: 12, shortTitle: "Three questions", formalTitle: "Faith and submission, and what lies between them",
+    overview: "The last section, and Ghazali opens it by refusing a confused treatment and replacing it with a method — the same method Book 1 used on the intellect.",
+    moves: [
+      { title: "Give the dispute", body: "They differed over whether submission is faith or something else; and if something else, whether it is separate from it and found without it, or bound to it and inseparable. It has been said they are one thing; that they are two things that never meet; and that they are two things bound to one another." },
+      { title: "Refuse the existing treatment", body: "Abu Talib al-Makki brought forward on this a discussion of severe confusion and great length. So let us now fall directly upon declaring the truth, without turning aside to reproduce what has nothing settled in it." },
+      { title: "Split the question", body: "There are three inquiries here: into what the two words require in the language; into what is meant by them in the usage of the Law; and into their ruling in this world and the next." },
+      { title: "Name the three disciplines", body: "The first is lexical, the second is exegetical, and the third is juristic. Three different kinds of question have been running together, which is why the dispute had three irreconcilable answers." },
+    ],
+    closer: [
+      { title: "Why the dispute had exactly three answers", body: "The three standing positions correspond suspiciously well to the three questions. Answers drawn from different inquiries will conflict when treated as answers to one, and Ghazali's separation predicts the shape of the disagreement it dissolves." },
+      { title: "The same move as Book 1", body: "The last chapter of Book 1 resolved the dispute over the intellect by showing that one name was doing four jobs and that a single definition should not be sought for all of them. Two of the first two books of the Ihya end by dissolving a famous dispute into a confusion about words." },
+    ],
+    distinction: ["Two ways to settle a dispute over words", "Separate the questions", "Lexical, exegetical, and juristic answered apart, which is what Ghazali does.", "Choose among the answers", "Treating three answers to three questions as rivals answering one."],
+    misreading: "Do not conclude that the dispute was merely verbal and therefore unimportant. The third inquiry, into the ruling in this world and the next, is a substantive legal question that the separation makes answerable.",
+    reflection: "Notice that the criticism of the earlier treatment is that it was confused rather than that it was wrong.",
+    audit: ["Which of the three am I asking?", "Have I mixed them?", "What kind of answer would settle this?", "Where else does this pattern hold?"],
+    nodes: ["iman", "islam", "manhaj"],
+    model: chain("Three inquiries", "The dispute's three answers map onto them.", [["Lexical", "What the two words require in the language.", "support"], ["Exegetical", "What is meant by them in the usage of the Law.", "support"], ["Juristic", "Their ruling in this world and in the next.", "support"]]),
+  }),
+  makeChapter({
+    id: 13, shortTitle: "Assent and surrender", formalTitle: "What the lexical inquiry settles",
+    overview: "The first of the three answers, and it is clean enough that the shape of the whole relation falls out of it immediately.",
+    moves: [
+      { title: "Define the first", body: "Faith is an expression for assent. The verse in which the brothers say that their father would not be one who assents to them uses the word in exactly that sense." },
+      { title: "Define the second", body: "And submission is an expression for surrender and yielding — by compliance and obedience, and by leaving rebellion, refusal, and obstinacy." },
+      { title: "Locate the first", body: "And assent has a particular seat, which is the heart; the tongue is its interpreter. It happens in one place only." },
+      { title: "Locate the second", body: "But surrender is general across the heart, the tongue, and the limbs. For every assent of the heart is a surrender and a leaving of refusal and denial — and so on through the other two." },
+    ],
+    closer: [
+      { title: "What the asymmetry gives you", body: "Faith occurs in one of the three places and submission in all three. So every act of faith is an act of submission, and not every act of submission is an act of faith. The relation between the two words is settled by the difference in their range, without any further doctrine." },
+      { title: "How the reports then fit", body: "Ghazali marshals reports in which the two are distinguished — the exchange in which a man is called a believer and the Messenger answers, or a Muslim — and others in which the same five pillars are given as the answer to a question about faith. On the lexical result, both sets are exactly what one would expect from two words of unequal range." },
+    ],
+    distinction: ["Two words of unequal range", "Assent", "One seat, the heart, with the tongue as its interpreter.", "Surrender", "Three seats: heart, tongue, and limbs, so it includes the first."],
+    misreading: "Do not take the lexical result as the whole answer. Ghazali gives it as the first of three inquiries, and the legal question of the ruling in this world and the next is treated separately and is not decided by the language alone.",
+    reflection: "Notice that a dispute with three standing positions is resolved by observing that one word has one seat and the other has three.",
+    audit: ["Which word am I using, and in which sense?", "Am I answering the lexical question or the legal one?", "Where do the reports conflict, and do they still?", "What does the difference in range settle?"],
+    nodes: ["iman", "islam", "manhaj"],
+    model: spectrum("Where each occurs", "The relation falls out of the ranges.", [["The heart", "Both: assent has its seat here, and every assent is also a surrender.", "support"], ["The tongue", "Submission only; the tongue interprets assent rather than seating it.", "balance"], ["The limbs", "Submission only, by compliance and the leaving of refusal.", "balance"]]),
+  }),
+];
+
+export const book02ConceptNodes: ConceptNode[] = [
+  ["aqida", "The creed", "Given whole", "Set out without demonstration, so that the evidences can be administered separately."],
+  ["structure", "Four sections", "Mostly about handling", "One states the creed; three treat teaching, dosing, and a dispute about words."],
+  ["shahada", "The two testimonies", "The organising frame", "What Book 1 named as the individually obligatory content of belief."],
+  ["talqin", "Instruction", "Memorise first", "Understanding is placed second, and the meaning unfolds into a form already held."],
+  ["taqlid", "Imitation", "Weak in one way only", "True and held, and removable by its contrary if that is cast at him."],
+  ["rusukh", "Rootedness", "The actual goal", "A belief attached to many things rather than proved from one."],
+  ["kalam", "Theology", "A drug, not a diet", "Prescribed by symptom, bounded in dose, and not neutral when unindicated."],
+  ["suhba", "Company", "The fourth strengthener", "What passes into a person from sitting with the righteous."],
+  ["tadrij", "Graduation", "Two triggers", "A doubt stirring in the person, or innovation spreading around him."],
+  ["shubha", "A doubt", "The indication", "When it appears, the disease has shown, and the dose may be raised."],
+  ["measure", "Measure", "Book 1's third class", "Good up to sufficiency, and this book applies it to theology itself."],
+  ["kitman", "Reticence", "Five reasons", "Two about the hearer, two about what statement cannot convey."],
+  ["dhawq", "Taste", "Not conveyable", "A summary and a tasted knowledge differ, and clearer words do not close the gap."],
+  ["arkan", "Four pillars", "Sorted by warrant", "Essence, attributes, acts, and what is known by report alone."],
+  ["sifat", "The attributes", "Ten affirmations", "Where the first pillar proceeds by denial, this one proceeds by assertion."],
+  ["afal", "The divine acts", "The hard pillar", "Three uncomfortable principles resting on one about the source of obligation."],
+  ["kasb", "Acquisition", "What blocks fatalism", "The acts are created by God and acquired by the servants, and both are held."],
+  ["samiyyat", "The transmitted", "Named for its warrant", "Reason does not reach these; the pillar before it establishes how they are known."],
+  ["nubuwwa", "Prophethood", "The hinge", "The last principle of the third pillar, on which the fourth entirely depends."],
+  ["iman", "Faith", "Assent", "One seat, the heart, with the tongue as interpreter."],
+  ["islam", "Submission", "Surrender", "Three seats — heart, tongue, and limbs — so its range includes faith's."],
+  ["manhaj", "The method", "Separate the questions", "The same move that ends Book 1: one dispute, several kinds of question."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book02Journeys: Journey[] = [
+  {
+    id: "how-belief-begins", number: "01", question: "How does belief actually begin?", title: "Memorise, then understand",
+    description: "Take the developmental order Ghazali describes, find the exact defect he concedes in belief held by imitation, and get four remedies for it — none of which is argument.",
+    payoff: "You learn what makes a belief hard to dislodge, and why the obvious answer is the wrong one.",
+    image: assetUrl("assets/system/book02-four-holds.jpg"), imageAlt: "A young sapling staked at four points by separate cords running to four fixed pegs in dry ground.", minutes: 12, color: "#278d91",
+    nodes: [
+      node("the-order", "Take the order", "Memorise, understand, believe", "The meaning unfolds into a form already held.", "Offered as a description of what happens, not a concession.", 2, "order"),
+      node("without-proof", "Note the claim", "And without proof", "Called a grace: the heart is expanded for faith without argument.", "The beginnings of everyone's belief were instruction and imitation.", 2, "know"),
+      node("the-defect", "Name the defect", "Dislodgeable", "Not false, not shallow — removable by its contrary if cast at him.", "The precision is what makes the remedy follow.", 3, "diagnose"),
+      node("not-dialectic", "Rule out the obvious", "Not the craft", "The way to strengthen it is not to teach dialectic and theology.", "Ghazali wrote theology and prescribes it later, under conditions.", 4, "clear"),
+      node("four-holds", "Take the four", "Text, report, act, company", "Each attaches the belief to something further.", "An argument attaches it to one thing, and can be met by another argument.", 4, "forces"),
+    ],
+  },
+  {
+    id: "how-much-argument", number: "02", question: "How much argument should anyone be given?", title: "Treat it as a dose",
+    description: "Follow Ghazali's medical model of theological argument — indication, dose, escalation, and an explicit stopping rule — and see what he says lies past the last dose.",
+    payoff: "You get a prescription with a stopping rule, from an author who names two of his own books as the doses.",
+    image: assetUrl("assets/system/book02-the-dose.jpg"), imageAlt: "Three apothecary vials of graduated size on a clean shelf, the smallest at front and the largest stoppered and set back.", minutes: 13, color: "#bf7a35",
+    nodes: [
+      node("first-dose", "Take the first dose", "Brief, and by environment", "Indicated where innovation has spread and disturbance is feared.", "Triggered by the surroundings, not by the person.", 5, "order"),
+      node("the-symptom", "Watch for the symptom", "A doubt stirs", "Then the feared malady has appeared and the disease has shown.", "The trigger is a symptom, not a level of education.", 5, "diagnose"),
+      node("escalate", "Raise the dose", "About fifty leaves", "Ghazali names his own book of Moderation in Belief as the second dose.", "Confident about what argument can do within its indication.", 5, "receive"),
+      node("the-stop", "Take the stopping rule", "If it convinces him, stop", "And if not, gentleness, and awaiting what is not in the physician's hands.", "The most restrained passage in the book.", 5, "guard"),
+      node("past-the-dose", "See what lies past", "Two kinds of excess", "Questions outside the principles, and more proofs of settled points.", "The specimen question is reproduced in full and convicts itself.", 6, "witness"),
+      node("book-one", "Connect it back", "The third class", "Book 1 placed some good knowledge as praised only to a measure.", "Here that class is applied to theology by a theologian.", 6, "steady"),
+    ],
+  },
+  {
+    id: "what-goes-unsaid", number: "03", question: "Why would a true thing go unsaid?", title: "Sort the reasons for silence",
+    description: "Take five reasons the prophets and the truthful withheld things, find the two that are not about withholding at all, and meet the sentence that stops the whole passage becoming a doctrine of two truths.",
+    payoff: "You get an account of why clearer words sometimes convey less, and a guard against the reading it invites.",
+    image: assetUrl("assets/system/book02-the-veil.jpg"), imageAlt: "A single sheet of fine linen drawn across a lit doorway, the light passing through it evenly and no shape visible behind.", minutes: 11, color: "#c25f50",
+    nodes: [
+      node("too-subtle", "The first two", "About the hearer", "Too subtle to be grasped, or understandable and harmful to say.", "These are the ones the word esoteric usually means.", 7, "know"),
+      node("said-obliquely", "The third", "Nothing withheld", "It could be said plainly and harmlessly; the indirect form lands harder.", "A claim about how understanding works, not about desert.", 7, "pattern"),
+      node("summary-taste", "The fourth", "Not conveyable", "A summary and a tasted knowledge differ, and the words do not close it.", "This is what the whole Ihya depends on.", 7, "witness"),
+      node("the-guard", "Take the heading", "Inward agrees with outward", "The five explain silence and none permits a contrary doctrine.", "Ghazali writes the guard himself and makes it the heading.", 8, "guard"),
+      node("the-default", "Note the default", "Restrict to the creed", "The common people are burdened with nothing beyond it in the first degree.", "The exception is environmental, and it is the second degree.", 8, "steady"),
+    ],
+  },
+  {
+    id: "what-does-it-say", number: "04", question: "What does the creed actually claim?", title: "Read forty principles in four groups",
+    description: "Take the architecture of the evidences, notice that the first pillar proceeds by denial, and meet the pillar where the school's hardest positions sit — with the single principle they all rest on.",
+    payoff: "You can locate any disputed point, see its warrant, and see what stands or falls with it.",
+    image: assetUrl("assets/system/book02-four-pillars.jpg"), imageAlt: "Four plain stone columns of equal height in a row, each marked with ten shallow horizontal notches.", minutes: 13, color: "#586fa8",
+    nodes: [
+      node("by-negation", "Read the first", "Mostly denials", "Not substance, not body, not accident, not in a direction or a place.", "What that implies about the kind of knowledge it is.", 9, "clear"),
+      node("by-affirmation", "Read the second", "Mostly assertions", "Living, knowing, powerful, willing, hearing, seeing, speaking.", "The two pillars proceed in opposite directions on purpose.", 9, "pattern"),
+      node("the-three", "Meet the hard three", "Beyond capacity, the innocent, the best", "Stated flatly and without softening.", "They are claims about possibility, not descriptions.", 10, "witness"),
+      node("the-root", "Find their root", "No obligation but by the Law", "The three are consequences of one claim about where obligation comes from.", "Read without it, each looks like a separate shock.", 10, "diagnose"),
+      node("kasb", "Note what blocks fatalism", "Created and acquired", "Both principles are held, and the pillar needs all three of its first.", "Dropping the second is what turns this into fatalism.", 10, "balance"),
+      node("by-warrant", "See the last pillar", "Named for how it is known", "Reason does not reach these; the pillar before it supplies the warrant.", "Sorted by warrant even where the grouping surprises.", 11, "order"),
+    ],
+  },
+  {
+    id: "faith-and-submission", number: "05", question: "Is submission the same as faith?", title: "Split one question into three",
+    description: "Watch Ghazali refuse a confused treatment, separate a lexical question from an exegetical and a legal one, and settle the relation between two words by the difference in their range.",
+    payoff: "You get a method that dissolves a three-sided dispute, and the same move that ends Book 1.",
+    image: assetUrl("assets/system/book02-three-questions.jpg"), imageAlt: "One doorway opening onto three separate corridors, each lit differently, seen from a single threshold.", minutes: 11, color: "#a97837",
+    nodes: [
+      node("the-dispute", "Take the dispute", "Three standing answers", "One thing; two that never meet; two that are bound together.", "The three answers map onto three different questions.", 12, "know"),
+      node("the-refusal", "Note the refusal", "Confused, not wrong", "Ghazali sets an earlier treatment aside for its confusion and length.", "And says he will fall directly upon declaring the truth.", 12, "clear"),
+      node("three-ways", "Split it", "Lexical, exegetical, juristic", "Three kinds of question that had been running together.", "The separation predicts the shape of the disagreement.", 12, "order"),
+      node("the-ranges", "Compare the ranges", "One seat or three", "Assent seats in the heart; surrender is in heart, tongue, and limbs.", "The relation falls out without any further doctrine.", 13, "pattern"),
+      node("the-reports", "Fit the reports", "Both sets expected", "Some distinguish the two words and some interchange them.", "Exactly what two words of unequal range would produce.", 13, "witness"),
+      node("same-as-book1", "See the pattern", "Two books, one move", "Book 1 ended by dissolving the dispute over the intellect the same way.", "The legal question remains substantive and is treated apart.", 13, "steady"),
+    ],
+  },
+];
+
+export const book02Movements: TaxonomyGroup[] = [
+  ["fasl1", "1. The exposition of the creed", "The statement itself, given whole and without demonstration.", [1]],
+  ["fasl2", "2. Graduation and the degrees of belief", "How belief begins, what strengthens it, how much argument to give, and what goes unsaid.", [2, 3, 4, 5, 6, 7, 8]],
+  ["fasl3", "3. The flashes of the evidences", "Four pillars of ten principles: essence, attributes, acts, and the transmitted.", [9, 10, 11]],
+  ["fasl4", "4. Faith and submission", "Three inquiries separated, and a dispute settled by range.", [12, 13]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50", "#586fa8"][index % 4] })) as TaxonomyGroup[];
+
+export const book02Instrument: Instrument = {
+  title: "How much argument does this call for?",
+  note: "Ghazali treats theological argument as a physician treats a drug: indicated by a symptom, bounded in dose, escalated on a trigger, and stopped by a rule. He names two of his own books as the two doses. Take a real case — yourself, or someone you are actually responsible for teaching — and answer honestly about the condition and about what you have been reaching for.",
+  items: [
+    {
+      id: "case", label: "A real case", lede: "Yourself, or someone you actually teach",
+      note: "Both questions are Ghazali's own. The conditions are the ones he distinguishes in the second section, and the four things you might reach for are the four he actually discusses. Two of the combinations he explicitly forbids, and one of them is the one most readers would have chosen.",
+      axes: [
+        {
+          id: "condition", kicker: "The condition", question: "What is the actual state of the person in question?",
+          options: [
+            { id: "beginner", label: "At the beginning — a child, or new to it", note: "Where his sequence starts: memorising, then understanding, then belief." },
+            { id: "settled", label: "A settled believer, with no doubt", note: "No symptom has appeared, which on his model is the decisive fact." },
+            { id: "exposed", label: "Surrounded by disputation and innovation", note: "His environmental trigger: the fear of disturbance where innovation has spread." },
+            { id: "doubting", label: "A doubt has actually arisen in him", note: "His personal trigger: the feared malady has appeared and the disease has shown." },
+          ],
+        },
+        {
+          id: "reach", kicker: "The remedy", question: "What have you been reaching for?",
+          options: [
+            { id: "creed", label: "The creed statement itself", note: "The first section of this book, to be held before it is examined." },
+            { id: "practice", label: "Recitation, reports, worship, company", note: "The four strengtheners he names, none of which is an argument." },
+            { id: "brief", label: "A brief treatment of the evidences", note: "The first dose: the measure he says he deposited in the Jerusalem Epistle." },
+            { id: "argument", label: "Full theological argument", note: "The escalation, which he permits — under one condition." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "settled|argument", name: "No symptom, no drug", role: "warning", chapterId: 5, body: "Ghazali's whole model turns on this. Argument is indicated when a doubt has stirred, and here none has. Giving it unindicated is not neutral on his account: the escalation exists to treat a malady that has appeared, and the entire second section is built to keep the untroubled from being troubled.", action: "Go back to the four strengtheners instead. His diagnosis of what a plainly held belief lacks is precise — it can be dislodged by its contrary if that is cast at it — and his remedy is to attach it to more things rather than to prove it from one." },
+        { key: "beginner|argument", name: "The one route he rules out", role: "warning", chapterId: 4, body: "This is the case his sharpest sentence addresses. The way to strengthen and establish belief in the soul of the child and of the common man is not that he be taught the craft of dialectic and theology. He states it as a flat exclusion, and he was himself a theologian of the first rank.", action: "His sequence for a beginner runs memorise, understand, believe, and he says the last of those occurs without proof and calls that a grace. Give the creed to be held, and then the four things that root it: the Quran and its exegesis, the reports and their meanings, the offices of worship, and the company of the righteous." },
+        { key: "doubting|brief", name: "Ascend one level", role: "support", chapterId: 5, body: "A doubt has arisen, which is exactly his trigger, and you are at the first dose. His instruction here is explicit: there is no harm in ascending from the brief measure to the larger one — the book of Moderation in Belief, which he sizes at about fifty leaves.", action: "Take the stopping rule with the escalation, because it comes in the same breath. If that convinces him, stop. And if it does not, he does not prescribe more: he says the physician should be gentle as far as he is able and await what is not in his hands." },
+        { key: "doubting|argument", name: "And here is where it stops", role: "balance", chapterId: 5, body: "A doubt has arisen and you are at full argument, which Ghazali permits — this is the indicated case. But the passage that permits it is also the passage that bounds it, and the bound is what most readers skip.", action: "The rule is: if it convinces him, stop there. If it does not, the malady has become chronic, and what he prescribes then is gentleness and waiting rather than a further dose. Note also what he says lies past the last dose — questions outside the principles altogether, and more proofs of points already settled, which he calls an exhaustiveness that increases only error." },
+        { key: "exposed|brief", name: "Exactly the indication", role: "support", chapterId: 8, body: "This is his second trigger and his second degree, and it is environmental rather than personal. Where there is fear of disturbance because innovation has spread, he ascends from the bare creed to a creed containing brief flashes of the evidences, without depth.", action: "Hold the phrase without depth. The purpose he gives is defensive — that it serve to repel the effect of the innovators' disputations if those reach him — and a dose given for that purpose is finished when it can do that, not when the subject has been covered." },
+        { key: "*|practice", name: "The four strengtheners", role: "support", chapterId: 4, body: "Whatever the condition, this is what Ghazali actually prescribes for rootedness, and he lists four: reciting the Quran and its exegesis, reading the reports and their meanings, the offices of worship, and what passes into a person from sitting with the righteous.", action: "Note why four rather than one. The defect he named was that a belief can be dislodged by its contrary; rootedness is a matter of how many independent things a belief is held by. An argument gives one hold, and of the kind another argument can remove." },
+        { key: "*|creed", name: "A form for meaning to fill", role: "support", chapterId: 2, body: "Ghazali's order is memorising, then understanding, then belief and certainty — and he means it in that order. The thing memorised is a form whose meaning keeps unfolding in later years, which requires that something already be held for the meaning to unfold within.", action: "This is his default and he means it to remain the default: the common people are to be restricted to the creed and burdened with nothing beyond it in the first degree. Escalation needs a trigger, and neither of his two triggers is simply that someone has grown up." },
+        { key: "*|*", name: "Read the condition against the remedy", role: "balance", chapterId: 5, body: "A condition and something you have been reaching for. Ghazali's model makes the first decide the second: indication comes before dose, and two of his four remedies are unindicated for most conditions.", action: "Ask which of his two triggers has actually fired — a doubt stirring in the person, or innovation spreading around him. If neither has, the section is unambiguous about what to do instead, and it is not an argument." },
+      ],
+    },
+  ],
+};
+
+export const book02Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 2 was read and used to establish the creed's exposition, the graduated pedagogy, the four pillars of the evidences, and the treatment of faith and submission.", url: "https://shamela.ws/book/9472/89" },
+  { label: "The degrees of belief", note: "The passage giving the sequence of memorising, understanding, and believing, the defect of belief held by imitation, and the four things that root it.", url: "https://shamela.ws/book/9472/94" },
+  { label: "The graduated measure", note: "The passage prescribing theological argument by symptom and dose, naming two of Ghazali's own works as the two measures, and giving the stopping rule.", url: "https://shamela.ws/book/9472/98" },
+  { label: "The reasons for reticence", note: "The passage sorting the reasons a true thing may be withheld, expressed obliquely, or held only in summary.", url: "https://shamela.ws/book/9472/100" },
+  { label: "The flashes of the evidences", note: "The passage announcing the four pillars and the ten principles of each, covering the essence, the attributes, the acts, and the transmitted matters.", url: "https://shamela.ws/book/9472/105" },
+  { label: "Faith and submission", note: "The passage separating the lexical, exegetical, and juristic inquiries, and settling the relation of the two words by the difference in their range.", url: "https://shamela.ws/book/9472/116" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 2 as the second book of the Quarter of Worship and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book02: SystemBook = {
+  id: 2,
+  title: "The Principles of the Creed",
+  shortTitle: "The Creed",
+  defaultJourneyId: "how-belief-begins",
+  chapters: book02Chapters,
+  conceptNodes: book02ConceptNodes,
+  journeys: book02Journeys,
+  sources: book02Sources,
+  taxonomy: {
+    title: "Four sections",
+    note: "Ghazali's own four, in his order. The creed itself is the shortest of them; the second section, on how belief is taught and how much argument to give to whom, is the longest and is where most of this book's thinking is.",
+    groups: book02Movements,
+  },
+  instrument: book02Instrument,
+  editorialNote: "The five journeys, thirteen reading sections, visual models, and diagnostic are editorial learning aids. The sections follow Ghazali's four in his order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. Three things should be stated about scope. The first section of the book is a continuous creed statement; this edition presents what it is, how it is arranged, and why its proofs are held back, rather than reproducing the statement itself, which belongs to the text. The third section sets out forty numbered principles in four pillars; Sections 9 to 11 give the architecture and the principles as Ghazali lists them, and present the third pillar's harder positions — that God may impose what is beyond capacity, may cause pain to the innocent, and is not obliged to do what is most beneficial — as he states them, together with the principle about the source of obligation that they follow from. Those are the positions of a particular school stated in their own terms; this edition reports them and does not adjudicate them, and notes where the Ihya's own emphasis elsewhere lies. Ghazali's passage on the reasons things go unsaid is presented together with the heading he himself places on its conclusion, that the inward agrees with the outward and is not at variance with it, because reading the five reasons without that heading inverts the passage. The diagnostic applies his own indications and doses to a case the reader supplies and cannot pronounce on anyone's state.",
+};
