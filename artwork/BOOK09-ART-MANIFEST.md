@@ -36,3 +36,20 @@ Alt text is already written into `src/book09.ts` and is what each plate has to d
 - **Accent colour** `#c25f50`
 - **Must depict** A plain round shield propped against a wall beside an arrow lying on the ground, neither of them damaged.
 - **Argument it carries** Supplication is a cause — among the decree is the repelling of affliction by supplication. The shield and the arrow must both be *intact and at rest*: this is not a picture of combat but of a cause having worked. Nothing dramatic, no impact mark, no tension. The arrow simply lies on the ground.
+
+---
+
+## ADDED 2026-08-22 — journey 04 plate (not yet generated)
+
+### `assets/system/book09-ten-manners.jpg` (+ `-thumb.jpg`)
+
+**Journey 04 — "The ten manners, and the one that decides it"**
+Two open, empty hands resting palm-up on a plain dark cloth, photographed
+straight down. Nothing held. Hands only — no face, no body, no room.
+
+This is the single exception to the no-hands rule across these manifests, and
+it is deliberate: the third manner is a physical instruction about raising the
+hands, and the tenth is about arriving with nothing owed. Empty palms carry
+both. If a figure or a face enters the frame the plate fails.
+
+Colour anchor: `#7a6ca8`.

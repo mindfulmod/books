@@ -3,7 +3,7 @@ import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
-const bab = (id: number) => (id <= 4 ? "the first chapter, on the excellence of remembrance" : id <= 8 ? "the second chapter, on supplication and its manners" : "the third, fourth, and fifth chapters, the collections");
+const bab = (id: number) => (id <= 4 ? "the first chapter, on the excellence of remembrance" : id <= 9 ? "the second chapter, on supplication and its manners" : "the third, fourth, and fifth chapters, the collections");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
@@ -118,47 +118,67 @@ export const book09Chapters: Chapter[] = [
     model: chain("What the verses establish", "Before any manner is discussed.", [["He is near", "And answers the call of the caller.", "support"], ["Humbly and in secret", "Two of the ten manners, already in the verse.", "balance"], ["Not asking is pride", "Which places calling inside worship rather than beside it.", "support"]]),
   }),
   makeChapter({
-    id: 6, shortTitle: "Times and states", formalTitle: "The first manners: when to ask",
-    overview: "The first two of the ten manners concern occasion rather than content, and they are given more space than any others.",
+    id: 6, shortTitle: "When, and how", formalTitle: "The manners of supplication: the first three",
+    overview: "Ghazali gives ten manners for asking. The first three are about timing and posture, and they are more specific than most readers expect.",
     moves: [
-      { title: "Give the first", body: "That he watch for the noble times for his supplication — like the day of Arafa from the year, and Ramadan from the months, and Friday from the week, and the hour before dawn from the hours of the night." },
-      { title: "Give the ground", body: "God says: and in the hours before dawn they seek forgiveness. And it is reported that God descends each night to the lowest heaven when the last third of the night remains, and says: who calls upon Me, that I may answer him; who asks Me, that I may give him; who seeks My forgiveness, that I may forgive him." },
-      { title: "Give the illustration", body: "It was said that Jacob said he would seek forgiveness for them in order to supplicate at the hour before dawn — and that he rose at that hour supplicating with his sons saying amen behind him, and it was revealed that they were forgiven and made prophets." },
-      { title: "Give the second manner", body: "That he seize the noble states. It was said that the gates of heaven are opened at the advance of the ranks in God's path — and the manner extends to the other states at which the reports say the asking is received." },
+      { title: "First: watch for the times", body: "Some times are better than others, and he names them by scale — the day of Arafa within the year, Ramadan among the months, Friday within the week, and the hour before dawn within the night. A calendar rather than a mood." },
+      { title: "Second: seize the states", body: "Certain situations count too. Abu Hurayra: the gates of heaven open when ranks close in battle, when rain falls, and when the prayer is being established. States, not just dates." },
+      { title: "Third: face the qibla and raise your hands", body: "Raise them, on the reports, until the white of the underarms shows. The physical instruction is concrete and he does not explain it away." },
+      { title: "Note how the three fit together", body: "Two are about when and one is about the body. None of them is about what you say — that comes later — and none is about feeling ready. They are the parts of asking you can arrange in advance." },
     ],
     closer: [
-      { title: "Why occasion comes before content", body: "Nothing in the first two manners concerns what is asked for. They concern when, which is a variable a person controls entirely and which requires no discernment about the request itself — the same reason Book 5 puts timing among its eight duties." },
-      { title: "The four scales", body: "A day from the year, a month from the months, a day from the week, an hour from the night. The first manner names one occasion at each scale of time, so that no unit of a person's calendar is without a marked hour in it." },
+      { title: "Why a calendar helps", body: "Naming the best time within each unit — year, month, week, night — turns an intention into something with a date on it. Somebody who means to ask seriously and never fixes when tends not to. The nesting is what makes it usable: there is always a next one, and it is never far." },
+      { title: "Where this sits in the book", body: "The first chapter argued that remembrance is worth more than its effort suggests. This chapter turns to asking, and starts with what can be organised — before the manners that are about the state of the person asking, and long before the tenth, which turns out to be the one that decides the matter." },
     ],
-    distinction: ["Two things a supplicant controls", "The occasion", "When it is asked, which requires no discernment about the request.", "The content", "What is asked, which the later manners treat and which is harder."],
-    misreading: "Do not read the noble times as the only times. The verses in the previous section place calling inside worship generally, and these manners concern where it is most received rather than where it is permitted.",
-    reflection: "Look at the four scales and ask which of them has a marked hour in your week.",
-    audit: ["Which of the four scales do I keep?", "Do I ask at a time, or when pressed?", "What state was I in the last time I asked?", "Is when easier for me than what?"],
-    nodes: ["adab-dua", "awqat", "dua"],
-    model: spectrum("One occasion at each scale", "So that no unit of the calendar is unmarked.", [["From the year", "The day of Arafa.", "support"], ["From the months", "Ramadan.", "support"], ["From the week", "Friday.", "support"], ["From the night", "The hour before dawn.", "support"]]),
+    distinction: ["Two things you can prepare", "Time and posture", "A named day, a named hour, and a physical position — all arrangeable in advance.", "The state you are in", "Which the later manners address, and which cannot simply be scheduled."],
+    misreading: "Do not read the times as the only times. He is naming the best within each unit, not restricting asking to them.",
+    reflection: "Ask when you last chose a time to ask for something, rather than asking when it occurred to you.",
+    audit: ["Have I ever fixed a time?", "Which of the four is nearest?", "Do I ask only when prompted?", "What can I arrange in advance?"],
+    nodes: ["dua", "adab", "waqt"],
+    model: chain("The times, by scale", "Nested, so the next one is never far.", [["The year", "The day of Arafa.", "support"], ["The month", "Ramadan.", "support"], ["The week", "Friday.", "support"], ["The night", "The hour before dawn.", "balance"]]),
   }),
   makeChapter({
-    id: 7, shortTitle: "The rest of the ten", formalTitle: "The remaining manners of supplication",
-    overview: "The eight manners that follow move from occasion to bearing to content, and several of them constrain what may be asked and how.",
+    id: 7, shortTitle: "Not a performance", formalTitle: "The manners of supplication: the fourth, fifth, and sixth",
+    overview: "Three manners about how to speak and what to feel, and the fifth is a warning against the most tempting mistake in the whole practice.",
     moves: [
-      { title: "Note the movement", body: "Having settled the occasion, the manners turn to the bearing of the supplicant, the manner of the asking, and the content of the request." },
-      { title: "Give the register", body: "They cover the direction faced, the lowering of the voice, the avoidance of rhymed elaboration, humility and earnestness, insistence and repetition, opening with the remembrance of God, and the inward conditions that the request be lawful and the heart present." },
-      { title: "Name the one Ghazali stresses", body: "The inward condition is where he places the weight: that the heart be present and the request lawful. The outward manners are given briefly and this one is not." },
-      { title: "Note the constraint on content", body: "The verse gathered in the excellences already carries it — He does not love the transgressors — and the manners make the limit explicit: what is asked for is itself subject to the same judgement as any other act." },
+      { title: "Fourth: keep the voice down", body: "Between silence and speaking out — neither muttered nor projected." },
+      { title: "Fifth: do not craft your phrasing", body: "Do not go in for rhymed, worked-up prose. His reason is a good one: somebody asking should be in the state of a person pleading, and polish does not suit that. “There will be people who go beyond bounds in supplication.”" },
+      { title: "Sixth: pleading, humility, longing and fear", body: "“They used to hurry to good works and call on Us in longing and fear.” And: “Call on your Lord humbly and secretly.” And the hardest of the three reports: “when God loves someone He tests him, until He hears him plead.”" },
+      { title: "See what the fifth is protecting", body: "The two either side of it are about lowering the voice and about pleading. Crafted language pulls in the opposite direction from both — it raises the register, and it makes the words something to be admired. Once that starts, the person is composing rather than asking." },
     ],
     closer: [
-      { title: "Why elaboration is discouraged", body: "Rhymed and worked-up phrasing is singled out, and the reason is the one this quarter gives everywhere: a form that can be perfected invites being perfected, and the perfecting displaces the thing it was meant to carry." },
-      { title: "The relation to the collections", body: "Three chapters of transmitted supplications follow. A reader who has the manners can use them; a reader who has only the texts has words whose conditions he does not know, which is the reason the manners precede the collections." },
+      { title: "Why this is the tempting mistake", body: "Nobody sets out to perform a prayer. But asking well-phrased is close enough to asking well that the substitution is easy to make and hard to notice — especially where anyone can hear. Ghazali puts the warning in the middle of the ten rather than at the end, and gives it the strongest supporting report." },
+      { title: "The uncomfortable third report", body: "That God tests someone He loves until He hears him plead. It reads the wrong way round if pleading is a technique to be produced on demand. Taken with the fifth manner, the sense is different: pleading is what a person in real difficulty sounds like, and that is precisely why it cannot be manufactured." },
     ],
-    distinction: ["Two ways a supplication can fail", "In its manner", "Voice, phrasing, bearing — which the outward manners address.", "In its content or its heart", "An unlawful request or an absent heart, which the manners place the weight on."],
-    misreading: "Do not treat the ten as a technique for securing an answer. The last section of the book is careful about what an answer is, and the manners are conditions rather than levers.",
-    reflection: "Ask whether your asking has ever been improved in its phrasing at the cost of its earnestness.",
-    audit: ["Is my request lawful?", "Is my heart present in it?", "Have I worked on the phrasing?", "Which manner do I fail?"],
-    nodes: ["adab-dua", "hudur", "dua"],
-    model: chain("Three registers of the manners", "The weight is on the last.", [["The occasion", "When it is asked, which the first two settle.", "balance"], ["The manner", "Voice, phrasing, bearing, insistence.", "balance"], ["The heart and the request", "Present, and lawful — where Ghazali places the weight.", "support"]]),
+    distinction: ["Two ways to ask", "As someone in need", "Voice down, no polish, actually pleading — the state the sixth manner names.", "As someone speaking well", "Which the fifth rules out, and which is the easiest substitution to make."],
+    misreading: "This is not a rule against using the transmitted supplications, which are eloquent and which Ghazali fills three chapters with. It is about affecting eloquence of your own.",
+    reflection: "Notice whether you would phrase a request differently if somebody were listening.",
+    audit: ["Am I composing or asking?", "Would I say it that way alone?", "What does pleading actually sound like?", "Whose ear am I writing for?"],
+    nodes: ["dua", "adab", "riya"],
+    model: pair("What the fifth manner guards", "The two manners on either side push the same way.", [["Pleading", "Voice down, no polish, the state of someone in need.", "support"], ["Performing", "Crafted phrasing, which raises the register and invites an audience.", "warning"]]),
   }),
   makeChapter({
-    id: 8, shortTitle: "Two particular askings", formalTitle: "Seeking forgiveness, and blessing on the Messenger",
+    id: 8, shortTitle: "The root of it", formalTitle: "The manners of supplication: the last four",
+    overview: "The final four, ending with one that Ghazali sets apart from the other nine — and which relocates the whole question of why asking works.",
+    moves: [
+      { title: "Seventh: ask as though you mean it", body: "Be decisive, be certain of the answer, and let your hope be real. “None of you should say when he asks: O God forgive me if You will, O God have mercy on me if You will.” Conditional asking is a way of protecting yourself in advance from not being answered." },
+      { title: "Eighth: persist, and repeat", body: "Keep at it, and say it three times. Asking once and stopping is treated as a sign about the asker rather than as efficiency." },
+      { title: "Ninth: open with God, not with the request", body: "Salama b. al-Akwa': “I never heard the Messenger of God open a supplication except by opening it with glorification.” The request is not the first thing said." },
+      { title: "Tenth, which is not like the others", body: "“And this is the inward manner, and it is the root in being answered: repentance, giving back what was wrongfully taken, and turning to God with the whole of your concern. That is the near cause of being answered.”" },
+    ],
+    closer: [
+      { title: "The story he attaches to the tenth", body: "In Moses' time a severe drought came, and he went out with the people to pray for rain. Nothing. Three times, and still nothing — until it was revealed to him: I will not answer any of you, because of tale-bearing. So they repented, and the rain came. Three faultless public prayers had failed on a sin between people that nobody had connected to the drought." },
+      { title: "What the tenth does to the other nine", body: "The first nine are technique — timing, posture, voice, phrasing, persistence, order. The tenth says the root is elsewhere: put right what you owe people, and turn up with your whole attention. Which means the other nine can all be observed exactly while the thing that actually decides the matter is untouched — the same shape Book 3 gives for washing and Book 4 for prayer." },
+    ],
+    distinction: ["Two places the answer could turn on", "What you have put right", "Repentance and restitution, which he calls the root and the near cause.", "How you asked", "Time, posture, voice, phrasing, persistence — nine manners, all of them real, none of them the root."],
+    misreading: "The tenth does not make the other nine pointless. Ghazali gives all ten and means all ten; he is saying which one decides the matter when they come apart.",
+    reflection: "Ask whether anything you owe someone has ever occurred to you while you were asking for something.",
+    audit: ["What do I owe, and to whom?", "Do I ask conditionally?", "Do I open with the request?", "Is my whole attention here?"],
+    nodes: ["dua", "tawba", "mazalim"],
+    model: chain("Nine, and then the root", "The tenth is set apart deliberately.", [["Time and posture", "Manners one to three.", "balance"], ["Voice and state", "Manners four to six.", "balance"], ["Certainty, persistence, order", "Manners seven to nine.", "balance"], ["Repentance and restitution", "The tenth — “the root in being answered.”", "support"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "Two particular askings", formalTitle: "Seeking forgiveness, and blessing on the Messenger",
     overview: "The chapter's title names two forms of asking specially, and each has an excellence section of its own.",
     moves: [
       { title: "Name them", body: "The chapter is titled to include the excellence of seeking forgiveness and the excellence of blessing on the Messenger, alongside the manners of supplication generally." },
@@ -178,7 +198,7 @@ export const book09Chapters: Chapter[] = [
     model: pair("Two askings that are not requests", "Which is why they need their own treatment.", [["Backward", "Seeking forgiveness, for what has been done.", "support"], ["Outward", "Blessing on the Messenger, asked for another.", "support"]]),
   }),
   makeChapter({
-    id: 9, shortTitle: "Three collections", formalTitle: "The transmitted supplications and how they are arranged",
+    id: 10, shortTitle: "Three collections", formalTitle: "The transmitted supplications and how they are arranged",
     overview: "The last three chapters are anthologies, and each is arranged on a different principle — which is the most useful thing to know about them.",
     moves: [
       { title: "The first collection", body: "Supplications transmitted and ascribed to their occasions and their authors — what it is recommended that a person say morning and evening and after each prayer, given with whose supplication each one was." },
@@ -198,7 +218,7 @@ export const book09Chapters: Chapter[] = [
     model: spectrum("Three principles of arrangement", "Each fits a different reader.", [["By occasion and author", "Morning, evening, after prayer — and whose it was.", "support"], ["Selected, chains dropped", "A resource rather than a record.", "balance"], ["By event", "What is said when something happens.", "support"]]),
   }),
   makeChapter({
-    id: 10, shortTitle: "Supplication is a cause", formalTitle: "What asking is for, given the decree",
+    id: 11, shortTitle: "Supplication is a cause", formalTitle: "What asking is for, given the decree",
     overview: "The last thing in the book, and it answers the objection that would make everything before it pointless — in two sentences.",
     moves: [
       { title: "Put the objection", body: "If you say: what is the benefit of supplication, when the decree has no repelling?" },
@@ -266,7 +286,7 @@ export const book09Journeys: Journey[] = [
       node("before-dawn", "Note the hour", "The last third", "Who calls upon Me, that I may answer him.", "The one occasion available every day.", 6, "receive"),
       node("occasion-first", "See why when comes first", "It needs no discernment", "The occasion is entirely controlled and requires no judgement about the request.", "The same reason Book 5 puts timing among its duties.", 6, "clear"),
       node("the-weight", "Find where the weight is", "Lawful, and present", "The outward manners are brief; the inward condition is not.", "The manners are conditions, not levers.", 7, "diagnose"),
-      node("two-that-differ", "Take the two", "Neither is a request", "Seeking forgiveness, and blessing asked for another.", "The two forms hardest to turn into a technique.", 8, "balance"),
+      node("two-that-differ", "Take the two", "Neither is a request", "Seeking forgiveness, and blessing asked for another.", "The two forms hardest to turn into a technique.", 9, "balance"),
     ],
   },
   {
@@ -275,19 +295,32 @@ export const book09Journeys: Journey[] = [
     payoff: "You get the reason a fixed decree and a real request are not competitors.",
     image: assetUrl("assets/system/book09-the-shield.jpg"), imageAlt: "A plain round shield propped against a wall beside an arrow lying on the ground, neither of them damaged.", minutes: 10, color: "#c25f50",
     nodes: [
-      node("the-objection", "Take the objection", "No repelling", "What is the benefit of asking, when the decree has no repelling?", "It would make three chapters of supplications pointless.", 10, "know"),
-      node("among-it", "Take the answer", "Among the decree", "The repelling of affliction by supplication is itself decreed.", "Two sentences, at the very end of the book.", 10, "clear"),
-      node("a-cause", "Name what it is", "A cause", "Placed inside the decree rather than set against it.", "Nothing is altered, and nothing is idle.", 10, "pattern"),
-      node("the-picture", "See what dissolves", "The competition", "The objection assumed two things competing; the answer denies the picture.", "The conclusion is not adjusted, the picture is.", 10, "diagnose"),
-      node("elsewhere", "Follow it out", "Books 35 and 36", "Means do not remove reliance; supplication does not contradict contentment.", "And the one at the highest station prayed constantly.", 10, "steady"),
+      node("the-objection", "Take the objection", "No repelling", "What is the benefit of asking, when the decree has no repelling?", "It would make three chapters of supplications pointless.", 11, "know"),
+      node("among-it", "Take the answer", "Among the decree", "The repelling of affliction by supplication is itself decreed.", "Two sentences, at the very end of the book.", 11, "clear"),
+      node("a-cause", "Name what it is", "A cause", "Placed inside the decree rather than set against it.", "Nothing is altered, and nothing is idle.", 11, "pattern"),
+      node("the-picture", "See what dissolves", "The competition", "The objection assumed two things competing; the answer denies the picture.", "The conclusion is not adjusted, the picture is.", 11, "diagnose"),
+      node("elsewhere", "Follow it out", "Books 35 and 36", "Means do not remove reliance; supplication does not contradict contentment.", "And the one at the highest station prayed constantly.", 11, "steady"),
+    ],
+  },
+  {
+    id: "ten-manners", number: "04", question: "Is there a right way to ask?", title: "The ten manners, and the one that decides it",
+    description: "Timing you can put in a calendar, a warning against the most tempting mistake in the practice, and a tenth manner Ghazali sets apart from the other nine.",
+    payoff: "Nine things you can arrange, and the one thing he says the answer actually turns on.",
+    image: assetUrl("assets/system/book09-ten-manners.jpg"), imageAlt: "Two open empty hands resting palm-up on a plain dark cloth, photographed from above.", minutes: 12, color: "#7a6ca8",
+    nodes: [
+      node("named-times", "Take the calendar", "Arafa, Ramadan, Friday, pre-dawn", "The best time within each unit of time.", "Nested, so the next one is never far.", 6, "order"),
+      node("no-polish", "Take the warning", "Do not craft the phrasing", "Someone asking should sound like someone pleading.", "Composing is the easiest substitution to make.", 7, "guard"),
+      node("no-conditions", "Take the seventh", "Not: forgive me if You will", "Conditional asking protects you from not being answered.", "Ask as though you mean it.", 8, "clear"),
+      node("open-with-god", "Take the ninth", "The request is not the first thing", "He never opened a supplication except with glorification.", "Order, before content.", 8, "steady"),
+      node("the-root", "Take the tenth", "Repentance and restitution", "“The root in being answered” — set apart from the other nine.", "Moses prayed three times and the drought held.", 8, "diagnose"),
     ],
   },
 ];
 
 export const book09Movements: TaxonomyGroup[] = [
   ["bab1", "1. The excellence of remembrance", "The reports, the objection they raise, and what remembrance produces.", [1, 2, 3, 4]],
-  ["bab2", "2. Supplication and its manners", "The verses, ten manners, and the two askings that are not requests.", [5, 6, 7, 8]],
-  ["bab345", "3–5. The collections", "Three anthologies on three principles, and the closing answer about the decree.", [9, 10]],
+  ["bab2", "2. Supplication and its manners", "The verses, all ten manners, and the two askings that are not requests.", [5, 6, 7, 8, 9]],
+  ["bab345", "3–5. The collections", "Three anthologies on three principles, and the closing answer about the decree.", [10, 11]],
 ].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50"][index % 3] })) as TaxonomyGroup[];
 
 export const book09Instrument: Instrument = {
@@ -318,13 +351,13 @@ export const book09Instrument: Instrument = {
         },
       ],
       verdicts: [
-        { key: "unsure|*", name: "Supplication is a cause", role: "support", chapterId: 10, body: "This is the case the last passage of the book was written for, and the answer is two sentences: among the decree is the repelling of affliction by supplication — so supplication is a cause. It is not placed outside the decree and set against it.", action: "Notice what the answer does. Your objection assumed two things competing: something fixed, and a request trying to alter it. Ghazali denies the picture rather than the conclusion — the request is among the things by which what is decreed comes about, so nothing is altered and nothing is idle. Book 36 makes the same point about contentment, and observes that the person at the highest station of it prayed constantly." },
-        { key: "accepting|*", name: "The position Book 36 corrects", role: "balance", chapterId: 10, body: "Ghazali devotes a section elsewhere to exactly this. Supplication does not contradict contentment and does not take its owner out of that station — and he is unusually sharp about the error, calling it ignorance of interpretation to suppose that acceptance rules out asking.", action: "His evidence is the strongest available: the abundance of the Prophet's supplications, and that he was at the highest of the stations of contentment. And the verse praising servants who call upon Him in hope and fear. Acceptance is a state toward what has come; asking is an act commanded within it." },
+        { key: "unsure|*", name: "Supplication is a cause", role: "support", chapterId: 11, body: "This is the case the last passage of the book was written for, and the answer is two sentences: among the decree is the repelling of affliction by supplication — so supplication is a cause. It is not placed outside the decree and set against it.", action: "Notice what the answer does. Your objection assumed two things competing: something fixed, and a request trying to alter it. Ghazali denies the picture rather than the conclusion — the request is among the things by which what is decreed comes about, so nothing is altered and nothing is idle. Book 36 makes the same point about contentment, and observes that the person at the highest station of it prayed constantly." },
+        { key: "accepting|*", name: "The position Book 36 corrects", role: "balance", chapterId: 11, body: "Ghazali devotes a section elsewhere to exactly this. Supplication does not contradict contentment and does not take its owner out of that station — and he is unusually sharp about the error, calling it ignorance of interpretation to suppose that acceptance rules out asking.", action: "His evidence is the strongest available: the abundance of the Prophet's supplications, and that he was at the highest of the stations of contentment. And the verse praising servants who call upon Him in hope and fear. Acceptance is a state toward what has come; asking is an act commanded within it." },
         { key: "*|moments", name: "The one that surprises people", role: "warning", chapterId: 3, body: "Ghazali names this case specifically and gives it the same verdict as the heedless tongue: presence of heart for a moment with the remembrance, and then obliviousness of God while occupied with the world, is also of little avail. Most readers assume this is the good version.", action: "What he puts before the acts of worship is presence of heart with God continually, or in most times — and he says that by it the rest of the acts of worship are ennobled and that it is their utmost fruit. That is a different practice, not a longer one, and the passage on remembrance having a beginning and an end is where he says how it becomes sustainable." },
         { key: "*|tongue", name: "Of little avail", role: "warning", chapterId: 3, body: "His words exactly: as for remembrance with the tongue while the heart is heedless, it is of little avail. This is the answer to the objection his own first chapter raises — the reports credit an act that is not the light one, and the light one is named and set aside.", action: "The repair is not more of it. He identifies what the reports are about as continual remembrance with presence, so the question is where any presence at all is available to you — and the four marked occasions of the second chapter are where the book suggests starting, because timing requires no discernment." },
         { key: "*|none", name: "A starting point", role: "balance", chapterId: 6, body: "There is nothing in the book that treats this as a failure, and its second chapter is built for it. The first two of the ten manners concern occasion rather than content, and occasion is the one variable a person controls entirely without needing any judgement about what he is asking for.", action: "Take the four scales: a day from the year, a month from the months, a day from the week, and the hour before dawn from the night. One occasion at every scale, so that no unit of a calendar is unmarked — and the last of them is available every day. The three collections in the book supply the words." },
         { key: "commanded|most", name: "Both as he describes them", role: "support", chapterId: 3, body: "Asking placed inside worship, which is where the verse puts it — those too proud for My worship will enter Hell abased. And remembrance present through most of the day, which is what he says is put before the acts of worship and by which the rest of them are ennobled.", action: "The passage to sit with is the short one about remembrance having a beginning and an end: its beginning necessitates intimacy and love of God, and its end issues from them. If the practice is holding, that reversal is why — and Book 36 is where the far end of it is treated." },
-        { key: "changing|*", name: "A cause does something", role: "balance", chapterId: 10, body: "Ghazali's answer does not correct you so much as reframe you. Supplication is a cause — which means it does something, and the point of calling it a cause is that causes do not compete with the decree but belong to it.", action: "Where this can go wrong is in treating the manners as levers. His ten are conditions rather than techniques, and the weight in them falls on the request being lawful and the heart present, not on the phrasing — which he specifically warns against elaborating. Book 35's treatment of means is the fuller version of the same point." },
+        { key: "changing|*", name: "A cause does something", role: "balance", chapterId: 11, body: "Ghazali's answer does not correct you so much as reframe you. Supplication is a cause — which means it does something, and the point of calling it a cause is that causes do not compete with the decree but belong to it.", action: "Where this can go wrong is in treating the manners as levers. His ten are conditions rather than techniques, and the weight in them falls on the request being lawful and the heart present, not on the phrasing — which he specifically warns against elaborating. Book 35's treatment of means is the fuller version of the same point." },
         { key: "*|*", name: "Read the two together", role: "balance", chapterId: 1, body: "What you take asking to do, and what your remembrance is like. This book raises exactly two objections and answers both, and between them they cover the two things that stop people practising: not knowing what asking accomplishes, and not believing that something so light could matter.", action: "Take them in the book's own order. The answer about remembrance takes the ease away — the act being credited is continual and present, not light. The answer about the decree gives the ease back — asking is a cause, and causes are not idle. Neither answer is an encouragement, which is why both are worth having." },
       ],
     },

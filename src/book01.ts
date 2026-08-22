@@ -3,7 +3,7 @@ import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
-const bab = (id: number) => (id === 1 ? "the first chapter" : id <= 7 ? "the second and third chapters" : id <= 9 ? "the third chapter" : id <= 12 ? "the fourth chapter" : id <= 14 ? "the fifth chapter" : id === 15 ? "the sixth chapter" : "the seventh chapter");
+const bab = (id: number) => (id === 1 ? "the first chapter" : id <= 7 ? "the second and third chapters" : id <= 9 ? "the third chapter" : id <= 12 ? "the fourth chapter" : id <= 17 ? "the fifth chapter" : id === 18 ? "the sixth chapter" : "the seventh chapter");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
@@ -268,7 +268,7 @@ export const book01Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the analogy is legal rather than poetic", body: "The comparison is to a condition of validity. Ritual purity is not a way of being more prepared for prayer; without it there is no prayer. Ghazali is making the same kind of claim about knowledge, which is far stronger than saying a good character helps a student." },
-      { title: "The other nine", body: "The remaining duties concern reducing attachments, not being arrogant toward the teacher, avoiding the branches of disagreement early on, not neglecting any praiseworthy science, proceeding in order, and knowing why one is learning what one learns. They are practical where the first is constitutive." },
+      { title: "Why this one comes first", body: "The other nine are practical — where to live, how to treat a teacher, what order to study in. This one is constitutive: it says what the studying has to be before any of that applies. The next three sections take the remaining nine in his order." },
     ],
     distinction: ["Two things purification could be", "A condition of validity", "As ritual purity is to prayer, without which there is no prayer at all.", "A helpful preparation", "Good character making study easier, which is not the strength of Ghazali's claim."],
     misreading: "Do not conclude that the unpurified should not study. Ghazali is describing what makes the study count as the worship he says it is, not issuing an entry requirement to a classroom.",
@@ -278,7 +278,67 @@ export const book01Chapters: Chapter[] = [
     model: pair("Two kinds of precondition", "The chapter claims the stronger one.", [["A condition of validity", "No purity, no prayer; the analogy Ghazali actually draws.", "support"], ["A helpful aid", "Good character easing the work, which is the weaker reading.", "balance"]]),
   }),
   makeChapter({
-    id: 14, shortTitle: "Four states of wealth", formalTitle: "The duties of the guiding teacher",
+    id: 14, shortTitle: "Cut, submit, and wait", formalTitle: "The student's second, third, and fourth duties",
+    overview: "Three duties about the student's relationships — to the world, to his teacher, and to controversy — and the third contains the book's most demanding instruction.",
+    moves: [
+      { title: "Second: cut the attachments", body: "Reduce what ties you to the world, and get away from family and home town, because attachments distract and pull you off. His reason is the same verse he uses everywhere: God has not put two hearts inside any man." },
+      { title: "Third: hand over the reins", body: "Do not be arrogant toward the subject or try to give your teacher orders. Hand him the reins of the whole business, in every detail, and take his advice “the way an ignorant patient takes the advice of a kind and skilful doctor.”" },
+      { title: "Give the story attached to it", body: "Zayd b. Thabit had prayed over a funeral and his mule was brought for him. Ibn Abbas came and took hold of the stirrup. Zayd said: let it go, cousin of the Messenger of God. Ibn Abbas said: this is how we were told to treat scholars and elders. So Zayd kissed his hand and said: and this is how we were told to treat the family of our Prophet." },
+      { title: "Fourth: stay out of the arguments at first", body: "A beginner should avoid listening to where people disagree — in any subject, religious or otherwise. Taken early, disagreement does not sharpen the mind; it bewilders it, and the disputes have a way of becoming the subject." },
+    ],
+    closer: [
+      { title: "The line about flattery", body: "“Fawning is not one of a believer's traits — except in seeking knowledge.” Ghazali is aware how much the third duty asks, and rather than softening it he cites a report that carves out an exception precisely here. The submission he wants is a deliberate suspension, not a temperament." },
+      { title: "Why the fourth is about timing, not content", body: "He is not saying disagreement should never be studied — the fourth chapter of this book is entirely about disputation, and he studied it himself. The claim is about sequence: someone who meets a subject through its controversies first learns the controversies, and never gets a settled view of the subject to be controversial about." },
+    ],
+    distinction: ["Two ways to meet a subject", "Through its settled core", "First, until you actually hold a position — and only then the places people differ.", "Through its arguments", "Which is how most people encounter a field, and which teaches the arguments rather than the field."],
+    misreading: "The third duty is not blanket obedience to anyone teaching anything. It describes a relationship the student has chosen, in a subject he came to learn, and Ghazali's own fifth chapter puts heavy duties on the teacher in return.",
+    reflection: "Ask whether you learned your last subject from its middle or from its edges.",
+    audit: ["What is tying me down?", "Could I take correction from anyone?", "Did I start with the arguments?", "Have I ever suspended my judgement on purpose?"],
+    nodes: ["adab", "muta", "qalb"],
+    model: chain("Three relationships to get right", "In Ghazali's order.", [["To the world", "Fewer attachments; they distract and divert.", "support"], ["To the teacher", "The reins handed over, like a patient to a doctor.", "balance"], ["To controversy", "Not yet — it bewilders before it sharpens.", "warning"]]),
+  }),
+  makeChapter({
+    id: 15, shortTitle: "A sniff of everything", formalTitle: "The student's fifth, sixth, and seventh duties",
+    overview: "The curriculum duties, and they answer a problem every reader has: there is more worth knowing than one life holds.",
+    moves: [
+      { title: "Fifth: look into everything", body: "Do not leave out any worthwhile branch of knowledge, or any kind of it, without looking far enough into it to see what it is for and where it is going. The point is a map, not mastery." },
+      { title: "Sixth: begin with what matters most", body: "Do not plunge into a subject all at once — keep to an order, and start with the most important. Then the reason: “since a lifetime will usually not stretch to all the sciences, the prudent thing is to take the best of each, be content with a sniff of it, and pour the bulk of your strength into completing the noblest one.”" },
+      { title: "Name the noblest", body: "Which for him is the knowledge of the next life, in its two halves: practice and unveiling. The aim of practice is unveiling, and the aim of unveiling is knowing God — and he is careful to say he does not mean the belief an ordinary person picks up by inheritance, nor the technique of fortifying arguments against an opponent's evasions, which is what a theologian is after." },
+      { title: "Seventh: finish before moving on", body: "Do not start one subject until you have finished the one before it, because the sciences are ordered by necessity and some are the road to others." },
+    ],
+    closer: [
+      { title: "Why the fifth and sixth are not in tension", body: "Look into everything, but go deep in one. They fit because they are answering different questions. Breadth tells you what a field is for, which is what lets you judge whether it is yours; depth is what you spend the remaining time on. The sniff is not a failure of seriousness — it is what makes the choice of the serious thing informed." },
+      { title: "The honest premise underneath", body: "“A lifetime will usually not stretch to all the sciences.” The whole curriculum follows from taking that seriously rather than pretending otherwise. Most advice about study assumes unlimited time and then produces guilt; this assumes a budget and produces an order." },
+    ],
+    distinction: ["Two responses to there being too much", "Map broadly, dig in one place", "A sniff of each, to know what it is for, and the bulk of the strength on the noblest.", "Try to cover it", "Which the premise about a lifetime rules out, and which produces breadth without a centre."],
+    misreading: "The sniff is not permission to be shallow everywhere. It is explicitly paired with completing one thing, and the sixth duty exists to name which thing.",
+    reflection: "Name the subject you are pouring the bulk of your strength into, and check that you chose it rather than drifted into it.",
+    audit: ["What am I going deep in?", "Did I choose it?", "What have I never even sniffed?", "Am I finishing things before starting others?"],
+    nodes: ["adab", "tartib", "ilm"],
+    model: spectrum("The shape of a curriculum", "Breadth and depth doing different jobs.", [["A sniff of each", "Enough to see what it is for.", "balance"], ["Order by importance", "Because the lifetime will not stretch.", "support"], ["One thing completed", "The bulk of the strength goes here.", "support"]]),
+  }),
+  makeChapter({
+    id: 16, shortTitle: "Why this one", formalTitle: "The student's eighth, ninth, and tenth duties",
+    overview: "The last three duties are all about aim: how to rank a subject, what you are studying for now, and what you are studying for in the end.",
+    moves: [
+      { title: "Eighth: how to rank a subject", body: "Know what actually makes one science nobler than another, and he says it comes to two things: the value of what it yields, and the soundness and strength of its evidence." },
+      { title: "Work the test", body: "Two criteria, and they can pull apart. A subject can produce something valuable on weak grounds, or something trivial on unshakeable ones. Ghazali's example elsewhere is the contrast between religious knowledge and arithmetic — one has the higher fruit, the other the firmer proof — which is why he gives two measures rather than one." },
+      { title: "Ninth: what you are studying for now, and later", body: "The learner's aim right now should be to adorn his inward with what is good; and in the end, nearness to God and rising toward the highest company. Two horizons, held together." },
+      { title: "Tenth: know how each subject relates to the aim", body: "So that you prefer the high and near over the distant, and the important over the rest. And then the definition, which is disarmingly plain: “what is important means whatever matters to you.”" },
+    ],
+    closer: [
+      { title: "Why the tenth is not circular", body: "It looks like it says nothing — study what matters, and what matters is what matters to you. But read against the ninth it is doing real work: the ninth has just fixed the aim as adorning the inward and drawing near, so “what matters to you” has already been given a content. The tenth is asking you to check each subject against an aim you have actually named." },
+      { title: "What the ten add up to", body: "Purify first, cut the attachments, submit to a teacher, stay out of the arguments, survey everything, start with the most important, finish before moving on, learn how to rank, know what you want, and check each subject against it. It is a complete account of how to study — and Ghazali is describing it as an act of worship throughout, which is why the first duty was about character rather than about books." },
+    ],
+    distinction: ["Two ways to rate a subject", "By its fruit", "What it actually yields — which can be high even where the proofs are weaker.", "By its proof", "How firm the evidence is — which can be unshakeable for something small."],
+    misreading: "Do not read the two criteria as a ranking he then applies mechanically. He gives them precisely because they can disagree, and the judgement is left with the student.",
+    reflection: "Take the subject you spend most time on and score it honestly on both criteria.",
+    audit: ["What does this yield?", "How firm is its evidence?", "What am I adorning?", "Does this subject serve the aim I named?"],
+    nodes: ["adab", "ilm", "niyya"],
+    model: pair("Two measures of a science", "Given as two because they can pull apart.", [["The value of the fruit", "What the knowledge actually produces.", "support"], ["The strength of the proof", "How firmly it is established.", "support"]]),
+  }),
+  makeChapter({
+    id: 17, shortTitle: "Four states of wealth", formalTitle: "The duties of the guiding teacher",
     overview: "The chapter on teaching opens with an economic analogy, and it produces both a ranking and one of the most quoted set of images in the Ihya.",
     moves: [
       { title: "Give the analogy", body: "A person has four states in his knowledge, as he has in acquiring wealth. The owner of wealth has a state of gaining, so he is an earner; a state of storing what he gained, so he is free of asking; a state of spending on himself, so he benefits; and a state of giving to others, so he is generous — and that is the noblest of his states." },
@@ -298,7 +358,7 @@ export const book01Chapters: Chapter[] = [
     model: chain("Four states", "The last is named the noblest.", [["Gaining", "Seeking and acquiring, as an earner does.", "balance"], ["Storing", "Obtaining enough to be free of asking.", "balance"], ["Using", "Insight: thought about what is held, and enjoyment of it.", "support"], ["Giving", "Giving insight to others, which is the noblest of the states.", "support"]]),
   }),
   makeChapter({
-    id: 15, shortTitle: "Two knowledges", formalTitle: "The signs of the scholars of the hereafter and the evil scholars",
+    id: 18, shortTitle: "Two knowledges", formalTitle: "The signs of the scholars of the hereafter and the evil scholars",
     overview: "By a wide margin the longest chapter in the book, and the fiercest sustained passage in the Ihya about a class of people.",
     moves: [
       { title: "State why the chapter exists", body: "Severe warnings have come concerning the evil scholars, showing that they are the most severely punished of creation on the Day of Resurrection. So among the great and important matters is knowing the signs that distinguish the scholars of this world from the scholars of the hereafter." },
@@ -318,7 +378,7 @@ export const book01Chapters: Chapter[] = [
     model: pair("Sorted by aim, not by accuracy", "A scholar of this world may be entirely correct.", [["Of the hereafter", "Knowledge in the heart, and acted upon.", "support"], ["Of this world", "Sought for enjoyment, status, and rank among the world's people.", "warning"]]),
   }),
   makeChapter({
-    id: 16, shortTitle: "One name, four meanings", formalTitle: "The intellect, its nobility, its reality, and its divisions",
+    id: 19, shortTitle: "One name, four meanings", formalTitle: "The intellect, its nobility, its reality, and its divisions",
     overview: "The closing chapter, and it ends the book the way the book began: by showing that a dispute is really about a word.",
     moves: [
       { title: "Diagnose the disagreement", body: "People differed over the definition of the intellect and its reality, and most of them were unaware that this name is applied to different meanings — and that became the cause of their disagreement." },
@@ -430,10 +490,24 @@ export const book01Journeys: Journey[] = [
     nodes: [
       node("the-condition", "Take the condition", "As purity is to prayer", "Not preparation but validity; without it there is no prayer at all.", "Far stronger than saying good character helps.", 13, "know"),
       node("inward-impurity", "Widen purity", "Clean of garment only", "An idolater may be washed and still impure in substance.", "Impurity names what is to be kept away from.", 13, "clear"),
-      node("four-states", "Place yourself", "Gain, store, use, give", "Giving insight is named the noblest of the four.", "Most people mistake storing for having.", 14, "pattern"),
-      node("sun-and-wick", "Take the images", "Light or burn", "The sun is alight while it lights; the wick gives light while it burns.", "Every image grants that others are genuinely benefited.", 14, "witness"),
-      node("two-knowledges", "Separate the two", "Tongue or heart", "Knowledge on the tongue is God's proof against His creation.", "Not called empty — called evidence, and not in your favour.", 15, "diagnose"),
-      node("by-aim", "Note the sorting", "Not by accuracy", "A scholar of this world may be entirely correct in what he teaches.", "And every sign is one you can only check on yourself.", 15, "guard"),
+      node("four-states", "Place yourself", "Gain, store, use, give", "Giving insight is named the noblest of the four.", "Most people mistake storing for having.", 17, "pattern"),
+      node("sun-and-wick", "Take the images", "Light or burn", "The sun is alight while it lights; the wick gives light while it burns.", "Every image grants that others are genuinely benefited.", 17, "witness"),
+      node("two-knowledges", "Separate the two", "Tongue or heart", "Knowledge on the tongue is God's proof against His creation.", "Not called empty — called evidence, and not in your favour.", 18, "diagnose"),
+      node("by-aim", "Note the sorting", "Not by accuracy", "A scholar of this world may be entirely correct in what he teaches.", "And every sign is one you can only check on yourself.", 18, "guard"),
+    ],
+  },
+  {
+    id: "how-to-study", number: "06", question: "How should I actually go about learning?", title: "The student's ten duties",
+    description: "Ghazali's complete account of how to study — what has to be true of you first, how to treat a teacher, and how to plan a curriculum against a lifetime that will not stretch to everything.",
+    payoff: "An order of operations for learning anything, and a two-part test for deciding what is worth your depth.",
+    image: assetUrl("assets/system/book01-ten-duties.jpg"), imageAlt: "A stack of closed books on a plain desk beside a single sharpened reed pen, nothing open and nothing in use.", minutes: 13, color: "#7a6ca8",
+    nodes: [
+      node("purify-first", "Take the first", "Character before books", "Knowledge is the heart's worship, so the heart has to be clean.", "A condition of validity, not a helpful extra.", 13, "clear"),
+      node("hand-the-reins", "Take the third", "Like a patient to a doctor", "Hand the teacher the reins in every detail.", "A deliberate suspension, not a temperament.", 14, "assent"),
+      node("not-yet", "Take the fourth", "Stay out of the arguments", "Disagreement bewilders a beginner before it sharpens him.", "About sequence, not about content.", 14, "guard"),
+      node("a-sniff", "Take the sixth", "A sniff of each, depth in one", "A lifetime will not stretch to all the sciences.", "The sniff is what makes the deep choice informed.", 15, "order"),
+      node("two-measures", "Take the eighth", "Fruit, and proof", "What it yields, and how firm its evidence is.", "Two measures, because they can disagree.", 16, "diagnose"),
+      node("what-matters", "Take the tenth", "What matters to you", "Check each subject against an aim you have actually named.", "Not circular — the ninth already fixed the aim.", 16, "know"),
     ],
   },
 ];
@@ -443,9 +517,9 @@ export const book01Movements: TaxonomyGroup[] = [
   ["bab2", "2. The two obligations", "Twenty parties, the act and its time, the heart, the cupper, and the measure.", [2, 3, 4, 5, 6, 7]],
   ["bab3", "3. What is wrongly counted as religious", "Five praised names and what became of them.", [8, 9]],
   ["bab4", "4. The blights of disputation", "Why people turned to it, what it breeds, and when it is permitted.", [10, 11, 12]],
-  ["bab5", "5. The etiquette of student and teacher", "A condition of validity, and four states of knowledge.", [13, 14]],
-  ["bab6", "6. The blights of the scholars", "The longest chapter, sorting by aim rather than by accuracy.", [15]],
-  ["bab7", "7. The intellect", "One name over four meanings, and a dispute dissolved.", [16]],
+  ["bab5", "5. The etiquette of student and teacher", "All ten duties of the student, and four states of knowledge in the teacher.", [13, 14, 15, 16, 17]],
+  ["bab6", "6. The blights of the scholars", "The longest chapter, sorting by aim rather than by accuracy.", [18]],
+  ["bab7", "7. The intellect", "One name over four meanings, and a dispute dissolved.", [19]],
 ].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50", "#586fa8", "#a97837"][index % 5] })) as TaxonomyGroup[];
 
 export const book01Instrument: Instrument = {

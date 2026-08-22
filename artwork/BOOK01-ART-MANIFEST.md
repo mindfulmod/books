@@ -48,3 +48,20 @@ Alt text is already written into `src/book01.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** A single lamp burning on a broad table, its light reaching an open book, the wick visibly shortened.
 - **Argument it carries** A wick that was kindled: it gives light to people while it burns. The light must genuinely reach the book and the page must be legible — the benefit to others is real, and that is what makes the image a warning rather than a dismissal. The shortened wick is the whole plate; keep it visible without making it the subject.
+
+---
+
+## ADDED 2026-08-22 — journey 06 plate (not yet generated)
+
+### `assets/system/book01-ten-duties.jpg` (+ `-thumb.jpg`)
+
+**Journey 06 — "The student's ten duties"**
+A stack of closed books on a plain desk beside a single sharpened reed pen.
+Nothing open, nothing mid-use, no chair pulled out, no figure. Even side light.
+
+Carries: the ten duties are about what has to be true *before* and *around* the
+studying — character, attachments, a teacher, an order. The plate should read
+as preparation, not as work in progress. If anything is open it reads as
+studying and the point is lost.
+
+Colour anchor: `#7a6ca8`.
