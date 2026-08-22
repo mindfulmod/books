@@ -63,14 +63,14 @@ export const book31Chapters: Chapter[] = [
     id: 1, shortTitle: "Knowledge, regret, act", formalTitle: "The reality of repentance and its definition",
     overview: "Ghazali opens the Quarter of Deliverance by defining repentance as a compound rather than a feeling. It is three ordered things, and the order is causal: the first necessitates the second and the second the third.",
     moves: [
-      { title: "Begin with knowledge", body: "Knowing the great harm of sins, and that they are a veil between the servant and everything he loves. By knowledge here Ghazali means faith and certainty: faith that sins are destroying poisons, and certainty that the affirmation is firm, free of doubt, and dominant in the heart." },
+      { title: "Begin with knowledge", body: "Knowing how much damage sins do, and that they stand between you and everything you love. By knowing, Ghazali means belief plus certainty: believing that sins are poison, and being certain enough that the belief is firm, free of doubt, and running the show." },
       { title: "The state that follows", body: "When that knowledge is realised, a pain arises in the heart at the loss of what it loves. Where the loss came about by the person's own act, the pain attaches to the act, and pain at one's own act for having lost one's beloved is what the word regret means." },
       { title: "The act that follows the state", body: "When that pain dominates, a will arises toward action, and the action faces three ways at once: toward the present, by leaving the sin he is engaged in; toward the future, by resolving to leave it to the end of his life; and toward the past, by repairing what was lost, where it admits of repair." },
       { title: "Say why the order matters", body: "The three are ordered in their occurrence, and the name repentance is applied to the whole. Removing the first leaves a remorse without diagnosis; removing the third leaves a feeling that changed nothing." },
     ],
     closer: [
       { title: "Why regret alone is sometimes called repentance", body: "The report that regret is repentance names the middle term for the whole, because regret never lacks the knowledge that produced it nor the resolve that follows it. Ghazali's phrase is that regret is flanked by its two sides, its fruit and what fruited it." },
-      { title: "The image he gives", body: "One who has been in darkness when the sun's light breaks on him, a cloud parting or a veil drawn back, and he sees the thing he loves on the brink of destruction; the fires of love blaze in his heart and drive him to rise and rescue it. The light is the knowledge and the blaze is the regret." },
+      { title: "The image he gives", body: "Picture somebody in the dark when sunlight suddenly breaks over him — a cloud parting, a curtain pulled back — and he sees the thing he loves about to be destroyed. Love flares up in him and gets him on his feet to save it. The light is the knowing; the flare is the regret." },
     ],
     distinction: ["Two things called repentance", "The compound", "Knowledge produces regret, regret produces an act facing present, future, and past.", "The feeling alone", "Regret is present and neither the diagnosis behind it nor the action after it has arrived."],
     misreading: "Do not conclude that a person must feel a particular intensity for repentance to count. What Ghazali specifies is a structure with three parts, not a measure of emotion.",
@@ -124,7 +124,7 @@ export const book31Chapters: Chapter[] = [
     overview: "Ghazali argues that repentance is owed at once rather than at some point, and the argument matters because deferral is the ordinary form of refusal. Almost nobody declines to repent; a great many intend to later.",
     moves: [
       { title: "State the claim", body: "The obligation falls due immediately, not at leisure, and delay is itself a further matter rather than a neutral interval." },
-      { title: "Give the reason from the nature of sin", body: "If sins are a veil between the servant and everything he loves, then every hour of delay is an hour of that separation chosen knowingly, which is a different thing from the original fall." },
+      { title: "Give the reason from the nature of sin", body: "If sins stand between you and everything you love, then every hour you put it off is an hour of that separation chosen deliberately — which is a different thing from the original slip." },
       { title: "Name the mechanism of delay", body: "Deferral works by keeping the intention alive while never letting it become the act. Ghazali returns to this at the end of the book as the knot that the whole fourth pillar exists to untie." },
       { title: "Close the exit", body: "The person who intends to repent later is not in a neutral state. He is persisting, with an intention attached, and the intention is what makes the persistence tolerable to him." },
     ],
@@ -152,7 +152,7 @@ export const book31Chapters: Chapter[] = [
       { title: "Why universality is argued and not assumed", body: "Because the natural reading of the first two sections is that repentance is for those with something obvious to repent of. Ghazali forecloses that by making it a standing condition of being a servant rather than a response to an incident." },
       { title: "How this connects to Book 29", body: "The argument is the same one that dissolves pride there: certainty about one's own standing is unavailable, so security is not a position anyone occupies. Here that unavailability produces a continual return rather than a continual fear." },
     ],
-    distinction: ["Two readings of who repentance is for", "A standing condition", "It belongs to being a servant, and applies in every state and at every rank.", "An occasional response", "It belongs to incidents, and a person without a recent incident has nothing to do."],
+    distinction: ["Two readings of who repentance is for", "A standing condition", "It comes with being human, and it applies in every condition and at every level.", "An occasional response", "It belongs to incidents, and a person without a recent incident has nothing to do."],
     misreading: "Do not read universality as a claim that everyone is equally at fault. What is universal is the obligation, not the content, and the second pillar is entirely about how the content differs.",
     reflection: "Ask what you would repent of if you accepted that there is always something. The speed of the answer is informative either way.",
     audit: ["Do I think of repentance as an event or a condition?", "When did I last repent without an obvious occasion?", "What do I consider myself past?", "What does my present rank actually exempt me from?"],
@@ -183,7 +183,7 @@ export const book31Chapters: Chapter[] = [
     id: 7, shortTitle: "Sorting the sins", formalTitle: "The divisions of sins in relation to the servant's attributes",
     overview: "The second pillar turns to what is repented from. Ghazali sorts sins by the human attribute they arise from, which produces a classification useful for treatment rather than merely for description.",
     moves: [
-      { title: "Sort by source, not by severity", body: "The division is made according to the attributes of the servant from which the sins issue, which connects this book directly to the anatomy of the heart's forces in Book 21." },
+      { title: "Sort by source, not by severity", body: "He sorts them by which of a person's own traits the sins come out of, which wires this book straight into the anatomy of the heart's forces in Book 21." },
       { title: "Show why the sorting matters", body: "Sins arising from different attributes need different treatments, since each is cured by opposing its own cause. A classification by outward severity would not tell a person what to do." },
       { title: "Separate the two directions of a sin", body: "Ghazali distinguishes what pertains to the rights of God from what pertains to the rights of other people, a distinction the third pillar depends on entirely." },
       { title: "Keep the purpose in view", body: "The anatomy exists so that a person can locate his own case. The pillar closes by asking what makes a small sin great, which is a question about a particular person's particular act." },
@@ -249,8 +249,8 @@ export const book31Chapters: Chapter[] = [
       { title: "Open display, and being followed", body: "Committing it openly is a further magnification. And the sin of one whose example is taken is multiplied through those who take it: the slip of a scholar is like the breaking of a ship, which sinks and drowns those aboard." },
     ],
     closer: [
-      { title: "The proportion to knowledge", body: "A sin grows in proportion to the knowledge of the one committing it, so what is grave from the learned is not grave from the ignorant, and what is overlooked in an ordinary person is not overlooked in one who knows. The revelation quoted puts it as: do not look at the smallness of the offence, look at the majesty of the One you confronted with it." },
-      { title: "The Israelite scholar", body: "One who had led people astray by an innovation repented and worked at reform for an age, and the revelation came: if your sin were between Me and you I would forgive it, but what of those of My servants whom you misled? Ghazali draws two duties from it for anyone followed, leaving the sin and concealing it." },
+      { title: "The proportion to knowledge", body: "A sin gets heavier the more the person committing it knows. What is serious from a scholar is not serious from someone ignorant, and what gets overlooked in an ordinary person does not get overlooked in someone who knows better. The line quoted puts it: do not look at how small the offence was, look at who you did it in front of." },
+      { title: "The Israelite scholar", body: "A man who had led people astray with some novelty repented and spent years putting things right. The answer came: if your sin were between Me and you, I would forgive it — but what about the people you misled? Ghazali gets two duties out of that for anybody with followers: stop, and stop being seen doing it." },
     ],
     distinction: ["Two things a small sin can be", "An incident", "It happened, was seen as harmful, was disliked, and did not recur.", "A condition", "It persists, is thought little of, is enjoyed, and its mark deepens with each repetition."],
     misreading: "Do not use the list to conclude that your own small sins are already great, or that another's are. It is an enumeration of what to remove, and each item removed is a real reduction.",
@@ -281,7 +281,7 @@ export const book31Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 12, shortTitle: "What is owed to people", formalTitle: "Expiation, and making up what was taken from others",
-    overview: "The pillar's hardest material. Repentance settles what stands between the servant and God on the terms already given; it does not settle what is owed to other people, and Ghazali is unsparing about the difference.",
+    overview: "The hardest part of this pillar. Repentance settles what is between you and God on the terms already set out. It does not settle what you owe other people, and Ghazali does not soften the difference.",
     moves: [
       { title: "State the asymmetry", body: "What pertains to God's right is discharged by the return. What pertains to a person's right is not, and remains owed after the repentance is otherwise complete." },
       { title: "Describe the work required", body: "The wrongs are to be taken one by one, and the person is to search out those wronged through the regions of the world, seek their release, or repay them." },
@@ -310,7 +310,7 @@ export const book31Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the cases are worth the space", body: "They are the cases readers actually occupy. Almost nobody repents of everything at once, and a treatment that only addressed total repentance would leave the ordinary situation unaddressed." },
-      { title: "The question about the impotent man", body: "Whether one who has lost the capacity can repent of what he did with it is asked directly, and it isolates the issue: whether repentance is a change in the will or merely the cessation of the act." },
+      { title: "The question about the impotent man", body: "He asks directly whether somebody who has lost the capacity can repent of what he did with it — which isolates the real question: is repentance a change in what you want, or just the act stopping?" },
     ],
     distinction: ["Two reasons a sin has stopped", "The will turned", "The person no longer wills it, and would not resume if he could.", "The capacity went", "The act ceased because it became impossible, and the will was never addressed."],
     misreading: "Do not conclude that partial repentance is worthless, or that it is sufficient. Ghazali's point is that it is real, and the pillar on permanence is what it has to grow into.",
@@ -323,7 +323,7 @@ export const book31Chapters: Chapter[] = [
     id: 14, shortTitle: "Four kinds of returning", formalTitle: "The classes of servants in the permanence of repentance",
     overview: "Ghazali sorts the repentant into four ranks, and names each with the Quranic name of the soul in that condition. This is the section that connects the book back to the anatomy of Book 21.",
     moves: [
-      { title: "The first class", body: "One who repents and stays upright to the end of his life, makes up what he neglected, and does not speak to himself of returning, apart from the slips no human is free of. This is the repentance called sincere, and this soul is the tranquil soul that returns to its Lord well pleased." },
+      { title: "The first class", body: "Somebody who repents and stays straight for the rest of his life, makes up what he let slide, and never talks to himself about going back — apart from the slips nobody is free of. This is what gets called sincere repentance, and this is the settled soul that returns to its Lord content." },
       { title: "The second class", body: "One who travels the road of uprightness in the main obediences and leaves all the great enormities, but is not free of sins that befall him, not deliberately and without a formed prior resolve; and whenever he falls he blames himself, regrets, grieves, and renews his resolve. This is the reproachful soul." },
       { title: "The third class", body: "One who repents, holds for a time, then is overcome in one or two appetites deliberately, while still keeping to the obediences and leaving much that he could do; afterwards he regrets and says he will repent and struggle, and his soul makes it fair to him and he defers day after day. This is the soul that makes things fair to itself." },
       { title: "The fourth class", body: "One who returns and does not regret, and here the deferral has stopped even pretending. This is the soul commanding to evil, and Ghazali places it outside the classes of the repentant proper." },

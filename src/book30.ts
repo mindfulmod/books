@@ -85,7 +85,7 @@ export const book30Chapters: Chapter[] = [
       { title: "Name the general mechanism", body: "The delusion arises from accepting a familiar general saying that was uttered with a particular meaning intended. Whoever says cash is better than credit means better than a credit like it, though he does not say so, and the deluded is heedless of the qualification." },
     ],
     closer: [
-      { title: "The wager", body: "Ali's answer to one who denied the hereafter is given as an argument fitted to the man's own reasoning: if what you said is true, you have escaped and so have we; if what we said is true, we have escaped and you have perished. The reasoning behind it is that the days of patience are few, and one who was in non-existence for an eternity without enjoying it loses only enjoyment if the reports are false." },
+      { title: "The wager", body: "Ali answered a man who denied the next life on the man's own terms: if you are right, you got away with it and so did we; if we are right, we got away with it and you did not. The reasoning underneath is that the days of holding back are few, and somebody who spent an eternity not existing, and enjoyed none of it, loses nothing but some enjoyment if the reports turn out to be false." },
       { title: "Why this belongs at the front", body: "Every later class in the book is diagnosed the same way. Ghazali does not merely say that the scholar or the worshipper is deluded; he reconstructs the syllogism each one is running and shows which premise is doing the illegitimate work." },
     ],
     distinction: ["Two ways to answer a delusion", "By assent", "The person accepts the truthful report without demanding the demonstration, which is enough to leave the delusion.", "By demonstration", "The person locates the false premise in the argument he was actually running, which also protects him against its variants."],
@@ -125,10 +125,10 @@ export const book30Chapters: Chapter[] = [
       { title: "Give the general argument", body: "If love passed from father to child, hatred would pass as well. The truth is that no bearer of burdens bears another's, and God-consciousness is an individual obligation in which no parent avails a child, nor a child a parent." },
     ],
     closer: [
-      { title: "The line that settles it", body: "Whoever supposes he is saved by his father's God-consciousness is like one who supposes he will be filled by his father's eating, quenched by his father's drinking, learned by his father's studying, and that he will reach the Kaaba and see it by his father's walking." },
+      { title: "The line that settles it", body: "Anyone who thinks his father's piety will save him is like a man who thinks his father's eating will fill him, his father's drinking will quench him, his father's studying will make him learned, and his father's walking will get him to the Kaaba and let him see it." },
       { title: "The place of intercession", body: "Ghazali does not deny intercession. He distinguishes sins for which it is permitted from those that incur wrath, and treats reliance on it while abandoning God-consciousness as a separate error, handled at length in the previous book." },
     ],
-    distinction: ["Two things a lineage can be", "An inheritance of conduct", "The ancestors' fear, scrupulousness, and humility are taken up and practised.", "An inheritance of standing", "The ancestors' rank is treated as a possession that transfers without their conduct."],
+    distinction: ["Two things a lineage can be", "An inheritance of conduct", "The ancestors' fear, scrupulousness, and humility are taken up and practised.", "An inheritance of standing", "The ancestors' standing gets treated as property that passes down without any of the behaviour that earned it."],
     misreading: "Do not read this as contempt for lineage, teachers, or communities of good people. The argument is about what such a connection can and cannot do in place of a person's own action.",
     reflection: "Name the group, teacher, or family whose standing you quietly rely on, then name one practice of theirs you have not taken up.",
     audit: ["Whose righteousness am I resting on?", "Which of their practices have I actually adopted?", "Would I still feel safe without the association?", "What am I expecting to be excused, and on what basis?"],
@@ -161,7 +161,7 @@ export const book30Chapters: Chapter[] = [
     moves: [
       { title: "Name the four classes", body: "The scholars, the worshippers, the Sufis, and the possessors of wealth. He chooses these because each begins from something genuinely good, which is what makes the delusion available." },
       { title: "List the mechanisms", body: "Seeing the reprehensible as good; failing to distinguish what one does for oneself from what one does for God; leaving the more important for the less; leaving the obligatory for the supererogatory; and leaving the kernel for the husk." },
-      { title: "Give the examples he attaches", body: "One who builds a mosque and gilds it from unlawful wealth; a preacher whose aim is acceptance and standing; and one whose concern in prayer is confined to correcting the articulation of letters." },
+      { title: "Give the examples he attaches", body: "A man who builds a mosque and gilds it with money he should not have; a preacher who is after approval and standing; someone whose entire concern in prayer is getting the letters pronounced correctly." },
       { title: "State the method", body: "The instances exceed counting, so he offers examples that make an exhaustive account unnecessary, and asks the reader to learn the mechanism rather than memorise the list." },
     ],
     closer: [
@@ -182,10 +182,10 @@ export const book30Chapters: Chapter[] = [
       { title: "Separate the two sciences", body: "There is the knowledge of practice, which is the lawful and unlawful and the treatment of the soul's traits, and the knowledge of unveiling. The first is wanted only for action, and any knowledge wanted for action has no value without it." },
       { title: "Give the prescription", body: "A man is ill with a condition only a compound remedy will cure. He leaves his homeland, finds a skilled physician, learns the ingredients, quantities, sources, and preparation, writes a fine copy, returns, repeats it and teaches it to the sick. A thousand copies and a thousand cured patients do not relieve his own illness." },
       { title: "Quote the criterion", body: "He has prospered who purifies it. It does not say: he has prospered who learned how to purify it, wrote the knowledge down, and taught it to people." },
-      { title: "Answer Satan's objection", body: "Satan replies that knowledge itself draws reward, and recites the merits of learning. Ghazali's answer is that the one who reported the merit of knowledge also reported the state of the corrupt scholar, and that the same source cannot be trusted for one half and ignored for the other." },
+      { title: "Answer Satan's objection", body: "Satan comes back with: knowledge is rewarded in itself — and reels off the merits of learning. Ghazali's answer: whoever reported the merits of knowledge also reported what happens to the corrupt scholar, and you cannot trust one half of a source and ignore the other." },
     ],
     closer: [
-      { title: "The claimants of gnosis", body: "Those who claim knowledge of God and His attributes while neglecting the command are worse, and the analogy is a man who would serve a king and learns his colour, shape, height, lineage, and habits, but not what pleases and angers him; or knows, and arrives covered in everything the king hates. Whoever knows a lion fears it; one who knows only its colour and its name has not known the lion." },
+      { title: "The claimants of gnosis", body: "The people who claim to know God and His attributes while ignoring what He asked are worse. Picture a man who wants to serve a king and learns his colouring, his build, his height, his family and his habits — but not what pleases or angers him. Or who does know, and turns up covered in everything the king hates. Anyone who knows a lion is afraid of it. Somebody who knows only its colour and its name has not met the lion." },
       { title: "Hasan's definition", body: "Asked about a ruling and told that the jurists say otherwise, he answered by asking whether the questioner had ever seen a jurist: the jurist stands the night, fasts the day, and is detached from the world." },
     ],
     distinction: ["Two things learning can be", "A means", "It is acquired for the sake of the action it makes possible, and is completed by that action.", "A destination", "It is acquired, refined, and transmitted as the achievement itself, which is where the delusion begins."],
@@ -197,7 +197,7 @@ export const book30Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 8, shortTitle: "Weeds cut at the top", formalTitle: "The second class: outward action without the heart",
-    overview: "This group mastered knowledge and practice both, held to the outward acts of obedience, and abandoned the outward sins. What they did not do was inspect the heart, so the traits that plant the sins remained in place while the visible growth was repeatedly trimmed.",
+    overview: "These people had both the knowledge and the practice. They kept up the visible obedience and dropped the visible sins. What they never did was look inside — so the traits that grow the sins stayed exactly where they were while the visible growth kept getting trimmed back.",
     moves: [
       { title: "Name what was left", body: "Pride, envy, ostentation, the desire for leadership and elevation, wishing ill upon peers, and seeking fame among people. Some did not know these were blameworthy at all." },
       { title: "Give the governing image", body: "A man weeds a crop by cutting the tops and the ends of the weeds rather than pulling them from the root, so the roots strengthen and the growth returns, because the planting-beds of the sins are the blameworthy traits in the heart." },
@@ -205,7 +205,7 @@ export const book30Chapters: Chapter[] = [
       { title: "Give the medical form", body: "A patient with scabies is given an ointment for the surface and a draught to cut the matter at its source. He is content with the ointment, abandons the draught, and continues taking what increases the matter, so he keeps painting the surface while the eruption continues from within." },
     ],
     closer: [
-      { title: "The verse behind it", body: "God does not look at your forms or your wealth; He looks at your hearts and your deeds. They tended the deeds and did not tend the hearts, and the heart is the root, since none is saved but one who comes to God with a sound heart." },
+      { title: "The verse behind it", body: "God does not look at your appearance or your wealth; He looks at your hearts and your actions. They tended the actions and not the hearts — and the heart is the root, since nobody is saved except someone who comes to God with a sound one." },
       { title: "Why this class is hard to see", body: "Every visible measure returns a good result. The person is doing the acts, avoiding the sins, and the failure is located precisely where no observer, including himself, is currently looking." },
     ],
     distinction: ["Two ways of removing a fault", "At the root", "The trait that produces the acts is treated, after which the acts stop returning.", "At the surface", "The visible act is removed while the trait remains, so the removal has to be repeated indefinitely."],
@@ -217,7 +217,7 @@ export const book30Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 9, shortTitle: "Zeal for religion", formalTitle: "The third class: exempting oneself, and relabelling the fault",
-    overview: "This group knew that the inward traits are blameworthy and supposed themselves free of them, holding that God tries the common people with such things and not those who have reached their rank in learning. Ghazali's treatment of them supplies the sharpest diagnostic instrument in the book.",
+    overview: "These people knew the inward traits were bad and assumed they did not have them — taking the view that God tests ordinary people with that sort of thing, not men who have got as far in learning as they have. Ghazali's handling of them produces the sharpest test in the book.",
     moves: [
       { title: "Name the exemption", body: "They believed themselves too elevated to be tried by pride, envy, and display, so they stopped looking. The conceit that produced the exemption also concealed it." },
       { title: "Record the relabelling", body: "When the marks of pride appeared they said: this is not pride but seeking the honour of religion and manifesting the nobility of knowledge and defeating the innovators; if I wore poor clothing my enemies would gloat, and my humiliation would be a humiliation of Islam." },
@@ -241,7 +241,7 @@ export const book30Chapters: Chapter[] = [
     moves: [
       { title: "Give the refined image", body: "A man weeding a crop searches out every weed he sees and pulls it, but does not search for what has not yet broken the surface. Fine shoots have spread beneath the soil, and while he supposes the work finished they gather strength and ruin the roots of the crop without his knowing." },
       { title: "Describe the hidden motive", body: "He spends day and night gathering sciences, ordering them, refining their expression, and compiling works, believing his motive is the manifestation of religion. The concealed motive may be renown, travellers arriving from every quarter, tongues loosed in praise, heads moving at his words." },
-      { title: "Test it on authorship", body: "If someone claimed his book and erased his name from it, it would weigh on him, though he knows the reward for its benefit returns to the one who actually wrote it, and God knows who that is. The weight is the finding." },
+      { title: "Test it on authorship", body: "If somebody claimed his book and scratched his name off it, it would gnaw at him — even though he knows the reward for its usefulness goes to whoever actually wrote it, and God knows perfectly well who that is. The gnawing is the result." },
       { title: "Follow it into detail", body: "Praising himself in the work, plainly or by attacking others so that the attack establishes his superiority; attributing the weak sayings to their authors and leaving the good ones unattributed so they are taken for his, like one who steals a shirt and makes it into a coat so it will not be recognised." },
     ],
     closer: [

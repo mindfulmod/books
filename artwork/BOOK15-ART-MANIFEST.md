@@ -36,3 +36,10 @@ Alt text is already written into `src/book15.ts` and is what each plate has to d
 - **Accent colour** `#c25f50`
 - **Must depict** Two chairs at a table with one occupied place setting and one empty, the empty place still laid.
 - **Argument it carries** What is said about a friend when he is absent — silence about his faults, speech about what is good in him — plus the rights that continue after death. *Still laid* is the whole plate: the absent place has been kept, not cleared. Warm and unmelancholy; this is a place held, not a loss.
+
+---
+
+## NOTE 2026-08-22 — new section, no new plate needed
+
+Section 4, "Choosing who to be close to," was added to journey 01, which keeps
+its existing plate. No new artwork is required for Book 15.

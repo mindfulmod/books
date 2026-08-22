@@ -3,7 +3,7 @@ import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
-const bab = (id: number) => (id <= 2 ? "the first chapter, on the excellence of brotherhood" : id <= 11 ? "the second chapter, on the rights of companionship" : "the third chapter, on the wider ties");
+const bab = (id: number) => (id <= 4 ? "the first chapter, on the excellence of brotherhood" : id <= 12 ? "the second chapter, on the rights of companionship" : "the third chapter, on the wider ties");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
@@ -78,7 +78,27 @@ export const book15Chapters: Chapter[] = [
     model: spectrum("Four registers, eight rights", "Distributed unevenly on purpose.", [["Property", "The first right, in three ranks.", "support"], ["Person", "Help, before being asked.", "support"], ["The tongue", "Two rights, pulling in opposite directions.", "balance"], ["The heart", "Pardon, supplication, fidelity, and lightening.", "support"]]),
   }),
   makeChapter({
-    id: 4, shortTitle: "Two hands", formalTitle: "The first right: property",
+    id: 4, shortTitle: "Who to pick", formalTitle: "Choosing who to be close to",
+    overview: "Before any of the duties of friendship, Ghazali asks who is worth having one with — and gives a method for answering it that most advice on the subject skips.",
+    moves: [
+      { title: "Start with the flat statement", body: "“Not every person is fit for company.” And the report he puts under it: “a person follows the religion of his close friend, so let each of you look at who he is taking as one.”" },
+      { title: "Give the method", body: "What you should look for depends on what you want the friendship for. A condition is just whatever is needed to reach the aim — so name the aim and the conditions become obvious. Most advice about friends skips that step and goes straight to a list of virtues." },
+      { title: "Name the aims honestly", body: "Some are worldly: his money, his standing, or simply liking his company. Ghazali sets those aside as not his subject, without sneering at them. The religious ones he lists plainly: learning from his knowledge and practice; using his standing as cover from people who would disturb you and get between you and worship; his money, so you are not spending your life chasing food; help when something serious happens; the benefit of his prayers; and his intercession later." },
+      { title: "Give Umar's version", body: "“Stick with truthful friends and live in their shelter — they are an ornament in easy times and a resource in hard ones. Put your friend's behaviour in the best light until something comes from him you cannot explain away. Keep clear of your enemy, and be careful even of your friend, except the trustworthy — and nobody is trustworthy but someone who fears God. Do not keep company with a corrupt man, or you will pick it up; do not let him near your secrets; and take advice on your affairs from people who fear God.”" },
+    ],
+    closer: [
+      { title: "'Alqama's deathbed list", body: "Dying, 'Alqama al-'Utaridi told his son: keep company with someone who protects you if you serve him and does you credit if you are seen with him; who provides for you if your money runs out. Who puts his hand out when you put yours out with something good; who counts the good he sees in you and closes over the bad. Who gives when you ask, and starts the conversation when you go quiet, and stands by you when disaster lands. Who backs you up when you speak, puts you in charge when you attempt something together, and gives way to you when you disagree." },
+      { title: "And the joke Ghazali leaves in", body: "Al-Ma'mun asked someone to explain that advice. The man said: do you know why he told his son that? Al-Ma'mun said no. He said — “because he wanted him not to keep company with anybody at all.” Ghazali reports the joke rather than deleting it, and then gives the harder version: keep company only with someone who keeps your secret, hides your faults, stands by you in trouble, spreads the good about you and folds away the bad. And if you cannot find him, keep company with nobody but yourself." },
+    ],
+    distinction: ["Two ways to decide who to be close to", "From the aim", "Name what you want the friendship to do, and the qualities to look for follow from it.", "From a list of virtues", "Which produces a standard nobody meets — as the joke about 'Alqama's son points out."],
+    misreading: "The list is not a filter for rejecting people. Ghazali includes the joke about it being impossible, and the practical instruction that comes with it is Umar's: put your friend's behaviour in the best light until you cannot.",
+    reflection: "Ask what you actually want from your closest friendship, and then whether you have ever chosen on that basis.",
+    audit: ["What is this friendship for?", "Would I have chosen differently knowing that?", "Whose religion am I picking up?", "Do I read my friends generously or narrowly?"],
+    nodes: ["ukhuwwa", "sohba", "din"],
+    model: chain("How the conditions get set", "The order runs one way, and most advice reverses it.", [["Name the aim", "What do you want the friendship to do?", "support"], ["The conditions follow", "A condition is just what is needed to reach the aim.", "support"], ["Then the qualities", "Which is why a bare list of virtues produces nobody.", "balance"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "Two hands", formalTitle: "The first right: property",
     overview: "The first right, and its opening image is chosen with unusual care — Ghazali explains why it is the image it is.",
     moves: [
       { title: "Give the image", body: "The likeness of two brothers is the likeness of two hands, one of which washes the other." },
@@ -98,7 +118,7 @@ export const book15Chapters: Chapter[] = [
     model: pair("Why two hands", "The difference is the argument.", [["Same end", "Which makes the two in one respect a single person.", "support"], ["Merely cooperating", "A hand and a foot, which was available and not chosen.", "balance"]]),
   }),
   makeChapter({
-    id: 5, shortTitle: "Three ranks", formalTitle: "How far the sharing goes",
+    id: 6, shortTitle: "Three ranks", formalTitle: "How far the sharing goes",
     overview: "The right of property is graded into three, and the anecdote attached to the lowest of them is one of the sharpest in the Ihya.",
     moves: [
       { title: "Give the lowest", body: "At the lowest level you treat your friend roughly as you would someone who works for you: you meet his need out of what you happen to have spare." },
@@ -118,7 +138,7 @@ export const book15Chapters: Chapter[] = [
     model: spectrum("Three ranks of sharing", "The lowest carries its own counsel.", [["Out of surplus", "The brother placed at the rank of a servant.", "balance"], ["As an equal", "Sharing rather than supplying.", "support"], ["Undivided", "Which the next section describes.", "support"]]),
   }),
   makeChapter({
-    id: 6, shortTitle: "My shoe", formalTitle: "The highest rank",
+    id: 7, shortTitle: "My shoe", formalTitle: "The highest rank",
     overview: "The top of the three ranks, given by a verse and then by a detail of speech that is more demanding than the verse.",
     moves: [
       { title: "Give the verse", body: "The highest level is what the Quran describes the believers with: their affairs are settled by consultation between them, and they spend out of what We have given them." },
@@ -138,7 +158,7 @@ export const book15Chapters: Chapter[] = [
     model: pair("Two tests of one division", "The second cannot be performed.", [["The amount", "Visible, arguable, and easy to justify.", "balance"], ["The word", "Over a shoe, unnoticed, and not fakeable.", "support"]]),
   }),
   makeChapter({
-    id: 7, shortTitle: "Before being asked", formalTitle: "The second right: the person",
+    id: 8, shortTitle: "Before being asked", formalTitle: "The second right: the person",
     overview: "The right of the person, and its distinctive clause is about timing rather than about effort.",
     moves: [
       { title: "Give the right", body: "Help with the person, in the fulfilling of needs and the undertaking of them." },
@@ -158,7 +178,7 @@ export const book15Chapters: Chapter[] = [
     model: chain("Three levels of help", "The right is at the third.", [["When asked", "The need met, and the asking already paid for.", "balance"], ["Before asking", "Which spares the friend the exposure.", "support"], ["Before your own", "Given precedence, which is what makes it a right.", "support"]]),
   }),
   makeChapter({
-    id: 8, shortTitle: "Silence", formalTitle: "The third right: the tongue, by keeping still",
+    id: 9, shortTitle: "Silence", formalTitle: "The third right: the tongue, by keeping still",
     overview: "The longest of the eight, and it is a catalogue of things not said — including several that would be said out of interest rather than malice.",
     moves: [
       { title: "Give the first item", body: "That he be silent about mentioning his faults, in his absence and in his presence — rather that he feign ignorance of them." },
@@ -178,7 +198,7 @@ export const book15Chapters: Chapter[] = [
     model: spectrum("Four silences", "Each is something a friend would notice.", [["About faults", "In his absence and his presence, feigning ignorance.", "support"], ["About contradicting", "Not disputing or arguing him down.", "support"], ["About his affairs", "No spying and no asking after his circumstances.", "support"], ["About his errand", "Which he may find heavy, or need to lie about.", "warning"]]),
   }),
   makeChapter({
-    id: 9, shortTitle: "And speech", formalTitle: "The fourth right: the tongue, by speaking",
+    id: 10, shortTitle: "And speech", formalTitle: "The fourth right: the tongue, by speaking",
     overview: "The same organ, the opposite instruction — and the pairing is what makes the two rights more than a rule about tact.",
     moves: [
       { title: "State the pairing", body: "For brotherhood, as it requires silence about what is disliked, requires also speech about what is loved." },
@@ -198,7 +218,7 @@ export const book15Chapters: Chapter[] = [
     model: pair("The same organ, both directions", "Most people keep only the first.", [["Silence", "About what is disliked, in absence and presence.", "support"], ["Speech", "About what is loved, in absence as in presence.", "support"]]),
   }),
   makeChapter({
-    id: 10, shortTitle: "Slips, and fidelity", formalTitle: "The fifth, sixth, and seventh rights",
+    id: 11, shortTitle: "Slips, and fidelity", formalTitle: "The fifth, sixth, and seventh rights",
     overview: "Three rights of the heart, and the first of them is sorted before it is prescribed.",
     moves: [
       { title: "Give the fifth", body: "Pardoning slips and lapses. And a friend's lapse is either in his religion, or in what concerns you — and the two are treated differently." },
@@ -218,7 +238,7 @@ export const book15Chapters: Chapter[] = [
     model: chain("Three rights of the heart", "Two of them reach past death.", [["Pardon", "Sorted first: a lapse in religion, or against you.", "support"], ["Supplication", "In life and after death, and for his family.", "support"], ["Fidelity", "Constancy in love, and with those he leaves behind.", "support"]]),
   }),
   makeChapter({
-    id: 11, shortTitle: "Lightening", formalTitle: "The eighth right",
+    id: 12, shortTitle: "Lightening", formalTitle: "The eighth right",
     overview: "The last of the eight, and it is the only one that consists entirely in not doing something to a friend.",
     moves: [
       { title: "Give the right", body: "Lightening, and the leaving of affectation and imposition — that he not burden his brother with what is hard on him." },
@@ -238,7 +258,7 @@ export const book15Chapters: Chapter[] = [
     model: pair("Two halves of the eighth right", "Both make a friendship expensive.", [["Affectation", "What you do to yourself on his behalf.", "warning"], ["Imposition", "What you require of him.", "warning"]]),
   }),
   makeChapter({
-    id: 12, shortTitle: "The unchosen", formalTitle: "The third chapter: the wider ties",
+    id: 13, shortTitle: "The unchosen", formalTitle: "The third chapter: the wider ties",
     overview: "The last chapter turns to relationships nobody selected, and the question it asks is how to live with people you are simply connected to.",
     moves: [
       { title: "Name the ties", body: "The right of the Muslim, of kin, of the neighbour, and of ownership — and how to live with those who are connected by these causes." },
@@ -293,8 +313,8 @@ export const book15Journeys: Journey[] = [
       node("graded", "Note the grading", "Not one standard", "Conditions and degrees come before any rights are listed.", "Which is what stops the eight being a uniform demand.", 2, "balance"),
       node("a-contract", "Take the sentence", "Like the contract of marriage", "A bond with rights that must be fulfilled.", "Which makes failing a friend nameable.", 3, "know"),
       node("eight", "Take the map", "Four registers", "Property, person, tongue, heart — eight rights across them.", "Distributed unevenly on purpose.", 3, "pattern"),
-      node("why-hands", "Note the argument", "Not a hand and a foot", "Two hands, because they work toward the same end.", "A familiar simile turned into a claim.", 4, "clear"),
-      node("one-aim", "Take the condition", "Toward a single aim", "Brotherhood is complete only when the two accompany each other so.", "A condition, not a description.", 4, "diagnose"),
+      node("why-hands", "Note the argument", "Not a hand and a foot", "Two hands, because they work toward the same end.", "A familiar simile turned into a claim.", 5, "clear"),
+      node("one-aim", "Take the condition", "Toward a single aim", "Brotherhood is complete only when the two accompany each other so.", "A condition, not a description.", 5, "diagnose"),
     ],
   },
   {
@@ -303,12 +323,12 @@ export const book15Journeys: Journey[] = [
     payoff: "You get a way of placing your own friendships that does not depend on what you feel about them.",
     image: assetUrl("assets/system/book15-my-shoe.jpg"), imageAlt: "A single pair of worn sandals set at a doorway among several other pairs, indistinguishable from them.", minutes: 11, color: "#bf7a35",
     nodes: [
-      node("lowest", "Take the lowest rank", "Out of surplus", "The brother placed at the rank of a servant.", "Abu Hazim's counsel is attached to this rank only.", 5, "know"),
-      node("the-four-thousand", "Take the anecdote", "Take two thousand", "And he turned away: you preferred the world to God.", "Half was given; the charge is not meanness.", 5, "witness"),
-      node("the-accounting", "Find the charge", "An accounting, not an amount", "The friendship was weighed against a sum.", "The refusal is of the weighing.", 5, "diagnose"),
-      node("the-verse", "Take the highest", "None distinguishing his baggage", "Mixed together in their properties.", "Described of the believers, not prescribed.", 6, "receive"),
-      node("the-word", "Take the test", "My shoe", "One who would not keep company with anyone who said it.", "Grammar rather than generosity.", 6, "clear"),
-      node("cannot-fake", "Note why it works", "Nobody notices it", "Which is exactly why it cannot be performed.", "Removing the word without the division is affectation.", 6, "steady"),
+      node("lowest", "Take the lowest rank", "Out of surplus", "The brother placed at the rank of a servant.", "Abu Hazim's counsel is attached to this rank only.", 6, "know"),
+      node("the-four-thousand", "Take the anecdote", "Take two thousand", "And he turned away: you preferred the world to God.", "Half was given; the charge is not meanness.", 6, "witness"),
+      node("the-accounting", "Find the charge", "An accounting, not an amount", "The friendship was weighed against a sum.", "The refusal is of the weighing.", 6, "diagnose"),
+      node("the-verse", "Take the highest", "None distinguishing his baggage", "Mixed together in their properties.", "Described of the believers, not prescribed.", 7, "receive"),
+      node("the-word", "Take the test", "My shoe", "One who would not keep company with anyone who said it.", "Grammar rather than generosity.", 7, "clear"),
+      node("cannot-fake", "Note why it works", "Nobody notices it", "Which is exactly why it cannot be performed.", "Removing the word without the division is affectation.", 7, "steady"),
     ],
   },
   {
@@ -317,20 +337,20 @@ export const book15Journeys: Journey[] = [
     payoff: "You leave with one observable test that answers two rights, and a diagnosis for the friendships that feel like work.",
     image: assetUrl("assets/system/book15-empty-chair.jpg"), imageAlt: "Two chairs at a table with one occupied place setting and one empty, the empty place still laid.", minutes: 12, color: "#c25f50",
     nodes: [
-      node("four-silences", "Take the silences", "Including the interested ones", "Faults, contradiction, spying, and where he has been.", "Not only the malicious questions.", 8, "clear"),
-      node("or-lie", "Note the reason", "Or he would need to lie", "The question manufactures an occasion for untruth.", "The harm includes what it does to the one answering.", 8, "diagnose"),
-      node("and-speech", "Take the other half", "Speech about what is loved", "The same organ, the opposite instruction.", "Most people keep only the silence.", 9, "balance"),
-      node("in-absence", "Find the test", "What is said when he is out", "One behaviour answering both rights.", "Not available to self-report.", 9, "witness"),
-      node("past-death", "Note what continues", "And with those he leaves", "Supplication and fidelity both reach past death.", "The sharpest test of whom the bond was for.", 10, "steady"),
-      node("lightening", "Take the last right", "Do not make it expensive", "Affectation on your side, imposition on his.", "Placed last, after seven demands.", 11, "guard"),
+      node("four-silences", "Take the silences", "Including the interested ones", "Faults, contradiction, spying, and where he has been.", "Not only the malicious questions.", 9, "clear"),
+      node("or-lie", "Note the reason", "Or he would need to lie", "The question manufactures an occasion for untruth.", "The harm includes what it does to the one answering.", 9, "diagnose"),
+      node("and-speech", "Take the other half", "Speech about what is loved", "The same organ, the opposite instruction.", "Most people keep only the silence.", 10, "balance"),
+      node("in-absence", "Find the test", "What is said when he is out", "One behaviour answering both rights.", "Not available to self-report.", 10, "witness"),
+      node("past-death", "Note what continues", "And with those he leaves", "Supplication and fidelity both reach past death.", "The sharpest test of whom the bond was for.", 11, "steady"),
+      node("lightening", "Take the last right", "Do not make it expensive", "Affectation on your side, imposition on his.", "Placed last, after seven demands.", 12, "guard"),
     ],
   },
 ];
 
 export const book15Movements: TaxonomyGroup[] = [
-  ["bab1", "1. The excellence of brotherhood", "Its conditions, degrees, and benefits, before any right is named.", [1, 2]],
-  ["bab2", "2. The rights of companionship", "A contract with eight rights across property, person, tongue, and heart.", [3, 4, 5, 6, 7, 8, 9, 10, 11]],
-  ["bab3", "3. The wider ties", "The Muslim, kin, the neighbour, and ownership — claims nobody chose.", [12]],
+  ["bab1", "1. The excellence of brotherhood", "Its conditions, degrees and benefits — and who is worth having one with.", [1, 2, 3, 4]],
+  ["bab2", "2. The rights of companionship", "A contract with eight rights across property, person, tongue, and heart.", [5, 6, 7, 8, 9, 10, 11, 12]],
+  ["bab3", "3. The wider ties", "The Muslim, kin, the neighbour, and ownership — claims nobody chose.", [13]],
 ].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50"][index % 3] })) as TaxonomyGroup[];
 
 export const book15Instrument: Instrument = {
@@ -362,11 +382,11 @@ export const book15Instrument: Instrument = {
       ],
       verdicts: [
         { key: "affection|*", name: "Then nothing can be failed", role: "warning", chapterId: 3, body: "The book's opening move on this is deliberate: the contract of brotherhood is a bond between two persons, like the contract of marriage between spouses — and as marriage entails rights that must be fulfilled, so does this. Held as an affection, a friendship has no content that can be discharged or failed.", action: "The effect of the contract language is not coldness but specificity. Warmth alone leaves a person free to feel well of himself while doing nothing, and eight enumerated rights make it possible to say exactly where a friend has been let down. Read the eight and see which of them you would not have thought of as owed." },
-        { key: "aim|mal", name: "You have named his condition", role: "support", chapterId: 4, body: "This is exactly the condition Ghazali builds into the first right, and he argues for it rather than asserting it: two brothers are likened to two hands and not to a hand and a foot, because the hands cooperate toward a single purpose — so brotherhood is complete only when the two accompany one another toward one aim.", action: "Which means the rights are not a burden added to the friendship but the content of what you are already doing. The one to check is the right of the person: help undertaken before being asked, which spares your friend the exposure that asking involves — and given precedence over your own needs, which is what raises it above ordinary helpfulness." },
-        { key: "*|khafif", name: "The right placed last", role: "balance", chapterId: 11, body: "The eighth right is lightening, and the leaving of affectation and imposition — that he not burden his brother with what is hard on him. It has two halves: what you take on for his sake, and what you ask of him, and both are how a friendship becomes expensive.", action: "Ghazali places it after seven demanding rights, and it is Book 11's warning about guests applied to a standing relationship: effort undertaken for someone produces dislike of them, and the fault sits where the burden is assumed rather than where the feeling appears. Ask what specifically you have taken on, and whether he asked for it." },
-        { key: "*|lisan", name: "Two rights, not one", role: "balance", chapterId: 9, body: "The third right is silence — about his faults in his absence and his presence, about contradicting him, about spying and asking after his circumstances, and about where he has been, since perhaps mentioning it is heavy on him or he would need to lie about it. The fourth is the opposite: brotherhood requires speech about what is loved as it requires silence about what is disliked.", action: "Most people keep the first and fail the second, and a person who never speaks ill of a friend and never speaks well of him has kept half of what he owes. The test answers both at once and is not available to self-report: what is said about him when he is not there. Other people know your answer better than you do." },
-        { key: "*|mal", name: "Which of three ranks", role: "balance", chapterId: 5, body: "The right of property is graded, which is what keeps it usable. The lowest rank is that you place your brother at the rank of a servant, meeting his need out of your surplus — and Abu Hazim's counsel not to deal with a brother in worldly affairs is attached to that rank specifically, not offered as a general rule.", action: "The anecdote is worth sitting with, because the charge in it is not meanness: a man asked for four thousand, was offered two, and turned away saying — were you not ashamed to claim brotherhood in God and then say this. Half was given. What was refused was the accounting, not the amount, and the question it puts is what claim you have already made about the relationship." },
-        { key: "*|qalb", name: "Two of these reach past death", role: "support", chapterId: 10, body: "Supplication for the brother in his life and after his death, with everything he loves for himself and his family; and fidelity, which is constancy in love and its continuance until death — and after it, with those he leaves behind. Both are defined by what continues when nothing further can be received.", action: "That is also the sharpest test available of whom the bond was for. And note that pardon is sorted before it is prescribed: a lapse in his religion and a lapse against you are different failures, and only the second is what pardon ordinarily means. Establish which one you are holding before deciding what to do with it." },
+        { key: "aim|mal", name: "You have named his condition", role: "support", chapterId: 5, body: "This is exactly the condition Ghazali builds into the first right, and he argues for it rather than asserting it: two brothers are likened to two hands and not to a hand and a foot, because the hands cooperate toward a single purpose — so brotherhood is complete only when the two accompany one another toward one aim.", action: "Which means the rights are not a burden added to the friendship but the content of what you are already doing. The one to check is the right of the person: help undertaken before being asked, which spares your friend the exposure that asking involves — and given precedence over your own needs, which is what raises it above ordinary helpfulness." },
+        { key: "*|khafif", name: "The right placed last", role: "balance", chapterId: 12, body: "The eighth right is lightening, and the leaving of affectation and imposition — that he not burden his brother with what is hard on him. It has two halves: what you take on for his sake, and what you ask of him, and both are how a friendship becomes expensive.", action: "Ghazali places it after seven demanding rights, and it is Book 11's warning about guests applied to a standing relationship: effort undertaken for someone produces dislike of them, and the fault sits where the burden is assumed rather than where the feeling appears. Ask what specifically you have taken on, and whether he asked for it." },
+        { key: "*|lisan", name: "Two rights, not one", role: "balance", chapterId: 10, body: "The third right is silence — about his faults in his absence and his presence, about contradicting him, about spying and asking after his circumstances, and about where he has been, since perhaps mentioning it is heavy on him or he would need to lie about it. The fourth is the opposite: brotherhood requires speech about what is loved as it requires silence about what is disliked.", action: "Most people keep the first and fail the second, and a person who never speaks ill of a friend and never speaks well of him has kept half of what he owes. The test answers both at once and is not available to self-report: what is said about him when he is not there. Other people know your answer better than you do." },
+        { key: "*|mal", name: "Which of three ranks", role: "balance", chapterId: 6, body: "The right of property is graded, which is what keeps it usable. The lowest rank is that you place your brother at the rank of a servant, meeting his need out of your surplus — and Abu Hazim's counsel not to deal with a brother in worldly affairs is attached to that rank specifically, not offered as a general rule.", action: "The anecdote is worth sitting with, because the charge in it is not meanness: a man asked for four thousand, was offered two, and turned away saying — were you not ashamed to claim brotherhood in God and then say this. Half was given. What was refused was the accounting, not the amount, and the question it puts is what claim you have already made about the relationship." },
+        { key: "*|qalb", name: "Two of these reach past death", role: "support", chapterId: 11, body: "Supplication for the brother in his life and after his death, with everything he loves for himself and his family; and fidelity, which is constancy in love and its continuance until death — and after it, with those he leaves behind. Both are defined by what continues when nothing further can be received.", action: "That is also the sharpest test available of whom the bond was for. And note that pardon is sorted before it is prescribed: a lapse in his religion and a lapse against you are different failures, and only the second is what pardon ordinarily means. Establish which one you are holding before deciding what to do with it." },
         { key: "*|*", name: "Read the framing with the right", role: "balance", chapterId: 3, body: "How you hold the friendship, and where it is hardest. The book's claim is that the two are connected: a friendship held as an affection has no determinate content, so nothing about it can be located, and the difficulty stays a mood.", action: "Take the framing first, since it decides whether the second question has an answer. Then work the eight in his order — property, person, silence, speech, pardon, supplication, fidelity, lightening — and notice which of them you had not previously thought of as something owed." },
       ],
     },
