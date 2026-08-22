@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **nineteen books**: the complete Quarter of Perils, books 21 to 30, and the first nine books of the Quarter of Deliverance.
+The System edition currently carries **twenty books**: two complete quarters — the Quarter of Perils, books 21 to 30, and the Quarter of Deliverance, books 31 to 40. That is half the Ihya.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -54,6 +54,7 @@ The System edition currently carries **nineteen books**: the complete Quarter of
 | 37 | Intention, Sincerity, and Truthfulness | 14 | 5 | Weighing the motive |
 | 38 | Vigilance and Self-Examination | 14 | 5 | The three registers |
 | 39 | Reflection | 10 | 5 | Two knowledges, or someone's word |
+| 40 | Remembrance of Death and the Afterlife | 16 | 5 | How far ahead have you provisioned? |
 
 Every book now carries the same layers, so the quarter reads at one depth throughout.
 
