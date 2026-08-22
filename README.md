@@ -53,6 +53,7 @@ The System edition currently carries **thirty-seven books**: three complete quar
 | 16 | The Etiquette of Seclusion | 10 | 2 | Six against seven |
 | 17 | The Etiquette of Travel | 10 | 2 | Flight, or seeking |
 | 18 | The Etiquette of Listening and Ecstasy | 11 | 2 | Four listeners, one sound |
+| 19 | Enjoining Right and Forbidding Wrong | 14 | 3 | How far up the ladder |
 | 21 | The Wonders of the Heart | 15 | 4 | Five obstructions |
 | 22 | Disciplining the Soul and Refining Character | 11 | 5 | Four mirrors |
 | 23 | Breaking the Two Desires | 7 | 4 | Four measures |

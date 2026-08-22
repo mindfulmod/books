@@ -1,0 +1,472 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const bab = (id: number) => (id <= 3 ? "the first chapter, on the obligation and its merit" : id <= 12 ? "the second chapter, on the pillars of hisba and its conditions" : id === 13 ? "the third chapter, on customary wrongs" : "the fourth chapter, on rulers");
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 19, ${bab(seed.id)}, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book19Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "The greatest axis", formalTitle: "The book's opening claim",
+    overview: "The Ihya's most vehement opening, and the largest claim Ghazali makes for any single practice in the forty books.",
+    moves: [
+      { title: "Give the claim", body: "The greatest axis in religion — and it is the matter of consequence for which God sent all the prophets." },
+      { title: "Give the consequence of neglect", body: "And if its carpet were folded up, and its knowledge and its practice let go, then prophecy would fall idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, lands would fall to ruin, and the servants would perish — and would not perceive their own perishing until the Day of Calling." },
+      { title: "Give the turn to the present", body: "And what we feared has come to be — to God we belong and to Him we return — for from this axis the practice and the knowledge have worn away, and its reality and its trace have been effaced entirely." },
+      { title: "Name what filled the vacancy", body: "So that flattery of creation has taken possession of hearts, and vigilance toward the Creator has been erased from them; and people have let themselves loose in following whim and appetite as beasts are let loose — and a truthful believer, whom no reproacher's reproach touches in God, has become rare on the carpet of the earth." },
+    ],
+    closer: [
+      { title: "Why the claim is that large", body: "The argument is that every prophet was sent to establish something, and that what they were sent to establish is not a body of belief alone but its maintenance in a community. Remove the maintenance and the belief has nothing holding it in place, which is why the loss of this practice is described as prophecy falling idle rather than as one duty lapsing." },
+      { title: "The exchange named at the centre", body: "Flattery of creation replacing vigilance toward the Creator. That single substitution is the mechanism of the whole decline as Ghazali describes it — not disbelief replacing belief, but one audience quietly replacing another, which is the Ihya's recurring diagnosis and the reason Book 38 was placed where it was." },
+    ],
+    distinction: ["Two things that can be lost", "The practice", "Which takes the trace and the reality of the axis with it.", "The doctrine", "Which can remain intact while nothing holds it in place."],
+    misreading: "Do not read the vehemence as licence. The book that opens this way spends its second chapter building conditions that disqualify most interventions, and its fourth setting a hard ceiling.",
+    reflection: "Notice which audience the passage says replaced the other.",
+    audit: ["Whose regard am I managing?", "What has worn away where I am?", "Is the doctrine or the practice missing?", "Would I be reproached for it?"],
+    nodes: ["qutb", "mudahana", "hisba"],
+    model: pair("The substitution at the centre", "One audience quietly replacing another.", [["Vigilance toward the Creator", "Erased from hearts, on this account.", "support"], ["Flattery of creation", "Which took possession in its place.", "warning"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "Some of you", formalTitle: "A collective duty, not an individual one",
+    overview: "Immediately after the largest claim comes the limit on it, and Ghazali reads it out of a single word.",
+    moves: [
+      { title: "Give the ruling", body: "That it is a collective duty and not an individual one — so that when a community undertakes it, the obligation falls from the others." },
+      { title: "Give the grammatical argument", body: "For He did not say, be all of you enjoiners of right — rather He said, let there be from among you a community. So whenever one person or a group undertakes it, the burden falls from the others." },
+      { title: "Give both halves of the consequence", body: "And the success belongs particularly to those undertaking it, who carry it out. But if the whole of the people hold back from it, the burden falls on every one of them capable of it, without exception." },
+      { title: "Give the second argument", body: "From the verse on the People of the Book: an upright community, reciting God's signs in the watches of the night and prostrating, believing in God and the Last Day, and enjoining right and forbidding wrong. He did not witness to their uprightness by faith in God and the Last Day alone, until He added this to it." },
+    ],
+    closer: [
+      { title: "Why the distinction does real work", body: "A collective duty is not a lighter version of an individual one. It means the question a person faces is not whether the wrong should be addressed but whether it is being addressed — and if it is not, the duty lands on everyone able, so that the collective character makes the obligation more inescapable rather than less when nobody has taken it up." },
+      { title: "What the second verse adds", body: "It attaches uprightness to the practice rather than to belief alone. The argument is the same one the first section made about prophecy: a faith described without this is described incompletely, which is why the verse names it after the night prayer and the prostration rather than instead of them." },
+    ],
+    distinction: ["Two readings of one command", "From among you a community", "A collective duty, discharged when someone competent has taken it up.", "All of you", "Which is not what was said, and which the wording rules out."],
+    misreading: "Do not take a collective duty as an excuse. If nobody has taken it up, Ghazali says the burden falls on every capable person without exception.",
+    reflection: "Ask whether the thing in front of you is being addressed by anyone at all.",
+    audit: ["Is anyone competent already on it?", "Am I capable of it?", "Would my silence be shared or sole?", "Which word is the argument from?"],
+    nodes: ["kifaya", "hisba", "qutb"],
+    model: pair("Two states of a collective duty", "The same duty behaves differently depending on the answer.", [["Someone has taken it up", "The burden falls from the others.", "support"], ["Nobody has", "It falls on everyone capable, without exception.", "warning"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "Four chapters", formalTitle: "The shape of the book",
+    overview: "The book announces four chapters, and the proportions tell you what Ghazali thought the difficulty actually was.",
+    moves: [
+      { title: "Name the first", body: "On the obligation of enjoining right and forbidding wrong, and its merit — the shortest of the four." },
+      { title: "Name the second", body: "On its pillars and its conditions — by far the longest, and the substance of the book." },
+      { title: "Name the third", body: "On the currents of custom — the wrongs habitual in ordinary life, given as samples rather than as a list, since there is no hope of enumerating them." },
+      { title: "Name the fourth", body: "On enjoining right upon rulers and sultans and forbidding them wrong — treated last and separately, with a rule of its own." },
+    ],
+    closer: [
+      { title: "What the proportions say", body: "The chapter arguing that the duty exists is brief; the chapter setting out who may discharge it, against what, and how far is many times its length. The book's centre of gravity is not the obligation but its conditions, which is the opposite of how the subject is usually handled." },
+      { title: "Why rulers get a separate chapter", body: "Because the general rule does not hold there. The fourth chapter exists to impose a ceiling that the second chapter's ladder would otherwise permit, and putting it last means a reader has learned the full ladder before learning that most of it is closed in this case." },
+    ],
+    distinction: ["Two ways to write this book", "Conditions at length", "Most of the book spent on who, against what, and how far.", "Obligation at length", "Which would produce more certainty and less competence."],
+    misreading: "Do not skip the second chapter for the first. The first establishes that something must be done; the second is where nearly everything a person needs is.",
+    reflection: "Notice which chapter you would have written longest.",
+    audit: ["Which chapter am I more sure of?", "Where is the book's weight?", "Why is the fourth separate?", "What does the third not attempt?"],
+    nodes: ["structure", "hisba", "sultan"],
+    model: spectrum("Four chapters by weight", "The conditions, not the obligation, carry the book.", [["Obligation", "Brief.", "balance"], ["Pillars and conditions", "By far the longest.", "support"], ["Customary wrongs", "Samples, not a list.", "balance"], ["Rulers", "Separate, with a ceiling.", "warning"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "Four pillars", formalTitle: "The anatomy of hisba",
+    overview: "The second chapter opens by splitting the act into four parts, and every subsequent condition attaches to one of them.",
+    moves: [
+      { title: "Name the term", body: "Know that the pillars are in hisba — which is an expression comprehending both enjoining right and forbidding wrong." },
+      { title: "Give the first two", body: "The first pillar is the one performing it; the second is what it is performed against — the wrong itself." },
+      { title: "Give the second two", body: "The third is the one it is performed upon; the fourth is the act of performing it." },
+      { title: "Note what the division buys", body: "Four independent sets of conditions. An intervention can fail because of who is doing it, or what it is about, or whom it is against, or how it is done — and the failures are not interchangeable." },
+    ],
+    closer: [
+      { title: "Why anatomy rather than rules", body: "A list of rules can only cover the cases someone thought of; the third chapter says outright that enumerating the wrongs is hopeless. Four pillars with conditions on each is a structure a reader can apply to a case nobody anticipated, which is the same reason Book 24 anatomised the tongue's faults rather than listing forbidden sentences." },
+      { title: "Where most failures actually sit", body: "The first and the fourth. Ghazali's conditions on what and on whom are relatively brief; his treatment of the qualities required in the person, and of how far the act may go, occupies most of the chapter — which locates the difficulty in the intervener rather than in the wrong." },
+    ],
+    distinction: ["Two ways an intervention can be wrong", "In its object", "Not actually a wrong, or not one this person may address.", "In its agent or its manner", "Where Ghazali says most of the failures are, and where most of the chapter goes."],
+    misreading: "Do not treat the four as a checklist to clear quickly. Each carries conditions that disqualify a large share of what people actually do.",
+    reflection: "Take something you intervened in and ask which of the four it would have failed on.",
+    audit: ["Which pillar is my weak one?", "Who, what, whom, or how?", "Are these interchangeable?", "Where does the chapter spend its length?"],
+    nodes: ["hisba", "arkan", "structure"],
+    model: chain("Four pillars", "Four independent sets of conditions.", [["The one performing", "Who may do it at all.", "support"], ["The wrong", "What may be addressed.", "support"], ["The one addressed", "Against whom it counts.", "balance"], ["The performing", "How far it may go.", "warning"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "Who may", formalTitle: "The first pillar: the one performing it",
+    overview: "The formal conditions are short and unsurprising, and Ghazali disposes of them quickly to get to the ones that matter.",
+    moves: [
+      { title: "Give the formal conditions", body: "The first pillar is the one performing hisba, and he has conditions: that he be legally responsible, a Muslim, and capable." },
+      { title: "Give the exclusions", body: "So the insane, the child, the unbeliever, and the incapable fall outside it." },
+      { title: "Note the question that follows", body: "Whether the office requires permission — and Ghazali argues at length that it does not, which is what makes the duty a general one rather than an appointment." },
+      { title: "Note where the chapter then goes", body: "To three qualities that are not formal conditions at all: knowledge, scruple, and good character. The formal list says who is eligible; these say who will actually do it well, and the chapter treats them at far greater length." },
+    ],
+    closer: [
+      { title: "Why the independence from permission matters", body: "If hisba required an appointment, the second chapter would be an administrative manual. Because it does not, the conditions have to do the work an office would otherwise do — which is why the qualities are treated as carefully as they are." },
+      { title: "Capable, and what it covers", body: "Capability is a formal condition, and it is doing more than it appears to. Much of the fourth chapter's ceiling on confronting rulers, and much of the caution about consequences elsewhere, can be read as this single condition being taken seriously rather than as separate exceptions." },
+    ],
+    distinction: ["Two lists of requirements", "Eligibility", "Responsible, Muslim, capable — short, and quickly given.", "Competence", "Knowledge, scruple, and good character, which the chapter treats at length."],
+    misreading: "Do not read eligibility as qualification. Meeting the formal conditions is where the chapter starts, not where it ends.",
+    reflection: "Ask which list you were measuring yourself against.",
+    audit: ["Am I eligible, or competent?", "Do I need permission?", "What is capability covering here?", "Which list is longer?"],
+    nodes: ["muhtasib", "arkan", "hisba"],
+    model: pair("Two kinds of requirement", "Only one of them is a list.", [["Eligibility", "Responsible, Muslim, capable.", "balance"], ["Competence", "Knowledge, scruple, good character — treated at length.", "support"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "When anger rages", formalTitle: "Why knowledge and scruple are not enough",
+    overview: "The most psychologically exact passage in the book, and its argument is that the third quality is not an ornament on the first two.",
+    moves: [
+      { title: "Give the first gap", body: "Not everyone who knows acts by his knowledge — indeed he may know that he is excessive in hisba and beyond the limit permitted in the law, and yet some purpose of his own carries him to it." },
+      { title: "Give the second gap", body: "And let his speech and his counsel be acceptable — for the corrupt man is mocked when he performs hisba, and that bequeaths boldness against him." },
+      { title: "Give the third quality and its function", body: "As for good character: let him be enabled by it for gentleness and kindness, which is the root of this whole matter and its means." },
+      { title: "Give the argument", body: "And knowledge and scruple are not sufficient in it. For when anger rages, mere knowledge and scruple do not suffice to suppress it, unless there is in the disposition a receptiveness to it through good character." },
+    ],
+    closer: [
+      { title: "What follows if the third is missing", body: "In truth scruple is not completed except with good character and the power to restrain appetite and anger. By it the one performing hisba bears what befalls him in God's religion — and otherwise, when his reputation or his property or his person is struck by insult or a blow, he forgets the hisba, becomes heedless of God's religion, and busies himself with himself." },
+      { title: "The motive named last", body: "Indeed he may undertake it from the outset seeking rank and a name. Ghazali puts this after the account of what happens under provocation, because a person who set out for standing will not survive the first insult — the two failures are the same failure at different stages." },
+    ],
+    distinction: ["Two things that fail under provocation", "Knowledge and scruple alone", "Which do not suppress anger once it rages.", "Character", "Which is what the disposition receives them through, and without which scruple is not completed."],
+    misreading: "Do not read good character here as pleasantness. Its stated function is the power to restrain appetite and anger, which is what lets a person continue after being insulted.",
+    reflection: "Recall the last time you were contradicted while correcting someone, and what you did next.",
+    audit: ["What happens to me under insult?", "Did I set out for a name?", "Would my counsel be accepted?", "Which quality am I missing?"],
+    nodes: ["khuluq", "wara", "muhtasib"],
+    model: chain("Why the third quality is load-bearing", "Each step is a failure the first two do not prevent.", [["He knows", "And may still exceed the limit for a purpose of his own.", "balance"], ["Anger rages", "Which knowledge and scruple do not suffice to suppress.", "warning"], ["He is insulted", "And forgets the hisba, busying himself with himself.", "warning"], ["Good character", "The power to restrain appetite and anger.", "support"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "Four conditions", formalTitle: "The second pillar: what may be addressed",
+    overview: "One sentence sets four conditions on the object, and between them they exclude most of what people intervene in.",
+    moves: [
+      { title: "Give the sentence", body: "The second pillar of hisba is what the hisba is about — and it is every wrong existing at present, apparent to the one performing hisba without spying, known to be a wrong without independent reasoning." },
+      { title: "Take the first condition", body: "That it be a wrong: that its occurrence is guarded against in the law." },
+      { title: "Take the second and third", body: "That it exist at present — not one that is past, and not one anticipated. And that it be apparent without spying, which is the condition the whole treatment of walls turns on." },
+      { title: "Take the fourth", body: "That it be known to be a wrong without independent reasoning — which removes from the office everything on which qualified people legitimately differ." },
+    ],
+    closer: [
+      { title: "What the fourth condition does", body: "It puts disputed questions outside hisba entirely. Anything requiring ijtihad to establish is not available to be corrected in this way, however confident the corrector — which is the condition that would rule out a large share of the interventions people are most eager to make." },
+      { title: "What the second condition does", body: "It removes both the past and the anticipated. A wrong already committed and a wrong feared are both outside the office, which cuts off reproach for history and pre-emption for what someone might do." },
+    ],
+    distinction: ["Two grounds for correcting someone", "Known without reasoning", "Which is the condition, and which excludes the disputed.", "Established by reasoning", "However good the reasoning, and however confident the reasoner."],
+    misreading: "Do not treat the four as easy to satisfy. Existing now, apparent without spying, and known without ijtihad together disqualify most of what is done in this name.",
+    reflection: "Take the last thing you wanted to correct and run it against all four.",
+    audit: ["Is it happening now?", "Did I have to look?", "Would qualified people differ?", "Is it guarded against in the law?"],
+    nodes: ["shurut", "munkar", "ijtihad"],
+    model: chain("Four conditions on the object", "All four, not any of them.", [["A wrong", "Guarded against in the law.", "support"], ["Existing now", "Not past, not anticipated.", "balance"], ["Apparent without spying", "Which the walls passage defines.", "balance"], ["Without reasoning", "Which excludes the legitimately disputed.", "warning"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "Wrong, not sin", formalTitle: "Why the word was chosen",
+    overview: "A deliberate change of vocabulary, and Ghazali explains it with an argument that quietly widens the office and narrows the accusation.",
+    moves: [
+      { title: "Give the choice", body: "We have turned aside from the word disobedience to this one, because wrong is more general than disobedience." },
+      { title: "Give the first case", body: "Since whoever sees a child or a madman drinking wine, it is upon him to pour out his wine and prevent him." },
+      { title: "Give the argument", body: "And this is not called disobedience with respect to the madman — since a disobedience with no one disobeying by it is impossible. So the word wrong indicates it better, and is more general than the word disobedience." },
+      { title: "Remove the second misunderstanding", body: "And that is not because of the grossness of the act's outward form and its being visible among people — rather, if he met this wrong in solitude, preventing it would be obligatory." },
+    ],
+    closer: [
+      { title: "What the vocabulary buys in both directions", body: "It widens what may be prevented to include what no one is culpable for, and it narrows what the intervention asserts: to act against a wrong is not to convict anyone of sin. The distinction is precise, and it is the difference between stopping something and condemning someone." },
+      { title: "The scope note attached", body: "And we have included under its generality both the minor and the major, so that hisba is not restricted to the grave sins. The office reaches small things — which makes the conditions on manner in the fourth pillar more necessary, not less." },
+    ],
+    distinction: ["Two things an intervention can be about", "A wrong", "Which can exist where no one is culpable, and which is what is prevented.", "A sin", "Which requires a sinner, and which the word was changed to avoid asserting."],
+    misreading: "Do not read the widening as a licence. The same section says that visibility is not the ground and that solitude does not exempt — but the fourth condition of the previous section still stands over all of it.",
+    reflection: "Ask whether your last correction was aimed at the act or at the person.",
+    audit: ["Am I stopping or convicting?", "Does this require a culprit?", "Would I act if no one were watching?", "Minor or major — does it matter?"],
+    nodes: ["munkar", "shurut", "hisba"],
+    model: pair("Two words, deliberately chosen", "The narrower word was rejected on purpose.", [["Wrong", "More general; can exist with no one culpable.", "support"], ["Disobedience", "Impossible without someone disobeying by it.", "balance"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "A sound or a smell", formalTitle: "What a wall conceals",
+    overview: "The most operationally precise passage in the book: an exact line between what a person may act on and what he may not.",
+    moves: [
+      { title: "Pose the question", body: "If you say: what is the limit of being apparent and being concealed?" },
+      { title: "Give the rule", body: "Then know that whoever has shut the door of his house and screened himself with its walls — it is not permitted to enter upon him without his leave in order to learn of a disobedience." },
+      { title: "Give the exception", body: "Unless it becomes apparent in the house with an appearing that is known to one outside the house — as the sounds of pipes and strings when they are raised so that they pass beyond the walls of the house. Whoever hears that may enter the house and break the instruments. And likewise when the voices of the drunk are raised with the words customary among them, so that the people of the streets hear them: this is a making-apparent that obliges hisba." },
+      { title: "Give the general principle", body: "So then, what is perceived through intervening walls is only a sound or a smell." },
+    ],
+    closer: [
+      { title: "The limit put on the exception", body: "And when the smells of wine waft — if it is possible that this is from the protected wines, then it is not permitted to make for it to pour it out. Even the exception is bounded: a smell that might have an innocent source does not license entry, so the rule requires not merely a perception but one that admits no other explanation." },
+      { title: "Why a sound or a smell", body: "The line is drawn at what reaches a person who is doing nothing to perceive it. Both are things that come out through a wall unbidden — which makes the test a physical one rather than a judgement, and therefore not adjustable by how certain the intervener feels." },
+    ],
+    distinction: ["Two ways to come to know", "It reached you through the wall", "A sound or a smell, arriving unbidden, and admitting no other explanation.", "You established it", "By any means at all, which is the next section's forbidden rung."],
+    misreading: "Do not read the exception as the rule. The passage is overwhelmingly a restriction, and the one opening it leaves is narrower than it first appears.",
+    reflection: "Ask how you know the thing you are sure about.",
+    audit: ["Did it reach me, or did I reach for it?", "Could it have an innocent source?", "Is the door shut?", "Was it a sound, or a smell, or an inference?"],
+    nodes: ["zuhur", "tajassus", "shurut"],
+    model: pair("What passes through a wall", "The test is physical, not a matter of confidence.", [["A sound or a smell", "Arriving unbidden, with no other explanation.", "support"], ["Everything else", "Behind a shut door, and not available.", "warning"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "Against whom", formalTitle: "The third pillar: the one addressed",
+    overview: "The shortest pillar, and its condition follows directly from the choice of vocabulary two sections earlier.",
+    moves: [
+      { title: "Give the condition", body: "The third pillar is the one hisba is performed upon, and his condition is that he be of a description such that the act he is prevented from is a wrong in his case." },
+      { title: "Give the minimum", body: "And the least that suffices in that is that he be a human being — which is deliberately low, and follows from the earlier argument that a wrong needs no culpable agent." },
+      { title: "Note the consistency", body: "The child and the madman were the examples that forced the change of vocabulary; this pillar is where that change is cashed out. Someone not answerable can still be the one an intervention is directed at." },
+      { title: "Note what is not required", body: "Not that he be answerable, not that he intend the wrong, and not that he be convictable of anything. The office attaches to the act's being a wrong in his case, and stops there." },
+    ],
+    closer: [
+      { title: "Why this pillar is short", body: "Because the work was done earlier. Once wrong rather than disobedience is the object, the condition on the person collapses to almost nothing — which is a good example of how much a single deliberate word choice can carry across a structure." },
+      { title: "The limit it still imposes", body: "In his case. An act that is a wrong for one person may not be for another, and this pillar preserves that: the question is never whether the act is objectionable in general but whether it is a wrong in the case of the person in front of you." },
+    ],
+    distinction: ["Two ways to identify a target", "In his case", "Whether the act is a wrong for this person, which is the condition.", "In general", "Whether the act is objectionable, which is not the question asked."],
+    misreading: "Do not read the low threshold as making anyone fair game. The conditions that do the limiting are on the object and the manner, and they are strict.",
+    reflection: "Ask whether the thing you object to is a wrong for the person doing it.",
+    audit: ["In his case, or in general?", "Is answerability required?", "Where did this pillar's brevity come from?", "What does it still rule out?"],
+    nodes: ["arkan", "munkar", "hisba"],
+    model: pair("Two questions about the person", "Only one of them is the condition.", [["Is it a wrong in his case?", "The condition, and the only one.", "support"], ["Is he culpable?", "Not required — a child or a madman still counts.", "balance"]]),
+  }),
+  makeChapter({
+    id: 11, shortTitle: "Ten degrees", formalTitle: "The fourth pillar: the act itself",
+    overview: "The book's spine: a graded ladder of ten rungs, given in order, from finding out to gathering troops.",
+    moves: [
+      { title: "Give the frame", body: "The fourth pillar is the act of hisba itself, and it has degrees and manners." },
+      { title: "Give the first five", body: "As for the degrees: the first is finding out, then informing, then forbidding, then preaching and counsel, then reproach and harsh words." },
+      { title: "Give the second five", body: "Then changing by hand, then the threat of striking, then the striking itself and carrying it out, then the drawing of weapons, then reinforcement in it by helpers and the gathering of troops." },
+      { title: "Note what a ladder is for", body: "Order. Each rung is available only when the ones below it have not answered — which converts a duty that could be discharged at any intensity into one that must begin at the lowest and stop as soon as it works." },
+    ],
+    closer: [
+      { title: "Where the ladder stops for most readers", body: "The fourth chapter closes the upper rungs entirely with rulers, and Ghazali's own treatment throughout attaches conditions to the higher ones that few situations satisfy. The ladder's length is not an invitation; it is a scale on which almost all legitimate action sits at the bottom." },
+      { title: "The rungs above the hand", body: "Threat, striking, weapons, and troops are named, and this edition does not carry the conditions Ghazali attaches to them or the disputes about who may reach them. Those are questions of law and public order rather than of reading, and they belong to qualified authority rather than to individuals — the editorial note says so plainly." },
+    ],
+    distinction: ["Two shapes a duty can have", "A ladder", "Begin at the lowest rung; go higher only when the lower has failed; stop when it works.", "A permission", "Which licenses whatever intensity the person feels the case deserves."],
+    misreading: "Do not read the existence of a tenth rung as making the tenth rung yours. The next section shows that even the first rung is forbidden to most people in most cases.",
+    reflection: "Ask which rung you started at last time.",
+    audit: ["Where did I begin?", "Had the rung below failed?", "Did I stop when it worked?", "Is this a ladder or a permission to me?"],
+    nodes: ["darajat", "hisba", "arkan"],
+    model: spectrum("The ladder, in order", "Ten rungs, ascended only on failure.", [["Finding out", "Which is itself forbidden — see the next section.", "warning"], ["Informing", "In case he does not know.", "support"], ["Forbidding", "Saying it plainly.", "support"], ["Preaching and counsel", "Where most legitimate action sits.", "support"], ["Reproach", "Harsh words.", "balance"], ["The hand", "Changing it directly.", "balance"], ["Threat, striking, weapons, troops", "Named, heavily conditioned, and not a reader's to reach.", "warning"]]),
+  }),
+  makeChapter({
+    id: 12, shortTitle: "The first rung is forbidden", formalTitle: "Finding out, and why it is not allowed",
+    overview: "The most striking move in the book: the ladder is introduced, and then its bottom rung is immediately prohibited.",
+    moves: [
+      { title: "Name it and forbid it", body: "As for the first degree, which is finding out — and by it we mean seeking knowledge of the occurrence of the wrong — that is forbidden. It is the spying we have mentioned." },
+      { title: "Give the four examples", body: "So he should not steal a hearing at another's house in order to hear the sound of strings; nor sniff in order to catch the smell of wine; nor touch what is in a man's garment in order to know the shape of a pipe; nor question his neighbours so that they may tell him what goes on in his house." },
+      { title: "Give the one thing that does open the door", body: "Yes — if two upright men informed him at the outset, without his enquiring, that so-and-so drinks wine in his house, or that in his house is wine he has prepared for drinking, then at that point he may enter his house, and asking leave is not required of him." },
+      { title: "Give the justification of the entry", body: "And his crossing of the man's property by entering, in order to arrive at repelling the wrong, is like breaking his head by a blow to prevent him, whenever he has need of it." },
+    ],
+    closer: [
+      { title: "Why the ladder has a rung below zero", body: "Because listing finding out first and then forbidding it is more instructive than omitting it. It names the thing most people actually do first, marks it as the one step that is not permitted at any point, and does so before the reader has learned any of the steps that are." },
+      { title: "The exact shape of the exception", body: "Two upright men, at the outset, without his enquiring. Every clause is doing work: the number, their standing, that the report was unsolicited, and that he did not go looking. The rule survives only if all four hold, and the difference between this and asking the neighbours is entirely in who initiated it." },
+    ],
+    distinction: ["Two ways knowledge arrives", "Unsolicited", "Two upright men, at the outset, without enquiry — which opens the door.", "Sought", "By listening, sniffing, touching, or asking, which is the forbidden rung."],
+    misreading: "Do not read the exception as covering hearsay. It specifies two upright informants and that the report came without being sought, and Ghazali treats a lesser report differently.",
+    reflection: "Ask how the last thing you were certain about first reached you.",
+    audit: ["Did I go looking?", "Did I ask anyone?", "Was the report solicited?", "Would this pass all four clauses?"],
+    nodes: ["tajassus", "darajat", "zuhur"],
+    model: chain("The bottom of the ladder", "Named first, and forbidden first.", [["Seeking to know", "Eavesdropping, sniffing, touching, asking — forbidden.", "warning"], ["Unsolicited report", "Two upright men, at the outset, without enquiry.", "support"], ["Then entry", "Without leave, to repel the wrong.", "balance"]]),
+  }),
+  makeChapter({
+    id: 13, shortTitle: "Disliked, or forbidden", formalTitle: "The third chapter, and the distinction that governs it",
+    overview: "The chapter of examples opens by refusing to be a list, and by drawing the distinction that decides what silence costs.",
+    moves: [
+      { title: "Give the refusal to enumerate", body: "So we shall point to some of them, that their like may be inferred from them — since there is no hope of confining them or exhausting them." },
+      { title: "Give the division", body: "Know that wrongs divide into the disliked and the forbidden." },
+      { title: "Give the first half", body: "So when we say, this is a disliked wrong — know that preventing it is recommended, and silence about it is disliked and is not unlawful. Except when the doer does not know that it is disliked, in which case mentioning it to him becomes obligatory, because dislike is a ruling in the law, and it is obligatory to convey it to one who does not know it." },
+      { title: "Give the second half", body: "And when we say, a forbidden wrong — or when we say, a wrong, without qualification — we mean by it the forbidden. And silence about it, with the capacity to act, is forbidden." },
+    ],
+    closer: [
+      { title: "The exception inside the first half", body: "It is the most interesting clause in the chapter. Silence about a disliked thing is merely disliked — unless the person does not know, in which case telling him becomes obligatory. What converts a recommendation into a duty is not the gravity of the act but the ignorance of the actor, which relocates the whole question onto information." },
+      { title: "What this edition does with the chapter", body: "The chapter's substance is a survey of specific wrongs in the mosques, markets, streets, bathhouses and guest-houses of eleventh-century Khurasan, with rulings attached. This edition presents the classification and the method of inference and reproduces none of the catalogue; the editorial note explains why." },
+    ],
+    distinction: ["Two costs of staying silent", "Disliked", "Silence is disliked, not unlawful — unless he does not know it is disliked.", "Forbidden", "Silence, with the capacity to act, is itself forbidden."],
+    misreading: "Do not flatten the two. Treating everything as the second produces a person who intervenes constantly; treating everything as the first produces the silence the book opened by lamenting.",
+    reflection: "Ask whether the person you object to knows the thing you know.",
+    audit: ["Which half is this?", "Does he know?", "Am I capable of acting?", "What does my silence actually cost?"],
+    nodes: ["makruh", "munkar", "hisba"],
+    model: pair("Two classes of wrong", "And two different costs of silence.", [["Disliked", "Preventing it is recommended; silence is disliked.", "balance"], ["Forbidden", "Silence, with capacity, is itself forbidden.", "warning"]]),
+  }),
+  makeChapter({
+    id: 14, shortTitle: "Two rungs only", formalTitle: "The fourth chapter: rulers and sultans",
+    overview: "The book's last chapter closes almost all of the ladder, and the test it substitutes is exact.",
+    moves: [
+      { title: "Recall the ladder in short form", body: "We have already mentioned the degrees of enjoining right: that its first is informing, its second preaching, its third harshness in speech, and its fourth prevention by compulsion — carrying someone to the truth by striking and punishment." },
+      { title: "Give the ceiling", body: "And what is permitted of all that, with rulers, is the first two ranks: informing and preaching." },
+      { title: "Give the reason for the closure", body: "As for prevention by compulsion, that is not for individuals of the subject population with a ruler — for it sets sedition in motion, stirs up evil, and what is born of it in harm is greater." },
+      { title: "Give the test for the third rank", body: "And as for harshness in speech — such as his saying, O oppressor, O you who do not fear God, and what runs in that course — then if it sets in motion a sedition whose harm passes beyond to others, it is not permitted. And if he fears only for himself, it is permitted, indeed he is urged to it." },
+    ],
+    closer: [
+      { title: "What the test actually asks", body: "Not how bad the wrong is, and not how likely the speaking is to work, but who bears the consequence. Harm falling on the speaker alone permits and even commends the speech; harm reaching others forbids it — which makes the decisive question one about other people rather than about courage." },
+      { title: "What the chapter then reports", body: "It was the practice of the predecessors to expose themselves to danger and to declare their objection openly, without concern for the destruction of their lives, and to expose themselves to kinds of torment — because they knew that this was martyrdom. And the report given: the best of martyrs is Hamza b. 'Abd al-Muttalib, then a man who rose to an imam and enjoined him and forbade him in the matter of God, and he killed him for that. The chapter that most tightly restricts confronting power also contains its highest praise, and the two are not in tension: what is closed is force and spillover, and what is praised is speech at one's own cost." },
+    ],
+    distinction: ["Two questions before speaking to power", "Who bears the harm?", "The speaker alone, which permits and commends it; or others, which forbids it.", "How bad is it?", "Which is not the test the chapter gives, however natural the question."],
+    misreading: "Do not read the praise of the predecessors as licence for the upper rungs. The same chapter closes compulsion to individuals absolutely, and permits harshness only when the cost falls on the speaker alone.",
+    reflection: "Ask, of something you have wanted to say, who would actually pay for it.",
+    audit: ["Who bears the consequence?", "Am I at rank three or rank four?", "Is the cost mine alone?", "Am I confusing courage with the test?"],
+    nodes: ["sultan", "darajat", "fitna"],
+    model: spectrum("The ceiling with rulers", "Two ranks open, one conditional, one closed.", [["Informing", "Permitted.", "support"], ["Preaching", "Permitted.", "support"], ["Harshness", "Only if the harm falls on the speaker alone.", "balance"], ["Compulsion", "Not for individuals — it sets sedition in motion.", "warning"]]),
+  }),
+];
+
+export const book19ConceptNodes: ConceptNode[] = [
+  ["qutb", "The greatest axis", "What prophets were sent for", "The practice whose loss the book describes as prophecy falling idle."],
+  ["mudahana", "Flattery", "The substitution", "Regard for creation taking the place of vigilance toward the Creator."],
+  ["hisba", "Hisba", "One word for both", "The term comprehending enjoining right and forbidding wrong."],
+  ["kifaya", "A collective duty", "From among you", "Discharged when someone competent has taken it up; otherwise on everyone."],
+  ["structure", "Four chapters", "Weighted to conditions", "The obligation brief, the conditions long, the rulers separate."],
+  ["arkan", "Four pillars", "Who, what, whom, how", "Four independent sets of conditions on a single act."],
+  ["muhtasib", "The one performing", "Eligible, then competent", "Responsible, Muslim, capable — and then knowledge, scruple, character."],
+  ["khuluq", "Good character", "The load-bearing quality", "Because knowledge and scruple do not suppress anger once it rages."],
+  ["wara", "Scruple", "Not completed alone", "Which Ghazali says is incomplete without the power to restrain anger."],
+  ["shurut", "Four conditions", "On the object", "Existing now, apparent without spying, known without reasoning."],
+  ["munkar", "Wrong, not sin", "A deliberate word", "More general, since a child or a madman can do wrong without disobeying."],
+  ["ijtihad", "The disputed", "Outside the office", "What requires reasoning to establish cannot be corrected this way."],
+  ["zuhur", "Apparent", "A sound or a smell", "The only things perceived through an intervening wall."],
+  ["tajassus", "Spying", "The forbidden rung", "Listening, sniffing, touching, asking — the ladder's first step, prohibited."],
+  ["darajat", "Ten degrees", "A ladder, in order", "Begun at the lowest, ascended only on failure, stopped when it works."],
+  ["makruh", "Disliked", "A different cost", "Silence is disliked, not unlawful — unless the doer does not know."],
+  ["sultan", "With rulers", "Two rungs", "Informing and preaching; compulsion closed to individuals."],
+  ["fitna", "Spillover", "The test", "Whether the harm falls on the speaker alone or reaches others."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book19Journeys: Journey[] = [
+  {
+    id: "the-axis-and-the-agent", number: "01", question: "Whose job is this, actually?", title: "The obligation, and who carries it",
+    description: "Start at the Ihya's most vehement opening, watch it immediately qualified into a collective duty, and end on the three qualities that decide whether anyone can do it well.",
+    payoff: "You learn when the duty is yours, and why knowledge and scruple are not enough to discharge it.",
+    image: assetUrl("assets/system/book19-axis.jpg"), imageAlt: "A single iron pivot pin standing upright in a worn stone socket, the stone polished around it.", minutes: 13, color: "#c25f50",
+    nodes: [
+      node("greatest-axis", "Hear the claim", "The greatest axis", "The matter for which God sent all the prophets.", "And its loss described as prophecy falling idle.", 1, "know"),
+      node("the-substitution", "Find the mechanism", "One audience for another", "Flattery of creation taking possession where vigilance was.", "Not disbelief replacing belief.", 1, "diagnose"),
+      node("from-among-you", "Take the limit", "Not all of you", "A collective duty, discharged when someone competent takes it up.", "But falling on everyone capable when nobody has.", 2, "balance"),
+      node("eligible-competent", "Separate the lists", "Eligible, then competent", "Responsible, Muslim, capable — and then three qualities.", "Meeting the first list is where the chapter starts.", 5, "order"),
+      node("when-anger-rages", "Take the third quality", "Knowledge is not enough", "When anger rages, knowledge and scruple do not suffice to suppress it.", "And an insult makes him forget the hisba entirely.", 6, "clear"),
+    ],
+  },
+  {
+    id: "what-a-wall-conceals", number: "02", question: "How did I come to know this?", title: "What may be addressed, and how you learned of it",
+    description: "Four conditions on the object, a deliberate change of vocabulary, and the exact line Ghazali draws at a closed door.",
+    payoff: "You get a physical test for what you are entitled to act on, and a reason most confident interventions fail it.",
+    image: assetUrl("assets/system/book19-wall.jpg"), imageAlt: "A plain mudbrick wall with a closed wooden door, photographed straight on in flat light.", minutes: 12, color: "#278d91",
+    nodes: [
+      node("four-conditions", "Take the four", "All of them", "Existing now, apparent without spying, known without reasoning.", "Which excludes the past, the feared, and the disputed.", 7, "pattern"),
+      node("no-ijtihad", "Take the fourth", "Nothing disputed", "What needs reasoning to establish is outside the office.", "However confident the corrector.", 7, "clear"),
+      node("wrong-not-sin", "Note the word", "Wrong, not sin", "More general — a madman can do wrong without disobeying.", "Which separates stopping something from convicting someone.", 8, "know"),
+      node("sound-or-smell", "Take the line", "Only a sound or a smell", "What passes through an intervening wall, arriving unbidden.", "And not even that, if an innocent source is possible.", 9, "witness"),
+    ],
+  },
+  {
+    id: "the-ladder", number: "03", question: "How far am I entitled to go?", title: "Ten rungs, and where yours stops",
+    description: "The book's spine — a graded ladder whose first rung is forbidden and whose upper rungs are closed where they are most tempting.",
+    payoff: "You get an order of operations for intervening, and the exact test for speaking to someone with power.",
+    image: assetUrl("assets/system/book19-ladder.jpg"), imageAlt: "A wooden ladder leaning against a bare wall, its lowest rung missing.", minutes: 14, color: "#bf7a35",
+    nodes: [
+      node("ten-degrees", "Take the ladder", "Ten rungs, in order", "From finding out to the gathering of troops.", "Ascended only on failure, stopped when it works.", 11, "order"),
+      node("forbidden-rung", "Note the first", "And it is forbidden", "Eavesdropping, sniffing, touching, asking the neighbours.", "The step most people take first is the one never permitted.", 12, "clear"),
+      node("two-upright", "Take the exception", "Without his enquiring", "Two upright men, at the outset, unsolicited.", "Every clause of it is load-bearing.", 12, "witness"),
+      node("disliked-forbidden", "Split the cost", "Disliked, or forbidden", "Silence about the first is disliked; about the second, forbidden.", "Unless he does not know — which makes telling him obligatory.", 13, "balance"),
+      node("two-ranks", "Take the ceiling", "Informing and preaching", "The only ranks open to an individual with a ruler.", "Compulsion sets sedition in motion.", 14, "steady"),
+      node("who-pays", "Take the test", "Who bears the harm?", "The speaker alone permits it; reaching others forbids it.", "Not how bad it is, and not how brave you are.", 14, "diagnose"),
+    ],
+  },
+];
+
+export const book19Movements: TaxonomyGroup[] = [
+  ["bab1", "1. The obligation and its merit", "The greatest axis, and the word that makes it a collective duty.", [1, 2, 3]],
+  ["bab2", "2. The pillars and conditions", "Four pillars, four conditions on the object, and a ladder whose first rung is forbidden.", [4, 5, 6, 7, 8, 9, 10, 11, 12]],
+  ["bab34", "3–4. Custom, and rulers", "How wrongs are classified, and the ceiling that applies to power.", [13, 14]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#c25f50", "#278d91", "#bf7a35"][index % 3] })) as TaxonomyGroup[];
+
+export const book19Instrument: Instrument = {
+  title: "How far up the ladder",
+  note: "Ghazali's fourth pillar is a ladder of ten degrees begun at the lowest and ascended only on failure — and his second pillar sets four conditions on what may be addressed at all, the strictest of which concerns how you came to know. His fourth chapter closes most of the ladder where power is involved. This applies that structure to a case. It is a reading aid and not a ruling; the questions of law it touches belong to qualified authority.",
+  items: [
+    {
+      id: "noticed", label: "Something you noticed someone doing", lede: "Answer for how it reached you before answering for what you want to do",
+      note: "His second pillar requires that the wrong be apparent to you without spying, and his ladder's first rung — seeking to find out — is itself forbidden. So the first question is not what the wrong is but how you came to know of it.",
+      axes: [
+        {
+          id: "knowing", kicker: "The second pillar", question: "How did it come to your notice?",
+          options: [
+            { id: "plain", label: "It was unmistakable — I did nothing to perceive it", note: "His condition: apparent without spying. What passes through a wall is only a sound or a smell." },
+            { id: "told", label: "Someone told me, without my asking", note: "The one opening he leaves, and it has exact clauses attached." },
+            { id: "asked", label: "I asked people about it", note: "Which he names in his list of the forbidden first rung." },
+            { id: "looked", label: "I checked for myself", note: "Listening, sniffing, touching — his four examples of what is prohibited." },
+          ],
+        },
+        {
+          id: "reach", kicker: "The fourth pillar", question: "What do you want to do about it?",
+          options: [
+            { id: "silent", label: "Nothing — it isn't mine to raise", note: "Which his third chapter says costs different amounts depending on the class of wrong." },
+            { id: "tell", label: "Let them know, in case they don't", note: "His second rung: informing." },
+            { id: "press", label: "Press it — warn them, say it hard", note: "His third, fourth and fifth rungs: forbidding, counsel, reproach." },
+            { id: "hand", label: "Act on it — remove it, stop it", note: "His sixth rung: changing by hand, and the highest an ordinary reading should consider." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "looked|*", name: "That is the rung he forbids", role: "warning", chapterId: 12, body: "His ladder's first degree is finding out — and he names it only to prohibit it: that is forbidden, it is the spying we have mentioned. His four examples are exact: he should not steal a hearing at another's house to hear the sound of strings, nor sniff to catch the smell of wine, nor touch what is in a man's garment to know the shape of a pipe, nor question his neighbours.", action: "Notice what this does to the rest of the ladder. Knowledge obtained this way does not qualify for any rung above it, however real the wrong turns out to be — the condition is on the knowing, not on the thing known. And notice the design: he lists the step most people take first, and forbids it before teaching any of the steps that are permitted." },
+        { key: "asked|*", name: "Questioning the neighbours", role: "warning", chapterId: 12, body: "This one is on his list by name. Among the four things forbidden at the first degree: nor should he question his neighbours, that they may tell him what goes on in his house. Asking around is not a milder form of finding out — it is one of his four stated examples of it.", action: "His exception shows exactly where the line is, because it turns entirely on who started it: if two upright men informed him at the outset, without his enquiring, then at that point he may act. Two of them, upright, unsolicited, and he did not go looking. What separates this from what you have done is not the information but its initiation." },
+        { key: "*|silent", name: "Then price the silence correctly", role: "balance", chapterId: 13, body: "His third chapter divides wrongs into the disliked and the forbidden, and the cost of silence differs. Preventing a disliked wrong is recommended and silence about it is disliked, not unlawful. But silence about a forbidden wrong, with the capacity to act, is itself forbidden.", action: "And there is a clause inside the first half worth having: silence about a disliked thing is merely disliked — except when the doer does not know it is disliked, in which case mentioning it to him becomes obligatory, because a ruling in the law must be conveyed to one who does not know it. What converts a recommendation into a duty there is his ignorance, not the gravity. So the question to answer is not whether you feel entitled to speak but whether he knows." },
+        { key: "plain|hand", name: "The rung, and what stands under it", role: "balance", chapterId: 11, body: "You have satisfied the condition his second pillar is strictest about: apparent without spying. What passes through an intervening wall is only a sound or a smell, and that is the one route by which knowledge arrives without your seeking it.", action: "But the ladder is ordered, and the sixth rung is available only when the ones below it have not answered — informing, forbidding, counsel, reproach. Check also the other three conditions on the object: that it exists at present rather than being past or anticipated, and that it is known to be a wrong without independent reasoning, which puts anything qualified people legitimately differ over outside this entirely. And the fourth pillar's qualities stand over all of it: when anger rages, he says, knowledge and scruple do not suffice to suppress it." },
+        { key: "told|*", name: "Check the clauses of the exception", role: "balance", chapterId: 12, body: "An unsolicited report is the one thing he allows past the forbidden first rung, and he specifies it tightly: if two upright men informed him at the outset, without his enquiring — then at that point he may enter, and asking leave is not required of him.", action: "Every clause is load-bearing: the number, their standing, that it came at the outset, and that he did not enquire. A single informant, or one whose uprightness is not established, or a report you drew out by asking, does not meet it. He treats a lesser report differently, and this edition does not carry those gradations. Before going further, settle whether what reached you actually satisfies all four." },
+        { key: "plain|*", name: "The conditions are met — now the manner", role: "support", chapterId: 7, body: "Apparent without spying is his hardest condition and you have met it. The remaining three on the object still apply: that the wrong exist at present, not past and not anticipated; that it be something the law guards against; and that it be known to be a wrong without independent reasoning.", action: "Then the ladder, in order: informing, then forbidding, then preaching and counsel, then reproach — begun at the lowest and stopped as soon as it answers. And his three qualities in the one performing it: knowledge, scruple, and good character — of which he says the third is the root of this whole matter and its means, since when anger rages the first two do not suppress it, and a man whose reputation or person is struck forgets the hisba and busies himself with himself." },
+        { key: "*|*", name: "Take the knowing before the doing", role: "balance", chapterId: 7, body: "His structure runs in that order for a reason. The second pillar's conditions govern whether there is anything here to address; the fourth pillar's ladder governs how far it may go — and no rung of the ladder is available on knowledge that failed the conditions.", action: "The one to settle first is how it reached you, since his first rung is the forbidden one. What passes through a wall is only a sound or a smell, and everything else behind a shut door is not available, however certain you are of it." },
+      ],
+    },
+    {
+      id: "power", label: "Something done by someone with power", lede: "His fourth chapter has a rule of its own, and a test that is not about how bad it is",
+      note: "Ghazali gives a hard ceiling for individuals confronting rulers — informing and preaching only — and makes the third rank turn on a single question: who bears the harm if you speak. Compulsion he closes outright. This applies his test; it is a reading aid, not counsel about any actual situation.",
+      axes: [
+        {
+          id: "spill", kicker: "The chapter's test", question: "If you speak, who bears the consequence?",
+          options: [
+            { id: "me", label: "Only me", note: "His condition for the third rank: if he fears only for himself, it is permitted." },
+            { id: "others", label: "It would reach people beyond me", note: "His condition against it: a sedition whose harm passes to others." },
+            { id: "unknown", label: "I honestly cannot tell", note: "Which the chapter makes the question you must answer first." },
+            { id: "position", label: "I would gain by it — standing, or a name", note: "The motive he names when discussing the qualities required in the one performing hisba." },
+          ],
+        },
+        {
+          id: "how", kicker: "The ladder, abbreviated", question: "How far do you want to take it?",
+          options: [
+            { id: "inform", label: "Let them know it is wrong", note: "The first of the two ranks he leaves open." },
+            { id: "preach", label: "Preach it — counsel them" , note: "The second, and the last one open unconditionally." },
+            { id: "harsh", label: "Name it harshly, to their face", note: "His third rank, which he permits only under one condition." },
+            { id: "force", label: "Stop it by force", note: "His fourth, which he closes to individuals outright." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "*|force", name: "This one he closes outright", role: "warning", chapterId: 14, body: "His sentence admits no condition: as for prevention by compulsion, that is not for individuals of the subject population with a ruler — for it sets sedition in motion, stirs up evil, and what is born of it in harm is greater. The closure does not depend on how grave the wrong is or how certain you are.", action: "Note the reasoning, because it is consequential rather than deferential: what is objected to is the harm produced, not the standing of the person harmed. And note that this is the whole point of the fourth chapter existing separately — the ladder taught in the second chapter would have permitted this, and the last chapter is there to take it back." },
+        { key: "position|*", name: "Check the motive first", role: "warning", chapterId: 6, body: "He names this exactly, and puts it at the end of his account of what goes wrong in the one performing hisba: indeed he may undertake it from the outset seeking rank and a name. He places it there deliberately, right after describing what happens to a man whose reputation or person is struck — because someone who set out for standing will not survive the first insult.", action: "The passage before it is the diagnosis: not everyone who knows acts by his knowledge — indeed he may know that he is excessive and beyond the limit permitted in the law, and yet some purpose of his own carries him to it. Knowing the act is right is compatible with doing it for the wrong reason and doing it too hard. Settle the motive before settling the rank." },
+        { key: "others|harsh", name: "The condition rules it out", role: "warning", chapterId: 14, body: "His test for the third rank is precise, and this is the half that fails it: as for harshness in speech — such as his saying, O oppressor, O you who do not fear God — if it sets in motion a sedition whose harm passes beyond to others, it is not permitted.", action: "What the test asks is worth holding onto, because it is not the question people usually ask. Not how bad the wrong is, and not how likely you are to be heard, but who pays. The chapter that most tightly restricts confronting power also carries its highest praise, and there is no tension in that: what is praised is speech at one's own cost, and what is closed is cost imposed on others. The two ranks below remain open to you." },
+        { key: "me|harsh", name: "The one case he commends", role: "support", chapterId: 14, body: "This is the half of his test that passes: and if he fears only for himself, it is permitted — indeed he is urged to it. It is the only place in the chapter where he moves from permitting to urging.", action: "And the report he attaches: the best of martyrs is Hamza b. 'Abd al-Muttalib, then a man who rose to an imam and enjoined him and forbade him in the matter of God, and he killed him for that. He notes that it was the practice of the predecessors to expose themselves to danger and declare their objection openly, because they knew this was martyrdom. Hold that with the ceiling still in place: what is commended here is speech, at your own cost. The rank above it stays closed regardless of who bears the harm." },
+        { key: "unknown|harsh", name: "Then that is the question, not a detail", role: "balance", chapterId: 14, body: "His whole test for this rank is the thing you cannot answer. If it sets in motion a sedition whose harm passes beyond to others, it is not permitted; if he fears only for himself, it is permitted. There is no ruling here that does not run through that answer.", action: "So the work is to establish it rather than to proceed under uncertainty, since the default the structure implies is the lower rank rather than the higher. Informing and preaching remain open unconditionally, and neither requires you to have settled the question. Take one of those while the answer is unknown." },
+        { key: "*|inform", name: "The first of the two open ranks", role: "support", chapterId: 14, body: "What is permitted of all that, with rulers, is the first two ranks: informing and preaching. Informing is the lower of them, and it carries no condition at all in his treatment — which makes it the one thing available in every case this chapter covers.", action: "It is also the rung his ladder says to start on generally, and the third chapter gives the reason it can be more than a formality: a ruling in the law must be conveyed to one who does not know it, so that where the person genuinely does not know, telling him moves from recommended to obligatory. Establish whether he knows before deciding the rung is too mild." },
+        { key: "*|*", name: "The second open rank", role: "support", chapterId: 14, body: "Preaching and counsel is the upper of the two ranks he leaves open to an individual with a ruler, and it is the last one available unconditionally. Above it, harshness depends on who bears the harm, and compulsion is closed.", action: "His fourth pillar's requirement applies here more than anywhere: good character, by which he is enabled for gentleness and kindness — which he calls the root of this whole matter and its means. And its stated function is not softness but endurance: it is what lets a man continue when his reputation or his person is struck, rather than forgetting the hisba and busying himself with himself." },
+      ],
+    },
+  ],
+};
+
+export const book19Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 19 was read and used to establish the four chapters, the four pillars, the four conditions on the object, the ten degrees, and the ceiling applying to rulers.", url: "https://shamela.ws/book/9472/666" },
+  { label: "The obligation and its merit", note: "The first chapter, including the opening on the greatest axis and the argument that the duty is collective rather than individual.", url: "https://shamela.ws/book/9472/667" },
+  { label: "The pillars and the qualities", note: "The opening of the second chapter, the conditions on the one performing hisba, and the argument that knowledge and scruple do not suffice without good character.", url: "https://shamela.ws/book/9472/693" },
+  { label: "What may be addressed", note: "The second pillar, giving the four conditions on the object, the choice of the word wrong over disobedience, and the limit of what is apparent through a wall.", url: "https://shamela.ws/book/9472/684" },
+  { label: "The ten degrees", note: "The fourth pillar, listing the degrees in order and prohibiting the first of them as spying.", url: "https://shamela.ws/book/9472/689" },
+  { label: "Custom, and rulers", note: "The third chapter's division of wrongs into the disliked and the forbidden, and the fourth chapter's ceiling of informing and preaching.", url: "https://shamela.ws/book/9472/703" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 19 as the ninth book of the Quarter of Customs and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book19: SystemBook = {
+  id: 19,
+  title: "Enjoining Right and Forbidding Wrong",
+  shortTitle: "Enjoining Right",
+  defaultJourneyId: "the-ladder",
+  chapters: book19Chapters,
+  conceptNodes: book19ConceptNodes,
+  journeys: book19Journeys,
+  sources: book19Sources,
+  taxonomy: {
+    title: "Four chapters, four pillars",
+    note: "Ghazali's own four chapters, with the long second chapter kept whole: it holds the four pillars of hisba, the conditions on each, and the ladder of ten degrees. The third and fourth are grouped, being short and closely related in what they restrict.",
+    groups: book19Movements,
+  },
+  instrument: book19Instrument,
+  editorialNote: "The three journeys, fourteen reading sections, visual models, and diagnostic are editorial learning aids. The sections follow Ghazali's own order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. This book needs a clear note on scope. Its subject is a duty that in Ghazali's treatment reaches, at its upper degrees, striking, weapons, and the gathering of armed helpers, and its third chapter is a catalogue of specific rulings for the mosques, markets, streets, bathhouses and guest-houses of eleventh-century Khurasan. This edition carries neither. The upper rungs of the ladder are named because the ladder's order is the book's central teaching and cannot be shown without them, but no conditions for reaching them are reproduced and nothing here should be read as licensing any of them; those are questions of law and public order that belong to qualified authority in a functioning legal order, not to individuals and not to a reading edition. The third chapter's catalogue is presented by its governing classification — the disliked and the forbidden, and the different costs of silence attaching to each — and none of its specific rulings are reproduced. What this edition carries is the part of the book that is about judgement rather than enforcement: the argument that the duty is collective, the four pillars and the conditions attaching to each, the four conditions on what may be addressed at all, the exact line drawn at a closed door, the prohibition of the ladder's own first rung as spying, the three qualities required in the one who acts, and the fourth chapter's ceiling on confronting power together with its test of who bears the harm. The diagnostic applies that structure to a reader's own case and cannot pronounce on whether any action is lawful.",
+};
