@@ -1,6 +1,6 @@
 import { conceptNodes, contentSources } from "./data";
-import type { Chapter, VisualModel } from "./data";
-import type { MirrorSubject, SystemBook } from "./systemTypes";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { MirrorSubject, SystemBook, TaxonomyGroup } from "./systemTypes";
 import { book21Journeys } from "./book21journeys";
 
 type Seed = {
@@ -394,15 +394,42 @@ export const book21MirrorSubjects: MirrorSubject[] = [
   },
 ];
 
+// The six nodes in data.ts cover the heart's forces, which is the first third of this
+// book. Sections 6 to 15 turn to knowing and to the traffic of thoughts, and reference
+// seven further concepts; they are defined here rather than in data.ts so the frozen
+// /isfahan and /world routes keep the vocabulary they were built with.
+const book21ExtraNodes: ConceptNode[] = [
+  ["mirror", "The mirror", "The governing image", "The heart likened to a mirror, in which knowledge is the appearing of a form. Five failures of a mirror give the five reasons a heart lacks what it lacks."],
+  ["knowledge", "Knowledge", "The form appearing", "Defined precisely before the book relies on it, then sorted into rational and religious, and each of those divided again."],
+  ["thought", "The passing thought", "What arrives unbidden", "The first link in the chain that ends at a moving limb. It is not chosen, which is why it is not what a person is answerable for."],
+  ["resolve", "Resolve", "Where answerability begins", "Inclination hardened into settled intent. Ghazali sets the heart's acts in order to locate accountability link by link."],
+  ["guard", "Guarding the gates", "A derived obligation", "Guarding the heart is required; it cannot be done without knowing the entrances; so knowing the entrances is itself required."],
+  ["remember", "Remembrance", "The occupying practice", "What the five reported positions disagree about, and which Ghazali accepts them all concerning, each describing a different strength of prompting."],
+  ["steady", "Turning and settling", "Why it is called the heart", "The heart is named for its turning. Hearts are sorted by whether that turning has settled in a direction."],
+].map(([id, label, kicker, description]) => ({ id, label, kicker, description, position: `node-${id}` }));
+
+export const book21Movements: TaxonomyGroup[] = [
+  { id: "forces", label: "The heart and its forces", description: "The four words and their meanings, the armies of the heart, the city image, and the recurring dispositions.", color: "#b45f4c", chapterIds: [1, 2, 3, 4, 5] },
+  { id: "knowing", label: "The heart and knowing", description: "The mirror as the governing image, the kinds of knowledge, how knowledge arrives, and the testimony for a knowing that does not proceed by instruction.", color: "#2c78b8", chapterIds: [6, 7, 8, 9, 10] },
+  { id: "thoughts", label: "The traffic of thoughts", description: "How suggestions gain influence, the gates and the duty to know them, where answerability begins, and why the heart is named for its turning.", color: "#3a9b88", chapterIds: [11, 12, 13, 14, 15] },
+];
+
+export const book21ConceptNodes: ConceptNode[] = [...conceptNodes, ...book21ExtraNodes];
+
 export const book21: SystemBook = {
   id: 21,
   title: "The Wonders of the Heart",
   shortTitle: "Wonders of the Heart",
   defaultJourneyId: "action",
   chapters: book21Chapters,
-  conceptNodes,
+  conceptNodes: book21ConceptNodes,
   journeys: book21Journeys,
   sources: contentSources,
+  taxonomy: {
+    title: "The book's three movements",
+    note: "Ghazali announces no numbered contents for this book, so these follow the turn of his own argument: the heart and its forces, the heart and knowing, and the traffic of thoughts.",
+    groups: book21Movements,
+  },
   mirrorObstructions: {
     title: "The five obstructions",
     note: "Ghazali gives five reasons a mirror fails to show a form and states that hearts lack the knowledge they lack for these reasons and no others. Choose something you are trying to see clearly and work the five in order. This locates an obstruction so that the fitting treatment can begin; it settles nothing about the matter you were trying to see.",

@@ -255,7 +255,7 @@ export const book34Chapters: Chapter[] = [
     reflection: "Read one commendation of detachment and ask what it is urging you to take rather than to leave.",
     audit: ["What am I being urged toward here?", "Have I heard this as a call to suffer?", "What have I given up without taking anything?", "Do I value what I claim to have chosen?"],
     nodes: ["zuhd", "exchange"],
-    model: pair("Two readings of one body of praise", "The definition decides which reading a person gives it.", [["As valuing", "The reports urge taking something better, and the leaving follows.", "support"], ["As suffering", "The reports urge giving things up, with nothing named on the other side.", "warning"]]),
+    model: pair("Two readings of one body of praise", "Everything downstream depends on which definition is in play.", [["As valuing", "The reports urge taking something better, and the leaving follows.", "support"], ["As suffering", "The reports urge giving things up, with nothing named on the other side.", "warning"]]),
   }),
   makeChapter({
     id: 13, shortTitle: "Graded by what you take", formalTitle: "The degrees and divisions of abstinence",

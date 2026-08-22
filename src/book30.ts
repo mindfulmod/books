@@ -391,7 +391,7 @@ export const book30Chapters: Chapter[] = [
     distinction: ["Two ways of holding an escape", "Witnessed as grace", "The escape is attributed to God and is held together with fear that it may be withdrawn.", "Held as achievement", "The escape is attributed to one's own perception, which converts it immediately into the thing escaped."],
     misreading: "Do not read the ending as counsel to despair or as a claim that vigilance is pointless. Ghazali's own conclusion is that fear and caution remain, not that effort fails.",
     reflection: "Notice what happened in you while reading this book, particularly any moment of recognising someone else in it, and any satisfaction at having recognised the trap.",
-    audit: ["What did I feel on finishing this book?", "Have I concluded anything about my own safety?", "Am I attributing this understanding to myself?", "Do I fear losing this, or assume I will keep it?"],
+    audit: ["What did I feel on finishing this book?", "Have I concluded anything about my own safety?", "Am I attributing this understanding to myself?", "Have I ever seriously pictured this being taken away?"],
     nodes: ["last-trap", "regress", "not-yet"],
     model: chain("The regress at the end", "Each escape opens onto the next danger.", [["Escape the snares", "The entrances of delusion are perceived and avoided.", "support"], ["Marvel at the escape", "The perception is credited to oneself, and conceit closes the circle.", "warning"], ["Attribute it to God", "The credit is returned, and the conceit is answered.", "support"], ["Feel secure in the grace", "Trust hardens into safety from the devising, which is the last delusion.", "warning"], ["Witness and fear together", "The grace is acknowledged and the outcome is left open.", "support"]]),
   }),
@@ -511,7 +511,7 @@ export const book30Journeys: Journey[] = [
     image: assetUrl("assets/system/book30-not-yet.jpg"), imageAlt: "A quiet luminous arcade at dusk where a single lamp burns beside an unmarked foundation stone and an open doorway leads onward.", minutes: 15, color: "#a97837",
     nodes: [
       node("remove-the-name", "Remove the name", "One dinar, no inscription", "A gift that will not survive anonymity was attached to the record.", "Endowment and public giving are not blameworthy.", 16, "clear"),
-      node("choose-by-need", "Choose by need", "Nearest, not most visible", "The object of the giving is weighed by what is needed rather than what is seen.", "Visibility is a condition, not a complete diagnosis.", 16, "balance"),
+      node("choose-by-need", "Choose by need", "Nearest, not most visible", "The object of the giving is weighed by what is needed rather than what is seen.", "Being seen is one condition among several, not the whole finding.", 16, "balance"),
       node("hear-the-flattery", "Hear the last speech", "You escaped me", "Perceiving every snare becomes the achievement one is then deluded by.", "Conceit here is greater than the faults escaped.", 17, "name"),
       node("return-the-credit", "Return the credit", "Not from yourself", "The escape is witnessed as grace rather than as one's own perception.", "Attribution alone does not close the matter.", 17, "receive"),
       node("say-not-yet", "Say not yet", "Grace and fear together", "The grace is acknowledged and the outcome is left open until the end.", "The counsel is vigilance, not despair.", 17, "steady"),

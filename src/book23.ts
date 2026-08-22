@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode } from "./data";
-import type { FoodMeasure, Journey, SourceLink, SystemBook } from "./systemTypes";
+import type { FoodMeasure, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 const book23Base: Chapter[] = [
   {
@@ -1183,6 +1183,12 @@ export const book23FoodMeasures: FoodMeasure[] = [
   },
 ];
 
+export const book23Movements: TaxonomyGroup[] = [
+  { id: "hunger", label: "Hunger and satiety", description: "The merit of hunger and the condemnation of satiety, and the benefits and evils Ghazali attributes to each.", color: "#b45f4c", chapterIds: [1, 2] },
+  { id: "stomach", label: "Disciplining the stomach", description: "The method that breaks its greed, the variation of the rule by circumstance, and display disguised as frugality.", color: "#2c78b8", chapterIds: [3, 4, 5] },
+  { id: "second", label: "The second desire", description: "The discourse on sexual desire, and what the aspirant must weigh in renouncing or undertaking marriage.", color: "#3a9b88", chapterIds: [6, 7] },
+];
+
 export const book23: SystemBook = {
   id: 23,
   title: "Breaking the Two Desires",
@@ -1192,11 +1198,16 @@ export const book23: SystemBook = {
   conceptNodes: book23ConceptNodes,
   journeys: book23Journeys,
   sources: book23Sources,
+  taxonomy: {
+    title: "Three movements",
+    note: "Ghazali's own order. The book announces two desires; the first takes five sections and the second two.",
+    groups: book23Movements,
+  },
   foodMeasures: {
     title: "The four measures",
     note: "Ghazali gives the aspirant four duties regarding the stomach: lawfulness first, then amount, timing, and kind. Set where you actually are on each. The degrees are positions on a scale rather than a prescription, and he is explicit that the measure of need differs by age, person, and occupation.",
     items: book23FoodMeasures,
   },
   editorialNote:
-    "This synthesis reports Ghazali's argument and historical ascetic practices. It does not authenticate every cited report or convert period-specific fasting, medical, or marriage material into general modern advice.",
+    "The four journeys, seven reading sections, visual models, and four measures are editorial learning aids. The seven sections preserve the expositions Ghazali gives in his own order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one; the Islamic Texts Society publishes a complete English translation of this book together with Book 22. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. This book needs a plain scope note. Its first half gathers the merits of hunger and the evils of satiety and reports historical ascetic practice, including severe and prolonged restriction of food. That material is presented as Ghazali's argument and as the practice of the people he describes. It is not health guidance, it is not adapted to any modern reader, and it should not be acted on: restricting food in the ways this book records can be dangerous, and is particularly so for anyone with a history of disordered eating. Ghazali himself insists that the measure of need differs by age, person, and occupation, and that the rule and merit of hunger vary by circumstance — that qualification is part of his argument, not a softening added here. The second half concerns sexual desire and the aspirant's decision about marriage, and addresses an eleventh-century social world directly; its structure and its reasoning about appetite are presented, and its specific counsel is not reproduced. The four measures set out positions on a scale Ghazali describes; they are not a prescription and cannot pronounce on what any person should eat. Complex personal cases require the complete Arabic, a reliable full edition, and qualified scholarly guidance — and questions about eating or health require a doctor rather than a reading edition.",
 };

@@ -60,7 +60,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Feeling heat is not the same as obeying it", firstLabel: "Anger occurs", first: "A protective force is stirred by obstruction or injury and becomes present to awareness.", secondLabel: "Anger rules", second: "Speech, action, judgment, or lasting hostility now takes its direction from the demand to retaliate." },
     misreading: "Do not read the opening as proof that every flash of anger makes a person vicious. The rest of the book carefully distinguishes the created power, its degrees, its governance, and its aftereffects.",
-    selfAudit: ["What claim about my own importance was threatened?", "What did the anger ask me to say or do?", "What residue did I permit to remain after the incident?"],
+    selfAudit: ["What claim about my own importance was threatened?", "What did the anger ask me to say or do?", "What residue did I permit to remain after the incident?", "Whose account of the incident have I not tried to state?"],
     sourceAnchor: "Book 25, opening discourse and section on the condemnation of anger.",
     model: { kind: "chain", title: "The concealed fire becomes a moral sequence", items: [
       { label: "Hidden ember", body: "A readiness rooted in pride or attachment can remain quiet before any incident occurs.", role: "support" },
@@ -92,7 +92,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Gentleness and weakness are not identical", firstLabel: "Governed gentleness", first: "The person can act firmly but chooses proportion because judgment sees it as better.", secondLabel: "Deficient force", second: "The person cannot protect a right or oppose wrong because courage and protective concern have collapsed." },
     misreading: "Do not convert Ghazali's mean into a modern instruction to suppress all anger. He explicitly criticizes both the loss of protective force and its excess.",
-    selfAudit: ["Can I act firmly without needing to humiliate?", "At what bodily sign does my judgment usually narrow?", "Where have I renamed avoidance as patience?"],
+    selfAudit: ["Can I act firmly without needing to humiliate?", "At what bodily sign does my judgment usually narrow?", "Where have I renamed avoidance as patience?", "Which of the three conditions was I actually in?"],
     sourceAnchor: "Book 25, section on the nature of anger and its three degrees.",
     model: { kind: "spectrum", title: "The power of anger under three conditions", items: [
       { label: "Deficiency", body: "Protective force is too weak to defend what reason and religion require.", role: "warning" },
@@ -123,7 +123,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Eradication differs from subordination", firstLabel: "Eradication", first: "The protective root would disappear, leaving no force to rise even when firmness is required.", secondLabel: "Subordination", second: "The force remains but receives its objects, limits, and permission to act from reason and religion." },
     misreading: "Do not use the impossibility of uprooting anger as permission to leave temperament unchanged. Ghazali immediately turns toward reducing its materials, retraining its habits, and stopping its commands.",
-    selfAudit: ["Which nonessential advantage has become emotionally nonnegotiable?", "Does my calm continue inwardly after the scene ends?", "What can anger no longer make me do?"],
+    selfAudit: ["Which nonessential advantage has become emotionally nonnegotiable?", "Does my calm continue inwardly after the scene ends?", "What can anger no longer make me do?", "What would I still defend if the stake were smaller?"],
     sourceAnchor: "Book 25, section on whether anger's root can be removed by discipline.",
     model: { kind: "pair", title: "What discipline can and cannot remove", items: [
       { label: "Created capacity remains", body: "Protective force is part of human equipment and can still answer a rightful need.", role: "support" },
@@ -153,7 +153,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Trigger management is not character treatment", firstLabel: "Managing triggers", first: "The person avoids or delays a particular situation so that immediate harm is less likely.", secondLabel: "Removing material", second: "The underlying pride, rivalry, greed, or habit that makes many situations ignite is trained through its opposite." },
     misreading: "Do not assume that another person's betrayal or mockery becomes morally irrelevant. Ghazali's focus here is the part of the anger cycle the reader can reform in the self.",
-    selfAudit: ["Which fuel appears across otherwise unrelated conflicts?", "What kind of anger does my social environment praise?", "Which opposite trait can I practice before the next incident?"],
+    selfAudit: ["Which fuel appears across otherwise unrelated conflicts?", "What kind of anger does my social environment praise?", "Which opposite trait can I practice before the next incident?", "Which cause could I remove now, before it is lit?"],
     sourceAnchor: "Book 25, section on the causes that inflame anger.",
     model: { kind: "chain", title: "From repeated fuel to a trained opposite", items: [
       { label: "Recurring fuel", body: "Pride, rivalry, mockery, argument, betrayal, or greed gives many incidents the same inner material.", role: "warning" },
@@ -185,7 +185,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Cooling the state does not decide the dispute", firstLabel: "Immediate treatment", first: "Prevent speech and action while judgment is narrowed and retaliation feels self-authorizing.", secondLabel: "Later judgment", second: "After the state cools, determine truth, boundaries, repair, or proportionate response with clearer counsel." },
     misreading: "Do not use silence and cooling as a command to bury harm or abandon justice. They protect the later decision from being made by the appetite for retaliation.",
-    selfAudit: ["Which intervention can I perform before speaking?", "What false permission does anger usually give me?", "Who can safely help me delay a decision made under heat?"],
+    selfAudit: ["Which intervention can I perform before speaking?", "What false permission does anger usually give me?", "Who can safely help me delay a decision made under heat?", "How long did I let pass before I answered?"],
     sourceAnchor: "Book 25, section on treating anger after its arousal through knowledge and action.",
     model: { kind: "chain", title: "A crisis sequence that protects judgment", items: [
       { label: "Recognize heat", body: "Treat bodily and verbal acceleration as evidence that judgment needs protection.", role: "support" },
@@ -218,7 +218,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Restraint is an act; forbearance is a formed readiness", firstLabel: "Restraining anger", first: "Heat rises and the person must exert effort to prevent it from commanding action.", secondLabel: "Forbearance", second: "The person has become less readily provoked and can govern the force with greater ease and steadiness." },
     misreading: "Do not treat forbearance as a temperament some people simply possess. Ghazali presents deliberate practice as the route by which it is acquired.",
-    selfAudit: ["Where is restraint still costly but possible?", "Am I unable to retaliate or freely choosing not to?", "What repeated response is becoming easier in me?"],
+    selfAudit: ["Where is restraint still costly but possible?", "Am I unable to retaliate or freely choosing not to?", "What repeated response is becoming easier in me?", "Is this getting easier, or only less frequent?"],
     sourceAnchor: "Book 25, sections on the virtue of restraining anger and the virtue of forbearance.",
     model: { kind: "chain", title: "How an effort becomes a disposition", items: [
       { label: "Heat rises", body: "The old reaction is present and asks to be carried out.",role:"warning" },
@@ -250,7 +250,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "A right to respond is not a right to become like the wrong", firstLabel: "Bounded redress", first: "Truthful, proportionate action protects or restores a right and stops when that work is complete.", secondLabel: "Retaliatory likeness", second: "The injured person adopts the same prohibited means, adds humiliation, or uses justice as cover for personal gratification." },
     misreading: "Do not tell an injured person that pardon is the only possible response. The section preserves bounded redress while arguing that anger cannot set its terms.",
-    selfAudit: ["What exact right needs protection or restoration?", "Which part of my proposed reply serves only humiliation?", "Would I choose the same measure after my anger cooled?"],
+    selfAudit: ["What exact right needs protection or restoration?", "Which part of my proposed reply serves only humiliation?", "Would I choose the same measure after my anger cooled?", "Have I confused what I am owed with what I want to do?"],
     sourceAnchor: "Book 25, section on the permitted measure of verbal retaliation and self-redress.",
     model: { kind: "chain", title: "A claim passes through three limits", items: [
       { label: "Real injury", body: "A wrong has occurred and may require protection, remedy, or answer.", role: "support" },
@@ -282,7 +282,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "A boundary can remain without a heart committed to hostility", firstLabel: "Protective boundary", first: "Contact or trust is limited for a real reason while rights, truth, and the wish for good remain intact.", secondLabel: "Rancorous withdrawal", second: "The person's pain feels welcome, their good feels offensive, and ordinary goodness is withheld to preserve hostility." },
     misreading: "Do not use the critique of rancour to require unsafe closeness or restored trust without evidence. Ghazali's target is the inward commitment to hostility and its unjust fruits.",
-    selfAudit: ["Does this person's good still feel like a loss to me?", "Which right or voluntary kindness has resentment made harder?", "Can I maintain a necessary boundary without rehearsing their harm?"],
+    selfAudit: ["Does this person's good still feel like a loss to me?", "Which right or voluntary kindness has resentment made harder?", "Can I maintain a necessary boundary without rehearsing their harm?", "How long has this been sitting in me?"],
     sourceAnchor: "Book 25, section on the meaning of rancour and its eight consequences.",
     model: { kind: "chain", title: "How heat hardens into a relationship", items: [
       { label: "Anger blocked", body: "Immediate retaliation does not occur, but the inward demand has not been released.", role: "support" },
@@ -314,7 +314,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Pardon does not require denial", firstLabel: "Release with truth", first: "The wrong is named, protection remains possible, and the personal demand for retaliation is relinquished.", secondLabel: "False peace", second: "The wrong is minimized, safety is abandoned, or the injured person is pressured to restore trust before grounds exist." },
     misreading: "Do not weaponize these virtues against an injured person. Their moral worth depends on agency, truth, and judgment, not forced proximity or denial.",
-    selfAudit: ["Which claim am I holding because justice requires it, and which because anger enjoys it?", "Can I speak fairly about this person while keeping a boundary?", "Where would gentleness improve the method without weakening the aim?"],
+    selfAudit: ["Which claim am I holding because justice requires it, and which because anger enjoys it?", "Can I speak fairly about this person while keeping a boundary?", "Where would gentleness improve the method without weakening the aim?", "What would beneficence cost me here that pardon would not?"],
     sourceAnchor: "Book 25, continuation of the rancour section on pardon, beneficence, and gentleness.",
     model: { kind: "spectrum", title: "Three movements beyond retaliation", items: [
       { label: "Restraint", body: "The person prevents anger from producing a prohibited answer.", role: "support" },
@@ -346,7 +346,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Wanting the same is not wanting theirs gone", firstLabel: "Emulation", first: "Their blessing remains welcome while its goodness awakens a desire for a similar gift and the work it requires.", secondLabel: "Envy", second: "Their possession itself becomes painful, and removal begins to feel like a solution to one's own lack." },
     misreading: "Do not label every uncomfortable comparison as fully formed envy. Ghazali's definitions and degrees ask what the heart actually wishes for the other person's good.",
-    selfAudit: ["Would I still want this if no one knew who possessed it?", "If I could not obtain the same, would their loss relieve me?", "Can I ask God to preserve and bless their good while seeking my own?"],
+    selfAudit: ["Would I still want this if no one knew who possessed it?", "If I could not obtain the same, would their loss relieve me?", "Can I ask God to preserve and bless their good while seeking my own?", "Am I after the good itself, or after the standing it carries?"],
     sourceAnchor: "Book 25, sections on the blame, reality, divisions, and degrees of envy.",
     model: { kind: "spectrum", title: "Four degrees around another person's blessing", items: [
       { label: "Remove it", body: "The blessing should disappear even if it never comes to me.", role: "warning" },
@@ -378,7 +378,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "The blessing and the position it signals are different objects", firstLabel: "Desire for the good", first: "The quality itself is loved and sought for its proper use without hostility to other recipients.", secondLabel: "Desire for relative rank", second: "The quality matters because it secures superiority, uniqueness, safety from another's rise, or victory in a shared field." },
     misreading: "Do not treat the seven causes as mutually exclusive personality types. Ghazali explicitly says several or all can gather in one person.",
-    selfAudit: ["What relative position would their blessing change?", "Is my pain about losing a good or losing uniqueness?", "Which causes are combining rather than appearing alone?"],
+    selfAudit: ["What relative position would their blessing change?", "Is my pain about losing a good or losing uniqueness?", "Which causes are combining rather than appearing alone?", "Which of the seven would I least like to be true of me?"],
     sourceAnchor: "Book 25, section on the seven causes of envy and emulation.",
     model: { kind: "chain", title: "The blessing enters a social interpretation", items: [
       { label: "Another is blessed", body: "A good becomes visible in a person nearby or significant to me.", role: "support" },
@@ -410,7 +410,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "A shared field can support cooperation or positional comparison", firstLabel: "Shared pursuit", first: "Another person's excellence reveals possibility, contributes to a common good, and can be welcomed without erasing one's own path.", secondLabel: "Narrow rivalry", second: "The field becomes a single seat, audience, or identity that only one person is allowed to occupy." },
     misreading: "Do not conclude that closeness, family, or professional ambition is itself corrupt. The analysis shows why these settings need deliberate generosity and a less narrow account of success.",
-    selfAudit: ["Who feels comparable enough to threaten me?", "What audience am I imagining as able to value only one of us?", "Which part of this good can expand through cooperation?"],
+    selfAudit: ["Who feels comparable enough to threaten me?", "What audience am I imagining as able to value only one of us?", "Which part of this good can expand through cooperation?", "Would I feel this if the person were a stranger?"],
     sourceAnchor: "Book 25, section on why envy is frequent among peers, siblings, relatives, neighbours, and those sharing a craft or aim.",
     model: { kind: "chain", title: "Why nearness can make a blessing feel scarce", items: [
       { label: "Similarity", body: "We share a role, craft, family place, audience, or valued identity.", role: "support" },
@@ -442,7 +442,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Acting against envy is not performing false affection", firstLabel: "Truthful opposite action", first: "A real good is acknowledged, a fair right is given, and the person refuses conduct that envy demanded.", secondLabel: "Flattery or denial", second: "Speech invents virtues, hides needed boundaries, or seeks approval without confronting the wish for another's loss." },
     misreading: "Do not turn opposite action into unsafe intimacy or dishonest praise. Ghazali's remedy contradicts envy while remaining answerable to truth, rights, and the actual situation.",
-    selfAudit: ["What conduct is envy currently requesting?", "What is its truthful opposite?", "Can I welcome their good without making their path my measure?"],
+    selfAudit: ["What conduct is envy currently requesting?", "What is its truthful opposite?", "Can I welcome their good without making their path my measure?", "What have I done that contradicts the wish?"],
     sourceAnchor: "Book 25, section on the treatment that removes envy through knowledge and action.",
     model: { kind: "pair", title: "The double medicine", items: [
       { label: "Knowledge", body: "See that envy injures your faith and present life, fails to remove the blessing, and can even benefit the person you attack.", role: "support" },
@@ -472,7 +472,7 @@ export const book25Chapters: Chapter[] = [
     ],
     distinction: { title: "Occurrence, consent, and expression must not be collapsed", firstLabel: "Unwanted and resisted", first: "The inclination occurs without invitation, is inwardly rejected, and is not allowed to direct voluntary conduct.", secondLabel: "Approved or expressed", second: "The person welcomes the wish for loss, preserves it without objection, or carries it into speech and action." },
     misreading: "Do not turn involuntary comparison into grounds for despair. Ghazali's three states preserve a real field of agency between first occurrence and chosen harm.",
-    selfAudit: ["Did I invite this wish, approve it, or merely notice it?", "What inward refusal am I making?", "What voluntary action would show that envy is not governing?"],
+    selfAudit: ["Did I invite this wish, approve it, or merely notice it?", "What inward refusal am I making?", "What voluntary action would show that envy is not governing?", "Would I be relieved or disappointed to hear their news improved?"],
     sourceAnchor: "Book 25, final section on the required degree in removing envy from the heart.",
     model: { kind: "spectrum", title: "Three relations to an envious inclination", items: [
       { label: "Resisted", body: "The wish arises, is inwardly disliked, and receives no voluntary speech or action.", role: "balance" },
@@ -507,6 +507,23 @@ export const book25ConceptNodes: ConceptNode[] = [
   { id: "opposite-action", label: "Opposite action", kicker: "Do not wait for ease", description: "Truthful praise, humility, generosity, and gladness contradict envy and retrain the relationship through action.", position: "right" },
   { id: "inclination", label: "Inclination", kicker: "Occurrence before consent", description: "An unwanted wish can arise without invitation, especially toward one who caused harm, and still be inwardly resisted.", position: "top" },
   { id: "responsibility", label: "Responsibility", kicker: "Resist, refuse, redirect", description: "Agency appears in whether the person approves the wish, carries it into action, or opposes it inwardly and outwardly.", position: "bottom" },
+  { id: "worldly-claims", label: "Worldly claims", kicker: "What anger is defending", description: "Much anger guards a stake in wealth, standing, or being deferred to; discipline weakens the avoidable causes rather than the created root.", position: "left" },
+  { id: "competition", label: "Competition", kicker: "Rivalry as fuel", description: "Boasting, rivalry, mockery, fault-finding, and disputation recur among the materials that inflame anger, and among the seven roots of envy.", position: "right" },
+  { id: "knowledge", label: "Knowledge", kicker: "Half of every cure", description: "Ghazali joins knowledge to action in both treatments: reflection interrupts the story anger tells, and seeing envy's real effect undoes its premise.", position: "top" },
+  { id: "silence", label: "Silence", kicker: "Denying the outlet", description: "Among the bodily and verbal practices that keep a risen force from obtaining its usual discharge, alongside lowering the body and cooling with water.", position: "bottom" },
+  { id: "habit", label: "Habit", kicker: "How forbearance is acquired", description: "Forbearance is the settled condition, and Ghazali says it is reached through repeated episodic acts of restraint rather than adopted directly.", position: "left" },
+  { id: "proportion", label: "Proportion", kicker: "The bound on reply", description: "Any permitted verbal self-redress stays inside truth and proportion; a wrong does not make every matching wrong available.", position: "right" },
+  { id: "speech", label: "Speech", kicker: "Where redress is tested", description: "The narrow permitted reply is verbal, which is why the limits are drawn here and why silence is repeatedly presented as safer.", position: "top" },
+  { id: "relationship", label: "The relation", kicker: "What rancour damages", description: "The eight fruits of rancour move outward from inward pleasure at harm to estrangement, unlawful speech, and withheld rights.", position: "bottom" },
+  { id: "beneficence", label: "Beneficence", kicker: "Beyond pardon", description: "Answering injury with voluntary good, which breaks the relation rancour was trying to establish rather than merely releasing a claim.", position: "left" },
+  { id: "blessing", label: "The blessing", kicker: "What envy is about", description: "Envy is defined by its object: disliking another's blessing and wanting it removed, which is what separates it from emulation.", position: "right" },
+  { id: "rank", label: "Rank", kicker: "Relative position", description: "Several of the seven roots concern standing rather than the blessing itself — fear of another's superiority, the wish to dominate, love of unique leadership.", position: "top" },
+  { id: "scarcity", label: "Imagined scarcity", kicker: "A narrow good", description: "Shared aims feel narrow, so another's gain appears to reduce one's own standing or access; this is why peers envy peers.", position: "bottom" },
+  { id: "proximity", label: "Proximity", kicker: "Repeated comparison", description: "Similarity and nearness produce the repeated meeting and overlapping pursuit that make envy structurally more likely among peers than strangers.", position: "left" },
+  { id: "cure", label: "The cure", kicker: "Knowledge joined to action", description: "Envy harms the envier in the present without removing the blessing; the practical treatment then contradicts each of envy's demands.", position: "right" },
+  { id: "generosity", label: "Generosity", kicker: "Against withholding", description: "One of the deliberate opposites: giving where envy would withhold, performed before the feeling of ease arrives rather than after.", position: "top" },
+  { id: "consent", label: "Consent", kicker: "The line of accountability", description: "An involuntary inclination and willing approval are not the same condition; what is required is to refuse approval, not to feel nothing.", position: "bottom" },
+  { id: "resistance", label: "Resistance", kicker: "The required degree", description: "Inwardly disliking the envious wish and keeping voluntary speech and action from obeying it — the demanding but realistic standard the book closes on.", position: "left" },
 ];
 
 export const book25Journeys: Journey[] = [
@@ -603,5 +620,5 @@ export const book25: SystemBook = {
     note: "An editorial causal navigation layer from created capacity through excess, residue, and reversal. Ghazali's source order remains visible in the numbered sections.",
     stages: book25Process,
   },
-  editorialNote: "The five journeys and six-stage moral state path are editorial learning aids, not divisions named by Ghazali. The fourteen reading sections follow the full order he announces, with closely connected source sections combined where they form one argument. The English is an original synthesis checked against the complete public Arabic text and older English comparison texts. It does not independently grade every narration or replace a critical Arabic edition, a complete published translation, or qualified scholarly guidance.",
+  editorialNote: "The five journeys and six-stage moral state path are editorial learning aids, not divisions named by Ghazali. The fourteen reading sections follow the full order he announces, with closely connected source sections combined where they form one argument. The English is an original synthesis checked against the complete public Arabic text and older English comparison texts; it is not a translation and not a substitute for one. It does not independently grade every narration or replace a critical Arabic edition, a complete published translation, or qualified scholarly guidance.",
 };

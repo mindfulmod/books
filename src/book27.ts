@@ -59,7 +59,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Condition is not character", firstLabel: "Outward condition", first: "Wealth is present or absent, increasing or decreasing, earned, kept, or spent.", secondLabel: "Moral response", second: "Contentment, greed, generosity, waste, miserliness, trust, and fear describe how the person inhabits that condition." },
     misreading: "Do not read the opening as a promise that one financial condition will purify the heart automatically. The structure exists to defeat that shortcut.",
-    selfAudit: ["Which branch best describes my present response?", "Where do I use my condition to excuse a vice?", "What opposite response is genuinely available within the same condition?"],
+    selfAudit: ["Which branch best describes my present response?", "Where do I use my condition to excuse a vice?", "What opposite response is genuinely available within the same condition?", "Which branch would someone watching me choose?"],
     sourceAnchor: "Book 27, introduction and announced plan of fourteen discussions.",
     model: { kind: "chain", title: "One condition opens several paths", items: [
       { label: "Material condition", body: "Wealth is absent, present, sought, kept, or spent.", role: "support" },
@@ -90,7 +90,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Possession differs from governing love", firstLabel: "Possession under use", first: "The means is held temporarily, directed to duties, and able to leave without redefining the self.", secondLabel: "Possession as center", second: "Increase, loss, and comparison determine attention, compromise, security, and willingness to meet obligations." },
     misreading: "Do not convert a collection of warnings into a claim that every wealthy person is spiritually worse than every poor person. Ghazali tests the ruling relation, then later distinguishes benefits, duties, and exceptions.",
-    selfAudit: ["What financial loss feels like loss of identity?", "Which duty is most easily displaced by acquisition or maintenance?", "What portion of my wealth has already been sent forward through sincere good?"],
+    selfAudit: ["What financial loss feels like loss of identity?", "Which duty is most easily displaced by acquisition or maintenance?", "What portion of my wealth has already been sent forward through sincere good?", "What would I still be if this were gone?"],
     sourceAnchor: "Book 27, discussion 1, the censure of wealth and dislike of loving it.",
     model: { kind: "chain", title: "How a means becomes a governing love", items: [
       { label: "Useful means", body: "Money begins as a route to food, shelter, duty, independence, or service.", role: "support" },
@@ -121,7 +121,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Instrumental good differs from final good", firstLabel: "Instrumental good", first: "Valuable because it enables another good, with its amount and use governed by that end.", secondLabel: "Finalized means", second: "Treated as though possession, growth, or control were themselves the completed purpose of life." },
     misreading: "Do not use the praise of useful wealth as proof that any source, amount, lifestyle, or intention becomes sound merely because some good is also done with it.",
-    selfAudit: ["What higher good does this money concretely enable?", "Could the same good be served with less occupation?", "Where has an instrument begun demanding final loyalty?"],
+    selfAudit: ["What higher good does this money concretely enable?", "Could the same good be served with less occupation?", "Where has an instrument begun demanding final loyalty?", "How much occupation is this good actually costing?"],
     sourceAnchor: "Book 27, discussion 2, the praise of wealth and reconciliation with its censure.",
     model: { kind: "chain", title: "The hierarchy of service", items: [
       { label: "Money", body: "A transferable external means with no final purpose in itself.", role: "support" },
@@ -152,7 +152,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Private use and private enclosure are not identical", firstLabel: "Private use in service", first: "Provision sustains a person or household so duties, learning, worship, and care can continue.", secondLabel: "Private enclosure", second: "Resources circulate mainly within comfort, image, and accumulation without a proportionate path toward others or higher work." },
     misreading: "Do not assume every public-looking expense is beneficial. Source, intention, actual usefulness, and the rights of nearer obligations still matter.",
-    selfAudit: ["Which expenditure protects irreplaceable time?", "Who besides me regularly benefits from what I hold?", "What resource could become a durable public good?"],
+    selfAudit: ["Which expenditure protects irreplaceable time?", "Who besides me regularly benefits from what I hold?", "What resource could become a durable public good?", "What have I bought back time for, and did I use it?"],
     sourceAnchor: "Book 27, discussion 3, the benefits of wealth.",
     model: { kind: "chain", title: "Three widening circles of benefit", items: [
       { label: "Self and household", body: "Measured provision protects capacity and fulfills immediate rights.", role: "balance" },
@@ -183,7 +183,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Price differs from total cost", firstLabel: "Transaction cost", first: "The amount paid to acquire the asset or experience.", secondLabel: "Total moral cost", second: "Attention, habit, maintenance, dependency, compromise, fear, conflict, and foregone good that continue after purchase." },
     misreading: "Do not treat every management task or lawful comfort as a sin. The question is whether the expanding system serves a defined good or becomes an absorbing end.",
-    selfAudit: ["Which ability has awakened a desire I did not previously manage?", "What comfort has become difficult to surrender?", "Which asset costs more attention than the service it returns?"],
+    selfAudit: ["Which ability has awakened a desire I did not previously manage?", "What comfort has become difficult to surrender?", "Which asset costs more attention than the service it returns?", "Which of these harms had I not noticed arriving?"],
     sourceAnchor: "Book 27, discussion 3, the religious and worldly harms of wealth.",
     model: { kind: "chain", title: "How a benefit turns into occupation", items: [
       { label: "New capacity", body: "Wealth makes a pleasure, asset, or influence possible.", role: "support" },
@@ -214,7 +214,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Effort differs from covetous dependence", firstLabel: "Measured effort", first: "The person works lawfully, plans responsibly, and accepts the limit of what effort can secure.", secondLabel: "Covetous dependence", second: "Hope is fastened to what particular people possess, making dignity and truth vulnerable to their approval." },
     misreading: "Do not use contentment to shame people for material need or to deny just claims, fair wages, support, or responsible planning. The target is the ruling appetite and humiliating dependence, not the existence of need.",
-    selfAudit: ["What increase has failed to end the desire for another increase?", "Whose favor has begun editing my conduct?", "Which want could be reduced without neglecting a right?"],
+    selfAudit: ["What increase has failed to end the desire for another increase?", "Whose favor has begun editing my conduct?", "Which want could be reduced without neglecting a right?", "What figure did I once think would be enough?"],
     sourceAnchor: "Book 27, discussion 4, greed, covetousness, and contentment.",
     model: { kind: "pair", title: "Two kinds of dependence", items: [
       { label: "Lawful means", body: "Work and planning are used while the heart remains free from servility toward people.", role: "balance" },
@@ -244,7 +244,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Contentment differs from passivity", firstLabel: "Trained contentment", first: "Effort, planning, and spending continue within a deliberately limited baseline and trust in God.", secondLabel: "Passive neglect", second: "Known duties, available means, or foreseeable rights are ignored under the name of detachment." },
     misreading: "Do not universalize the text's historical examples of simple living into one budget for every household. Preserve the method: reduce manufactured need, protect duties, and train freedom from comparison.",
-    selfAudit: ["Which expense makes future contentment harder?", "Which imagined emergency has no stopping rule?", "Whose lifestyle is setting my baseline without my consent?"],
+    selfAudit: ["Which expense makes future contentment harder?", "Which imagined emergency has no stopping rule?", "Whose lifestyle is setting my baseline without my consent?", "Which fear is setting my spending?"],
     sourceAnchor: "Book 27, discussion 5, the five-part treatment that acquires contentment.",
     model: { kind: "chain", title: "Five supports for contentment", items: [
       { label: "Gentle economy", body: "Reduce unnecessary outflow so sufficiency becomes materially possible.", role: "balance" },
@@ -276,7 +276,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Transfer differs from generosity", firstLabel: "Bare transfer", first: "Money leaves the hand, perhaps for image, pressure, waste, control, or an unexamined recipient.", secondLabel: "Generous action", second: "A fitting benefit is given willingly, through a sound source and measure, without violating prior rights." },
     misreading: "Do not treat emotional reluctance as proof that a gift has no value, or emotional ease as proof that it is wise. Generosity still requires rights, knowledge, and measure.",
-    selfAudit: ["Which need do I repeatedly notice but leave unanswered?", "Does my giving transfer value or create real benefit?", "What form of giving would make generosity more habitual?"],
+    selfAudit: ["Which need do I repeatedly notice but leave unanswered?", "Does my giving transfer value or create real benefit?", "What form of giving would make generosity more habitual?", "What did I do the last time I noticed clearly?"],
     sourceAnchor: "Book 27, discussion 6, the virtue of generosity.",
     model: { kind: "chain", title: "Wealth becomes living benefit", items: [
       { label: "Entrusted capacity", body: "A person holds money, food, time, access, or property that can serve more than private use.", role: "support" },
@@ -307,7 +307,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "An exemplar differs from a fixed quota", firstLabel: "Exemplar", first: "A life displays courage, promptness, attention, or sacrifice that expands moral imagination.", secondLabel: "Universal quota", second: "A single narrated amount or act is treated as the required measure for every person and circumstance." },
     misreading: "Do not romanticize imprudence or ignore dependents, debt, consent, and legal rights. The stories stretch the reader's imagination while the later sections define boundaries.",
-    selfAudit: ["How quickly do I respond once a need is clear?", "Does my process preserve the asker's dignity?", "What form of service besides money is available?"],
+    selfAudit: ["How quickly do I respond once a need is clear?", "Does my process preserve the asker's dignity?", "What form of service besides money is available?", "How would I want to be asked, if I were asking?"],
     sourceAnchor: "Book 27, discussion 7, accounts of generous people.",
     model: { kind: "chain", title: "The tempo of generous attention", items: [
       { label: "Need becomes visible", body: "A person, household, guest, or public good presents a claim on attention.", role: "support" },
@@ -338,7 +338,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Reluctance differs from obedience", firstLabel: "Reluctance resisted", first: "Giving feels costly, but knowledge of the right or better purpose governs action.", secondLabel: "Stinginess obeyed", second: "The pain of decrease is allowed to override the purpose for which wealth exists." },
     misreading: "Do not label every refusal miserliness. Some requests are unjust, harmful, manipulative, wasteful, or subordinate to prior rights. The exact boundary comes later.",
-    selfAudit: ["What name do I give withholding to make it sound principled?", "Which higher good loses when I retain this amount?", "What refusal has become easier through repetition?"],
+    selfAudit: ["What name do I give withholding to make it sound principled?", "Which higher good loses when I retain this amount?", "What refusal has become easier through repetition?", "Whose judgement would I not want on this refusal?"],
     sourceAnchor: "Book 27, discussion 8, the censure of miserliness.",
     model: { kind: "chain", title: "How withholding recruits other harms", items: [
       { label: "Fear of decrease", body: "Release is experienced as danger even when sufficiency and rights are secure.", role: "warning" },
@@ -369,7 +369,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Economy differs from false economy", firstLabel: "Economy", first: "Resources are conserved so rights, useful service, resilience, and higher purposes can continue.", secondLabel: "False economy", second: "A small saving consumes larger goods such as time, health, relationship, dignity, or trustworthy quality." },
     misreading: "Do not use the stories to mock a person with limited means for careful spending. The vice is revealed by distorted priority, not by a low budget.",
-    selfAudit: ["What cost have I excluded from my accounting?", "Who experiences my economy as unnecessary hardness?", "Where am I preserving the means after losing its purpose?"],
+    selfAudit: ["What cost have I excluded from my accounting?", "Who experiences my economy as unnecessary hardness?", "Where am I preserving the means after losing its purpose?", "What am I calling prudence?"],
     sourceAnchor: "Book 27, discussion 9, accounts of miserly people.",
     model: { kind: "pair", title: "Two ledgers for the same saving", items: [
       { label: "Narrow ledger", body: "It records only the amount not spent and declares success.", role: "warning" },
@@ -398,7 +398,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Altruism differs from irresponsible sacrifice", firstLabel: "Altruism", first: "One's own permissible claim is yielded for another person while prior rights and obligations remain protected.", secondLabel: "Irresponsible sacrifice", second: "A gift violates dependents, debts, consent, health, trust, or a duty that the giver had no right to abandon." },
     misreading: "Do not pressure vulnerable people into heroic giving or treat self-harm as holiness. The section names a high degree within a complete moral order, not a weapon against legitimate need.",
-    selfAudit: ["What real need would make this act costly?", "Whose prior right must remain protected?", "Can I give priority without turning the act into self-display?"],
+    selfAudit: ["What real need would make this act costly?", "Whose prior right must remain protected?", "Can I give priority without turning the act into self-display?", "Whose right am I about to step over in being generous?"],
     sourceAnchor: "Book 27, discussion 10, altruism and its excellence.",
     model: { kind: "spectrum", title: "Degrees of relation to need", items: [
       { label: "Withhold despite need", body: "Money is preserved even while self or another rightful claimant suffers.", role: "warning" },
@@ -428,7 +428,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "The floor differs from the virtue", firstLabel: "Legal floor", first: "Enforceable duties and rights establish what may not be withheld.", secondLabel: "Generous character", second: "Beyond the floor, fitting openness answers kinship, hospitality, dignity, capacity, and opportunity for good." },
     misreading: "Do not turn social grace into unlimited compliance with every cultural demand. Custom is weighed by justice, capacity, relationship, and the absence of harm.",
-    selfAudit: ["Is there an enforceable right here?", "What would ordinary dignity require beyond the minimum?", "Which purpose deserves priority over retaining the money?"],
+    selfAudit: ["Is there an enforceable right here?", "What would ordinary dignity require beyond the minimum?", "Which purpose deserves priority over retaining the money?", "Where does the enforceable end and the decent begin?"],
     sourceAnchor: "Book 27, discussion 11, the definition and reality of generosity and miserliness.",
     model: { kind: "chain", title: "How the boundary is found", items: [
       { label: "Identify the right", body: "Begin with legal duties, debts, maintenance, trusts, and prohibited uses.", role: "balance" },
@@ -459,7 +459,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "Knowledge and action treat different layers", firstLabel: "Knowledge", first: "Reveals mortality, sufficiency, money's purpose, the harms of withholding, and the value of generosity.", secondLabel: "Contrary action", second: "Gives repeatedly against the vice so the body's practice and the heart's expectation are retrained." },
     misreading: "Do not give randomly, waste property, or violate rights merely to feel detached. The contrary act must still be lawful, fitting, and directed to a real good.",
-    selfAudit: ["Am I protecting a use or the feeling of possession?", "What future fear has no defined limit?", "What repeated gift would retrain this exact reluctance?"],
+    selfAudit: ["Am I protecting a use or the feeling of possession?", "What future fear has no defined limit?", "What repeated gift would retrain this exact reluctance?", "What would I give away first, and why that?"],
     sourceAnchor: "Book 27, discussion 12, treatment of miserliness.",
     model: { kind: "chain", title: "Contrary action retrains the heart", items: [
       { label: "Name the cause", body: "Desire, long hope, fear, dependents, or love of possession is identified.", role: "balance" },
@@ -523,7 +523,7 @@ export const book27Chapters: Chapter[] = [
     ],
     distinction: { title: "External imitation differs from shared mastery", firstLabel: "External imitation", first: "The person points to the wealth of a righteous exemplar while copying only acquisition or retention.", secondLabel: "Shared mastery", second: "Source, rights, measure, generosity, intention, knowledge, and freedom from attachment resemble the exemplar as well." },
     misreading: "Do not use the conclusion to demean poor people, romanticize involuntary hardship, or declare every wealthy person inferior. Ghazali is weighing spiritual exposure and safety, not assigning social worth by income.",
-    selfAudit: ["Which exemplar do I cite to defend what I want?", "What inward qualities from that life am I not copying?", "What evidence shows that I can hold this instrument without occupation?"],
+    selfAudit: ["Which exemplar do I cite to defend what I want?", "What inward qualities from that life am I not copying?", "What evidence shows that I can hold this instrument without occupation?", "Am I citing this life, or living toward it?"],
     sourceAnchor: "Book 27, discussion 14, the censure of wealth and praise of poverty in general.",
     model: { kind: "pair", title: "Instrument and competence", items: [
       { label: "Skilled use", body: "The holder understands the danger, fulfills the five duties, gives freely, and keeps wealth subordinate.", role: "balance" },
@@ -774,5 +774,5 @@ export const book27: SystemBook = {
     note: "Choose a financial situation and carry it through purpose, source, amount, outlet, and intention. A strong answer at one gate cannot erase a failure at another.",
     items: book27WealthAudit,
   },
-  editorialNote: "The five journeys, sixteen reading sections, and five-gate ledger are editorial learning aids. The fourteen footer filters preserve the sequence Ghazali announces in the introduction. The English is an original synthesis checked against the complete public Arabic text and the published complete edition's description and bibliographic record. Reports and inherited anecdotes are presented as material gathered by Ghazali; this prototype does not independently grade every narration. The material is spiritual and ethical reading, not personal legal or financial advice, and it does not replace the complete translation, a critical Arabic edition, or qualified scholarly guidance.",
+  editorialNote: "The five journeys, sixteen reading sections, and five-gate ledger are editorial learning aids. The fourteen footer filters preserve the sequence Ghazali announces in the introduction. The English is an original synthesis checked against the complete public Arabic text and the published complete edition's description and bibliographic record; it is not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material gathered by Ghazali; this prototype does not independently grade every narration. The material is spiritual and ethical reading, not personal legal or financial advice, and it does not replace the complete translation, a critical Arabic edition, or qualified scholarly guidance.",
 };

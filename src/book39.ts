@@ -72,7 +72,7 @@ export const book39Chapters: Chapter[] = [
     distinction: ["Two accounts of what reflection produces", "Knowledge, and then the rest", "The specific fruit is knowledge; the state and the acts follow from it in order.", "A state directly", "Reflection producing a condition, which would make it a technique for feeling."],
     misreading: "Do not read the sequence as guaranteeing that knowledge produces the state. Book 38 said plainly that undoubted knowledge often fails to govern, and the two books have to be held together.",
     reflection: "Notice where you have tried to reach a state by thinking about it, and where the chain says you actually were.",
-    audit: ["What am I aiming at when I reflect?", "Have I tried to produce a state directly?", "Where in the chain do I stall?", "What knowledge is missing rather than what feeling?"],
+    audit: ["What am I aiming at when I reflect?", "Have I reached for the state instead of the thought that yields it?", "Where in the chain do I stall?", "What knowledge is missing rather than what feeling?"],
     nodes: ["fikr", "marifa", "chain"],
     model: chain("Four links", "The two books between them supply all four.", [["Thought", "The beginning and the key, and the subject of this book.", "support"], ["Knowledge", "The specific fruit, and the only thing that can be aimed at.", "support"], ["The state", "Which the knowledge changes, and which Book 38 treats.", "balance"], ["The act", "Which the state changes, and which the limbs perform.", "support"]]),
   }),

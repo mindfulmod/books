@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { FaultMirror, Journey, SourceLink, SystemBook } from "./systemTypes";
+import type { FaultMirror, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 const book22Base: Chapter[] = [
   {
@@ -38,6 +38,7 @@ const book22Base: Chapter[] = [
           body:
             "Bad character is framed as a sickness of the heart. That medical language makes later questions of signs, causes, dosage, and treatment part of one continuous argument.",
         },
+      { title: "Set up what must follow", body: "Testimony can establish that character matters; it cannot say what character is. Ghazali therefore closes the case for its rank and immediately turns to definition, because every later question — whether it can change, how it is treated, how its signs are read — depends on knowing what is being changed." },
       ],
       distinction: {
         title: "The opening claim is larger than good manners",
@@ -147,6 +148,7 @@ const book22Base: Chapter[] = [
           body:
             "People begin from different temperaments and histories. A tendency strengthened by repeated action and defended by belief is harder to redirect than one that has not yet become entrenched.",
         },
+      { title: "Keep the claim modest", body: "The argument establishes that character is receptive to discipline, not that any disposition can be remade at will or at speed. Ghazali's own conclusion is bounded: the roots remain, the measure changes, and the rate differs by temperament, habit, and conviction." },
       ],
       distinction: {
         title: "Training changes rule, not human nature into stone",
@@ -427,6 +429,7 @@ const book22Base: Chapter[] = [
           body:
             "Opposition creates room for knowledge and justice to resume their roles. The aim is an appetite that serves fitting ends in fitting measure.",
         },
+      { title: "Note what opposition is not", body: "Refusing desire's command is not the destruction of desire, which the third section already ruled out. The testimony is gathered to support a change of rule rather than a change of nature — the appetite that returns to fitting service is the same appetite." },
       ],
       distinction: {
         title: "Desire may be resisted without being declared evil in itself",
@@ -479,6 +482,7 @@ const book22Base: Chapter[] = [
           body:
             "One or two changes can be real without completing the work. Character is a stable inward form, so its signs must be read across time and situations.",
         },
+      { title: "Say what the signs are for", body: "The signs are diagnostic rather than certifying. They tell a person where the work still is, which is why the section is placed among the treatments and not at the end of the book as a conclusion." },
       ],
       distinction: {
         title: "A gentle presentation and a sound inward order can diverge",
@@ -1231,6 +1235,13 @@ export const book22FaultMirrors: FaultMirror[] = [
   },
 ];
 
+export const book22Movements: TaxonomyGroup[] = [
+  { id: "what", label: "What character is", description: "The excellence of good character and the blame of its opposite, and the definition the rest of the book depends on.", color: "#b45f4c", chapterIds: [1, 2] },
+  { id: "change", label: "That it can change", description: "The argument against fixed temperament, the general means of acquiring good character, and the detailed path.", color: "#2c78b8", chapterIds: [3, 4, 5] },
+  { id: "treat", label: "Diagnosis and treatment", description: "The signs of a diseased heart, the four routes to knowing one's own faults, the testimony for opposing desire, and the signs of health.", color: "#3a9b88", chapterIds: [6, 7, 8, 9] },
+  { id: "pace", label: "Formation and pace", description: "Character formed early, and the conditions of aspiration that govern how fast discipline may proceed.", color: "#9a75aa", chapterIds: [10, 11] },
+];
+
 export const book22: SystemBook = {
   id: 22,
   title: "Disciplining the Soul and Refining Character",
@@ -1240,9 +1251,15 @@ export const book22: SystemBook = {
   conceptNodes: book22ConceptNodes,
   journeys: book22Journeys,
   sources: book22Sources,
+  taxonomy: {
+    title: "Four movements",
+    note: "Ghazali's own order, grouped by what each stretch of the book is doing: defining character, arguing it can change, diagnosing and treating it, and setting the pace.",
+    groups: book22Movements,
+  },
   faultMirrors: {
     title: "The four mirrors",
     note: "Ghazali gives four routes by which a person comes to know his own faults, and notes that the first two have become rare. Work out which are actually open to you. The routes report faults; they do not treat them, and the treatment is the subject of the sections around this one.",
     items: book22FaultMirrors,
   },
+  editorialNote: "The five journeys, eleven reading sections, visual models, and four mirrors are editorial learning aids. The eleven sections preserve the expositions Ghazali gives in his own order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one; the Islamic Texts Society publishes a complete English translation of this book together with Book 23, and a reader wanting the text itself should go there. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. Two scope notes. The section on disciplining children reflects eleventh-century household practice, including counsel on correction and on the shaping of a child's appetites that would cause harm if taken as parenting advice today; it is presented for its argument about when character is most receptive to formation, and none of its specific counsel is reproduced. And the book's central claim — that character is receptive to change — is offered by Ghazali as a theological and ethical position against those who held temperament fixed, not as a clinical claim about any particular difficulty. The four mirrors report where a fault might be seen; they cannot pronounce on whether a fault is present, and they are not a substitute for treatment. Complex personal cases require the complete Arabic, a reliable full edition, and qualified scholarly guidance.",
 };

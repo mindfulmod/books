@@ -59,7 +59,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "A severe warning is not yet a complete definition", firstLabel: "Warning register", first: "The world appears as a rival, deceiver, and unreliable object of trust.", secondLabel: "Analytical register", second: "The rest of the book identifies which shares, motives, measures, and occupations deserve the censure." },
     misreading: "Do not take the personified opening as permission to despise the earth, useful work, family responsibility, or every created pleasure without the definitions that follow.",
-    selfAudit: ["What do I call worldly without examining its purpose?", "Which promise of permanence do I quietly expect from a changing condition?", "Am I willing to let the later distinctions correct my first impression?"],
+    selfAudit: ["What do I call worldly without examining its purpose?", "Which promise of permanence do I quietly expect from a changing condition?", "Am I willing to let the later distinctions correct my first impression?", "Which of my first impressions am I most attached to?"],
     sourceAnchor: "Book 26, al-Ghazali's introduction and announced roadmap.",
     model: { kind: "chain", title: "The warning becomes an inquiry", items: [
       { label: "Display", body: "Beauty, availability, and promise draw the heart toward immediate possession.", role: "support" },
@@ -90,7 +90,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Attraction and enslavement are not identical", firstLabel: "Attractive trust", first: "A created good is received with gratitude, responsibility, and awareness that it can depart.", secondLabel: "Governing love", second: "Its increase and decrease determine the heart's direction, rivalry, fear, and sense of worth." },
     misreading: "Do not use these reports to assume that poverty is automatically virtuous or abundance automatically corrupt. The repeated question is what either condition does to obedience, attention, and trust.",
-    selfAudit: ["What abundance has increased my comparison with others?", "Where do I say stewardship but feel absolute ownership?", "What change would reveal that a gift has become my governing love?"],
+    selfAudit: ["What abundance has increased my comparison with others?", "Where do I say stewardship but feel absolute ownership?", "What change would reveal that a gift has become my governing love?", "Would I describe this the same way to someone who has less?"],
     sourceAnchor: "Book 26, chapter 1, An Elucidation of the Censure of This World.",
     model: { kind: "pair", title: "One field, two relations", items: [
       { label: "Entrusted field", body: "The person receives, uses, gives, and answers for a temporary share.", role: "balance" },
@@ -119,7 +119,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Planning differs from presuming", firstLabel: "Responsible planning", first: "Means are arranged while outcomes, lifespan, and control remain acknowledged as limited.", secondLabel: "Long presumption", second: "The heart builds identity and security on an imagined future whose arrival and duration are treated as owed." },
     misreading: "Do not turn short hope into irresponsibility toward dependents, debts, work, or future duties. The target is heedless presumption, not prudent foresight.",
-    selfAudit: ["Which plan has become a promise in my imagination?", "What maintenance consumes attention without serving a clear duty?", "What would I still choose if I felt the true brevity of the condition?"],
+    selfAudit: ["Which plan has become a promise in my imagination?", "What maintenance consumes attention without serving a clear duty?", "What would I still choose if I felt the true brevity of the condition?", "What am I treating as further off than it is?"],
     sourceAnchor: "Book 26, chapter 2, Exhortations on the Censure of This World and Its Nature.",
     model: { kind: "chain", title: "Long hope enlarges occupation", items: [
       { label: "Assumed time", body: "The future is felt as available, stable, and personally guaranteed.", role: "warning" },
@@ -150,7 +150,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Temporary does not mean morally meaningless", firstLabel: "Temporary field", first: "The condition changes and cannot be finally possessed, but choices within it bear consequences.", secondLabel: "Meaningless illusion", second: "Nothing done here would matter because the entire field lacked truth or accountability." },
     misreading: "Do not read the dream analogy as a claim that suffering, duty, or injustice can be dismissed as unreal.",
-    selfAudit: ["What slow change have I mistaken for stillness?", "Which possession feels more permanent because I see it daily?", "What consequence will remain when the present form disappears?"],
+    selfAudit: ["What slow change have I mistaken for stillness?", "Which possession feels more permanent because I see it daily?", "What consequence will remain when the present form disappears?", "When did I last notice this changing?"],
     sourceAnchor: "Book 26, chapter 3, the opening examples of shadow and dream.",
     model: { kind: "chain", title: "Apparent stillness hides departure", items: [
       { label: "Single glance", body: "The condition appears stable because only one moment is being compared.", role: "support" },
@@ -181,7 +181,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Enjoyment differs from enthronement", firstLabel: "Received enjoyment", first: "A pleasure is taken within a lawful measure, thanked for, and allowed to pass without becoming the final good.", secondLabel: "Enthroned enjoyment", second: "The pleasure sets the scale of success and commands increasing time, compromise, and fear." },
     misreading: "Do not infer that every pleasant experience is a deception. The error lies in the incomplete promise the heart attaches to it and the rule it receives.",
-    selfAudit: ["What cost disappears from my first mental picture?", "Which pleasure has begun to set the scale of a good life?", "Can I receive it without demanding repetition or permanence?"],
+    selfAudit: ["What cost disappears from my first mental picture?", "Which pleasure has begun to set the scale of a good life?", "Can I receive it without demanding repetition or permanence?", "What would I have to be told to stop wanting it?"],
     sourceAnchor: "Book 26, chapter 3, examples concerning attraction, harm, and mixed sweetness.",
     model: { kind: "chain", title: "The hidden half of the promise", items: [
       { label: "Invitation", body: "Attention is captured by sweetness, beauty, ease, or rank.", role: "support" },
@@ -212,7 +212,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Use is not the same as possession", firstLabel: "Grateful use", first: "The share is received, cared for, and used according to purpose while its temporary status remains present.", secondLabel: "Possessive claim", second: "Access becomes an inward contract that the share must remain and continue serving the self." },
     misreading: "Do not use the traveler image to neglect entrusted people, property, or duties. A guest can be careful precisely because the gift belongs to the Host.",
-    selfAudit: ["What temporary access have I rewritten as permanent ownership?", "Does my care serve the journey or delay it?", "Can gratitude remain when the gift changes hands?"],
+    selfAudit: ["What temporary access have I rewritten as permanent ownership?", "Does my care serve the journey or delay it?", "Can gratitude remain when the gift changes hands?", "Am I holding this, or carrying it?"],
     sourceAnchor: "Book 26, chapter 3, closing examples of the road, caravan, and guesthouse.",
     model: { kind: "pair", title: "Two guests receive the same tray", items: [
       { label: "Knows the custom", body: "Benefits, gives thanks, and returns the tray freely for the next guest.", role: "balance" },
@@ -241,7 +241,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Present pleasure and blameworthy world are not coextensive", firstLabel: "Present with enduring fruit", first: "The activity is enjoyed now and its result accompanies the servant beyond the immediate state.", secondLabel: "Present without enduring fruit", second: "The share ends with itself or leaves only attachment, distraction, or accountability." },
     misreading: "Do not define worldliness by whether something is visible, embodied, or enjoyable now. Ghazali's own classification is functional and relational.",
-    selfAudit: ["What is this activity leaving in the heart?", "Does its fruit survive the moment of consumption?", "Would I still value it if no one could see or praise it?"],
+    selfAudit: ["What is this activity leaving in the heart?", "Does its fruit survive the moment of consumption?", "Would I still value it if no one could see or praise it?", "What would be left of this an hour after it ends?"],
     sourceAnchor: "Book 26, chapter 4, opening definition of near and later states.",
     model: { kind: "chain", title: "A present share is classified by its fruit", items: [
       { label: "Immediate share", body: "An object, action, pleasure, or occupation is available before death.", role: "support" },
@@ -272,7 +272,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Lawful, necessary, and fruitful answer different questions", firstLabel: "Legal boundary", first: "Whether an act or object is permitted, required, discouraged, or prohibited.", secondLabel: "Spiritual function", second: "Whether the share bears lasting fruit, serves that fruit, or ends in immediate consumption and attachment." },
     misreading: "Do not use the threefold map to issue casual legal verdicts. Ghazali is adding a spiritual classification to legal boundaries, not replacing them.",
-    selfAudit: ["What lasting fruit does this share actually support?", "Where has need quietly become refinement and then expectation?", "Is my stated intention visible in my measure?"],
+    selfAudit: ["What lasting fruit does this share actually support?", "Where has need quietly become refinement and then expectation?", "Is my stated intention visible in my measure?", "Could I name the fruit without naming the thing?"],
     sourceAnchor: "Book 26, chapter 4, the three divisions of the servant's immediate share.",
     model: { kind: "spectrum", title: "Three relations to the immediate state", items: [
       { label: "Enduring fruit", body: "Knowledge and sincere action are present now while their fruit remains beyond the present.", role: "support" },
@@ -302,7 +302,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "A stated intention differs from an operative intention", firstLabel: "Stated intention", first: "The person can name a noble purpose when asked why the share is wanted.", secondLabel: "Operative intention", second: "The actual pattern of measure, use, sacrifice, display, and anxiety reveals what the share is serving." },
     misreading: "Do not reduce intention to private self-certification. Ghazali's account lets outcome, measure, and attachment test what the person claims.",
-    selfAudit: ["What exact service would this addition provide?", "At what point is that service already complete?", "What does my anxiety about being seen reveal about the operative intention?"],
+    selfAudit: ["What exact service would this addition provide?", "At what point is that service already complete?", "What does my anxiety about being seen reveal about the operative intention?", "Who decided the amount I currently call enough?"],
     sourceAnchor: "Book 26, chapter 4, the degrees between necessity and enjoyment and the role of intention.",
     model: { kind: "chain", title: "Intention becomes visible through measure", items: [
       { label: "Claimed purpose", body: "A higher reason is named for acquiring or keeping the share.", role: "support" },
@@ -333,7 +333,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Discipline differs from bodily contempt", firstLabel: "Disciplined care", first: "The body is nourished, clothed, sheltered, treated, and rested to sustain duty and worship.", secondLabel: "Contempt or obsession", second: "The body is either harmed through neglect or made the central project through endless optimization and pleasure." },
     misreading: "Do not use the mount analogy to disregard health, disability, medical care, rest, or the body's rights. Necessary care belongs inside the path.",
-    selfAudit: ["What capacity is this care meant to protect?", "Is the scale proportionate to that capacity?", "Have I confused disciplined care with either neglect or optimization without end?"],
+    selfAudit: ["What capacity is this care meant to protect?", "Is the scale proportionate to that capacity?", "Have I confused disciplined care with either neglect or optimization without end?", "What am I actually protecting with this care?"],
     sourceAnchor: "Book 26, chapter 4, the three enduring qualities and the body as the mount of the soul.",
     model: { kind: "chain", title: "Provision serves the heart's work", items: [
       { label: "Measured care", body: "Food, clothing, shelter, rest, and treatment preserve bodily capacity.", role: "balance" },
@@ -364,7 +364,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "The created object differs from the inward world built around it", firstLabel: "Created object", first: "A plant, mineral, animal, building, tool, or relation with real uses and limits.", secondLabel: "Inward world", second: "The network of love, rank, comparison, fear, and self-definition attached to the share." },
     misreading: "Do not assign blame to plants, minerals, crafts, or buildings as though material existence itself were the vice. Ghazali explicitly analyzes the attached share and occupation.",
-    selfAudit: ["How much of my relation is object, share, occupation, and attachment?", "Which maintenance task exists mainly to preserve an image?", "What inward trait is this possession currently feeding?"],
+    selfAudit: ["How much of my relation is object, share, occupation, and attachment?", "Which maintenance task exists mainly to preserve an image?", "What inward trait is this possession currently feeding?", "Which of the three is doing the most work in me right now?"],
     sourceAnchor: "Book 26, chapter 5, the world as objects, human share, and occupation, with the heart's and body's two relations.",
     model: { kind: "chain", title: "An object enters a human system", items: [
       { label: "Object", body: "A created thing has material properties, uses, and limits.", role: "support" },
@@ -395,7 +395,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Necessary origin does not make every extension necessary", firstLabel: "Root service", first: "The craft prepares or protects what human life and duty genuinely require.", secondLabel: "Unlimited extension", second: "New refinements generate tools, maintenance, learning, and wants whose connection to the original need becomes increasingly remote." },
     misreading: "Do not use this genealogy to demean craftspeople or ordinary work. Ghazali shows how indispensable their cooperation is before analyzing how the chain can exceed its purpose.",
-    selfAudit: ["What real need began this chain?", "Which layer still serves that need directly?", "Where did refinement begin generating its own demands?"],
+    selfAudit: ["What real need began this chain?", "Which layer still serves that need directly?", "Where did refinement begin generating its own demands?", "How many layers back can I still see the original need?"],
     sourceAnchor: "Book 26, chapter 5, three necessities, five root crafts, and the crafts of toolmaking.",
     model: { kind: "chain", title: "Need branches into occupation", items: [
       { label: "Vulnerability", body: "The body requires food, clothing, shelter, and protection.", role: "support" },
@@ -426,7 +426,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Authority differs from domination", firstLabel: "Just authority", first: "A defined office protects people, divides fairly, and settles conflict under law.", secondLabel: "Domination", second: "Power converts public need into personal rank, excess, extraction, or obedience to the officeholder's self." },
     misreading: "Do not take the description of conflict as proof that social life is itself condemned. Ghazali is explaining why just institutions become necessary within it.",
-    selfAudit: ["Which public good makes this private ease possible?", "Where does necessary authority need a stopping rule?", "Do I contribute fairly to forms of cooperation I rely on?"],
+    selfAudit: ["Which public good makes this private ease possible?", "Where does necessary authority need a stopping rule?", "Do I contribute fairly to forms of cooperation I rely on?", "What do I rely on that I have never counted?"],
     sourceAnchor: "Book 26, chapter 5, cooperation, settlement, defense, judgment, and jurisprudence.",
     model: { kind: "chain", title: "Cooperation generates a civic order", items: [
       { label: "Mutual need", body: "Specialized people exchange what no one can produce alone.", role: "support" },
@@ -457,7 +457,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "Coordination differs from endless expansion", firstLabel: "Coordinating exchange", first: "Markets, transport, hire, and money connect real needs across time, place, and unlike goods.", secondLabel: "Self-expanding occupation", second: "The mechanisms generate new wants, status, accumulation, and maintenance without a remembered point of sufficiency." },
     misreading: "Do not read the genealogy as a simple condemnation of markets, currency, or trade. The chapter explains their necessity before exposing how motive and extension can detach them from need.",
-    selfAudit: ["What mismatch does this mechanism genuinely solve?", "Where is its point of sufficiency?", "What purpose receives the time or wealth it creates?"],
+    selfAudit: ["What mismatch does this mechanism genuinely solve?", "Where is its point of sufficiency?", "What purpose receives the time or wealth it creates?", "Would I recognise the point of sufficiency if I passed it?"],
     sourceAnchor: "Book 26, chapter 5, shops, markets, transport, hire, money, minting, and multiplying occupations.",
     model: { kind: "chain", title: "Exchange solves one limit and creates another layer", items: [
       { label: "Mismatch", body: "Need, product, time, place, and quantity do not naturally coincide.", role: "support" },
@@ -488,7 +488,7 @@ export const book26Chapters: Chapter[] = [
     ],
     distinction: { title: "The middle is not a compromise between two desires", firstLabel: "Governed proportion", first: "Need, intention, law, reason, duty, and fruit determine what is taken and where it stops.", secondLabel: "Comfortable midpoint", second: "The person chooses an amount between excess and deprivation without asking what end governs it." },
     misreading: "Do not translate the ending into generic minimalism. Ghazali's middle is religiously directed, ethically bounded, attentive to duty, and concerned with the heart's final orientation.",
-    selfAudit: ["Which means has become my practical destination?", "Where have I treated a necessary duty as spiritual contamination?", "What concrete limit would show that provision is still serving purpose?"],
+    selfAudit: ["Which means has become my practical destination?", "Where have I treated a necessary duty as spiritual contamination?", "What concrete limit would show that provision is still serving purpose?", "Have I mistaken the road for the destination, or the destination for contamination?"],
     sourceAnchor: "Book 26, chapter 5, mistaken ends, errors of extreme renunciation, and the closing balanced course.",
     model: { kind: "spectrum", title: "Two errors and a directed middle", items: [
       { label: "Total abandonment", body: "Necessary means, created capacities, or continuing duties are rejected as though nonuse itself were the goal.", role: "warning" },
@@ -689,5 +689,5 @@ export const book26: SystemBook = {
     note: "Select an ordinary share and compare three relations to it. The object alone does not decide the category; fruit, purpose, measure, and attachment do.",
     items: book26RelationLens,
   },
-  editorialNote: "The five journeys, fifteen reading sections, and world lens are editorial learning aids. The five footer movements preserve the chapter order of the complete Fons Vitae edition. The English is an original synthesis checked against the complete public Arabic text and the published edition's contents and description. Reports and inherited examples are presented as material gathered by Ghazali; this prototype does not independently grade every narration or replace the complete published translation, a critical Arabic edition, or qualified scholarly guidance.",
+  editorialNote: "The five journeys, fifteen reading sections, and world lens are editorial learning aids. The five footer movements preserve the chapter order of the complete Fons Vitae edition. The English is an original synthesis checked against the complete public Arabic text and the published edition's contents and description; it is not a translation and not a substitute for one. Reports and inherited examples are presented as material gathered by Ghazali; this prototype does not independently grade every narration or replace the complete published translation, a critical Arabic edition, or qualified scholarly guidance.",
 };
