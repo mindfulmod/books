@@ -63,7 +63,7 @@ export const book06Chapters: Chapter[] = [
     moves: [
       { title: "Say how it breaks", body: "Breaking the fast in this fast occurs by thinking of what is other than God and the Last Day, and by thinking of the world." },
       { title: "Give the exception", body: "Except a world wanted for religion — for that is provision for the hereafter and is not of the world. The exception is stated at once, and it is doing real work." },
-      { title: "Give the sharpest test", body: "Until the masters of hearts said: whoever's aspiration moves during his day toward arranging what he will break his fast with, a fault is written against him." },
+      { title: "Give the sharpest test", body: "People far along in this went as far as saying that if your mind drifts during the day to planning what you will break the fast with, that is already counted against you." },
       { title: "Give the reason", body: "Because that is from little trust in God's bounty and little certainty in His promised provision. The fault is located in a belief rather than in an indulgence." },
     ],
     closer: [
@@ -141,14 +141,14 @@ export const book06Chapters: Chapter[] = [
     id: 7, shortTitle: "The feedbag", formalTitle: "The fifth duty: not filling what the day emptied",
     overview: "The duty that names the mechanism of the whole fast, and the one most commonly defeated — in a way that Ghazali says voids the benefit entirely.",
     moves: [
-      { title: "Name the mechanism", body: "The spirit of the fast and its secret is the weakening of the powers that are the devil's means for returning to evils. And that will not be obtained except by reducing." },
+      { title: "Name the mechanism", body: "The life of the fast, and its point, is weakening the drives the devil uses to get a person back to old habits — and that only happens by eating less." },
       { title: "Give the measure", body: "Namely, that he eat the meal he would have eaten each night had he not fasted." },
       { title: "Name the defeat", body: "But if he gathers what he used to eat in the forenoon to what he used to eat at night, he has not benefited from his fast." },
-      { title: "Give the accompanying manners", body: "Of the manners is that he not sleep much by day, so that he feels hunger and thirst and senses the weakening of the powers — and at that his heart becomes clear. And that he maintain each night a measure of weakness, so that his night vigil and his litanies are light for him." },
+      { title: "Give the accompanying manners", body: "Among the manners: do not sleep much during the day, so that you actually feel the hunger and thirst and notice the drives weakening — that is when the heart clears. And keep some of that weakness each night, so the night prayer and the devotions come easily." },
     ],
     closer: [
       { title: "The Night of Power", body: "So perhaps the devil will not hover about his heart, and he will look upon the kingdom of heaven — and the Night of Power is an expression for the night in which something of the Kingdom is disclosed. Ghazali connects the reduction of food directly to what the month is for." },
-      { title: "The two clauses that follow", body: "Whoever makes between his heart and his breast a feedbag of food is veiled from it. And whoever empties his stomach — that is not enough to lift the veil, so long as he has not emptied his aspiration of what is other than God. And that is the whole matter. The first clause makes eating a veil; the second refuses to let emptiness be a technique." },
+      { title: "The two clauses that follow", body: "Anyone who puts a feedbag of food between his heart and his chest is screened off from it. And emptying your stomach is not enough to take the screen away, so long as you have not emptied your attention of everything that is not God — and that is the whole of it. The first half makes eating a screen; the second refuses to let an empty stomach become a technique." },
     ],
     distinction: ["Two ways to complete a day of fasting", "At the ordinary meal", "Eating what the night would have held anyway, which preserves the weakening.", "By gathering both", "The forenoon's meal added to the night's, which Ghazali says leaves no benefit at all."],
     misreading: "Do not conclude that an empty stomach is the aim. Ghazali says explicitly that emptying the stomach is not enough to lift the veil so long as the aspiration is not emptied — and that the aspiration is the whole matter.",
@@ -202,8 +202,8 @@ export const book06Chapters: Chapter[] = [
     overview: "The argument that says what fasting is for, and it ends with a definition of nearness that reaches well past this book.",
     moves: [
       { title: "Place the human rank", body: "A human being sits above the animals, because the light of the intellect gives him the power to break his own appetite — and below the angels, because appetite still has the upper hand and he is tested by having to fight it." },
-      { title: "Give the movement", body: "So the more he plunges into appetites, the more he sinks to the lowest of the low and joins the throng of the beasts. And the more he suppresses them, the more he rises to the highest, and joins the horizon of the angels." },
-      { title: "Give the conclusion", body: "The angels are near to God; and whoever imitates them and resembles them in traits draws near to God as they are near — for the like of the near is near." },
+      { title: "Give the movement", body: "The deeper he goes into appetite the further he sinks, until he is down among the animals. The more he holds it down the higher he rises, until he is up at the level of the angels." },
+      { title: "Give the conclusion", body: "The angels are close to God, and anyone who imitates them and comes to resemble them draws close the way they are close — because what resembles the near is itself near." },
       { title: "Define the nearness", body: "Nearness there is not by place but by qualities. The sentence settles what kind of thing the whole scheme has been describing." },
     ],
     closer: [

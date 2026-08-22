@@ -122,7 +122,7 @@ export const book11Chapters: Chapter[] = [
     overview: "The second chapter, and everything in it is about deferring to someone else at a table.",
     moves: [
       { title: "Give the number", body: "What is added because of gathering and sharing in the eating is seven." },
-      { title: "Give the first", body: "That he not begin the food while someone is with him who has a better claim to begin — by age, by learning, or by being the one who provided it." },
+      { title: "Give the first", body: "Do not start eating while somebody present has a better claim to start — by age, by learning, or by having provided the food." },
       { title: "Note what the seven concern", body: "Order, portion, pace, attention, and speech: who begins, how much is taken, how fast, what is looked at, and what is said. Each is a way of accounting for someone else being present." },
       { title: "Note what they do not add", body: "Nothing about the food, and nothing about the eater's own state. Both were settled in the first chapter, and this chapter adds only what the presence of another person requires." },
     ],
@@ -164,7 +164,7 @@ export const book11Chapters: Chapter[] = [
       { title: "Give the six", body: "The places of the manners in hospitality are six: the invitation first, then the acceptance, then the attendance, then the presenting of the food, then the eating, then the departure." },
       { title: "Note whose they are", body: "The first and the fourth belong to the host; the second, third, and sixth belong to the guest; and the fifth belongs to both. The chapter divides the duties between the two parties by moment." },
       { title: "Note what the sixth adds", body: "Departure is given manners of its own. An occasion is not treated as finished when the eating stops, and how a guest leaves is part of what he owes." },
-      { title: "Give the excellence", body: "There is no good in one who does not show hospitality. And the chapter gathers the reports on its merit before working through the six." },
+      { title: "Give the excellence", body: "“There is no good in someone who does not show hospitality.” The chapter gathers the reports on what it is worth before working through the six." },
     ],
     closer: [
       { title: "The two who did not and did", body: "The Messenger passed a man with many camels and cattle who did not host him, and passed a woman with a few sheep who slaughtered for him — and said: look at those two; these traits are in God's hand, and whoever He wishes to grant a good character, He does." },
@@ -182,7 +182,7 @@ export const book11Chapters: Chapter[] = [
     overview: "The hardest and most surprising thing in the book, and it is aimed at hosts who are trying too hard.",
     moves: [
       { title: "Give the instruction", body: "Do not burden yourselves for the guest, so that you come to dislike him." },
-      { title: "Give the consequence", body: "For whoever dislikes the guest has disliked God, and whoever dislikes God, God dislikes him." },
+      { title: "Give the consequence", body: "Because anyone who resents the guest has resented God — and God resents whoever resents Him." },
       { title: "Trace the chain", body: "Excessive preparation produces resentment; resentment of a guest is resentment of God; and that is answered in kind. Three steps from an over-elaborate table to the severest thing in the book." },
       { title: "Note what is being protected", body: "Not the host's resources and not the guest's comfort. What the instruction protects is the host's feeling toward the person in his house, which the effort of hosting is capable of destroying." },
     ],
@@ -191,7 +191,7 @@ export const book11Chapters: Chapter[] = [
       { title: "How it changes the whole chapter", body: "The other manners of hospitality tell a host what to do. This one tells him what not to add, and it is the only item in the book whose reason is a state of the host's heart rather than the guest's welfare or the food's quality." },
     ],
     distinction: ["Two ways to fail a guest", "By giving too little", "The plain failure, which the chapter's other reports address.", "By burdening yourself", "Which produces dislike, and which the report traces to its end."],
-    misreading: "Do not read this as a licence for meanness. It sits in a chapter that opens by saying there is no good in one who does not show hospitality, and what it forbids is the burden rather than the giving.",
+    misreading: "Do not read this as permission to be tight-fisted. It sits in a chapter that opens by saying there is no good in somebody who will not show hospitality. What it rules out is the strain, not the giving.",
     reflection: "Recall a time you were relieved when a guest left, and ask what you had taken on beforehand.",
     audit: ["What do I take on when someone comes?", "Have I been relieved when they left?", "Where does the fault sit, on this account?", "What am I protecting?"],
     nodes: ["takalluf", "diyafa", "dayf"],

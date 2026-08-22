@@ -43,8 +43,8 @@ export const book40Chapters: Chapter[] = [
     moves: [
       { title: "State the diagnosis", body: "Death is dreadful and its danger is great, and people's heedlessness of it comes from how little they think about it and remember it." },
       { title: "Correct the diagnosis", body: "One who does remember it does not remember it with an empty heart, but with a heart occupied by the appetite of this world. So the remembrance of death does not take effect in his heart." },
-      { title: "Give the remedy", body: "The way in it is that the servant empty his heart of everything except the remembrance of death that is before him." },
-      { title: "Give the image", body: "Like one who means to travel into a perilous waste, or to put out to sea, who thinks of nothing else. When the remembrance touches his heart directly, it is likely to affect him, and at that his joy in the world lessens and his heart is broken." },
+      { title: "Give the remedy", body: "The way to do it is to empty your heart of everything except the death in front of you." },
+      { title: "Give the image", body: "Like somebody about to cross a dangerous desert or put out to sea, who can think of nothing else. When the thought lands on the heart directly it usually does something, and at that point his pleasure in the world drops and his heart breaks a little." },
     ],
     closer: [
       { title: "Why the correction matters", body: "The first sentence names the ordinary explanation, that people do not think about death enough. The second withdraws it: many do, and it lands on nothing. The failure is located in the condition of the heart receiving the thought rather than in the frequency of the thought, which changes what there is to do about it." },
@@ -62,7 +62,7 @@ export const book40Chapters: Chapter[] = [
     overview: "The heart of the book's analytic content. Ghazali names two causes of the long horizon, and the second one is described with unusual precision.",
     moves: [
       { title: "Name them", body: "Long hope has two causes: one is ignorance, and the other is love of the world." },
-      { title: "Work the second", body: "When a person has grown familiar with the world, its appetites, its pleasures, and its attachments, parting from it weighs on his heart. So his heart refuses to think about death, which is the cause of that parting. And everyone who dislikes a thing pushes it away from himself." },
+      { title: "Work the second", body: "Once somebody has settled into the world — its appetites, its pleasures, the things holding him there — leaving it becomes heavy, so his heart refuses to think about death, which is what will cause the leaving. Everybody pushes away what they do not want to look at." },
       { title: "Name the mechanism", body: "A person is enamoured of false hopes, so he keeps promising himself what agrees with his wish, and what agrees with his wish is remaining in the world. He keeps imagining it and reckoning it, and reckoning the consequences of remaining and what he will need of wealth, family, house, friends, and the rest." },
       { title: "State the result", body: "So his heart settles on this thought and is stopped at it, and he is distracted from the remembrance of death and does not reckon how near it is." },
     ],
@@ -284,7 +284,7 @@ export const book40Chapters: Chapter[] = [
       { title: "State what is known", body: "The lights of insight gained from the Book, the Sunna, and the paths of consideration acquaint us with the states of the dead in general, and with their division into the happy and the wretched." },
       { title: "State what is not", body: "But the state of this Zayd or that Amr in particular is not disclosed at all." },
       { title: "Close the first route", body: "If we rely on Zayd's or Amr's faith, we do not know what he died upon and how he was sealed." },
-      { title: "Close the second", body: "If we rely on his outward righteousness, godfearing has its seat in the heart, and it is obscure and hidden even from the one who has it — so how much more from anyone else. So there is no ruling from outward righteousness without the inward godfearing, since God accepts only from the godfearing." },
+      { title: "Close the second", body: "Suppose we go on how upright he looks. But fear of God sits in the heart, where it is obscure and hidden even from the person who has it — let alone from anyone else. So looking upright settles nothing without the inward fear, since God accepts only from those who have it." },
     ],
     closer: [
       { title: "How far the guard reaches", body: "It is stated in the most general terms available: the two routes it closes are faith and visible righteousness, which are the only two anybody ever has. Ghazali is not restricting judgement about the wicked; he is restricting judgement about anyone, including the person judging himself." },

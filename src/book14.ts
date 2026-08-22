@@ -202,13 +202,13 @@ export const book14Chapters: Chapter[] = [
     overview: "The claim that makes the chapter's structure work, and it puts a harm on the side of the investigator.",
     moves: [
       { title: "Give the addition", body: "I add to this and say: it is not for him to ask." },
-      { title: "Give the scrupulous alternative", body: "Rather, if he is scrupulous, then let nothing enter his belly but what he knows the source of — that is good. So he should be gentle in declining. And if he must eat, he should eat without asking." },
+      { title: "Give the scrupulous alternative", body: "If you are being careful, then eating nothing whose source you do not know is fine — but decline gently. And if you have to eat, eat without asking." },
       { title: "Give the reason", body: "Since asking is harm, and a tearing of a covering, and an estranging — and it is forbidden without doubt." },
       { title: "Note what has changed", body: "The doubtful property was one harm on the scales. Now the asking is another, on the other side — and the chapter's four rulings are the result of weighing two harms rather than of measuring one." },
     ],
     closer: [
       { title: "What the scrupulous person is told", body: "Not to stop being scrupulous but to move the scruple: decline gently rather than interrogate. The option preserves everything he was trying to protect and costs the other person nothing, which is why it is offered before the permission to eat." },
-      { title: "Asking a third party", body: "It is not permitted to ask someone else where the man knows of it, because the harm in that is greater. And if he asks where the man does not know, there is in it thinking ill, tearing a covering, spying, and a grasping at backbiting. Both routes around the difficulty are closed, and the second is closed with four names." },
+      { title: "Asking a third party", body: "You cannot ask somebody else about it where your host will find out, because that does more damage. And if you ask where he will not find out, you have just committed suspicion, exposure, spying, and a reach toward backbiting. Both ways round the problem are shut, and the second is shut four times over." },
     ],
     distinction: ["Two harms on the scales", "Eating the doubtful", "The harm the scrupulous person is guarding against.", "Asking", "A harm to someone else, which the chapter says is forbidden without doubt."],
     misreading: "Do not read this as saying scruple is misplaced. The scrupulous option is preserved and recommended — what is forbidden is discharging it at another person's expense.",
@@ -224,7 +224,7 @@ export const book14Chapters: Chapter[] = [
       { title: "Give the objection", body: "If you say: perhaps he will not be hurt by the asking —" },
       { title: "Give the reply", body: "I say: perhaps he will be hurt." },
       { title: "Name the move", body: "So you are asking out of caution against a perhaps. And if that satisfies you, then perhaps his wealth is lawful." },
-      { title: "Give the weight", body: "The sin to be avoided in harming a Muslim is not less than the sin in eating the doubtful and the unlawful. And most people are estranged by investigation." },
+      { title: "Give the weight", body: "The wrong in hurting another Muslim is no smaller than the wrong in eating something doubtful. And investigating people is how you lose them." },
     ],
     closer: [
       { title: "Why the symmetry is decisive", body: "Scruple proceeds by acting on possibilities. Once it is pointed out that the possibility of harming someone has exactly the same logical standing as the possibility that the wealth is unlawful, the scrupulous person cannot prefer one without abandoning the principle that got him there." },

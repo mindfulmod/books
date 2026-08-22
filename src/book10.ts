@@ -21,7 +21,7 @@ export const book10Chapters: Chapter[] = [
     id: 1, shortTitle: "The chain", formalTitle: "Why there are litanies at all",
     overview: "The last book of the Quarter of Worship opens with a derivation, and it is the tightest chain of reasoning in the quarter — six links from the goal down to a timetable.",
     moves: [
-      { title: "Start at the end", body: "Those who look by the light of insight have known that there is no deliverance except in meeting God, and that there is no way to the meeting except that the servant die loving God and knowing God." },
+      { title: "Start at the end", body: "People who see clearly have understood that there is no rescue except in meeting God, and no way to that meeting except to die loving God and knowing Him." },
       { title: "Take the two conditions apart", body: "That love and intimacy are not obtained except from the continuity of remembering the beloved and persevering in it; and that knowledge of Him is not obtained except by the continuity of thought about Him, His attributes, and His acts — and there is nothing in existence but God and His acts." },
       { title: "Add what continuity requires", body: "That the continuity of remembrance and thought is not made easy except by bidding farewell to the world and its appetites, and taking from it only the measure of sufficiency and necessity." },
       { title: "Reach the timetable", body: "All of that is not completed except by absorbing the times of the night and the day in the offices of remembrance and thought." },
@@ -42,9 +42,9 @@ export const book10Chapters: Chapter[] = [
     overview: "The passage that explains the entire shape of the Quarter of Worship. Ghazali gives a psychological fact and derives a design principle from it.",
     moves: [
       { title: "State the fact", body: "The soul, by what it was created upon of weariness and boredom, does not endure one kind of the means that assist remembrance and thought." },
-      { title: "Say what it does", body: "Rather, when it is returned to one pattern, it shows boredom and finds the thing heavy. And God does not weary until you weary." },
+      { title: "Say what it does", body: "Put it on one unchanging pattern and it gets bored and starts finding the thing heavy. As the report has it: God does not tire until you tire." },
       { title: "Draw the principle", body: "So of the necessity of kindness toward it is that it be given rest by moving from one kind to another and from one sort to another, according to each time." },
-      { title: "Give the mechanism", body: "So that by the moving its pleasure may be plentiful; and by the pleasure its desire may be great; and by the continuance of the desire its perseverance may endure. And for that reason the litanies are divided into a varied division." },
+      { title: "Give the mechanism", body: "Moving between things keeps the pleasure up; the pleasure keeps the appetite up; and a lasting appetite is what keeps a person at it. That is why the daily devotions are divided up and varied rather than kept uniform." },
     ],
     closer: [
       { title: "What the principle explains", body: "Why the Quarter of Worship is ten different books rather than one repeated. Prayer, alms, fasting, pilgrimage, recitation, invocation — the variety is not an accident of the subject matter but a design that follows from a fact about the soul." },
