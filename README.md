@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **twenty-seven books**: two complete quarters — the Quarter of Perils, books 21 to 30, and the Quarter of Deliverance, books 31 to 40 — and the first seven books of the Quarter of Worship.
+The System edition currently carries **twenty-eight books**: two complete quarters — the Quarter of Perils, books 21 to 30, and the Quarter of Deliverance, books 31 to 40 — and the first eight books of the Quarter of Worship.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -42,6 +42,7 @@ The System edition currently carries **twenty-seven books**: two complete quarte
 | 5 | The Mysteries of Almsgiving | 12 | 4 | Three considerations, not two |
 | 6 | The Mysteries of Fasting | 11 | 3 | Which degree, and what ended it |
 | 7 | The Mysteries of Pilgrimage | 13 | 4 | Which journey are you provisioned for |
+| 8 | The Etiquette of Quran Recitation | 12 | 3 | Where did that reading come from |
 | 21 | The Wonders of the Heart | 15 | 4 | Five obstructions |
 | 22 | Disciplining the Soul and Refining Character | 11 | 5 | Four mirrors |
 | 23 | Breaking the Two Desires | 7 | 4 | Four measures |
