@@ -3034,7 +3034,7 @@ body.system-page {
   font-size: 7px; font-weight: 820; letter-spacing: 0.1em; text-transform: uppercase;
 }
 
-.instrument-axes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 15px; }
+.instrument-axes { display: grid; grid-template-columns: repeat(auto-fit, minmax(224px, 1fr)); gap: 12px; margin-top: 15px; }
 
 .instrument-axis { padding: 16px 17px; border: 1px solid #e3d1b5; border-top: 3px solid #ddc7a4; background: #fffcf5; }
 .instrument-axis.answered { border-top-color: var(--journey); }
