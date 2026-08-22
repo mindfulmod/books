@@ -36,3 +36,21 @@ Alt text is already written into `src/book08.ts` and is what each plate has to d
 - **Accent colour** `#c25f50`
 - **Must depict** A single lamp on a desk lighting an open book, and a second lamp behind the reader's chair casting a shadow across the page.
 - **Argument it carries** The two aspects of the prohibition: a reading produced by what the reader already held, versus one the text led him to. The desk lamp lights the page; the lamp behind throws the reader's own shadow onto it. The chair must be empty — the shadow is cast by something outside the frame, which is the whole point. The page must be angled so nothing on it can be read.
+
+---
+
+## ADDED 2026-08-22 — journey 04 plate (not yet generated)
+
+### `assets/system/book08-ten-manners.jpg` (+ `-thumb.jpg`)
+
+**Journey 04 — "The ten physical manners"**
+An open book resting on a low wooden reading stand, a folded cloth beside it,
+in flat even daylight. Nothing else in frame — no hands, no figure, no room
+detail competing for attention. The pages should read as pages without any
+text being legible.
+
+Carries: the ten outward manners of recitation — posture, pace, division,
+voice. The plate has to feel *set up and waiting*, because every one of the ten
+is about how you approach the book before and while you read it.
+
+Colour anchor: `#a97837`.

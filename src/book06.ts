@@ -21,17 +21,17 @@ export const book06Chapters: Chapter[] = [
     id: 1, shortTitle: "The outward", formalTitle: "The obligations, the customs, and what breaking it requires",
     overview: "The shortest book in the Quarter of Worship opens with its legal apparatus, and disposes of it quickly to reach a chapter that is almost entirely argument.",
     moves: [
-      { title: "Give the outward obligations", body: "The first section sets out the obligations of the fast, which Ghazali numbers, together with the outward customs and what is required when a fast is invalidated." },
+      { title: "Give the outward obligations", body: "The first section lists what a fast requires, the customs that go with it, and what has to be done if a fast is broken." },
       { title: "Give the requirements on breaking", body: "The requirements attaching to breaking the fast are four, treated in turn. This is the technical part of the book, and it is complete." },
       { title: "Announce the three sections", body: "The obligations and outward customs with what breaking requires; the mysteries of the fast and its inward conditions; and voluntary fasting with the arrangement of litanies in it." },
       { title: "Note the proportion", body: "The second section is the book. It contains the three degrees, six duties, and an explicit reconciliation of two ways of calling a fast valid — and it is where every argument in the book sits." },
     ],
     closer: [
-      { title: "The pattern of the quarter, again", body: "Purification declared four ranks and treated the lowest. Prayer fixed the outward acts and then argued about the heart. Alms gave the law in one section and eight duties in the next. Here the law is one section and the mysteries are the rest." },
-      { title: "What makes this book different", body: "Book 4 argued that presence of heart is a condition and left the tension with the ordinary rulings standing. This book faces the same question — what about someone who keeps only the outward — and answers it directly. That answer is the ninth section here." },
+      { title: "The pattern of the quarter, again", body: "Purification set out four levels and then covered the lowest. Prayer pinned down the physical acts and then argued about the heart. Almsgiving gave the law in one section and eight duties in the next. Here the law is one section and everything else is the rest of the book." },
+      { title: "What makes this book different", body: "Book 4 argued that presence of heart is a requirement and left the tension with the ordinary rulings hanging. This book meets the same question head-on — what about someone who only does the physical part — and answers it. The answer is section 9." },
     ],
     distinction: ["Two things a book on fasting can settle", "What is required", "The obligations, the customs, and what invalidation entails, which is one section.", "What it is for", "The three degrees and the six duties, which are the rest of the book."],
-    misreading: "Do not treat the first section as replaceable by the second. Ghazali's ninth section argues that both notions of a valid fast are legitimate, which requires the outward requirements to be real.",
+    misreading: "Do not treat the first section as something the second replaces. Section 9 argues that both senses of a valid fast are legitimate, and that only works if the physical requirements are real ones.",
     reflection: "Notice that the shortest book in the quarter is the one that most directly answers what the quarter is for.",
     audit: ["What did I expect this book to be?", "Which section do I need?", "Do I know the outward requirements?", "What is the fast for?"],
     nodes: ["sawm", "structure", "fiqh"],
@@ -48,7 +48,7 @@ export const book06Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the scheme is by organ", body: "A scale of intensity would let a person place himself by how hard the day felt. A scale by organ cannot be flattered: either the tongue was restrained or it was not, and the answer does not depend on how difficult the abstaining was." },
-      { title: "The relation to Book 3", body: "Purification also ran a scale from the body through the limbs to the heart and named the top rank for the prophets and the truthful. This is the same architecture applied to a different act, and Ghazali does not point it out — the quarters are built to be noticed." },
+      { title: "The relation to Book 3", body: "Purification ran the same kind of scale — body, then limbs, then heart — and named the top level as the purity of the prophets and the truthful. Same structure, different act. Ghazali does not point it out; the quarters are built so you notice." },
     ],
     distinction: ["Two ways to grade an act", "By what is restrained", "Stomach, limbs, heart — which cannot be flattered by how hard the day felt.", "By intensity", "How strictly and how long, which measures difficulty rather than degree."],
     misreading: "Do not read the degrees as three levels of merit within one fast. Ghazali describes three different restraints, and the second and third do not make the first more strenuous.",
@@ -67,11 +67,11 @@ export const book06Chapters: Chapter[] = [
       { title: "Give the reason", body: "Because that is from little trust in God's bounty and little certainty in His promised provision. The fault is located in a belief rather than in an indulgence." },
     ],
     closer: [
-      { title: "How he marks the rank", body: "And this is the rank of the prophets and the truthful and the near ones. And one should not lengthen the examination of its detail in words, but in realising it in act. He names the degree, gives its test, marks whose it is, and declines to elaborate — the same restraint Book 35 shows at the highest degree of unity." },
-      { title: "What it consists in", body: "A turning with the whole of one's aspiration toward God and a turning away from other than Him, clothed in the meaning of the verse: say God, then leave them in their plunging. The same verse Book 3 uses for the fourth rank of purification, on the ground that two things do not gather in one heart." },
+      { title: "How he marks the rank", body: "This is the level of the prophets, the truthful and those brought near — and, he says, it is not something to examine at length in words but to work out in practice. He names the level, gives its test, says whose it is, and stops. Book 35 shows the same restraint at the highest degree of trust." },
+      { title: "What it consists in", body: "Turning toward God with everything you have, and away from everything else — carrying the sense of the verse “Say: God — then leave them to their games.” Book 3 uses the same verse for the fourth level of purity, on the grounds that two things will not fit in one heart." },
     ],
     distinction: ["Two things that break a fast", "Eating", "Which breaks the first degree, and is what the law legislates.", "Planning the meal", "Which breaks the third, and which Ghazali traces to little trust rather than to appetite."],
-    misreading: "Do not take the test about the evening meal as a rule for everyone. Ghazali attributes it to the masters of hearts and names the degree it belongs to as the rank of the prophets and the truthful.",
+    misreading: "Do not take the test about the evening meal as a rule for everyone. Ghazali credits it to people far along in this and says plainly which level it belongs to: that of the prophets and the truthful.",
     reflection: "Notice that the fault named is a shortage of trust, and where else in the Ihya that is treated.",
     audit: ["What occupied me today?", "Was any of it wanted for religion?", "Is my planning trust or its absence?", "Whose rank is this?"],
     nodes: ["daraja", "qalb", "tawakkul"],
@@ -82,7 +82,7 @@ export const book06Chapters: Chapter[] = [
     overview: "The fast of the select is completed by six things, and the first of them is given a wider scope than the obvious one.",
     moves: [
       { title: "Give the duty", body: "Lowering the gaze and restraining it from ranging over everything that is blamed and disliked." },
-      { title: "Give the wider clause", body: "And over everything that occupies the heart and distracts from the remembrance of God. The second half of the instruction reaches things that are not blamed at all." },
+      { title: "Give the wider clause", body: "Over everything that occupies the heart and distracts from the remembrance of God. The second half of the instruction reaches things that are not blamed at all." },
       { title: "Give the report", body: "The glance is a poisoned arrow among the arrows of Iblis. Whoever leaves it out of fear of God, God gives him a faith whose sweetness he finds in his heart." },
       { title: "Note the exchange", body: "Something is given in return, and it is described as a taste rather than a reward. The instruction is not framed as a deprivation with a payment attached later." },
     ],
@@ -104,7 +104,7 @@ export const book06Chapters: Chapter[] = [
       { title: "Give the duty", body: "Guarding the tongue from babble, lying, backbiting, tale-bearing, obscenity, harshness, quarrelling, and disputation — and binding it to silence, and occupying it with the remembrance of God and the recitation of the Quran. This is the fast of the tongue." },
       { title: "Give the list", body: "Five things break the faster's fast: lying, backbiting, tale-bearing, false swearing, and looking with desire." },
       { title: "Give the authorities", body: "Sufyan said that backbiting spoils the fast. And Mujahid: two traits spoil the fast — backbiting and lying." },
-      { title: "Give the instruction for provocation", body: "The fast is only a shield. When one of you is fasting, let him not be obscene or ignorant; and if a man fights him or abuses him, let him say: I am fasting, I am fasting." },
+      { title: "Give the instruction for provocation", body: "“The fast is a shield. When one of you is fasting he should not be foul-mouthed or behave badly; and if someone picks a fight with him or insults him, he should say: I am fasting, I am fasting.”" },
     ],
     closer: [
       { title: "The two women", body: "Two women fasted and were so exhausted by hunger and thirst by the end of the day that they nearly perished, and sent asking permission to break the fast. A cup was sent to them with an instruction — and what they brought up was flesh and blood, because they had fasted from what God permitted them and broken their fast on what He forbade them." },
@@ -112,7 +112,7 @@ export const book06Chapters: Chapter[] = [
     ],
     distinction: ["Two ways a fast can end", "Broken", "By what the law names, which is the first degree and is settled by the first section.", "Broken on the forbidden", "Fasting from the permitted while consuming what is not, which is what the report describes."],
     misreading: "Do not conclude that backbiting nullifies the fast in law. Ghazali reports what Sufyan and Mujahid said, and his ninth section explains precisely how the jurists' account and this one differ.",
-    reflection: "Notice that the report's force depends on the two women having kept the outward fast perfectly.",
+    reflection: "Notice that the story only works because the two women kept the physical fast perfectly.",
     audit: ["Which of the five did I do today?", "Did I answer provocation, or say what I was told to say?", "Is my tongue bound to silence or merely to the permitted?", "What did I break my fast on?"],
     nodes: ["lisan", "sitta", "ghiba"],
     model: spectrum("Five that break it", "Four of them are the tongue.", [["Lying", "The first named.", "warning"], ["Backbiting", "Which Sufyan and Mujahid both single out.", "warning"], ["Tale-bearing", "Carrying speech between people.", "warning"], ["False swearing", "The fourth.", "warning"], ["Looking with desire", "The one that is not the tongue.", "warning"]]),
@@ -122,7 +122,7 @@ export const book06Chapters: Chapter[] = [
     overview: "Two duties that extend the same principle outward, and one of them makes a listener a partner.",
     moves: [
       { title: "Give the third duty", body: "Restraining the hearing from what it is disliked to listen to — since everything forbidden to say is forbidden to listen to." },
-      { title: "Give the principle", body: "Ghazali carries the report that the one who backbites and the one who listens are partners in the sin. The duty is derived rather than added: the ear is bound by the same rule as the tongue." },
+      { title: "Give the principle", body: "Ghazali carries the report that the person talking behind someone's back and the person listening are partners in it. The duty is not an add-on; it follows — the ear is under the same rule as the tongue." },
       { title: "Give the fourth duty", body: "Restraining the rest of the limbs from sins — the hand and the foot among them — and restraining the stomach at the breaking of the fast from what is doubtful." },
       { title: "Note the completeness", body: "With these the second degree is fully specified: the eye, the tongue, the ear, and the remaining limbs. The fast of the select is an ordinary fast performed by the whole body." },
     ],
@@ -144,7 +144,7 @@ export const book06Chapters: Chapter[] = [
       { title: "Name the mechanism", body: "The spirit of the fast and its secret is the weakening of the powers that are the devil's means for returning to evils. And that will not be obtained except by reducing." },
       { title: "Give the measure", body: "Namely, that he eat the meal he would have eaten each night had he not fasted." },
       { title: "Name the defeat", body: "But if he gathers what he used to eat in the forenoon to what he used to eat at night, he has not benefited from his fast." },
-      { title: "Give the accompanying manners", body: "And of the manners is that he not sleep much by day, so that he feels hunger and thirst and senses the weakening of the powers — and at that his heart becomes clear. And that he maintain each night a measure of weakness, so that his night vigil and his litanies are light for him." },
+      { title: "Give the accompanying manners", body: "Of the manners is that he not sleep much by day, so that he feels hunger and thirst and senses the weakening of the powers — and at that his heart becomes clear. And that he maintain each night a measure of weakness, so that his night vigil and his litanies are light for him." },
     ],
     closer: [
       { title: "The Night of Power", body: "So perhaps the devil will not hover about his heart, and he will look upon the kingdom of heaven — and the Night of Power is an expression for the night in which something of the Kingdom is disclosed. Ghazali connects the reduction of food directly to what the month is for." },
@@ -163,7 +163,7 @@ export const book06Chapters: Chapter[] = [
     moves: [
       { title: "Give the duty", body: "That his heart after breaking the fast be suspended and wavering between fear and hope." },
       { title: "Give the reason", body: "Since he does not know whether his fast is accepted, so that he is among the near; or rejected, so that he is among the detested." },
-      { title: "Extend it", body: "And let him be so at the end of every act of worship he finishes. The instruction leaves the subject of fasting in its last clause." },
+      { title: "Extend it", body: "He should be that way at the end of every act of worship he completes. The instruction stops being about fasting in its final clause." },
       { title: "Note what it rules out", body: "Both settled outcomes. The relief of having completed something and the despair of having done it badly are equally excluded, and what is prescribed is the unsettled state between them." },
     ],
     closer: [
@@ -181,10 +181,10 @@ export const book06Chapters: Chapter[] = [
     id: 9, shortTitle: "Valid, or accepted", formalTitle: "What the jurists mean and what the scholars of the hereafter mean",
     overview: "The most important passage in the book, and one of the clearest statements anywhere in the Ihya of what Ghazali thinks he is doing.",
     moves: [
-      { title: "Put the objection", body: "If you say: one who confines himself to restraining the appetite of the stomach and the genitals, and abandons these meanings — the jurists have said his fast is valid. So what does that mean?" },
-      { title: "Concede the evidence point", body: "Know that the jurists of the outward establish the conditions of the outward with evidences weaker than these evidences we have brought for these inward conditions, especially backbiting and the like." },
-      { title: "Explain the jurists' position", body: "But the jurists of the outward have nothing to do with obligations except what is easy for the generality of the heedless, who are turned toward the world, to come under. The limitation is described as belonging to their office rather than to their competence." },
-      { title: "Give the other sense", body: "As for the scholars of the hereafter, they mean by validity acceptance; and by acceptance, arrival at the aim. And they understand that the aim of the fast is to be characterised by a trait among the traits of God — self-sufficiency — and to imitate the angels in restraining from appetites as far as possible." },
+      { title: "Put the objection", body: "You might object: someone who only holds back his stomach and his sexual appetite, and ignores everything else in this book, has a valid fast — the jurists say so. What is that supposed to mean?" },
+      { title: "Concede the evidence point", body: "The jurists who deal with the physical act, he answers, establish its physical conditions on weaker evidence than what has just been brought for the inward ones — backbiting especially." },
+      { title: "Explain the jurists' position", body: "But their job only extends to obligations that ordinary distracted people, with their attention on this world, can actually be held to. He describes that as a limit of the office, not of the people holding it." },
+      { title: "Give the other sense", body: "The scholars concerned with the next life mean something else by valid: they mean accepted, and by accepted they mean it got where it was going. And they take the aim of fasting to be taking on one of God's own qualities — needing nothing — and imitating the angels by holding off appetite as far as a person can." },
     ],
     closer: [
       { title: "Why this resolves what Book 4 left standing", body: "Book 4 argued that presence of heart is a condition of the prayer and let the tension with the ordinary rulings sit unresolved. Here the same question is answered by distinguishing two senses of one word: the jurists are not wrong about validity, and the hereafter-scholars are not talking about it. Both offices are legitimate and neither is the other's." },
@@ -201,14 +201,14 @@ export const book06Chapters: Chapter[] = [
     id: 10, shortTitle: "Nearness by qualities", formalTitle: "The rank between the beasts and the angels",
     overview: "The argument that says what fasting is for, and it ends with a definition of nearness that reaches well past this book.",
     moves: [
-      { title: "Place the human rank", body: "The human being's rank is above the rank of the beasts, by his power through the light of the intellect to break his appetite; and below the rank of the angels, because the appetites dominate him and he is tried with striving against them." },
+      { title: "Place the human rank", body: "A human being sits above the animals, because the light of the intellect gives him the power to break his own appetite — and below the angels, because appetite still has the upper hand and he is tested by having to fight it." },
       { title: "Give the movement", body: "So the more he plunges into appetites, the more he sinks to the lowest of the low and joins the throng of the beasts. And the more he suppresses them, the more he rises to the highest, and joins the horizon of the angels." },
-      { title: "Give the conclusion", body: "And the angels are near to God; and whoever imitates them and resembles them in traits draws near to God as they are near — for the like of the near is near." },
-      { title: "Define the nearness", body: "And nearness there is not by place but by qualities. The sentence settles what kind of thing the whole scheme has been describing." },
+      { title: "Give the conclusion", body: "The angels are near to God; and whoever imitates them and resembles them in traits draws near to God as they are near — for the like of the near is near." },
+      { title: "Define the nearness", body: "Nearness there is not by place but by qualities. The sentence settles what kind of thing the whole scheme has been describing." },
     ],
     closer: [
       { title: "Why the human rank is defined by a capacity", body: "Not by what a person is but by what he can do: break an appetite by the light of the intellect. That makes the position on the scale unfixed by nature, which is what allows the movement in both directions that the next sentence describes." },
-      { title: "The trait being imitated", body: "The aim of the fast is to be characterised by a trait among the traits of God — self-sufficiency — and to imitate the angels, who are free of appetites. Fasting is therefore not a suppression aimed at nothing; it is the nearest a body can come to a quality that has no body in it." },
+      { title: "The trait being imitated", body: "The aim of fasting is to take on one of God's own qualities — needing nothing — and to imitate the angels, who have no appetites at all. So it is not going without for its own sake. It is the closest a body can get to a quality that has no body in it." },
     ],
     distinction: ["Two ways to be near", "By qualities", "Resemblance in traits, which is what Ghazali says nearness consists in.", "By place", "Which the sentence explicitly denies, and which the imagery would otherwise suggest."],
     misreading: "Do not read the ladder as fixing anyone's position. It is defined by a capacity and describes movement in both directions, which is why it can be a scale at all.",
@@ -223,7 +223,7 @@ export const book06Chapters: Chapter[] = [
     moves: [
       { title: "Give the principle", body: "The recommendation of fasting is confirmed at particular times, and the section sorts them rather than listing them." },
       { title: "Give the cycles", body: "Days that recur within the week, days that recur within the month, and days that recur within the year — the same cyclical sorting Book 4 uses for the supererogatory prayers." },
-      { title: "Give the arrangement", body: "And the arrangement of litanies within the fast, so that a fasted day is shaped rather than merely endured." },
+      { title: "Give the arrangement", body: "The arrangement of litanies within the fast, so that a fasted day is shaped rather than merely endured." },
       { title: "Note the closing", body: "The book ends outside the obligation, as Book 4 does. A treatment that spent its length on three degrees and six duties finishes with days nobody has to keep at all." },
     ],
     closer: [

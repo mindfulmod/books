@@ -23,7 +23,7 @@ export const book13Chapters: Chapter[] = [
     moves: [
       { title: "Announce the five", body: "The excellence of earning and the urging toward it; the knowledge of sound selling, buying, and dealings; justice in dealing; excellence in it; and the merchant's compassion for himself and his religion." },
       { title: "Note the ascent", body: "The second chapter gives what makes a transaction valid. The third gives what makes it free of wrongdoing, which is not the same thing. The fourth gives what goes beyond both." },
-      { title: "Note the fifth", body: "And the last turns from the transaction to the trader — from what he owes others to what his trade is doing to him, which is where the book ends." },
+      { title: "Note the fifth", body: "The last turns from the transaction to the trader — from what he owes others to what his trade is doing to him, which is where the book ends." },
       { title: "Say where the weight is", body: "The second chapter is technical law. The three that follow it are the book, and each of them begins by saying what the previous one does not settle." },
     ],
     closer: [
@@ -41,7 +41,7 @@ export const book13Chapters: Chapter[] = [
     id: 2, shortTitle: "The excellence of earning", formalTitle: "The urging toward work",
     overview: "The first chapter, and its opening verse establishes that earning is not a concession but a design.",
     moves: [
-      { title: "Give the verse", body: "And We made the day for livelihood. Ghazali notes that it is mentioned in the course of enumerating blessings, which is what settles the register of the whole chapter." },
+      { title: "Give the verse", body: "We made the day for livelihood. Ghazali notes that it is mentioned in the course of enumerating blessings, which is what settles the register of the whole chapter." },
       { title: "Note what that establishes", body: "Working for a living is placed among the things given rather than among the things permitted. A day made for livelihood is a provision, not an allowance." },
       { title: "Gather the rest", body: "The chapter assembles the verses and reports urging toward earning, including those on the merit of the truthful and trustworthy merchant." },
       { title: "Note the placement", body: "The excellences come first, as in every book of the Ihya — and here they are doing particular work, since the three chapters that follow are almost entirely restrictions." },
@@ -83,8 +83,8 @@ export const book13Chapters: Chapter[] = [
     moves: [
       { title: "Give the sentence", body: "Know that a dealing may proceed in a way that the jurist rules valid and concluded — and yet it contains a wrongdoing by which the dealer exposes himself to God's wrath." },
       { title: "Give the reason", body: "Since not every prohibition entails the invalidity of the contract. The gap between the two standards is not a moral observation but a technical fact about how prohibitions work." },
-      { title: "Define the wrong", body: "And by this wrongdoing is meant what harms another. The standard for the third chapter is harm, not permission." },
-      { title: "Divide it", body: "And it divides into what harms generally and what harms the particular party dealt with. Two kinds of harm, and the chapter treats them in that order." },
+      { title: "Define the wrong", body: "By this wrongdoing is meant what harms another. The standard for the third chapter is harm, not permission." },
+      { title: "Divide it", body: "It divides into what harms generally and what harms the particular party dealt with. Two kinds of harm, and the chapter treats them in that order." },
     ],
     closer: [
       { title: "Why the technical reason matters", body: "If the gap were only that jurists are lenient, a reader could close it by finding a stricter jurist. Ghazali's ground is that a prohibited act can produce a binding contract — so no amount of legal opinion will make the second standard collapse into the first." },
@@ -108,7 +108,7 @@ export const book13Chapters: Chapter[] = [
     ],
     closer: [
       { title: "The inversion about learning", body: "It is obligatory on the merchant to learn the currency — not so that he may be exacting for himself, but so that he does not hand a Muslim a debased coin without knowing, and become a sinner. The competence is required for the other party's protection rather than for his own." },
-      { title: "The fourth of the coin rules", body: "And that he take the debased coin himself, acting on the report: God have mercy on a man easy in selling, easy in buying, easy in demanding, and easy in repaying. Where the rest of the section forbids passing harm on, this one has him absorb it." },
+      { title: "The fourth of the coin rules", body: "That he take the debased coin himself, acting on the report: God have mercy on a man easy in selling, easy in buying, easy in demanding, and easy in repaying. Where the rest of the section forbids passing harm on, this one has him absorb it." },
     ],
     distinction: ["Two reasons to learn your trade", "So as not to harm", "Which is the ground Ghazali gives for the obligation to know the currency.", "So as not to be cheated", "Which he explicitly sets aside as the reason."],
     misreading: "Do not read the charity clause as a general rule that good deeds cannot expiate wrongs. The report is about hoarding specifically, and it is cited to establish how serious that particular harm is.",
@@ -123,8 +123,8 @@ export const book13Chapters: Chapter[] = [
     moves: [
       { title: "Give the rule", body: "Everything by which the party dealt with is harmed is a wrongdoing — and justice is that a man not harm his Muslim brother." },
       { title: "Give the disclosure obligation", body: "That he make plain all the defects of the goods, the hidden and the apparent, and conceal nothing of them. That is obligatory." },
-      { title: "Give the consequence", body: "And if he conceals it, he is a wrongdoer and a deceiver — and deceit is forbidden. Two names are attached rather than one, and the second reaches past the transaction into what the man is." },
-      { title: "Give the price rule", body: "And that he be truthful about the current price and conceal nothing of it — and the Messenger forbade meeting the caravans, which is the practice of buying from arrivals before they have learned what the market is paying." },
+      { title: "Give the consequence", body: "If he conceals it, he is a wrongdoer and a deceiver — and deceit is forbidden. Two names are attached rather than one, and the second reaches past the transaction into what the man is." },
+      { title: "Give the price rule", body: "That he be truthful about the current price and conceal nothing of it — and the Messenger forbade meeting the caravans, which is the practice of buying from arrivals before they have learned what the market is paying." },
     ],
     closer: [
       { title: "Why hidden and apparent are both named", body: "Apparent defects need no disclosure to be discovered, so naming them looks redundant. It is not: the obligation is to make them plain rather than to leave them discoverable, which forbids the common practice of relying on a buyer to notice." },
@@ -142,13 +142,13 @@ export const book13Chapters: Chapter[] = [
     overview: "The fourth chapter opens with an accounting metaphor that reframes the whole book, and it is the passage the book is remembered for.",
     moves: [
       { title: "Note the pairing", body: "God commanded justice and excellence together — indeed God commands justice and excellence." },
-      { title: "Give the first half", body: "And justice is a cause of deliverance only, and it runs in trade as capital runs." },
-      { title: "Give the second", body: "And excellence is a cause of winning and of attaining happiness, and it runs in trade as profit runs." },
+      { title: "Give the first half", body: "Justice is a cause of deliverance only, and it runs in trade as capital runs." },
+      { title: "Give the second", body: "Excellence is a cause of winning and of attaining happiness, and it runs in trade as profit runs." },
       { title: "Draw the conclusion", body: "So it does not befit a religious person to confine himself to justice and the avoidance of wrongdoing and to leave the doors of excellence — since no one who trades contents himself with recovering his capital." },
     ],
     closer: [
       { title: "Why the metaphor lands", body: "It is addressed to merchants in their own terms. Nobody in trade regards preserving capital as a successful year, and the argument simply asks why the same person would regard the equivalent in his dealings with God as sufficient." },
-      { title: "The definition that follows", body: "And by excellence we mean doing what benefits the other party when it is not obligatory on him but is a favour from him — for the obligatory falls under justice and the leaving of wrongdoing. The line between the two chapters is drawn at what is owed." },
+      { title: "The definition that follows", body: "By excellence we mean doing what benefits the other party when it is not obligatory on him but is a favour from him — for the obligatory falls under justice and the leaving of wrongdoing. The line between the two chapters is drawn at what is owed." },
     ],
     distinction: ["Two standards, two returns", "Justice", "Deliverance only, and it runs as capital runs.", "Excellence", "Winning and happiness, and it runs as profit runs."],
     misreading: "Do not read excellence as optional in the sense of unimportant. Ghazali's own metaphor makes it the entire return, and justice merely the preservation of the stake.",
@@ -187,7 +187,7 @@ export const book13Chapters: Chapter[] = [
       { title: "Give the ordering", body: "Mu'adh said: you must have your share of this world, and you are more in need of your share of the hereafter — so begin with your share of the hereafter and take it, for you will pass by your share of this world and arrange it." },
     ],
     closer: [
-      { title: "The verse he re-reads", body: "And do not forget your share of this world — which he reads as: do not forget, while in this world, your share of it for the hereafter. For it is the sowing-field of the hereafter, and in it good deeds are earned. The world is not the thing to be remembered but the place the remembering is done." },
+      { title: "The verse he re-reads", body: "Do not forget your share of this world — which he reads as: do not forget, while in this world, your share of it for the hereafter. For it is the sowing-field of the hereafter, and in it good deeds are earned. The world is not the thing to be remembered but the place the remembering is done." },
       { title: "The metaphor completing itself", body: "The fourth chapter made justice capital and excellence profit. This one makes religion the capital and the whole of a life the trade. The same accounting is applied at three levels, and at the last one the trader is the merchandise." },
     ],
     distinction: ["Two things a trader can preserve", "His capital", "Which the chapter identifies as his religion, and the preserving of it as compassion for himself.", "His stock", "Which is what the word ordinarily means, and which the chapter is not about."],
@@ -222,7 +222,7 @@ export const book13Chapters: Chapter[] = [
     overview: "The last substantial thing in the book, and the most quoted sentence in it — a direct instruction to go past the legal opinion.",
     moves: [
       { title: "State it", body: "That he not confine himself to avoiding the forbidden, but guard against the places of doubt and the occasions of suspicion." },
-      { title: "Give the instruction", body: "And let him not look to the legal opinions — but let him seek the verdict of his own heart." },
+      { title: "Give the instruction", body: "Let him not look to the legal opinions — but let him seek the verdict of his own heart." },
       { title: "Note what it presupposes", body: "It comes after four chapters of law, justice, and excellence. It is addressed to a reader who knows what is permitted, and it tells him that knowing is not the end of the inquiry." },
       { title: "Note its limits", body: "It is the sixth of seven observances by which a trader guards his own religion. It is counsel for a man deciding about himself, and nothing in it authorises anyone to judge another by it." },
     ],

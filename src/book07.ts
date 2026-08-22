@@ -21,7 +21,7 @@ export const book07Chapters: Chapter[] = [
     id: 1, shortTitle: "Three chapters", formalTitle: "The excellences, and the shape of the book",
     overview: "The book announces three chapters and the third is unlike the other two — a sustained reading of a journey as a figure for another journey.",
     moves: [
-      { title: "Announce the three", body: "The excellences of the pilgrimage and of Mecca and the ancient House, with a summary of its elements and the conditions of its obligation; the outward acts in order, from the beginning of the journey to the return; and its fine manners, its hidden secrets, and its inward acts." },
+      { title: "Announce the three", body: "What is said in praise of the pilgrimage, of Mecca and of the ancient House; a summary of its parts and when it becomes obligatory; the physical acts in order, from setting out to coming home; and then its finer manners, its hidden meanings, and what the heart is meant to be doing." },
       { title: "Give the first chapter's content", body: "The excellences of the pilgrimage, of the House, and of Mecca and Medina, together with travelling to the mosques — and then the conditions of obligation, the validity of the elements, the obligations, and the prohibitions." },
       { title: "Note the proportion", body: "The second chapter is the longest and is entirely procedural. The third is the shortest of the three and contains everything the book is remembered for." },
       { title: "Say what the third does", body: "It reads the journey twice: once as what a pilgrim does, and once as what each act of doing it is a sign of. Every stage from the first thought to the last rite is given a counterpart." },
@@ -61,7 +61,7 @@ export const book07Chapters: Chapter[] = [
     id: 3, shortTitle: "Ten groupings", formalTitle: "The outward acts in order",
     overview: "The longest chapter in the book, and its organising principle is simply the order in which things happen.",
     moves: [
-      { title: "Give the principle", body: "The second chapter arranges the outward acts in order from the beginning of the journey to the return, in ten groupings." },
+      { title: "Give the principle", body: "The second chapter puts the physical acts in order, from setting out to coming home, in ten groups." },
       { title: "Give the sequence", body: "The travelling from setting out to consecration; consecration from the appointed place to entering Mecca; entering Mecca to the circling; the circling; the running; the standing and what precedes it; the remaining acts after the standing; the lesser pilgrimage and what follows it; the farewell circling; and the visit to Medina." },
       { title: "Note what follows the ten", body: "A section on the customs of returning from a journey — so the chapter ends where the pilgrim ends, at home, rather than at the last rite." },
       { title: "Say why the ordering matters", body: "Arranged by topic, the acts would be a reference. Arranged by sequence, they are a route, and the third chapter can then walk the same route a second time attaching a meaning to each stage." },
@@ -84,7 +84,7 @@ export const book07Chapters: Chapter[] = [
       { title: "Give the first", body: "That the expenditure be lawful, and that the hand be empty of a trade that occupies the heart and scatters the concern." },
       { title: "Note the two halves", body: "One is about where the money came from, and the other about what is being carried alongside the journey. The second is not a legal condition at all and is the kind of thing this chapter exists for." },
       { title: "Say what the ten cover", body: "The manners run through the conduct of the journey — provision, company, bearing, expenditure, and the treatment of those met along the way — and none of them concerns the validity of the rites." },
-      { title: "Place them", body: "They stand between the outward acts and the inward reading, and they belong to neither. They are what a person does on the journey rather than what he performs at the sites or understands by it." },
+      { title: "Place them", body: "They sit between the physical acts and the inward reading and belong to neither. They are how you behave on the journey, not what you perform at the sites or what you understand by it." },
     ],
     closer: [
       { title: "Why lawful expenditure comes first", body: "The pilgrimage is the one act of worship that must be bought. Everything else in the quarter can be performed by someone with nothing, and this cannot — which makes the source of the money a question the other books never have to raise." },
@@ -99,10 +99,10 @@ export const book07Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 5, shortTitle: "The substitute", formalTitle: "The place of the pilgrimage in religion",
-    overview: "The inward chapter opens by saying what the pilgrimage is for, and the answer is historical and comparative rather than devotional.",
+    overview: "The inward chapter opens by asking what the pilgrimage is for, and the answer is historical and comparative rather than pious.",
     moves: [
       { title: "State the general principle", body: "There is no arrival at God except by keeping clear of appetites, restraining from pleasures, confining oneself to the necessities in them, and devoting oneself to God in all motions and stillnesses." },
-      { title: "Give the earlier solution", body: "And for this reason the monastics in the former communities withdrew from people, took to the mountain tops, and preferred wildness from people, seeking intimacy with God. They left present pleasures and bound themselves to hard strivings, and God praised them in His Book." },
+      { title: "Give the earlier solution", body: "For this reason the monastics in the former communities withdrew from people, took to the mountain tops, and preferred wildness from people, seeking intimacy with God. They left present pleasures and bound themselves to hard strivings, and God praised them in His Book." },
       { title: "Give what happened to it", body: "When that was effaced, and people turned to following appetites and abandoned devoting themselves to worship and grew slack in it, God sent His prophet to revive the road of the hereafter and renew the practice of the messengers in travelling it." },
       { title: "Give the answer", body: "So the people of the communities asked him about monasticism and wandering in his religion, and he said: God has exchanged it for us with striving and the magnification on every height — meaning the pilgrimage. And he was asked about the wanderers, and said: they are the fasters." },
     ],
@@ -122,9 +122,9 @@ export const book07Chapters: Chapter[] = [
     overview: "The first three of twelve stages, and Ghazali's framing of the whole sequence is that each one is a sign for whoever will read it.",
     moves: [
       { title: "Give the sequence", body: "The first of the pilgrimage is understanding — the place of the pilgrimage in religion; then longing for it; then resolving upon it; then cutting the attachments that prevent it; then buying the garment; then the provision; then the mount; then setting out; then the desert; then consecrating; then entering; then completing the acts." },
-      { title: "Say what each one is", body: "And in every one of these matters is a reminder for one who remembers, and a lesson for one who takes lessons, and an alerting for the truthful aspirant, and an intimation for the perceptive." },
-      { title: "Give the resolve", body: "Let him magnify in himself the worth of the House and the worth of the Lord of the House, and know that he has resolved on a matter whose affair is lofty and whose danger is grave — and that whoever seeks something great risks something great." },
-      { title: "Give the condition on it", body: "And let him make his resolve pure for God, far from the admixtures of showing off and reputation. And among the most obscene of obscenities is that a man should intend the House of God and His sanctuary while the intended is someone else." },
+      { title: "Say what each one is", body: "Every one of these things, he says, is a reminder for anyone who will remember, a lesson for anyone who will take one, a nudge for someone serious about this, and a hint for anyone paying attention." },
+      { title: "Give the resolve", body: "Take seriously what the House is and whose House it is. You have decided on something whose stakes are high and whose risk is real — and anyone who goes after something great is risking something great." },
+      { title: "Give the condition on it", body: "Keep the intention clean, with nothing of showing off or reputation mixed into it. And here is the ugliest thing he can think of: setting out for God's House and His sanctuary while the person you actually have in mind is somebody else." },
     ],
     closer: [
       { title: "The promise Ghazali attaches", body: "Let us point to the keys of them, so that when their door is opened and their causes known, there is disclosed to every pilgrim of their secrets what the clarity of his heart, the purity of his inward, and the abundance of his understanding require. What is given is a method, and what it yields is proportioned to the reader." },
@@ -150,7 +150,7 @@ export const book07Chapters: Chapter[] = [
       { title: "The consequence he states", body: "If you do not do that, you will get from your journey nothing at the start but toil and misery, and nothing at the end but rejection. It is the strongest thing said in the book, and it concerns a journey that would be legally complete." },
       { title: "The two practical instructions", body: "Cut the attachments to your homeland as one cut off from it, and reckon that you will not return. And write your will for your children and your family. Both belong to the fourth stage, and both treat the journey as one that may not have a return." },
     ],
-    distinction: ["Two directions a pilgrim faces", "With the outward", "Turned toward the House, which the journey accomplishes by itself.", "With the heart", "Turned toward Him, which requires the attachments behind to be cut first."],
+    distinction: ["Two directions a pilgrim faces", "With the body", "Turned toward the House, which the journey accomplishes by itself.", "With the heart", "Turned toward Him, which requires the attachments behind to be cut first."],
     misreading: "Do not read the returning of wrongs as a spiritual exercise. It is the concrete restoration of what is owed to people, and the figure of the creditor is chosen because a creditor is owed something real.",
     reflection: "Name the creditor that would be hanging on your collar.",
     audit: ["What is owed, and to whom?", "Have I returned anything, or only repented?", "Is my will written?", "Which face is turned where?"],
@@ -161,10 +161,10 @@ export const book07Chapters: Chapter[] = [
     id: 8, shortTitle: "Provision that spoils", formalTitle: "The provision, and the longer journey",
     overview: "The sixth stage, and the point where the parallel between the two journeys becomes explicit and starts doing work.",
     moves: [
-      { title: "Give the requirement", body: "Let him seek the provision from a lawful place." },
-      { title: "Catch the moment", body: "And when he senses in himself an eagerness to increase it, and to seek what will keep over the length of the journey and not change or spoil before reaching the destination —" },
-      { title: "Give the parallel", body: "Let him recall that the journey of the hereafter is longer than this journey, and that its provision is godfearing, and that what is besides it, which he supposes to be his provision, stays behind him at death and betrays him." },
-      { title: "Give the image", body: "Like moist food that spoils at the first stage of a journey, so that at the time of need he is left bewildered and in need, with no recourse. And let him beware that his acts, which are his provision to the hereafter, do not accompany him after death — spoiled by the admixtures of showing off and the cloudings of shortcoming." },
+      { title: "Give the requirement", body: "Get what you travel on from somewhere lawful." },
+      { title: "Catch the moment", body: "When he senses in himself an eagerness to increase it, and to seek what will keep over the length of the journey and not change or spoil before reaching the destination —" },
+      { title: "Give the parallel", body: "Remember that the journey to the next life is longer than this one, that what you travel on there is your care for God, and that everything else you take to be your supplies stays behind when you die and lets you down." },
+      { title: "Give the image", body: "Like fresh food that goes off at the first stop, leaving you stranded and hungry with nowhere to turn. So watch that your own acts — which are your supplies for the next life — do not fail to travel with you, spoiled by showing off and clouded by half-doing them." },
     ],
     closer: [
       { title: "Where the parallel is caught", body: "Not at the buying but at a particular feeling: the eagerness to lay in more, and the care about what will keep. Ghazali attaches the lesson to a specific and recognisable anxiety rather than to the object, which is why the figure lands rather than being merely apt." },
@@ -181,10 +181,10 @@ export const book07Chapters: Chapter[] = [
     id: 9, shortTitle: "The certain journey", formalTitle: "The mount, and the bier",
     overview: "The seventh stage, and it carries the sharpest reasoning in the book: an argument about how people allocate their precautions.",
     moves: [
-      { title: "Give the thanks", body: "When he brings the mount, let him thank God in his heart for having subjected the beasts to him, to carry the burden from him and lighten the hardship." },
-      { title: "Give the parallel", body: "And let him recall at it the conveyance he will ride to the abode of the hereafter, which is the bier on which he is carried — for the matter of the pilgrimage in one aspect parallels the matter of the journey to the hereafter." },
-      { title: "Give the question", body: "And let him look whether his journey on this mount is fit to be a provision for him for that journey on that conveyance. And how near that is to him — and what does he know, perhaps death is near, and his riding of the bier will be before his riding of the camel." },
-      { title: "Give the argument", body: "And riding the bier is certain, and the easing of the means of the journey is doubtful. So how does he take precautions for the doubtful journey, and provide for its provision and its mount, and neglect the matter of the certain journey?" },
+      { title: "Give the thanks", body: "When the animal is brought, thank God inwardly for having made animals serve you, carrying the load so you do not have to." },
+      { title: "Give the parallel", body: "Let it remind you of the thing you will actually be carried on to the next life: the bier. In this one respect the pilgrimage runs parallel to that journey the whole way." },
+      { title: "Give the question", body: "So ask whether this journey, on this animal, is fit to be your supplies for that one. And how close that is — for all you know death is near, and you will be riding the bier before you ride the camel." },
+      { title: "Give the argument", body: "Riding the bier is certain, and the easing of the means of the journey is doubtful. So how does he take precautions for the doubtful journey, and provide for its provision and its mount, and neglect the matter of the certain journey?" },
     ],
     closer: [
       { title: "Why the argument is about allocation", body: "It grants everything about the pilgrimage journey: that it is worth preparing for, that provision and a mount are needed, that care is appropriate. The whole force is in a comparison of two allocations of the same care, one to a journey that may not happen and one to a journey that certainly will." },
@@ -201,10 +201,10 @@ export const book07Chapters: Chapter[] = [
     id: 10, shortTitle: "Two unstitched garments", formalTitle: "The consecrated garment and the shroud",
     overview: "The eighth stage, and the parallel is so exact that Ghazali points to the detail of the tailoring.",
     moves: [
-      { title: "Give the parallel", body: "When he buys the two garments of consecration, let him recall the shroud and being wrapped in it." },
+      { title: "Give the parallel", body: "When you buy the two plain garments, let them remind you of the shroud and being wrapped in it." },
       { title: "Give the possibility", body: "For he will wear these two at the nearing of the House of God — and perhaps his journey to it will not be completed, and he will meet God wrapped in the garments of the shroud, inevitably." },
       { title: "Draw the comparison", body: "So as he does not meet the House of God except in a dress and an appearance contrary to his customs, so he will not meet God after death except in a dress contrary to the dress of the world." },
-      { title: "Give the detail", body: "And this garment is close to that garment, since there is no stitching in it, as in the shroud." },
+      { title: "Give the detail", body: "This garment is close to that garment, since there is no stitching in it, as in the shroud." },
     ],
     closer: [
       { title: "Why the detail matters", body: "The parallel could have rested on both being white, or both being simple. Ghazali picks the one feature that is a rule rather than a resemblance: the consecrated garment must be unstitched, and so is a shroud. The figure is anchored in a legal requirement rather than in an impression." },
@@ -221,10 +221,10 @@ export const book07Chapters: Chapter[] = [
     id: 11, shortTitle: "Accepted and turned away", formalTitle: "The first sight of the House",
     overview: "The stage at which the journey arrives, and Ghazali attaches to it the largest of the parallels — and then a general rule for all of them.",
     moves: [
-      { title: "Give the moment", body: "When the sight falls upon the House, let the magnitude of the House be present in the heart, and let him reckon it as though he beholds the Lord of the House, from the intensity of his magnifying Him." },
-      { title: "Give the hope", body: "And hope that God grant you the sight of His noble face, as He granted you the sight of His mighty House. And thank God for bringing you to this rank and joining you to the company of those who arrive upon Him." },
-      { title: "Give the parallel", body: "And recall at that the streaming of people on the Day of Resurrection toward the direction of the Garden, all of them hoping to enter it — then their dividing into those permitted to enter and those turned away, as the pilgrims divide into the accepted and the rejected." },
-      { title: "Give the general rule", body: "And do not be heedless of recalling the matters of the hereafter in anything you see — for all the states of the pilgrim are evidence of the states of the hereafter." },
+      { title: "Give the moment", body: "When you first catch sight of the House, hold in your heart what it is — and take it as though you were seeing the Lord of the House, from the sheer weight of what you are giving Him." },
+      { title: "Give the hope", body: "Hope that God will let you see His face, as He has let you see His House. And thank Him for getting you this far and putting you among the people who arrive." },
+      { title: "Give the parallel", body: "Recall at that the streaming of people on the Day of Resurrection toward the direction of the Garden, all of them hoping to enter it — then their dividing into those permitted to enter and those turned away, as the pilgrims divide into the accepted and the rejected." },
+      { title: "Give the general rule", body: "Do not be heedless of recalling the matters of the hereafter in anything you see — for all the states of the pilgrim are evidence of the states of the hereafter." },
     ],
     closer: [
       { title: "Why the crowd is the figure", body: "The earlier parallels were between objects: a provision, a mount, a garment. This one is between two crowds, and its content is that arriving is not the same as being received. The pilgrim standing in a crowd of pilgrims is being shown a division he cannot see." },
@@ -241,16 +241,16 @@ export const book07Chapters: Chapter[] = [
     id: 12, shortTitle: "Not your body", formalTitle: "The circling, and what is actually circling",
     overview: "The most doctrinally loaded passage in the book. Ghazali says what the circling is, denies the obvious reading of it, and then explains what a rite is.",
     moves: [
-      { title: "Say what it is", body: "Know that the circling is a prayer. So bring into your heart in it the reverence, fear, hope, and love that we set out in the Book of Prayer." },
-      { title: "Give the resemblance", body: "And know that by circling you are resembling the near angels who encompass the Throne, circling around it." },
-      { title: "Deny the obvious reading", body: "And do not suppose that the aim is the circling of your body around the House. Rather the aim is the circling of your heart with the remembrance of the Lord of the House — so that you do not begin the remembrance except from Him and do not end except with Him, as you begin the circling from the House and end at the House." },
-      { title: "Name what the House is", body: "And know that the noble circling is the circling of the heart in the presence of Lordship, and that the House is an outward likeness, in the world of sovereignty, for that presence which is not beheld by sight." },
+      { title: "Say what it is", body: "Circling the House is a prayer. So bring to it the same reverence, fear, hope and love the Book of Prayer set out." },
+      { title: "Give the resemblance", body: "In circling you are imitating the angels who surround the Throne and go round it." },
+      { title: "Deny the obvious reading", body: "Do not suppose that the aim is the circling of your body around the House. Rather the aim is the circling of your heart with the remembrance of the Lord of the House — so that you do not begin the remembrance except from Him and do not end except with Him, as you begin the circling from the House and end at the House." },
+      { title: "Name what the House is", body: "The circling that really counts is the heart going round in the presence of God. The House is a visible stand-in, in this world, for a presence no eye can see." },
     ],
     closer: [
       { title: "The proportion he draws", body: "As the body is an outward likeness, in the world of the seen, for the heart, which is not beheld by sight and is in the world of the unseen. Two likeness-relations set equal: House is to Presence as body is to heart. It is the clearest statement of the two-worlds doctrine in the Quarter of Worship." },
-      { title: "The licence for the outward rite", body: "Since the rank of most creatures fell short of such circling, they were commanded to resemble them as far as possible, and were promised that whoever resembles a people is of them. The outward act is not a substitute for the inward one; it is a resemblance, and resemblance is given a promise of its own." },
+      { title: "The licence for the outward rite", body: "Since most people fall short of circling like that, they were told to imitate it as far as they can, and promised that whoever resembles a people belongs with them. The physical act is not a replacement for the inward one. It is a resemblance — and resemblance gets a promise of its own." },
     ],
-    distinction: ["Two things that circle", "The body around the House", "Which Ghazali explicitly denies is the aim, while requiring it.", "The heart around the Presence", "Beginning and ending nowhere else, which is what the outward act figures."],
+    distinction: ["Two things that circle", "The body around the House", "Which Ghazali explicitly denies is the aim, while requiring it.", "The heart around the Presence", "Beginning and ending nowhere else, which is what the physical act is a picture of."],
     misreading: "Do not conclude that the bodily circling is dispensable. The passage that denies it is the aim is the same passage that grounds it, on the principle that whoever resembles a people is of them.",
     reflection: "Ask what your remembrance begins from and ends at, and whether it makes a circuit.",
     audit: ["What is circling, in my case?", "Where does my remembrance begin and end?", "Do I read the outward as a substitute or a resemblance?", "What is the House a likeness of?"],
@@ -262,7 +262,7 @@ export const book07Chapters: Chapter[] = [
     overview: "The doctrine underneath the whole chapter, stated once and briefly, and it explains why any of the readings work at all.",
     moves: [
       { title: "State the relation", body: "The world of sovereignty and the seen is a stair to the world of the unseen and the Kingdom — for one to whom God opens the door." },
-      { title: "Give the instance", body: "And to this correspondence the indication was made, that the Frequented House in the heavens is opposite the Kaaba — for the circling of the angels around it is like the circling of humans around this House." },
+      { title: "Give the instance", body: "To this correspondence the indication was made, that the Frequented House in the heavens is opposite the Kaaba — for the circling of the angels around it is like the circling of humans around this House." },
       { title: "Give the condition", body: "For one to whom God opens the door. The stair is described as a stair for everyone and as climbable by those for whom it is opened, which is the same proportioning stated when the method was introduced." },
       { title: "Say what the method yields", body: "There is disclosed to every pilgrim of these secrets what the clarity of his heart, the purity of his inward, and the abundance of his understanding require. The keys are given to all and the doors open differently." },
     ],

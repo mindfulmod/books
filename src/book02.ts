@@ -43,7 +43,7 @@ export const book02Chapters: Chapter[] = [
     moves: [
       { title: "Give the instruction", body: "What we have set down in the exposition of the creed should be presented to the child at the beginning of his growth, so that he memorises it by rote." },
       { title: "Give what follows", body: "Then its meaning does not cease to unfold to him in his maturity, little by little. So his beginning is memorising, then understanding, then belief and certainty and assent to it." },
-      { title: "State the claim", body: "And that occurs in the child without proof. The sequence is offered as a description of what actually happens rather than as a concession to immaturity." },
+      { title: "State the claim", body: "That occurs in the child without proof. The sequence is offered as a description of what actually happens rather than as a concession to immaturity." },
       { title: "Call it a grace", body: "It is of God's grace upon the human heart that He expanded it, at the beginning of its growth, for faith, without need of argument and proof." },
     ],
     closer: [
@@ -81,10 +81,10 @@ export const book02Chapters: Chapter[] = [
     id: 4, shortTitle: "Four strengtheners", formalTitle: "How belief is made to take root",
     overview: "The most counter-intuitive sentence in the book, and then four remedies that no reader would guess from the diagnosis.",
     moves: [
-      { title: "Rule out the obvious remedy", body: "And the way to strengthen it and establish it is not that he be taught the craft of dialectic and theology." },
+      { title: "Rule out the obvious remedy", body: "The way to strengthen it and establish it is not that he be taught the craft of dialectic and theology." },
       { title: "Give the first two", body: "Rather he should occupy himself with reciting the Quran and its exegesis, and with reading the reports and their meanings." },
-      { title: "Give the third", body: "And busy himself with the duties of the acts of worship, so that his belief keeps increasing in rootedness by the lights of those acts and their offices." },
-      { title: "Give the fourth", body: "And by what passes into him from witnessing the righteous and sitting with them — their bearing, their manner, and what is heard from them." },
+      { title: "Give the third", body: "Busy himself with the duties of the acts of worship, so that his belief keeps increasing in rootedness by the lights of those acts and their offices." },
+      { title: "Give the fourth", body: "By what passes into him from witnessing the righteous and sitting with them — their bearing, their manner, and what is heard from them." },
     ],
     closer: [
       { title: "Why four causes and not an argument", body: "The diagnosis was that the belief is dislodgeable. Rootedness is a matter of how many things a belief is attached to, and each of the four remedies attaches it to something further: a text, a report, a practice, and a company. An argument attaches it to one thing only, and to the weakest kind of thing, since an argument can be met by another argument." },
@@ -104,7 +104,7 @@ export const book02Chapters: Chapter[] = [
       { title: "The first dose, and its indication", body: "There is no harm in their being taught the measure deposited in the Jerusalem Epistle, so that it may serve to repel the effect of the innovators' disputations if those reach them. It is a brief measure, and it is included in this book because it is brief." },
       { title: "The escalation, and its trigger", body: "If there is intelligence in him, and by his intelligence he is alerted to a place where a question arises, or a doubt stirs in his soul — then the feared malady has appeared and the disease has shown itself. There is no harm in his ascending to the measure in the book of Moderation in Belief, which is about fifty leaves." },
       { title: "The stopping rule", body: "If that convinces him, stop there." },
-      { title: "The failure case", body: "And if it does not convince him, the malady has become chronic and the disease dominant and the sickness has spread. Let the physician be gentle with him as far as he is able, and await God's decree in him — until the truth is disclosed to him by an alerting from God, or he continues in doubt to what was decreed for him." },
+      { title: "The failure case", body: "If it does not convince him, the malady has become chronic and the disease dominant and the sickness has spread. Let the physician be gentle with him as far as he is able, and await God's decree in him — until the truth is disclosed to him by an alerting from God, or he continues in doubt to what was decreed for him." },
     ],
     closer: [
       { title: "What the medical frame commits him to", body: "If argument is a drug, then it is indicated by a symptom and not by a level of education, its dose is bounded, and giving it to someone with no symptom is not neutral. Every one of those follows, and Ghazali accepts all of them, including the last." },
@@ -123,8 +123,8 @@ export const book02Chapters: Chapter[] = [
     moves: [
       { title: "Set the boundary", body: "The measure that book contains, and its kind among the writings, is what benefit is hoped from. What lies outside it falls into two divisions." },
       { title: "The first division", body: "Inquiry into matters that are not the principles of belief at all — and he gives the examples: inquiry into reliances, into beings, into perceptions." },
-      { title: "Give the specimen", body: "And plunging into whether vision has a contrary called prevention or blindness; and if it has, whether that is one prevention covering everything not seen, or whether a prevention is established for each visible thing according to its number." },
-      { title: "Name it", body: "And other such nonsense that misleads. The second division is a further establishing of the same evidences within the principles, with more questions and more answers — which he calls an exhaustiveness that increases nothing but error and ignorance." },
+      { title: "Give the specimen", body: "Plunging into whether vision has a contrary called prevention or blindness; and if it has, whether that is one prevention covering everything not seen, or whether a prevention is established for each visible thing according to its number." },
+      { title: "Name it", body: "Other such nonsense that misleads. The second division is a further establishing of the same evidences within the principles, with more questions and more answers — which he calls an exhaustiveness that increases nothing but error and ignorance." },
     ],
     closer: [
       { title: "Why he reproduces the example in full", body: "He could have referred to scholastic minutiae in general. Instead he sets out one question in its actual technical form, at length, and lets it convict itself. A reader who has followed the sentence to its end has already had the experience the argument is about." },
@@ -203,7 +203,7 @@ export const book02Chapters: Chapter[] = [
     moves: [
       { title: "The first three principles", body: "That the acts of servants are created by God; that they are acquired by the servants; and that they are willed by God. The second is what keeps the first from being fatalism, and the pillar depends on holding all three." },
       { title: "The uncomfortable ones", body: "That He may impose what is beyond capacity. That He may cause pain to the innocent. That it is not obligatory upon Him to observe what is most beneficial." },
-      { title: "The principle underneath them", body: "And that there is no obligation except by the Law. The three preceding claims follow from this one: if moral obligation is constituted by the Law rather than discovered by reason, then nothing is owed by God prior to it." },
+      { title: "The principle underneath them", body: "That there is no obligation except by the Law. The three preceding claims follow from this one: if moral obligation is constituted by the Law rather than discovered by reason, then nothing is owed by God prior to it." },
       { title: "The last three", body: "That He is bounteous in creating and originating; that the sending of prophets is possible; and that the prophethood of Muhammad is established and supported by miracle." },
     ],
     closer: [
@@ -262,8 +262,8 @@ export const book02Chapters: Chapter[] = [
     overview: "The first of the three answers, and it is clean enough that the shape of the whole relation falls out of it immediately.",
     moves: [
       { title: "Define the first", body: "Faith is an expression for assent. The verse in which the brothers say that their father would not be one who assents to them uses the word in exactly that sense." },
-      { title: "Define the second", body: "And submission is an expression for surrender and yielding — by compliance and obedience, and by leaving rebellion, refusal, and obstinacy." },
-      { title: "Locate the first", body: "And assent has a particular seat, which is the heart; the tongue is its interpreter. It happens in one place only." },
+      { title: "Define the second", body: "Submission is an expression for surrender and yielding — by compliance and obedience, and by leaving rebellion, refusal, and obstinacy." },
+      { title: "Locate the first", body: "Assent has a particular seat, which is the heart; the tongue is its interpreter. It happens in one place only." },
       { title: "Locate the second", body: "But surrender is general across the heart, the tongue, and the limbs. For every assent of the heart is a surrender and a leaving of refusal and denial — and so on through the other two." },
     ],
     closer: [

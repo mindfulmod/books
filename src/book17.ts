@@ -42,7 +42,7 @@ export const book17Chapters: Chapter[] = [
     overview: "The book's organising division, and it is exhaustive by construction — every journey is one or the other.",
     moves: [
       { title: "Place travel", body: "Know that travel is a kind of movement and mixing, and in it are benefits and it has harms — as we mentioned in the Book of Companionship and the Book of Seclusion." },
-      { title: "Give the division", body: "And the benefits that impel toward travel are not free of either flight or seeking." },
+      { title: "Give the division", body: "The benefits that impel toward travel are not free of either flight or seeking." },
       { title: "Define the first", body: "For a traveller either has something that unsettles him from his place — and but for it he would have no destination to travel to." },
       { title: "Define the second", body: "Or he has a destination and an object of seeking. The two are distinguished by where the motive lives: behind him, or ahead." },
     ],
@@ -63,7 +63,7 @@ export const book17Chapters: Chapter[] = [
     moves: [
       { title: "Name the category", body: "What is fled is either a matter with an injury in worldly affairs." },
       { title: "Give the examples", body: "Like plague and epidemic when it appears in a town, or a fear whose cause is strife or a quarrel, or a rise in prices." },
-      { title: "Divide it", body: "And it is either general, as in those cases, or particular — like one who is targeted with harm in a town and flees from it." },
+      { title: "Divide it", body: "It is either general, as in those cases, or particular — like one who is targeted with harm in a town and flees from it." },
       { title: "Note what the list includes", body: "Disease, disorder, a personal quarrel, and the cost of living. None of them is treated as an unworthy reason to move, and the book does not pause to justify any of them." },
     ],
     closer: [
@@ -101,7 +101,7 @@ export const book17Chapters: Chapter[] = [
     id: 5, shortTitle: "Three knowledges", formalTitle: "What is sought: knowledge",
     overview: "The first branch of seeking, and its three kinds are wider than a reader expects — the third of them is geography.",
     moves: [
-      { title: "Give the division", body: "And what is sought is either worldly, like wealth and status, or religious. And the religious is either knowledge or action." },
+      { title: "Give the division", body: "What is sought is either worldly, like wealth and status, or religious. And the religious is either knowledge or action." },
       { title: "Give the first kind of knowledge", body: "Either a science among the religious sciences." },
       { title: "Give the second", body: "Or knowledge of one's own character and attributes, by way of experience — which is a kind of knowledge obtained by being taken out of one's usual conditions and seeing what one becomes." },
       { title: "Give the third", body: "Or knowledge of the signs of the earth and its wonders, like the travel of Dhu al-Qarnayn and his going about in the regions of the earth." },
@@ -121,10 +121,10 @@ export const book17Chapters: Chapter[] = [
     id: 6, shortTitle: "Worship, and visiting", formalTitle: "What is sought: action",
     overview: "The second branch of seeking, and its two halves are treated very differently — one is brief and the other is where the difficulties are.",
     moves: [
-      { title: "Divide it", body: "And action is either worship or visitation." },
+      { title: "Divide it", body: "Action is either worship or visitation." },
       { title: "Give the worship", body: "Worship is the pilgrimage, the lesser pilgrimage, and struggle in God's path — three journeys with fixed forms, treated at length elsewhere in the work." },
-      { title: "Give the visitation of places", body: "And visitation is also among the acts of nearness. It may aim at a place — such as Mecca, Medina, and Jerusalem; and the frontiers, since stationing at them is an act of nearness." },
-      { title: "Give the visitation of people", body: "And it may aim at the friends of God and the scholars — who are either dead, so their graves are visited; or living, so that blessing is sought by seeing them, and from looking at their states one gains strength of desire to imitate them." },
+      { title: "Give the visitation of places", body: "Visitation is also among the acts of nearness. It may aim at a place — such as Mecca, Medina, and Jerusalem; and the frontiers, since stationing at them is an act of nearness." },
+      { title: "Give the visitation of people", body: "It may aim at the friends of God and the scholars — who are either dead, so their graves are visited; or living, so that blessing is sought by seeing them, and from looking at their states one gains strength of desire to imitate them." },
     ],
     closer: [
       { title: "The reason given for visiting the living", body: "That from looking at their states one gains strength of desire to imitate them. It is the same mechanism Book 38 named as the most beneficial treatment when the soul will not comply: the companionship of someone who actually strives, observed and imitated rather than argued with." },
@@ -143,8 +143,8 @@ export const book17Chapters: Chapter[] = [
     moves: [
       { title: "Name the scope", body: "The manners from the first rising to the last return — so the sequence begins before departure and ends after arrival home." },
       { title: "Give the settling", body: "Beginning with what is put right before going: wrongs returned, debts settled, and provision left for those who depend on the traveller." },
-      { title: "Give the will", body: "And the writing of a will, which Book 7 also placed among the things done before a journey — a traveller and his wealth being at risk, as that book put it." },
-      { title: "Give the companion", body: "And the choosing of company, since travel is named at the outset as a kind of mixing, and the choice of whom to be mixed with is made before setting out rather than on the road." },
+      { title: "Give the will", body: "The writing of a will, which Book 7 also placed among the things done before a journey — a traveller and his wealth being at risk, as that book put it." },
+      { title: "Give the companion", body: "The choosing of company, since travel is named at the outset as a kind of mixing, and the choice of whom to be mixed with is made before setting out rather than on the road." },
     ],
     closer: [
       { title: "Why the sequence starts before the road", body: "The same reason Book 7's twelve stages of the pilgrimage began three stages before anything was bought. A journey is treated as beginning at the resolve, which is what allows its earlier stages to be examined at all." },
@@ -204,7 +204,7 @@ export const book17Chapters: Chapter[] = [
       { title: "Name the three", body: "What a traveller must learn of the dispensations of travel, the indicators of the direction of prayer, and the times." },
       { title: "Give the dispensations", body: "Travel gives two dispensations in purification — wiping over footgear, and dry ablution — and two in the obligatory prayer, which are shortening and combining." },
       { title: "Note why the direction needs indicators", body: "At home the direction of prayer is settled by the arrangement of a building. On a road it has to be worked out, which is a skill rather than a fact." },
-      { title: "Note why the times do", body: "And likewise the times, which at home are announced and at a distance must be judged — so both are things a traveller must be able to determine for himself." },
+      { title: "Note why the times do", body: "Likewise the times, which at home are announced and at a distance must be judged — so both are things a traveller must be able to determine for himself." },
     ],
     closer: [
       { title: "Why the dispensations must be learned rather than simply used", body: "Each has conditions and limits, and a person who does not know them will either forgo what he is entitled to or take what he is not. Knowing a concession is as much a matter of knowledge as knowing an obligation." },

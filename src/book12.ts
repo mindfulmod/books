@@ -22,8 +22,8 @@ export const book12Chapters: Chapter[] = [
     overview: "The book opens not on a recommendation but on a dispute, and Ghazali sets out three standing positions before taking any of them.",
     moves: [
       { title: "Give the first position", body: "The scholars have differed about the merit of marriage. Some went so far as to claim that it is better than devoting oneself to the worship of God." },
-      { title: "Give the second", body: "And others acknowledged its merit but placed devoting oneself to worship above it — so long as the soul does not long for marriage with a longing that disturbs the state and calls to intercourse." },
-      { title: "Give the third", body: "And others said: the better thing in this time of ours is leaving it. It had a merit before, when earnings were not restricted and women's characters were not blamed." },
+      { title: "Give the second", body: "Others acknowledged its merit but placed devoting oneself to worship above it — so long as the soul does not long for marriage with a longing that disturbs the state and calls to intercourse." },
+      { title: "Give the third", body: "Others said: the better thing in this time of ours is leaving it. It had a merit before, when earnings were not restricted and women's characters were not blamed." },
       { title: "Note what the opening does", body: "A book on the etiquette of marriage begins by reporting that serious people held that not marrying is better, and does not dismiss the position. Everything that follows is an attempt to adjudicate rather than to advocate." },
     ],
     closer: [
@@ -62,8 +62,8 @@ export const book12Chapters: Chapter[] = [
     overview: "The first of five benefits, and Ghazali gives it a status the other four do not have.",
     moves: [
       { title: "Name it", body: "The first benefit is the child." },
-      { title: "Give its status", body: "And it is the root, and for it marriage was instituted." },
-      { title: "Give the aim", body: "And the aim is the preservation of the lineage, and that the world not be empty of the human kind." },
+      { title: "Give its status", body: "It is the root, and for it marriage was instituted." },
+      { title: "Give the aim", body: "The aim is the preservation of the lineage, and that the world not be empty of the human kind." },
       { title: "Note what follows from the status", body: "Being the root means it is the benefit against which the harms are weighed first, and the closing case of the chapter is exactly that weighing — a person whose only benefit is this one, against a person who faces the strongest harm." },
     ],
     closer: [
@@ -144,7 +144,7 @@ export const book12Chapters: Chapter[] = [
       { title: "Give the second", body: "Falling short of fulfilling their rights, and patience with their character, and bearing harm from them — and this is below the first in strength." },
       { title: "Note the symmetry again", body: "It is the fifth benefit stated as a failure. What trains a person who can carry it damages a person who cannot, and the ranking below the first harm reflects that it depends on the person rather than on circumstances." },
       { title: "Give the third", body: "That the household and the child become an occupier from God and a puller toward the world — and this is below the first and the second." },
-      { title: "Give the further stage", body: "And beyond that, that it call him to the enjoyment of the permitted, and then to excess in playing with women and keeping their company — so that the harm is not the forbidden but the permitted taken past its measure." },
+      { title: "Give the further stage", body: "Beyond that, that it call him to the enjoyment of the permitted, and then to excess in playing with women and keeping their company — so that the harm is not the forbidden but the permitted taken past its measure." },
     ],
     closer: [
       { title: "Why the third harm is ranked lowest", body: "Because what it names is not a fault but a pull, and because its object is permitted. Ghazali ranks the harms by how far each carries a person from what is lawful, and this one begins inside the lawful and only becomes a harm at excess." },

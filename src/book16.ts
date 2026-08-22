@@ -42,9 +42,9 @@ export const book16Chapters: Chapter[] = [
     overview: "The second chapter opens by pointing at another book of the Ihya and saying that this question has the same shape as that one.",
     moves: [
       { title: "Name the parallel", body: "Know that people's disagreement in this resembles their disagreement about the merit of marriage." },
-      { title: "Recall what was done there", body: "And he refers to the harms of marriage and its benefits, treated in the book on marriage — where the answer came out differently for different people according to which harms they faced." },
+      { title: "Recall what was done there", body: "He refers to the harms of marriage and its benefits, treated in the book on marriage — where the answer came out differently for different people according to which harms they faced." },
       { title: "Apply it", body: "So likewise the statement in what we are in. So let us first mention the benefits of seclusion." },
-      { title: "Sort the benefits", body: "And they divide into religious benefits and worldly ones, and the religious into what makes acts of obedience possible in solitude and what preserves a person from what mixing exposes him to." },
+      { title: "Sort the benefits", body: "They divide into religious benefits and worldly ones, and the religious into what makes acts of obedience possible in solitude and what preserves a person from what mixing exposes him to." },
     ],
     closer: [
       { title: "What the parallel commits him to", body: "No general verdict. Book 12 produced two worked cases that came out on opposite sides, and by invoking it here Ghazali is announcing in advance that this book will do the same — which is why the chapter is a weighing rather than an argument." },
@@ -64,7 +64,7 @@ export const book16Chapters: Chapter[] = [
       { title: "Give the first", body: "Freeing oneself for worship and for thought, and finding intimacy in intimate converse with God rather than in converse with people." },
       { title: "Note what it is", body: "A benefit of capacity: it does not remove a danger but creates room. It is the benefit that connects this book to the Quarter of Worship, where the whole practice was arranged around continuity." },
       { title: "Give the second", body: "Escaping, by seclusion, the sins a person is generally exposed to by mixing, and being safe from them in solitude." },
-      { title: "Name the chief of them", body: "And chiefly the blights of the tongue, treated in the Quarter of Perils — where, he says, guarding against them while mixing is a great matter, and none escapes them but the truthful." },
+      { title: "Name the chief of them", body: "Chiefly the blights of the tongue, treated in the Quarter of Perils — where, he says, guarding against them while mixing is a great matter, and none escapes them but the truthful." },
     ],
     closer: [
       { title: "The weight of that last clause", body: "None escapes them but the truthful. It is a very strong claim: on Ghazali's own account of the tongue, mixing reliably produces sins that almost nobody avoids. That is the strongest thing said for seclusion anywhere in the book." },
@@ -164,7 +164,7 @@ export const book16Chapters: Chapter[] = [
       { title: "Give the ground", body: "Teaching and learning are the greatest acts of worship in this world — as the Book of Knowledge argued — and that is inconceivable except by mixing." },
       { title: "Give the ruling", body: "So one who needs to learn what is obligatory upon him is disobedient by seclusion." },
       { title: "Note the word", body: "Disobedient. Not unwise, not premature — the withdrawal is itself a wrong, because it makes an obligation impossible to discharge." },
-      { title: "Give the saying", body: "And hence al-Nakha'i and others said: become learned, then withdraw." },
+      { title: "Give the saying", body: "Hence al-Nakha'i and others said: become learned, then withdraw." },
     ],
     closer: [
       { title: "What he says happens instead", body: "For one who withdraws before learning is, in most cases, wasting his time in sleep or in thinking about nonsense — and the most he achieves is to fill his hours with litanies. It is a description of failure rather than a warning about it." },
@@ -182,8 +182,8 @@ export const book16Chapters: Chapter[] = [
     overview: "Having refused one case outright, Ghazali immediately sorts the rest — and the third of them is the one most likely to apply to a serious reader.",
     moves: [
       { title: "The first case", body: "One who needs to learn what is obligatory on him: disobedient by seclusion, and the case is closed." },
-      { title: "The second case", body: "And if he has learned the obligatory, and plunging into the sciences is not within him, and he sees fit to occupy himself with worship — then let him withdraw." },
-      { title: "The third case", body: "And if he is capable of excelling in the sciences of Law and of reason, then seclusion for him, before learning, is the utmost loss." },
+      { title: "The second case", body: "If he has learned the obligatory, and plunging into the sciences is not within him, and he sees fit to occupy himself with worship — then let him withdraw." },
+      { title: "The third case", body: "If he is capable of excelling in the sciences of Law and of reason, then seclusion for him, before learning, is the utmost loss." },
       { title: "Note what separates the second from the third", body: "Capacity. The same person's duty differs according to what he could become, which makes the ruling depend on an honest estimate of one's own ability." },
     ],
     closer: [

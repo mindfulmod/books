@@ -22,9 +22,9 @@ export const book10Chapters: Chapter[] = [
     overview: "The last book of the Quarter of Worship opens with a derivation, and it is the tightest chain of reasoning in the quarter — six links from the goal down to a timetable.",
     moves: [
       { title: "Start at the end", body: "Those who look by the light of insight have known that there is no deliverance except in meeting God, and that there is no way to the meeting except that the servant die loving God and knowing God." },
-      { title: "Take the two conditions apart", body: "And that love and intimacy are not obtained except from the continuity of remembering the beloved and persevering in it; and that knowledge of Him is not obtained except by the continuity of thought about Him, His attributes, and His acts — and there is nothing in existence but God and His acts." },
-      { title: "Add what continuity requires", body: "And that the continuity of remembrance and thought is not made easy except by bidding farewell to the world and its appetites, and taking from it only the measure of sufficiency and necessity." },
-      { title: "Reach the timetable", body: "And all of that is not completed except by absorbing the times of the night and the day in the offices of remembrance and thought." },
+      { title: "Take the two conditions apart", body: "That love and intimacy are not obtained except from the continuity of remembering the beloved and persevering in it; and that knowledge of Him is not obtained except by the continuity of thought about Him, His attributes, and His acts — and there is nothing in existence but God and His acts." },
+      { title: "Add what continuity requires", body: "That the continuity of remembrance and thought is not made easy except by bidding farewell to the world and its appetites, and taking from it only the measure of sufficiency and necessity." },
+      { title: "Reach the timetable", body: "All of that is not completed except by absorbing the times of the night and the day in the offices of remembrance and thought." },
     ],
     closer: [
       { title: "What the chain gathers", body: "Each link is the subject of a book elsewhere in the Ihya. Love and intimacy are Book 36; thought is Book 39; farewell to the world and taking only sufficiency is Books 26 and 34. The opening of this book is the whole work compressed into a paragraph, arriving at a schedule." },
@@ -41,7 +41,7 @@ export const book10Chapters: Chapter[] = [
     id: 2, shortTitle: "The soul wearies", formalTitle: "Why the litanies are varied",
     overview: "The passage that explains the entire shape of the Quarter of Worship. Ghazali gives a psychological fact and derives a design principle from it.",
     moves: [
-      { title: "State the fact", body: "And the soul, by what it was created upon of weariness and boredom, does not endure one kind of the means that assist remembrance and thought." },
+      { title: "State the fact", body: "The soul, by what it was created upon of weariness and boredom, does not endure one kind of the means that assist remembrance and thought." },
       { title: "Say what it does", body: "Rather, when it is returned to one pattern, it shows boredom and finds the thing heavy. And God does not weary until you weary." },
       { title: "Draw the principle", body: "So of the necessity of kindness toward it is that it be given rest by moving from one kind to another and from one sort to another, according to each time." },
       { title: "Give the mechanism", body: "So that by the moving its pleasure may be plentiful; and by the pleasure its desire may be great; and by the continuance of the desire its perseverance may endure. And for that reason the litanies are divided into a varied division." },
@@ -64,7 +64,7 @@ export const book10Chapters: Chapter[] = [
       { title: "Gather the verses", body: "The sun and the moon by a reckoning. Have you not seen how your Lord extends the shade. And the moon We have determined in phases. And it is He who made the stars for you, to be guided by them in the darknesses of land and sea." },
       { title: "Refuse the obvious reading", body: "So do not suppose that the aim of the course of the sun and the moon by an ordered reckoning, and of the creation of shade and light and the stars, is that they be used for the affairs of this world." },
       { title: "Give the aim", body: "Rather, that the measures of times be known by them, so that a person may occupy those times with acts of obedience and with trade for the abode of the hereafter." },
-      { title: "Give the evidence", body: "And it is He who made the night and the day a succession for whoever desires to remember or desires to give thanks — meaning that one succeeds the other so that what was missed in one may be made up in the other. And He made clear that this is for remembrance and thanks and nothing else." },
+      { title: "Give the evidence", body: "It is He who made the night and the day a succession for whoever desires to remember or desires to give thanks — meaning that one succeeds the other so that what was missed in one may be made up in the other. And He made clear that this is for remembrance and thanks and nothing else." },
     ],
     closer: [
       { title: "Why the verse about succession is decisive", body: "It is the one verse that states a purpose rather than a fact. The others describe an ordering; this one says what the ordering is for, and names two things — remembrance and thanks — and Ghazali reads the naming as exclusive." },
@@ -102,8 +102,8 @@ export const book10Chapters: Chapter[] = [
     overview: "The most practical feature of the arrangement, and the one that keeps it from being impossible: several of the seven are given to things that are not private devotion.",
     moves: [
       { title: "Give the range", body: "The divisions are filled with different kinds: supplication, remembrance, recitation, prayer, praise, and glorification — and Ghazali notes of one arrangement that it gathers all of these together with the nobility of the time." },
-      { title: "Give the exception", body: "And in one of the divisions, if there is someone present who can benefit from knowledge, the time is given to teaching and to benefiting others rather than to a further private devotion." },
-      { title: "Give the practical rulings", body: "And where prayer is not permitted at a particular hour, the time is given to recitation instead — so the division is kept and its content changes." },
+      { title: "Give the exception", body: "In one of the divisions, if there is someone present who can benefit from knowledge, the time is given to teaching and to benefiting others rather than to a further private devotion." },
+      { title: "Give the practical rulings", body: "Where prayer is not permitted at a particular hour, the time is given to recitation instead — so the division is kept and its content changes." },
       { title: "Name the principle at work", body: "It is the variation principle applied within the day: no division is left empty, and no two adjacent divisions are filled the same way." },
     ],
     closer: [
@@ -163,7 +163,7 @@ export const book10Chapters: Chapter[] = [
     moves: [
       { title: "Note what is being asked for", body: "The chapter treats the causes that make rising at night easy — not the excellence of rising, which is treated separately, and not the resolve to rise." },
       { title: "Name the outward causes", body: "They are practical: not eating and drinking to excess, not exhausting oneself during the day with what is not needed, taking a portion of sleep in the daytime, and avoiding what burdens the body." },
-      { title: "Name the inward ones", body: "And avoiding sins, which harden the heart; and the presence of a fear or a longing that occupies the person, so that sleep does not settle on him in the ordinary way." },
+      { title: "Name the inward ones", body: "Avoiding sins, which harden the heart; and the presence of a fear or a longing that occupies the person, so that sleep does not settle on him in the ordinary way." },
       { title: "Say what the approach implies", body: "The practice is treated as an outcome with conditions rather than as an act of will. If the conditions are arranged, rising becomes easy; if they are not, resolve is being asked to do work that belongs to a diet and a schedule." },
     ],
     closer: [
@@ -183,7 +183,7 @@ export const book10Chapters: Chapter[] = [
     moves: [
       { title: "Divide the night", body: "The chapter treats how the night is divided, so that a person keeps a portion of it rather than facing it as a single undivided stretch." },
       { title: "Note what division does", body: "It makes a partial keeping possible. A night treated as one block is either kept or missed; a night in portions can be kept in part, which is the same reason the day was divided into seven." },
-      { title: "Name the nights", body: "And the nights whose vigil is particularly recommended, which are singled out by occasion rather than by rotation." },
+      { title: "Name the nights", body: "The nights whose vigil is particularly recommended, which are singled out by occasion rather than by rotation." },
       { title: "Give the shape", body: "So the practice has three scales: an hour after sunset available every day, portions of every night, and particular nights in the year — the same descending-cycle structure Book 4 gives for the supererogatory prayers." },
     ],
     closer: [
@@ -204,7 +204,7 @@ export const book10Chapters: Chapter[] = [
       { title: "Note what the book supplied", body: "A derivation from the goal down to a timetable; a principle of variation; seven divisions of the day marked by the sun; three scales of night practice; and the causes that make the hardest of them possible." },
       { title: "Note what it did not supply", body: "No new obligation. Every act placed in the divisions was treated in one of the nine books before it, and this book arranges them rather than adding to them." },
       { title: "Look back at the quarter", body: "Purification set four ranks and treated the lowest. Prayer, alms, fasting, and pilgrimage each fixed an outward act and then asked what it required inwardly. Recitation and invocation treated the two acts made of words. This book puts them in a day." },
-      { title: "Give the last link", body: "And all of it stands on the first chapter's chain, which begins at the meeting and ends at the times of the night and the day — so that the schedule is the last consequence of the goal rather than the first demand made of the reader." },
+      { title: "Give the last link", body: "All of it stands on the first chapter's chain, which begins at the meeting and ends at the times of the night and the day — so that the schedule is the last consequence of the goal rather than the first demand made of the reader." },
     ],
     closer: [
       { title: "What comes after", body: "The Quarter of Custom follows, treating eating, marriage, earning, and the rest of ordinary life. The arrangement of a day is the natural hinge between a quarter about acts of worship and a quarter about everything else a person does in the same day." },

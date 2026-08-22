@@ -43,7 +43,7 @@ export const book15Chapters: Chapter[] = [
     moves: [
       { title: "Name the subject", body: "The excellence of affection and of brotherhood in God, and its conditions, its degrees, and its benefits — four things, of which two are qualifications." },
       { title: "Note the conditions", body: "Brotherhood in God is a bond entered on a basis, and the chapter sets out what has to be true of the person and of the ground on which the tie is formed." },
-      { title: "Note the degrees", body: "And it is graded, which means that two people can both truly be brothers and owe each other different amounts." },
+      { title: "Note the degrees", body: "It is graded, which means that two people can both truly be brothers and owe each other different amounts." },
       { title: "Say why the grading matters", body: "The eight rights of the next chapter are stated in full. Without the degrees, they would read as a single standard that almost no friendship meets — and the chapter on property makes the grading explicit by dividing that right into three ranks." },
     ],
     closer: [
@@ -62,9 +62,9 @@ export const book15Chapters: Chapter[] = [
     overview: "The sentence that opens the second chapter, and it changes the category of the whole subject.",
     moves: [
       { title: "Give the claim", body: "Know that the contract of brotherhood is a bond between two persons, like the contract of marriage between two spouses." },
-      { title: "Draw the parallel", body: "And as marriage entails rights that must be fulfilled in discharge of the right of marriage, so does the contract of brotherhood." },
+      { title: "Draw the parallel", body: "As marriage entails rights that must be fulfilled in discharge of the right of marriage, so does the contract of brotherhood." },
       { title: "Give the map", body: "So your brother has upon you a right in property, and in person, and in the tongue, and in the heart — by pardon and by supplication, by sincerity and fidelity, and by lightening and the leaving of affectation and imposition." },
-      { title: "Give the number", body: "And that gathers into eight rights. A friendship is thereby made into something with a determinate content, which can be enumerated and audited." },
+      { title: "Give the number", body: "That gathers into eight rights. A friendship is thereby made into something with a determinate content, which can be enumerated and audited." },
     ],
     closer: [
       { title: "What the parallel to marriage does", body: "Marriage is the paradigm of a relationship with enforceable content. Placing friendship beside it says that affection is not the whole of the tie, and that a person can be failing a friend in a specific and nameable way while feeling perfectly warm toward him." },
@@ -84,7 +84,7 @@ export const book15Chapters: Chapter[] = [
       { title: "Give the image", body: "The likeness of two brothers is the likeness of two hands, one of which washes the other." },
       { title: "Explain the choice", body: "He likened them to two hands and not to a hand and a foot, because the two hands cooperate toward a single purpose." },
       { title: "Apply it", body: "So two brothers: their brotherhood is complete only when they accompany one another toward a single aim — so that they are, in one respect, like a single person." },
-      { title: "Draw the consequence", body: "And this requires sharing in ease and in hardship, partnership in outcome and in circumstance, and the lifting of exclusive possession and of self-preference." },
+      { title: "Draw the consequence", body: "This requires sharing in ease and in hardship, partnership in outcome and in circumstance, and the lifting of exclusive possession and of self-preference." },
     ],
     closer: [
       { title: "Why the image is argued rather than asserted", body: "Two hands and a hand and a foot are both pairs that work together. What separates them is that the hands do the same work toward the same end, and Ghazali spends a sentence on the difference — which turns a familiar simile into a claim about what a friendship is for." },
@@ -104,7 +104,7 @@ export const book15Chapters: Chapter[] = [
       { title: "Give the lowest", body: "The lowest rank is that you place your brother in the rank of your servant, meeting his need out of your surplus." },
       { title: "Give the counsel attached to it", body: "Abu Hazim said: if you have a brother in God, do not deal with him in your worldly affairs — and Ghazali says he meant one who is at this rank." },
       { title: "Give the anecdote", body: "A man came to the house of one he had made a brother and said: I need four thousand of your wealth. The man said: take two thousand." },
-      { title: "Give the response", body: "And he turned away from him and said: you preferred the world to God. Were you not ashamed to claim brotherhood in God and then say this?" },
+      { title: "Give the response", body: "He turned away from him and said: you preferred the world to God. Were you not ashamed to claim brotherhood in God and then say this?" },
     ],
     closer: [
       { title: "What the anecdote actually charges", body: "Not meanness — half of what was asked was given. The charge is that the claim of brotherhood in God had been made, and that the offer measured what the friendship was worth against something else. The refusal is of the accounting rather than of the amount." },
@@ -123,7 +123,7 @@ export const book15Chapters: Chapter[] = [
     moves: [
       { title: "Give the verse", body: "The highest rank is what God described the believers with: and their affair is consultation among themselves, and of what We have provided them they spend." },
       { title: "Give the reading", body: "Meaning that they were mixed together in their properties, none of them distinguishing his own baggage from another's." },
-      { title: "Give the detail", body: "And among them was one who would not keep company with anyone who said: my shoe." },
+      { title: "Give the detail", body: "Among them was one who would not keep company with anyone who said: my shoe." },
       { title: "Note what the detail tests", body: "Not generosity but grammar. The possessive is the last place a division survives after everything has been shared, and the test reaches it." },
     ],
     closer: [
@@ -142,9 +142,9 @@ export const book15Chapters: Chapter[] = [
     overview: "The right of the person, and its distinctive clause is about timing rather than about effort.",
     moves: [
       { title: "Give the right", body: "Help with the person, in the fulfilling of needs and the undertaking of them." },
-      { title: "Give the clause", body: "And the undertaking of them before being asked." },
+      { title: "Give the clause", body: "The undertaking of them before being asked." },
       { title: "Say why that matters", body: "A need met on request is a favour granted; a need met before the request is a burden never taken up. The second spares the friend the asking, which is the part that costs him." },
-      { title: "Give the ordering", body: "And the giving of them precedence over one's own needs, which is what places this right above ordinary helpfulness." },
+      { title: "Give the ordering", body: "The giving of them precedence over one's own needs, which is what places this right above ordinary helpfulness." },
     ],
     closer: [
       { title: "The cost the clause removes", body: "Book 14 argued at length that asking a person about his affairs is itself a harm — a tearing of a covering. This right removes the parallel cost from the other side: a friend who does not have to ask is spared the exposure that asking involves." },
@@ -162,9 +162,9 @@ export const book15Chapters: Chapter[] = [
     overview: "The longest of the eight, and it is a catalogue of things not said — including several that would be said out of interest rather than malice.",
     moves: [
       { title: "Give the first item", body: "That he be silent about mentioning his faults, in his absence and in his presence — rather that he feign ignorance of them." },
-      { title: "Give the second", body: "And that he be silent about contradicting him in what he says, and not dispute with him or argue him down." },
-      { title: "Give the third", body: "And that he be silent about spying and about asking after his circumstances." },
-      { title: "Give the fourth", body: "And if he sees him on a road or on an errand, that he not open with him by asking his purpose — where he has come from and where he is going — and not ask him about it; for perhaps mentioning it is heavy on him, or he would need to lie about it." },
+      { title: "Give the second", body: "That he be silent about contradicting him in what he says, and not dispute with him or argue him down." },
+      { title: "Give the third", body: "That he be silent about spying and about asking after his circumstances." },
+      { title: "Give the fourth", body: "If he sees him on a road or on an errand, that he not open with him by asking his purpose — where he has come from and where he is going — and not ask him about it; for perhaps mentioning it is heavy on him, or he would need to lie about it." },
     ],
     closer: [
       { title: "The reason attached to the fourth", body: "Or he would need to lie about it. The instruction is not only that the question is intrusive but that it manufactures an occasion for a friend to be untruthful — so the harm of the question includes what it does to the person answering." },

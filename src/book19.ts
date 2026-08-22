@@ -22,8 +22,8 @@ export const book19Chapters: Chapter[] = [
     overview: "The Ihya's most vehement opening, and the largest claim Ghazali makes for any single practice in the forty books.",
     moves: [
       { title: "Give the claim", body: "The greatest axis in religion — and it is the matter of consequence for which God sent all the prophets." },
-      { title: "Give the consequence of neglect", body: "And if its carpet were folded up, and its knowledge and its practice let go, then prophecy would fall idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, lands would fall to ruin, and the servants would perish — and would not perceive their own perishing until the Day of Calling." },
-      { title: "Give the turn to the present", body: "And what we feared has come to be — to God we belong and to Him we return — for from this axis the practice and the knowledge have worn away, and its reality and its trace have been effaced entirely." },
+      { title: "Give the consequence of neglect", body: "If its carpet were folded up, and its knowledge and its practice let go, then prophecy would fall idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, lands would fall to ruin, and the servants would perish — and would not perceive their own perishing until the Day of Calling." },
+      { title: "Give the turn to the present", body: "What we feared has come to be — to God we belong and to Him we return — for from this axis the practice and the knowledge have worn away, and its reality and its trace have been effaced entirely." },
       { title: "Name what filled the vacancy", body: "So that flattery of creation has taken possession of hearts, and vigilance toward the Creator has been erased from them; and people have let themselves loose in following whim and appetite as beasts are let loose — and a truthful believer, whom no reproacher's reproach touches in God, has become rare on the carpet of the earth." },
     ],
     closer: [
@@ -43,7 +43,7 @@ export const book19Chapters: Chapter[] = [
     moves: [
       { title: "Give the ruling", body: "That it is a collective duty and not an individual one — so that when a community undertakes it, the obligation falls from the others." },
       { title: "Give the grammatical argument", body: "For He did not say, be all of you enjoiners of right — rather He said, let there be from among you a community. So whenever one person or a group undertakes it, the burden falls from the others." },
-      { title: "Give both halves of the consequence", body: "And the success belongs particularly to those undertaking it, who carry it out. But if the whole of the people hold back from it, the burden falls on every one of them capable of it, without exception." },
+      { title: "Give both halves of the consequence", body: "The success belongs particularly to those undertaking it, who carry it out. But if the whole of the people hold back from it, the burden falls on every one of them capable of it, without exception." },
       { title: "Give the second argument", body: "From the verse on the People of the Book: an upright community, reciting God's signs in the watches of the night and prostrating, believing in God and the Last Day, and enjoining right and forbidding wrong. He did not witness to their uprightness by faith in God and the Last Day alone, until He added this to it." },
     ],
     closer: [
@@ -122,9 +122,9 @@ export const book19Chapters: Chapter[] = [
     overview: "The most psychologically exact passage in the book, and its argument is that the third quality is not an ornament on the first two.",
     moves: [
       { title: "Give the first gap", body: "Not everyone who knows acts by his knowledge — indeed he may know that he is excessive in hisba and beyond the limit permitted in the law, and yet some purpose of his own carries him to it." },
-      { title: "Give the second gap", body: "And let his speech and his counsel be acceptable — for the corrupt man is mocked when he performs hisba, and that bequeaths boldness against him." },
+      { title: "Give the second gap", body: "Let his speech and his counsel be acceptable — for the corrupt man is mocked when he performs hisba, and that bequeaths boldness against him." },
       { title: "Give the third quality and its function", body: "As for good character: let him be enabled by it for gentleness and kindness, which is the root of this whole matter and its means." },
-      { title: "Give the argument", body: "And knowledge and scruple are not sufficient in it. For when anger rages, mere knowledge and scruple do not suffice to suppress it, unless there is in the disposition a receptiveness to it through good character." },
+      { title: "Give the argument", body: "Knowledge and scruple are not sufficient in it. For when anger rages, mere knowledge and scruple do not suffice to suppress it, unless there is in the disposition a receptiveness to it through good character." },
     ],
     closer: [
       { title: "What follows if the third is missing", body: "In truth scruple is not completed except with good character and the power to restrain appetite and anger. By it the one performing hisba bears what befalls him in God's religion — and otherwise, when his reputation or his property or his person is struck by insult or a blow, he forgets the hisba, becomes heedless of God's religion, and busies himself with himself." },
@@ -163,12 +163,12 @@ export const book19Chapters: Chapter[] = [
     moves: [
       { title: "Give the choice", body: "We have turned aside from the word disobedience to this one, because wrong is more general than disobedience." },
       { title: "Give the first case", body: "Since whoever sees a child or a madman drinking wine, it is upon him to pour out his wine and prevent him." },
-      { title: "Give the argument", body: "And this is not called disobedience with respect to the madman — since a disobedience with no one disobeying by it is impossible. So the word wrong indicates it better, and is more general than the word disobedience." },
-      { title: "Remove the second misunderstanding", body: "And that is not because of the grossness of the act's outward form and its being visible among people — rather, if he met this wrong in solitude, preventing it would be obligatory." },
+      { title: "Give the argument", body: "This is not called disobedience with respect to the madman — since a disobedience with no one disobeying by it is impossible. So the word wrong indicates it better, and is more general than the word disobedience." },
+      { title: "Remove the second misunderstanding", body: "That is not because of the grossness of the act's outward form and its being visible among people — rather, if he met this wrong in solitude, preventing it would be obligatory." },
     ],
     closer: [
       { title: "What the vocabulary buys in both directions", body: "It widens what may be prevented to include what no one is culpable for, and it narrows what the intervention asserts: to act against a wrong is not to convict anyone of sin. The distinction is precise, and it is the difference between stopping something and condemning someone." },
-      { title: "The scope note attached", body: "And we have included under its generality both the minor and the major, so that hisba is not restricted to the grave sins. The office reaches small things — which makes the conditions on manner in the fourth pillar more necessary, not less." },
+      { title: "The scope note attached", body: "We have included under its generality both the minor and the major, so that hisba is not restricted to the grave sins. The office reaches small things — which makes the conditions on manner in the fourth pillar more necessary, not less." },
     ],
     distinction: ["Two things an intervention can be about", "A wrong", "Which can exist where no one is culpable, and which is what is prevented.", "A sin", "Which requires a sinner, and which the word was changed to avoid asserting."],
     misreading: "Do not read the widening as a licence. The same section says that visibility is not the ground and that solitude does not exempt — but the fourth condition of the previous section still stands over all of it.",
@@ -187,7 +187,7 @@ export const book19Chapters: Chapter[] = [
       { title: "Give the general principle", body: "So then, what is perceived through intervening walls is only a sound or a smell." },
     ],
     closer: [
-      { title: "The limit put on the exception", body: "And when the smells of wine waft — if it is possible that this is from the protected wines, then it is not permitted to make for it to pour it out. Even the exception is bounded: a smell that might have an innocent source does not license entry, so the rule requires not merely a perception but one that admits no other explanation." },
+      { title: "The limit put on the exception", body: "When the smells of wine waft — if it is possible that this is from the protected wines, then it is not permitted to make for it to pour it out. Even the exception is bounded: a smell that might have an innocent source does not license entry, so the rule requires not merely a perception but one that admits no other explanation." },
       { title: "Why a sound or a smell", body: "The line is drawn at what reaches a person who is doing nothing to perceive it. Both are things that come out through a wall unbidden — which makes the test a physical one rather than a judgement, and therefore not adjustable by how certain the intervener feels." },
     ],
     distinction: ["Two ways to come to know", "It reached you through the wall", "A sound or a smell, arriving unbidden, and admitting no other explanation.", "You established it", "By any means at all, which is the next section's forbidden rung."],
@@ -202,7 +202,7 @@ export const book19Chapters: Chapter[] = [
     overview: "The shortest pillar, and its condition follows directly from the choice of vocabulary two sections earlier.",
     moves: [
       { title: "Give the condition", body: "The third pillar is the one hisba is performed upon, and his condition is that he be of a description such that the act he is prevented from is a wrong in his case." },
-      { title: "Give the minimum", body: "And the least that suffices in that is that he be a human being — which is deliberately low, and follows from the earlier argument that a wrong needs no culpable agent." },
+      { title: "Give the minimum", body: "The least that suffices in that is that he be a human being — which is deliberately low, and follows from the earlier argument that a wrong needs no culpable agent." },
       { title: "Note the consistency", body: "The child and the madman were the examples that forced the change of vocabulary; this pillar is where that change is cashed out. Someone not answerable can still be the one an intervention is directed at." },
       { title: "Note what is not required", body: "Not that he be answerable, not that he intend the wrong, and not that he be convictable of anything. The office attaches to the act's being a wrong in his case, and stops there." },
     ],
@@ -244,7 +244,7 @@ export const book19Chapters: Chapter[] = [
       { title: "Name it and forbid it", body: "As for the first degree, which is finding out — and by it we mean seeking knowledge of the occurrence of the wrong — that is forbidden. It is the spying we have mentioned." },
       { title: "Give the four examples", body: "So he should not steal a hearing at another's house in order to hear the sound of strings; nor sniff in order to catch the smell of wine; nor touch what is in a man's garment in order to know the shape of a pipe; nor question his neighbours so that they may tell him what goes on in his house." },
       { title: "Give the one thing that does open the door", body: "Yes — if two upright men informed him at the outset, without his enquiring, that so-and-so drinks wine in his house, or that in his house is wine he has prepared for drinking, then at that point he may enter his house, and asking leave is not required of him." },
-      { title: "Give the justification of the entry", body: "And his crossing of the man's property by entering, in order to arrive at repelling the wrong, is like breaking his head by a blow to prevent him, whenever he has need of it." },
+      { title: "Give the justification of the entry", body: "His crossing of the man's property by entering, in order to arrive at repelling the wrong, is like breaking his head by a blow to prevent him, whenever he has need of it." },
     ],
     closer: [
       { title: "Why the ladder has a rung below zero", body: "Because listing finding out first and then forbidding it is more instructive than omitting it. It names the thing most people actually do first, marks it as the one step that is not permitted at any point, and does so before the reader has learned any of the steps that are." },
@@ -264,7 +264,7 @@ export const book19Chapters: Chapter[] = [
       { title: "Give the refusal to enumerate", body: "So we shall point to some of them, that their like may be inferred from them — since there is no hope of confining them or exhausting them." },
       { title: "Give the division", body: "Know that wrongs divide into the disliked and the forbidden." },
       { title: "Give the first half", body: "So when we say, this is a disliked wrong — know that preventing it is recommended, and silence about it is disliked and is not unlawful. Except when the doer does not know that it is disliked, in which case mentioning it to him becomes obligatory, because dislike is a ruling in the law, and it is obligatory to convey it to one who does not know it." },
-      { title: "Give the second half", body: "And when we say, a forbidden wrong — or when we say, a wrong, without qualification — we mean by it the forbidden. And silence about it, with the capacity to act, is forbidden." },
+      { title: "Give the second half", body: "When we say, a forbidden wrong — or when we say, a wrong, without qualification — we mean by it the forbidden. And silence about it, with the capacity to act, is forbidden." },
     ],
     closer: [
       { title: "The exception inside the first half", body: "It is the most interesting clause in the chapter. Silence about a disliked thing is merely disliked — unless the person does not know, in which case telling him becomes obligatory. What converts a recommendation into a duty is not the gravity of the act but the ignorance of the actor, which relocates the whole question onto information." },
@@ -282,9 +282,9 @@ export const book19Chapters: Chapter[] = [
     overview: "The book's last chapter closes almost all of the ladder, and the test it substitutes is exact.",
     moves: [
       { title: "Recall the ladder in short form", body: "We have already mentioned the degrees of enjoining right: that its first is informing, its second preaching, its third harshness in speech, and its fourth prevention by compulsion — carrying someone to the truth by striking and punishment." },
-      { title: "Give the ceiling", body: "And what is permitted of all that, with rulers, is the first two ranks: informing and preaching." },
+      { title: "Give the ceiling", body: "What is permitted of all that, with rulers, is the first two ranks: informing and preaching." },
       { title: "Give the reason for the closure", body: "As for prevention by compulsion, that is not for individuals of the subject population with a ruler — for it sets sedition in motion, stirs up evil, and what is born of it in harm is greater." },
-      { title: "Give the test for the third rank", body: "And as for harshness in speech — such as his saying, O oppressor, O you who do not fear God, and what runs in that course — then if it sets in motion a sedition whose harm passes beyond to others, it is not permitted. And if he fears only for himself, it is permitted, indeed he is urged to it." },
+      { title: "Give the test for the third rank", body: "As for harshness in speech — such as his saying, O oppressor, O you who do not fear God, and what runs in that course — then if it sets in motion a sedition whose harm passes beyond to others, it is not permitted. And if he fears only for himself, it is permitted, indeed he is urged to it." },
     ],
     closer: [
       { title: "What the test actually asks", body: "Not how bad the wrong is, and not how likely the speaking is to work, but who bears the consequence. Harm falling on the speaker alone permits and even commends the speech; harm reaching others forbids it — which makes the decisive question one about other people rather than about courage." },

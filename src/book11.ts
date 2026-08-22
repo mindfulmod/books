@@ -62,7 +62,7 @@ export const book11Chapters: Chapter[] = [
     overview: "The remaining manners of the first part, and they are practical and brief — with a reason given for each rather than an instruction alone.",
     moves: [
       { title: "Give the second", body: "Washing the hand. Ablution before food removes poverty, and after it removes ailment." },
-      { title: "Give the reason", body: "And because the hand is not free of soiling in the handling of work. A report and a practical reason are given together, which is the pattern of this chapter." },
+      { title: "Give the reason", body: "Because the hand is not free of soiling in the handling of work. A report and a practical reason are given together, which is the pattern of this chapter." },
       { title: "Note what else the part covers", body: "The setting of the food, the manner of sitting to it, the intention with which it is approached, and the contentment with what is present rather than the seeking of more." },
       { title: "Note the register", body: "These are ordinary instructions with ordinary reasons. The chapter does not moralise them, and its one weighty item was the first, which was about the food rather than the eater." },
     ],
@@ -84,7 +84,7 @@ export const book11Chapters: Chapter[] = [
       { title: "Give the frame", body: "That he begin with the name of God at the start and praise at the end — and if he says the name with each morsel that is good, so that greed does not distract him from the remembrance of God." },
       { title: "Give the manner of taking", body: "That he eat with the right hand, make the morsel small, chew it well, and not extend his hand to another until he has swallowed — for that is haste in eating. And that he eat from what is nearest him, except fruit, in which he may range his hand." },
       { title: "Give the first wide one", body: "That he not disparage anything eaten. The Messenger did not fault any food: if it pleased him he ate it, and otherwise he left it." },
-      { title: "Give the second", body: "And that he say the name aloud, so that others are reminded — an instruction about the eater's effect on the table rather than about his own eating." },
+      { title: "Give the second", body: "That he say the name aloud, so that others are reminded — an instruction about the eater's effect on the table rather than about his own eating." },
     ],
     closer: [
       { title: "Why not disparaging is wide", body: "It is the one item in the part that concerns someone else entirely. Food was prepared by a person, and faulting it reaches them; the practice given is not praise but silence and a choice — if it pleased him he ate it, and otherwise he left it, which leaves nothing to be said either way." },
@@ -103,8 +103,8 @@ export const book11Chapters: Chapter[] = [
     moves: [
       { title: "Give the first", body: "That he stop before satiety." },
       { title: "Give the practical items", body: "That he lick his fingers, then wipe them, then wash them; and that he pick up the crumbs of the food. Whoever eats what falls from the table lives in plenty and is kept well in his children." },
-      { title: "Give the bowl", body: "And that he clean the bowl and drink its water — with the reports gathered on what that is worth, and on the gathering of crumbs." },
-      { title: "Give the last", body: "And that he thank God in his heart for what He has fed him, so that he sees the food as a blessing from Him: eat of the good things We have provided you, and be thankful to God." },
+      { title: "Give the bowl", body: "That he clean the bowl and drink its water — with the reports gathered on what that is worth, and on the gathering of crumbs." },
+      { title: "Give the last", body: "That he thank God in his heart for what He has fed him, so that he sees the food as a blessing from Him: eat of the good things We have provided you, and be thankful to God." },
     ],
     closer: [
       { title: "Where stopping before satiety leads", body: "It is one line here and it is the subject of a book: Book 23 on breaking the two desires treats the stomach at length, and Book 6 on fasting makes the reduction of food the mechanism of the whole practice. The manner in this chapter is the ordinary daily form of both." },

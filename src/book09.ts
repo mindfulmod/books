@@ -64,7 +64,7 @@ export const book09Chapters: Chapter[] = [
       { title: "Put the objection", body: "If you say: how is it that the remembrance of God, despite its lightness on the tongue and the fewness of its toil, became better and more beneficial than the whole of the acts of worship, with all the hardships in them?" },
       { title: "Mark the limit", body: "Know that the verification of this is not fitting except for the science of unveiling — and what is permitted to be mentioned in the science of practice is the following." },
       { title: "Give the answer", body: "That what has effect and is beneficial is remembrance continually, together with presence of heart. As for remembrance with the tongue while the heart is heedless, it is of little avail." },
-      { title: "Close the second escape", body: "And presence of heart for a moment with the remembrance, and then obliviousness of God while occupied with the world, is also of little avail." },
+      { title: "Close the second escape", body: "Presence of heart for a moment with the remembrance, and then obliviousness of God while occupied with the world, is also of little avail." },
     ],
     closer: [
       { title: "What the answer actually does", body: "It does not defend the easy act. It says that the act the reports are praising is not the easy one: continual remembrance with a present heart is not light on the tongue in any sense, and the version that is light is described as of little avail — twice, once for the heedless tongue and once for the momentary presence." },
@@ -81,9 +81,9 @@ export const book09Chapters: Chapter[] = [
     id: 4, shortTitle: "A beginning and an end", formalTitle: "What remembrance produces",
     overview: "A short passage that says where remembrance leads, and it turns out to lead to the subject of Book 36.",
     moves: [
-      { title: "State the structure", body: "And remembrance has a beginning and an end." },
+      { title: "State the structure", body: "Remembrance has a beginning and an end." },
       { title: "Give the beginning", body: "Its beginning necessitates intimacy and love of God." },
-      { title: "Give the end", body: "And its end necessitates the same intimacy and love, and issues from them — so that what was produced at the start becomes the source at the finish." },
+      { title: "Give the end", body: "Its end necessitates the same intimacy and love, and issues from them — so that what was produced at the start becomes the source at the finish." },
       { title: "Note the reversal", body: "The same two things stand at both ends of the practice, once as its fruit and once as its cause. A remembrance begun in effort ends by being produced by what it produced." },
     ],
     closer: [
@@ -101,9 +101,9 @@ export const book09Chapters: Chapter[] = [
     id: 5, shortTitle: "The excellence of asking", formalTitle: "The excellence of supplication",
     overview: "The second chapter opens on the verses, and the first of them settles the question of whether asking is wanted before any manner of asking is discussed.",
     moves: [
-      { title: "Give the first verse", body: "And when My servants ask you about Me — I am near; I answer the call of the caller when he calls Me, so let them respond to Me." },
+      { title: "Give the first verse", body: "When My servants ask you about Me — I am near; I answer the call of the caller when he calls Me, so let them respond to Me." },
       { title: "Give the second", body: "Call upon your Lord humbly and in secret; He does not love the transgressors." },
-      { title: "Give the third", body: "And your Lord said: call upon Me and I will answer you — those who are too proud for My worship will enter Hell abased." },
+      { title: "Give the third", body: "Your Lord said: call upon Me and I will answer you — those who are too proud for My worship will enter Hell abased." },
       { title: "Note what the third establishes", body: "Calling is placed inside worship, and declining to call is described as pride. Supplication is not an optional recourse on this reading; it is a form of the thing itself." },
     ],
     closer: [

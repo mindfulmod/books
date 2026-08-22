@@ -62,7 +62,7 @@ export const book04Chapters: Chapter[] = [
     overview: "The most consequential argument in the Quarter of Worship. Ghazali argues that presence of heart is a condition of the prayer, and marshals evidence like a jurist rather than like a preacher.",
     moves: [
       { title: "The first evidence", body: "Establish the prayer for My remembrance. The apparent sense of a command is obligation, and heedlessness is the contrary of remembrance — so one heedless throughout his prayer, how is he establishing the prayer for His remembrance?" },
-      { title: "The second and third", body: "And do not be among the heedless: a prohibition, whose apparent sense is forbiddance. And: until you know what you are saying — a rationale given for the prohibition on the drunk, which applies equally to a heedless man whose concern is absorbed in whispering and thoughts of the world." },
+      { title: "The second and third", body: "Do not be among the heedless: a prohibition, whose apparent sense is forbiddance. And: until you know what you are saying — a rationale given for the prohibition on the drunk, which applies equally to a heedless man whose concern is absorbed in whispering and thoughts of the world." },
       { title: "The fourth", body: "Prayer is only humility and lowliness. A restriction, by the definite article and by the word only, which is for verification and emphasis — and the jurists took restriction, affirmation, and negation from a parallel construction elsewhere." },
       { title: "The fifth and sixth", body: "Whoever's prayer does not restrain him from indecency and wrong increases only in distance from God — and a heedless man's prayer does not restrain him. And: how many a one stands whose portion of his prayer is fatigue and weariness — by which nothing was meant but the heedless." },
     ],
@@ -108,7 +108,7 @@ export const book04Chapters: Chapter[] = [
     ],
     closer: [
       { title: "The observation about new meanings", body: "How many subtle meanings does one praying understand in the midst of the prayer that had never occurred to his heart before it. Ghazali treats the prayer as a place where understanding is produced and not merely applied." },
-      { title: "How this explains a famous verse", body: "And it is from this aspect that the prayer restrains from indecency and wrong — because it makes a person understand matters that inevitably prevent indecency. The restraining power is located in the understanding rather than in the performance, which is a substantive reading of the verse." },
+      { title: "How this explains a famous verse", body: "It is from this aspect that the prayer restrains from indecency and wrong — because it makes a person understand matters that inevitably prevent indecency. The restraining power is located in the understanding rather than in the performance, which is a substantive reading of the verse." },
     ],
     distinction: ["Two ways a heart can be with a prayer", "With the words", "Not elsewhere, and following what is said — which is presence, and is the threshold.", "With the meanings", "Containing knowledge of what the words mean, which varies with what a person knows."],
     misreading: "Do not set the bar for presence at absorption. Ghazali's threshold is that thought is not roaming elsewhere and there is remembrance of what one is in, which is attainable rather than exalted.",
@@ -183,7 +183,7 @@ export const book04Chapters: Chapter[] = [
     moves: [
       { title: "Establish that the states are already there", body: "The believer must be one who reveres God, fears Him, hopes in Him, and is ashamed of his shortcoming. He is not detached from these states after his faith, though their strength is proportional to the strength of his certainty." },
       { title: "Locate the failure", body: "So his being detached from them in the prayer has no cause but the scattering of thought, the dividing of the passing notions, the absence of the heart from the intimate address, and heedlessness of the prayer." },
-      { title: "Name the mechanism", body: "And nothing distracts from the prayer except the incoming thoughts that occupy it." },
+      { title: "Name the mechanism", body: "Nothing distracts from the prayer except the incoming thoughts that occupy it." },
       { title: "Give the rule", body: "So the remedy for making the heart present is to repel those thoughts. And a thing is not repelled except by repelling its cause. So know its cause." },
     ],
     closer: [
@@ -304,7 +304,7 @@ export const book04Chapters: Chapter[] = [
       { title: "Give the intention", body: "Resolve to answer God by carrying out His command, completing the prayer, keeping off what would void it, and doing all of it for God alone — hoping for reward, fearing punishment, seeking nearness. And do it while acknowledging that being permitted to address Him at all is a favour, given your poor manners and frequent disobedience." },
       { title: "Give the three questions", body: "\"Look at whom you are addressing, and how, and with what.\" Ghazali expects an effect: at this, he says, your forehead should sweat with embarrassment, your limbs tremble, and your face turn pale." },
       { title: "Give the takbir test", body: "When your tongue says God is greater, your heart should not call it a lie. \"If there is something in your heart that is bigger than God, then God bears witness that you are lying\" — even though the words themselves are true, exactly as He testified against the hypocrites who said, truly, that he was God's messenger." },
-      { title: "Give the test's criterion", body: "And the criterion is behavioural, not emotional: \"if your desire has more command over you than God's command does, then you obey it more than you obey God — so you have taken it as your god and made it greater.\" Whatever actually governs you is what you have called greater." },
+      { title: "Give the test's criterion", body: "The criterion is behavioural, not emotional: \"if your desire has more command over you than God's command does, then you obey it more than you obey God — so you have taken it as your god and made it greater.\" Whatever actually governs you is what you have called greater." },
     ],
     closer: [
       { title: "Why the hypocrite comparison bites", body: "The comparison is chosen with care. Those men said something factually true and were still called liars, because the statement was not true of them. Ghazali applies the same standard to the opening of every prayer: the words are certainly true, and the question is whether they are true as your report about yourself." },
@@ -383,7 +383,7 @@ export const book04Chapters: Chapter[] = [
     moves: [
       { title: "Give the division", body: "What is beyond the obligatory prayers divides by its occasion, and the first division is what recurs with the recurrence of the days and the nights." },
       { title: "The second and third", body: "What recurs with the recurrence of the weeks. And what recurs with the recurrence of the years." },
-      { title: "The fourth", body: "And what attaches to occasioning causes and is not tied to fixed times at all — the prayers that answer an event rather than a calendar." },
+      { title: "The fourth", body: "What attaches to occasioning causes and is not tied to fixed times at all — the prayers that answer an event rather than a calendar." },
       { title: "Note what the sorting describes", body: "Four cycles: the day, the week, the year, and the unscheduled. Between them they cover every rhythm a life has, which is what makes this a description of a shape rather than a list of optional acts." },
     ],
     closer: [

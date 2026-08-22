@@ -23,7 +23,7 @@ export const book38Chapters: Chapter[] = [
     moves: [
       { title: "Set the trade", body: "What partners in trade want at the reckoning is that the profit be safe. The intellect is the merchant on the road of the hereafter, and its demand and its profit is the purifying of the soul, since in that is its success." },
       { title: "Name the partner", body: "The intellect enlists the soul in this trade, employing it and pressing it into what purifies it, as a merchant enlists the partner or the servant who trades with his money." },
-      { title: "Name the difficulty", body: "And as a partner becomes an adversary and a disputant who pulls against him over the profit, so the intellect must stipulate with the soul first, watch it second, reckon with it third, and punish or reproach it fourth." },
+      { title: "Name the difficulty", body: "As a partner becomes an adversary and a disputant who pulls against him over the profit, so the intellect must stipulate with the soul first, watch it second, reckon with it third, and punish or reproach it fourth." },
       { title: "Give the six", body: "The stations of the watch are therefore six: stipulation, vigilance, reckoning, punishment, striving, and reproach. Ghazali says the account of them is necessary, and the rest of the book is that account in order." },
     ],
     closer: [
@@ -123,7 +123,7 @@ export const book38Chapters: Chapter[] = [
     moves: [
       { title: "Give al-Hasan's rule", body: "God have mercy on a servant who paused at his intent: if it was for God he went on, and if it was for other than God he held back. The whole degree is contained in the pause." },
       { title: "State it as an obligation", body: "God has decreed upon every servant that he watch his soul at his intent to act and at his moving of a limb, holding back from the intent and from the effort until it is disclosed to him by the light of knowledge that it is for God, so that he carries it out, or that it is for the soul's whim, so that he guards against it." },
-      { title: "Say what to do with the thought", body: "And he restrains the heart from thinking about it and from intending it, which is a different instruction from refusing the act. The object of the second degree is the thought and not the deed." },
+      { title: "Say what to do with the thought", body: "He restrains the heart from thinking about it and from intending it, which is a different instruction from refusing the act. The object of the second degree is the thought and not the deed." },
       { title: "Note who can do it", body: "Ghazali adds that one who knows the blights of souls, the devil's stratagems, and the places of delusion guards against them, while the ignorant does not know them, so how should he guard against them. The pause is only useful to someone who knows what he is looking for." },
     ],
     closer: [
@@ -283,7 +283,7 @@ export const book38Chapters: Chapter[] = [
     moves: [
       { title: "Name the adversary", body: "Know that your most hostile enemy is your soul, which is between your two sides. It was created commanding to evil, inclining to wickedness, fleeing from good, and you were commanded to purify it and straighten it and lead it with chains of compulsion to the worship of its Lord." },
       { title: "State the alternative", body: "If you neglect it, it bolts and runs off, and you will not get hold of it afterward. And if you keep at it with rebuke and reproach and censure and blame, your soul is the reproachful soul by which God swore." },
-      { title: "Name the destination", body: "And you may hope that it become the tranquil soul, called to enter among the servants of God, content and found pleasing. So the three souls are not three kinds of person but three states of one soul, and reproach is the passage between them." },
+      { title: "Name the destination", body: "You may hope that it become the tranquil soul, called to enter among the servants of God, content and found pleasing. So the three souls are not three kinds of person but three states of one soul, and reproach is the passage between them." },
       { title: "Set the order", body: "Do not be heedless an hour of reminding it and reproaching it, and do not busy yourself with admonishing another so long as you have not first busied yourself with admonishing your own soul; as it was revealed to Jesus, admonish yourself, and if it takes the admonition then admonish people, and otherwise be ashamed before Me." },
     ],
     closer: [

@@ -43,8 +43,8 @@ export const book05Chapters: Chapter[] = [
     moves: [
       { title: "Put the question", body: "Understanding the obligation of alms, its meaning, the aspect of testing in it, and why it was made one of the foundations of Islam though it is a financial expenditure and not a worship of the body." },
       { title: "The first meaning", body: "Uttering the two testimonies is a commitment to unity and a witnessing that the Worshipped is one. And the condition of complete fulfilment of it is that there remain for the one professing unity no beloved besides the One — for love does not accept partnership." },
-      { title: "Draw the consequence", body: "And unity with the tongue is of little avail. The degree of a lover is tested only by parting from what is beloved." },
-      { title: "Name what is parted from", body: "And wealth is beloved to creatures, because it is the instrument of their enjoyment of the world; and by reason of it they are at home in this world and recoil from death, though in death is the meeting of the Beloved. So they were tested as to the truth of their claim, and required to come down from the wealth which is their gaze and their darling." },
+      { title: "Draw the consequence", body: "Unity with the tongue is of little avail. The degree of a lover is tested only by parting from what is beloved." },
+      { title: "Name what is parted from", body: "Wealth is beloved to creatures, because it is the instrument of their enjoyment of the world; and by reason of it they are at home in this world and recoil from death, though in death is the meeting of the Beloved. So they were tested as to the truth of their claim, and required to come down from the wealth which is their gaze and their darling." },
     ],
     closer: [
       { title: "Why this makes alms a pillar", body: "A pillar of Islam should test what Islam consists in. If the profession of unity is a claim about where love is directed, and love does not admit partners, then the only test of the claim is separation from a rival — and wealth is the rival everyone has. The argument locates the obligation inside the testimony rather than beside it." },
@@ -103,7 +103,7 @@ export const book05Chapters: Chapter[] = [
     moves: [
       { title: "Give the condition", body: "That he make it public where he knows that in his disclosing it there is an encouragement to people to imitate — and that he guard his inmost from the motive of showing off, by the method given in the treatment of showing off." },
       { title: "Give the second occasion", body: "Or because the asker asked in a crowd of people. In that case he should not leave off giving out of fear of showing off in the disclosure; rather he should give, and guard his inmost from showing off as far as possible." },
-      { title: "Name the third consideration", body: "And this is because in disclosure there is a third thing to beware of, besides reproach and showing off — and that is the tearing of the poor man's covering. For he may be hurt at being seen in the form of one in need." },
+      { title: "Name the third consideration", body: "This is because in disclosure there is a third thing to beware of, besides reproach and showing off — and that is the tearing of the poor man's covering. For he may be hurt at being seen in the form of one in need." },
       { title: "Weigh the three against each other", body: "So disclosure is answerable to three cautions at once: reproach, showing off, and the tearing of the poor man's covering. The first two fall on the giver and the third on the receiver — which is why the condition that opens this duty is about others being encouraged to imitate, and not about the giver's own comfort." },
     ],
     closer: [
@@ -144,7 +144,7 @@ export const book05Chapters: Chapter[] = [
       { title: "Give the duty and the reason", body: "That he count the gift small — for if he counts it great he is pleased with it, and self-admiration is among the destroyers and nullifies works. And on the day of Hunayn, when your numbers pleased you and availed you nothing." },
       { title: "Give the principle", body: "It is said: an act of obedience, the more it is counted small, the greater it becomes with God; and a sin, the more it is counted great, the smaller it becomes with God." },
       { title: "Give the arithmetic", body: "The remedy is knowledge and action. As for the knowledge: that a tenth, or a quarter of a tenth, is little out of much — and that he has contented himself with the meanest degree of giving. So he is fit to be ashamed of it; how then should he count it great?" },
-      { title: "Take the other case", body: "And if he rises to the highest degree and gives all his wealth or most of it, let him consider where the wealth came from and to what he is spending it. For the wealth is God's, and His is the favour upon him." },
+      { title: "Take the other case", body: "If he rises to the highest degree and gives all his wealth or most of it, let him consider where the wealth came from and to what he is spending it. For the wealth is God's, and His is the favour upon him." },
     ],
     closer: [
       { title: "Why both cases are covered", body: "The obvious reading is that small gifts should not be inflated. Ghazali handles the large gift too, and by a different route: not that it is small, but that it was not the giver's to begin with. Neither case leaves room for the gift to be a personal achievement." },
@@ -204,7 +204,7 @@ export const book05Chapters: Chapter[] = [
       { title: "State the requirement", body: "None is entitled to alms but a free Muslim, not of the Prophet's two clans, characterised by one of the qualities of the eight categories named in God's Book." },
       { title: "Give the exclusions", body: "Alms are not directed to a non-Muslim, nor to a slave, nor to those two clans. As for a child and one who has lost his reason, giving to them is permitted when their guardian receives it." },
       { title: "Define the first category", body: "The poor man is one who has no wealth and no capacity to earn. If he has his day's food and clothing for his condition he is not poor but destitute; if he has half his day's food he is poor." },
-      { title: "Refuse the strict reading", body: "And if he has a shirt and no kerchief, no shoes, and no trousers, and the shirt's value does not cover all of that as befits the poor, then he is poor — because he presently lacks what he needs. So it should not be stipulated of a poor man that he have no clothing besides what covers his nakedness, for this is excess." },
+      { title: "Refuse the strict reading", body: "If he has a shirt and no kerchief, no shoes, and no trousers, and the shirt's value does not cover all of that as befits the poor, then he is poor — because he presently lacks what he needs. So it should not be stipulated of a poor man that he have no clothing besides what covers his nakedness, for this is excess." },
     ],
     closer: [
       { title: "The word he uses", body: "Excess. The same instinct as Book 3's four evidences against strictness about water: a definition that nobody could meet is not a strict definition but a broken one, and Ghazali names the fault rather than working around it." },

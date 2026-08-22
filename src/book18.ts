@@ -43,7 +43,7 @@ export const book18Chapters: Chapter[] = [
     moves: [
       { title: "Name the source", body: "Al-Qadi Abu al-Tayyib al-Tabari related from al-Shafi'i, Malik, Abu Hanifa, Sufyan, and a group of the scholars words from which it is inferred that they held it forbidden." },
       { title: "Give al-Shafi'i's words", body: "Al-Shafi'i said, in the Book of the Manners of Judging, that singing is a frivolity, disliked, resembling the false — and that whoever does much of it is a fool whose testimony is rejected." },
-      { title: "Give a further restriction", body: "And al-Qadi Abu al-Tayyib said that listening to it from a woman who is not a close relative is not permitted at all among al-Shafi'i's companions, whether unveiled or from behind a screen." },
+      { title: "Give a further restriction", body: "Al-Qadi Abu al-Tayyib said that listening to it from a woman who is not a close relative is not permitted at all among al-Shafi'i's companions, whether unveiled or from behind a screen." },
       { title: "Note what the transmission establishes", body: "That the question is genuinely disputed among the founders of the schools, and that a reader who arrives with a settled view is holding one side of a real disagreement." },
     ],
     closer: [
@@ -62,8 +62,8 @@ export const book18Chapters: Chapter[] = [
     overview: "One sentence at the head of the first chapter sets the architecture of the whole book, and it separates three things usually run together.",
     moves: [
       { title: "Give the first term", body: "Know that audition is the first matter." },
-      { title: "Give the second", body: "And audition fruits a state in the heart called ecstasy." },
-      { title: "Give the third", body: "And ecstasy fruits the moving of the limbs — either by an unmeasured movement, which is called agitation, or a measured one, which is called clapping and dancing." },
+      { title: "Give the second", body: "Audition fruits a state in the heart called ecstasy." },
+      { title: "Give the third", body: "Ecstasy fruits the moving of the limbs — either by an unmeasured movement, which is called agitation, or a measured one, which is called clapping and dancing." },
       { title: "Note what the chain permits", body: "Three separate rulings. What is heard, what it produces inwardly, and what the body does are three different acts with three different questions, and the book treats them in that order." },
     ],
     closer: [
@@ -84,7 +84,7 @@ export const book18Chapters: Chapter[] = [
       { title: "Give the first station", body: "Know that the first degree of audition is the understanding of what is heard, and the applying of it to a meaning that occurs to the listener." },
       { title: "Give the chain again", body: "Then the understanding fruits ecstasy, and the ecstasy fruits movement in the limbs. So consider these three stations." },
       { title: "Give the variable", body: "The first station is understanding, and it differs according to the states of the listener." },
-      { title: "Give the number", body: "And the listener has four states. Everything else in the book's practical half depends on which of the four a person is in." },
+      { title: "Give the number", body: "The listener has four states. Everything else in the book's practical half depends on which of the four a person is in." },
     ],
     closer: [
       { title: "Why the ruling follows the listener", body: "Nothing in the four states concerns what is heard. The same words and the same melody run through all four, and what changes is what the hearer applies them to — which means the question of permissibility, on this account, cannot be settled by examining the sound alone." },
@@ -102,8 +102,8 @@ export const book18Chapters: Chapter[] = [
     overview: "The lowest of the four, and Ghazali's judgement on it is two things at once — permitted, and the meanest rank there is.",
     moves: [
       { title: "Give the state", body: "That his listening be by mere nature — that is, he has no share in the audition but the enjoyment of the melodies and the notes." },
-      { title: "Give the ruling", body: "And this is permitted." },
-      { title: "Give the rank", body: "And it is the meanest of the ranks of audition, since the camel shares it with him — and so do the rest of the beasts." },
+      { title: "Give the ruling", body: "This is permitted." },
+      { title: "Give the rank", body: "It is the meanest of the ranks of audition, since the camel shares it with him — and so do the rest of the beasts." },
       { title: "Give the reason", body: "Indeed this taste requires nothing but life, for every animal has a kind of pleasure in good sounds." },
     ],
     closer: [
@@ -122,8 +122,8 @@ export const book18Chapters: Chapter[] = [
     overview: "The only one of the four Ghazali condemns, and he declines to discuss it beyond saying so.",
     moves: [
       { title: "Give the state", body: "That he listen with understanding, but applies it to a created form — either a specific one or an unspecified one." },
-      { title: "Name whose it is", body: "And this is the audition of the young and of the people of appetites, and their application of what is heard is according to their appetites and the demand of their states." },
-      { title: "Give the judgement", body: "And this state is too base for us to speak about, except by declaring its baseness and forbidding it." },
+      { title: "Name whose it is", body: "This is the audition of the young and of the people of appetites, and their application of what is heard is according to their appetites and the demand of their states." },
+      { title: "Give the judgement", body: "This state is too base for us to speak about, except by declaring its baseness and forbidding it." },
       { title: "Note the refusal", body: "He gives it no analysis and no treatment. A book that treats every other case at length declines to take this one up at all, which is itself the verdict." },
     ],
     closer: [
@@ -142,7 +142,7 @@ export const book18Chapters: Chapter[] = [
     overview: "The state of the aspirant, and it is the one this book's practical half is actually written for.",
     moves: [
       { title: "Give the state", body: "That he applies what he hears to the states of his own soul in its dealing with God — and to the turning of his states, between enablement at one time and hindrance at another." },
-      { title: "Name whose it is", body: "And this is the audition of the aspirants, especially the beginners." },
+      { title: "Name whose it is", body: "This is the audition of the aspirants, especially the beginners." },
       { title: "Give the reason it works", body: "For the aspirant inevitably has an object that is his aim, and his aim is the knowledge of God — so what he hears finds something in him already directed, and attaches to it." },
       { title: "Note the two poles", body: "Enablement and hindrance. What is applied is not a settled condition but an alternation, which is why an aspirant hears the same words differently on different days." },
     ],
@@ -163,7 +163,7 @@ export const book18Chapters: Chapter[] = [
     moves: [
       { title: "Give the state", body: "The audition of one who has passed beyond the states and the stations, so that understanding anything other than God has departed from him — until he has departed from himself, and from his own states and dealings." },
       { title: "Give the image", body: "He is like one astonished, plunged into the sea of the very eye of witnessing — whose state resembles the state of the women who cut their hands at the sight of Joseph's beauty, until they were astonished and their sensation fell away." },
-      { title: "Give the further step", body: "And he has passed away also from the witnessing — since if the heart turns toward the witnessing, and toward itself as witnessing, it has become heedless of the Witnessed." },
+      { title: "Give the further step", body: "He has passed away also from the witnessing — since if the heart turns toward the witnessing, and toward itself as witnessing, it has become heedless of the Witnessed." },
       { title: "Give the argument", body: "For one enraptured by what is seen has no attention, in his absorption, to his seeing, nor to his eye by which he sees, nor to his heart by which he takes pleasure. The drunk has no report of his drunkenness, and the one taking pleasure has no report of his pleasure — his report is only of what is taken pleasure in." },
     ],
     closer: [

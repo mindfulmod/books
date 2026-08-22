@@ -42,8 +42,8 @@ export const book14Chapters: Chapter[] = [
     overview: "The first chapter grades what is forbidden, and the grading turns on something other than the act.",
     moves: [
       { title: "Give the first distinction", body: "What is taken by a defective contract is unlawful, but it is not at the degree of what is seized by force — the seized is graver, since in it there is both the abandoning of the Law's route in acquiring and the harming of another." },
-      { title: "Name what the lighter case lacks", body: "And in the defective contract there is no harming; there is only the abandoning of the route of compliance. The severity tracks whether anyone was hurt." },
-      { title: "Grade by the one harmed", body: "And what is taken wrongfully from a poor man, or a righteous man, or an orphan, is fouler and greater than what is taken from a strong or rich or corrupt one — because the degrees of harm differ with the degrees of the one harmed." },
+      { title: "Name what the lighter case lacks", body: "In the defective contract there is no harming; there is only the abandoning of the route of compliance. The severity tracks whether anyone was hurt." },
+      { title: "Grade by the one harmed", body: "What is taken wrongfully from a poor man, or a righteous man, or an orphan, is fouler and greater than what is taken from a strong or rich or corrupt one — because the degrees of harm differ with the degrees of the one harmed." },
       { title: "Give the evidence", body: "Were the degrees of the disobedient not different, the degrees of the Fire would not be different. The grading of the punishment is offered as proof that the grading of the wrong is real." },
     ],
     closer: [
@@ -61,7 +61,7 @@ export const book14Chapters: Chapter[] = [
     id: 3, shortTitle: "No fixed number", formalTitle: "Why he refuses to count the degrees",
     overview: "A short methodological remark, and it is unusual enough to be worth its own section.",
     moves: [
-      { title: "Give the refusal", body: "And once you know the sources of the intensifying, there is no need to confine it to three degrees or four." },
+      { title: "Give the refusal", body: "Once you know the sources of the intensifying, there is no need to confine it to three degrees or four." },
       { title: "Give the reason", body: "For that would run as arbitrariness and caprice, and it is seeking an enumeration of what has no enumerator." },
       { title: "Note what is offered instead", body: "The sources of the intensifying — harm, the state of the one harmed, the route abandoned. Give a reader the variables and he can grade a case the author never met." },
       { title: "Note how unusual this is", body: "The Ihya is full of numbered lists: six meanings, eight duties, ten manners, four ranks. Here Ghazali stops to say that a number would be false, which shows that the numbering elsewhere is a claim rather than a habit." },
@@ -83,7 +83,7 @@ export const book14Chapters: Chapter[] = [
     moves: [
       { title: "Give the report", body: "The lawful is clear and the unlawful is clear, and between them are doubtful matters which many people do not know. Whoever guards against the doubtful has protected his honour and his religion, and whoever falls into the doubtful falls into the unlawful — like a shepherd grazing around a preserve, who is likely to fall into it." },
       { title: "State what it establishes", body: "This report is explicit in establishing the three divisions. The middle category is not a gap between two others; it is named and given a status of its own." },
-      { title: "Name the difficulty", body: "And the difficult one of them is the middle division, which many people do not know — and it is the doubtful. So it must be explained, and its covering lifted." },
+      { title: "Name the difficulty", body: "The difficult one of them is the middle division, which many people do not know — and it is the doubtful. So it must be explained, and its covering lifted." },
       { title: "Give the hope in the clause", body: "Since what many do not know, a few may know. The whole chapter is licensed by that clause: the report says many are ignorant of it, not that it is unknowable." },
     ],
     closer: [
@@ -162,9 +162,9 @@ export const book14Chapters: Chapter[] = [
     overview: "The third chapter's governing statement, and it refuses both of the two obvious answers in a single sentence.",
     moves: [
       { title: "Refuse the first answer", body: "Know that everyone who presents you with food or a gift, or from whom you wish to buy — it is not for you to search into it and ask, and to say: this is something whose lawfulness I have not verified, so I will not take it until I investigate." },
-      { title: "Refuse the second", body: "And it is also not for you to abandon investigation and take everything you are not certain is forbidden." },
+      { title: "Refuse the second", body: "It is also not for you to abandon investigation and take everything you are not certain is forbidden." },
       { title: "Give the four rulings", body: "Rather, asking is obligatory sometimes, forbidden sometimes, recommended sometimes, and disliked sometimes — so it must be worked out in detail." },
-      { title: "Give the criterion", body: "And the occasion for asking is the places of misgiving; and the source of misgiving is either something connected with the property or something connected with its owner." },
+      { title: "Give the criterion", body: "The occasion for asking is the places of misgiving; and the source of misgiving is either something connected with the property or something connected with its owner." },
     ],
     closer: [
       { title: "What makes this unusual", body: "Most treatments of scruple grade how careful to be. This one grades an act — asking — and finds it forbidden in some cases, which means a scrupulous person can be committing a wrong precisely by being scrupulous in the wrong way." },
@@ -184,7 +184,7 @@ export const book14Chapters: Chapter[] = [
       { title: "Define the unknown", body: "The unknown is the one with whom there is no circumstantial sign indicating his corruption and wrongdoing — nor anything indicating his righteousness, like the clothing of particular groups and other such marks." },
       { title: "Give the historical argument", body: "The Companions in their campaigns and journeys stayed in villages and did not refuse them, and entered towns and did not guard against the markets — and the unlawful existed in their time too. And no asking is reported from them except upon a misgiving." },
       { title: "Give the counter-examples that prove the rule", body: "The Messenger asked, on first arriving in Medina, whether what was brought was charity or a gift — because the circumstance indicated it. Abu Bakr asked his servant about his earning when something gave him misgiving. Umar asked about milk when its taste was not what he was used to. These are the causes of misgiving." },
-      { title: "Give the ruling", body: "And everyone who finds hospitality with an unknown man is not disobedient by accepting it without investigation." },
+      { title: "Give the ruling", body: "Everyone who finds hospitality with an unknown man is not disobedient by accepting it without investigation." },
     ],
     closer: [
       { title: "The case of visible wealth", body: "Even if he saw in his house adornment and much wealth, it is not for him to say: the lawful is scarce and this is much, so from where could this be gathered lawfully? No — this particular person may have inherited wealth or earned it, and he himself deserves a good opinion." },
@@ -201,14 +201,14 @@ export const book14Chapters: Chapter[] = [
     id: 10, shortTitle: "Asking is a harm", formalTitle: "Why investigation can be forbidden",
     overview: "The claim that makes the chapter's structure work, and it puts a harm on the side of the investigator.",
     moves: [
-      { title: "Give the addition", body: "And I add to this and say: it is not for him to ask." },
+      { title: "Give the addition", body: "I add to this and say: it is not for him to ask." },
       { title: "Give the scrupulous alternative", body: "Rather, if he is scrupulous, then let nothing enter his belly but what he knows the source of — that is good. So let him be gentle in declining. And if he must eat, let him eat without asking." },
       { title: "Give the reason", body: "Since asking is harm, and a tearing of a covering, and an estranging — and it is forbidden without doubt." },
       { title: "Note what has changed", body: "The doubtful property was one harm on the scales. Now the asking is another, on the other side — and the chapter's four rulings are the result of weighing two harms rather than of measuring one." },
     ],
     closer: [
       { title: "What the scrupulous person is told", body: "Not to stop being scrupulous but to move the scruple: decline gently rather than interrogate. The option preserves everything he was trying to protect and costs the other person nothing, which is why it is offered before the permission to eat." },
-      { title: "Asking a third party", body: "And it is not permitted to ask someone else where the man knows of it, because the harm in that is greater. And if he asks where the man does not know, there is in it thinking ill, tearing a covering, spying, and a grasping at backbiting. Both routes around the difficulty are closed, and the second is closed with four names." },
+      { title: "Asking a third party", body: "It is not permitted to ask someone else where the man knows of it, because the harm in that is greater. And if he asks where the man does not know, there is in it thinking ill, tearing a covering, spying, and a grasping at backbiting. Both routes around the difficulty are closed, and the second is closed with four names." },
     ],
     distinction: ["Two harms on the scales", "Eating the doubtful", "The harm the scrupulous person is guarding against.", "Asking", "A harm to someone else, which the chapter says is forbidden without doubt."],
     misreading: "Do not read this as saying scruple is misplaced. The scrupulous option is preserved and recommended — what is forbidden is discharging it at another person's expense.",
@@ -224,11 +224,11 @@ export const book14Chapters: Chapter[] = [
       { title: "Give the objection", body: "If you say: perhaps he will not be hurt by the asking —" },
       { title: "Give the reply", body: "I say: perhaps he will be hurt." },
       { title: "Name the move", body: "So you are asking out of caution against a perhaps. And if that satisfies you, then perhaps his wealth is lawful." },
-      { title: "Give the weight", body: "And the sin to be avoided in harming a Muslim is not less than the sin in eating the doubtful and the unlawful. And most people are estranged by investigation." },
+      { title: "Give the weight", body: "The sin to be avoided in harming a Muslim is not less than the sin in eating the doubtful and the unlawful. And most people are estranged by investigation." },
     ],
     closer: [
       { title: "Why the symmetry is decisive", body: "Scruple proceeds by acting on possibilities. Once it is pointed out that the possibility of harming someone has exactly the same logical standing as the possibility that the wealth is unlawful, the scrupulous person cannot prefer one without abandoning the principle that got him there." },
-      { title: "The empirical clause", body: "And most people are estranged by investigation. Having established the symmetry in principle, he breaks the tie with an observation about what actually happens — which makes the ordinary case fall on the side of not asking." },
+      { title: "The empirical clause", body: "Most people are estranged by investigation. Having established the symmetry in principle, he breaks the tie with an observation about what actually happens — which makes the ordinary case fall on the side of not asking." },
     ],
     distinction: ["Two possibilities of equal standing", "That the wealth is unlawful", "Which is what the scruple acts on.", "That the asking will wound", "Which has exactly the same standing, and which the tie-breaker resolves against."],
     misreading: "Do not read this as a proof that one should never ask. It settles the case where both sides are bare possibilities; where there is a real cause of misgiving, the symmetry is broken and asking becomes warranted.",

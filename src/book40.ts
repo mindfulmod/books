@@ -42,7 +42,7 @@ export const book40Chapters: Chapter[] = [
     overview: "The first analytic chapter, and it answers a question most readers have already asked themselves: why does thinking about death change nothing?",
     moves: [
       { title: "State the diagnosis", body: "Death is dreadful and its danger is great, and people's heedlessness of it comes from how little they think about it and remember it." },
-      { title: "Correct the diagnosis", body: "And one who does remember it does not remember it with an empty heart, but with a heart occupied by the appetite of this world. So the remembrance of death does not take effect in his heart." },
+      { title: "Correct the diagnosis", body: "One who does remember it does not remember it with an empty heart, but with a heart occupied by the appetite of this world. So the remembrance of death does not take effect in his heart." },
       { title: "Give the remedy", body: "The way in it is that the servant empty his heart of everything except the remembrance of death that is before him." },
       { title: "Give the image", body: "Like one who means to travel into a perilous waste, or to put out to sea, who thinks of nothing else. When the remembrance touches his heart directly, it is likely to affect him, and at that his joy in the world lessens and his heart is broken." },
     ],
@@ -82,7 +82,7 @@ export const book40Chapters: Chapter[] = [
     overview: "The most recognisable passage in the book, and one of the most exact descriptions of procrastination in any literature.",
     moves: [
       { title: "Set the scene", body: "If the matter of death and the need to prepare for it does occur to him in some state, he defers and promises himself, and says: the days are before you, until you grow older, and then you will repent." },
-      { title: "Follow the ladder down", body: "And when he grows older he says: until you become an old man. And when he becomes an old man he says: until you finish building this house, or cultivating this estate, or return from this journey." },
+      { title: "Follow the ladder down", body: "When he grows older he says: until you become an old man. And when he becomes an old man he says: until you finish building this house, or cultivating this estate, or return from this journey." },
       { title: "Keep following it", body: "Or finish settling this child and his outfitting and arranging a dwelling for him; or finish subduing this enemy who gloats over you. The examples are chosen so that each one is a real obligation." },
       { title: "Name the mechanism", body: "So he keeps deferring and delaying, and he plunges into no occupation but that ten other occupations attach themselves to the completion of that occupation, and so on by degrees." },
     ],
@@ -104,7 +104,7 @@ export const book40Chapters: Chapter[] = [
       { title: "The first two rungs", body: "Some hope to remain and desire it forever. Some hope to remain until decrepitude, which is the furthest age they have witnessed, and this is one who loves the world intensely." },
       { title: "The third and fourth", body: "Some hope to a year, and do not busy themselves arranging beyond it, and reckon no existence for themselves in the coming year — but such a one prepares in summer for winter and in winter for summer, and when he has gathered his year's sufficiency he busies himself with worship. And some hope for the length of a summer or a winter, so he does not store winter clothes in summer nor summer clothes in winter." },
       { title: "The fifth and sixth", body: "Some have a hope that returns to a day and a night, so he prepares only for his day and not for tomorrow. And some have a hope that does not pass an hour, on the counsel that when you rise in the morning you do not speak to yourself of the evening, and when evening comes you do not speak to yourself of the morning." },
-      { title: "The seventh", body: "And some do not reckon remaining even an hour. The ladder therefore ends where planning ends, and the rungs are separated by nothing except the length of the horizon a person actually provisions for." },
+      { title: "The seventh", body: "Some do not reckon remaining even an hour. The ladder therefore ends where planning ends, and the rungs are separated by nothing except the length of the horizon a person actually provisions for." },
     ],
     closer: [
       { title: "Why the measure is provisioning", body: "The rungs could have been described by conviction, and are not. Each one is given by what a person stores, buys, arranges, and does not arrange, which is a fact about him that he cannot be mistaken about. Ghazali has made a spiritual rank into something checkable against a cupboard." },
@@ -142,9 +142,9 @@ export const book40Chapters: Chapter[] = [
     overview: "The third chapter of the first half, and it opens with an argument before it opens with descriptions.",
     moves: [
       { title: "State the minimum case", body: "If there were before the poor servant no distress and no terror and no punishment except the throes of death by themselves, that alone would be fit to spoil his living, cloud his joy, and part him from his inadvertence." },
-      { title: "Add the timing", body: "And it would be fit that he lengthen his thought about it and make his preparation great, especially since he is exposed to it at every breath." },
+      { title: "Add the timing", body: "It would be fit that he lengthen his thought about it and make his preparation great, especially since he is exposed to it at every breath." },
       { title: "Give the sayings", body: "As one of the sages said: a distress in another's hand, and you do not know when it will overtake you. And Luqman said to his son: a matter you do not know when it will meet you — prepare for it before it takes you by surprise." },
-      { title: "Give the argument", body: "And the marvel is that if a man were in the greatest of pleasures and the finest gathering, and expected a soldier to come in and strike him five blows with a stick, his pleasure would be spoiled and his enjoyment ruined." },
+      { title: "Give the argument", body: "The marvel is that if a man were in the greatest of pleasures and the finest gathering, and expected a soldier to come in and strike him five blows with a stick, his pleasure would be spoiled and his enjoyment ruined." },
     ],
     closer: [
       { title: "How the five blows argue", body: "The comparison is calibrated deliberately low. Five blows are survivable, scheduled, and trivial beside what the chapter is about, and the anticipation of them would still ruin an evening. The argument is therefore not that death is terrible but that a person's reaction to it is wildly out of proportion with his reaction to everything else, which is a claim about inconsistency rather than about fear." },
@@ -162,8 +162,8 @@ export const book40Chapters: Chapter[] = [
     overview: "A short and unusually gentle chapter, and its structure is a triad that covers the body, the tongue, and the heart.",
     moves: [
       { title: "The form", body: "What is loved at death, from the appearance of the dying person, is quietness and stillness." },
-      { title: "The tongue", body: "And from his tongue, that it be uttering the testimony." },
-      { title: "The heart", body: "And from his heart, that he hold a good opinion of God." },
+      { title: "The tongue", body: "From his tongue, that it be uttering the testimony." },
+      { title: "The heart", body: "From his heart, that he hold a good opinion of God." },
       { title: "Note what the triad covers", body: "Body, speech, and heart, in that order, which is the same three-layer division Ghazali uses throughout the Ihya for describing any state of a person." },
     ],
     closer: [
@@ -202,7 +202,7 @@ export const book40Chapters: Chapter[] = [
     overview: "A collection of last words, and its selection is worth noticing: the powerful are placed first and they do not come off well.",
     moves: [
       { title: "Open with a ruler", body: "The chapter opens with Muʿawiya, who at the end asked to be seated, praised God, wept, and said: you remember your Lord, Muʿawiya, after decrepitude and decline — would that this had been while the branch of youth was green and full." },
-      { title: "Give his prayer", body: "And he wept until his weeping rose, and said: my Lord, have mercy on the sinning old man with the hard heart; lessen the stumble and forgive the slip, and turn with Your forbearance upon one who hopes for none but You and trusts no one besides You." },
+      { title: "Give his prayer", body: "He wept until his weeping rose, and said: my Lord, have mercy on the sinning old man with the hard heart; lessen the stumble and forgive the slip, and turn with Your forbearance upon one who hopes for none but You and trusts no one besides You." },
       { title: "Give the second voice", body: "An elder of Quraysh, seen with the creases of age in his skin, said: is the whole world anything but what we have tried and seen? We met its bloom in our vigour and our enjoyment of our living, and it did not leave us long before it undid that from us, state after state and handhold after handhold." },
       { title: "Note the ordering", body: "Caliphs and commanders come before the righteous in the chapter's own title, and the effect of that order is that the reader hears the regret before he hears the composure." },
     ],
@@ -284,7 +284,7 @@ export const book40Chapters: Chapter[] = [
       { title: "State what is known", body: "The lights of insight gained from the Book, the Sunna, and the paths of consideration acquaint us with the states of the dead in general, and with their division into the happy and the wretched." },
       { title: "State what is not", body: "But the state of this Zayd or that Amr in particular is not disclosed at all." },
       { title: "Close the first route", body: "If we rely on Zayd's or Amr's faith, we do not know what he died upon and how he was sealed." },
-      { title: "Close the second", body: "And if we rely on his outward righteousness, godfearing has its seat in the heart, and it is obscure and hidden even from the one who has it — so how much more from anyone else. So there is no ruling from outward righteousness without the inward godfearing, since God accepts only from the godfearing." },
+      { title: "Close the second", body: "If we rely on his outward righteousness, godfearing has its seat in the heart, and it is obscure and hidden even from the one who has it — so how much more from anyone else. So there is no ruling from outward righteousness without the inward godfearing, since God accepts only from the godfearing." },
     ],
     closer: [
       { title: "How far the guard reaches", body: "It is stated in the most general terms available: the two routes it closes are faith and visible righteousness, which are the only two anybody ever has. Ghazali is not restricting judgement about the wicked; he is restricting judgement about anyone, including the person judging himself." },
@@ -304,7 +304,7 @@ export const book40Chapters: Chapter[] = [
       { title: "Give the list", body: "The blast of the trumpet; the ground of the gathering and its people; the length of the Day; the Day and its calamities and its names; the questioning about sins; the Balance; the adversaries and the returning of wrongs; the Bridge; the intercession; the Basin." },
       { title: "Continue it", body: "Then Hell and its terrors; then the Garden and the kinds of its bliss, the number of the gardens and their gates and chambers and walls and rivers and trees, the clothing of its people and their couches, and the description of their food." },
       { title: "Reach the penultimate item", body: "Then the description of looking upon the face of God. It is placed after the entire description of the Garden and everything in it, and before only one thing." },
-      { title: "Name the last", body: "And a chapter on the breadth of the mercy of God, and with it the book is sealed. Ghazali states this at the opening of the second half, so the destination is known before any of the terrors are described." },
+      { title: "Name the last", body: "A chapter on the breadth of the mercy of God, and with it the book is sealed. Ghazali states this at the opening of the second half, so the destination is known before any of the terrors are described." },
     ],
     closer: [
       { title: "Where the looking is placed", body: "Book 36 argued that the highest of pleasures is the knowledge of God and the sight of His face, and that the difference between knowing now and seeing then is a difference of clarity along one line rather than of kind. The second half of Book 40 places that sight after every other described bliss, which is the payoff of that argument arriving where the work ends." },

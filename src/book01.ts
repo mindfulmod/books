@@ -44,7 +44,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Put the question", body: "Seeking knowledge is an obligation upon every Muslim. People differed about which knowledge that is, and split over it into more than twenty parties." },
       { title: "Give the verdict on all of them", body: "He declines to reproduce the detail, and says the upshot is that every group placed the obligation on the knowledge it happens to be occupied with." },
       { title: "Name the parties", body: "The theologians said it is theology, since by it unity is grasped. The jurists said it is jurisprudence, since by it the acts of worship and the lawful and unlawful are known. The exegetes and traditionists said it is the Book and the Sunna, since by them all sciences are reached." },
-      { title: "Include the fourth", body: "And the Sufis said it is this knowledge: some, that it is the servant's knowledge of his own state and station; some, that it is knowledge of sincerity and the blights of souls and telling the angel's touch from the devil's; and some, that it is the inward knowledge, obligatory on particular people who are its folk — and these, he notes, turned the word away from its generality." },
+      { title: "Include the fourth", body: "The Sufis said it is this knowledge: some, that it is the servant's knowledge of his own state and station; some, that it is knowledge of sincerity and the blights of souls and telling the angel's touch from the devil's; and some, that it is the inward knowledge, obligatory on particular people who are its folk — and these, he notes, turned the word away from its generality." },
     ],
     closer: [
       { title: "Why the observation lands", body: "Each answer is defensible on its own, and the reasons given for them are real reasons. What convicts them is the pattern: the answers vary exactly with the answerer's occupation, which is a fact about the scholars rather than about the question." },
@@ -64,7 +64,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Give the rule", body: "This is the truth about the knowledge that is an individual obligation, and its meaning is the knowledge of how the obligatory act is performed. Whoever knows the obligatory act and the time at which it becomes obligatory has known the knowledge that is an individual obligation." },
       { title: "Work the examples", body: "At the time of a prayer, learn that prayer. If he lives to Ramadan, the obligation to learn the fast is renewed by it: that its time is from dawn to sunset, that what is required is intention and abstaining, and that it runs to the sighting of the crescent or two witnesses." },
       { title: "Give the sharpest case", body: "If he acquires wealth, he must learn the alms due on it — and not at once, but at the completion of the year. And if he owns nothing but camels, he is obliged to learn nothing but the alms of camels, and likewise for each category." },
-      { title: "Extend it to circumstance", body: "And if this Muslim were a merchant, and dealing in usury had become widespread in the town, it would become obligatory on him to learn how to guard against usury. The obligation follows the situation rather than the syllabus." },
+      { title: "Extend it to circumstance", body: "If this Muslim were a merchant, and dealing in usury had become widespread in the town, it would become obligatory on him to learn how to guard against usury. The obligation follows the situation rather than the syllabus." },
     ],
     closer: [
       { title: "How the answer disposes of the twenty parties", body: "It does not refute any of them. It reframes the question so that the answer cannot be a field at all: what is owed is a function of what you are about to do, so two people with different lives owe different knowledge, and neither owes a discipline." },
@@ -83,7 +83,7 @@ export const book01Chapters: Chapter[] = [
     moves: [
       { title: "Grant the Sufi answer, with a condition", body: "What the Sufis said about understanding the enemy's suggestions and the angel's touch is also true — but in respect of one who addresses himself to it. The concession is exact and it is not a dismissal." },
       { title: "Then generalise a different part of it", body: "Since it is usually the case that a person is not free of the motives of evil, of showing off, and of envy, it becomes incumbent on him to learn from the science of the Quarter of Perils whatever he sees himself to need." },
-      { title: "Ground it in the report", body: "And how should it not be obligatory, when it was said that three things destroy: avarice obeyed, whim followed, and a man's admiration of himself — and no human being is free of them." },
+      { title: "Ground it in the report", body: "How should it not be obligatory, when it was said that three things destroy: avarice obeyed, whim followed, and a man's admiration of himself — and no human being is free of them." },
       { title: "Draw the legal conclusion", body: "The rest of the blamed states of the heart, such as pride and conceit and their sisters, follow these three, and removing them is an individual obligation. And they cannot be removed except by knowing their limits, their causes, their signs, and their treatment — for one who does not know an evil falls into it." },
     ],
     closer: [
@@ -124,7 +124,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Give the division", body: "The sciences, relative to the purpose in hand, divide into revealed and unrevealed." },
       { title: "Define the first", body: "By revealed I mean what is gained from the prophets, and to which the intellect does not guide, as it guides to arithmetic; nor experience, as it guides to medicine; nor hearing, as it guides to language." },
       { title: "Sort the second", body: "The sciences that are not revealed divide into praised, blamed, and permitted. The praised are those to which the welfare of worldly matters is connected, such as medicine and arithmetic." },
-      { title: "Sort the praised again", body: "And those divide into what is a communal obligation and what is an excellence rather than an obligation. The double division is what allows the previous chapter's list and this chapter's warnings to sit in one scheme." },
+      { title: "Sort the praised again", body: "Those divide into what is a communal obligation and what is an excellence rather than an obligation. The double division is what allows the previous chapter's list and this chapter's warnings to sit in one scheme." },
     ],
     closer: [
       { title: "Why the definition is negative", body: "A revealed science is identified by what does not reach it: not reason, not experiment, not linguistic transmission. That leaves the category small and sharp, and it means most of what is taught under religious headings is not, on this definition, revealed knowledge at all." },
@@ -143,7 +143,7 @@ export const book01Chapters: Chapter[] = [
     moves: [
       { title: "Give the three classes", body: "Knowledge in this respect is of three kinds: one blamed in its little and its much; one praised in its little and its much, and the more of it the better and more excellent; and one of which the measure of sufficiency is praised while going beyond it and exhausting it is not." },
       { title: "Give the analogy", body: "Like the states of the body. Some of them are praised in little and much, such as health and beauty. Some are blamed in little and much, such as ugliness and bad character." },
-      { title: "Give the third state", body: "And some of them are such that moderation in them is what is praised, as with the giving of wealth — for extravagance is not praised in it, and it is still giving." },
+      { title: "Give the third state", body: "Some of them are such that moderation in them is what is praised, as with the giving of wealth — for extravagance is not praised in it, and it is still giving." },
       { title: "Note what the third class does", body: "It creates a category of genuinely good knowledge that a person can nevertheless pursue too far, which none of the preceding divisions allows for and which the following chapters need." },
     ],
     closer: [
@@ -204,7 +204,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Put the question historically", body: "Ghazali asks what caused people to turn toward the science of legal disagreement, and answers by tracing changes in patronage, office, and the routes to advancement rather than by attributing it to a decline in piety." },
       { title: "Refuse the flattering comparison", body: "He devotes a section to what he calls the deception in likening these disputations to the consultations of the Companions and the discussions of the forebears, and he treats the comparison as the argument that has to be dismantled first." },
       { title: "Give the test", body: "Look at the disputants of your own day, he says, and see how one of their faces darkens when the truth becomes clear on his opponent's tongue, and how ashamed he is by it, and how he strives to deny it with the utmost of his power." },
-      { title: "Close the comparison", body: "And how he blames the one who silenced him for the rest of his life — and then is not ashamed to liken himself to the Companions in their helping one another to look into the truth." },
+      { title: "Close the comparison", body: "How he blames the one who silenced him for the rest of his life — and then is not ashamed to liken himself to the Companions in their helping one another to look into the truth." },
     ],
     closer: [
       { title: "Why the test is behavioural", body: "The comparison to the forebears is about intention, and intentions cannot be checked. Ghazali replaces it with something observable: what happens to a man's face when his opponent turns out to be right. Anyone can run that test, on himself or on a room." },
@@ -242,12 +242,12 @@ export const book01Chapters: Chapter[] = [
     overview: "The constructive half of the fourth chapter, and it is specific enough to be checked against a real conversation.",
     moves: [
       { title: "Allow movement", body: "Among the conditions is that a participant not prevent the one helping him examine the matter from moving from one proof to another and from one difficulty to another, for so were the disputations of the forebears." },
-      { title: "Bar the devices", body: "And that there be excluded from his speech all the innovated fine points of wrangling, in what tells for him and against him alike — such as saying that this is not incumbent on me to mention, or that this contradicts your earlier speech and so is not accepted from you." },
+      { title: "Bar the devices", body: "That there be excluded from his speech all the innovated fine points of wrangling, in what tells for him and against him alike — such as saying that this is not incumbent on me to mention, or that this contradicts your earlier speech and so is not accepted from you." },
       { title: "Give the reason", body: "For returning to the truth is the contrary of falsehood, and accepting it is obligatory. A rule that penalises a person for changing his position is a rule that penalises him for being corrected." },
       { title: "Describe what happens instead", body: "You see whole sessions spent in repulsion and wrangling: an objector says there are meanings besides what you mentioned and I know them and will not mention them, since I am not obliged to; and the one arguing says you must produce what you claim; and the objector insists that he need not." },
     ],
     closer: [
-      { title: "The line about the objector", body: "And this wretch does not know that his saying I know it and will not mention it, since I am not obliged to, is itself the whole of what is wrong. A procedural entitlement is being used to avoid the only thing the session was for." },
+      { title: "The line about the objector", body: "This wretch does not know that his saying I know it and will not mention it, since I am not obliged to, is itself the whole of what is wrong. A procedural entitlement is being used to avoid the only thing the session was for." },
       { title: "Why the conditions are worth having", body: "They convert a complaint about motives into a checklist about conduct. Whether a person is arguing for victory is hidden; whether he permits his opponent to change proof, and whether he uses the devices, is not." },
     ],
     distinction: ["Two ways to treat a change of position", "As a correction", "Returning to the truth, which is obligatory to accept.", "As a concession to be exploited", "A contradiction with earlier speech, which the devices are designed to punish."],
@@ -262,7 +262,7 @@ export const book01Chapters: Chapter[] = [
     overview: "The fifth chapter opens with ten duties for the student, and the first is a precondition rather than a practice.",
     moves: [
       { title: "Give the first duty", body: "Giving precedence to purifying the soul from base traits and blamed attributes — because knowledge is the worship of the heart, the prayer of the inmost, and the drawing near of the inward to God." },
-      { title: "Give the argument", body: "And as the prayer that is the duty of the outward limbs is not valid except by purifying the outward from impurity, so the worship of the inward and the cultivating of the heart by knowledge is not valid except after its purification from the filth of character." },
+      { title: "Give the argument", body: "As the prayer that is the duty of the outward limbs is not valid except by purifying the outward from impurity, so the worship of the inward and the cultivating of the heart by knowledge is not valid except after its purification from the filth of character." },
       { title: "Extend the notion of purity", body: "Religion was built on cleanliness, and it is so inwardly as much as outwardly. The verse that the idolaters are only impure alerts intellects to the fact that purity and impurity are not confined to what the senses reach." },
       { title: "Draw the conclusion", body: "For an idolater may be clean of garment and washed of body and still be impure in substance, meaning that his inward is smeared with filth. And impurity is a word for what is avoided and kept away from, so the filths of the inward attributes have the better claim to be avoided." },
     ],
@@ -284,7 +284,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Give the analogy", body: "A person has four states in his knowledge, as he has in acquiring wealth. The owner of wealth has a state of gaining, so he is an earner; a state of storing what he gained, so he is free of asking; a state of spending on himself, so he benefits; and a state of giving to others, so he is generous — and that is the noblest of his states." },
       { title: "Apply it", body: "So knowledge is acquired as wealth is acquired. It has a state of seeking; a state of obtaining that frees from asking; a state of insight, which is thought about what is obtained and enjoyment of it; and a state of giving insight, which is the noblest of the states." },
       { title: "Give the images for the one who acts", body: "So whoever knew, acted, and taught is the one called great in the kingdom of the heavens — for he is like the sun, which lights others while being itself alight, and like musk, which perfumes others while being itself fragrant." },
-      { title: "Give the images for the one who does not", body: "And one who knows and does not act by it is like a ledger that benefits others while being empty of knowledge; like a whetstone that sharpens others and does not cut; like a needle that clothes others while itself naked; and like a lamp-wick that gives light to others while it burns away." },
+      { title: "Give the images for the one who does not", body: "One who knows and does not act by it is like a ledger that benefits others while being empty of knowledge; like a whetstone that sharpens others and does not cut; like a needle that clothes others while itself naked; and like a lamp-wick that gives light to others while it burns away." },
     ],
     closer: [
       { title: "The verse he quotes", body: "It is only a wick that was kindled: it gives light to people while it burns. The image is the sharpest of the four because it grants the benefit entirely — the light is real and reaches others — and locates the loss in the one producing it." },
@@ -302,7 +302,7 @@ export const book01Chapters: Chapter[] = [
     overview: "By a wide margin the longest chapter in the book, and the fiercest sustained passage in the Ihya about a class of people.",
     moves: [
       { title: "State why the chapter exists", body: "Severe warnings have come concerning the evil scholars, showing that they are the most severely punished of creation on the Day of Resurrection. So among the great and important matters is knowing the signs that distinguish the scholars of this world from the scholars of the hereafter." },
-      { title: "Define the term", body: "And by the scholars of this world we mean the evil scholars, whose aim from knowledge is the enjoyment of the world and reaching status and rank among its people. The definition is by aim rather than by doctrine or by competence." },
+      { title: "Define the term", body: "By the scholars of this world we mean the evil scholars, whose aim from knowledge is the enjoyment of the world and reaching status and rank among its people. The definition is by aim rather than by doctrine or by competence." },
       { title: "Give the central distinction", body: "Knowledge is of two kinds: knowledge on the tongue, and that is God's proof against His creation; and knowledge in the heart, and that is the beneficial knowledge." },
       { title: "Give the warnings", body: "The most severely punished of people on the Day of Resurrection is a scholar whom God did not benefit by his knowledge. A man is not a scholar until he acts by his knowledge. And: do not learn knowledge to vie with the scholars by it, nor to dispute with the foolish by it, nor to turn people's faces toward you." },
     ],
@@ -324,7 +324,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Diagnose the disagreement", body: "People differed over the definition of the intellect and its reality, and most of them were unaware that this name is applied to different meanings — and that became the cause of their disagreement." },
       { title: "Give the resolution", body: "The truth that lifts the covering here is that the intellect is a name applied by sharing to four meanings, as the word for an eye is applied to several things. And what is of this kind should not have one definition sought for all its divisions; each division should be disclosed separately." },
       { title: "Give the first meaning", body: "The attribute by which a human being is separated from the rest of the animals, and by which he is made ready to receive theoretical knowledge and to manage the hidden crafts of thought. It is what al-Muhasibi meant in calling the intellect an instinct by which the perception of theoretical knowledge is made ready — as though a light cast into the heart." },
-      { title: "Defend it", body: "And whoever denied this and reduced the intellect to necessary knowledge alone was not fair, for the heedless and the sleeping are called possessors of intellect on account of this instinct being in them, despite the absence of the knowledge." },
+      { title: "Defend it", body: "Whoever denied this and reduced the intellect to necessary knowledge alone was not fair, for the heedless and the sleeping are called possessors of intellect on account of this instinct being in them, despite the absence of the knowledge." },
     ],
     closer: [
       { title: "The parallel he draws", body: "As life is an instinct by which the body is made ready for voluntary motion and sense perception, so the intellect is an instinct by which some animals are made ready for theoretical knowledge. The comparison is what makes the instinct sense of the word defensible rather than merely asserted." },
