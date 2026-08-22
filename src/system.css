@@ -1095,6 +1095,32 @@ body.system-page {
   margin-top: 14px;
 }
 
+.source-anchor-note {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+  padding: 12px;
+  border-left: 3px solid var(--journey);
+  background: color-mix(in srgb, var(--journey) 6%, #fafbfc);
+}
+
+.source-anchor-note span {
+  color: color-mix(in srgb, var(--journey) 72%, #785526);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.source-anchor-note strong {
+  color: #39445a;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .source-list {
   display: grid;
   gap: 6px;
@@ -7116,7 +7142,7 @@ body.system-page {
 
 /* ============================================================================
    MOBILE SHELL
-   One surface at a time behind a bottom tab bar. Everything here is scoped to
+   One surface at a time inside a book-home → reader hierarchy. Everything here is scoped to
    .mobile-shell, which SystemApp only sets under (max-width: 767px), so the
    desktop workspace is untouched. Placed last so it wins the cascade.
    ========================================================================== */
@@ -7125,6 +7151,17 @@ body.system-page {
     --tabbar-h: 62px;
     --stepper-h: 56px;
     padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Reading is the destination, not another dashboard surface. Its chrome participates in
+     the document and leaves naturally as the reader moves into the text. */
+  .mobile-shell.tab-read {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .mobile-shell.tab-read .system-topbar {
+    position: relative;
+    height: 54px;
   }
 
   /* One surface at a time. Default everything off, then switch the active one on. */
@@ -7162,24 +7199,39 @@ body.system-page {
     position: static;
     z-index: 20;
     background: var(--surface, #fbf8f2);
-    padding: 10px 14px 8px;
+    padding: 7px 14px 5px;
     margin: 0;
-    border-bottom: 1px solid rgba(24, 32, 38, 0.1);
-    box-shadow: 0 6px 14px -12px rgba(24, 32, 38, 0.5);
+    border-bottom: 0;
+    box-shadow: none;
   }
   .mobile-shell .depth-heading { display: none; }
   .mobile-shell .depth-tabs {
-    position: sticky;
-    top: 70px;
-    z-index: 22;
+    position: static;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    gap: 3px;
+    margin-top: 0;
+    padding: 2px;
+    border-radius: 9px;
   }
   .mobile-shell .depth-tabs button {
-    min-height: 44px;
-    padding: 6px 4px;
-    font-size: 12px;
+    min-height: 36px;
+    padding: 4px 3px;
+    border-radius: 7px;
+    font-size: 11px;
+  }
+  .mobile-shell.tab-read .depth-tabs {
+    border: 0;
+    border-bottom: 1px solid rgba(157, 126, 80, 0.18);
+    border-radius: 0;
+    background: transparent;
+  }
+  .mobile-shell.tab-read .depth-tabs button {
+    border-radius: 0;
+  }
+  .mobile-shell.tab-read .depth-tabs button.active {
+    background: transparent;
+    box-shadow: inset 0 -2px var(--journey);
   }
   .mobile-shell .depth-full { display: none; }
   .mobile-shell .depth-short { display: inline; }
@@ -7189,11 +7241,15 @@ body.system-page {
   .mobile-shell .explanation-card { min-height: 0; }
   .mobile-shell .deep-reader-body { display: block; }
   .mobile-shell .deep-reader-summary { margin-bottom: 18px; }
+  .mobile-shell .deep-reader-top {
+    position: static;
+    top: auto;
+  }
 
   /* Read and Tool need room above the stepper and the bar. */
   .mobile-shell.tab-read .system-workspace,
   .mobile-shell.tab-tool .mobile-tool {
-    padding-bottom: calc(var(--stepper-h) + 12px);
+    padding-bottom: calc(var(--stepper-h) + 24px + env(safe-area-inset-bottom, 0px));
   }
 
   /* ---- Sections surface ---- */
@@ -7293,17 +7349,30 @@ body.system-page {
   .mobile-stepper { display: none; }
   .mobile-shell.tab-read .mobile-stepper {
     display: grid;
-    grid-template-columns: 52px 1fr 52px;
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
     align-items: stretch;
-    gap: 1px;
+    gap: 0;
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px));
+    right: 14px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: auto;
     z-index: 30;
-    height: var(--stepper-h);
-    background: rgba(24, 32, 38, 0.12);
-    border-top: 1px solid rgba(24, 32, 38, 0.12);
+    width: min(78vw, 292px);
+    height: 48px;
+    overflow: hidden;
+    border: 1px solid rgba(157, 126, 80, 0.26);
+    border-radius: 16px;
+    background: rgba(255, 251, 242, 0.88);
+    box-shadow: 0 10px 30px rgba(79, 56, 25, 0.18), inset 0 1px rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px) saturate(150%);
+    transform: translateY(0);
+    transform-origin: bottom right;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 160ms ease;
+  }
+  .mobile-shell.tab-read.reader-chrome-hidden .mobile-stepper {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(calc(100% + 28px));
   }
   .mobile-stepper button {
     display: flex;
@@ -7311,22 +7380,23 @@ body.system-page {
     align-items: center;
     justify-content: center;
     gap: 1px;
-    background: var(--surface, #fbf8f2);
+    background: transparent;
     border: 0;
     color: inherit;
     cursor: pointer;
     min-height: 44px;
   }
+  .mobile-stepper button + button { border-left: 1px solid rgba(157, 126, 80, 0.18); }
   .mobile-stepper button:disabled { opacity: 0.3; cursor: default; }
   .mobile-stepper-label { padding: 0 10px; overflow: hidden; }
   .mobile-stepper-label small {
-    font-size: 10.5px;
+    font-size: 9px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(24, 32, 38, 0.55);
   }
   .mobile-stepper-label strong {
-    font-size: 13.5px;
+    font-size: 12px;
     line-height: 1.2;
     max-width: 100%;
     overflow: hidden;
@@ -7348,6 +7418,7 @@ body.system-page {
     border-top: 1px solid rgba(24, 32, 38, 0.14);
     box-shadow: 0 -6px 18px -14px rgba(24, 32, 38, 0.6);
   }
+  .mobile-shell.tab-read .mobile-tabbar { display: none; }
   .mobile-tabbar button {
     flex: 1;
     display: flex;
@@ -7392,4 +7463,290 @@ body.system-page {
   .mobile-shell .world-lens-states button {
     min-height: 44px;
   }
+}
+
+/* Mobile navigation v2: the book home owns discovery; the reader owns only reading. */
+@media (max-width: 767px) {
+  .mobile-shell {
+    --reader-bar-h: 56px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* ---- Book home ---- */
+  .mobile-book-home {
+    position: relative;
+    z-index: 24;
+    border-bottom: 1px solid rgba(157, 126, 80, 0.18);
+    background:
+      radial-gradient(circle at 86% 8%, color-mix(in srgb, var(--journey) 13%, transparent) 0 16%, transparent 17%),
+      linear-gradient(150deg, #fffdf7 0%, #f7ead3 100%);
+  }
+
+  .mobile-book-overview {
+    position: relative;
+    display: grid;
+    gap: 17px;
+    padding: 24px 18px 18px;
+    overflow: hidden;
+  }
+
+  .mobile-book-overview::after {
+    position: absolute;
+    top: -58px;
+    right: -36px;
+    width: 152px;
+    height: 152px;
+    border: 1px solid rgba(177, 124, 48, 0.18);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 18px rgba(255, 255, 255, 0.16), inset 0 0 0 19px rgba(177, 124, 48, 0.1);
+    content: "";
+    pointer-events: none;
+  }
+
+  .mobile-book-overview > div { position: relative; z-index: 1; max-width: 31ch; }
+  .mobile-book-overview > div > span {
+    color: color-mix(in srgb, var(--journey) 68%, #865822);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  .mobile-book-overview h1 {
+    margin: 6px 0 5px;
+    font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+    font-size: clamp(26px, 7.5vw, 34px);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+  }
+  .mobile-book-overview p { margin: 0; color: rgba(62, 46, 27, 0.62); font-size: 12px; }
+
+  .mobile-book-overview > button {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20px;
+    gap: 2px 12px;
+    width: 100%;
+    min-height: 62px;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid color-mix(in srgb, var(--journey) 30%, #d2b47f);
+    border-radius: 12px;
+    color: #3d2e1c;
+    background: rgba(255, 253, 247, 0.82);
+    box-shadow: 0 8px 22px rgba(108, 73, 27, 0.08);
+    cursor: pointer;
+    text-align: left;
+  }
+  .mobile-book-overview > button span {
+    align-self: end;
+    color: color-mix(in srgb, var(--journey) 72%, #795426);
+    font-size: 9px;
+    font-weight: 780;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+  .mobile-book-overview > button strong { align-self: start; font-size: 13px; line-height: 1.3; }
+  .mobile-book-overview > button svg { grid-column: 2; grid-row: 1 / span 2; }
+
+  .mobile-book-tabs {
+    position: sticky;
+    top: 62px;
+    z-index: 26;
+    display: grid;
+    grid-template-columns: repeat(var(--book-tab-count, 3), minmax(0, 1fr));
+    gap: 4px;
+    padding: 5px 10px;
+    border-top: 1px solid rgba(157, 126, 80, 0.12);
+    background: rgba(255, 251, 242, 0.9);
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+  .mobile-book-tabs button {
+    position: relative;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 6px;
+    border: 0;
+    border-radius: 9px;
+    color: rgba(61, 46, 28, 0.58);
+    background: transparent;
+    cursor: pointer;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .mobile-book-tabs button.active {
+    color: #3d2e1c;
+    background: #fffdf7;
+    box-shadow: 0 2px 10px rgba(87, 57, 20, 0.1), inset 0 0 0 1px rgba(157, 126, 80, 0.18);
+    font-weight: 700;
+  }
+
+  .mobile-book .mobile-sections { padding: 20px 14px 32px; }
+  .mobile-book .mobile-sections-head { margin-bottom: 16px; }
+  .mobile-book .mobile-sections-head h2 { display: none; }
+  .mobile-book .mobile-sections-head > span::before { content: "Book contents · "; }
+  .mobile-book .mobile-tool { padding-bottom: 32px; }
+
+  /* ---- Reader ---- */
+  .mobile-reader .system-topbar,
+  .mobile-reader .mobile-book-home { display: none; }
+
+  .mobile-reader-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 70;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    height: calc(var(--reader-bar-h) + env(safe-area-inset-top, 0px));
+    align-items: center;
+    gap: 8px;
+    padding: env(safe-area-inset-top, 0px) 10px 0;
+    border-bottom: 1px solid rgba(157, 126, 80, 0.18);
+    background: rgba(255, 252, 245, 0.9);
+    box-shadow: 0 8px 22px -18px rgba(70, 42, 12, 0.65);
+    backdrop-filter: blur(20px) saturate(150%);
+    transform: translateY(0);
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 150ms ease;
+    will-change: transform;
+  }
+  .mobile-reader.reader-chrome-hidden .mobile-reader-bar {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(calc(-100% - 2px));
+  }
+  .mobile-reader-bar button {
+    min-height: 44px;
+    border: 0;
+    border-radius: 10px;
+    color: #4a3823;
+    background: transparent;
+    cursor: pointer;
+  }
+  .mobile-reader-back { display: flex; align-items: center; gap: 4px; padding: 0 7px 0 2px; font-size: 12px; font-weight: 700; }
+  .mobile-reader-location { min-width: 0; text-align: center; }
+  .mobile-reader-location small {
+    display: block;
+    color: rgba(74, 56, 35, 0.54);
+    font-size: 8px;
+    font-weight: 780;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+  .mobile-reader-location strong {
+    display: block;
+    overflow: hidden;
+    margin-top: 2px;
+    font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mobile-depth-trigger { display: flex; min-width: 48px; flex-direction: column; align-items: center; justify-content: center; padding: 3px 7px; }
+  .mobile-depth-trigger small { color: rgba(74, 56, 35, 0.48); font-size: 8px; line-height: 1; text-transform: uppercase; }
+  .mobile-depth-trigger strong { margin-top: 3px; color: var(--journey); font-size: 11px; line-height: 1; }
+
+  .mobile-shell.mobile-reader .system-workspace {
+    display: block;
+    min-height: 0;
+    padding: calc(var(--reader-bar-h) + env(safe-area-inset-top, 0px)) 0 calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+  .mobile-reader .question-panel,
+  .mobile-reader .map-panel,
+  .mobile-reader .sequence-rail,
+  .mobile-reader .mobile-sections,
+  .mobile-reader .mobile-tool { display: none !important; }
+  .mobile-reader .depth-panel,
+  .mobile-reader .deep-reader { display: block; }
+  .mobile-reader .depth-panel {
+    position: static;
+    padding: 12px 14px 10px;
+    background: transparent;
+  }
+  .mobile-reader .depth-tabs,
+  .mobile-reader .deep-reader-controls { display: none; }
+  .mobile-reader .explanation-card { padding-top: 10px; }
+  .mobile-reader .deep-reader { padding-top: 12px; }
+  .mobile-reader .deep-reader-top { padding-top: 4px; }
+  .mobile-reader .deep-reader-top > div:first-child > span { padding-right: 0; }
+
+  .mobile-depth-overlay { position: fixed; inset: 0; z-index: 100; }
+  .mobile-depth-dismiss { position: absolute; inset: 0; width: 100%; border: 0; background: rgba(38, 27, 15, 0.28); backdrop-filter: blur(2px); }
+  .mobile-depth-sheet {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 14px calc(18px + env(safe-area-inset-bottom, 0px));
+    border-radius: 22px 22px 0 0;
+    background: #fffaf0;
+    box-shadow: 0 -20px 60px rgba(52, 34, 14, 0.24);
+  }
+  .mobile-depth-sheet > header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; padding: 0 2px; }
+  .mobile-depth-sheet > header div { display: flex; flex-direction: column; }
+  .mobile-depth-sheet > header span { color: rgba(74, 56, 35, 0.54); font-size: 9px; font-weight: 780; letter-spacing: 0.1em; text-transform: uppercase; }
+  .mobile-depth-sheet > header strong { margin-top: 3px; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 17px; }
+  .mobile-depth-sheet > header > button { display: grid; width: 44px; height: 44px; place-items: center; border: 0; border-radius: 50%; color: #4a3823; background: rgba(157, 126, 80, 0.1); }
+  .mobile-depth-sheet > div { display: grid; gap: 6px; }
+  .mobile-depth-sheet > div > button {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr) 20px;
+    min-height: 57px;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 1px solid rgba(157, 126, 80, 0.16);
+    border-radius: 11px;
+    color: #4a3823;
+    background: rgba(255, 255, 255, 0.58);
+    text-align: left;
+  }
+  .mobile-depth-sheet > div > button.active { border-color: var(--journey); background: color-mix(in srgb, var(--journey) 8%, #fffdf7); }
+  .mobile-depth-sheet > div > button > i { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid rgba(157, 126, 80, 0.28); border-radius: 50%; font-size: 10px; font-style: normal; }
+  .mobile-depth-sheet > div > button > span { display: flex; flex-direction: column; }
+  .mobile-depth-sheet > div > button strong { font-size: 13px; }
+  .mobile-depth-sheet > div > button small { margin-top: 2px; color: rgba(74, 56, 35, 0.58); font-size: 10px; }
+  .mobile-depth-sheet > div > button > svg { color: var(--journey); }
+
+  /* The section stepper shares the reader's scroll-direction behavior. */
+  .mobile-reader .mobile-stepper {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) 52px;
+    position: fixed;
+    right: 14px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    left: 14px;
+    z-index: 68;
+    width: auto;
+    height: 58px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(157, 126, 80, 0.24);
+    border-radius: 13px;
+    background: #fffaf0;
+    box-shadow: 0 8px 24px rgba(79, 56, 25, 0.08);
+    backdrop-filter: blur(18px) saturate(145%);
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 150ms ease;
+    will-change: transform;
+  }
+  .mobile-reader.reader-chrome-hidden .mobile-stepper {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(calc(100% + 28px));
+  }
+  .mobile-reader .mobile-stepper button + button { border-left: 1px solid rgba(157, 126, 80, 0.16); }
+  .mobile-reader .mobile-stepper-label small { font-size: 9px; }
+  .mobile-reader .mobile-stepper-label strong { font-size: 12px; }
+
+  /* A partial next card plus an explicit count makes horizontal visual sequences discoverable. */
+  .mobile-reader .concept-model-track { scroll-snap-type: x mandatory; }
+  .mobile-reader .concept-model-reading > span { min-width: 52px; line-height: 1.35; }
 }

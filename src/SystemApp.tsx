@@ -118,10 +118,11 @@ const LEGACY_STORAGE_KEY = "ihya-system-state-v1";
 const ideaKey = (bookId: number, journeyId: string, nodeId: string) =>
   `${bookId}:${journeyId}:${nodeId}`;
 
-// The mobile shell shows one surface at a time behind a bottom tab bar. Desktop keeps the
+// Mobile has a real hierarchy: book home first, then a focused reader. Desktop keeps the
 // stacked workspace, so every mobile-only branch is gated on this.
 const MOBILE_QUERY = "(max-width: 767px)";
-type MobileTab = "read" | "map" | "sections" | "tool";
+type MobileTab = "sections" | "map" | "tool";
+type MobileSurface = "book" | "reader";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
@@ -219,9 +220,9 @@ function glyphFor(kind: Glyph) {
 }
 
 function ConceptModel({ model, compact = false }: { model: VisualModel; compact?: boolean }) {
-  const [activeIndex, setActiveIndex] = useState(
-    Math.max(0, model.items.findIndex((item) => item.role === "balance")),
-  );
+  // Every model is a sequence. Opening in the middle made the visual argument look incomplete
+  // and hid how many earlier steps existed.
+  const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = model.items[activeIndex] ?? model.items[0];
 
   return (
@@ -253,7 +254,7 @@ function ConceptModel({ model, compact = false }: { model: VisualModel; compact?
         ))}
       </div>
       <div className={`concept-model-reading ${activeItem.role ?? "support"}`} role="tabpanel">
-        <span>{String(activeIndex + 1).padStart(2, "0")} / {String(model.items.length).padStart(2, "0")}</span>
+        <span>Step {activeIndex + 1} of {model.items.length}</span>
         <p>{activeItem.body}</p>
         <div className="concept-model-pager" aria-label="Move through visual logic">
           <button
@@ -1569,7 +1570,10 @@ function SystemApp() {
   const [activeTaxonomy, setActiveTaxonomy] = useState("all");
   const [activeProcess, setActiveProcess] = useState("all");
   const isMobile = useIsMobile();
-  const [mobileTab, setMobileTab] = useState<MobileTab>("read");
+  const [mobileSurface, setMobileSurface] = useState<MobileSurface>("book");
+  const [mobileTab, setMobileTab] = useState<MobileTab>("sections");
+  const [depthMenuOpen, setDepthMenuOpen] = useState(false);
+  const [readerChromeVisible, setReaderChromeVisible] = useState(true);
   const book = books.find((item) => item.id === saved.bookId) ?? book30;
   const journey = book.journeys.find((item) => item.id === saved.journeyId)
     ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
@@ -1611,18 +1615,30 @@ function SystemApp() {
     setLibraryOpen(false);
     const nextBook = books.find((item) => item.id === bookId);
     if (!nextBook) return;
-    const nextJourney = nextBook.journeys.find((item) => item.id === nextBook.defaultJourneyId) ?? nextBook.journeys[0];
-    const nextNode = nextJourney.nodes[0];
-    const key = ideaKey(nextBook.id, nextJourney.id, nextNode.id);
+    const firstChapter = nextBook.chapters[0];
+    const firstJourney = nextBook.journeys.find((item) => item.nodes.some((itemNode) => itemNode.chapterId === firstChapter.id));
+    const nextJourney = firstJourney
+      ?? nextBook.journeys.find((item) => item.id === nextBook.defaultJourneyId)
+      ?? nextBook.journeys[0];
+    const firstNode = nextJourney.nodes.find((item) => item.chapterId === firstChapter.id);
+    const nextNode = firstNode ?? nextJourney.nodes[0];
+    const key = firstNode
+      ? ideaKey(nextBook.id, nextJourney.id, nextNode.id)
+      : chapterKey(nextBook.id, firstChapter.id);
     setActiveConcept(null);
     setActiveTaxonomy("all");
     setActiveProcess("all");
+    if (isMobile) {
+      setMobileSurface("book");
+      setMobileTab("sections");
+      setDepthMenuOpen(false);
+    }
     setSaved((current) => ({
       ...current,
       bookId: nextBook.id,
       journeyId: nextJourney.id,
       nodeId: nextNode.id,
-      chapterId: undefined,
+      chapterId: firstNode ? undefined : firstChapter.id,
       depth: "glance",
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
@@ -1700,7 +1716,20 @@ function SystemApp() {
 
   const openSection = (chapterId: number) => {
     selectChapter(chapterId);
-    if (isMobile) setMobileTab("read");
+    if (isMobile) {
+      setMobileSurface("reader");
+      setDepthMenuOpen(false);
+      setReaderChromeVisible(true);
+    }
+  };
+
+  const openNode = (next: JourneyNode) => {
+    selectNode(next);
+    if (isMobile) {
+      setMobileSurface("reader");
+      setDepthMenuOpen(false);
+      setReaderChromeVisible(true);
+    }
   };
 
   // Every bespoke interactive and the generic instrument. On desktop these sit inside the
@@ -1814,25 +1843,57 @@ function SystemApp() {
     ?? book.faultMirrors ?? book.mirrorObstructions ?? book.substitutionTest,
   );
   const mobileTabs: Array<{ id: MobileTab; label: string; icon: ReactNode }> = [
-    { id: "read", label: "Read", icon: <BookOpenText size={20} weight="duotone" /> },
-    { id: "map", label: "Map", icon: <Compass size={20} weight="duotone" /> },
-    { id: "sections", label: "Sections", icon: <ListBullets size={20} weight="duotone" /> },
-    ...(hasTool ? [{ id: "tool" as MobileTab, label: "Tool", icon: <Gauge size={20} weight="duotone" /> }] : []),
+    { id: "sections", label: "Contents", icon: <ListBullets size={18} weight="duotone" /> },
+    { id: "map", label: "Visual map", icon: <Compass size={18} weight="duotone" /> },
+    ...(hasTool ? [{ id: "tool" as MobileTab, label: "Practice", icon: <Gauge size={18} weight="duotone" /> }] : []),
   ];
-  // Tool can hold the only copy of an interactive, and the Read surface owns the depth
-  // control, so keep the requested tab valid rather than rendering an empty screen.
   const activeMobileTab: MobileTab = !isMobile
-    ? "read"
-    : mobileTabs.some((item) => item.id === mobileTab) ? mobileTab : "read";
+    ? "sections"
+    : mobileTabs.some((item) => item.id === mobileTab) ? mobileTab : "sections";
+  const activeDepthOption = depthOptions.find((option) => option.id === saved.depth) ?? depthOptions[0];
   useEffect(() => {
     if (!isMobile) return;
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-  }, [isMobile, activeMobileTab, book.id, chapter.id, journey.id, node.id, saved.depth]);
+    setDepthMenuOpen(false);
+    setReaderChromeVisible(true);
+  }, [isMobile, mobileSurface, activeMobileTab, book.id, chapter.id, journey.id, node.id, saved.depth]);
+
+  useEffect(() => {
+    if (!isMobile || mobileSurface !== "reader" || depthMenuOpen) {
+      setReaderChromeVisible(true);
+      return;
+    }
+
+    let lastY = window.scrollY;
+    let frame = 0;
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        const nextY = window.scrollY;
+        const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        const nearStart = nextY < 32;
+        const nearEnd = maxY - nextY < 64;
+        const delta = nextY - lastY;
+
+        if (nearStart || nearEnd || delta < -4) setReaderChromeVisible(true);
+        else if (delta > 4) setReaderChromeVisible(false);
+
+        lastY = nextY;
+        frame = 0;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [isMobile, mobileSurface, depthMenuOpen, book.id, chapter.id, saved.depth]);
 
 return (
     <div
-      className={`system-app system-warm${isMobile ? ` mobile-shell tab-${activeMobileTab}` : ""}`}
+      className={`system-app system-warm${isMobile ? ` mobile-shell mobile-${mobileSurface} tab-${activeMobileTab}${readerChromeVisible ? "" : " reader-chrome-hidden"}` : ""}`}
       style={{ "--journey": journey.color } as CSSProperties}
     >
       <a className="system-skip" href="#system-main">Skip to concept map</a>
@@ -1882,6 +1943,101 @@ return (
           onSelectBook={selectBook}
           onClose={() => setLibraryOpen(false)}
         />
+      )}
+
+      {isMobile && mobileSurface === "book" && (
+        <section className="mobile-book-home" aria-label={`${book.title} home`}>
+          <div className="mobile-book-overview">
+            <div>
+              <span>Book {String(book.id).padStart(2, "0")} of 40</span>
+              <h1>{book.title}</h1>
+              <p>{book.chapters.length} sections · {visitedInBook} ideas seen</p>
+            </div>
+            <button onClick={() => openSection(book.chapters[0].id)}>
+              <span>Begin at the beginning</span>
+              <strong>Section 1 · {book.chapters[0].shortTitle}</strong>
+              <ArrowRight size={18} weight="bold" />
+            </button>
+          </div>
+
+          <nav
+            className="mobile-book-tabs"
+            aria-label="Explore this book"
+            style={{ "--book-tab-count": mobileTabs.length } as CSSProperties}
+          >
+            {mobileTabs.map((item) => (
+              <button
+                key={item.id}
+                className={item.id === activeMobileTab ? "active" : ""}
+                onClick={() => setMobileTab(item.id)}
+                aria-current={item.id === activeMobileTab ? "page" : undefined}
+              >
+                {item.icon}
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        </section>
+      )}
+
+      {isMobile && mobileSurface === "reader" && (
+        <>
+          <header className="mobile-reader-bar">
+            <button
+              className="mobile-reader-back"
+              onClick={() => {
+                setMobileSurface("book");
+                setMobileTab("sections");
+                setDepthMenuOpen(false);
+              }}
+            >
+              <ArrowLeft size={18} weight="bold" />
+              <span>Contents</span>
+            </button>
+            <div className="mobile-reader-location">
+              <small>Section {chapterIndex + 1} of {book.chapters.length}</small>
+              <strong>{chapter.shortTitle}</strong>
+            </div>
+            <button
+              className="mobile-depth-trigger"
+              onClick={() => setDepthMenuOpen((current) => !current)}
+              aria-expanded={depthMenuOpen}
+              aria-haspopup="dialog"
+            >
+              <small>Depth</small>
+              <strong>{activeDepthOption.short}</strong>
+            </button>
+          </header>
+
+          {depthMenuOpen && (
+            <div className="mobile-depth-overlay">
+              <button className="mobile-depth-dismiss" onClick={() => setDepthMenuOpen(false)} aria-label="Close depth menu" />
+              <section className="mobile-depth-sheet" role="dialog" aria-modal="true" aria-label="Choose reading depth">
+                <header>
+                  <div><span>Reading depth</span><strong>How much detail do you want?</strong></div>
+                  <button onClick={() => setDepthMenuOpen(false)} aria-label="Close depth menu"><X size={18} weight="bold" /></button>
+                </header>
+                <div>
+                  {depthOptions.map((option, index) => (
+                    <button
+                      key={option.id}
+                      className={saved.depth === option.id ? "active" : ""}
+                      onClick={() => {
+                        setSaved((current) => ({ ...current, depth: option.id }));
+                        setDepthMenuOpen(false);
+                      }}
+                      aria-current={saved.depth === option.id ? "true" : undefined}
+                    >
+                      <i>{index + 1}</i>
+                      <span><strong>{option.label}</strong><small>{index === 0 ? "The idea in one breath" : index === 1 ? "The essential explanation" : index === 2 ? "The full argument" : "Sources and grounding"}</small></span>
+                      {saved.depth === option.id && <Check size={17} weight="bold" />}
+                    </button>
+                  ))}
+                </div>
+              </section>
+            </div>
+          )}
+        </>
       )}
 
       <main className="system-workspace" id="system-main">
@@ -1964,7 +2120,7 @@ return (
                   className={`map-node${isActive ? " active" : ""}${wasVisited ? " visited" : ""}`}
                   style={{ "--node-x": `${x}%`, "--node-y": `${y}%` } as CSSProperties}
                   key={item.id}
-                  onClick={() => selectNode(item)}
+                  onClick={() => openNode(item)}
                   aria-pressed={isActive}
                 >
                   <span className="node-orb">
@@ -2083,6 +2239,10 @@ return (
                   <p><strong>Grounded to Book {book.id}, section {chapter.id}</strong><span>{chapter.formalTitle}</span></p>
                 </div>
                 <p>This prototype uses original English synthesis. It is designed to preserve the section's distinctions while guiding the reader back to primary and published texts.</p>
+                <div className="source-anchor-note">
+                  <span>Source anchor</span>
+                  <strong>{deepReading.sourceAnchor}</strong>
+                </div>
                 {book.editorialNote && <p className="editorial-note"><Shield size={16} weight="duotone" /> {book.editorialNote}</p>}
                 <div className="source-list">
                   {book.sources.map((source, index) => (
@@ -2251,22 +2411,6 @@ return (
                   </section>
                 )}
 
-                <section className="deep-grounding" aria-labelledby="grounding-heading">
-                  <div className="deep-section-heading">
-                    <span>Source anchor</span>
-                    <h4 id="grounding-heading">{deepReading.sourceAnchor}</h4>
-                  </div>
-                  <p>This page uses original English synthesis. Use these links to inspect the primary text and edition record.</p>
-                  {book.editorialNote && <p className="deep-editorial-note"><Shield size={15} weight="duotone" /> {book.editorialNote}</p>}
-                  <div className="deep-source-links">
-                    {book.sources.map((source, index) => (
-                      <a href={source.url} key={`${source.label}:${index}`} target="_blank" rel="noreferrer">
-                        <span><strong>{source.label}</strong><small>{source.note}</small></span>
-                        <ArrowRight size={16} weight="bold" />
-                      </a>
-                    ))}
-                  </div>
-                </section>
               </article>
             </div>
           </section>
@@ -2385,21 +2529,28 @@ return (
             </section>
           )}
 
-          {/* Linear reading needs no hunting: prev/next sit above the tab bar on Read. */}
+          {/* Section navigation belongs at the end of the reading, where it becomes the next
+              deliberate action instead of covering the page throughout the session. */}
           <nav className="mobile-stepper" aria-label="Move between sections">
             <button
-              onClick={() => prevChapter && selectChapter(prevChapter.id)}
+              onClick={() => prevChapter && openSection(prevChapter.id)}
               disabled={!prevChapter}
               aria-label={prevChapter ? `Previous section: ${prevChapter.shortTitle}` : "No previous section"}
             >
               <ArrowLeft size={18} weight="bold" />
             </button>
-            <button className="mobile-stepper-label" onClick={() => setMobileTab("sections")}>
+            <button
+              className="mobile-stepper-label"
+              onClick={() => {
+                setMobileSurface("book");
+                setMobileTab("sections");
+              }}
+            >
               <small>Section {chapterIndex + 1} of {book.chapters.length}</small>
               <strong>{chapter.shortTitle}</strong>
             </button>
             <button
-              onClick={() => nextChapter && selectChapter(nextChapter.id)}
+              onClick={() => nextChapter && openSection(nextChapter.id)}
               disabled={!nextChapter}
               aria-label={nextChapter ? `Next section: ${nextChapter.shortTitle}` : "No next section"}
             >
@@ -2407,19 +2558,6 @@ return (
             </button>
           </nav>
 
-          <nav className="mobile-tabbar" aria-label="Sections of this book">
-            {mobileTabs.map((item) => (
-              <button
-                key={item.id}
-                className={item.id === activeMobileTab ? "active" : ""}
-                onClick={() => setMobileTab(item.id)}
-                aria-current={item.id === activeMobileTab ? "page" : undefined}
-              >
-                {item.icon}
-                <span>{item.label}</span>
-              </button>
-            ))}
-          </nav>
         </>
       )}
     </div>
