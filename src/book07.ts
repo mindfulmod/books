@@ -1,0 +1,443 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const bab = (id: number) => (id <= 2 ? "the first chapter, on the excellences and the conditions" : id <= 4 ? "the second chapter, on the outward acts" : "the third chapter, on the fine manners and the inward acts");
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 7, ${bab(seed.id)}, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book07Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "Three chapters", formalTitle: "The excellences, and the shape of the book",
+    overview: "The book announces three chapters and the third is unlike the other two — a sustained reading of a journey as a figure for another journey.",
+    moves: [
+      { title: "Announce the three", body: "The excellences of the pilgrimage and of Mecca and the ancient House, with a summary of its elements and the conditions of its obligation; the outward acts in order, from the beginning of the journey to the return; and its fine manners, its hidden secrets, and its inward acts." },
+      { title: "Give the first chapter's content", body: "The excellences of the pilgrimage, of the House, and of Mecca and Medina, together with travelling to the mosques — and then the conditions of obligation, the validity of the elements, the obligations, and the prohibitions." },
+      { title: "Note the proportion", body: "The second chapter is the longest and is entirely procedural. The third is the shortest of the three and contains everything the book is remembered for." },
+      { title: "Say what the third does", body: "It reads the journey twice: once as what a pilgrim does, and once as what each act of doing it is a sign of. Every stage from the first thought to the last rite is given a counterpart." },
+    ],
+    closer: [
+      { title: "Why the outward comes first at such length", body: "The reading in the third chapter depends on the acts being fixed. A figure requires something definite to be a figure of, and a chapter that gave the meanings without the acts would be interpreting nothing." },
+      { title: "The pattern of the quarter", body: "Purification declared four ranks and treated the lowest. Prayer fixed the acts and argued about the heart. Fasting gave the law and then three degrees. Here the acts are given in ten groupings and then read straight through a second time." },
+    ],
+    distinction: ["Two ways to write about a journey", "Twice over", "The acts fixed first, then read as signs of another journey.", "Once, allegorically", "The meanings given without the acts, which would leave the figure with nothing to attach to."],
+    misreading: "Do not skip to the third chapter. Its method is to take each fixed act and say what it is a sign of, which requires the second chapter to have fixed them.",
+    reflection: "Notice that the shortest chapter is the one the book exists for, and why it could not come first.",
+    audit: ["Which chapter am I in?", "Do I know the acts themselves?", "What is a figure without its object?", "Why is the order this way?"],
+    nodes: ["hajj", "structure", "itibar"],
+    model: chain("Three chapters", "The third depends on the second.", [["The excellences", "Of the pilgrimage, the House, Mecca and Medina, with the conditions.", "balance"], ["The outward acts", "Ten groupings, from setting out to the return.", "support"], ["The inward acts", "Each stage read as a sign of another journey.", "support"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "Conditions", formalTitle: "The conditions of obligation and of validity",
+    overview: "The legal frame, given plainly, and the last of its four parts is what makes the pilgrimage unlike the other acts of the quarter.",
+    moves: [
+      { title: "Give the four", body: "The conditions of the obligation of the pilgrimage; the validity of its elements; its obligations; and its prohibitions." },
+      { title: "Note the conditions of obligation", body: "The pilgrimage is owed once, and only by one able to reach it. It is the one act of the quarter whose obligation depends on means and on a route, which is why the conditions come first and are treated separately." },
+      { title: "Separate elements from obligations", body: "The elements are what the pilgrimage consists of, and the obligations are what is owed within it. Missing an element is not the same failure as omitting an obligation, and the remedies differ." },
+      { title: "Note the prohibitions", body: "The consecrated state carries a list of things forbidden while it lasts — the only place in the quarter where an act of worship creates a temporary status with its own rules." },
+    ],
+    closer: [
+      { title: "What the prohibitions make possible", body: "A state entered at a fixed place, marked by a garment, carrying its own rules, and left by a defined act. Almost every reading in the third chapter depends on the pilgrimage having this shape, which no other act of worship in the quarter has." },
+      { title: "What this edition does with the rulings", body: "The technical content — who is obliged, what invalidates, what compensations are owed — varies between the schools of law and is not reproduced here. This section presents how the material is divided and what the divisions make possible." },
+    ],
+    distinction: ["Two kinds of failure in the pilgrimage", "An element missed", "What the pilgrimage consists of, whose absence is not repaired by compensation.", "An obligation omitted", "What is owed within it, which has its own remedies."],
+    misreading: "Do not treat the prohibitions of the consecrated state as ordinary prohibitions. They belong to a status that begins and ends, which is what makes the third chapter's reading of the garment possible.",
+    reflection: "Notice that this is the only act of worship in the quarter that makes a person temporarily something else.",
+    audit: ["Am I asking about an element or an obligation?", "What does the consecrated state change?", "Where do I check the rulings?", "What shape does this act have?"],
+    nodes: ["ihram", "fiqh", "hajj"],
+    model: pair("Two categories, two remedies", "Confusing them produces the wrong repair.", [["Elements", "What the pilgrimage consists of.", "support"], ["Obligations", "What is owed within it, with their own compensations.", "balance"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "Ten groupings", formalTitle: "The outward acts in order",
+    overview: "The longest chapter in the book, and its organising principle is simply the order in which things happen.",
+    moves: [
+      { title: "Give the principle", body: "The second chapter arranges the outward acts in order from the beginning of the journey to the return, in ten groupings." },
+      { title: "Give the sequence", body: "The travelling from setting out to consecration; consecration from the appointed place to entering Mecca; entering Mecca to the circling; the circling; the running; the standing and what precedes it; the remaining acts after the standing; the lesser pilgrimage and what follows it; the farewell circling; and the visit to Medina." },
+      { title: "Note what follows the ten", body: "A section on the customs of returning from a journey — so the chapter ends where the pilgrim ends, at home, rather than at the last rite." },
+      { title: "Say why the ordering matters", body: "Arranged by topic, the acts would be a reference. Arranged by sequence, they are a route, and the third chapter can then walk the same route a second time attaching a meaning to each stage." },
+    ],
+    closer: [
+      { title: "The tenth grouping", body: "Visiting Medina is included in the sequence rather than treated as a separate journey, which places it inside the shape of the pilgrimage as Ghazali describes it." },
+      { title: "What this edition does with it", body: "The chapter is a manual, and its instructions vary between the schools of law. This section presents the sequence and why it is a sequence; the acts themselves belong to the text and to works of law." },
+    ],
+    distinction: ["Two ways to arrange the acts", "By sequence", "A route, which the third chapter can then walk a second time.", "By topic", "A reference, complete and correct, that no reading could follow through."],
+    misreading: "Do not read the ten groupings as ten separate subjects. They are ten stretches of one continuous route, and the numbering marks stages rather than topics.",
+    reflection: "Notice that the chapter ends at home rather than at the last rite.",
+    audit: ["Which stage am I asking about?", "Is this a route or a reference?", "Where does the sequence end?", "What can be done with an ordering that cannot be done with a list?"],
+    nodes: ["hajj", "structure", "fiqh"],
+    model: chain("A route, in ten stretches", "Which the third chapter walks again.", [["Setting out", "To the consecration at the appointed place.", "support"], ["The rites", "Entering, circling, running, standing, and what follows.", "support"], ["The farewell", "The last circling, and the visit to Medina.", "support"], ["The return", "The customs of coming home, which close the chapter.", "balance"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "Ten fine points", formalTitle: "The fine manners of the pilgrimage",
+    overview: "The third chapter opens with ten manners, and the first of them is about money — which sets the register for everything that follows.",
+    moves: [
+      { title: "Give the first", body: "That the expenditure be lawful, and that the hand be empty of a trade that occupies the heart and scatters the concern." },
+      { title: "Note the two halves", body: "One is about where the money came from, and the other about what is being carried alongside the journey. The second is not a legal condition at all and is the kind of thing this chapter exists for." },
+      { title: "Say what the ten cover", body: "The manners run through the conduct of the journey — provision, company, bearing, expenditure, and the treatment of those met along the way — and none of them concerns the validity of the rites." },
+      { title: "Place them", body: "They stand between the outward acts and the inward reading, and they belong to neither. They are what a person does on the journey rather than what he performs at the sites or understands by it." },
+    ],
+    closer: [
+      { title: "Why lawful expenditure comes first", body: "The pilgrimage is the one act of worship that must be bought. Everything else in the quarter can be performed by someone with nothing, and this cannot — which makes the source of the money a question the other books never have to raise." },
+      { title: "The clause about trade", body: "A hand empty of a trade that occupies the heart and scatters the concern. It is the same criterion as Book 6's third degree of fasting and Book 4's account of a divided heart: what is being measured is whether the concern is single." },
+    ],
+    distinction: ["Two conditions on one journey", "Lawful", "Where the money came from, which is a legal question with a legal answer.", "Unoccupied", "Whether something is being carried alongside, which no ruling reaches."],
+    misreading: "Do not read the ten manners as optional courtesies. They are the conditions under which the third chapter's reading becomes available, and the first of them can disqualify the whole journey.",
+    reflection: "Ask what you would be carrying alongside, if you went.",
+    audit: ["Where would the money come from?", "What would I carry alongside?", "Is my concern single on this?", "Which of the ten would fail first?"],
+    nodes: ["adab-hajj", "halal", "himma"],
+    model: pair("Two halves of the first manner", "Only one of them has a ruling.", [["Lawful expenditure", "A legal question, and the one the other books never face.", "support"], ["An empty hand", "No trade occupying the heart, which is the criterion of a single concern.", "balance"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "The substitute", formalTitle: "The place of the pilgrimage in religion",
+    overview: "The inward chapter opens by saying what the pilgrimage is for, and the answer is historical and comparative rather than devotional.",
+    moves: [
+      { title: "State the general principle", body: "There is no arrival at God except by keeping clear of appetites, restraining from pleasures, confining oneself to the necessities in them, and devoting oneself to God in all motions and stillnesses." },
+      { title: "Give the earlier solution", body: "And for this reason the monastics in the former communities withdrew from people, took to the mountain tops, and preferred wildness from people, seeking intimacy with God. They left present pleasures and bound themselves to hard strivings, and God praised them in His Book." },
+      { title: "Give what happened to it", body: "When that was effaced, and people turned to following appetites and abandoned devoting themselves to worship and grew slack in it, God sent His prophet to revive the road of the hereafter and renew the practice of the messengers in travelling it." },
+      { title: "Give the answer", body: "So the people of the communities asked him about monasticism and wandering in his religion, and he said: God has exchanged it for us with striving and the magnification on every height — meaning the pilgrimage. And he was asked about the wanderers, and said: they are the fasters." },
+    ],
+    closer: [
+      { title: "What the exchange claims", body: "That the pilgrimage occupies the place monasticism occupied — a withdrawal from ordinary life, undertaken for the same reason, and made available to everyone rather than to a class. A permanent withdrawal is replaced by one with a beginning and an end." },
+      { title: "Why this is the first thing said", body: "Ghazali's sequence begins with understanding, and he defines that as understanding the place of the pilgrimage in religion. The answer given here is what the reader is meant to be holding when the stage-by-stage reading begins." },
+    ],
+    distinction: ["Two ways to withdraw", "Permanently", "The monastic solution, praised in the Book, and available to a few.", "For a season", "A withdrawal with a beginning and an end, required of everyone able to reach it."],
+    misreading: "Do not read the exchange as a criticism of what it replaced. Ghazali quotes the verse praising the monks and describes the change as an exchange rather than a correction.",
+    reflection: "Ask what in your year occupies the place a withdrawal would.",
+    audit: ["What is the pilgrimage for, on this account?", "What does it replace?", "Do I have anything with this shape?", "What was I taught it was for?"],
+    nodes: ["rahbaniyya", "hajj", "itibar"],
+    model: pair("An exchange, not a correction", "The verse praising the monks is quoted in the same passage.", [["Monasticism", "Permanent withdrawal, for those who take it up.", "balance"], ["The pilgrimage", "A withdrawal with a beginning and an end, for everyone able.", "support"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "Whoever seeks something great", formalTitle: "Understanding, longing, and resolving",
+    overview: "The first three of twelve stages, and Ghazali's framing of the whole sequence is that each one is a sign for whoever will read it.",
+    moves: [
+      { title: "Give the sequence", body: "The first of the pilgrimage is understanding — the place of the pilgrimage in religion; then longing for it; then resolving upon it; then cutting the attachments that prevent it; then buying the garment; then the provision; then the mount; then setting out; then the desert; then consecrating; then entering; then completing the acts." },
+      { title: "Say what each one is", body: "And in every one of these matters is a reminder for one who remembers, and a lesson for one who takes lessons, and an alerting for the truthful aspirant, and an intimation for the perceptive." },
+      { title: "Give the resolve", body: "Let him magnify in himself the worth of the House and the worth of the Lord of the House, and know that he has resolved on a matter whose affair is lofty and whose danger is grave — and that whoever seeks something great risks something great." },
+      { title: "Give the condition on it", body: "And let him make his resolve pure for God, far from the admixtures of showing off and reputation. And among the most obscene of obscenities is that a man should intend the House of God and His sanctuary while the intended is someone else." },
+    ],
+    closer: [
+      { title: "The promise Ghazali attaches", body: "Let us point to the keys of them, so that when their door is opened and their causes known, there is disclosed to every pilgrim of their secrets what the clarity of his heart, the purity of his inward, and the abundance of his understanding require. What is given is a method, and what it yields is proportioned to the reader." },
+      { title: "Why the sequence starts before the journey", body: "Three of the twelve stages happen before anyone has bought anything. The pilgrimage on this account begins at a thought, which is what allows the whole of it to be read as a figure rather than only its rites." },
+    ],
+    distinction: ["Two ways to begin a pilgrimage", "At the understanding", "A thought, then a longing, then a resolve — three stages before anything is bought.", "At the departure", "Which would leave the first three unexamined and the figure without a beginning."],
+    misreading: "Do not read the disclosure as automatic. Ghazali says what is disclosed is proportioned to the clarity of the reader's heart, which makes the method available to everyone and its yield unequal.",
+    reflection: "Notice that the sequence begins three stages before any money is spent.",
+    audit: ["What do I understand the pilgrimage to be?", "Is there a longing, or only an intention?", "What is my resolve mixed with?", "What am I risking?"],
+    nodes: ["fahm", "itibar", "ikhlas"],
+    model: chain("The first three stages", "All of them before anything is bought.", [["Understanding", "The place of the pilgrimage in religion.", "support"], ["Longing", "Which follows the understanding rather than preceding it.", "support"], ["Resolve", "Made pure, and knowing that what is sought is great.", "balance"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "The creditor", formalTitle: "Cutting the attachments",
+    overview: "The fourth stage, and the most vivid passage in the book. Ghazali turns an abstract requirement into a figure that speaks.",
+    moves: [
+      { title: "Say what it means", body: "Cutting the attachments means the returning of wrongs and sincere repentance to God from all sins." },
+      { title: "Give the figure", body: "Every wrong is an attachment, and every attachment is like a creditor present, hanging on his collar, calling out to him and saying: where are you going?" },
+      { title: "Give what it says", body: "Do you intend the House of the King of kings while you are wasting His command in this dwelling of yours, and slighting it, and neglecting it? Are you not ashamed to come upon Him as a disobedient servant comes, so that He turns you back and does not accept you?" },
+      { title: "Give the instruction", body: "If you desire the acceptance of your visit, carry out His commands, return the wrongs, repent first of all sins, and cut your heart's attachment to what is behind you — so that you are turned to Him with the face of your heart as you are turned to His House with the face of your outward." },
+    ],
+    closer: [
+      { title: "The consequence he states", body: "If you do not do that, you will get from your journey nothing at the start but toil and misery, and nothing at the end but rejection. It is the strongest thing said in the book, and it concerns a journey that would be legally complete." },
+      { title: "The two practical instructions", body: "Cut the attachments to your homeland as one cut off from it, and reckon that you will not return. And write your will for your children and your family. Both belong to the fourth stage, and both treat the journey as one that may not have a return." },
+    ],
+    distinction: ["Two directions a pilgrim faces", "With the outward", "Turned toward the House, which the journey accomplishes by itself.", "With the heart", "Turned toward Him, which requires the attachments behind to be cut first."],
+    misreading: "Do not read the returning of wrongs as a spiritual exercise. It is the concrete restoration of what is owed to people, and the figure of the creditor is chosen because a creditor is owed something real.",
+    reflection: "Name the creditor that would be hanging on your collar.",
+    audit: ["What is owed, and to whom?", "Have I returned anything, or only repented?", "Is my will written?", "Which face is turned where?"],
+    nodes: ["alaiq", "mazalim", "tawba"],
+    model: chain("What the fourth stage requires", "In this order, and before anything else.", [["Return the wrongs", "What is owed to people, restored.", "support"], ["Repent of the sins", "Sincerely, and of all of them.", "support"], ["Cut what is behind", "So the heart faces where the body is going.", "support"], ["Write the will", "Reckoning that you may not return.", "balance"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "Provision that spoils", formalTitle: "The provision, and the longer journey",
+    overview: "The sixth stage, and the point where the parallel between the two journeys becomes explicit and starts doing work.",
+    moves: [
+      { title: "Give the requirement", body: "Let him seek the provision from a lawful place." },
+      { title: "Catch the moment", body: "And when he senses in himself an eagerness to increase it, and to seek what will keep over the length of the journey and not change or spoil before reaching the destination —" },
+      { title: "Give the parallel", body: "Let him recall that the journey of the hereafter is longer than this journey, and that its provision is godfearing, and that what is besides it, which he supposes to be his provision, stays behind him at death and betrays him." },
+      { title: "Give the image", body: "Like moist food that spoils at the first stage of a journey, so that at the time of need he is left bewildered and in need, with no recourse. And let him beware that his acts, which are his provision to the hereafter, do not accompany him after death — spoiled by the admixtures of showing off and the cloudings of shortcoming." },
+    ],
+    closer: [
+      { title: "Where the parallel is caught", body: "Not at the buying but at a particular feeling: the eagerness to lay in more, and the care about what will keep. Ghazali attaches the lesson to a specific and recognisable anxiety rather than to the object, which is why the figure lands rather than being merely apt." },
+      { title: "What spoils the other provision", body: "The admixtures of showing off and the cloudings of shortcoming — the subjects of Book 37 and of Book 38's three registers. The provision for the longer journey spoils by the same mechanism the rest of the Ihya spends its length on." },
+    ],
+    distinction: ["Two provisions for two journeys", "For the shorter", "Bought, carried, and left behind at death whatever care was taken over it.", "For the longer", "Godfearing, which is what actually accompanies a person, and which spoils by admixture."],
+    misreading: "Do not read the parallel as making the ordinary provision unimportant. Ghazali requires it to be lawful and assumes it will be bought; the lesson attaches to the anxiety about it, not to the buying.",
+    reflection: "Notice what you are careful to lay in enough of, and how long it will last.",
+    audit: ["What am I laying in?", "How long will it keep?", "What is my provision for the other journey?", "What could spoil it?"],
+    nodes: ["zad", "taqwa", "itibar"],
+    model: pair("Two provisions", "One is left behind and one accompanies.", [["Bought and carried", "However carefully chosen, it stays behind at death.", "balance"], ["Godfearing", "What accompanies, and what admixture spoils.", "support"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "The certain journey", formalTitle: "The mount, and the bier",
+    overview: "The seventh stage, and it carries the sharpest reasoning in the book: an argument about how people allocate their precautions.",
+    moves: [
+      { title: "Give the thanks", body: "When he brings the mount, let him thank God in his heart for having subjected the beasts to him, to carry the burden from him and lighten the hardship." },
+      { title: "Give the parallel", body: "And let him recall at it the conveyance he will ride to the abode of the hereafter, which is the bier on which he is carried — for the matter of the pilgrimage in one aspect parallels the matter of the journey to the hereafter." },
+      { title: "Give the question", body: "And let him look whether his journey on this mount is fit to be a provision for him for that journey on that conveyance. And how near that is to him — and what does he know, perhaps death is near, and his riding of the bier will be before his riding of the camel." },
+      { title: "Give the argument", body: "And riding the bier is certain, and the easing of the means of the journey is doubtful. So how does he take precautions for the doubtful journey, and provide for its provision and its mount, and neglect the matter of the certain journey?" },
+    ],
+    closer: [
+      { title: "Why the argument is about allocation", body: "It grants everything about the pilgrimage journey: that it is worth preparing for, that provision and a mount are needed, that care is appropriate. The whole force is in a comparison of two allocations of the same care, one to a journey that may not happen and one to a journey that certainly will." },
+      { title: "Its relation to Book 40", body: "Book 40 makes the same argument at length — that preparation follows nearness of expectation and not conviction, and that people prepare for a brother arriving tomorrow and not one arriving in a year. Here it is compressed into two clauses attached to a camel." },
+    ],
+    distinction: ["Two journeys, two allocations", "The doubtful", "This pilgrimage, which may not be completed, and which is carefully provisioned.", "The certain", "The one on the bier, which will happen, and which is neglected."],
+    misreading: "Do not read this as discouraging preparation for the pilgrimage. The argument requires that preparing for it be sensible, since its whole point is the comparison between two cares.",
+    reflection: "Compare what you have arranged for a trip with what you have arranged for the other thing.",
+    audit: ["Which journey am I provisioned for?", "Which is certain?", "Where is my care actually going?", "Would this journey provision the other?"],
+    nodes: ["rahila", "mawt", "itibar"],
+    model: pair("Where the care goes", "The argument grants that both need preparing.", [["The doubtful journey", "Provision, mount, and means, all carefully arranged.", "balance"], ["The certain journey", "Riding the bier, which is not in doubt, and is neglected.", "warning"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "Two unstitched garments", formalTitle: "The consecrated garment and the shroud",
+    overview: "The eighth stage, and the parallel is so exact that Ghazali points to the detail of the tailoring.",
+    moves: [
+      { title: "Give the parallel", body: "When he buys the two garments of consecration, let him recall the shroud and being wrapped in it." },
+      { title: "Give the possibility", body: "For he will wear these two at the nearing of the House of God — and perhaps his journey to it will not be completed, and he will meet God wrapped in the garments of the shroud, inevitably." },
+      { title: "Draw the comparison", body: "So as he does not meet the House of God except in a dress and an appearance contrary to his customs, so he will not meet God after death except in a dress contrary to the dress of the world." },
+      { title: "Give the detail", body: "And this garment is close to that garment, since there is no stitching in it, as in the shroud." },
+    ],
+    closer: [
+      { title: "Why the detail matters", body: "The parallel could have rested on both being white, or both being simple. Ghazali picks the one feature that is a rule rather than a resemblance: the consecrated garment must be unstitched, and so is a shroud. The figure is anchored in a legal requirement rather than in an impression." },
+      { title: "What the stage does to the sequence", body: "It is the point at which the two journeys stop being parallel and start being possibly the same one. The clause about the journey perhaps not being completed is placed here rather than earlier, at the exact moment the pilgrim is buying the thing he might be buried in." },
+    ],
+    distinction: ["Two meetings, one dress", "The House", "Approached in a dress contrary to a person's customs, which the law requires.", "The Meeting", "Approached in a dress contrary to the world's, which nobody chooses."],
+    misreading: "Do not treat the parallel as poetic. Its anchor is a legal detail — that neither garment is stitched — and Ghazali points to it explicitly rather than leaving the resemblance impressionistic.",
+    reflection: "Notice that the one moment the sequence raises the possibility of death is the moment the cloth is bought.",
+    audit: ["What would I be wearing?", "Have I noticed the detail he anchors it on?", "Which dress is chosen and which is not?", "Why is the possibility raised here?"],
+    nodes: ["ihram", "kafan", "itibar"],
+    model: pair("Two unstitched garments", "Anchored on a rule, not a resemblance.", [["Consecration", "Required to be unstitched, worn approaching the House.", "support"], ["The shroud", "Also unstitched, worn approaching the Meeting.", "support"]]),
+  }),
+  makeChapter({
+    id: 11, shortTitle: "Accepted and turned away", formalTitle: "The first sight of the House",
+    overview: "The stage at which the journey arrives, and Ghazali attaches to it the largest of the parallels — and then a general rule for all of them.",
+    moves: [
+      { title: "Give the moment", body: "When the sight falls upon the House, let the magnitude of the House be present in the heart, and let him reckon it as though he beholds the Lord of the House, from the intensity of his magnifying Him." },
+      { title: "Give the hope", body: "And hope that God grant you the sight of His noble face, as He granted you the sight of His mighty House. And thank God for bringing you to this rank and joining you to the company of those who arrive upon Him." },
+      { title: "Give the parallel", body: "And recall at that the streaming of people on the Day of Resurrection toward the direction of the Garden, all of them hoping to enter it — then their dividing into those permitted to enter and those turned away, as the pilgrims divide into the accepted and the rejected." },
+      { title: "Give the general rule", body: "And do not be heedless of recalling the matters of the hereafter in anything you see — for all the states of the pilgrim are evidence of the states of the hereafter." },
+    ],
+    closer: [
+      { title: "Why the crowd is the figure", body: "The earlier parallels were between objects: a provision, a mount, a garment. This one is between two crowds, and its content is that arriving is not the same as being received. The pilgrim standing in a crowd of pilgrims is being shown a division he cannot see." },
+      { title: "The hope Ghazali attaches", body: "That the sight of the House be a token of the sight of the face. It is the argument of Book 36 — that the highest pleasure is the sight, and that present knowledge and that sight differ by clarity along one line — arriving in a single sentence at the moment of the pilgrimage everyone remembers." },
+    ],
+    distinction: ["Two things a crowd of arrivals contains", "Those permitted", "Received, which is not settled by having arrived.", "Those turned away", "Who arrived exactly as the others did."],
+    misreading: "Do not take the general rule as licence for arbitrary allegory. Ghazali supplies the correspondences himself, stage by stage, and the rule summarises a method he has already demonstrated.",
+    reflection: "Notice that the parallel offered at the moment of arrival is about not being received.",
+    audit: ["What would I be hoping for?", "Is arriving the same as being received?", "What do I see, and what does it evidence?", "Where is this argued at length?"],
+    nodes: ["bayt", "qiyama", "nazar"],
+    model: chain("Two crowds", "The division is invisible from inside either one.", [["All arriving", "Streaming toward it, all of them hoping.", "balance"], ["Some permitted", "Received, which arriving did not settle.", "support"], ["Some turned away", "Having arrived in exactly the same way.", "warning"]]),
+  }),
+  makeChapter({
+    id: 12, shortTitle: "Not your body", formalTitle: "The circling, and what is actually circling",
+    overview: "The most doctrinally loaded passage in the book. Ghazali says what the circling is, denies the obvious reading of it, and then explains what a rite is.",
+    moves: [
+      { title: "Say what it is", body: "Know that the circling is a prayer. So bring into your heart in it the reverence, fear, hope, and love that we set out in the Book of Prayer." },
+      { title: "Give the resemblance", body: "And know that by circling you are resembling the near angels who encompass the Throne, circling around it." },
+      { title: "Deny the obvious reading", body: "And do not suppose that the aim is the circling of your body around the House. Rather the aim is the circling of your heart with the remembrance of the Lord of the House — so that you do not begin the remembrance except from Him and do not end except with Him, as you begin the circling from the House and end at the House." },
+      { title: "Name what the House is", body: "And know that the noble circling is the circling of the heart in the presence of Lordship, and that the House is an outward likeness, in the world of sovereignty, for that presence which is not beheld by sight." },
+    ],
+    closer: [
+      { title: "The proportion he draws", body: "As the body is an outward likeness, in the world of the seen, for the heart, which is not beheld by sight and is in the world of the unseen. Two likeness-relations set equal: House is to Presence as body is to heart. It is the clearest statement of the two-worlds doctrine in the Quarter of Worship." },
+      { title: "The licence for the outward rite", body: "Since the rank of most creatures fell short of such circling, they were commanded to resemble them as far as possible, and were promised that whoever resembles a people is of them. The outward act is not a substitute for the inward one; it is a resemblance, and resemblance is given a promise of its own." },
+    ],
+    distinction: ["Two things that circle", "The body around the House", "Which Ghazali explicitly denies is the aim, while requiring it.", "The heart around the Presence", "Beginning and ending nowhere else, which is what the outward act figures."],
+    misreading: "Do not conclude that the bodily circling is dispensable. The passage that denies it is the aim is the same passage that grounds it, on the principle that whoever resembles a people is of them.",
+    reflection: "Ask what your remembrance begins from and ends at, and whether it makes a circuit.",
+    audit: ["What is circling, in my case?", "Where does my remembrance begin and end?", "Do I read the outward as a substitute or a resemblance?", "What is the House a likeness of?"],
+    nodes: ["tawaf", "malakut", "qalb"],
+    model: pair("Two likeness-relations, set equal", "The clearest statement of the doctrine in this quarter.", [["House to Presence", "An outward likeness in the world of sovereignty for what sight does not behold.", "support"], ["Body to heart", "An outward likeness in the world of the seen for what is in the unseen.", "support"]]),
+  }),
+  makeChapter({
+    id: 13, shortTitle: "A stair", formalTitle: "The two worlds, and what the method yields",
+    overview: "The doctrine underneath the whole chapter, stated once and briefly, and it explains why any of the readings work at all.",
+    moves: [
+      { title: "State the relation", body: "The world of sovereignty and the seen is a stair to the world of the unseen and the Kingdom — for one to whom God opens the door." },
+      { title: "Give the instance", body: "And to this correspondence the indication was made, that the Frequented House in the heavens is opposite the Kaaba — for the circling of the angels around it is like the circling of humans around this House." },
+      { title: "Give the condition", body: "For one to whom God opens the door. The stair is described as a stair for everyone and as climbable by those for whom it is opened, which is the same proportioning stated when the method was introduced." },
+      { title: "Say what the method yields", body: "There is disclosed to every pilgrim of these secrets what the clarity of his heart, the purity of his inward, and the abundance of his understanding require. The keys are given to all and the doors open differently." },
+    ],
+    closer: [
+      { title: "Why this is not allegory", body: "An allegory is a figure a writer imposes. What is claimed here is a correspondence in the things themselves — a lower world standing to a higher one as a body stands to a heart. On that account the pilgrim is not being told to imagine a meaning but to perceive one that is there." },
+      { title: "How the book ends its argument", body: "With a proportioned promise rather than a result. The method is complete, the correspondences are supplied, and what any particular reader gets from them is left to depend on him — which is the same restraint Book 39 shows when it says that thought's field is wide but its yield is not equal." },
+    ],
+    distinction: ["Two ways a rite can carry meaning", "By correspondence", "The lower world standing to the higher as a body to a heart, which is perceived.", "By allegory", "A meaning assigned by a writer, which would make the readings arbitrary."],
+    misreading: "Do not take the door being opened as a reason not to look. The keys are given to every reader; what differs is what opens, and Ghazali gives the method to everyone.",
+    reflection: "Ask whether you have been reading these correspondences as invented or as found.",
+    audit: ["Invented, or found?", "What has the door opened on for me?", "Am I waiting for a disclosure or using a method?", "What is proportioned to what?"],
+    nodes: ["malakut", "itibar", "fahm"],
+    model: chain("Why the readings work", "Each step is a claim about the things, not about the reader.", [["Two worlds", "The seen and the unseen, the sovereignty and the Kingdom.", "support"], ["A likeness relation", "House to Presence as body to heart.", "support"], ["A stair", "The lower climbable to the higher, for one to whom it is opened.", "balance"], ["Proportioned", "What is disclosed depends on the clarity of the heart.", "balance"]]),
+  }),
+];
+
+export const book07ConceptNodes: ConceptNode[] = [
+  ["hajj", "The pilgrimage", "Read twice", "The acts fixed in one chapter and read as signs in the next."],
+  ["structure", "Three chapters", "The shortest is the point", "Excellences, outward acts, and the fine manners with the inward acts."],
+  ["itibar", "Taking a lesson", "A supplied method", "Correspondences given stage by stage, not left to the reader to invent."],
+  ["ihram", "Consecration", "A temporary status", "Entered at a place, marked by a garment, with its own prohibitions."],
+  ["fiqh", "The rulings", "Given plainly", "Conditions, elements, obligations, and prohibitions, in four parts."],
+  ["adab-hajj", "The ten manners", "Between the two chapters", "What is done on the journey, rather than at the sites or by it."],
+  ["halal", "Lawful expenditure", "The first manner", "The one act of worship in the quarter that must be bought."],
+  ["himma", "A single concern", "The second half", "A hand empty of a trade that occupies the heart."],
+  ["rahbaniyya", "Monasticism", "What it replaces", "An exchange rather than a correction; the verse praising the monks is quoted."],
+  ["fahm", "Understanding", "The first stage", "The place of the pilgrimage in religion, held before the sequence begins."],
+  ["ikhlas", "Sincerity", "In the resolve", "To intend the House while the intended is someone else is named an obscenity."],
+  ["alaiq", "Attachments", "A creditor at the collar", "Every wrong is one, and every one of them speaks."],
+  ["mazalim", "Wrongs owed", "Returned, not repented", "Concrete restoration to people, which is what a creditor figure requires."],
+  ["tawba", "Repentance", "The fourth stage", "Sincere, of all sins, and before the journey rather than during it."],
+  ["zad", "Provision", "Two of them", "One is carried and left behind; one is godfearing and accompanies."],
+  ["taqwa", "Godfearing", "The other provision", "Which spoils by the admixtures Books 37 and 38 treat."],
+  ["rahila", "The mount", "And the bier", "One journey is doubtful and provisioned; the other is certain and neglected."],
+  ["mawt", "Death", "Raised at the cloth", "The one stage that names the possibility is the buying of the garment."],
+  ["kafan", "The shroud", "Also unstitched", "The parallel is anchored on a rule rather than a resemblance."],
+  ["bayt", "The House", "A likeness", "An outward figure, in the world of sovereignty, for a presence sight does not reach."],
+  ["qiyama", "The gathering", "Two crowds", "All arriving, and then dividing into the received and the turned away."],
+  ["nazar", "The sight", "Hoped from the seeing", "The argument of Book 36 arriving in a single sentence."],
+  ["tawaf", "The circling", "Not the body", "The aim is the heart's circuit, beginning and ending nowhere else."],
+  ["malakut", "The Kingdom", "A stair", "The seen world climbable to the unseen, for one to whom the door is opened."],
+  ["qalb", "The heart", "The unseen term", "As the House is to the Presence, so the body is to the heart."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book07Journeys: Journey[] = [
+  {
+    id: "what-is-it-for", number: "01", question: "What is the pilgrimage actually for?", title: "Find what it replaced",
+    description: "Take the answer Ghazali gives to the first of his twelve stages — a historical and comparative one — and see how the book is built so that a route can be walked twice.",
+    payoff: "You get the thing the reader is meant to be holding before the stage-by-stage reading begins.",
+    image: assetUrl("assets/system/book07-the-exchange.jpg"), imageAlt: "A stone cell cut into a hillside with its door standing open, and a worn road running past it into the distance.", minutes: 11, color: "#278d91",
+    nodes: [
+      node("read-twice", "See the shape", "A route, walked twice", "The acts fixed in one chapter and read as signs in the next.", "A figure needs something definite to be a figure of.", 1, "order"),
+      node("the-principle", "Take the principle", "No arrival but by clearing", "Keeping clear of appetites and devoting oneself in all motions.", "Stated generally before any solution is named.", 5, "know"),
+      node("the-monks", "Note who solved it", "And the verse praising them", "The monastics withdrew, and God praised them in His Book.", "An exchange follows, not a correction.", 5, "witness"),
+      node("the-exchange", "Take the answer", "Exchanged for us", "God has exchanged it for us with striving and the magnification on every height.", "A permanent withdrawal replaced by one with an end.", 5, "clear"),
+      node("everyone", "Note who it is for", "Everyone able to reach it", "What a few undertook becomes required of all who can.", "Which is the difference the exchange makes.", 5, "balance"),
+    ],
+  },
+  {
+    id: "before-you-go", number: "02", question: "What has to happen before I go?", title: "Take the four stages before the road",
+    description: "Follow the sequence from a thought to a resolve, meet the creditor hanging on the collar, and take the two practical instructions attached to cutting the attachments.",
+    payoff: "You get the four stages that happen before any money is spent, and the strongest warning in the book.",
+    image: assetUrl("assets/system/book07-the-creditor.jpg"), imageAlt: "A packed travelling roll by a doorway with a bundle of unopened letters weighted on top of it.", minutes: 13, color: "#bf7a35",
+    nodes: [
+      node("twelve-stages", "Take the sequence", "It starts at a thought", "Understanding, longing, resolving, cutting — before anything is bought.", "Which is what lets the whole journey be read, not only the rites.", 6, "order"),
+      node("something-great", "Weigh the resolve", "Risks something great", "Whoever seeks something great risks something great.", "The resolve is to be made pure before it is acted on.", 6, "know"),
+      node("the-obscenity", "Note the warning", "The intended is someone else", "Named among the most obscene of obscenities.", "Intending the House while intending an audience.", 6, "guard"),
+      node("the-creditor", "Meet the creditor", "Hanging on your collar", "Every wrong is an attachment, and every attachment speaks.", "Chosen because a creditor is owed something real.", 7, "witness"),
+      node("return-them", "Take the instruction", "Return, then repent", "Returning wrongs comes before repentance in his order.", "Restoration to people, not an inward exercise.", 7, "clear"),
+      node("the-will", "Write the will", "As one not returning", "Cut the attachments to your homeland and reckon you will not come back.", "The journey is treated as one that may not have a return.", 7, "steady"),
+    ],
+  },
+  {
+    id: "two-journeys", number: "03", question: "Which journey am I preparing for?", title: "Follow the parallel through three purchases",
+    description: "Watch the provision, the mount, and the garment each acquire a counterpart, and take the argument about where a person's care actually goes.",
+    payoff: "You get a comparison of two allocations of the same care, and a parallel anchored on a legal detail.",
+    image: assetUrl("assets/system/book07-unstitched.jpg"), imageAlt: "Two lengths of plain undyed cloth folded on a shelf, both unhemmed, one slightly longer than the other.", minutes: 13, color: "#c25f50",
+    nodes: [
+      node("the-eagerness", "Catch the moment", "Eager to lay in more", "The lesson attaches to a feeling, not to the object.", "Which is why the figure lands rather than merely fitting.", 8, "diagnose"),
+      node("what-spoils", "Take the image", "Moist food", "Spoiling at the first stage, leaving him bewildered at the time of need.", "And what spoils the other provision is admixture.", 8, "pattern"),
+      node("the-bier", "Take the parallel", "The other conveyance", "The bier on which he is carried, which he may ride first.", "The matter of the pilgrimage parallels the matter of that journey.", 9, "witness"),
+      node("the-allocation", "Take the argument", "Certain and doubtful", "Precautions taken for the doubtful journey, and the certain one neglected.", "It grants that both are worth preparing for.", 9, "clear"),
+      node("the-detail", "Note the anchor", "No stitching", "The parallel rests on a rule, not on a resemblance.", "Consecration and shroud are both unstitched.", 10, "know"),
+      node("perhaps-not", "Note where it is raised", "At the cloth", "The one stage that names the possibility of not arriving.", "Placed exactly where the garment is bought.", 10, "steady"),
+    ],
+  },
+  {
+    id: "what-circles", number: "04", question: "What is actually happening at the rites?", title: "Find what is circling",
+    description: "Arrive at the House, take the parallel offered at the moment of arrival, and then the passage that denies the obvious reading of the circling and says what a rite is.",
+    payoff: "You leave with the clearest statement of the two-worlds doctrine in the quarter, and the licence it gives the outward act.",
+    image: assetUrl("assets/system/book07-two-circuits.jpg"), imageAlt: "A worn circular path in a stone floor around a plain square block, seen from directly above.", minutes: 13, color: "#586fa8",
+    nodes: [
+      node("the-crowd", "Take the crowd", "All of them hoping", "Streaming toward it, and then dividing into the received and the turned away.", "The division is invisible from inside either group.", 11, "witness"),
+      node("the-hope", "Note the hope", "The sight of the face", "Granted the sight of the House, hope for the sight of the face.", "Book 36's argument arriving in one sentence.", 11, "receive"),
+      node("all-states", "Take the rule", "Everything is evidence", "All the states of the pilgrim are evidence of the states of the hereafter.", "A summary of a method already demonstrated, not a licence to invent.", 11, "pattern"),
+      node("not-your-body", "Take the denial", "Not your body", "The aim is the circuit of the heart, beginning and ending nowhere else.", "Stated in the same passage that grounds the outward act.", 12, "clear"),
+      node("the-proportion", "Take the proportion", "House is to Presence", "As body is to heart: two likeness-relations set equal.", "The clearest statement of the doctrine in this quarter.", 12, "know"),
+      node("resembles", "Take the licence", "Whoever resembles a people", "Most fell short of that circling, so were commanded to resemble.", "Resemblance, not substitute, and given a promise of its own.", 12, "steady"),
+    ],
+  },
+];
+
+export const book07Movements: TaxonomyGroup[] = [
+  ["bab1", "1. The excellences and the conditions", "The pilgrimage, the House, Mecca and Medina; and the four parts of the legal frame.", [1, 2]],
+  ["bab2", "2. The outward acts", "Ten groupings in order, from setting out to the return home.", [3]],
+  ["bab3", "3. The fine manners and the inward acts", "Ten manners, and the journey read a second time as a sequence of signs.", [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50"][index % 3] })) as TaxonomyGroup[];
+
+export const book07Instrument: Instrument = {
+  title: "Which journey are you provisioned for",
+  note: "Ghazali reads the pilgrimage as a sequence of twelve stages, each of which has a counterpart in the journey nobody avoids. His sharpest observation is that people take precautions for the doubtful journey and neglect the certain one. Answer for what you have actually arranged, whether or not you are going anywhere.",
+  items: [
+    {
+      id: "prep", label: "What you have actually arranged", lede: "For a real journey, or for the life you are in",
+      note: "The first question follows his own order of purchases — provision, mount, garment — with the fourth option being the stage that comes before all of them. The second is his fourth stage, cutting the attachments, which he says means the returning of wrongs and sincere repentance, and which carries two practical instructions.",
+      axes: [
+        {
+          id: "stage", kicker: "The stages", question: "What have you been thinking about arranging?",
+          options: [
+            { id: "zad", label: "Provision — having enough, and enough that keeps", note: "His sixth stage, and the lesson attaches to the eagerness rather than to the buying." },
+            { id: "rahila", label: "The means of getting there", note: "His seventh, which carries the argument about certain and doubtful journeys." },
+            { id: "thawb", label: "What I would wear, and what I would look like", note: "His eighth, anchored on a legal detail: neither garment is stitched." },
+            { id: "azm", label: "Nothing yet — I am still deciding whether", note: "His third stage, which comes before any of the purchases." },
+          ],
+        },
+        {
+          id: "alaiq", kicker: "The attachments", question: "And what has been done about what is owed?",
+          options: [
+            { id: "returned", label: "I have returned what I owed people", note: "The first thing his fourth stage requires, and it is concrete." },
+            { id: "repented", label: "I have repented, but not returned anything", note: "Half of the fourth stage, and Ghazali gives the returning first." },
+            { id: "will", label: "I have settled my affairs and written a will", note: "The second practical instruction of the fourth stage." },
+            { id: "none", label: "I have not thought about it", note: "Which is the case the figure of the creditor is written for." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "*|none", name: "The creditor at your collar", role: "warning", chapterId: 7, body: "This is the case Ghazali writes the figure for. Every wrong is an attachment, and every attachment is like a creditor present, hanging on his collar, calling out: where are you going? Do you intend the House of the King of kings while you are wasting His command in this dwelling of yours?", action: "His instruction is in order and the order matters: carry out the commands, return the wrongs, repent of all sins, and only then cut the heart's attachment to what is behind. And the consequence he states is the strongest thing in the book — without it, nothing at the start but toil and misery, and nothing at the end but rejection, on a journey that would be legally complete." },
+        { key: "*|repented", name: "Half of the fourth stage", role: "balance", chapterId: 7, body: "Ghazali gives two things and gives them in an order: the returning of wrongs, and sincere repentance from all sins. You have the second. His figure is chosen precisely because a creditor is owed something real — an attachment is not dissolved by regretting it.", action: "Name what is actually owed and to whom. This is the least spiritual instruction in the third chapter and the one it puts first, and everything that follows in his sequence — the provision, the mount, the garment — is described as being prepared by someone who has already done it." },
+        { key: "rahila|*", name: "Which journey is certain", role: "warning", chapterId: 9, body: "The seventh stage carries the sharpest reasoning in the book. Recall at the mount the conveyance you will ride to the abode of the hereafter, which is the bier — and what do you know, perhaps death is near and your riding of the bier will be before your riding of the camel.", action: "Then his argument, which grants everything about preparing for the journey: riding the bier is certain, and the easing of the means of this journey is doubtful — so how does a person take precautions for the doubtful journey and neglect the certain one? Book 40 makes the same argument at length, and locates the failure in nearness of expectation rather than in belief." },
+        { key: "zad|*", name: "The provision that stays behind", role: "balance", chapterId: 8, body: "Ghazali attaches the lesson of the sixth stage not to the buying but to a particular feeling: when you sense in yourself an eagerness to increase the provision, and to seek what will keep over the length of the journey and not spoil before the destination.", action: "At that moment, he says, recall that the other journey is longer, that its provision is godfearing, and that what you suppose to be your provision stays behind at death and betrays you — like moist food spoiling at the first stage, leaving you bewildered at the time of need. And note what spoils the provision that does accompany you: the admixtures of showing off and the cloudings of shortcoming." },
+        { key: "thawb|*", name: "Two unstitched garments", role: "balance", chapterId: 10, body: "The eighth stage, and the parallel is anchored on a rule rather than on a resemblance: this garment is close to that garment, since there is no stitching in it, as in the shroud. Ghazali points to the tailoring explicitly.", action: "Note where he places the possibility of death — here, at the moment the cloth is bought, and nowhere earlier: perhaps his journey will not be completed, and he will meet God wrapped in the shroud inevitably. As you do not meet the House except in a dress contrary to your customs, so you will not meet God except in a dress contrary to the world's." },
+        { key: "azm|returned", name: "The third stage, properly begun", role: "support", chapterId: 6, body: "You are at the resolve, and the fourth stage's hardest requirement is already met. Ghazali's instruction here is to magnify in yourself the worth of the House and of the Lord of the House, and to know that you have resolved on a matter whose affair is lofty and whose danger is grave — for whoever seeks something great risks something great.", action: "The condition he attaches is on the resolve itself: make it pure, far from the admixtures of showing off and reputation. And his warning is unusually blunt — that among the most obscene of obscenities is that a man should intend the House of God and His sanctuary while the intended is someone else." },
+        { key: "azm|*", name: "Before anything is bought", role: "balance", chapterId: 6, body: "Three of Ghazali's twelve stages happen before any money is spent: understanding the place of the pilgrimage in religion, then longing for it, then resolving upon it. You are in that stretch, which is where the whole reading of the journey begins.", action: "Take the first stage seriously before the third — his answer to what the pilgrimage is for is historical: that God exchanged monasticism for it, a withdrawal with a beginning and an end, required of everyone able rather than undertaken by a few. That is what he means a person should be holding when he resolves." },
+        { key: "*|*", name: "Read the stage with the attachments", role: "balance", chapterId: 6, body: "A stage of preparation, and a state of what is owed. Ghazali's sequence puts the cutting of attachments fourth — after understanding, longing, and resolve, and before every purchase — which means it is meant to be settled before the arranging begins.", action: "His promise about the method is worth holding either way: the keys are given, and what is disclosed to any pilgrim of these secrets is what the clarity of his heart, the purity of his inward, and the abundance of his understanding require. The method is for everyone; what it opens is not equal." },
+      ],
+    },
+  ],
+};
+
+export const book07Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 7 was read and used to establish the three chapters, the ten groupings of the outward acts, the ten fine manners, and the stage-by-stage reading of the journey.", url: "https://shamela.ws/book/9472/239" },
+  { label: "The outward acts in order", note: "The chapter arranging the acts in ten groupings from setting out to the return, ending with the customs of coming home.", url: "https://shamela.ws/book/9472/246" },
+  { label: "The fine manners", note: "The passage giving ten manners of the journey, beginning with lawful expenditure and a hand empty of a trade that scatters the concern.", url: "https://shamela.ws/book/9472/261" },
+  { label: "The inward acts", note: "The passage setting out the twelve stages, promising the keys to their secrets, and answering the question of the pilgrimage's place in religion by the exchange for monasticism.", url: "https://shamela.ws/book/9472/265" },
+  { label: "The stages read as signs", note: "The passage attaching a counterpart to the resolve, the cutting of attachments, the provision, the mount, and the two garments.", url: "https://shamela.ws/book/9472/267" },
+  { label: "The circling", note: "The passage on the first sight of the House and on the circling, denying that the aim is the body's circuit and setting the House to the Presence as the body is to the heart.", url: "https://shamela.ws/book/9472/269" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 7 as the seventh book of the Quarter of Worship and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book07: SystemBook = {
+  id: 7,
+  title: "The Mysteries of Pilgrimage",
+  shortTitle: "Pilgrimage",
+  defaultJourneyId: "what-is-it-for",
+  chapters: book07Chapters,
+  conceptNodes: book07ConceptNodes,
+  journeys: book07Journeys,
+  sources: book07Sources,
+  taxonomy: {
+    title: "Three chapters",
+    note: "Ghazali's own three, in his order. The second is by far the longest and is entirely procedural; the third is the shortest and contains everything the book is remembered for — a route already fixed, walked a second time with a counterpart attached to every stage.",
+    groups: book07Movements,
+  },
+  instrument: book07Instrument,
+  editorialNote: "The four journeys, thirteen reading sections, visual models, and diagnostic are editorial learning aids. The sections follow Ghazali's three chapters in his order and are grouped under them in the movements list. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration, and the Arabic carries the graders' notes alongside a number of those used here. One matter of scope should be stated plainly. Most of this book by length is a manual of the rites — the conditions of obligation, the elements and what invalidates them, the prohibitions of the consecrated state, and the acts in order across ten groupings, including the compensations owed when something is omitted. Those rulings differ between the schools of law and change with circumstances; this edition presents how the material is organised and what its divisions make possible, and reproduces none of them. Nothing here should be used to determine whether the pilgrimage is owed by anyone, how it is to be performed, or what is owed when something is missed; that is the business of a work of law and of qualified guidance. The third chapter's readings are given as Ghazali gives them, including his statement that the aim of the circling is not the circuit of the body — a statement made in the same passage that grounds the outward rite on the principle that whoever resembles a people is of them, and the two belong together. He is also explicit that what these readings disclose is proportioned to the reader, which this edition preserves rather than promising a result. The diagnostic applies his own sequence of stages and his own fourth stage to what a reader supplies about his own arrangements, and cannot pronounce on anyone's state.",
+};
