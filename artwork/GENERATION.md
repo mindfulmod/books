@@ -168,3 +168,141 @@ Five architectural plates for *The Censure of Status and Ostentation* were creat
 - **What is praise actually giving me?** Use a Mamluk courtyard inspired by Sultan Hassan and Qalawun architecture, with pale limestone, restrained ablaq, brass lamps, and an octagonal fountain. Let one water channel enter a polished ceremonial gallery that amplifies warm light and another enter a quiet stone workshop with measuring tools, a level, and a repair bench.
 - **How can a good act become performance?** Use a straight-on Nasrid five-bay arcade inspired by the Alhambra. Place one restrained still life in each bay: mirror and basin for body, fine cloth and plain cloak for attire, lectern and speaking horn for speech, prayer mat and service tool for action, and visitor lanterns around one seat for associates.
 - **How do I keep acting without performing?** Use an Ottoman mosque and library sequence inspired by Süleymaniye and Topkapi, with exactly four connected rooms. Track the same brass lamp and cedar stand through a private study, a witnessed arcade, a ceremonial reception room, and a quiet room after the gathering where the original lamp still burns.
+
+## Books 1–4 and 29–40 journey illustrations
+
+Eighty explanatory plates were created with the built-in image generation tool on 2026-08-21 and 2026-08-22. This was new bitmap generation rather than reference-image editing. Full-resolution 1672 by 941 PNG masters are preserved in `artwork/system-source/`; optimized 1600 by 900 JPEGs and 480 by 270 navigation thumbnails are served from `public/assets/system/`.
+
+### Shared prompt direction
+
+> Create a cinematic 16:9 editorial illustration for an adult interactive reading edition of Imam al-Ghazali's Ihya. Make each visual luminous, hopeful, intellectually clear, and historically grounded in a named real Islamic architectural tradition rather than fantasy. Use sunlit ivory limestone and white marble, honey-gold brass, turquoise and cobalt accents, a very small coral accent where useful, and fresh green sparingly. Use natural light, refined tactile materials, generous negative space, strong symbolic composition, painterly realism, and subtle miniature-painting precision. Render specified counts exactly. No modern objects, readable text, letters, calligraphy, labels, logos, watermarks, pseudo-script, faces, prominent people, dark-green dominance, desaturation, ruins, gloom, gothic styling, orientalist excess, or supernatural imagery.
+
+Book 40 received an additional safety constraint: depict only the requested earthly metaphors and never depict the afterlife, souls, graves, angels, bodies, punishment, or other unseen realities.
+
+### Book 1 — Knowledge
+
+- `book01-twenty-parties`: four inward-facing lecterns with distinct blank books around an empty center in a luminous library court.
+- `book01-the-cupper`: loom shuttle, tailor's shears, and traditional cupping vessels arranged as three skilled crafts on clean linen.
+- `book01-five-words`: five brass plaques; four use unmistakably nonlinguistic geometry and the fifth is rubbed blank. A first render containing text-like marks was rejected and regenerated.
+- `book01-the-cup`: one overturned cup before a cool shaded doorway inside a bright Andalusian court.
+- `book01-the-wick`: one lamp with a visibly shortened wick illuminating one blank open book.
+
+### Book 2 — Principles of the Creed
+
+- `book02-four-holds`: one sapling supported by four separate cords and four ground pegs.
+- `book02-the-dose`: three graduated apothecary vials from smallest to largest with measured amber liquid.
+- `book02-the-veil`: one fine linen sheet transmitting even light across a doorway without any form behind it.
+- `book02-four-pillars`: four equal columns, each divided by ten shallow horizontal notch bands.
+- `book02-three-questions`: one threshold opening into three distinctly lit corridors.
+
+### Book 3 — Mysteries of Purification
+
+- `book03-four-ranks`: four ascending basins moving from full clear water to completely dry.
+- `book03-declared-scope`: one plain tablet carrying only a single horizontal scored boundary.
+- `book03-unchanged-water`: one unadorned earthenware jar of clear still water on a sunlit doorstep.
+- `book03-the-parings`: one washed upturned bowl, grooming shears, and a folded towel in a spotless bath antechamber.
+
+### Book 4 — Mysteries of Prayer
+
+- `book04-empty-room`: one straight prayer mat in an otherwise bare prayer room with a high window.
+- `book04-six-lamps`: exactly six lamps in one row, four lit and two dark, with no other light source.
+- `book04-the-cloak`: a patterned cloak folded aside and a plain undyed cloak laid ready.
+- `book04-four-layers`: a walnut shown in four stages beside a folded cloth and shallow water basin.
+- `book04-four-cycles`: four concentric scored rings with a single gap in the outermost ring.
+
+### Book 29 — Condemnation of Pride and Self-Admiration
+
+- `book29-three-beliefs`: three unequal plinths leading to three gates, making the hierarchy of self-beliefs spatial.
+- `book29-seven-grounds`: seven distinct niches holding seven sources of pride.
+- `book29-four-motives`: four channels converging on one central court.
+- `book29-two-stations`: one root supporting five successive thresholds.
+- `book29-keys-treasury`: a small anonymous hand holding keys before a luminous treasury.
+
+### Book 30 — Condemnation of Self-Delusion
+
+- `book30-hidden-argument`: an attractive foreground claim concealing the mechanism behind it.
+- `book30-hope-and-wishing`: cultivated causes contrasted with unsupported expectation.
+- `book30-remedy-and-residue`: treatment reaching the visible symptom while residue remains below.
+- `book30-review-and-armour`: a patched robe and historically plausible Mamluk mail-and-lamellar armour. A first render using European plate armour was rejected and regenerated.
+- `book30-not-yet`: a sequence halted at the threshold by the assumption that action can always come later.
+
+### Book 31 — Repentance
+
+- `book31-three-parts`: lamp, basin, and three garden paths beyond one threshold.
+- `book31-open-door`: four nested open arches making the continuing possibility of return visible.
+- `book31-drops-on-stone`: repeated drops visibly wearing a stone surface.
+- `book31-ledger-and-road`: an open account paired with a clear onward route.
+- `book31-two-ingredients`: two distinct ingredients joining one restorative mixture.
+
+### Book 32 — Patience and Thankfulness
+
+- `book32-two-motives`: gold and turquoise currents meeting as two competing motives.
+- `book32-many-names`: the same lamp repeated in exactly eight niches.
+- `book32-bow-and-shield`: a closed lattice, covered dish, and open garden gate aligned along one channel.
+- `book32-right-use`: a fitted brass tool beside its exact empty recess.
+- `book32-uninterrupted`: one strong turquoise channel continuing past many side fountains.
+- `book32-two-duties`: one watercourse splitting into two branches that nourish the same garden.
+
+### Book 33 — Fear and Hope
+
+- `book33-tillage`: identical cultivated and neglected plots divided by an irrigation rill.
+- `book33-before-the-king`: one empty standing place before a raised seat, with no advocate's bench.
+- `book33-the-whip`: a slender switch and heavy harness beside a worn path leading through an open arch.
+- `book33-bread-and-water`: bread and water given equal visual importance on an imaret sill.
+- `book33-what-fills-it`: one still vessel filled to the brim in a warm dusk study.
+
+### Book 34 — Poverty and Abstinence
+
+- `book34-five-states`: five identical Alhambra-inspired alcoves holding five differently angled empty bowls.
+- `book34-matched-pair`: two level brass scales, one associated with a full vessel and one with an empty vessel.
+- `book34-open-hand`: one covered dish before one closed and one open door.
+- `book34-the-exchange`: old coins deliberately pushed away from a sealed blank letter on a Safavid bazaar sill.
+- `book34-the-measure`: exactly six graduated vessels filled to different levels beside a folded cloth.
+
+### Book 35 — Unity and Trust
+
+- `book35-the-walnut`: whole husk, shell, kernel, and one drop of oil as four successive depths.
+- `book35-the-advocate`: a sealed blank brief on an empty advocate's bench with the client's chair drawn back.
+- `book35-three-stations`: three alcoves holding a desk and brief, an empty cradle, and a folded bier-cloth.
+- `book35-hand-and-heart`: an active carving tool beside a perfectly level brass weight.
+- `book35-bounded-grant`: two sealed jars under equal light, one bearing a geometric band and one plain.
+
+### Book 36 — Love, Longing, Intimacy, and Contentment
+
+- `book36-the-sixth-sense`: five sensory objects in prepared places followed by one clearly empty sixth place.
+- `book36-first-light`: the same courtyard arch shown at first light and full noon with architecture unchanged.
+- `book36-the-vessel`: a wide clay vessel half full of clear water beside one stoppered dark flask.
+- `book36-three-views`: one lamp casting exactly three distinct shadows on three wall planes.
+- `book36-two-routes`: pale and cobalt tiled routes merging at one open garden door.
+
+### Book 37 — Intention, Sincerity, and Truthfulness
+
+- `book37-three-components`: lamp, key, and hand tool arranged as a chain of seeing, opening, and acting.
+- `book37-full-man`: one empty plate pushed back while a second covered dish remains untouched.
+- `book37-pure-milk`: one unclouded bowl of milk under level daylight.
+- `book37-the-atom`: one brass balance tipped by only a minute difference.
+- `book37-six-meanings`: six equal niches holding six distinct unmarked ivory forms.
+
+### Book 38 — Vigilance and Self-Examination
+
+- `book38-the-ledger`: blank ruled ledger, scale, and sealed purse prepared at dawn.
+- `book38-the-shepherd`: one distant anonymous shepherd watching a close flock without a fence.
+- `book38-first-link`: exactly five chain links, the first open and the remaining four closed.
+- `book38-days-end`: geometric accounting grid, unequal weights, and purse at dusk. A first render containing pseudo-writing was rejected and regenerated using only grids, dots, and bars.
+- `book38-three-souls`: the same lamp shown at three successive positions along a corridor toward a garden.
+
+### Book 39 — Reflection
+
+- `book39-two-knowledges`: two seeded brass dishes above a third empty dish.
+- `book39-the-key`: one key on a blank closed ledger before four doors, only the first ajar.
+- `book39-four-channels`: one watercourse splitting into four equal cardinal channels.
+- `book39-bat-and-sun`: a tiny bounded aperture admitting a strong beam across a vast bright wall.
+- `book39-nearest-thing`: one ordinary pebble alone on a wide swept courtyard floor.
+
+### Book 40 — Remembrance of Death and the Afterlife
+
+- `book40-the-traveller`: packed bag and water-skin beside an open door and empty onward road.
+- `book40-two-brothers`: one warmly prepared guest room beside an identical unprepared room in cool shade.
+- `book40-last-words`: one upright cushion and shallow cup crossed by late golden light.
+- `book40-change-of-state`: two identical clay lamps, one sealed and unlit and one open and lit.
+- `book40-the-seal`: a single blank card weighing down its pan against a thick raised stack of blank papers.
