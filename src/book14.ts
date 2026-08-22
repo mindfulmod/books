@@ -161,7 +161,7 @@ export const book14Chapters: Chapter[] = [
     id: 8, shortTitle: "Four rulings", formalTitle: "When to ask, and when not to",
     overview: "The third chapter's governing statement, and it refuses both of the two obvious answers in a single sentence.",
     moves: [
-      { title: "Refuse the first answer", body: "Know that everyone who presents you with food or a gift, or from whom you wish to buy — it is not for you to search into it and ask, and to say: this is something whose lawfulness I have not verified, so I will not take it until I investigate." },
+      { title: "Refuse the first answer", body: "Everyone who presents you with food or a gift, or from whom you wish to buy — it is not for you to search into it and ask, and to say: this is something whose lawfulness I have not verified, so I will not take it until I investigate." },
       { title: "Refuse the second", body: "It is also not for you to abandon investigation and take everything you are not certain is forbidden." },
       { title: "Give the four rulings", body: "Rather, asking is obligatory sometimes, forbidden sometimes, recommended sometimes, and disliked sometimes — so it must be worked out in detail." },
       { title: "Give the criterion", body: "The occasion for asking is the places of misgiving; and the source of misgiving is either something connected with the property or something connected with its owner." },
@@ -202,7 +202,7 @@ export const book14Chapters: Chapter[] = [
     overview: "The claim that makes the chapter's structure work, and it puts a harm on the side of the investigator.",
     moves: [
       { title: "Give the addition", body: "I add to this and say: it is not for him to ask." },
-      { title: "Give the scrupulous alternative", body: "Rather, if he is scrupulous, then let nothing enter his belly but what he knows the source of — that is good. So let him be gentle in declining. And if he must eat, let him eat without asking." },
+      { title: "Give the scrupulous alternative", body: "Rather, if he is scrupulous, then let nothing enter his belly but what he knows the source of — that is good. So he should be gentle in declining. And if he must eat, he should eat without asking." },
       { title: "Give the reason", body: "Since asking is harm, and a tearing of a covering, and an estranging — and it is forbidden without doubt." },
       { title: "Note what has changed", body: "The doubtful property was one harm on the scales. Now the asking is another, on the other side — and the chapter's four rulings are the result of weighing two harms rather than of measuring one." },
     ],

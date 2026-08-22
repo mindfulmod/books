@@ -83,7 +83,7 @@ export const book38Chapters: Chapter[] = [
     moves: [
       { title: "Give the ordinary sense", body: "The reality of vigilance is regarding the watcher and turning one's concern to him. Whoever guards against some matter on account of another is said to be watching him and observing his side." },
       { title: "Separate the three", body: "What is meant is a state of the heart, which a kind of knowledge fruits, and which itself fruits acts in the limbs and in the heart. So there is a knowledge, a state that follows from it, and acts that follow from the state." },
-      { title: "Name the knowledge", body: "The knowledge is that God is aware of the inmost thoughts, knowing of the secrets, watchful over the acts of servants, standing over every soul with what it has earned; and that the heart's secret is disclosed to Him as the outer skin is disclosed to people, and more than that." },
+      { title: "Name the knowledge", body: "The knowledge is that God is aware of the innermost thoughts, knowing of the secrets, watchful over the acts of servants, standing over every soul with what it has earned; and that the heart's secret is disclosed to Him as the outer skin is disclosed to people, and more than that." },
       { title: "Give the condition", body: "This knowledge must become certainty, meaning free of doubt, and then must take possession of the heart and subdue it. For many a knowledge in which there is no doubt does not dominate the heart, like the knowledge of death." },
     ],
     closer: [
@@ -281,7 +281,7 @@ export const book38Chapters: Chapter[] = [
     id: 14, shortTitle: "Your worst enemy", formalTitle: "The sixth station: rebuking and reproaching the soul",
     overview: "The book closes on the station the commercial model does not predict, and it turns out to be the mechanism by which the soul changes what it is.",
     moves: [
-      { title: "Name the adversary", body: "Know that your most hostile enemy is your soul, which is between your two sides. It was created commanding to evil, inclining to wickedness, fleeing from good, and you were commanded to purify it and straighten it and lead it with chains of compulsion to the worship of its Lord." },
+      { title: "Name the adversary", body: "Your most hostile enemy is your soul, which is between your two sides. It was created commanding to evil, inclining to wickedness, fleeing from good, and you were commanded to purify it and straighten it and lead it with chains of compulsion to the worship of its Lord." },
       { title: "State the alternative", body: "If you neglect it, it bolts and runs off, and you will not get hold of it afterward. And if you keep at it with rebuke and reproach and censure and blame, your soul is the reproachful soul by which God swore." },
       { title: "Name the destination", body: "You may hope that it become the tranquil soul, called to enter among the servants of God, content and found pleasing. So the three souls are not three kinds of person but three states of one soul, and reproach is the passage between them." },
       { title: "Set the order", body: "Do not be heedless an hour of reminding it and reproaching it, and do not busy yourself with admonishing another so long as you have not first busied yourself with admonishing your own soul; as it was revealed to Jesus, admonish yourself, and if it takes the admonition then admonish people, and otherwise be ashamed before Me." },

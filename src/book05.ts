@@ -27,7 +27,7 @@ export const book05Chapters: Chapter[] = [
       { title: "Note what the third section is", body: "A treatment of the receiver's duties. Books on alms are usually written for the giver, and giving the recipient five duties of his own is what most distinguishes this one." },
     ],
     closer: [
-      { title: "The pattern of the quarter", body: "Book 3 declared that this quarter treats the outward and then set the outward inside four ranks. Book 4 gave the outward acts of prayer and then argued about the heart. This book gives the law of alms in one short section and then spends the rest on eight duties of the giver and five of the receiver." },
+      { title: "The pattern of the quarter", body: "Book 3 said this quarter deals with the body, then placed the body inside four levels. Book 4 gave the physical acts of prayer and then argued about the heart. This book gives the law of almsgiving in one short section and spends the rest on eight duties for the giver and five for the receiver." },
       { title: "Why the technical part is brief", body: "It was not a subject in dispute and there were manuals for it. What was not available was an account of what the act does to the person doing it, which is what the Ihya was written to supply." },
     ],
     distinction: ["Two ways to write about alms", "As a transfer", "Who owes what to whom, which is one short section here.", "As two states", "What the act requires of the giver and what it requires of the receiver, which is the rest of the book."],
@@ -84,7 +84,7 @@ export const book05Chapters: Chapter[] = [
       { title: "Give the duty", body: "Concealment, for that is further from showing off and from seeking reputation. The best charity is the effort of one of little means, to a poor man, in secret." },
       { title: "Give the three stages", body: "A servant does a work in secret and God writes it for him in secret. If he makes it public, it is transferred from the secret and written in the open. And if he talks about it, it is transferred from both the secret and the open and is written as showing off." },
       { title: "Note what the third stage adds", body: "Talking about a gift already given is a separate act from giving it publicly, and it is placed on the far side of public giving rather than beside it." },
-      { title: "Name the benefit", body: "The benefit of concealment is deliverance from the blights of showing off and reputation. One who talks of his charity seeks reputation; one who gives in a crowd seeks show; and concealment and silence are what deliver from both." },
+      { title: "Name the benefit", body: "What you get from keeping it quiet is escape from showing off and from reputation. Talk about your giving and you are after a reputation; give in front of a crowd and you are after the look of it. Concealment and silence get you clear of both." },
     ],
     closer: [
       { title: "The image that fixes the standard", body: "Among the seven whom God shades on a day with no shade but His is a man who gave a charity so that his left hand did not know what his right hand gave. The standard is set past concealment from others and at concealment from oneself." },
@@ -101,17 +101,17 @@ export const book05Chapters: Chapter[] = [
     id: 5, shortTitle: "A third thing", formalTitle: "When the gift should be made public",
     overview: "The fourth duty, which reverses the third under a condition — and then names a consideration that neither of them has mentioned.",
     moves: [
-      { title: "Give the condition", body: "That he make it public where he knows that in his disclosing it there is an encouragement to people to imitate — and that he guard his inmost from the motive of showing off, by the method given in the treatment of showing off." },
-      { title: "Give the second occasion", body: "Or because the asker asked in a crowd of people. In that case he should not leave off giving out of fear of showing off in the disclosure; rather he should give, and guard his inmost from showing off as far as possible." },
+      { title: "Give the condition", body: "Do it openly where you know that letting it be seen will encourage other people to do the same — and guard your intention against showing off, by the method set out in the treatment of that." },
+      { title: "Give the second occasion", body: "Or because the person asked in front of a crowd. Then you should not hold back for fear that giving openly looks like display. Give, and guard the intention as far as you can." },
       { title: "Name the third consideration", body: "This is because in disclosure there is a third thing to beware of, besides reproach and showing off — and that is the tearing of the poor man's covering. For he may be hurt at being seen in the form of one in need." },
       { title: "Weigh the three against each other", body: "So disclosure is answerable to three cautions at once: reproach, showing off, and the tearing of the poor man's covering. The first two fall on the giver and the third on the receiver — which is why the condition that opens this duty is about others being encouraged to imitate, and not about the giver's own comfort." },
     ],
     closer: [
-      { title: "The waiver", body: "But whoever made his asking public is the one who tore his own covering, so this consideration is not to be feared in disclosing to him. Ghazali compares it to disclosing the sinfulness of one who conceals it, which is forbidden — and to spying it out, which is worse." },
+      { title: "The waiver", body: "But someone who asked publicly has already dropped his own cover, so there is nothing left to protect by being discreet with him. Ghazali compares it to exposing the sin of someone who keeps it hidden, which is forbidden — and to going looking for it, which is worse." },
       { title: "Why the order of the three matters", body: "Reproach and showing off are about the giver, and the third is about someone else. A person weighing only the first two can perform a well-considered act of generosity that humiliates the person receiving it, and he will not notice, because both of the considerations he weighed were about himself." },
     ],
     distinction: ["Two reasons not to give openly", "About yourself", "Reproach and showing off, which are what most accounts of the etiquette weigh.", "About the other person", "The tearing of his covering, which nothing about your own state will detect."],
-    misreading: "Do not read the fear of showing off as a reason to withhold. Ghazali says explicitly that a person should not leave off giving out of that fear, and should give and guard his inmost as far as he can.",
+    misreading: "Do not treat the fear of showing off as a reason to keep your money. Ghazali says outright that you should not stop giving because of that fear — give, and guard the intention as best you can.",
     reflection: "Recall a gift made in front of others and ask what it cost the person receiving it.",
     audit: ["Which of the three did I weigh?", "Did I consider the recipient's covering?", "Did he make his own need public?", "Have I withheld out of fear of showing off?"],
     nodes: ["izhar", "riya", "sitr"],
@@ -144,7 +144,7 @@ export const book05Chapters: Chapter[] = [
       { title: "Give the duty and the reason", body: "That he count the gift small — for if he counts it great he is pleased with it, and self-admiration is among the destroyers and nullifies works. And on the day of Hunayn, when your numbers pleased you and availed you nothing." },
       { title: "Give the principle", body: "It is said: an act of obedience, the more it is counted small, the greater it becomes with God; and a sin, the more it is counted great, the smaller it becomes with God." },
       { title: "Give the arithmetic", body: "The remedy is knowledge and action. As for the knowledge: that a tenth, or a quarter of a tenth, is little out of much — and that he has contented himself with the meanest degree of giving. So he is fit to be ashamed of it; how then should he count it great?" },
-      { title: "Take the other case", body: "If he rises to the highest degree and gives all his wealth or most of it, let him consider where the wealth came from and to what he is spending it. For the wealth is God's, and His is the favour upon him." },
+      { title: "Take the other case", body: "If you go to the top of the scale and give away everything or nearly everything, look at where the money came from and what you are spending it on. It is God's money, and the favour was His in the first place." },
     ],
     closer: [
       { title: "Why both cases are covered", body: "The obvious reading is that small gifts should not be inflated. Ghazali handles the large gift too, and by a different route: not that it is small, but that it was not the giver's to begin with. Neither case leaves room for the gift to be a personal achievement." },
@@ -201,9 +201,9 @@ export const book05Chapters: Chapter[] = [
     id: 10, shortTitle: "Who is entitled", formalTitle: "The causes of entitlement",
     overview: "The third section opens with the legal question, and its treatment of what counts as poverty carries the same instinct as Book 3's argument about water.",
     moves: [
-      { title: "State the requirement", body: "None is entitled to alms but a free Muslim, not of the Prophet's two clans, characterised by one of the qualities of the eight categories named in God's Book." },
-      { title: "Give the exclusions", body: "Alms are not directed to a non-Muslim, nor to a slave, nor to those two clans. As for a child and one who has lost his reason, giving to them is permitted when their guardian receives it." },
-      { title: "Define the first category", body: "The poor man is one who has no wealth and no capacity to earn. If he has his day's food and clothing for his condition he is not poor but destitute; if he has half his day's food he is poor." },
+      { title: "State the requirement", body: "Only a free Muslim qualifies, not from the Prophet's two clans, and fitting one of the eight categories the Quran names." },
+      { title: "Give the exclusions", body: "Alms do not go to a non-Muslim, to a slave, or to those two clans. A child or someone who has lost their reason can receive them, provided their guardian takes them." },
+      { title: "Define the first category", body: "Someone counts as destitute if he has no money and no way of earning. If he has a day's food and clothes suitable for his situation he is not destitute but poor; if he has half a day's food he is poor." },
       { title: "Refuse the strict reading", body: "If he has a shirt and no kerchief, no shoes, and no trousers, and the shirt's value does not cover all of that as befits the poor, then he is poor — because he presently lacks what he needs. So it should not be stipulated of a poor man that he have no clothing besides what covers his nakedness, for this is excess." },
     ],
     closer: [
@@ -221,7 +221,7 @@ export const book05Chapters: Chapter[] = [
     id: 11, shortTitle: "The receiver's five", formalTitle: "The duties of the one who receives",
     overview: "The most unusual section in the book. Ghazali gives the recipient five duties of his own, and the first of them is an argument that inverts the whole transaction.",
     moves: [
-      { title: "Give the first duty", body: "That he know that God made the paying of alms to him obligatory so that his concern may be sufficed and his concerns made one concern — for God made creatures worship Him by their concern being one." },
+      { title: "Give the first duty", body: "God made this payment your due so that what you have to worry about is taken care of, and your many concerns become one — because what God asks of people is that their concern be single." },
       { title: "Explain the arrangement", body: "Since wisdom required that appetites and needs be given power over a person, and these divide his concern, generosity required a blessing that suffices the needs. So He multiplied wealth and poured it into the hands of His servants, to be an instrument for repelling their needs and a means of freeing them for their obedience." },
       { title: "Sort the two outcomes", body: "Of them is one whose wealth He multiplied, and it became a trial and an affliction and plunged him into danger. And of them is one whom He loved, and so protected him from the world as a tender person protects his patient — withholding its excess from him and driving to him the measure of his need at the hands of the rich." },
       { title: "Draw the conclusion", body: "So that earning may be easy for him, and the toil of gathering and guarding be upon them while its benefit flows to the poor — that they may devote themselves to worship and to preparing for what is after death. And this is the utmost of blessing." },

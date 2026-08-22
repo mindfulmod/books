@@ -81,7 +81,7 @@ export const book19Chapters: Chapter[] = [
     id: 4, shortTitle: "Four pillars", formalTitle: "The anatomy of hisba",
     overview: "The second chapter opens by splitting the act into four parts, and every subsequent condition attaches to one of them.",
     moves: [
-      { title: "Name the term", body: "Know that the pillars are in hisba — which is an expression comprehending both enjoining right and forbidding wrong." },
+      { title: "Name the term", body: "The pillars are in hisba — which is an expression comprehending both enjoining right and forbidding wrong." },
       { title: "Give the first two", body: "The first pillar is the one performing it; the second is what it is performed against — the wrong itself." },
       { title: "Give the second two", body: "The third is the one it is performed upon; the fourth is the act of performing it." },
       { title: "Note what the division buys", body: "Four independent sets of conditions. An intervention can fail because of who is doing it, or what it is about, or whom it is against, or how it is done — and the failures are not interchangeable." },
@@ -123,7 +123,7 @@ export const book19Chapters: Chapter[] = [
     moves: [
       { title: "Give the first gap", body: "Not everyone who knows acts by his knowledge — indeed he may know that he is excessive in hisba and beyond the limit permitted in the law, and yet some purpose of his own carries him to it." },
       { title: "Give the second gap", body: "Let his speech and his counsel be acceptable — for the corrupt man is mocked when he performs hisba, and that bequeaths boldness against him." },
-      { title: "Give the third quality and its function", body: "As for good character: let him be enabled by it for gentleness and kindness, which is the root of this whole matter and its means." },
+      { title: "Give the third quality and its function", body: "As for good character: he should be enabled by it for gentleness and kindness, which is the root of this whole matter and its means." },
       { title: "Give the argument", body: "Knowledge and scruple are not sufficient in it. For when anger rages, mere knowledge and scruple do not suffice to suppress it, unless there is in the disposition a receptiveness to it through good character." },
     ],
     closer: [
@@ -262,7 +262,7 @@ export const book19Chapters: Chapter[] = [
     overview: "The chapter of examples opens by refusing to be a list, and by drawing the distinction that decides what silence costs.",
     moves: [
       { title: "Give the refusal to enumerate", body: "So we shall point to some of them, that their like may be inferred from them — since there is no hope of confining them or exhausting them." },
-      { title: "Give the division", body: "Know that wrongs divide into the disliked and the forbidden." },
+      { title: "Give the division", body: "Wrongs divide into the disliked and the forbidden." },
       { title: "Give the first half", body: "So when we say, this is a disliked wrong — know that preventing it is recommended, and silence about it is disliked and is not unlawful. Except when the doer does not know that it is disliked, in which case mentioning it to him becomes obligatory, because dislike is a ruling in the law, and it is obligatory to convey it to one who does not know it." },
       { title: "Give the second half", body: "When we say, a forbidden wrong — or when we say, a wrong, without qualification — we mean by it the forbidden. And silence about it, with the capacity to act, is forbidden." },
     ],

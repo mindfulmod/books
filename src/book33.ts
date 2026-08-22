@@ -301,7 +301,7 @@ export const book33Chapters: Chapter[] = [
       { title: "What the reader is left holding", body: "Not a ranking of fear over hope, but a diagnosis, a prescription that depends on it, a test of whether the remedy is working, and examples of it working." },
     ],
     distinction: ["Two things these lives display", "Fear that drove", "It reached the limbs and produced sustained action over years.", "Fear that consumed", "It would have ended in despair, which the book has already excluded."],
-    misreading: "Do not conclude that the early community were characterised by misery. Ghazali's own criterion is that fear is the whip that drives toward knowledge and action, and these are the lives it drove.",
+    misreading: "Do not conclude that the early community were marked by misery. Ghazali's own criterion is that fear is the whip that drives toward knowledge and action, and these are the lives it drove.",
     reflection: "Take the diagnosis from the section on which is more beneficial, and pick one thing to do this week on the strength of it.",
     audit: ["What is my prescription, on my own diagnosis?", "What will I do differently this week?", "Is my fear producing action or paralysis?", "Would my life read as evidence of either state?"],
     nodes: ["khawf", "raja", "balance"],

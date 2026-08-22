@@ -81,7 +81,7 @@ export const book13Chapters: Chapter[] = [
     id: 4, shortTitle: "Valid, and still wrong", formalTitle: "The sentence the third chapter opens on",
     overview: "One of the sharpest openings in the Ihya, and it states a principle of law that most readers do not know.",
     moves: [
-      { title: "Give the sentence", body: "Know that a dealing may proceed in a way that the jurist rules valid and concluded — and yet it contains a wrongdoing by which the dealer exposes himself to God's wrath." },
+      { title: "Give the sentence", body: "A dealing may proceed in a way that the jurist rules valid and concluded — and yet it contains a wrongdoing by which the dealer exposes himself to God's wrath." },
       { title: "Give the reason", body: "Since not every prohibition entails the invalidity of the contract. The gap between the two standards is not a moral observation but a technical fact about how prohibitions work." },
       { title: "Define the wrong", body: "By this wrongdoing is meant what harms another. The standard for the third chapter is harm, not permission." },
       { title: "Divide it", body: "It divides into what harms generally and what harms the particular party dealt with. Two kinds of harm, and the chapter treats them in that order." },
@@ -201,7 +201,7 @@ export const book13Chapters: Chapter[] = [
     id: 10, shortTitle: "Seven things", formalTitle: "What the trader's compassion requires",
     overview: "Seven observances, and they run from why a person trades to what he does while standing in the market.",
     moves: [
-      { title: "The first", body: "Good intention and belief at the beginning of the trade: let him intend by it abstention from asking, and the sufficing of his household." },
+      { title: "The first", body: "Good intention and belief at the beginning of the trade: he should intend by it abstention from asking, and the sufficing of his household." },
       { title: "The second", body: "That he intend, by standing in his craft or his trade, the discharge of one of the communal obligations — for the crafts and the trades, if they were abandoned, livelihoods would collapse." },
       { title: "The third and fourth", body: "That the market of this world not prevent him from the market of the hereafter — and the markets of the hereafter are the mosques. And that he not confine himself to that, but keep to the remembrance of God in the market itself." },
       { title: "The fifth", body: "That he not be intensely greedy for the market and the trade — such as being the first to enter it and the last to leave it, and putting to sea for the sake of trade." },
@@ -222,7 +222,7 @@ export const book13Chapters: Chapter[] = [
     overview: "The last substantial thing in the book, and the most quoted sentence in it — a direct instruction to go past the legal opinion.",
     moves: [
       { title: "State it", body: "That he not confine himself to avoiding the forbidden, but guard against the places of doubt and the occasions of suspicion." },
-      { title: "Give the instruction", body: "Let him not look to the legal opinions — but let him seek the verdict of his own heart." },
+      { title: "Give the instruction", body: "He should not look to the legal opinions — but he should seek the verdict of his own heart." },
       { title: "Note what it presupposes", body: "It comes after four chapters of law, justice, and excellence. It is addressed to a reader who knows what is permitted, and it tells him that knowing is not the end of the inquiry." },
       { title: "Note its limits", body: "It is the sixth of seven observances by which a trader guards his own religion. It is counsel for a man deciding about himself, and nothing in it authorises anyone to judge another by it." },
     ],

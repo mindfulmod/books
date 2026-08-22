@@ -44,11 +44,11 @@ export const book01Chapters: Chapter[] = [
       { title: "Put the question", body: "Seeking knowledge is an obligation upon every Muslim. People differed about which knowledge that is, and split over it into more than twenty parties." },
       { title: "Give the verdict on all of them", body: "He declines to reproduce the detail, and says the upshot is that every group placed the obligation on the knowledge it happens to be occupied with." },
       { title: "Name the parties", body: "The theologians said it is theology, since by it unity is grasped. The jurists said it is jurisprudence, since by it the acts of worship and the lawful and unlawful are known. The exegetes and traditionists said it is the Book and the Sunna, since by them all sciences are reached." },
-      { title: "Include the fourth", body: "The Sufis said it is this knowledge: some, that it is the servant's knowledge of his own state and station; some, that it is knowledge of sincerity and the blights of souls and telling the angel's touch from the devil's; and some, that it is the inward knowledge, obligatory on particular people who are its folk — and these, he notes, turned the word away from its generality." },
+      { title: "Include the fourth", body: "The Sufis said it was their own subject. Some meant knowing your own state and where you stand; some meant knowing sincerity, the faults of the self, and how to tell the angel's prompting from the devil's; and some meant inward knowledge, obligatory only on the particular people who work at it — which, Ghazali notes, quietly drops the word “every” out of the report." },
     ],
     closer: [
       { title: "Why the observation lands", body: "Each answer is defensible on its own, and the reasons given for them are real reasons. What convicts them is the pattern: the answers vary exactly with the answerer's occupation, which is a fact about the scholars rather than about the question." },
-      { title: "What it does not conclude", body: "Ghazali does not say the parties are wrong about their sciences being valuable, and he explicitly says later that the Sufi answer is true in respect of one who addresses himself to it. What he refuses is the universalising, which is the move all twenty share." },
+      { title: "What it does not conclude", body: "He does not say any of them are wrong that their subject matters, and he says later that the Sufi answer is true for someone who has taken that work on. What he rejects is the generalising — the move all twenty make." },
     ],
     distinction: ["Two ways to answer the question", "From the obligation", "Working out what a person must do and therefore must know, which is the next chapter.", "From your field", "Naming your own science as the obligation, which is what Ghazali says all twenty parties did."],
     misreading: "Do not read this as anti-intellectual. Ghazali held every one of these sciences in some regard and wrote in several of them; what he is diagnosing is a specific and very human error about scope.",
@@ -81,10 +81,10 @@ export const book01Chapters: Chapter[] = [
     id: 4, shortTitle: "And the Perils too", formalTitle: "The obligatory knowledge of the heart",
     overview: "The passage that justifies the existence of the Ihya, and it is stated as a legal claim rather than as an exhortation.",
     moves: [
-      { title: "Grant the Sufi answer, with a condition", body: "What the Sufis said about understanding the enemy's suggestions and the angel's touch is also true — but in respect of one who addresses himself to it. The concession is exact and it is not a dismissal." },
+      { title: "Grant the Sufi answer, with a condition", body: "What the Sufis said about telling the enemy's suggestions from the angel's prompting is true too — for someone who has taken that work on. The concession is precise, and it is not a brush-off." },
       { title: "Then generalise a different part of it", body: "Since it is usually the case that a person is not free of the motives of evil, of showing off, and of envy, it becomes incumbent on him to learn from the science of the Quarter of Perils whatever he sees himself to need." },
       { title: "Ground it in the report", body: "How should it not be obligatory, when it was said that three things destroy: avarice obeyed, whim followed, and a man's admiration of himself — and no human being is free of them." },
-      { title: "Draw the legal conclusion", body: "The rest of the blamed states of the heart, such as pride and conceit and their sisters, follow these three, and removing them is an individual obligation. And they cannot be removed except by knowing their limits, their causes, their signs, and their treatment — for one who does not know an evil falls into it." },
+      { title: "Draw the legal conclusion", body: "The other bad states of the heart — pride, conceit and the rest of that family — follow from these three, and getting rid of them is required of everyone individually. You cannot get rid of them without knowing what they are, what causes them, how they show, and how they are treated. Somebody who cannot recognise a fault walks into it." },
     ],
     closer: [
       { title: "The sentence that indicts everyone", body: "Most of what we have mentioned in the Quarter of Perils is among the individual obligations, and people have all abandoned them, occupying themselves with what does not concern them. A quarter of his own work is here classified as obligatory knowledge that nobody is learning." },
@@ -101,16 +101,16 @@ export const book01Chapters: Chapter[] = [
     id: 5, shortTitle: "The cupper", formalTitle: "The knowledge that is a communal obligation",
     overview: "The most surprising passage in the book to a modern reader, and Ghazali knows it will be. He anticipates the objection in the middle of the paragraph.",
     moves: [
-      { title: "Give the criterion", body: "A communal obligation is a science that cannot be dispensed with in the standing of worldly affairs. These are the sciences such that if a town were empty of one who undertakes them, its people would be in difficulty; and if one undertakes it, that suffices and the obligation falls from the rest." },
+      { title: "Give the criterion", body: "A communal obligation is a body of knowledge that ordinary life cannot run without. These are the subjects where, if a town had nobody doing them, the town would be in trouble — and if one person does it, that covers it and the obligation lifts from everyone else." },
       { title: "Give the two examples", body: "Such as medicine, since it is necessary for the need of the survival of bodies; and arithmetic, since it is necessary in transactions and in the division of bequests and inheritances." },
       { title: "Anticipate the objection", body: "So do not be astonished at our saying that medicine and arithmetic are among the communal obligations — for the foundations of the crafts are also among the communal obligations." },
       { title: "Give the list", body: "Agriculture, weaving, and governance; indeed cupping and tailoring. For if a town were empty of a cupper, destruction would hasten to its people, and they would be in difficulty by exposing themselves to it." },
     ],
     closer: [
       { title: "What the criterion is doing", body: "It is entirely functional. Nothing about the dignity of a craft enters it; what enters is whether the town can do without it. On that test tailoring qualifies and a good deal of what was taught in the schools of his day does not, which is the point of the sentence about astonishment." },
-      { title: "The theological ground he gives", body: "He adds that the One who sent down the illness sent down the remedy, and directed to its use. The obligation to practise medicine is derived from the provision of a cure rather than from the prestige of the physician." },
+      { title: "The theological ground he gives", body: "He adds that whoever sent the illness sent the cure and pointed us to it. The duty to practise medicine comes from the cure having been provided, not from the standing of doctors." },
     ],
-    distinction: ["Two ways to rank a craft", "By what the town cannot do without", "Which puts cupping and tailoring among the religious obligations of a community.", "By its standing among the learned", "Which would exclude every one of the examples Ghazali gives."],
+    distinction: ["Two ways to rate a trade", "By what the town cannot do without", "Which puts cupping and tailoring among the religious obligations of a community.", "By its standing among the learned", "Which would exclude every one of the examples Ghazali gives."],
     misreading: "Do not read this as merely permitting worldly work. It classifies farming, weaving, tailoring, and cupping as obligations that a community sins by leaving unfilled, which is a stronger claim than permission.",
     reflection: "Ask what your town could not do without, and who is currently doing it.",
     audit: ["What could my town not do without?", "Do I rank crafts by dignity?", "Whose work am I discounting?", "Is anything here unfilled?"],
@@ -171,7 +171,7 @@ export const book01Chapters: Chapter[] = [
       { title: "What the word covered before", body: "In the first generation it named the knowledge of the path of the hereafter, the subtleties of the soul's blights, and what spoils an act — a usage Ghazali documents from the earliest reports rather than asserting." },
     ],
     distinction: ["Two ways a word goes wrong", "By transfer", "Moved to a different meaning, which is what he says happened to the other four.", "By specification", "Narrowed to a part of its range while keeping the honour of the whole, which is what happened to this one."],
-    misreading: "Do not read this as an attack on legal expertise. Ghazali was a jurist of the first rank; the charge is about what the word has come to select and what that selection carries with it.",
+    misreading: "Do not read this as an attack on legal expertise. Ghazali was a first-rate jurist himself. His complaint is about what the word has come to pick out, and what comes with that.",
     reflection: "Notice how much of an argument is settled in advance by which word gets to name which thing.",
     audit: ["What does this word select for me?", "What honour comes with it?", "Have I confused a part for the whole?", "Which words in my field have narrowed?"],
     nodes: ["alfaz", "fiqh", "ilm"],
@@ -204,7 +204,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Put the question historically", body: "Ghazali asks what caused people to turn toward the science of legal disagreement, and answers by tracing changes in patronage, office, and the routes to advancement rather than by attributing it to a decline in piety." },
       { title: "Refuse the flattering comparison", body: "He devotes a section to what he calls the deception in likening these disputations to the consultations of the Companions and the discussions of the forebears, and he treats the comparison as the argument that has to be dismantled first." },
       { title: "Give the test", body: "Look at the disputants of your own day, he says, and see how one of their faces darkens when the truth becomes clear on his opponent's tongue, and how ashamed he is by it, and how he strives to deny it with the utmost of his power." },
-      { title: "Close the comparison", body: "How he blames the one who silenced him for the rest of his life — and then is not ashamed to liken himself to the Companions in their helping one another to look into the truth." },
+      { title: "Close the comparison", body: "Notice how he holds it against the man who silenced him for the rest of his life — and then feels no embarrassment comparing himself to the Companions helping each other get at the truth." },
     ],
     closer: [
       { title: "Why the test is behavioural", body: "The comparison to the forebears is about intention, and intentions cannot be checked. Ghazali replaces it with something observable: what happens to a man's face when his opponent turns out to be right. Anyone can run that test, on himself or on a room." },
@@ -223,7 +223,7 @@ export const book01Chapters: Chapter[] = [
     moves: [
       { title: "Name the target precisely", body: "Know and verify that the disputation set up for the purpose of overcoming, of silencing, of showing superiority and eloquence before people, of boasting and wrangling and drawing people's faces toward oneself." },
       { title: "State the charge", body: "It is the wellspring of all the character traits blamed by God and praised by God's enemy." },
-      { title: "Give the analogy", body: "Its relation to the inward enormities — pride, conceit, envy, rivalry, self-praise, and love of status — is like the relation of the drinking of wine to the outward enormities of fornication, slander, killing, and theft." },
+      { title: "Give the analogy", body: "It stands to the inward grave sins — pride, conceit, envy, rivalry, self-praise, love of status — the way drinking stands to the visible ones: adultery, slander, killing, theft." },
       { title: "Work the analogy", body: "As one given the choice between drinking and the enormities belittles the drinking and goes to it, and that then calls him in his drunkenness to commit the rest — so one overcome by the love of silencing and of victory is called by it to harbour all the filths in his soul, and it stirs up in him every blamed trait." },
     ],
     closer: [
@@ -247,7 +247,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Describe what happens instead", body: "You see whole sessions spent in repulsion and wrangling: an objector says there are meanings besides what you mentioned and I know them and will not mention them, since I am not obliged to; and the one arguing says you must produce what you claim; and the objector insists that he need not." },
     ],
     closer: [
-      { title: "The line about the objector", body: "This wretch does not know that his saying I know it and will not mention it, since I am not obliged to, is itself the whole of what is wrong. A procedural entitlement is being used to avoid the only thing the session was for." },
+      { title: "The line about the objector", body: "The poor fool does not realise that saying “I know the answer and I am not going to give it, since I am not obliged to” is itself the entire problem. He is using a technicality to dodge the only thing the meeting was for." },
       { title: "Why the conditions are worth having", body: "They convert a complaint about motives into a checklist about conduct. Whether a person is arguing for victory is hidden; whether he permits his opponent to change proof, and whether he uses the devices, is not." },
     ],
     distinction: ["Two ways to treat a change of position", "As a correction", "Returning to the truth, which is obligatory to accept.", "As a concession to be exploited", "A contradiction with earlier speech, which the devices are designed to punish."],
@@ -261,10 +261,10 @@ export const book01Chapters: Chapter[] = [
     id: 13, shortTitle: "The prayer of the inmost", formalTitle: "The first duty of the student",
     overview: "The fifth chapter opens with ten duties for the student, and the first is a precondition rather than a practice.",
     moves: [
-      { title: "Give the first duty", body: "Giving precedence to purifying the soul from base traits and blamed attributes — because knowledge is the worship of the heart, the prayer of the inmost, and the drawing near of the inward to God." },
-      { title: "Give the argument", body: "As the prayer that is the duty of the outward limbs is not valid except by purifying the outward from impurity, so the worship of the inward and the cultivating of the heart by knowledge is not valid except after its purification from the filth of character." },
+      { title: "Give the first duty", body: "Clear the low traits and bad qualities out first — because knowledge is the heart's worship, the innermost self's prayer, and how the inside draws near to God." },
+      { title: "Give the argument", body: "Just as the prayer your body owes is not valid until the body has been cleaned, the worship the inside owes — building the heart up with knowledge — is not valid until the heart has been cleaned of bad character." },
       { title: "Extend the notion of purity", body: "Religion was built on cleanliness, and it is so inwardly as much as outwardly. The verse that the idolaters are only impure alerts intellects to the fact that purity and impurity are not confined to what the senses reach." },
-      { title: "Draw the conclusion", body: "For an idolater may be clean of garment and washed of body and still be impure in substance, meaning that his inward is smeared with filth. And impurity is a word for what is avoided and kept away from, so the filths of the inward attributes have the better claim to be avoided." },
+      { title: "Draw the conclusion", body: "An idolater can have clean clothes and a washed body and still be impure in himself — meaning the inside is filthy. And impurity is just a word for what you keep away from, so inward filth has the stronger claim on being kept away from." },
     ],
     closer: [
       { title: "Why the analogy is legal rather than poetic", body: "The comparison is to a condition of validity. Ritual purity is not a way of being more prepared for prayer; without it there is no prayer. Ghazali is making the same kind of claim about knowledge, which is far stronger than saying a good character helps a student." },
@@ -284,7 +284,7 @@ export const book01Chapters: Chapter[] = [
       { title: "Give the analogy", body: "A person has four states in his knowledge, as he has in acquiring wealth. The owner of wealth has a state of gaining, so he is an earner; a state of storing what he gained, so he is free of asking; a state of spending on himself, so he benefits; and a state of giving to others, so he is generous — and that is the noblest of his states." },
       { title: "Apply it", body: "So knowledge is acquired as wealth is acquired. It has a state of seeking; a state of obtaining that frees from asking; a state of insight, which is thought about what is obtained and enjoyment of it; and a state of giving insight, which is the noblest of the states." },
       { title: "Give the images for the one who acts", body: "So whoever knew, acted, and taught is the one called great in the kingdom of the heavens — for he is like the sun, which lights others while being itself alight, and like musk, which perfumes others while being itself fragrant." },
-      { title: "Give the images for the one who does not", body: "One who knows and does not act by it is like a ledger that benefits others while being empty of knowledge; like a whetstone that sharpens others and does not cut; like a needle that clothes others while itself naked; and like a lamp-wick that gives light to others while it burns away." },
+      { title: "Give the images for the one who does not", body: "Somebody who knows and does not act on it is like a ledger that is useful to everyone else and holds no knowledge of its own; like a whetstone that sharpens and cannot cut; like a needle that clothes people and is bare itself; like a wick that gives light while it burns away." },
     ],
     closer: [
       { title: "The verse he quotes", body: "It is only a wick that was kindled: it gives light to people while it burns. The image is the sharpest of the four because it grants the benefit entirely — the light is real and reaches others — and locates the loss in the one producing it." },

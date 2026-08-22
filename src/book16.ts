@@ -41,7 +41,7 @@ export const book16Chapters: Chapter[] = [
     id: 2, shortTitle: "The same method", formalTitle: "How the question will be settled",
     overview: "The second chapter opens by pointing at another book of the Ihya and saying that this question has the same shape as that one.",
     moves: [
-      { title: "Name the parallel", body: "Know that people's disagreement in this resembles their disagreement about the merit of marriage." },
+      { title: "Name the parallel", body: "People's disagreement in this resembles their disagreement about the merit of marriage." },
       { title: "Recall what was done there", body: "He refers to the harms of marriage and its benefits, treated in the book on marriage — where the answer came out differently for different people according to which harms they faced." },
       { title: "Apply it", body: "So likewise the statement in what we are in. So let us first mention the benefits of seclusion." },
       { title: "Sort the benefits", body: "They divide into religious benefits and worldly ones, and the religious into what makes acts of obedience possible in solitude and what preserves a person from what mixing exposes him to." },
@@ -182,7 +182,7 @@ export const book16Chapters: Chapter[] = [
     overview: "Having refused one case outright, Ghazali immediately sorts the rest — and the third of them is the one most likely to apply to a serious reader.",
     moves: [
       { title: "The first case", body: "One who needs to learn what is obligatory on him: disobedient by seclusion, and the case is closed." },
-      { title: "The second case", body: "If he has learned the obligatory, and plunging into the sciences is not within him, and he sees fit to occupy himself with worship — then let him withdraw." },
+      { title: "The second case", body: "If he has learned the obligatory, and plunging into the sciences is not within him, and he sees fit to occupy himself with worship — then he should withdraw." },
       { title: "The third case", body: "If he is capable of excelling in the sciences of Law and of reason, then seclusion for him, before learning, is the utmost loss." },
       { title: "Note what separates the second from the third", body: "Capacity. The same person's duty differs according to what he could become, which makes the ruling depend on an honest estimate of one's own ability." },
     ],

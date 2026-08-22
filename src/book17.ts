@@ -41,7 +41,7 @@ export const book17Chapters: Chapter[] = [
     id: 2, shortTitle: "Flight or seeking", formalTitle: "The first cut",
     overview: "The book's organising division, and it is exhaustive by construction — every journey is one or the other.",
     moves: [
-      { title: "Place travel", body: "Know that travel is a kind of movement and mixing, and in it are benefits and it has harms — as we mentioned in the Book of Companionship and the Book of Seclusion." },
+      { title: "Place travel", body: "Travel is a kind of movement and mixing, and in it are benefits and it has harms — as we mentioned in the Book of Companionship and the Book of Seclusion." },
       { title: "Give the division", body: "The benefits that impel toward travel are not free of either flight or seeking." },
       { title: "Define the first", body: "For a traveller either has something that unsettles him from his place — and but for it he would have no destination to travel to." },
       { title: "Define the second", body: "Or he has a destination and an object of seeking. The two are distinguished by where the motive lives: behind him, or ahead." },

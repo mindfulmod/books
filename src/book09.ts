@@ -62,7 +62,7 @@ export const book09Chapters: Chapter[] = [
     overview: "The objection and the answer, and the answer is deflationary in a way that changes what the whole first chapter was promising.",
     moves: [
       { title: "Put the objection", body: "If you say: how is it that the remembrance of God, despite its lightness on the tongue and the fewness of its toil, became better and more beneficial than the whole of the acts of worship, with all the hardships in them?" },
-      { title: "Mark the limit", body: "Know that the verification of this is not fitting except for the science of unveiling — and what is permitted to be mentioned in the science of practice is the following." },
+      { title: "Mark the limit", body: "The verification of this is not fitting except for the science of unveiling — and what is permitted to be mentioned in the science of practice is the following." },
       { title: "Give the answer", body: "That what has effect and is beneficial is remembrance continually, together with presence of heart. As for remembrance with the tongue while the heart is heedless, it is of little avail." },
       { title: "Close the second escape", body: "Presence of heart for a moment with the remembrance, and then obliviousness of God while occupied with the world, is also of little avail." },
     ],
@@ -202,7 +202,7 @@ export const book09Chapters: Chapter[] = [
     overview: "The last thing in the book, and it answers the objection that would make everything before it pointless — in two sentences.",
     moves: [
       { title: "Put the objection", body: "If you say: what is the benefit of supplication, when the decree has no repelling?" },
-      { title: "Give the answer", body: "Know that among the decree is the repelling of affliction by supplication." },
+      { title: "Give the answer", body: "Among the decree is the repelling of affliction by supplication." },
       { title: "Name what supplication is", body: "So supplication is a cause. It is not placed outside the decree and set against it; it is placed inside it, as one of the things by which what is decreed comes about." },
       { title: "Note where the answer sits", body: "It is the closing passage of the book. Three chapters of supplications have already been given, and the question of what they accomplish is answered after them rather than before." },
     ],

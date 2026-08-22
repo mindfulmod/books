@@ -47,7 +47,7 @@ export const book37Chapters: Chapter[] = [
       { title: "Define will", body: "The meaning of will is the heart's being roused toward what it sees as agreeing with its purpose, whether at the moment or in what follows." },
     ],
     closer: [
-      { title: "Why perception is prior", body: "A person is created so that some things agree with him and some conflict with him, so he needs to draw the agreeable toward himself and repel the harmful. He therefore needs, necessarily, knowledge of what harms and what benefits: one who does not see food cannot take it, and one who does not see fire cannot flee it." },
+      { title: "Why perception is prior", body: "A person is built so that some things suit him and some do not, so he has to pull the good ones toward himself and push the harmful ones away. That means he has to be able to tell which is which: you cannot pick up food you cannot see, and you cannot run from a fire you cannot see." },
       { title: "The step that decides the book", body: "Even if he sees the food and knows that it agrees with him, that is not enough for him to take it unless there is in him an inclination toward it and a desire rousing him to it. Ghazali's example is a sick man, who sees the food and knows what it is and does not move. Knowledge does not produce inclination, and this is what Chapter 6 will build on." },
     ],
     distinction: ["Two things a person can have about an act", "Knowledge that it is good", "Available by learning, and by itself it moves nothing, as the sick man shows.", "Inclination toward it", "The rousing that actually produces the act, and which is not available by learning."],
@@ -103,7 +103,7 @@ export const book37Chapters: Chapter[] = [
     moves: [
       { title: "Divide the acts", body: "Acts, however many kinds they divide into, are three classes: acts of disobedience, acts of obedience, and permissible acts. The three are governed differently, which is why the general rule needed this chapter." },
       { title: "State the restriction", body: "Acts of disobedience do not change from their place by intention. The ignorant should not understand from the generality of the report that a wrong act turns into an act of obedience by intention." },
-      { title: "Give the cases", body: "One who backbites a person out of consideration for another's feelings, or feeds a poor man from someone else's money, or builds a school, a mosque, or a hostel with unlawful wealth intending good. All of this is ignorance, and the intention has no effect in taking it out of being wrongdoing, transgression, and disobedience." },
+      { title: "Give the cases", body: "Someone runs a person down to spare somebody else's feelings; or feeds the poor with money that is not his; or builds a school, a mosque or a hostel with money he should not have, meaning well by it. All of that is ignorance, and the good intention does nothing to stop it being wrong." },
       { title: "Add the second charge", body: "Rather, his intending good by means of evil, against what the Law requires, is a further evil. If he knew this, he is opposing the Law. If he was ignorant of it, he is disobedient by his ignorance, since seeking knowledge is an obligation on every Muslim, and good things are known to be good only by the Law." },
     ],
     closer: [
@@ -164,7 +164,7 @@ export const book37Chapters: Chapter[] = [
       { title: "Define by purity", body: "Everything that can be mixed with something else, when it is clarified of the admixture and freed from it, is called pure, and the act so clarified is called sincerity. The Quranic image is pure milk, between dung and blood, palatable to the drinkers; its purity is that there be in it no admixture of anything that could mingle with it." },
       { title: "Name the opposite", body: "Sincerity is opposed by associating, so whoever is not sincere is associating, except that association has degrees, some hidden and some plain." },
       { title: "Locate it", body: "Sincerity and its opposite meet upon the heart, so its seat is the heart, and it occurs in aims and intentions. This is why Part Two follows Part One rather than standing on its own." },
-      { title: "State the consequence", body: "Since intention returns to answering motives, then whenever the motive is one and unaccompanied, the act issuing from it is called sincerity relative to what was intended. So one who gives charity for pure show is sincere, and one whose aim is purely nearness is sincere." },
+      { title: "State the consequence", body: "Since intention comes down to which motive you are answering, then whenever there is exactly one motive and nothing alongside it, the act that comes out of it counts as sincere with respect to whatever was intended. So a man who gives to charity purely for show is sincere, and so is a man who gives purely to draw near to God." },
     ],
     closer: [
       { title: "Why the consequence is stated at all", body: "It could easily have been suppressed. Ghazali states it because the definition is formal and he will not exempt his own case from it, and because it shows that the word carries a moral direction only by convention, which the next sentence says outright." },
@@ -181,17 +181,17 @@ export const book37Chapters: Chapter[] = [
     id: 9, shortTitle: "What the masters said", formalTitle: "The sayings of the masters on sincerity",
     overview: "A collection that is really an argument. Ghazali gathers the famous definitions and, for each one, says which single blight it addresses, so that the collection becomes a map instead of a list.",
     moves: [
-      { title: "The first saying and its scope", body: "Al-Susi said that sincerity is the loss of seeing your sincerity, since one who witnesses sincerity in his sincerity has a sincerity that needs a sincerity. Ghazali reads it as pointing to purifying the act of self-admiration in the act, and notes that it addresses one blight only." },
-      { title: "The comprehensive one", body: "Sahl said that sincerity is that the servant's stillness and movements be for God alone. Ghazali calls this a gathering word, encompassing the aim, and puts Ibrahim ibn Adham's saying that sincerity is truthfulness of intention with God in the same place." },
-      { title: "The hardest one", body: "Ruwaym said that sincerity in an act is that its owner want no recompense for it in either abode. Ghazali reads this as pointing out that the soul's shares are a blight deferred as well as immediate, and that one who worships for the enjoyment of appetites in the Garden is defective." },
-      { title: "The concession", body: "As for one who acts out of hope for the Garden and fear of the Fire, he is sincere relative to the immediate shares, and otherwise he is seeking the share of the belly. The absolute sincerity, in which nothing is intended but the face of God, is the sincerity of the truthful, and Ghazali names it as a rank rather than as a requirement." },
+      { title: "The first saying and its scope", body: "Al-Susi said sincerity is not being able to see your own sincerity — because anyone who notices sincerity in his sincerity has a sincerity that needs its own sincerity. Ghazali reads that as being about clearing self-satisfaction out of the act, and notes it deals with one fault only." },
+      { title: "The comprehensive one", body: "Sahl said sincerity is that everything you do and everything you refrain from is for God alone. Ghazali calls that the definition that gathers the rest up, and puts Ibrahim ibn Adham's version — sincerity is meaning it honestly with God — alongside it." },
+      { title: "The hardest one", body: "Ruwaym said sincerity in an act means wanting no return on it in this world or the next. Ghazali reads that as pointing out that self-interest is a fault whether it is cashed now or later, and that worshipping for the pleasures of paradise is still falling short." },
+      { title: "The concession", body: "Someone acting out of hope for paradise and fear of the fire is sincere as far as immediate self-interest goes; beyond that he is still after something for himself. The unqualified kind, where nothing is meant but God, is the sincerity of the truthful — and Ghazali names it as a level reached, not as a requirement laid on anyone." },
     ],
     closer: [
       { title: "Why the assignment matters", body: "Read as a list, the sayings look like competing definitions and the strictest one wins. Read as Ghazali arranges them, each one is a treatment for a particular blight, and a reader can ask which of them addresses his own case rather than trying to satisfy all of them." },
       { title: "Sahl's answer about difficulty", body: "Asked what is hardest on the soul, Sahl answered sincerity, because the soul has no share in it. The remark explains why the chapter needs so many definitions: what has no share for the soul is what the soul is most inventive about." },
     ],
     distinction: ["Two ways to read a collection of definitions", "As competing", "The strictest is correct and the rest are approximations, which makes them a standard.", "As assigned", "Each addresses one blight, which makes them a diagnostic set."],
-    misreading: "Do not measure yourself against Ruwaym's saying and conclude that hope of the Garden disqualifies you. Ghazali explicitly calls that a sincerity relative to the immediate shares, and names the absolute as the rank of the truthful.",
+    misreading: "Do not measure yourself against Ruwaym's line and conclude that hoping for paradise disqualifies you. Ghazali says plainly that this still counts as sincerity as far as immediate self-interest goes, and calls the unqualified kind the level of the truthful.",
     reflection: "Find which of the sayings addresses the blight you actually have, rather than the one you find most demanding.",
     audit: ["Which blight is mine?", "Do I look at my own sincerity?", "What recompense am I working for?", "Am I holding myself to a rank or to a rule?"],
     nodes: ["ikhlas", "ujb", "riya"],
@@ -204,7 +204,7 @@ export const book37Chapters: Chapter[] = [
       { title: "Sort the blights", body: "The blights that disturb sincerity are some plain and some hidden, some weak along with being plain, and some strong along with being hidden. The differences in degree are not understood except by an example." },
       { title: "The first grade", body: "The devil enters upon a man praying, sincere in his prayer, when a group looks at him or someone comes in, and says: beautify your prayer, so that this person present looks at you with an eye of dignity and does not disdain you or speak against you. So his limbs become humble, his extremities still, and his prayer beautiful. This is manifest showing off, and it is not hidden even from beginners." },
       { title: "The second grade", body: "The aspirant has understood that blight and taken his guard against it, and no longer obeys the devil in it. So the devil comes in the dress of good and says: you are followed and imitated and looked at, and what you do is transmitted from you, so you have the reward of their deeds if you do well and the burden if you do badly. Beautify your act before him, so that he may imitate you in humility." },
-      { title: "State what it is", body: "This is more obscure than the first, and one who is not deceived by the first may be deceived by this. And it too is showing off itself, and it nullifies sincerity." },
+      { title: "State what it is", body: "This one is harder to spot than the first, and someone who does not fall for the first may well fall for it. It is still showing off, and it still cancels sincerity." },
     ],
     closer: [
       { title: "Why the second grade is the dangerous one", body: "Its content is true. The person may genuinely be imitated, and there may genuinely be a reward in setting an example. Ghazali does not deny any of that; he says the motive it produces is the same motive as the first grade wearing better clothes, and the test is whether the beautifying tracks the presence of the observer." },
@@ -222,8 +222,8 @@ export const book37Chapters: Chapter[] = [
     overview: "Ghazali refuses to leave the question of a partly sincere act as a warning, and gives an explicit rule with four outcomes. He also marks it as his own judgement.",
     moves: [
       { title: "Frame the disagreement", body: "When an act is not pure and an admixture of showing off or of the soul's shares mingles with it, people have differed over whether it merits reward, or punishment, or nothing at all, so that it is neither for a person nor against him." },
-      { title: "Settle the clear cases", body: "One who intended nothing but showing off, it is against him definitely, and it is a cause of detestation and punishment. One whose act is pure for the face of God, it is a cause of reward. The question is only about the mixed." },
-      { title: "Give the rule", body: "The outward reports indicate that there is no reward for it, and the reports are not free of conflict on it. What occurs to Ghazali, and he says explicitly that the knowledge is with God, is to look at the measure of the strength of the motive." },
+      { title: "Settle the clear cases", body: "If nothing was meant but display, it counts against him, full stop. If the act was purely for God, it earns reward. The only real question is about the mixed case." },
+      { title: "Give the rule", body: "Read plainly, the reports say there is no reward for it — and they do not entirely agree with each other. What Ghazali suggests, saying outright that God alone knows, is to look at how strong each motive actually was." },
       { title: "State the four outcomes", body: "If the religious motive equals the motive of the self, they cancel and fall away, and the act is neither for him nor against him. If the motive of showing off is preponderant and stronger, it is not beneficial and is moreover harmful and leads to punishment. If the aim of nearness is preponderant, he has reward to the measure of the excess of the strength of the religious motive." },
     ],
     closer: [
@@ -243,7 +243,7 @@ export const book37Chapters: Chapter[] = [
     moves: [
       { title: "Gather the testimony", body: "The verses and reports commending truthfulness are assembled, and the rank of the truthful is placed immediately after the rank of the prophets in the ordering the Quran gives." },
       { title: "Signal the widening", body: "The next chapter will show that the word is used in six meanings, of which speech is only the first, so the testimony gathered here is not testimony about honesty alone." },
-      { title: "Name the intensive", body: "One characterised by truthfulness in all six is called a siddiq, since the word is an intensive form of truthfulness. The title is therefore earned by breadth rather than by degree in any one meaning." },
+      { title: "Name the intensive", body: "One marked by truthfulness in all six is called a siddiq, since the word is an intensive form of truthfulness. The title is therefore earned by breadth rather than by degree in any one meaning." },
       { title: "Keep the degrees open", body: "They are also in degrees, and whoever has a share of truthfulness in some part of the list is truthful relative to that in which his truthfulness lies. The part opens by making partial truthfulness a real thing rather than a failure." },
     ],
     closer: [
@@ -261,7 +261,7 @@ export const book37Chapters: Chapter[] = [
     id: 13, shortTitle: "Speech, intention, resolve", formalTitle: "The reality of truthfulness, its meaning and its degrees: the first three",
     overview: "The first half of Ghazali's list. The three are ordered by how much of a person they involve, and the second of them turns out to be sincerity under another name.",
     moves: [
-      { title: "Enumerate the six", body: "Truthfulness is used in six meanings: in speech, in intention and will, in resolve, in fulfilling the resolve, in action, and in realising all the stations of religion. Whoever is characterised by all of them is a siddiq." },
+      { title: "Enumerate the six", body: "Truthfulness is used in six meanings: in speech, in intention and will, in resolve, in fulfilling the resolve, in action, and in realising all the stations of religion. Whoever has all of them is a siddiq." },
       { title: "The first: speech", body: "Truthfulness of the tongue is only in reporting, or in what entails a report and points to it, and the report concerns either the past or the future, and into the future enters keeping a promise and breaking it. It is a right upon every servant to guard his words and speak only truth, and this is the best known and most manifest of the kinds." },
       { title: "Its perfection", body: "This truthfulness has a perfection, which is guarding against equivocations. It has been said that in equivocations there is a way out from lying, and Ghazali's answer is that they stand in the place of lying, since what is guarded against in lying is making something understood otherwise than it is." },
       { title: "The second: intention", body: "Truthfulness in intention and will returns to sincerity: that he have no motive in his movements and stillnesses except God. If an admixture of the soul's shares mingles with it, the truthfulness of the intention is void, and its owner may be called a liar." },
@@ -283,7 +283,7 @@ export const book37Chapters: Chapter[] = [
     moves: [
       { title: "The fourth: fulfilment", body: "Truthfulness in fulfilling the resolve is harder than truthfulness in the resolve, because people are generous with resolve and then flinch at fulfilment, from its severity and from the stirring of appetite when the occasion and the means arrive." },
       { title: "Give the Quranic case", body: "Among them are those who covenanted with God that if He gave them of His bounty they would give charity and be among the righteous; and when He gave them of His bounty they were miserly with it and turned away. So He made the resolve a covenant, made breaking it a lie, and made fulfilling it truthfulness." },
-      { title: "The fifth: action", body: "Truthfulness in actions is that a person strive so that his outward acts do not indicate something in his inward that he is not characterised by. Not by leaving the acts, but by drawing the inward toward confirming the outward, which is why this differs from the treatment for showing off." },
+      { title: "The fifth: action", body: "Truthfulness in actions is that a person strive so that his outward acts do not indicate something in his inward that he is not marked by. Not by leaving the acts, but by drawing the inward toward confirming the outward, which is why this differs from the treatment for showing off." },
       { title: "The sixth: the stations", body: "Truthfulness in realising all the stations of religion, such as fear, hope, reverence, contentment, reliance, and love. Each has a root and a reality, and one truthful in it is one in whom the reality of the station is verified and not only its name." },
     ],
     closer: [

@@ -61,7 +61,7 @@ export const book18Chapters: Chapter[] = [
     id: 3, shortTitle: "Three steps", formalTitle: "The chain the book is built on",
     overview: "One sentence at the head of the first chapter sets the architecture of the whole book, and it separates three things usually run together.",
     moves: [
-      { title: "Give the first term", body: "Know that audition is the first matter." },
+      { title: "Give the first term", body: "Audition is the first matter." },
       { title: "Give the second", body: "Audition fruits a state in the heart called ecstasy." },
       { title: "Give the third", body: "Ecstasy fruits the moving of the limbs — either by an unmeasured movement, which is called agitation, or a measured one, which is called clapping and dancing." },
       { title: "Note what the chain permits", body: "Three separate rulings. What is heard, what it produces inwardly, and what the body does are three different acts with three different questions, and the book treats them in that order." },
@@ -81,7 +81,7 @@ export const book18Chapters: Chapter[] = [
     id: 4, shortTitle: "Four listeners", formalTitle: "The first station: understanding",
     overview: "The second chapter's opening, and the most useful thing in the book: the same sound, four listeners, four different acts.",
     moves: [
-      { title: "Give the first station", body: "Know that the first degree of audition is the understanding of what is heard, and the applying of it to a meaning that occurs to the listener." },
+      { title: "Give the first station", body: "The first degree of audition is the understanding of what is heard, and the applying of it to a meaning that occurs to the listener." },
       { title: "Give the chain again", body: "Then the understanding fruits ecstasy, and the ecstasy fruits movement in the limbs. So consider these three stations." },
       { title: "Give the variable", body: "The first station is understanding, and it differs according to the states of the listener." },
       { title: "Give the number", body: "The listener has four states. Everything else in the book's practical half depends on which of the four a person is in." },

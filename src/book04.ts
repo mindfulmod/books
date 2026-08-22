@@ -22,9 +22,9 @@ export const book04Chapters: Chapter[] = [
     overview: "The largest book of the Quarter of Worship opens with its excellences and announces seven chapters, one of which is unlike all the others.",
     moves: [
       { title: "Gather the excellences", body: "The first chapter assembles what is reported on the excellence of prayer, of prostration, of the congregation, of the call, and of the place of prayer, each treated in turn." },
-      { title: "Announce the seven", body: "The excellences; the outward acts and how they are performed; the inward conditions, which are the acts of the heart; leading the prayer and following; the Friday prayer; scattered questions that arise generally; and the supererogatory prayers." },
+      { title: "Announce the seven", body: "What is said in praise of prayer; the physical acts and how they are done; the inward requirements, which are what the heart is doing; leading the prayer and following it; the Friday prayer; common questions that come up; and the voluntary prayers." },
       { title: "Note which one is different", body: "Six of the seven are procedural, jurisprudential, or devotional. The third is an argument, and it is where nearly all of this book's thinking is." },
-      { title: "Place it in the quarter", body: "Book 3 declared that the Quarter of Worship treats only the outward rank of purification. This book is where that declaration is most tested, because its third chapter is about the heart and comes in the middle of a procedural manual." },
+      { title: "Place it in the quarter", body: "Book 3 said this quarter covers only the physical level of purity. This is the book where that claim comes under most strain, because its third chapter is about the heart and sits in the middle of a how-to manual." },
     ],
     closer: [
       { title: "Why the third chapter is remarkable", body: "It argues that presence of heart is a condition of the prayer, not an adornment of it. That is a position with legal consequences, made inside a book that elsewhere gives the ordinary rulings, and Ghazali does not disguise the tension." },
@@ -41,17 +41,17 @@ export const book04Chapters: Chapter[] = [
     id: 2, shortTitle: "Body and weight", formalTitle: "The visible acts, and the distinction worth taking from them",
     overview: "The longest procedural stretch in the book. Two things in it are worth having even if you never read the rulings themselves.",
     moves: [
-      { title: "Take the shape", body: "The chapter walks through the prayer in order — what comes before the opening words, then the recitation, then bowing and everything attached to it, then the testimony, and on to the end. It fixes the outward act completely." },
+      { title: "Take the shape", body: "The chapter walks through the prayer in order — what comes before the opening words, then the recitation, then bowing and everything attached to it, then the testimony, and on to the end. It pins the physical act down completely." },
       { title: "Take the distinction", body: "One part of it separates what is obligatory from what is customary. That single division is the most useful thing here for anyone who wants to know what carries what weight." },
       { title: "Say why the distinction matters", body: "Get it wrong in one direction and you treat customs as binding, which is how scruple starts. Get it wrong in the other and you treat obligations as optional. Book 3 made the same warning about this whole quarter: the two are not always marked, and confusing them costs something either way." },
-      { title: "Note what fixing the body allows", body: "Once the outward act is completely specified, a question becomes askable that could not be asked before: is doing all of this correctly enough? The next chapter exists because Ghazali thought the answer was no, and that the answer was not obvious." },
+      { title: "Note what fixing the body allows", body: "Once the physical act is fully specified, you can ask something you could not ask before: is doing all this correctly enough? The next chapter exists because Ghazali thought the answer was no — and that it was not obvious." },
     ],
     closer: [
       { title: "Why the manual comes before the argument", body: "He could have argued for inwardness first and then given the procedure. Putting the procedure first means the argument that follows cannot be read as a shortcut. Nobody can take \"the heart is what matters\" as licence to be casual about the act, because the act has just been laid out in full and in earnest." },
       { title: "What this edition carries and what it does not", body: "The rulings themselves are the substance of a legal manual and they differ between the schools, so this edition gives the shape of the chapter and the distinction it draws rather than reproducing the instructions. The editorial note records that decision. What survives the omission is the part that is not school-specific: knowing that the two weights exist and are different." },
     ],
     distinction: ["Two things this chapter settles", "The sequence", "Every visible part, in order, from before the opening to the close.", "The weight", "Which parts are required and which are custom — given its own section, and the part worth keeping."],
-    misreading: "A complete account of the outward acts is not a complete account of the prayer. The next chapter exists precisely because that reading was available and Ghazali thought it was wrong.",
+    misreading: "A complete account of the physical acts is not a complete account of the prayer. The next chapter exists precisely because that reading was available and Ghazali thought it was wrong.",
     reflection: "Ask whether you could say, right now, which parts of your prayer are obligatory and which are custom.",
     audit: ["Do I know which parts are required?", "Where would I check?", "Have I treated a custom as binding?", "What does this chapter deliberately leave open?"],
     nodes: ["salat", "fiqh", "zahir"],
@@ -84,7 +84,7 @@ export const book04Chapters: Chapter[] = [
       { title: "Give the six", body: "The expressions for these meanings are many, but six sentences gather them: presence of heart, understanding, reverence, awe, hope, and shame." },
       { title: "Announce the method", body: "So let us mention their details, then their causes, then the treatment for acquiring them. Details, causes, treatment — the same three-part structure the Ihya uses for the diseases of the heart." },
       { title: "Note what the method implies", body: "If each of the six has causes and a treatment, then each can be worked at separately, and a prayer can fail at one while succeeding at the others. That is what the following chapters spend their length establishing." },
-      { title: "Name what is at stake", body: "These are what completes the life of the prayer. The outward acts are the body of it, and this chapter is about whether that body is alive." },
+      { title: "Name what is at stake", body: "These are what make the prayer alive. The physical acts are its body, and this chapter is about whether that body has anything living in it." },
     ],
     closer: [
       { title: "Why six and not one", body: "It would have been easy to say that the prayer requires presence of heart and leave it there. Six separable requirements make a diagnosis possible: a person who finds his prayer flat can ask which of the six is absent instead of concluding that he lacks devotion in general." },
@@ -144,7 +144,7 @@ export const book04Chapters: Chapter[] = [
       { title: "Separate reverence", body: "Reverence is a matter beyond presence of heart and understanding — for a man addresses his servant with speech while his heart is present and he understands what he says, and there is no reverence in it." },
       { title: "Note what the example proves", body: "Attention and comprehension are fully compatible with the absence of reverence. So no amount of concentration or of learning the meanings will by itself produce the third meaning, which is why it needed a separate treatment." },
       { title: "Name the remaining three", body: "Awe, hope, and shame. Each is a state rather than an act of attention, and each is treated with its causes and its remedies in turn." },
-      { title: "Say what they complete", body: "These are what the chapter calls the meanings by which the life of the prayer is completed. The outward act can be perfect and the first two meanings present, and the act still be, on this account, without life." },
+      { title: "Say what they complete", body: "These are what the chapter calls the things that complete the prayer's life. On this account the physical act can be flawless, and the first two present, and the prayer still have nothing alive in it." },
     ],
     closer: [
       { title: "Why the servant example is well chosen", body: "It uses a case every reader has: speaking attentively and comprehendingly to someone beneath you. Nobody would call that reverence, and nobody has to be persuaded of it — which settles the separation without argument." },
@@ -181,7 +181,7 @@ export const book04Chapters: Chapter[] = [
     id: 9, shortTitle: "Repel the cause", formalTitle: "The remedy that works for presence of heart",
     overview: "The book's central practical argument, and its form is diagnostic: find the cause, and treat that instead of the symptom.",
     moves: [
-      { title: "Establish that the states are already there", body: "The believer must be one who reveres God, fears Him, hopes in Him, and is ashamed of his shortcoming. He is not detached from these states after his faith, though their strength is proportional to the strength of his certainty." },
+      { title: "Establish that the states are already there", body: "A believer necessarily holds God in awe, fears Him, hopes in Him, and feels some shame at falling short. Once you believe, you are not free of these — though how strongly you feel them tracks how certain you are." },
       { title: "Locate the failure", body: "So his being detached from them in the prayer has no cause but the scattering of thought, the dividing of the passing notions, the absence of the heart from the intimate address, and heedlessness of the prayer." },
       { title: "Name the mechanism", body: "Nothing distracts from the prayer except the incoming thoughts that occupy it." },
       { title: "Give the rule", body: "So the remedy for making the heart present is to repel those thoughts. And a thing is not repelled except by repelling its cause. So know its cause." },
@@ -243,12 +243,12 @@ export const book04Chapters: Chapter[] = [
     moves: [
       { title: "Set the task", body: "Your right, if you are among those desiring the hereafter, is that you not be heedless of the alerts contained in the conditions and elements of the prayer. The preceding conditions are the call, purification, covering, facing, standing, and the intention." },
       { title: "The call", body: "When you hear the caller's call, bring to your heart the terror of the call on the Day of Resurrection, and gird yourself outwardly and inwardly for the response and the hastening — for those who hasten to this call are the ones called with kindness on the day of the greatest presentation." },
-      { title: "Give the self-test", body: "So present your heart to this call: if you find it filled with joy and gladness, laden with the desire to hurry, know that the call will come to you with good news on the day of judgement. And so he said: give us rest, Bilal — meaning, give us rest by it." },
+      { title: "Give the self-test", body: "So hold your heart up against that call. If you find it full of gladness, straining to hurry, then the summons on the last day will come to you as good news. This is why he said “Give us rest, Bilal” — meaning, give us rest *by it*." },
       { title: "Purification", body: "When you perform it in your place, which is your furthest container; then in your clothes, which are your nearer covering; then in your skin, which is your nearest rind — do not be heedless of your kernel, which is your self, which is your heart." },
     ],
     closer: [
       { title: "Why naming a content for each part works", body: "An instruction to concentrate gives the mind nothing to hold, and a mind holding nothing wanders. Naming a specific thing at each moment gives presence something to be present to, which is the practical answer to the problem the chapter opened with." },
-      { title: "The image of the four layers", body: "Place, clothes, skin, heart — container, covering, rind, kernel. It is Book 3's four ranks of purification restated inside a single act, so that the same movement from the outward to the inmost happens every time a person washes." },
+      { title: "The image of the four layers", body: "Place, clothes, skin, heart — container, covering, rind, kernel. It is Book 3's four ranks of purification restated inside a single act, so that the same movement from the outward to the innermost happens every time a person washes." },
     ],
     distinction: ["Two ways to attempt presence", "With a content", "Something specific named for each element, which attention can hold.", "By resolving to concentrate", "An instruction with no object, which leaves the mind free to wander."],
     misreading: "Do not treat the named contents as a script to be recited inwardly. They are what the parts of the prayer are said to alert a person to, and the section's own test is what a heart is found to be full of, not what it has rehearsed.",
@@ -282,7 +282,7 @@ export const book04Chapters: Chapter[] = [
     overview: "The passage that does the most work in the whole book, because it gives you something you can actually do — and then turns it into an accusation you cannot easily answer.",
     moves: [
       { title: "Say what standing is", body: "Standing upright is presenting yourself — the person and the heart — before God. So let your head, the highest part of you, be lowered and bowed. The dropping of the head is there to remind the heart to take on humility and drop any claim to importance." },
-      { title: "Give the honest concession", body: "Know that you are standing before God and He is watching you. Stand before Him as you would stand before one of the kings of your time — and Ghazali adds, plainly, \"if you are unable to grasp the true measure of His majesty.\" He does not assume you can." },
+      { title: "Give the honest concession", body: "You are standing before God and He is watching you. Stand before Him as you would stand before one of the kings of your time — and Ghazali adds, plainly, \"if you are unable to grasp the true measure of His majesty.\" He does not assume you can." },
       { title: "Give the exercise", body: "\"Rather, imagine while you are standing in your prayer that you are being watched by some upright man of your household, or someone whose good opinion you want.\" Because at that, he says, your limbs settle, your body grows still, and everything in you quiets — out of fear that this one feeble person might think you were not being reverent." },
       { title: "Then turn it around", body: "\"And when you feel yourself pulling together under the gaze of a mere servant, reproach yourself and say: you claim to know God and to love Him — are you not ashamed of your boldness with Him, while you show such respect to one of His servants? Do you fear people and not fear Him, when He is the more deserving to be feared?\"" },
     ],
