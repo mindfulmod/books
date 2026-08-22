@@ -32,6 +32,7 @@ import { book09 } from "./book09";
 import { book10 } from "./book10";
 import { book11 } from "./book11";
 import { book12 } from "./book12";
+import { book13 } from "./book13";
 import { book21 } from "./book21";
 import { book22 } from "./book22";
 import { book23 } from "./book23";
@@ -66,7 +67,7 @@ type SavedState = {
 };
 
 
-const books = [book01, book02, book03, book04, book05, book06, book07, book08, book09, book10, book11, book12, book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33, book34, book35, book36, book37, book38, book39, book40];
+const books = [book01, book02, book03, book04, book05, book06, book07, book08, book09, book10, book11, book12, book13, book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33, book34, book35, book36, book37, book38, book39, book40];
 
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
   { id: "glance", label: "30 seconds", short: "30s" },

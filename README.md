@@ -31,7 +31,7 @@ Pushes to `main` automatically build and publish the System edition through GitH
 
 ## Current build
 
-The System edition currently carries **thirty-two books**: three complete quarters — the Quarter of Worship, books 1 to 10; the Quarter of Perils, books 21 to 30; and the Quarter of Deliverance, books 31 to 40 — and the first two books of the Quarter of Customs.
+The System edition currently carries **thirty-three books**: three complete quarters — the Quarter of Worship, books 1 to 10; the Quarter of Perils, books 21 to 30; and the Quarter of Deliverance, books 31 to 40 — and the first three books of the Quarter of Customs.
 
 | Book | Title | Sections | Journeys | Instrument |
 |---|---|---|---|---|
@@ -47,6 +47,7 @@ The System edition currently carries **thirty-two books**: three complete quarte
 | 10 | The Arrangement of Litanies | 10 | 3 | Why the practice stopped |
 | 11 | The Etiquette of Eating | 10 | 3 | Which circle, and where it goes wrong |
 | 12 | The Etiquette of Marriage | 11 | 3 | Five against three |
+| 13 | The Etiquette of Earning | 11 | 3 | Valid, just, or excellent |
 | 21 | The Wonders of the Heart | 15 | 4 | Five obstructions |
 | 22 | Disciplining the Soul and Refining Character | 11 | 5 | Four mirrors |
 | 23 | Breaking the Two Desires | 7 | 4 | Four measures |
