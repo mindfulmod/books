@@ -71,6 +71,10 @@ type SavedState = {
   depth: Depth;
   visited: string[];
   bookmarks: string[];
+  // Set when the reader opens a section that no journey node points at. The journeys are
+  // curated paths and do not cover every section — 58 of the 550 sit outside them — so the
+  // sequence rail needs to address a chapter directly. Cleared whenever a node is chosen.
+  chapterId?: number;
 };
 
 
@@ -112,6 +116,10 @@ const LEGACY_STORAGE_KEY = "ihya-system-state-v1";
 
 const ideaKey = (bookId: number, journeyId: string, nodeId: string) =>
   `${bookId}:${journeyId}:${nodeId}`;
+
+// Progress key for a section reached directly through the sequence rail rather than through a
+// journey node. Shares the `${bookId}:` prefix so it still counts toward per-book progress.
+const chapterKey = (bookId: number, chapterId: number) => `${bookId}:section:${chapterId}`;
 
 function fallbackDeepReading(chapter: Chapter, node: JourneyNode, book: SystemBook): DeepReading {
   return {
@@ -1514,8 +1522,11 @@ function SystemApp() {
     ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
     ?? book.journeys[0];
   const node = journey.nodes.find((item) => item.id === saved.nodeId) ?? journey.nodes[0];
-  const chapter = book.chapters.find((item) => item.id === node.chapterId)!;
-  const nodeKey = ideaKey(book.id, journey.id, node.id);
+  const overrideChapter = saved.chapterId != null
+    ? book.chapters.find((item) => item.id === saved.chapterId) ?? null
+    : null;
+  const chapter = overrideChapter ?? book.chapters.find((item) => item.id === node.chapterId)!;
+  const nodeKey = overrideChapter ? chapterKey(book.id, overrideChapter.id) : ideaKey(book.id, journey.id, node.id);
   const isBookmarked = saved.bookmarks.includes(nodeKey);
   const positions = mapPositions[journey.nodes.length as 4 | 5 | 6];
   const relatedConcepts = useMemo(
@@ -1558,6 +1569,7 @@ function SystemApp() {
       bookId: nextBook.id,
       journeyId: nextJourney.id,
       nodeId: nextNode.id,
+      chapterId: undefined,
       depth: "glance",
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
@@ -1577,6 +1589,7 @@ function SystemApp() {
       ...current,
       journeyId: next.id,
       nodeId: first.id,
+      chapterId: undefined,
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
   };
@@ -1593,15 +1606,20 @@ function SystemApp() {
     setSaved((current) => ({
       ...current,
       nodeId: next.id,
+      chapterId: undefined,
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
   };
 
   const selectChapter = (chapterId: number) => {
+    if (!book.chapters.some((item) => item.id === chapterId)) return;
     const nextJourney = book.journeys.find((item) => item.nodes.some((itemNode) => itemNode.chapterId === chapterId));
     const nextNode = nextJourney?.nodes.find((item) => item.chapterId === chapterId);
-    if (!nextJourney || !nextNode) return;
-    const key = ideaKey(book.id, nextJourney.id, nextNode.id);
+    // Journeys are curated paths and do not reach every section. When none covers this one,
+    // address the chapter directly instead of silently doing nothing.
+    const key = nextJourney && nextNode
+      ? ideaKey(book.id, nextJourney.id, nextNode.id)
+      : chapterKey(book.id, chapterId);
     setActiveConcept(null);
     if (activeTaxonomy !== "all") {
       setActiveTaxonomy(book.taxonomy?.groups.find((group) => group.chapterIds.includes(chapterId))?.id ?? "all");
@@ -1611,8 +1629,9 @@ function SystemApp() {
     }
     setSaved((current) => ({
       ...current,
-      journeyId: nextJourney.id,
-      nodeId: nextNode.id,
+      journeyId: nextJourney?.id ?? current.journeyId,
+      nodeId: nextNode?.id ?? current.nodeId,
+      chapterId: nextJourney && nextNode ? undefined : chapterId,
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
   };
@@ -1823,17 +1842,23 @@ function SystemApp() {
 
           <article className="explanation-card" role="tabpanel">
             <header>
-              <span>Section {chapter.id} · stage {journey.nodes.indexOf(node) + 1} of {journey.nodes.length}</span>
-              <h2>{node.label}</h2>
-              <p>{node.micro}</p>
+              {/* An off-journey section has no stage, and the node belongs to a different
+                  chapter — show the section's own identity rather than borrowing the node's. */}
+              <span>
+                {overrideChapter
+                  ? `Section ${chapter.id} of ${book.chapters.length} · outside the journeys`
+                  : `Section ${chapter.id} · stage ${journey.nodes.indexOf(node) + 1} of ${journey.nodes.length}`}
+              </span>
+              <h2>{overrideChapter ? chapter.shortTitle : node.label}</h2>
+              <p>{overrideChapter ? chapter.formalTitle : node.micro}</p>
             </header>
 
             {saved.depth === "glance" && (
               <div className="depth-content glance-content">
-                <p className="big-idea">{node.summary}</p>
+                <p className="big-idea">{overrideChapter ? chapter.overview : node.summary}</p>
                 <div className="do-not-collapse">
                   <span>Keep this distinction</span>
-                  <strong>{node.guardrail}</strong>
+                  <strong>{overrideChapter ? deepReading.misreading : node.guardrail}</strong>
                 </div>
                 <button className="continue-button" onClick={() => setSaved((current) => ({ ...current, depth: "understand" }))}>
                   Understand why <ArrowRight size={17} weight="bold" />
@@ -1930,14 +1955,18 @@ function SystemApp() {
                   <figcaption><Sparkle size={14} weight="fill" /> Journey {journey.number} symbolic plate</figcaption>
                 </figure>
                 <div className="deep-stage-label">
-                  <span>Selected stage</span>
-                  <strong>{String(journey.nodes.indexOf(node) + 1).padStart(2, "0")} / {String(journey.nodes.length).padStart(2, "0")}</strong>
+                  <span>{overrideChapter ? "Selected section" : "Selected stage"}</span>
+                  <strong>
+                    {overrideChapter
+                      ? `${String(chapter.id).padStart(2, "0")} / ${String(book.chapters.length).padStart(2, "0")}`
+                      : `${String(journey.nodes.indexOf(node) + 1).padStart(2, "0")} / ${String(journey.nodes.length).padStart(2, "0")}`}
+                  </strong>
                 </div>
-                <h3>{node.label}</h3>
-                <p>{node.summary}</p>
+                <h3>{overrideChapter ? chapter.shortTitle : node.label}</h3>
+                <p>{overrideChapter ? chapter.overview : node.summary}</p>
                 <div className="deep-guardrail">
                   <span>Do not collapse this</span>
-                  <strong>{node.guardrail}</strong>
+                  <strong>{overrideChapter ? deepReading.misreading : node.guardrail}</strong>
                 </div>
                 <button className={isBookmarked ? "bookmark-action active" : "bookmark-action"} onClick={toggleBookmark}>
                   <BookmarkSimple size={19} weight={isBookmarked ? "fill" : "regular"} />
