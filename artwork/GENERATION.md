@@ -306,3 +306,106 @@ Book 40 received an additional safety constraint: depict only the requested eart
 - `book40-last-words`: one upright cushion and shallow cup crossed by late golden light.
 - `book40-change-of-state`: two identical clay lamps, one sealed and unlit and one open and lit.
 - `book40-the-seal`: a single blank card weighing down its pan against a thick raised stack of blank papers.
+
+## Books 5–20 journey illustrations
+
+Forty-seven journey plates were created with the built-in image generation tool on 2026-08-22. This was new bitmap generation rather than reference-image editing. Full-resolution 1672 by 941 PNG masters are preserved in `artwork/system-source/`; optimized 1600 by 900 JPEGs and 480 by 270 navigation thumbnails are served from `public/assets/system/`.
+
+### Shared prompt direction
+
+> Create a 16:9 journey plate for an adult interactive reading edition of Imam al-Ghazali's *Ihya*. Use luminous editorial realism, a decisive central metaphor, realistic materials, and a polished museum-display finish. Ground every environment in a named real Islamic architectural tradition—including the current Masjid al-Haram palette, the Alhambra, Sultan Hassan, Süleymaniye, Topkapi, Bou Inania, Karatay Madrasa, Safranbolu houses, the Isfahan bazaar, and historic Fez, Damascus, Kairouan, Cairo, and Ottoman settings—without combining them into fantasy architecture. Use sunlit ivory and white stone, honey gold and brass, turquoise and cobalt accents, small warm coral notes, and healthy greenery where relevant. Keep all load-bearing objects in the middle seventy percent for responsive cropping. No people, faces, silhouettes, hands, human shadows, Arabic, calligraphy, letters, legible writing, pseudo-writing, logos, watermark, captions, gloomy light, dark-green dominance, ruins, or desaturation.
+
+### Book 5 — Mysteries of Almsgiving
+
+- `book05-the-test`: one ordinary coin in one balance pan, the other pan empty, with the beam impossibly level.
+- `book05-two-hands`: one small purse exactly half covered by a folded cloth at an Alhambra-inspired threshold.
+- `book05-the-fraction`: a tiny level scoop beside a very large heaped grain measure.
+- `book05-the-yield`: an open Safavid caravanserai granary with many sacks inside and one full basket outside.
+
+### Book 6 — Mysteries of Fasting
+
+- `book06-three-degrees`: exactly three identical empty bowls—open, covered, and inverted—under identical light.
+- `book06-the-feedbag`: an abundant untouched supper for one at dusk, centered on one empty plate.
+- `book06-two-offices`: two equal ledgers ruled differently and containing only dots and geometric tallies.
+
+### Book 7 — Mysteries of Pilgrimage
+
+- `book07-the-exchange`: a cared-for hill cell with an open door beside a stronger onward road.
+- `book07-the-creditor`: sealed unopened letters pinning down a fully packed travelling roll.
+- `book07-unstitched`: two nearly equal lengths of undyed cloth with clearly raw, unhemmed edges.
+- `book07-two-circuits`: a generic low square stone inside one worn circular floor path, viewed overhead and deliberately unlike a holy site.
+
+### Book 8 — Etiquette of Quran Recitation
+
+- `book08-clothed-letters`: a closed book on a lectern protected by a thin carefully placed cloth.
+- `book08-addressed`: a blank opened letter beside an envelope whose addressed face is turned away.
+- `book08-two-lamps`: one lamp lights blank pages while a second throws the empty chair's shadow across them.
+
+### Book 9 — Invocations and Supplications
+
+- `book09-the-light-thing`: one tiny dense brass weight decisively outweighing a heap of larger stones.
+- `book09-before-dawn`: first grey-blue dawn through a plain window above one unlit lamp.
+- `book09-the-shield`: an intact round shield beside one intact fallen arrow, both at rest.
+
+### Book 10 — Arrangement of Litanies
+
+- `book10-the-chain`: a cared-for sundial actively casting a clear morning shadow across unnumbered divisions.
+- `book10-seven-marks`: exactly seven handmade scratches on a white wall, with the roof shadow touching one.
+- `book10-the-portion`: a small sufficient lamp, folded blanket, and still-made bed in a warm night room.
+
+### Book 11 — Etiquette of Eating
+
+- `book11-one-place`: one properly laid solitary place with covered dish, water, and folded cloth.
+- `book11-shared-dish`: two equal settings around one shared dish disturbed on the near side only.
+- `book11-the-burden`: one guest setting made uncomfortable by far more carefully prepared dishes than it can reach.
+
+### Book 12 — Etiquette of Marriage
+
+- `book12-two-pans`: exactly five small pale stones and three larger dark stones on an almost-level balance. A first render with the wrong count was rejected and regenerated.
+- `book12-same-stone`: one stone placed precisely on the fulcrum, touching neither empty pan.
+- `book12-two-ledgers`: two identically ruled ledgers with different geometric entries and visibly different abstract totals.
+
+### Book 13 — Etiquette of Earning
+
+- `book13-two-standards`: a properly completed blank sealed contract beside visibly unequal brass weights.
+- `book13-capital-profit`: a geometric ledger whose first column is totalled and second remains deliberately unsummed.
+- `book13-two-markets`: one street joining a shuttered orderly stall to a simple open mosque-court doorway.
+
+### Book 14 — Lawful and Unlawful
+
+- `book14-rain-in-air`: one wide bowl on a three-legged stand catching rain in completely unbounded open ground.
+- `book14-the-boundary`: a low dry-stone wall dividing grazed grass from untouched pasture before any trespass.
+- `book14-the-question`: a hospitable covered dish before one empty chair, warm and unaccusing.
+
+### Book 15 — Etiquette of Companionship
+
+- `book15-two-hands`: two identical work gloves worn in the same places.
+- `book15-my-shoe`: several equally worn, indistinguishable pairs of sandals at one mosque threshold.
+- `book15-empty-chair`: two places kept at a warm table, one used and one still carefully laid.
+
+### Book 16 — Etiquette of Seclusion
+
+- `book16-one-lamp`: one purposefully lit lattice window among peacefully dark neighboring windows at night.
+- `book16-two-doors`: an attractive library study opening directly into an equally inviting communal madrasa court.
+
+### Book 17 — Etiquette of Travel
+
+- `book17-fork`: two equally worn and equally appealing roads dividing at one unlettered marker.
+- `book17-the-return`: one still-fastened travelling bag clearly inside a threshold with the road visible behind it.
+
+### Book 18 — Listening and Ecstasy
+
+- `book18-three-links`: exactly three identical iron rings touching in a row without interlocking.
+- `book18-one-sound`: one plain bell at the center of an empty room with four unequally lit doorways.
+
+### Book 19 — Enjoining Right and Forbidding Wrong
+
+- `book19-axis`: one iron pivot pin in a long-worn, polished stone socket.
+- `book19-wall`: one completely closed wooden door in an intentionally uninformative mudbrick wall.
+- `book19-ladder`: one ladder whose lowest rung is unmistakably missing while every upper rung remains intact.
+
+### Book 20 — Manners of Living and the Character of Prophecy
+
+- `book20-title`: one folded letter with only grey stippled texture where an outer inscription would be.
+- `book20-pressure`: one intact but slack and unbent bow at rest, with no arrow or quiver.
+- `book20-proof`: a geometric wax impression and its matching face-up brass matrix, both fully visible.
