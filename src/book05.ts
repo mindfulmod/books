@@ -1,0 +1,419 @@
+import { assetUrl } from "./assetUrl";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const fasl = (id: number) => (id === 1 ? "the first section, on the kinds of alms" : id <= 9 ? "the second section, on the paying and its inward etiquette" : id <= 11 ? "the third section, on the receiver" : "the fourth section, on voluntary charity");
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 5, ${fasl(seed.id)}, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book05Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "Six kinds", formalTitle: "The kinds of alms and the causes of the obligation",
+    overview: "The book opens with the technical frame, and the interesting thing about it is how quickly Ghazali passes through it to get to the second section.",
+    moves: [
+      { title: "Give the six", body: "Alms, considered by what they attach to, are six kinds: on livestock; on the two currencies; on trade goods; on buried treasure and mines; on crops; and the alms of the fast-breaking." },
+      { title: "Announce the four sections", body: "The kinds and the causes of obligation; the paying, with its inward and outward conditions; the receiver, the causes of his entitlement, and the duties of receiving; and voluntary charity, its excellence and the etiquette of taking and giving it." },
+      { title: "Note the proportion", body: "The first section, which is the whole legal apparatus, is the shortest. Most of the book is the second and third sections, which are about the state of the one giving and the state of the one receiving." },
+      { title: "Note what the third section is", body: "A treatment of the receiver's duties. Books on alms are usually written for the giver, and giving the recipient five duties of his own is what most distinguishes this one." },
+    ],
+    closer: [
+      { title: "The pattern of the quarter", body: "Book 3 declared that this quarter treats the outward and then set the outward inside four ranks. Book 4 gave the outward acts of prayer and then argued about the heart. This book gives the law of alms in one short section and then spends the rest on eight duties of the giver and five of the receiver." },
+      { title: "Why the technical part is brief", body: "It was not a subject in dispute and there were manuals for it. What was not available was an account of what the act does to the person doing it, which is what the Ihya was written to supply." },
+    ],
+    distinction: ["Two ways to write about alms", "As a transfer", "Who owes what to whom, which is one short section here.", "As two states", "What the act requires of the giver and what it requires of the receiver, which is the rest of the book."],
+    misreading: "Do not skip the first section as merely technical. It fixes what is owed, which is what allows the rest of the book to be about something other than the amount.",
+    reflection: "Notice that a book on a financial obligation gives the arithmetic one section out of four.",
+    audit: ["What did I expect this book to cover?", "Which of the four sections do I need?", "Have I thought about the receiver's duties?", "What does the proportion claim?"],
+    nodes: ["zakat", "structure", "qabid"],
+    model: chain("Four sections", "The legal one is the shortest.", [["The kinds", "Six, with the causes of the obligation.", "balance"], ["The paying", "Eight duties of inward etiquette.", "support"], ["The receiver", "Entitlement, and five duties of his own.", "support"], ["Voluntary charity", "Its excellence, and the manners of taking and giving.", "balance"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "A test of the claim", formalTitle: "Why a financial act is one of the foundations",
+    overview: "The first of the eight duties is to understand why this is a pillar at all, and Ghazali's answer turns on what kind of thing love is.",
+    moves: [
+      { title: "Put the question", body: "Understanding the obligation of alms, its meaning, the aspect of testing in it, and why it was made one of the foundations of Islam though it is a financial expenditure and not a worship of the body." },
+      { title: "The first meaning", body: "Uttering the two testimonies is a commitment to unity and a witnessing that the Worshipped is one. And the condition of complete fulfilment of it is that there remain for the one professing unity no beloved besides the One — for love does not accept partnership." },
+      { title: "Draw the consequence", body: "And unity with the tongue is of little avail. The degree of a lover is tested only by parting from what is beloved." },
+      { title: "Name what is parted from", body: "And wealth is beloved to creatures, because it is the instrument of their enjoyment of the world; and by reason of it they are at home in this world and recoil from death, though in death is the meeting of the Beloved. So they were tested as to the truth of their claim, and required to come down from the wealth which is their gaze and their darling." },
+    ],
+    closer: [
+      { title: "Why this makes alms a pillar", body: "A pillar of Islam should test what Islam consists in. If the profession of unity is a claim about where love is directed, and love does not admit partners, then the only test of the claim is separation from a rival — and wealth is the rival everyone has. The argument locates the obligation inside the testimony rather than beside it." },
+      { title: "The premise that carries it", body: "That love does not accept partnership. It is the same premise Book 36 builds its whole treatment on and Book 40 uses to explain why the world's love pushes away the thought of death. The three books are running one claim through three subjects." },
+    ],
+    distinction: ["Two ways to see the obligation", "A test of a claim", "The profession of unity checked against what a person will part from.", "A charge on wealth", "A percentage owed, which explains the rate but not why it is a pillar."],
+    misreading: "Do not read this as making the amount unimportant. The obligation is a definite quantity, and the argument is about what paying it is a test of, not about whether the figure matters.",
+    reflection: "Ask what your profession of unity would be tested against, if not this.",
+    audit: ["What does this act test in me?", "What do I hold that does not admit a partner?", "Is my unity on the tongue?", "What would parting actually cost?"],
+    nodes: ["tawhid", "mahabba", "zakat"],
+    model: chain("Why it is a pillar", "Each step is required by the one before.", [["Unity is professed", "A claim that the Worshipped is one.", "support"], ["Love admits no partner", "So the claim is about where love is directed.", "support"], ["A claim needs a test", "And a lover is tested only by parting.", "support"], ["Wealth is the rival", "Which everyone has, which makes the test universal.", "balance"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "Early", formalTitle: "The time of paying",
+    overview: "The second duty, and it is the shortest of the eight: a small adjustment of timing that Ghazali reads as evidence about a state.",
+    moves: [
+      { title: "Give the duty", body: "The second duty concerns the time of paying. And of the etiquette of the religious is hastening it before the time at which it becomes obligatory." },
+      { title: "Say what it shows", body: "Hastening is offered as a demonstration — of readiness, and of the absence of the reluctance that ordinarily attends parting with wealth." },
+      { title: "Note the logic", body: "If the act is a test of a claim, as the first duty argued, then when it is paid is itself evidence. Paying at the last permitted moment satisfies the obligation and says something about the payer that early payment does not." },
+      { title: "Connect it to the sixth duty", body: "Ghazali later quotes the saying that a kindness is not complete except by three things: counting it small, hastening it, and concealing it. Two of those three are duties two and three, and the third is duty six." },
+    ],
+    closer: [
+      { title: "Why timing is legible", body: "Amount is fixed by law and cannot show anything about a person. Timing is not fixed in the same way, so it becomes one of the few places where a legally identical act can carry different information — which is exactly what an account of inward etiquette needs." },
+      { title: "The three-part saying", body: "Small, early, hidden. Each of the three removes something that would otherwise attach to the act: self-admiration, reluctance, and the desire to be seen. Taken together they describe a gift with nothing of the giver left in it." },
+    ],
+    distinction: ["Two identical payments", "Early", "The obligation met before it falls due, which shows something the amount cannot.", "At the deadline", "Legally complete, and carrying different information about the payer."],
+    misreading: "Do not read lateness as automatically condemned. Ghazali calls hastening the etiquette of the religious, which places it among the excellences rather than among the requirements.",
+    reflection: "Notice when you actually pay what you owe, and whether the timing is chosen or merely allowed to happen.",
+    audit: ["When do I pay?", "Is that chosen or default?", "What does my timing show?", "Which of the three completions do I have?"],
+    nodes: ["adab-mal", "zakat", "istiajal"],
+    model: chain("Three completions of a kindness", "Each removes something that would otherwise attach.", [["Counted small", "Which removes self-admiration.", "support"], ["Hastened", "Which removes reluctance.", "support"], ["Concealed", "Which removes the desire to be seen.", "support"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "So the left hand", formalTitle: "Concealing the gift",
+    overview: "The third duty, and it comes with a report that turns concealment into a scale with three points rather than a single instruction.",
+    moves: [
+      { title: "Give the duty", body: "Concealment, for that is further from showing off and from seeking reputation. The best charity is the effort of one of little means, to a poor man, in secret." },
+      { title: "Give the three stages", body: "A servant does a work in secret and God writes it for him in secret. If he makes it public, it is transferred from the secret and written in the open. And if he talks about it, it is transferred from both the secret and the open and is written as showing off." },
+      { title: "Note what the third stage adds", body: "Talking about a gift already given is a separate act from giving it publicly, and it is placed on the far side of public giving rather than beside it." },
+      { title: "Name the benefit", body: "The benefit of concealment is deliverance from the blights of showing off and reputation. One who talks of his charity seeks reputation; one who gives in a crowd seeks show; and concealment and silence are what deliver from both." },
+    ],
+    closer: [
+      { title: "The image that fixes the standard", body: "Among the seven whom God shades on a day with no shade but His is a man who gave a charity so that his left hand did not know what his right hand gave. The standard is set past concealment from others and at concealment from oneself." },
+      { title: "Why the report is a scale", body: "Two of the three stages involve no lie and no boast. Making a gift public is not condemned in the report; it is relocated. And that matters because the very next duty licenses making it public, which would be incoherent if publicity were itself the offence." },
+    ],
+    distinction: ["Two ways to lose the secret", "By giving openly", "The act moves from the secret to the open, which the next duty sometimes requires.", "By speaking of it afterward", "Which the report places past both, and which nothing in the book licenses."],
+    misreading: "Do not read the three stages as forbidding open giving. The next duty requires it in specific cases, and the report's structure — secret, open, and then a third thing — is what makes that possible.",
+    reflection: "Ask which of the three stages your last gift ended at, and whether the last step happened in a conversation.",
+    audit: ["Where did my last gift end up on the scale?", "Have I talked about it since?", "Do I conceal from others or from myself?", "What am I delivered from by silence?"],
+    nodes: ["israr", "riya", "sadaqa"],
+    model: spectrum("Three stages", "Only the last involves anything the book never licenses.", [["In secret", "Written for him in secret.", "support"], ["Made public", "Transferred to the open, and sometimes required.", "balance"], ["Spoken of after", "Transferred from both and written as showing off.", "warning"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "A third thing", formalTitle: "When the gift should be made public",
+    overview: "The fourth duty, which reverses the third under a condition — and then names a consideration that neither of them has mentioned.",
+    moves: [
+      { title: "Give the condition", body: "That he make it public where he knows that in his disclosing it there is an encouragement to people to imitate — and that he guard his inmost from the motive of showing off, by the method given in the treatment of showing off." },
+      { title: "Give the second occasion", body: "Or because the asker asked in a crowd of people. In that case he should not leave off giving out of fear of showing off in the disclosure; rather he should give, and guard his inmost from showing off as far as possible." },
+      { title: "Name the third consideration", body: "And this is because in disclosure there is a third thing to beware of, besides reproach and showing off — and that is the tearing of the poor man's covering. For he may be hurt at being seen in the form of one in need." },
+    ],
+    closer: [
+      { title: "The waiver", body: "But whoever made his asking public is the one who tore his own covering, so this consideration is not to be feared in disclosing to him. Ghazali compares it to disclosing the sinfulness of one who conceals it, which is forbidden — and to spying it out, which is worse." },
+      { title: "Why the order of the three matters", body: "Reproach and showing off are about the giver, and the third is about someone else. A person weighing only the first two can perform a well-considered act of generosity that humiliates the person receiving it, and he will not notice, because both of the considerations he weighed were about himself." },
+    ],
+    distinction: ["Two reasons not to give openly", "About yourself", "Reproach and showing off, which are what most accounts of the etiquette weigh.", "About the other person", "The tearing of his covering, which nothing about your own state will detect."],
+    misreading: "Do not read the fear of showing off as a reason to withhold. Ghazali says explicitly that a person should not leave off giving out of that fear, and should give and guard his inmost as far as he can.",
+    reflection: "Recall a gift made in front of others and ask what it cost the person receiving it.",
+    audit: ["Which of the three did I weigh?", "Did I consider the recipient's covering?", "Did he make his own need public?", "Have I withheld out of fear of showing off?"],
+    nodes: ["izhar", "riya", "sitr"],
+    model: chain("Three things to beware of in disclosure", "The third is about someone else entirely.", [["Reproach", "What the giver does to the gift.", "warning"], ["Showing off", "What the giver seeks from the giving.", "warning"], ["The covering", "What the disclosure does to the one receiving.", "warning"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "Do not spoil it", formalTitle: "Reproach and injury",
+    overview: "The fifth duty, and it is the one with the plainest scriptural warrant: an act that is legally complete can be voided by what accompanies it.",
+    moves: [
+      { title: "Give the duty", body: "That he not spoil his charity by reproach and injury. The verse is direct: do not void your charities by reproach and injury." },
+      { title: "Note what the verse asserts", body: "Not that reproach lessens the reward but that it voids the charity. The act and the reproach are treated as one thing whose value is settled together." },
+      { title: "Distinguish it from the sixth duty", body: "Ghazali is careful that this is not the same as counting the gift great. If a man spent his wealth on building a mosque or a hostel, counting it great would be possible in it, and reproach and injury would not." },
+      { title: "Say why the distinction matters", body: "Reproach requires a person on the other end of it. Self-admiration does not, and so it reaches acts where there is nobody to reproach — which is why the two need separate duties." },
+    ],
+    closer: [
+      { title: "What counts as reproach", body: "Not only saying so. Anything by which the recipient is made to feel the transaction — reminding, expecting deference, treating the relation as altered — falls under it, and the poor man's position makes almost any of it effective." },
+      { title: "Why it is placed after the disclosure duty", body: "Public giving is where reproach is easiest, because the audience does the reminding without the giver having to. Placing this duty immediately after the licence to give publicly is a fence on that licence." },
+    ],
+    distinction: ["Two things that can attach to a gift", "Reproach", "Requires a recipient, and is what the verse says voids the charity.", "Self-admiration", "Requires nobody, and reaches gifts with no recipient at all, such as a building."],
+    misreading: "Do not treat reproach as a matter of words only. The distinction Ghazali draws is between what needs a recipient and what does not, which means anything reaching the recipient counts.",
+    reflection: "Ask whether anyone you have given to behaves differently around you now.",
+    audit: ["Does anyone owe me for a gift?", "Have I reminded, even obliquely?", "Which of the two is my problem?", "What does the verse say happens to the charity?"],
+    nodes: ["mann", "sadaqa", "ujb"],
+    model: pair("Two blights, two requirements", "Only one of them needs another person.", [["Reproach", "Needs a recipient; voids the charity by the verse.", "warning"], ["Self-admiration", "Needs nobody; reaches even a gift to a building.", "warning"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "A tenth of much", formalTitle: "Counting the gift small",
+    overview: "The sixth duty, and it comes with a general principle about how acts are weighed that reaches well beyond alms.",
+    moves: [
+      { title: "Give the duty and the reason", body: "That he count the gift small — for if he counts it great he is pleased with it, and self-admiration is among the destroyers and nullifies works. And on the day of Hunayn, when your numbers pleased you and availed you nothing." },
+      { title: "Give the principle", body: "It is said: an act of obedience, the more it is counted small, the greater it becomes with God; and a sin, the more it is counted great, the smaller it becomes with God." },
+      { title: "Give the arithmetic", body: "The remedy is knowledge and action. As for the knowledge: that a tenth, or a quarter of a tenth, is little out of much — and that he has contented himself with the meanest degree of giving. So he is fit to be ashamed of it; how then should he count it great?" },
+      { title: "Take the other case", body: "And if he rises to the highest degree and gives all his wealth or most of it, let him consider where the wealth came from and to what he is spending it. For the wealth is God's, and His is the favour upon him." },
+    ],
+    closer: [
+      { title: "Why both cases are covered", body: "The obvious reading is that small gifts should not be inflated. Ghazali handles the large gift too, and by a different route: not that it is small, but that it was not the giver's to begin with. Neither case leaves room for the gift to be a personal achievement." },
+      { title: "The inversion in the principle", body: "Counting an act small makes it great, and counting a sin great makes it small. Both halves work by the same mechanism: what a person's estimate does is not to the act but to him, and the act is then weighed with him in whatever state the estimate left him." },
+    ],
+    distinction: ["Two ways a gift stops being an achievement", "By its size", "A tenth is little out of much, and it is the meanest degree of giving.", "By its source", "Where the wealth came from, which applies when the fraction is no longer small."],
+    misreading: "Do not read this as a demand for false modesty. The two arguments given are factual — the rate is a small fraction, and the wealth was received — and neither requires pretending anything.",
+    reflection: "Work out what fraction you actually gave last year, and say the number aloud.",
+    audit: ["What fraction was it, really?", "Where did the wealth come from?", "Am I pleased with it?", "Which of the two arguments applies to me?"],
+    nodes: ["ujb", "zakat", "istisghar"],
+    model: pair("Two arguments, two sizes", "Neither leaves the gift as an achievement.", [["A small fraction", "A tenth or a quarter of a tenth, and the meanest degree of giving.", "balance"], ["Not yours", "Where the wealth came from, which covers the case of giving most of it.", "support"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "The best of it", formalTitle: "Choosing what to give",
+    overview: "The seventh duty, and it is about quality rather than quantity — which makes it a different obligation from the one the law imposes.",
+    moves: [
+      { title: "Give the duty", body: "That he select from his wealth the best of it, the dearest to him, the most excellent and the finest of it." },
+      { title: "Note what the law requires", body: "The legal obligation is a quantity. Nothing in it prevents a person from satisfying it entirely with what he was least sorry to lose." },
+      { title: "Say what the duty adds", body: "The duty attaches to the same act and asks a question the amount cannot: not how much left your hands, but whether what left them was what you would have kept." },
+      { title: "Connect it to the first duty", body: "If the act is a test of a claim about where love is directed, then giving what you did not love tests nothing. The seventh duty is what keeps the first from being satisfied on paper." },
+    ],
+    closer: [
+      { title: "Why dearest rather than best", body: "Ghazali gives four words — the best, the dearest to him, the most excellent, the finest — and the second is doing work the others do not. Quality can be judged from outside; dearness cannot, which makes it the one that no observer can verify and that the giver cannot mistake." },
+      { title: "The relation to the eighth duty", body: "This duty is about what is given and the next is about to whom. Together they say that an act fixed by law in its amount is unfixed in both of the other things that determine what it costs the giver." },
+    ],
+    distinction: ["Two ways to satisfy the same obligation", "With the dearest", "The quantity met from what you would have kept, which is what the duty asks.", "With the surplus", "The same quantity met from what you were least sorry to lose, which the law permits."],
+    misreading: "Do not read this as requiring impoverishment. It concerns which portion of what is already owed is used to pay it, not how much is owed.",
+    reflection: "Look at what you last gave and ask whether you would have chosen it to keep.",
+    audit: ["Was it what I would have kept?", "Do I pay from the surplus?", "What does the amount hide?", "Which of the four words applies to my gift?"],
+    nodes: ["ikhtiyar", "zakat", "mahabba"],
+    model: pair("What the law fixes and what it does not", "Two acts identical in law and different in cost.", [["The amount", "Fixed, and identical whichever portion is used.", "balance"], ["The portion", "Unfixed, and what decides whether anything was parted from.", "support"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "One aspiration", formalTitle: "Choosing whom to give to",
+    overview: "The eighth duty, and the longest. Ghazali argues that the eight legal categories are a floor rather than a specification, and gives six qualities to look for within them.",
+    moves: [
+      { title: "State the principle", body: "That he seek for his charity one by whom the charity is purified, and not be content that the recipient merely be of the general eight categories — for within their generality are particular qualities, and he should observe them." },
+      { title: "Give the first quality", body: "That he seek the godfearing who turn away from the world and are devoted to the trade of the hereafter. Do not eat except the food of a godfearing man, and let none eat your food but a godfearing man." },
+      { title: "Give the reason", body: "Because the godfearing man is helped by it toward his godfearing, so that you become a partner in his obedience by your helping him. Feed your food to the godfearing, and bestow your kindness on the believers." },
+      { title: "Give the argument in the story", body: "A scholar who gave to the poor among the devout rather than generally was told that a general kindness would be better. He said: no — these are a people whose concern is for God, and if want comes to one of them his concern is scattered. That I should return one man's aspiration to God is dearer to me than that I should give to a thousand whose aspiration is the world." },
+    ],
+    closer: [
+      { title: "What the argument actually claims", body: "Not that the devout deserve more. The claim is about what the money does: in one case it restores an undivided concern, and in the other it relieves a want. The scholar's answer is an argument about effect, and al-Junayd is reported to have approved it." },
+      { title: "The tension it leaves", body: "It sits uneasily beside the plain purpose of alms, which is to relieve need wherever it is. Ghazali gives the story approvingly and does not resolve the tension, and the eight legal categories remain the binding floor whatever the six qualities recommend." },
+    ],
+    distinction: ["Two ways to choose a recipient", "By category", "Anyone within the eight, which is what the law requires and settles.", "By what the gift will do", "Which of the six qualities the recipient has, and what the money restores in him."],
+    misreading: "Do not use the six qualities to withhold from someone in the eight categories. They are preferences within a legal entitlement, not conditions on it, and the story is a report of one scholar's practice.",
+    reflection: "Ask what your giving is actually buying: a want relieved, or an attention restored.",
+    audit: ["Do I choose, or do I default?", "What does my gift restore?", "Have I turned a preference into a condition?", "Whose aspiration would this return?"],
+    nodes: ["ikhtiyar", "faqir", "himma"],
+    model: pair("Two effects of the same money", "The story argues by effect, not by desert.", [["A want relieved", "Which the eight categories are designed to do.", "support"], ["An aspiration restored", "One concern returned to being single, which is the story's argument.", "balance"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "Who is entitled", formalTitle: "The causes of entitlement",
+    overview: "The third section opens with the legal question, and its treatment of what counts as poverty carries the same instinct as Book 3's argument about water.",
+    moves: [
+      { title: "State the requirement", body: "None is entitled to alms but a free Muslim, not of the Prophet's two clans, characterised by one of the qualities of the eight categories named in God's Book." },
+      { title: "Give the exclusions", body: "Alms are not directed to a non-Muslim, nor to a slave, nor to those two clans. As for a child and one who has lost his reason, giving to them is permitted when their guardian receives it." },
+      { title: "Define the first category", body: "The poor man is one who has no wealth and no capacity to earn. If he has his day's food and clothing for his condition he is not poor but destitute; if he has half his day's food he is poor." },
+      { title: "Refuse the strict reading", body: "And if he has a shirt and no kerchief, no shoes, and no trousers, and the shirt's value does not cover all of that as befits the poor, then he is poor — because he presently lacks what he needs. So it should not be stipulated of a poor man that he have no clothing besides what covers his nakedness, for this is excess." },
+    ],
+    closer: [
+      { title: "The word he uses", body: "Excess. The same instinct as Book 3's four evidences against strictness about water: a definition that nobody could meet is not a strict definition but a broken one, and Ghazali names the fault rather than working around it." },
+      { title: "Why the definition matters practically", body: "It is the boundary of an entitlement. A definition of poverty pitched at destitution does not merely inconvenience the poor; it removes them from a category the law obliges others to give to, which is why the objection is put in legal terms." },
+    ],
+    distinction: ["Two definitions of poverty", "By present lack", "What he needs and does not have now, which is Ghazali's test.", "By absolute destitution", "Nothing beyond what covers his nakedness, which he calls excess."],
+    misreading: "Do not read the exclusions as a judgement on those excluded. They are rules about which fund reaches whom, and other obligations reach the same people by other routes.",
+    reflection: "Notice that the argument against a harsh definition is made on legal grounds rather than compassionate ones.",
+    audit: ["What definition am I using?", "Is it one anyone could meet?", "Do I test by present lack?", "Where does my strictness cost someone else?"],
+    nodes: ["asnaf", "faqir", "ghuluww"],
+    model: pair("Two tests for poverty", "One of them Ghazali calls excess.", [["Present lack", "What he needs and does not have, which is the test given.", "support"], ["Absolute destitution", "Nothing but what covers his nakedness, which is named as excess.", "warning"]]),
+  }),
+  makeChapter({
+    id: 11, shortTitle: "The receiver's five", formalTitle: "The duties of the one who receives",
+    overview: "The most unusual section in the book. Ghazali gives the recipient five duties of his own, and the first of them is an argument that inverts the whole transaction.",
+    moves: [
+      { title: "Give the first duty", body: "That he know that God made the paying of alms to him obligatory so that his concern may be sufficed and his concerns made one concern — for God made creatures worship Him by their concern being one." },
+      { title: "Explain the arrangement", body: "Since wisdom required that appetites and needs be given power over a person, and these divide his concern, generosity required a blessing that suffices the needs. So He multiplied wealth and poured it into the hands of His servants, to be an instrument for repelling their needs and a means of freeing them for their obedience." },
+      { title: "Sort the two outcomes", body: "Of them is one whose wealth He multiplied, and it became a trial and an affliction and plunged him into danger. And of them is one whom He loved, and so protected him from the world as a tender person protects his patient — withholding its excess from him and driving to him the measure of his need at the hands of the rich." },
+      { title: "Draw the conclusion", body: "So that earning may be easy for him, and the toil of gathering and guarding be upon them while its benefit flows to the poor — that they may devote themselves to worship and to preparing for what is after death. And this is the utmost of blessing." },
+    ],
+    closer: [
+      { title: "The sentence that inverts the transaction", body: "The toil of gathering and guarding is upon them while its benefit flows to the poor. On this account the rich are doing the labour and the poor are receiving the yield, which is the reverse of how the arrangement looks from either side." },
+      { title: "The duty it produces", body: "It is the right of the poor man to know the measure of the blessing of poverty, and to verify that God's favour to him in what He withheld is greater than His favour in what He gave. Ghazali refers the demonstration to Book 34, where poverty and abstinence are treated at length." },
+    ],
+    distinction: ["Two readings of the same arrangement", "The poor receive a yield", "The labour of gathering and guarding falls on the rich, and the benefit flows past them.", "The poor receive a favour", "A transfer from those who have to those who have not, which is how it looks from both ends."],
+    misreading: "Do not read this as telling the poor to be grateful for poverty in a way that excuses anyone from giving. It is addressed to the recipient about his own state, in a book that spends most of its length obliging the giver.",
+    reflection: "Notice that this is the only section in the book addressed to the person on the receiving end.",
+    audit: ["Whose labour produced what I hold?", "What is my concern divided among?", "Which of the two outcomes is mine?", "Where is poverty treated at length?"],
+    nodes: ["qabid", "faqir", "himma"],
+    model: chain("The arrangement as Ghazali describes it", "The direction of benefit is the argument.", [["Needs divide the concern", "Which is why a sufficiency had to be provided.", "support"], ["Wealth is poured out", "Into the hands of servants, as an instrument.", "balance"], ["Some are tried by it", "Multiplied wealth becoming an affliction.", "warning"], ["Some are protected from it", "The excess withheld, the need driven to them by others' hands.", "support"]]),
+  }),
+  makeChapter({
+    id: 12, shortTitle: "Beyond the owed", formalTitle: "Voluntary charity",
+    overview: "The closing section, and it treats the manners of both ends of a gift that nobody is obliged to make.",
+    moves: [
+      { title: "Give the excellence", body: "The section opens with what is reported on the excellence of charity — give in charity even with a date, for it fills the hand of the Merciful and grows." },
+      { title: "Name what it covers", body: "Its excellence, and the etiquette of taking it and of giving it. Both ends again, as in the two preceding sections." },
+      { title: "Note the difference from alms", body: "Nothing here is owed. The eight categories do not bind, the amount is not fixed, and the timing is not appointed — so everything that made the earlier duties legible against a legal baseline now stands on its own." },
+      { title: "Say what that changes", body: "The eight duties of the giver were about how an obligation is discharged. Here there is no obligation to discharge, which means the same considerations — concealment, the dearest portion, the recipient's covering — are all that remains of the act." },
+    ],
+    closer: [
+      { title: "Why the book ends here", body: "It ends where the law does not reach. A book that opened with six kinds of obligatory alms closes with a gift that carries no rate and no deadline, which is where everything the middle sections said about the state of the giver has to do all the work by itself." },
+      { title: "The etiquette of taking", body: "That a section on voluntary charity should treat the manners of receiving as well as giving is consistent with the third section's five duties. In this book, being given to is never treated as a passive condition." },
+    ],
+    distinction: ["Two kinds of giving in one book", "Owed", "Fixed in rate, category, and time, so that the etiquette shows against a baseline.", "Voluntary", "Nothing fixed, so the etiquette is the whole of the act."],
+    misreading: "Do not read the voluntary as an optional extra appended to the real subject. Ghazali gives it a full section of four and treats both ends of it, as he does the obligatory.",
+    reflection: "Ask which of the eight duties still apply when nothing at all is owed.",
+    audit: ["Which duties survive without an obligation?", "Do I treat receiving as passive?", "What is left when the rate is gone?", "Why does the book end here?"],
+    nodes: ["sadaqa", "adab-mal", "qabid"],
+    model: pair("Where the book begins and ends", "The etiquette is what carries over.", [["Obligatory alms", "Rate, category, and time all fixed by law.", "balance"], ["Voluntary charity", "Nothing fixed, so the state of the giver is the whole act.", "support"]]),
+  }),
+];
+
+export const book05ConceptNodes: ConceptNode[] = [
+  ["zakat", "Alms", "A test, not a charge", "Made a pillar because it checks a claim the tongue makes cheaply."],
+  ["structure", "Four sections", "One is the law", "The legal apparatus is the shortest; the rest is two states."],
+  ["tawhid", "Unity", "Admits no partner", "Which is why a claim to it can only be tested by parting."],
+  ["mahabba", "Love", "The premise", "The same claim Books 36 and 40 run through their own subjects."],
+  ["adab-mal", "Inward etiquette", "Eight duties", "What the law fixes leaves timing, portion, recipient, and manner open."],
+  ["istiajal", "Hastening", "Legible timing", "The one variable the fixed amount cannot carry information through."],
+  ["israr", "Concealment", "A three-point scale", "Secret, open, and spoken of afterward — and only the last is never licensed."],
+  ["riya", "Showing off", "One of three", "The blight that concealment delivers from, and not the only consideration."],
+  ["izhar", "Disclosure", "Licensed by purpose", "For imitation, or because the asking was itself public."],
+  ["sitr", "The covering", "The third consideration", "About the recipient, and invisible to anyone weighing only his own state."],
+  ["mann", "Reproach", "Voids the charity", "Needs a recipient, which is what separates it from self-admiration."],
+  ["ujb", "Self-admiration", "Needs nobody", "Reaches even a gift to a building, which is why it has its own duty."],
+  ["istisghar", "Counting it small", "Two arguments", "A small fraction; and, where it is not small, wealth that was received."],
+  ["ikhtiyar", "Choosing", "Portion and person", "The two things the law leaves open once the amount is settled."],
+  ["sadaqa", "Charity", "Where law stops", "Nothing fixed, so the state of the giver is the whole of it."],
+  ["asnaf", "The eight categories", "A binding floor", "What the law settles, and what the six qualities cannot override."],
+  ["faqir", "The poor", "Defined by present lack", "A definition pitched at destitution Ghazali names as excess."],
+  ["ghuluww", "Excess", "A named fault", "The same instinct as Book 3's argument against strictness about water."],
+  ["qabid", "The receiver", "Given five duties", "Books on alms are written for the giver; this one is not only that."],
+  ["himma", "Concern", "Single or divided", "What need scatters and what a sufficiency restores."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
+
+export const book05Journeys: Journey[] = [
+  {
+    id: "why-a-pillar", number: "01", question: "Why is paying money a pillar of Islam?", title: "Follow the test of a claim",
+    description: "Take the argument that locates alms inside the testimony rather than beside it, and find why timing is the one thing a fixed amount can carry information through.",
+    payoff: "You get a reason a financial act belongs among the foundations, and one that reaches the rest of the Ihya.",
+    image: assetUrl("assets/system/book05-the-test.jpg"), imageAlt: "A balance scale on a table with a single coin in one pan and the other pan empty and level with it.", minutes: 11, color: "#278d91",
+    nodes: [
+      node("the-claim", "Start at the testimony", "A claim about love", "Professing unity is a claim that the Worshipped is one.", "The argument runs through the testimony, not beside it.", 2, "know"),
+      node("no-partner", "Take the premise", "Love admits no partner", "Which makes the profession a claim about where love is directed.", "The same premise carries Books 36 and 40.", 2, "pattern"),
+      node("tested-by-parting", "Take the test", "Only by parting", "Unity with the tongue is of little avail; a lover is tested by separation.", "Which is why the pillar is financial.", 2, "diagnose"),
+      node("the-rival", "Name the rival", "The one everyone has", "Wealth is the instrument of enjoyment and what makes death unwelcome.", "Universal, which is what a pillar requires.", 2, "clear"),
+      node("the-timing", "Note what timing shows", "Early, before it falls due", "The one variable a fixed amount leaves open.", "Called the etiquette of the religious, not a requirement.", 3, "order"),
+    ],
+  },
+  {
+    id: "who-should-see", number: "02", question: "Should anyone know I gave it?", title: "Weigh three considerations, not two",
+    description: "Take the three stages of concealment, find the two cases that license disclosure, and meet the consideration that has nothing to do with you at all.",
+    payoff: "You learn why a well-considered public gift can still be a failure, and what would have caught it.",
+    image: assetUrl("assets/system/book05-two-hands.jpg"), imageAlt: "A folded cloth on a threshold with a small purse set beneath its edge, half covered and half visible.", minutes: 13, color: "#bf7a35",
+    nodes: [
+      node("three-stages", "Take the scale", "Secret, open, spoken of", "A work written in secret, transferred to the open, then written as showing off.", "Only the last is never licensed by anything in the book.", 4, "order"),
+      node("left-hand", "Note the standard", "The left hand", "Set past concealment from others, at concealment from yourself.", "One of the seven who are shaded.", 4, "witness"),
+      node("two-licences", "Take the two licences", "Imitation, or a public asking", "Do not leave off giving out of fear of showing off in the disclosure.", "Give, and guard your inmost as far as possible.", 5, "clear"),
+      node("third-thing", "Find the third thing", "The poor man's covering", "He may be hurt at being seen in the form of one in need.", "Nothing about your own state will detect this.", 5, "diagnose"),
+      node("the-waiver", "Take the waiver", "He tore his own", "One who made his asking public has already uncovered himself.", "Compared to disclosing the sin of one who conceals it.", 5, "guard"),
+      node("not-withholding", "Note what is refused", "Fear is not a reason", "Ghazali refuses withholding out of fear of showing off.", "The blight is treated, not avoided by not giving.", 5, "steady"),
+    ],
+  },
+  {
+    id: "what-attaches", number: "03", question: "What can spoil a gift already given?", title: "Separate two blights and two arguments",
+    description: "Find why reproach and self-admiration need separate duties, take both arguments against counting a gift great, and see what the law leaves open once the amount is settled.",
+    payoff: "You get a test for which blight is yours, and an honest look at what fraction you actually gave.",
+    image: assetUrl("assets/system/book05-the-fraction.jpg"), imageAlt: "A heaped measure of grain on a table beside a single small scoop, the scoop plainly a fraction of the heap.", minutes: 12, color: "#c25f50",
+    nodes: [
+      node("voids-it", "Take the verse", "Voids, not lessens", "Do not void your charities by reproach and injury.", "The act and what attaches to it are valued together.", 6, "know"),
+      node("needs-a-person", "Separate the two", "One needs a recipient", "Counting a gift great is possible for a mosque; reproaching it is not.", "Which is why they take separate duties.", 6, "diagnose"),
+      node("the-inversion", "Take the principle", "Small becomes great", "And a sin counted great becomes small with God.", "What an estimate does is to the person, not the act.", 7, "pattern"),
+      node("the-arithmetic", "Do the arithmetic", "A tenth of much", "The meanest degree of giving, and fit to be ashamed of.", "A factual argument, not a demand for false modesty.", 7, "clear"),
+      node("or-not-yours", "Take the second argument", "Where it came from", "For the case where the fraction is no longer small.", "Covers giving away most of what you have.", 7, "balance"),
+      node("the-portion", "Note what is open", "Which portion", "The amount is fixed; what it is paid from is not.", "Giving what you did not love tests nothing.", 8, "witness"),
+    ],
+  },
+  {
+    id: "the-other-end", number: "04", question: "What about the person receiving?", title: "Read the section written for them",
+    description: "Take the legal floor and the argument against a harsh definition of poverty, then the five duties of the receiver — whose first is an argument that inverts the whole transaction.",
+    payoff: "You get the half of the subject most books on alms leave out.",
+    image: assetUrl("assets/system/book05-the-yield.jpg"), imageAlt: "A granary door standing open with sacks stacked inside and a single filled basket set outside on the step.", minutes: 12, color: "#586fa8",
+    nodes: [
+      node("the-floor", "Take the floor", "The eight categories", "A binding entitlement that preferences cannot override.", "The six qualities are preferences within it, not conditions on it.", 10, "order"),
+      node("against-ghuluww", "Take the objection", "This is excess", "A shirt and no kerchief, no shoes, no trousers — he is poor.", "Argued on legal grounds, not compassionate ones.", 10, "clear"),
+      node("one-concern", "Take the first duty", "Concerns made one", "Needs divide the concern, and a sufficiency restores it.", "Addressed to the recipient about his own state.", 11, "know"),
+      node("two-outcomes", "Sort the two", "Tried, or protected", "Multiplied wealth as an affliction; withheld excess as protection.", "Both are described as what was done to a person.", 11, "pattern"),
+      node("the-inversion", "Take the inversion", "The toil is theirs", "The labour of gathering and guarding falls on the rich.", "While the benefit flows past them to the poor.", 11, "witness"),
+      node("whose-aspiration", "Ask what it restores", "A want, or an attention", "One man's aspiration returned to God against a thousand relieved.", "A report of one scholar's practice, and a real tension.", 9, "diagnose"),
+    ],
+  },
+];
+
+export const book05Movements: TaxonomyGroup[] = [
+  ["fasl1", "1. The kinds of alms", "Six kinds and the causes of the obligation.", [1]],
+  ["fasl2", "2. The paying, and its inward etiquette", "Eight duties: the meaning, the timing, concealment, disclosure, reproach, counting it small, the portion, and the person.", [2, 3, 4, 5, 6, 7, 8, 9]],
+  ["fasl3", "3. The receiver", "Entitlement, the eight categories, and five duties of the one receiving.", [10, 11]],
+  ["fasl4", "4. Voluntary charity", "Its excellence, and the manners of taking and of giving.", [12]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#c25f50", "#586fa8"][index % 4] })) as TaxonomyGroup[];
+
+export const book05Instrument: Instrument = {
+  title: "Three considerations, not two",
+  note: "Ghazali makes concealment the third duty of the giver and disclosure the fourth, then names a third thing to beware of in disclosing — one that has nothing to do with the giver's own state. Take one gift you actually made and answer for it, not for how you would like to give.",
+  items: [
+    {
+      id: "gift", label: "One gift you actually made", lede: "A real one, recently, obligatory or voluntary",
+      note: "The first question is Ghazali's three-point scale of concealment: secret, made public, and spoken of afterward. The second is his account of why a person disclosed or concealed. The two licences for disclosure are his, and so is the waiver that applies when the recipient made his own need public.",
+      axes: [
+        {
+          id: "who", kicker: "Concealment", question: "Who knew about it?",
+          options: [
+            { id: "secret", label: "Nobody, as far as I could manage", note: "The first stage: a work written for him in secret." },
+            { id: "recipient", label: "The recipient, and no one else", note: "Which is as concealed as most gifts can be made." },
+            { id: "public", label: "Others saw it, or it was announced", note: "The second stage: transferred from the secret and written in the open." },
+            { id: "spoke", label: "I have mentioned it since", note: "The third stage, which Ghazali places past both and which nothing in the book licenses." },
+          ],
+        },
+        {
+          id: "why", kicker: "The reason", question: "Why was it that way?",
+          options: [
+            { id: "riya", label: "To stay clear of showing off", note: "The benefit of concealment: deliverance from the blights of show and reputation." },
+            { id: "encourage", label: "So that others would follow", note: "The first of Ghazali's two licences for disclosing." },
+            { id: "asked", label: "The person asked in front of others", note: "The second licence, and the case where the third consideration is waived." },
+            { id: "nothought", label: "It just happened that way", note: "The commonest honest answer, and the one that leaves the third consideration unweighed." },
+          ],
+        },
+      ],
+      verdicts: [
+        { key: "*|asked", name: "He tore his own covering", role: "support", chapterId: 5, body: "This is the case Ghazali handles specifically. The third thing to beware of in disclosing a gift is the tearing of the poor man's covering, since he may be hurt at being seen in the form of one in need — but whoever made his asking public is the one who tore his own covering, so that consideration is not to be feared in disclosing to him.", action: "Which leaves only the two considerations about yourself. Ghazali's instruction for exactly this case is unambiguous: do not leave off giving out of fear of showing off in the disclosure; give, and guard your inmost from it as far as you are able." },
+        { key: "spoke|*", name: "The stage past both", role: "warning", chapterId: 4, body: "Ghazali's report puts this on the far side of public giving rather than beside it: a servant does a work in secret and God writes it for him in secret; if he makes it public it is transferred from the secret and written in the open; and if he talks about it, it is transferred from both and written as showing off.", action: "Note that the first two stages carry no condemnation and the second is sometimes required — which is what makes the third stand out. Nothing in the eight duties licenses speaking of a gift afterward, and Ghazali's plain sentence is that one who talks of his charity seeks reputation." },
+        { key: "public|encourage", name: "The licensed case", role: "support", chapterId: 5, body: "This is Ghazali's fourth duty exactly: that he make it public where he knows that in his disclosing it there is an encouragement to people to imitate. The verse he cites is that if you disclose the charities, that is excellent.", action: "The duty comes with a condition attached in the same sentence — that he guard his inmost from the motive of showing off — and he refers the method to his treatment of that blight. And check the third consideration even here: encouraging imitation is about your audience, and the covering is about the person in front of you." },
+        { key: "public|riya", name: "These point opposite ways", role: "balance", chapterId: 4, body: "The gift was public and the reason given was avoiding show. Concealment is what Ghazali names as the deliverance from that blight — his words are that one who gives in a crowd of people seeks show, and that concealment and silence are what deliver from it.", action: "So either the disclosure had a purpose worth naming, in which case it is the fourth duty and belongs under one of its two licences, or it did not, in which case the third duty applies and the default is secrecy. The useful question is which of the two the gift actually was." },
+        { key: "public|*", name: "The consideration you did not weigh", role: "warning", chapterId: 5, body: "Ghazali names three things to beware of in disclosure: reproach, showing off, and the tearing of the poor man's covering. The first two are about you and the third is not, and a person weighing only his own state will not detect it.", action: "The check is simple and it is about the other person: was he seen in the form of one in need, and would he have minded. If he did not make his own asking public, the waiver does not apply, and Ghazali compares disclosing what someone conceals to disclosing the sin of one who hides it." },
+        { key: "secret|encourage", name: "Your reason points the other way", role: "balance", chapterId: 5, body: "You concealed the gift and the reason you give is one of Ghazali's two grounds for disclosing it. If disclosure would genuinely have encouraged imitation, the fourth duty licenses it, and he cites a verse saying that disclosing charities is excellent.", action: "But he attaches a condition and the condition is the point: guard the inmost from the motive of showing off. If you cannot, concealment is the safer duty and is his default. Do not disclose on the strength of the licence alone; the licence and its condition arrive in the same sentence." },
+        { key: "secret|*", name: "The default, and the standard", role: "support", chapterId: 4, body: "Concealment is Ghazali's third duty and his default: the best charity is the effort of one of little means, to a poor man, in secret. Its benefit, he says, is deliverance from the blights of showing off and of seeking reputation.", action: "The standard he sets is worth keeping in view, because it goes past concealment from others: among the seven whom God shades is a man who gave a charity so that his left hand did not know what his right gave. And the one thing still open is the third stage — a gift kept secret can still be lost in a conversation." },
+        { key: "*|*", name: "Read the two together", role: "balance", chapterId: 5, body: "Who knew, and why. Ghazali's third and fourth duties pull in opposite directions on purpose: concealment is the default, disclosure is licensed by two specific purposes, and a third consideration sits outside both.", action: "Work through them in his order. Was there a purpose that licensed disclosure? Was the inmost guarded? And was the person receiving left covered — which is the question neither of the first two will raise, because both of them are about you." },
+      ],
+    },
+  ],
+};
+
+export const book05Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 5 was read and used to establish the kinds of alms, the eight duties of inward etiquette, the causes of entitlement, and the five duties of the receiver.", url: "https://shamela.ws/book/9472/208" },
+  { label: "Why alms is a foundation", note: "The passage arguing that the profession of unity is a claim about love, that love admits no partner, and that a lover is tested only by parting from what is beloved.", url: "https://shamela.ws/book/9472/213" },
+  { label: "Concealing the gift", note: "The passage on the third duty, with the report that a work moves from the secret to the open and then, if spoken of, to showing off.", url: "https://shamela.ws/book/9472/215" },
+  { label: "When to disclose", note: "The passage on the fourth duty, giving the two licences for disclosure and naming the tearing of the poor man's covering as a third thing to beware of.", url: "https://shamela.ws/book/9472/216" },
+  { label: "Counting the gift small", note: "The passage distinguishing self-admiration from reproach and giving two arguments against counting a gift great.", url: "https://shamela.ws/book/9472/218" },
+  { label: "The causes of entitlement", note: "The passage setting out who may receive, defining poverty by present lack, and naming the stricter definition as excess.", url: "https://shamela.ws/book/9472/221" },
+  { label: "The duties of the receiver", note: "The passage giving the receiver five duties, and arguing that the toil of gathering falls on the rich while the benefit flows to the poor.", url: "https://shamela.ws/book/9472/222" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing places Book 5 as the fifth book of the Quarter of Worship and confirms its title.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
+export const book05: SystemBook = {
+  id: 5,
+  title: "The Mysteries of Almsgiving",
+  shortTitle: "Almsgiving",
+  defaultJourneyId: "why-a-pillar",
+  chapters: book05Chapters,
+  conceptNodes: book05ConceptNodes,
+  journeys: book05Journeys,
+  sources: book05Sources,
+  taxonomy: {
+    title: "Four sections",
+    note: "Ghazali's own four, in his order. The legal apparatus is the first and shortest; eight of the twelve reading sections belong to the second, on the inward etiquette of the giver, and two to the third, which gives the receiver five duties of his own.",
+    groups: book05Movements,
+  },
+  instrument: book05Instrument,
+  editorialNote: "The four journeys, twelve reading sections, visual models, and diagnostic are editorial learning aids. The sections follow Ghazali's four in his order and are grouped under them in the movements list. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this prototype does not independently grade every narration. Two matters of scope. The first section is the legal apparatus of alms — the six kinds, the thresholds, the rates, and the causes of obligation — and the third section contains the technical definitions of the eight categories of recipient. Those rulings vary between the schools of law and are not reproduced here; this edition presents how the material is organised and the arguments Ghazali makes within it, and a reader who needs the rates or the thresholds should go to a work of law. And the eighth duty, on preferring recipients who have particular qualities, is given here as Ghazali gives it, including the story of the scholar who preferred the devout poor and the reasoning he offers for it; it sits in real tension with the plain purpose of alms, which is to relieve need wherever it is found, and the section says so. The eight legal categories remain a binding entitlement that no preference overrides, and nothing in that duty licenses withholding from someone the law entitles. The diagnostic applies Ghazali's own scale of concealment and his own three considerations to a gift the reader supplies and cannot pronounce on anyone's state.",
+};
