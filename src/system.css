@@ -7071,3 +7071,274 @@ body.system-page {
     transition: none;
   }
 }
+
+/* ============================================================================
+   MOBILE SHELL
+   One surface at a time behind a bottom tab bar. Everything here is scoped to
+   .mobile-shell, which SystemApp only sets under (max-width: 767px), so the
+   desktop workspace is untouched. Placed last so it wins the cascade.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .mobile-shell {
+    --tabbar-h: 62px;
+    --stepper-h: 56px;
+    padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* One surface at a time. Default everything off, then switch the active one on. */
+  .mobile-shell .question-panel,
+  .mobile-shell .map-panel,
+  .mobile-shell .depth-panel,
+  .mobile-shell .deep-reader,
+  .mobile-shell .sequence-rail,
+  .mobile-shell .mobile-sections,
+  .mobile-shell .mobile-tool {
+    display: none;
+  }
+
+  .mobile-shell.tab-read .depth-panel,
+  .mobile-shell.tab-read .deep-reader { display: block; }
+  .mobile-shell.tab-map .question-panel,
+  .mobile-shell.tab-map .map-panel { display: block; }
+  .mobile-shell.tab-sections .mobile-sections { display: block; }
+  .mobile-shell.tab-tool .mobile-tool { display: block; }
+
+  /* The desktop workspace is a fixed-height 3-column grid (min-height: 570px). On mobile it
+     is just a wrapper for whichever surface the tab shows, so it must be able to collapse. */
+  .mobile-shell .system-workspace {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    gap: 0;
+  }
+  .mobile-shell.tab-sections .system-workspace,
+  .mobile-shell.tab-tool .system-workspace { display: none; }
+
+  /* The depth control is the reason to be on the Read tab; keep it in reach. */
+  .mobile-shell.tab-read .depth-panel {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--surface, #fbf8f2);
+    padding: 10px 14px 8px;
+    margin: 0;
+    border-bottom: 1px solid rgba(24, 32, 38, 0.1);
+    box-shadow: 0 6px 14px -12px rgba(24, 32, 38, 0.5);
+  }
+  .mobile-shell .depth-heading { display: none; }
+  .mobile-shell .depth-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  .mobile-shell .depth-tabs button {
+    min-height: 44px;
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+  .mobile-shell .depth-full { display: none; }
+  .mobile-shell .depth-short { display: inline; }
+
+  .mobile-shell .explanation-card,
+  .mobile-shell .deep-reader { padding: 16px 14px 8px; }
+  .mobile-shell .deep-reader-body { display: block; }
+  .mobile-shell .deep-reader-summary { margin-bottom: 18px; }
+
+  /* Read and Tool need room above the stepper and the bar. */
+  .mobile-shell.tab-read .system-workspace,
+  .mobile-shell.tab-tool .mobile-tool {
+    padding-bottom: calc(var(--stepper-h) + 12px);
+  }
+
+  /* ---- Sections surface ---- */
+  .mobile-sections { padding: 18px 14px calc(var(--tabbar-h) + 20px); }
+  .mobile-sections-head { margin-bottom: 18px; }
+  .mobile-sections-head span {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(24, 32, 38, 0.55);
+  }
+  .mobile-sections-head h2 {
+    margin: 4px 0 6px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+  .mobile-sections-head p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(24, 32, 38, 0.7);
+  }
+
+  .mobile-section-group { margin-bottom: 22px; }
+  .mobile-group-head {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 0 8px 10px;
+    border-left: 3px solid var(--group, #bf7a35);
+    margin-bottom: 8px;
+  }
+  .mobile-group-head strong { font-size: 14px; }
+  .mobile-group-head small {
+    font-size: 12px;
+    line-height: 1.45;
+    color: rgba(24, 32, 38, 0.62);
+  }
+
+  .mobile-section-group ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .mobile-section-group li { margin: 0; }
+  .mobile-section-group button {
+    width: 100%;
+    min-height: 56px;
+    display: grid;
+    grid-template-columns: 34px 1fr 18px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(24, 32, 38, 0.12);
+    border-radius: 10px;
+    color: inherit;
+    cursor: pointer;
+  }
+  .mobile-section-group button.active {
+    border-color: var(--group, #bf7a35);
+    background: #fff;
+    box-shadow: inset 3px 0 0 var(--group, #bf7a35);
+  }
+  .mobile-section-num {
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    color: rgba(24, 32, 38, 0.5);
+  }
+  .mobile-section-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .mobile-section-copy strong { font-size: 14.5px; line-height: 1.25; }
+  .mobile-section-copy small {
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: rgba(24, 32, 38, 0.58);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* ---- Tool surface ---- */
+  /* The interactives carry a top margin and rule for separating them from the deep reader's
+     prose. On their own surface there is nothing above them to separate from. */
+  .mobile-tool { padding: 4px 14px calc(var(--tabbar-h) + 20px); }
+  .mobile-tool > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  /* ---- Stepper: prev / current / next, above the tab bar on Read ---- */
+  .mobile-stepper { display: none; }
+  .mobile-shell.tab-read .mobile-stepper {
+    display: grid;
+    grid-template-columns: 52px 1fr 52px;
+    align-items: stretch;
+    gap: 1px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px));
+    z-index: 30;
+    height: var(--stepper-h);
+    background: rgba(24, 32, 38, 0.12);
+    border-top: 1px solid rgba(24, 32, 38, 0.12);
+  }
+  .mobile-stepper button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    background: var(--surface, #fbf8f2);
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    min-height: 44px;
+  }
+  .mobile-stepper button:disabled { opacity: 0.3; cursor: default; }
+  .mobile-stepper-label { padding: 0 10px; overflow: hidden; }
+  .mobile-stepper-label small {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(24, 32, 38, 0.55);
+  }
+  .mobile-stepper-label strong {
+    font-size: 13.5px;
+    line-height: 1.2;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ---- Bottom tab bar ---- */
+  .mobile-tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: flex;
+    height: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--surface, #fbf8f2);
+    border-top: 1px solid rgba(24, 32, 38, 0.14);
+    box-shadow: 0 -6px 18px -14px rgba(24, 32, 38, 0.6);
+  }
+  .mobile-tabbar button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-height: 44px;
+    background: none;
+    border: 0;
+    color: rgba(24, 32, 38, 0.55);
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+  .mobile-tabbar button.active { color: var(--journey, #278d91); font-weight: 600; }
+  .mobile-tabbar button.active svg { transform: translateY(-1px); }
+
+  /* Give every remaining control a real target. The interactives were built as desktop
+     chip rows, so their option buttons need the floor applied generically. */
+  .mobile-shell .question-card { min-height: 64px; }
+  .mobile-shell .map-node button { min-height: 44px; }
+  .mobile-shell .library-trigger { min-height: 44px; }
+  .mobile-shell .instrument-options button,
+  .mobile-shell .instrument-tabs button,
+  .mobile-shell .solitude-trials button,
+  .mobile-shell .solitude-answer-buttons button,
+  .mobile-shell .substitution-swaps button,
+  .mobile-shell .audience-stages button,
+  .mobile-shell .mirror-subjects button,
+  .mobile-shell .fault-mirror-list button,
+  .mobile-shell .food-measure-list button,
+  .mobile-shell .repentance-subjects button,
+  .mobile-shell .duty-steps button,
+  .mobile-shell .wealth-audit-items button,
+  .mobile-shell .world-lens-states button {
+    min-height: 44px;
+  }
+}

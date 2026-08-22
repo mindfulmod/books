@@ -8,6 +8,7 @@ import {
   Compass,
   Eye,
   Footprints,
+  Gauge,
   Heart,
   Info,
   Lightbulb,
@@ -18,7 +19,7 @@ import {
   Target,
   X,
 } from "@phosphor-icons/react";
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { assetUrl } from "./assetUrl";
 import { book01 } from "./book01";
 import { book02 } from "./book02";
@@ -116,6 +117,25 @@ const LEGACY_STORAGE_KEY = "ihya-system-state-v1";
 
 const ideaKey = (bookId: number, journeyId: string, nodeId: string) =>
   `${bookId}:${journeyId}:${nodeId}`;
+
+// The mobile shell shows one surface at a time behind a bottom tab bar. Desktop keeps the
+// stacked workspace, so every mobile-only branch is gated on this.
+const MOBILE_QUERY = "(max-width: 767px)";
+type MobileTab = "read" | "map" | "sections" | "tool";
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.matchMedia(MOBILE_QUERY).matches,
+  );
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_QUERY);
+    const onChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
+    mq.addEventListener("change", onChange);
+    setIsMobile(mq.matches);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+  return isMobile;
+}
 
 // Progress key for a section reached directly through the sequence rail rather than through a
 // journey node. Shares the `${bookId}:` prefix so it still counts toward per-book progress.
@@ -1517,6 +1537,8 @@ function SystemApp() {
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [activeTaxonomy, setActiveTaxonomy] = useState("all");
   const [activeProcess, setActiveProcess] = useState("all");
+  const isMobile = useIsMobile();
+  const [mobileTab, setMobileTab] = useState<MobileTab>("read");
   const book = books.find((item) => item.id === saved.bookId) ?? book30;
   const journey = book.journeys.find((item) => item.id === saved.journeyId)
     ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
@@ -1645,8 +1667,137 @@ function SystemApp() {
     }));
   };
 
-  return (
-    <div className="system-app system-warm" style={{ "--journey": journey.color } as CSSProperties}>
+    // Every bespoke interactive and the generic instrument. On desktop these sit inside the
+  // deep reader; on mobile they are the Tool tab, so they have to be renderable in either
+  // place from one definition.
+  const interactives = (
+    <>
+          {book.relationLens && (
+            <WorldLens
+              key={`lens:${book.id}:${chapter.id}`}
+              lens={book.relationLens}
+              chapterId={chapter.id}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.wealthAudit && (
+            <WealthAudit
+              key={`wealth-audit:${book.id}:${chapter.id}`}
+              audit={book.wealthAudit}
+              chapterId={chapter.id}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.audienceChamber && (
+            <AudienceChamber
+              key={`audience-chamber:${book.id}`}
+              chamber={book.audienceChamber}
+              chapterId={chapter.id}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.solitudeTest && (
+            <SolitudeTest
+              key={`solitude-test:${book.id}`}
+              test={book.solitudeTest}
+              chapterId={chapter.id}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.instrument && (
+            <InstrumentPanel
+              key={`instrument:${book.id}`}
+              instrument={book.instrument}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.dutyFinder && (
+            <DutyFinder
+              key={`duty-finder:${book.id}`}
+              test={book.dutyFinder}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.repentanceCheck && (
+            <RepentanceCheck
+              key={`repentance-check:${book.id}`}
+              test={book.repentanceCheck}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.foodMeasures && (
+            <FoodMeasures
+              key={`food-measures:${book.id}`}
+              test={book.foodMeasures}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.faultMirrors && (
+            <FaultMirrors
+              key={`fault-mirrors:${book.id}`}
+              test={book.faultMirrors}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.mirrorObstructions && (
+            <MirrorObstructions
+              key={`mirror-obstructions:${book.id}`}
+              test={book.mirrorObstructions}
+              onSelectChapter={selectChapter}
+            />
+          )}
+
+          {book.substitutionTest && (
+            <SubstitutionTest
+              key={`substitution-test:${book.id}`}
+              test={book.substitutionTest}
+              chapterId={chapter.id}
+              onSelectChapter={selectChapter}
+            />
+          )}
+    </>
+  );
+
+  const chapterIndex = book.chapters.findIndex((item) => item.id === chapter.id);
+  const prevChapter = chapterIndex > 0 ? book.chapters[chapterIndex - 1] : null;
+  const nextChapter = chapterIndex >= 0 && chapterIndex < book.chapters.length - 1
+    ? book.chapters[chapterIndex + 1]
+    : null;
+  const hasTool = Boolean(
+    book.instrument ?? book.relationLens ?? book.wealthAudit ?? book.audienceChamber
+    ?? book.solitudeTest ?? book.dutyFinder ?? book.repentanceCheck ?? book.foodMeasures
+    ?? book.faultMirrors ?? book.mirrorObstructions ?? book.substitutionTest,
+  );
+  const mobileTabs: Array<{ id: MobileTab; label: string; icon: ReactNode }> = [
+    { id: "read", label: "Read", icon: <BookOpenText size={20} weight="duotone" /> },
+    { id: "map", label: "Map", icon: <Compass size={20} weight="duotone" /> },
+    { id: "sections", label: "Sections", icon: <ListBullets size={20} weight="duotone" /> },
+    ...(hasTool ? [{ id: "tool" as MobileTab, label: "Tool", icon: <Gauge size={20} weight="duotone" /> }] : []),
+  ];
+  // Tool can hold the only copy of an interactive, and the Read surface owns the depth
+  // control, so keep the requested tab valid rather than rendering an empty screen.
+  const activeMobileTab: MobileTab = !isMobile
+    ? "read"
+    : mobileTabs.some((item) => item.id === mobileTab) ? mobileTab : "read";
+  const openSection = (chapterId: number) => {
+    selectChapter(chapterId);
+    setMobileTab("read");
+  };
+
+return (
+    <div
+      className={`system-app system-warm${isMobile ? ` mobile-shell tab-${activeMobileTab}` : ""}`}
+      style={{ "--journey": journey.color } as CSSProperties}
+    >
       <a className="system-skip" href="#system-main">Skip to concept map</a>
 
       <header className="system-topbar">
@@ -1737,7 +1888,7 @@ function SystemApp() {
           </div>
         </aside>
 
-        {saved.depth !== "deep" && (
+        {(isMobile || saved.depth !== "deep") && (
         <section className="map-panel" aria-labelledby="journey-question">
           <header className="map-header">
             <div>
@@ -1819,7 +1970,7 @@ function SystemApp() {
         </section>
         )}
 
-        {saved.depth !== "deep" && (
+        {(isMobile || saved.depth !== "deep") && (
         <aside className="depth-panel" aria-label="Explanation depth">
           <div className="depth-heading">
             <span>Choose resolution</span>
@@ -1840,6 +1991,7 @@ function SystemApp() {
             ))}
           </div>
 
+          {saved.depth !== "deep" && (
           <article className="explanation-card" role="tabpanel">
             <header>
               {/* An off-journey section has no stage, and the node belongs to a different
@@ -1908,6 +2060,7 @@ function SystemApp() {
               </div>
             )}
           </article>
+          )}
 
           <button className={isBookmarked ? "bookmark-action active" : "bookmark-action"} onClick={toggleBookmark}>
             <BookmarkSimple size={19} weight={isBookmarked ? "fill" : "regular"} />
@@ -1988,98 +2141,7 @@ function SystemApp() {
                   />
                 )}
 
-                {book.relationLens && (
-                  <WorldLens
-                    key={`lens:${book.id}:${chapter.id}`}
-                    lens={book.relationLens}
-                    chapterId={chapter.id}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.wealthAudit && (
-                  <WealthAudit
-                    key={`wealth-audit:${book.id}:${chapter.id}`}
-                    audit={book.wealthAudit}
-                    chapterId={chapter.id}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.audienceChamber && (
-                  <AudienceChamber
-                    key={`audience-chamber:${book.id}`}
-                    chamber={book.audienceChamber}
-                    chapterId={chapter.id}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.solitudeTest && (
-                  <SolitudeTest
-                    key={`solitude-test:${book.id}`}
-                    test={book.solitudeTest}
-                    chapterId={chapter.id}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.instrument && (
-                  <InstrumentPanel
-                    key={`instrument:${book.id}`}
-                    instrument={book.instrument}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.dutyFinder && (
-                  <DutyFinder
-                    key={`duty-finder:${book.id}`}
-                    test={book.dutyFinder}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.repentanceCheck && (
-                  <RepentanceCheck
-                    key={`repentance-check:${book.id}`}
-                    test={book.repentanceCheck}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.foodMeasures && (
-                  <FoodMeasures
-                    key={`food-measures:${book.id}`}
-                    test={book.foodMeasures}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.faultMirrors && (
-                  <FaultMirrors
-                    key={`fault-mirrors:${book.id}`}
-                    test={book.faultMirrors}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.mirrorObstructions && (
-                  <MirrorObstructions
-                    key={`mirror-obstructions:${book.id}`}
-                    test={book.mirrorObstructions}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
-
-                {book.substitutionTest && (
-                  <SubstitutionTest
-                    key={`substitution-test:${book.id}`}
-                    test={book.substitutionTest}
-                    chapterId={chapter.id}
-                    onSelectChapter={selectChapter}
-                  />
-                )}
+                {!isMobile && interactives}
 
                 <section className="reasoning-section" aria-labelledby="reasoning-heading">
                   <div className="deep-section-heading">
@@ -2240,6 +2302,91 @@ function SystemApp() {
           <p><small>Current section</small><strong>{chapter.shortTitle}</strong></p>
         </div>
       </footer>
+
+      {isMobile && (
+        <>
+          {/* Sections surface: the whole contents of the book as a reachable list with real
+              titles, grouped by the book's own movements where it defines them. */}
+          <section className="mobile-sections" aria-label="All sections">
+            <header className="mobile-sections-head">
+              <span>{book.chapters.length} sections</span>
+              <h2>{book.title}</h2>
+              {book.taxonomy?.note && <p>{book.taxonomy.note}</p>}
+            </header>
+            {(book.taxonomy?.groups ?? book.process?.stages ?? [{ id: "all", label: "", description: "", color: journey.color, chapterIds: book.chapters.map((item) => item.id) }]).map((group) => (
+              <div className="mobile-section-group" key={group.id} style={{ "--group": group.color } as CSSProperties}>
+                {group.label && (
+                  <div className="mobile-group-head">
+                    <strong>{group.label}</strong>
+                    {group.description && <small>{group.description}</small>}
+                  </div>
+                )}
+                <ul>
+                  {book.chapters.filter((item) => group.chapterIds.includes(item.id)).map((item) => (
+                    <li key={item.id}>
+                      <button
+                        className={item.id === chapter.id ? "active" : ""}
+                        onClick={() => openSection(item.id)}
+                        aria-current={item.id === chapter.id ? "true" : undefined}
+                      >
+                        <span className="mobile-section-num">{String(item.id).padStart(2, "0")}</span>
+                        <span className="mobile-section-copy">
+                          <strong>{item.shortTitle}</strong>
+                          <small>{item.formalTitle}</small>
+                        </span>
+                        <ArrowRight size={16} weight="bold" />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </section>
+
+          {/* Tool surface: the interactives, which on desktop live inside the deep reader. */}
+          {hasTool && (
+            <section className="mobile-tool" aria-label="Diagnostic">
+              {interactives}
+            </section>
+          )}
+
+          {/* Linear reading needs no hunting: prev/next sit above the tab bar on Read. */}
+          <nav className="mobile-stepper" aria-label="Move between sections">
+            <button
+              onClick={() => prevChapter && selectChapter(prevChapter.id)}
+              disabled={!prevChapter}
+              aria-label={prevChapter ? `Previous section: ${prevChapter.shortTitle}` : "No previous section"}
+            >
+              <ArrowLeft size={18} weight="bold" />
+            </button>
+            <button className="mobile-stepper-label" onClick={() => setMobileTab("sections")}>
+              <small>Section {chapterIndex + 1} of {book.chapters.length}</small>
+              <strong>{chapter.shortTitle}</strong>
+            </button>
+            <button
+              onClick={() => nextChapter && selectChapter(nextChapter.id)}
+              disabled={!nextChapter}
+              aria-label={nextChapter ? `Next section: ${nextChapter.shortTitle}` : "No next section"}
+            >
+              <ArrowRight size={18} weight="bold" />
+            </button>
+          </nav>
+
+          <nav className="mobile-tabbar" aria-label="Sections of this book">
+            {mobileTabs.map((item) => (
+              <button
+                key={item.id}
+                className={item.id === activeMobileTab ? "active" : ""}
+                onClick={() => setMobileTab(item.id)}
+                aria-current={item.id === activeMobileTab ? "page" : undefined}
+              >
+                {item.icon}
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        </>
+      )}
     </div>
   );
 }
