@@ -154,7 +154,7 @@ export const book06Chapters: Chapter[] = [
       { title: "Give the accompanying manners", body: "Among the manners: do not sleep much during the day, so that you actually feel the hunger and thirst and notice the drives weakening — that is when the heart clears. And keep some of that weakness each night, so the night prayer and the devotions come easily." },
     ],
     closer: [
-      { title: "The Night of Power", body: "So perhaps the devil will not hover about his heart, and he will look upon the kingdom of heaven — and the Night of Power is an expression for the night in which something of the Kingdom is disclosed. Ghazali connects the reduction of food directly to what the month is for." },
+      { title: "The Night of Power", body: "So perhaps the devil will not hover about his heart, and he will look upon the kingdom of heaven — and the Night of Power means the night in which something of the Kingdom is disclosed. Ghazali connects the reduction of food directly to what the month is for." },
       { title: "The two clauses that follow", body: "Anyone who puts a feedbag of food between his heart and his chest is screened off from it. And emptying your stomach is not enough to take the screen away, so long as you have not emptied your attention of everything that is not God — and that is the whole of it. The first half makes eating a screen; the second refuses to let an empty stomach become a technique." },
     ],
     distinction: ["Two ways to complete a day of fasting", "At the ordinary meal", "Eating what the night would have held anyway, which preserves the weakening.", "By gathering both", "The forenoon's meal added to the night's, which Ghazali says leaves no benefit at all."],

@@ -90,7 +90,7 @@ export const book36Chapters: Chapter[] = [
       { title: "Give the reason a person cannot benefit another", body: "No one expends his wealth except for a purpose in the expending, whether deferred, which is reward, or immediate, which is obligation, service, praise, or reputation. So benefaction from a person is conceivable only toward himself." },
     ],
     closer: [
-      { title: "What is and is not being denied", body: "Ghazali does not say the giver did nothing or that the gift is unreal. He says that gratitude directed at the giver as an originator rather than as an intermediary is ignorance of how the matter actually stands. The distinction between the two kinds of gratitude is the whole chapter." },
+      { title: "What is and is not being denied", body: "Ghazali does not say the giver did nothing or that the gift is unreal. He says thanking the giver as though he originated the gift, rather than passed it on, is a misunderstanding of how it actter actually stands. The distinction between the two kinds of gratitude is the whole chapter." },
       { title: "Where this leaves ordinary thanks", body: "The Ihya elsewhere requires thanking people, and this chapter does not withdraw that. What it withdraws is the belief that a channel is a source, which is a belief about causes rather than a rule about manners." },
     ],
     distinction: ["Two ways of thanking a giver", "As an intermediary", "The gratitude passes through him, which Ghazali treats as knowledge of the matter.", "As an originator", "The gratitude stops at him, which he calls ignorance of the reality."],
@@ -112,7 +112,7 @@ export const book36Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the method matters more than the conclusion", body: "The conclusion could have been asserted on its own. Deriving it from a rule that the reader has already accepted about hunger and sight makes the claim a consequence rather than a piety, and Ghazali's clause about nothing being installed in vain is the hinge the whole derivation turns on." },
-      { title: "The corollary about deprivation", body: "Somebody who prefers another pleasure to this one has simply been shut out of this one — the way a man who has lost his sense of smell cannot place the scent of a violet properly. The failure is in the faculty, not in the thing, which is why the chapter never argues with the preference head-on." },
+      { title: "The corollary about deprivation", body: "Somebody who prefers another pleasure to this one has simply been shut out of this one — the way a man who has lost his sense of smell cannot place the scent of a violet properly. The failure is in the faculty, not in what it is failing to reach, which is why the chapter never argues with the preference head-on." },
     ],
     distinction: ["Two reasons a pleasure is not preferred", "It is inferior", "A judgement about the object, which would require having tasted it.", "It is not perceived", "A condition of the perceiver, which is what Ghazali says is actually the case."],
     misreading: "Do not read the chapter as disparaging the pleasures of the senses. It grounds its whole argument on their being real and rightly ordered to their objects.",
@@ -189,13 +189,13 @@ export const book36Chapters: Chapter[] = [
     overview: "The most striking argument in the book, and one of the most quoted paragraphs in the Ihya. Ghazali poses his own difficulty and answers it by inverting the terms.",
     thesis: "The most striking argument in the book explains why most people cannot follow it.",
     moves: [
-      { title: "Pose the difficulty", body: "The most manifest and evident of existing things is God, and this ought to require that knowledge of Him be the first and easiest of knowledges to understandings. Yet you see the matter to be the opposite, so the cause has to be given." },
+      { title: "Pose the difficulty", body: "The most manifest and evident of existing things is God, and this ought to require that knowledge of Him be the first and easiest of knowledges to understandings. Yet what you actually see is the reverse, so he owes you an explanation." },
       { title: "Set up the example", body: "When we see a person writing or sewing, his being alive is among the most evident things to us, and his life, knowledge, power, and will to sew are clearer to us than the rest of his attributes, inward and outward." },
       { title: "Show what we do not know", body: "His inward attributes, such as his appetite, his anger, his character, his health, and his sickness, we do not know at all. Of his outward attributes we do not know some and doubt others, such as his exact height or the shade of his skin." },
       { title: "Draw the conclusion", body: "Yet his life, power, will, and knowledge are evident to us without sight attaching to any of them, since these attributes are not sensed by any of the five senses. What is most evident is precisely what no sense reports." },
     ],
     closer: [
-      { title: "How the inversion works", body: "The example does not argue that the hidden is really manifest. It shows that we already possess a case where the clearest thing we know about someone is the thing no sense delivers, and that we never found this strange until it was pointed out." },
+      { title: "How the inversion works", body: "The example does not argue that the hidden is really manifest. It shows we already have a case where the clearest thing we know about a person is something no sense reports, and that we never found this strange until it was pointed out." },
       { title: "Ghazali's second reason", body: "He also names the difficulty of expressing this in language that reaches understandings, and the preoccupation of those who know with themselves. The shortfall is therefore partly in the subject, partly in the vocabulary, and partly in the fact that those who could explain are occupied elsewhere." },
     ],
     distinction: ["Two reasons a thing is not seen", "Too dim", "Nothing reaches the eye, which is how the difficulty is usually posed.", "Too manifest", "Nothing is absent from the view for it to be marked against, which is Ghazali's answer."],
@@ -254,11 +254,11 @@ export const book36Chapters: Chapter[] = [
     moves: [
       { title: "Name the problem", body: "Everyone claims this love, and how easy the claim is and how rare the meaning. A person should not be deceived by the devil's counterfeiting and the soul's tricks whenever it claims this love, so long as he has not tested it by the signs and demanded proofs of it." },
       { title: "Give the image", body: "Love is a good tree whose root is firm and whose branch is in the sky, and whose fruits appear on the heart, the tongue, and the limbs. Those traces indicate the love as smoke indicates fire and fruit indicates the tree." },
-      { title: "The first sign", body: "Love of meeting the beloved by way of unveiling and witnessing. It is inconceivable that a heart love someone and not love to see him, and if it is known that there is no arrival except by departing from this world, he should be one who loves death and does not flee it." },
+      { title: "The first sign", body: "Longing to meet the beloved and see Him directly. It is inconceivable that a heart love someone and not love to see him, and if it is known that there is no arrival except by departing from this world, he should be one who loves death and does not flee it." },
       { title: "State the qualification", body: "A traveller is not burdened by the journey from his homeland to where his beloved dwells, and death is the key of meeting and the door of entry to the witnessing. The sign is therefore about what death is taken to be, not about indifference to living." },
     ],
     closer: [
-      { title: "Why signs rather than feelings", body: "Ghazali's argument is that a claim about an inward state cannot be checked against the state itself. Smoke and fruit are the model: the evidence is outside the thing, and is therefore capable of contradicting the claim." },
+      { title: "Why signs rather than feelings", body: "Ghazali's argument is that a claim about an inward state cannot be checked against the state itself. Smoke and fruit are the model: the evidence sits outside the claim, which is exactly why it can contradict it." },
       { title: "How to use the chapter honestly", body: "The signs are given as a test a person applies to his own soul, and Ghazali is explicit that the soul is the party being tested. Read as a way of grading others, the chapter is inverted, and read as a way of grading oneself favourably it is inverted twice." },
     ],
     distinction: ["Two ways to settle a claim of love", "By evidence", "Traces on heart, tongue, and limbs that could turn out otherwise, which is what a sign is.", "By feeling", "Consulting the claim itself, which is the deception the chapter opens by naming."],
@@ -300,7 +300,7 @@ export const book36Chapters: Chapter[] = [
       { title: "Give the case", body: "The example is the intimate address of a servant whom Moses was directed to seek out when the people had gone seven years without rain, and whose prayer was answered when the prayer of seventy thousand was not, and whose words were of a boldness that Ghazali reports without recommending." },
     ],
     closer: [
-      { title: "Why include it at all", body: "The chapter could have been omitted, and its inclusion is a decision. Ghazali's method throughout the Ihya is to describe what the stations actually produce, including what is awkward, and then to fence it. Removing the description would leave the reader with no way to recognise the thing if he met it." },
+      { title: "Why include it at all", body: "The chapter could have been omitted, and its inclusion is a decision. Ghazali's method throughout the Ihya is to describe what the stations actually produce, including what is awkward, and then to fence it. Cutting the description would leave a reader unable to recognise the state if he ever arrived at it." },
       { title: "The structure of the fence", body: "The permission is attached to a station rather than to a speech-act, so it cannot be transferred by copying the words. This is the same structure as the bounded permissions in the neighbouring books, and it fails in the same way when the words are taken and the station is not." },
     ],
     distinction: ["Two people using the same words", "Established in the station", "The expansion is a consequence of a settled intimacy, and is tolerated.", "Resembling them", "The same words without the station, which Ghazali says brings a person to the brink."],
@@ -321,7 +321,7 @@ export const book36Chapters: Chapter[] = [
       { title: "Note the disparity", body: "He announces that the servants of God differ in it, so contentment is not treated as a single threshold that a person is either above or below." },
     ],
     closer: [
-      { title: "Why testimony precedes analysis again", body: "The structure of the first half is repeated exactly. Establish that the thing is real and praised, then define it, then answer the objection. Ghazali uses the same order because the objection in both cases is that the state is inconceivable." },
+      { title: "Why testimony precedes analysis again", body: "The structure of the first half is repeated exactly. Establish that it is real and praised, then define it, then answer the objection. Ghazali uses the same order because the objection in both cases is that the state is inconceivable." },
       { title: "The objection being set up", body: "The position he will answer is that in what opposes desire there is only patience, and contentment is not conceivable. Placing the excellence first makes that position the one that has to explain itself." },
     ],
     distinction: ["Two places contentment could be treated", "After love", "As a fruit of love, which is where Ghazali puts it and why.", "After patience", "As a stronger patience, which is the reading the next chapter rejects."],

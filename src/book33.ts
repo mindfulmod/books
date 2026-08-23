@@ -139,7 +139,7 @@ export const book33Chapters: Chapter[] = [
     moves: [
       { title: "Give the three parts", body: "Fear is composed of knowledge, a state, and an act. The knowledge is knowledge of the cause leading to the disliked outcome, and the burning of the heart that follows is fear itself." },
       { title: "Give the analogy", body: "Somebody who has offended a king and been caught fears execution while a pardon is still possible — and how much the fear hurts tracks the specifics: how bad the offence was, whether the king is vengeful, whether he has people around him pushing for revenge, and whether the offender has anyone to speak for him or anything to his credit that would cancel it out." },
-      { title: "Add the other source", body: "Fear can come not from anything you did but from what the thing is: somebody who falls into a lion's claws fears it for being a lion, the way water is feared for flowing and fire for burning." },
+      { title: "Add the other source", body: "Fear can come from nothing you did at all, but simply from what you are facing: somebody who falls into a lion's claws fears it for being a lion, the way water is feared for flowing and fire for burning." },
       { title: "Apply it", body: "So fear of God arises sometimes from knowing God and His attributes, and that were He to destroy the worlds He would not mind and nothing would prevent Him; sometimes from the multitude of one's own offences; and sometimes from both together." },
     ],
     closer: [

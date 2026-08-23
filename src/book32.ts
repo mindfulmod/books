@@ -65,7 +65,7 @@ export const book32Chapters: Chapter[] = [
       { title: "Gather the testimony", body: "The reports and verses are assembled to establish patience near the centre of religious life rather than at its edge as endurance under difficulty." },
       { title: "Note the reason for the pairing", body: "Patience and gratitude are given one book because each is bound to the other, and the third pillar will show that both duties can fall on the same thing at the same time." },
       { title: "Mark where the argument goes", body: "Ghazali says explicitly that the excellence of patience by transmission is one thing, and that its excellence seen by the eye of consideration cannot be understood until the reality has been set out. The definition follows immediately." },
-      { title: "Keep the register", body: "As with the openings of Books 22 and 31, the testimony comes before the analysis, because the reader has to want the thing before its anatomy reads as anything but bookkeeping." },
+      { title: "Keep the register", body: "As with the openings of Books 22 and 31, the praise comes before the analysis, because a reader has to want the thing before its anatomy reads as anything but bookkeeping." },
     ],
     closer: [
       { title: "Where this book stands in the quarter", body: "Book 31 ended by naming patience as the half of the remedy that knowledge cannot supply. This is the book that supplies it, which is why Ghazali placed it second in the quarter." },

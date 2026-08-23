@@ -28,7 +28,7 @@ export const book37Chapters: Chapter[] = [
       { title: "Note the danger being set up", body: "A report that makes everything depend on intention is the easiest report in the tradition to misuse, and Chapters 5 and 6 exist to close the two ways it is normally misused." },
     ],
     closer: [
-      { title: "Why the excellence comes first", body: "The same order as the neighbouring books: establish that the thing is real and weighty, then define it, then answer the misreadings. Establishing the weight first is what makes the later restrictions read as protections rather than as deflations." },
+      { title: "Why the excellence comes first", body: "The same order as the neighbouring books: establish that it is real and weighty, then define it, then answer the misreadings. Establishing the weight first is what makes the later restrictions read as protections rather than as deflations." },
       { title: "What the reader should be watching for", body: "The book will say that intention outweighs action, that it cannot convert a wrong act, and that it cannot be produced by declaring it. All three follow from one definition, which arrives in the next chapter." },
     ],
     distinction: ["Two ways to take the founding report", "As a definition to be worked out", "Acts take their ruling from their motive, which requires knowing what a motive is.", "As a licence", "Anything is acceptable if meant well, which the book spends two chapters refusing."],
@@ -104,7 +104,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "What cannot be converted", formalTitle: "The detail of the acts connected with intention",
     overview: "The first of the two great restrictions. Ghazali divides all acts into three classes and states flatly that one of them is outside the reach of intention entirely.",
-    thesis: "All acts divide three ways with respect to intention, and this is the first of two great restrictions.",
+    thesis: "All acts divide three ways once you ask what intention does to them, and this is the first of two great restrictions.",
     moves: [
       { title: "Divide the acts", body: "Acts, however many kinds they divide into, are three classes: acts of disobedience, acts of obedience, and permissible acts. The three are governed differently, which is why the general rule needed this chapter." },
       { title: "State the restriction", body: "Acts of disobedience do not change from their place by intention. The ignorant should not understand from the generality of the report that a wrong act turns into an act of obedience by intention." },

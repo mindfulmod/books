@@ -45,7 +45,7 @@ export const book11Chapters: Chapter[] = [
     moves: [
       { title: "State it", body: "That the food, after being lawful in itself, be wholesome in the direction of its earning, agreeing with the practice and with scrupulousness — not acquired by a cause disliked in the Law, nor by the ruling of whim or of dissembling in religion." },
       { title: "Note the two conditions", body: "Lawful in itself, and wholesome in how it was got. The second is the one that requires looking backward past the food to the transaction that brought it, and it is where the manner does its work." },
-      { title: "Give the argument from order", body: "God commanded the eating of the wholesome, which is the lawful — and He placed the prohibition of consuming wealth wrongfully before the prohibition of killing, to magnify the matter of the forbidden and to exalt the blessing of the lawful." },
+      { title: "Give the argument from order", body: "God commanded eating what is wholesome, meaning what is lawfully come by — and He put the ban on taking people's money wrongfully before the prohibition of killing, to magnify the matter of the forbidden and to exalt the blessing of the lawful." },
       { title: "State the rank", body: "So the root in food is its being wholesome, and that is among the obligations and the foundations of religion." },
     ],
     closer: [

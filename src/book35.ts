@@ -44,7 +44,7 @@ export const book35Chapters: Chapter[] = [
     moves: [
       { title: "Give the image", body: "Unity has four ranks, divided into a kernel, the kernel of the kernel, a shell, and the shell of the shell. The comparison is a walnut, which has two shells, a kernel, and an oil within the kernel." },
       { title: "The first two degrees", body: "The first is to say the words with the tongue while the heart is heedless of them or denies them, which is the unity of the hypocrites. The second is that the heart assents to the meaning of the words, as the generality of Muslims do." },
-      { title: "The third degree", body: "To witness it by way of unveiling through the light of the Real, which is the station of those brought near: he sees many things and sees them, in their multiplicity, as issuing from the One." },
+      { title: "The third degree", body: "To see it directly, disclosed by God's own light — the station of those brought near, where he sees many things and sees them, in their multiplicity, as issuing from the One." },
       { title: "The fourth degree", body: "Seeing only one thing in existence at all. This is what the truthful arrive at, and what the Sufis call being annihilated in oneness — because somebody who sees only one does not see himself either." },
     ],
     closer: [
@@ -107,12 +107,12 @@ export const book35Chapters: Chapter[] = [
     moves: [
       { title: "Derive the word", body: "The word comes from appointing an agent. To entrust something to somebody is to hand it over and depend on him for it. The person you hand it to is the agent, and you are the one relying — provided you are actually at ease about it and not suspecting him of letting you down." },
       { title: "Give the analogy", body: "Someone falsely accused by a deception appoints an advocate to expose it. He is not truly relying on him unless he believes four things about him." },
-      { title: "Name the four", body: "The utmost guidance, so that he knows where the deceptions lie and nothing of their subtlety escapes him. The utmost power, so that he dares to state the truth plainly and is not stopped by flattery, fear, shame, or cowardice. The utmost eloquence, which is power in the tongue to express whatever the heart has grasped. And the utmost compassion, which moves him to spend everything he can on the matter." },
+      { title: "Name the four", body: "The utmost guidance, so that he knows where the deceptions lie and nothing of their subtlety escapes him. The utmost power, so that he dares to state the truth plainly and is not stopped by flattery, fear, shame, or cowardice. The utmost eloquence, which is power in the tongue to express whatever the heart has grasped. And the deepest compassion, which moves him to spend everything he has on it." },
       { title: "Give the failure condition", body: "If he doubts any one of the four, or supposes that his opponent's advocate is more complete in them, his soul is not at rest with his agent; his heart remains disturbed and absorbed in contrivance to make up for what he fears his agent lacks." },
     ],
     closer: [
       { title: "What the analogy accomplishes", body: "It converts an inward state that a person can only claim into four beliefs he can check. Where reliance is absent, the analogy says which of the four is the reason, which is exactly what an exhortation to trust more cannot do." },
-      { title: "How the four transfer", body: "Applied to the One relied upon, the third condition is not a possible deficiency, so what remains to be doubted is whether the matter is known, whether it can be done, and whether it is cared about. Anxiety that survives assent to all three is not about the Trustee at all." },
+      { title: "How the four transfer", body: "Applied to God, the third condition cannot fail, so the only thing left to doubt is whether the matter is known, whether it can be done, and whether it is cared about. Anxiety that survives assent to all three is not about the Trustee at all." },
     ],
     distinction: ["Two people with an advocate", "At rest", "All four are believed of him, so the client is not occupied with contrivance.", "Contriving", "One of the four is doubted, and the doubt shows as preoccupation rather than as a stated disbelief."],
     misreading: "Do not read the analogy as making reliance a legal transaction. It is offered to locate the specific belief that is missing, which is what the rest of Part Two builds on.",

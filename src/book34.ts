@@ -24,7 +24,7 @@ export const book34Chapters: Chapter[] = [
     moves: [
       { title: "Define it", body: "Poverty is the lack of what one needs. Lacking what one does not need is not called poverty, and if what is needed is present and within reach then the one who needs it is not poor." },
       { title: "Take the definition to its end", body: "On that definition everything other than God is poor, since each thing needs its existence to continue into the next moment and that continuance is derived. Only one existent has an underived existence, so there is one rich and everything else is in need of Him." },
-      { title: "Narrow the subject", body: "The book means poverty of wealth in particular. A servant's poverty with respect to the kinds of things he needs has no limit, and what is treated here is only the part reached by money." },
+      { title: "Narrow the subject", body: "The book means poverty of wealth in particular. How many kinds of thing a person needs, and so is poor in, has no limit. What is treated here is only the part reached by money." },
       { title: "Sort the five states", body: "The one who lacks wealth may be in any of five conditions, and Ghazali names each so that its rulings can be discussed separately." },
     ],
     closer: [
@@ -233,7 +233,7 @@ export const book34Chapters: Chapter[] = [
     thesis: "Detachment is defined by what you turn toward, not by what you give up — which reframes the whole second part.",
     moves: [
       { title: "Give the definition", body: "Abstinence is the turning of desire away from a thing toward what is better than it. Whoever turns from one thing to another, by sale or exchange, turns from the first because he is disinterested in it and toward the second because he desires it." },
-      { title: "Name the two sides", body: "His condition with respect to what is left is called abstinence, and with respect to what is taken it is called desire and love. Both are present in one act." },
+      { title: "Name the two sides", body: "What he leaves behind is what gets called abstinence; what he turns toward is what gets called desire and love. Both are present in one act." },
       { title: "Give the first condition", body: "What is turned from must itself be desirable in some respect. One who turns from what is not sought is not called detached: leaving stones and dirt is not abstinence, and leaving dirhams and dinars is." },
       { title: "Give the second condition", body: "What is turned toward must be better in his own estimation, so that the desire for it prevails. A seller does not sell unless the price is better to him than the goods." },
     ],
@@ -319,7 +319,7 @@ export const book34Chapters: Chapter[] = [
       { title: "Sort by kind", body: "Detachment is divided according to the kinds of thing turned from, so that a person may be detached in one and not in another." },
       { title: "Make it a description rather than a verdict", body: "The sorting converts a single judgment into a set of specific ones, which is how the partial degree of the previous section becomes usable." },
       { title: "Follow the rulings", body: "Different kinds carry different considerations, since what is permitted, necessary, or merely customary differs across them." },
-      { title: "Prepare the necessities", body: "The sorting leads directly to the question the next sections take up: what happens where the thing in question cannot be dispensed with at all." },
+      { title: "Prepare the necessities", body: "The sorting leads straight to the question the next sections take up: what happens when what you are detaching from cannot be dispensed with at all." },
     ],
     closer: [
       { title: "Why sorting beats ranking", body: "A person told he is or is not detached learns nothing actionable. A person shown that he is detached in four kinds and not in a fifth knows where the work is." },
@@ -337,8 +337,8 @@ export const book34Chapters: Chapter[] = [
     overview: "The hardest case for a doctrine of detachment: things that cannot be dispensed with. Ghazali does not resolve it by pretending they can be.",
     thesis: "The hardest case for any doctrine of detachment: the things nobody can do without.",
     moves: [
-      { title: "Pose the difficulty", body: "Food, clothing, and shelter cannot be abandoned, so detachment with respect to them cannot mean going without them." },
-      { title: "Relocate the exchange", body: "What can be exchanged is not the thing but the measure and the attachment, which returns the reader to the measures of Book 23 and the restricted blessings of Book 32." },
+      { title: "Pose the difficulty", body: "Food, clothing and shelter cannot be given up, so detachment from them cannot mean doing without them." },
+      { title: "Relocate the exchange", body: "What you trade away is not the food or the clothing but how much of it and how attached you are, which returns the reader to the measures of Book 23 and the restricted blessings of Book 32." },
       { title: "Name the six", body: "Ghazali lists the necessities that require this treatment: food, clothing, dwelling, its furnishings, what is married, and what is possessed, and takes each in turn." },
       { title: "Give the principle", body: "In each, detachment is having no more than the need requires and no attachment to what is had, which is a workable standard where abandonment is not." },
     ],

@@ -72,7 +72,7 @@ export const book31Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why regret alone is sometimes called repentance", body: "The report that regret is repentance names the middle term for the whole, because regret never lacks the knowledge that produced it nor the resolve that follows it. Ghazali's phrase is that regret is flanked by its two sides, its fruit and what fruited it." },
-      { title: "The image he gives", body: "Picture somebody in the dark when sunlight suddenly breaks over him — a cloud parting, a curtain pulled back — and he sees the thing he loves about to be destroyed. Love flares up in him and gets him on his feet to save it. The light is the knowing; the flare is the regret." },
+      { title: "The image he gives", body: "Picture somebody in the dark when sunlight suddenly breaks over him — a cloud parting, a curtain pulled back — and he sees something he loves about to be destroyed. Love flares up in him and gets him on his feet to save it. The light is the knowing; the flare is the regret." },
     ],
     distinction: ["Two things called repentance", "The compound", "Knowledge produces regret, regret produces an act facing present, future, and past.", "The feeling alone", "Regret is present and neither the diagnosis behind it nor the action after it has arrived."],
     misreading: "Do not conclude that a person must feel a particular intensity for repentance to count. What Ghazali specifies is a structure with three parts, not a measure of emotion.",
@@ -93,7 +93,7 @@ export const book31Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Where this book sits", body: "It is the first of the ten books of the Quarter of Deliverance, and Ghazali's own closing sentence in Book 21 names what fills a purified heart: thankfulness, patience, fear, hope, poverty, detachment, love, contentment, longing, trust, reflection, and self-accounting. Repentance is the door those enter by." },
-      { title: "Testimony before method", body: "As with the opening of Book 22, the reports come first because the reader has to want the thing before the analysis of conditions, classes, and remedies will be read as anything but bookkeeping." },
+      { title: "Testimony before method", body: "As with the opening of Book 22, the reports come first because a reader has to want it before the analysis of conditions, classes, and remedies will be read as anything but bookkeeping." },
     ],
     distinction: ["Two ways of hearing the excellence", "As a reason to begin", "The worth attaches to the return, which is available now and is what the reports are urging.", "As a reason to delay", "The generosity is read as making the return unnecessary, which Book 30 treats at length as delusion."],
     misreading: "Do not read the praise of the repentant as encouragement to fall in order to return. The next sections make the obligation immediate and universal, which forecloses that reading.",

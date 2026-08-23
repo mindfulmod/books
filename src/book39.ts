@@ -85,7 +85,7 @@ export const book39Chapters: Chapter[] = [
     thesis: "Six names turn out to describe one operation, which is worth not skimming.",
     moves: [
       { title: "List the names", body: "Bringing the two knowledges present in order to reach the third is called reflection, consideration, recollection, examination, contemplation, and pondering. Six words for one operation." },
-      { title: "Sort them", body: "Pondering, contemplation, and reflection are synonyms upon one meaning with no different meanings beneath them. Recollection, consideration, and examination differ in meaning, although the thing named is one." },
+      { title: "Sort them", body: "Pondering, contemplation, and reflection are synonyms upon one meaning with no different meanings beneath them. Recollection, consideration and examination differ in meaning, though they all name one operation." },
       { title: "Give the analogy", body: "As the words for a blade, a keen edge, and a blade of Indian make all fall upon a single thing but under different considerations: one indicates the sword insofar as it cuts, one indicates it by its relation to where it came from, and one indicates it absolutely without signalling those additions." },
       { title: "Apply it", body: "So consideration applies to bringing the two knowledges present insofar as one crosses over from them to a third, and the other names pick out other aspects of the same act." },
     ],
@@ -149,7 +149,7 @@ export const book39Chapters: Chapter[] = [
     moves: [
       { title: "Set the starting point", body: "If you want to arrive at fear, start by looking at your own sins, the visible and the hidden ones. The sequence begins with something you actually have, not with an imagined scene." },
       { title: "Move outward in time", body: "Then look at death and how hard it is, then at what comes after it, then at the terror of the summons, then at the terror of everyone being gathered onto one ground." },
-      { title: "Reach the reckoning", body: "Then at the exactness of the accounting, down to the smallest thing; then at the bridge, its fineness and its sharpness; then at the danger of the matter there, that he is turned to the left or turned to the right." },
+      { title: "Reach the reckoning", body: "Then at how exact the reckoning is, down to the smallest detail; then at the bridge, its fineness and its sharpness; then at the danger of the matter there, that he is turned to the left or turned to the right." },
       { title: "Name what the passage is", body: "It is a chain of images in a fixed order, each following the last in time, and it is offered as the way a particular state is produced rather than as a doctrine to assent to." },
     ],
     closer: [

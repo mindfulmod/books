@@ -207,7 +207,7 @@ export const book26Chapters: Chapter[] = [
       { title: "Keep the caravan in view", body: "Care for the means only to the degree that they sustain travel. Excessive maintenance can make the means defeat their purpose." },
     ],
     closeReading: [
-      { title: "The informed guest still enjoys", body: "Knowing it will not last does not spoil the smell of it, or stop you being grateful. What it stops is enjoyment turning into a claim that the thing is yours for good." },
+      { title: "The informed guest still enjoys", body: "Knowing it will not last does not spoil the smell of it, or stop you being grateful. What it stops is enjoyment turning into a claim that what you are enjoying is yours for good." },
       { title: "Grief reveals the imagined contract", body: "Some grief belongs to love and human life. The example targets the added protest that treats return as a violation of ownership rather than part of the known condition." },
     ],
     distinction: { title: "Use is not the same as possession", firstLabel: "Grateful use", first: "The share is received, cared for, and used according to purpose while its temporary status remains present.", secondLabel: "Possessive claim", second: "Access becomes an inward contract that the share must remain and continue serving the self." },
