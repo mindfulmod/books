@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id <= 4 ? "the preamble and the announced order" : id === 13 ? "the concluding exposition, on the signs of his truthfulness" : "the expositions of his character and manners");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 20, ${bab(seed.id)}, ${seed.formalTitle}.` },

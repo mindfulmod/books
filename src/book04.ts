@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id === 1 ? "the first chapter, on the excellences" : id === 2 ? "the second chapter, on the outward acts" : id <= 15 ? "the third chapter, on the inward conditions" : id === 16 ? "the fourth chapter, on leading the prayer" : id === 17 ? "the fifth chapter, on the Friday prayer" : id === 18 ? "the sixth chapter, on scattered questions" : "the seventh chapter, on the supererogatory prayers");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 4, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Seven chapters", formalTitle: "The excellences of prayer",
     overview: "The largest book of the Quarter of Worship opens with its excellences and announces seven chapters, one of which is unlike all the others.",
+    thesis: "The book opens by gathering everything said in praise of prayer, so that the argument about the heart which follows cannot be read as a shortcut around the act.",
     moves: [
       { title: "Gather the excellences", body: "The first chapter assembles what is reported on the excellence of prayer, of prostration, of the congregation, of the call, and of the place of prayer, each treated in turn." },
       { title: "Announce the seven", body: "What is said in praise of prayer; the physical acts and how they are done; the inward requirements, which are what the heart is doing; leading the prayer and following it; the Friday prayer; common questions that come up; and the voluntary prayers." },
@@ -40,6 +41,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Body and weight", formalTitle: "The visible acts, and the distinction worth taking from them",
     overview: "The longest procedural stretch in the book. Two things in it are worth having even if you never read the rulings themselves.",
+    thesis: "Fixing the visible acts completely is what makes it possible to ask the next chapter's question: whether doing all of them correctly is enough.",
     moves: [
       { title: "Take the shape", body: "The chapter walks through the prayer in order — what comes before the opening words, then the recitation, then bowing and everything attached to it, then the testimony, and on to the end. It pins the physical act down completely." },
       { title: "Take the distinction", body: "One part of it separates what is obligatory from what is customary. That single division is the most useful thing here for anyone who wants to know what carries what weight." },
@@ -60,6 +62,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "A condition, not an ornament", formalTitle: "That humility and presence of heart are required",
     overview: "The most consequential argument in the Quarter of Worship. Ghazali argues that presence of heart is a condition of the prayer, and marshals evidence like a jurist rather than like a preacher.",
+    thesis: "Ghazali argues that presence of heart is a requirement of prayer, not an improvement on it — and he argues it with legal instruments rather than exhortation.",
     moves: [
       { title: "The first evidence", body: "Establish the prayer for My remembrance. The apparent sense of a command is obligation, and heedlessness is the contrary of remembrance — so one heedless throughout his prayer, how is he establishing the prayer for His remembrance?" },
       { title: "The second and third", body: "Do not be among the heedless: a prohibition, whose apparent sense is forbiddance. And: until you know what you are saying — a rationale given for the prohibition on the drunk, which applies equally to a heedless man whose concern is absorbed in whispering and thoughts of the world." },
@@ -80,6 +83,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Six meanings", formalTitle: "The inward meanings by which the prayer's life is completed",
     overview: "The framework the rest of the chapter runs on. Ghazali says the many expressions used for this reduce to six, and then promises a three-part treatment of each.",
+    thesis: "Six things make a prayer alive, and because each has its own causes and its own treatment, a prayer can fail at one while succeeding at the rest.",
     moves: [
       { title: "Give the six", body: "The expressions for these meanings are many, but six sentences gather them: presence of heart, understanding, reverence, awe, hope, and shame." },
       { title: "Announce the method", body: "So let us mention their details, then their causes, then the treatment for acquiring them. Details, causes, treatment — the same three-part structure the Ihya uses for the diseases of the heart." },
@@ -100,6 +104,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Present but not understanding", formalTitle: "Presence of heart and understanding are two things",
     overview: "The distinction that does the most practical work in the book, drawn with care because the two are constantly run together.",
+    thesis: "Presence and understanding come apart: the heart can be entirely with the words and nowhere near their meaning.",
     moves: [
       { title: "Define presence", body: "By presence of heart we mean that the heart be emptied of anything other than what it is engaged in and speaking, so that the knowledge of the act and of the word accompanies them, and thought does not roam elsewhere." },
       { title: "Give its threshold", body: "Whenever thought turns from what is other than what he is in, and there is in his heart a remembrance of what he is in, and no heedlessness of it — presence of heart has been obtained. The bar is not ecstasy; it is not being elsewhere." },
@@ -120,6 +125,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Why prayer stops you", formalTitle: "How understanding is what makes prayer prevent wrongdoing",
     overview: "Ghazali makes a specific claim about the well-known promise that prayer keeps a person from indecency — and it turns on understanding rather than on the act.",
+    thesis: "The promise that prayer keeps a person from wrongdoing runs through comprehension — so when behaviour is not changing, the thing to check is whether anything is being understood.",
     moves: [
       { title: "Note what changes mid-prayer", body: "\"How many fine meanings does someone praying understand in the middle of the prayer that had never once crossed his mind before it.\" The prayer is not only an occasion for saying things. Things occur to you inside it that do not occur to you outside it." },
       { title: "Draw the conclusion", body: "\"And it is in this way that prayer keeps a person from indecency and wrong\" — because it makes him understand things, and those things inevitably stop him." },
@@ -140,6 +146,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Beyond attention", formalTitle: "Reverence, awe, hope, and shame",
     overview: "The four remaining meanings, and Ghazali distinguishes the first of them from the two before it with a single ordinary example.",
+    thesis: "Reverence, awe, hope and shame are each defined by what they add to the one before, which is why they cannot be summoned as a single feeling.",
     moves: [
       { title: "Separate reverence", body: "Reverence is a matter beyond presence of heart and understanding — for a man addresses his servant with speech while his heart is present and he understands what he says, and there is no reverence in it." },
       { title: "Note what the example proves", body: "Attention and comprehension are fully compatible with the absence of reverence. So no amount of concentration or of learning the meanings will by itself produce the third meaning, which is why it needed a separate treatment." },
@@ -160,6 +167,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Your heart follows you", formalTitle: "Why your heart goes where your attention already is",
     overview: "Before offering any remedy, Ghazali explains the mechanism — and it is the most useful paragraph in the book, because it explains why trying harder in the prayer itself never works.",
+    thesis: "Attention cannot be forced, because the heart goes wherever your concern already is — which is why effort applied inside the prayer has nothing to work with.",
     moves: [
       { title: "State the rule", body: "\"Your heart follows what you care about. It will not be present except in what matters to you.\" This is not offered as an ideal. It is offered as a description of how the thing works." },
       { title: "Note that it is involuntary", body: "\"Whenever something matters to you, the heart is present in it, whether it wants to be or not — it is built that way and pressed into service in it.\" You do not choose where your attention goes. It goes where your concern already is." },
@@ -180,6 +188,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Repel the cause", formalTitle: "The remedy that works for presence of heart",
     overview: "The book's central practical argument, and its form is diagnostic: find the cause, and treat that instead of the symptom.",
+    thesis: "The remedy is not a technique for concentrating but a change in what you actually value, worked on outside the prayer.",
     moves: [
       { title: "Establish that the states are already there", body: "A believer necessarily holds God in awe, fears Him, hopes in Him, and feels some shame at falling short. Once you believe, you are not free of these — though how strongly you feel them tracks how certain you are." },
       { title: "Locate the failure", body: "So his being detached from them in the prayer has no cause but the scattering of thought, the dividing of the passing notions, the absence of the heart from the intimate address, and heedlessness of the prayer." },
@@ -200,6 +209,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Take it off", formalTitle: "External causes, and what was done about them",
     overview: "The first of the two kinds of cause, and Ghazali's treatment of it is entirely concrete — as are the examples, which are startling.",
+    thesis: "The distractions that come in through the senses are the easy case, and the reported responses to them are correspondingly blunt.",
     moves: [
       { title: "Name the cause", body: "The external cause is what strikes the hearing or appears to the sight. That may snatch the concern until he follows it and turns in it, and then the thought is drawn from it to something else, and it goes on in a chain." },
       { title: "Describe the chaining", body: "Seeing becomes a cause of thinking, and then some of those thoughts become causes of others. The damage is not the glance but the sequence it starts." },
@@ -220,6 +230,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Nothing to take away", formalTitle: "Internal causes, and why they are harder",
     overview: "The second kind of cause, and Ghazali is honest that the remedy which works for the first does not transfer.",
+    thesis: "Distraction that comes from inside cannot be removed by rearranging the room, which is why Ghazali says to cut the concern rather than chase the thought.",
     moves: [
       { title: "Name the cause", body: "The second cause is a matter inward in the person himself — a concern he carries into the prayer, which needs nothing external to set it going." },
       { title: "Say why the first remedy fails", body: "Removing the object works because there is an object. Where the cause is a concern already in the heart, there is nothing in the room to take away, and the same instruction has nothing to attach to." },
@@ -240,6 +251,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Element by element", formalTitle: "What should be present in the heart at each part",
     overview: "The chapter's practical culmination: the prayer walked through from the call onward, with something specific named for each part rather than a general instruction to concentrate.",
+    thesis: "Every part of the prayer is a prompt, and the chapter walks them in order, starting before you have even arrived.",
     moves: [
       { title: "Set the task", body: "Your right, if you are among those desiring the hereafter, is that you not be heedless of the alerts contained in the conditions and elements of the prayer. The preceding conditions are the call, purification, covering, facing, standing, and the intention." },
       { title: "The call", body: "When you hear the caller's call, bring to your heart the terror of the call on the Day of Resurrection, and gird yourself outwardly and inwardly for the response and the hastening — for those who hasten to this call are the ones called with kindness on the day of the greatest presentation." },
@@ -260,6 +272,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Face and body together", formalTitle: "Facing the qibla, and why the direction is the point",
     overview: "Ghazali reads the physical act of turning toward the Kaaba as doing two jobs at once, and gives a reason the body has to be still that has nothing to do with tidiness.",
+    thesis: "Facing the qibla is defined by what you turn away from — and fixing the body in one direction is what stops it dragging the heart after it.",
     moves: [
       { title: "Give the two jobs", body: "Turning your face toward the House means turning it away from everything else. And fixing your limbs in one direction settles them, so that they stop rebelling against the heart." },
       { title: "Explain the rebellion", body: "When the limbs get out of hand — moving about, turning this way and that — they drag the heart along with them and turn it away from God. The body is not a neutral container. It steers." },
@@ -280,6 +293,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Someone is watching", formalTitle: "Standing, and Ghazali's most practical exercise",
     overview: "The passage that does the most work in the whole book, because it gives you something you can actually do — and then turns it into an accusation you cannot easily answer.",
+    thesis: "Ghazali concedes you may not be able to summon awe of God, and hands you a substitute you demonstrably already have: self-consciousness in front of somebody you respect.",
     moves: [
       { title: "Say what standing is", body: "Standing upright is presenting yourself — body and heart — in front of God. So drop your head, the highest part of you. Lowering it is there to remind the heart to take on humility and let go of any claim to importance." },
       { title: "Give the honest concession", body: "You are standing before God and He is watching you. Stand before Him as you would stand before one of the kings of your time — and Ghazali adds, plainly, \"if you are unable to grasp the true measure of His majesty.\" He does not assume you can." },
@@ -300,6 +314,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "If the takbir is a lie", formalTitle: "The intention, and the first words of the prayer",
     overview: "Two passages with unusual force. One asks what you are actually undertaking; the other asks whether your opening words are true.",
+    thesis: "A sentence can be true and still be a lie about you — which is the test he applies to the opening words of every prayer.",
     moves: [
       { title: "Give the intention", body: "Resolve to answer God by carrying out His command, completing the prayer, keeping off what would void it, and doing all of it for God alone — hoping for reward, fearing punishment, seeking nearness. And do it while acknowledging that being permitted to address Him at all is a favour, given your poor manners and frequent disobedience." },
       { title: "Give the three questions", body: "\"Look at whom you are addressing, and how, and with what.\" Ghazali expects an effect: at this, he says, your forehead should sweat with embarrassment, your limbs tremble, and your face turn pale." },
@@ -320,6 +335,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "Leading", formalTitle: "The imam and those who follow",
     overview: "The fourth chapter, which returns to the procedural register and sorts an office by its moments.",
+    thesis: "Leading the prayer is treated as an office with duties sorted by moment, before, during and after.",
     moves: [
       { title: "Sort by moment", body: "The imam has duties before the prayer, duties in the recitation, duties in the elements of the prayer, and duties after the closing salutation. The chapter is organised by when rather than by kind." },
       { title: "Note what the sorting achieves", body: "An office described as a list of qualities cannot be checked. Described as duties attaching to four moments, it can be, which is the same move the Ihya makes throughout when it turns a disposition into something locatable." },
@@ -340,6 +356,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "The Friday", formalTitle: "The Friday prayer, its excellence and its etiquette",
     overview: "The fifth chapter, and the longest procedural stretch in the book after the second: a day treated as a whole rather than an hour treated as an act.",
+    thesis: "The Friday prayer is given a day's worth of arrangement rather than an hour's, running from the Thursday before it.",
     moves: [
       { title: "Give the excellence", body: "The chapter opens with what is reported on the day's excellence, and Ghazali's framing is that this is a day rather than an appointment within one." },
       { title: "Give the conditions", body: "A section sets out the conditions of the Friday prayer — what must hold for it to be the Friday prayer at all, as distinct from what is merely fitting." },
@@ -360,6 +377,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 18, shortTitle: "What comes up", formalTitle: "Scattered questions that arise generally",
     overview: "The sixth chapter, and its title is unusually candid: questions that trouble everyone and that the aspirant needs to know.",
+    thesis: "The scattered questions are gathered by how often they actually trouble people, not by where they belong in the law.",
     moves: [
       { title: "Give the selection principle", body: "The chapter gathers scattered questions by which the trial is general and which the aspirant needs to know. Selection is by how often the difficulty arises rather than by where the questions belong in a legal scheme." },
       { title: "Note what that produces", body: "A chapter organised by the reader's practical situation, which is why it sits between the Friday prayer and the supererogatory prayers rather than being distributed through the earlier material." },
@@ -380,6 +398,7 @@ export const book04Chapters: Chapter[] = [
   makeChapter({
     id: 19, shortTitle: "Beyond the obligatory", formalTitle: "The supererogatory prayers",
     overview: "The closing chapter, and it sorts everything beyond the obligatory by what occasions it — which turns out to be a claim about how a life is shaped.",
+    thesis: "The voluntary prayers are sorted by the cycle they belong to — daily, weekly, yearly, and by occasion.",
     moves: [
       { title: "Give the division", body: "What is beyond the obligatory prayers divides by its occasion, and the first division is what recurs with the recurrence of the days and the nights." },
       { title: "The second and third", body: "What recurs with the recurrence of the weeks. And what recurs with the recurrence of the years." },

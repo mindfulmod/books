@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id <= 7 ? "the first chapter, on the litanies and their arrangement" : "the second chapter, on the night vigil");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 10, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The chain", formalTitle: "Why there are litanies at all",
     overview: "The last book of the Quarter of Worship opens with a derivation, and it is the tightest chain of reasoning in the quarter — six links from the goal down to a timetable.",
+    thesis: "The whole timetable is derived from a single goal, in six steps, so that nothing in it is arbitrary.",
     moves: [
       { title: "Start at the end", body: "People who see clearly have understood that there is no rescue except in meeting God, and no way to that meeting except to die loving God and knowing Him." },
       { title: "Take the two conditions apart", body: "That love and intimacy are not obtained except from the continuity of remembering the beloved and persevering in it; and that knowledge of Him is not obtained except by the continuity of thought about Him, His attributes, and His acts — and there is nothing in existence but God and His acts." },
@@ -40,6 +41,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The soul wearies", formalTitle: "Why the litanies are varied",
     overview: "The passage that explains the entire shape of the Quarter of Worship. Ghazali gives a psychological fact and derives a design principle from it.",
+    thesis: "Devotions are varied because the soul tires of repetition — so variation is a concession built into the design rather than a weakness in the practitioner.",
     moves: [
       { title: "State the fact", body: "The soul, by what it was created upon of weariness and boredom, does not endure one kind of the means that assist remembrance and thought." },
       { title: "Say what it does", body: "Put it on one unchanging pattern and it gets bored and starts finding the thing heavy. As the report has it: God does not tire until you tire." },
@@ -60,6 +62,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "A clock", formalTitle: "Why the heavens keep time",
     overview: "A short and striking argument about what the ordering of the sky is for, and it reverses the obvious answer.",
+    thesis: "The heavens keep time so that the divisions of time can be known and filled, which makes a day a structure you receive rather than one you invent.",
     moves: [
       { title: "Gather the verses", body: "The sun and the moon by a reckoning. Have you not seen how your Lord extends the shade. And the moon We have determined in phases. And it is He who made the stars for you, to be guided by them in the darknesses of land and sea." },
       { title: "Refuse the obvious reading", body: "So do not suppose that the aim of the course of the sun and the moon by an ordered reckoning, and of the creation of shade and light and the stars, is that they be used for the affairs of this world." },
@@ -80,6 +83,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Dawn to noon", formalTitle: "The seven portions of the day: the first three",
     overview: "Ghazali counts the day in seven portions and the night in four, marked by the sun rather than by a clock — a structure a person receives rather than designs.",
+    thesis: "The day has seven joints marked by the sun, and earning a living sits inside them rather than around them.",
     moves: [
       { title: "Give the count", body: "Dawn to sunrise is one portion. Sunrise to noon is two. Noon to Asr is two. Asr to sunset is two. That is seven. The night divides into four: two from sunset to when people sleep, and two from the second half of the night until dawn." },
       { title: "First: dawn to sunrise", body: "He calls this a noble time and spends more on it than on any other. It carries the dawn prayer, and then the practice of staying where you prayed until the sun is up — supplication, remembrance, recitation, and the transmitted formulas of the morning." },
@@ -100,6 +104,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Noon to sunset", formalTitle: "The seven portions of the day: the last four",
     overview: "The afternoon portions, one of which God swears by and one of which has no prescribed prayer in it at all.",
+    thesis: "The afternoon portions include one God swears by that contains no prescribed prayer at all — so the arrangement is not merely a container for obligations.",
     moves: [
       { title: "Fourth: noon to the end of Zuhr", body: "The shortest portion of the day — from the sun's decline until the prayer and what follows it are done. Short, and named anyway, because the scheme counts joints rather than durations." },
       { title: "Fifth: until Asr", body: "Here he recommends staying in the mosque, occupied with remembrance and prayer. He also notes this is a time when people are generally inattentive, which he treats as making it more valuable rather than less." },
@@ -120,6 +125,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Not all devotion", formalTitle: "What fills the divisions",
     overview: "The most practical feature of the arrangement, and the one that keeps it from being impossible: several of the seven are given to things that are not private devotion.",
+    thesis: "What fills a portion is drawn from a fixed set of kinds, and a portion spent teaching is not a gap in the practice.",
     moves: [
       { title: "Give the range", body: "The divisions are filled with different kinds: supplication, remembrance, recitation, prayer, praise, and glorification — and Ghazali notes of one arrangement that it gathers all of these together with the nobility of the time." },
       { title: "Give the exception", body: "In one of the divisions, if there is someone present who can benefit from knowledge, the time is given to teaching and to benefiting others rather than to a further private devotion." },
@@ -140,6 +146,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The shortest and the best", formalTitle: "That worth is not duration",
     overview: "A single observation from the fourth division, which is worth separating because a book about allocating time could easily imply the opposite.",
+    thesis: "The shortest portion of the day is also called the best, which denies in passing that duration is the measure of worth.",
     moves: [
       { title: "State it", body: "The fourth division — from the sun's decline to the finishing of the midday prayer with its attached units — is the shortest of the day's litanies and the best of them." },
       { title: "Note the risk it removes", body: "A book that divides a day into seven and fills each part invites the inference that more time means more worth. This sentence, placed at the fourth of the seven, denies it in passing." },
@@ -160,6 +167,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Between the two", formalTitle: "The hour between the evening prayers",
     overview: "The second chapter opens not at the night vigil but at the hour before it, which is where the book locates the practical entry to the whole thing.",
+    thesis: "The hour between the two evening prayers is singled out, and the reason given is that it is a time when people are generally inattentive.",
     moves: [
       { title: "Name the chapter", body: "The second chapter treats the causes that make rising at night easy, the nights whose vigil is recommended, the excellence of the night vigil and of the hour between the two evening prayers, and how the night is divided." },
       { title: "Give the report", body: "It opens with what Aisha reported: that the best of prayers with God is the sunset prayer — He did not reduce it for a traveller or for one at home; He opened the night's prayer with it and sealed the day's prayer with it." },
@@ -180,6 +188,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "What makes it possible", formalTitle: "The causes that ease rising at night",
     overview: "The chapter's title names causes rather than exhortations, and the difference is the whole approach.",
+    thesis: "Rising at night is treated as something with causes you can arrange, rather than as a matter of resolve.",
     moves: [
       { title: "Note what is being asked for", body: "The chapter treats the causes that make rising at night easy — not the excellence of rising, which is treated separately, and not the resolve to rise." },
       { title: "Name the outward causes", body: "They are practical: not eating and drinking to excess, not exhausting oneself during the day with what is not needed, taking a portion of sleep in the daytime, and avoiding what burdens the body." },
@@ -200,6 +209,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Dividing the night", formalTitle: "The night's portions, and which nights",
     overview: "The night receives the same treatment the day received: it is divided, and particular nights are singled out.",
+    thesis: "The night divides into portions like the day, and the point is keeping a share of it rather than conquering all of it.",
     moves: [
       { title: "Divide the night", body: "The chapter treats how the night is divided, so that a person keeps a portion of it rather than facing it as a single undivided stretch." },
       { title: "Note what division does", body: "It makes a partial keeping possible. A night treated as one block is either kept or missed; a night in portions can be kept in part, which is the same reason the day was divided into seven." },
@@ -220,6 +230,7 @@ export const book10Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "How the quarter ends", formalTitle: "What the Quarter of Worship has built",
     overview: "The last book of the quarter closes, and what it leaves a reader with is not a further act but a shape for the time he already has.",
+    thesis: "Ten books of arranged practice end with a timetable, and what the quarter has actually built is an argument that ends in one.",
     moves: [
       { title: "Note what the book supplied", body: "A derivation from the goal down to a timetable; a principle of variation; seven divisions of the day marked by the sun; three scales of night practice; and the causes that make the hardest of them possible." },
       { title: "Note what it did not supply", body: "No new obligation. Every act placed in the divisions was treated in one of the nine books before it, and this book arranges them rather than adding to them." },

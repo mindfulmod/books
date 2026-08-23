@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const part = (id: number) => (id <= 7 ? "the opening, on the levels of purity" : id <= 11 ? "the first division, purity from filth" : "the remaining divisions of outward purity");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 3, ${part(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "A stretch", formalTitle: "What the texts on cleanliness actually claim",
     overview: "The book opens by piling up the strongest statements about washing the body it can find — and then uses them to argue about something else entirely.",
+    thesis: "The strongest texts about washing the body turn out, read carefully, to be making a claim about the inside.",
     moves: [
       { title: "Start with the texts", body: "Religion is built on cleanliness. The key to prayer is purification. Purification is half of faith. In it are men who love to purify themselves, and God loves those who purify themselves. God does not want to make things hard for you, but wants to purify you." },
       { title: "Draw the conclusion", body: "Anyone paying attention, Ghazali says, reads all that and concludes that the thing that matters most is cleaning the inside." },
@@ -40,6 +41,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Four levels", formalTitle: "The four levels of purity",
     overview: "The passage this book is remembered for. Four levels, each one cleaning something different, and the last one named for the people who reach it rather than for the job.",
+    thesis: "Purity has four levels — body, conduct, character, and what fills you — and only the first is about water.",
     moves: [
       { title: "First: the body", body: "Cleaning the body — of ritual impurity, of filth, and of what the body itself produces. This is the level the rest of the book covers in technical detail, and it is the only one it covers." },
       { title: "Second: what you do", body: "Cleaning your limbs of wrongdoing and sin. Not what your body has on it, but what your hands, tongue, eyes and feet have been doing with themselves." },
@@ -60,6 +62,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "No shortcuts", formalTitle: "Why you cannot skip a level",
     overview: "Having listed the four, Ghazali immediately says they are stacked — and that people who want the top one without the ones underneath have misunderstood what they are asking for.",
+    thesis: "The four levels are stacked, so nobody reaches the higher ones by working harder at the lowest; and the man who tries is meticulous rather than lazy.",
     moves: [
       { title: "Give the chain, top down", body: "Nobody reaches the fourth level while the heart is still full of bad character and empty of good. And nobody reaches that while the limbs are still doing what they were told not to and skipping what they were told to do. Each level rests on the one below it." },
       { title: "State the cost", body: "\"The more valuable and noble the goal, the harder the path to it, the longer the road, and the more obstacles there are.\" So, he says, do not imagine this gets picked up casually." },
@@ -80,6 +83,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Half of it", formalTitle: "Why clearing is half the work at every level",
     overview: "This is the idea that turns a list of four into a working system. One well-known line about faith is read as describing the same shape at all four levels.",
+    thesis: "At every level, clearing out what should not be there is half the work — and it is the half the other half depends on.",
     moves: [
       { title: "State it", body: "Clearing away what should not be there is half the work at every level — not just at the level of water and ablution. That is how Ghazali reads \"purification is half of faith.\"" },
       { title: "Try it on the heart", body: "The most you can do for a heart is fill it with good character and sound belief. But it will not take on those things until the opposites have been cleaned out — the corrupt beliefs, the traits people find repellent. So clearing is one half, and it is the half that comes first." },
@@ -100,6 +104,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Calling fussiness cleanliness", formalTitle: "When being clean becomes the problem",
     overview: "The sharpest passage in the book, and the one most likely to sting. Ghazali describes people who are scrupulous about washing and rotten inside — and says nobody around them finds this strange.",
+    thesis: "Scrupulous washing alongside a wrecked interior is not a puzzle to Ghazali; it is a diagnosis, and the fact that nobody finds it strange is part of it.",
     moves: [
       { title: "Give the line", body: "\"The turn has now come to a group who call fussiness cleanliness,\" he writes, \"and say it is the foundation of religion.\"" },
       { title: "Describe what they do", body: "Most of their time goes on decorating their outsides — he compares it to a hairdresser working on a bride — \"while the inside is a ruin, stuffed with the filth of pride, self-satisfaction, ignorance, showing off and hypocrisy.\"" },
@@ -120,6 +125,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "How they actually lived", formalTitle: "The early generations, and when cleanliness counts for you",
     overview: "Ghazali backs the previous section with specifics about how the first Muslims behaved, then gives a three-way test for when attention to cleanliness is good, neutral, or actually a fault.",
+    thesis: "The first Muslims were markedly relaxed about physical cleanliness, and Ghazali gives a four-part test for when your own care about it counts in your favour.",
     moves: [
       { title: "Give the examples", body: "Umar, for all his standing, made ablution from water in a Christian woman's jar. They did not wash grease off their hands — they wiped their fingers on the soles of their feet. Abu Hurayra: \"We would be eating roast meat, the prayer would be called, so we would dig our fingers into the gravel, rub them in the dirt, and say the takbir.\"" },
       { title: "Give the striking one", body: "\"It was never once recorded that any of them asked a question about the fine points of impurity.\" Not that they answered such questions leniently — that the questions do not appear at all." },
@@ -140,6 +146,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "What this book covers", formalTitle: "The scope Ghazali declares, and why",
     overview: "One of the franker authorial asides in the Ihya. Having set out four levels, he tells you which one this book is about and why the others are missing.",
+    thesis: "This book covers only the first of the four levels, and Ghazali says so out loud rather than letting the reader discover it.",
     moves: [
       { title: "Declare it", body: "This book deals only with the first level — physical cleanliness. He says so directly rather than letting you work it out." },
       { title: "Give the reason", body: "Because the first half of the Ihya is deliberately about outward things. The limit comes from where the book sits in the larger work, not from a judgement that the other levels matter less." },
@@ -160,6 +167,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "What is removed", formalTitle: "The substances that purity is from",
     overview: "The technical treatment begins, and it is organised by three questions: what is removed, what removes it, and how the removal is done.",
+    thesis: "Purity from filth is organised as three questions — what is removed, what removes it, how — rather than as a list of cases.",
     moves: [
       { title: "Set the three questions", body: "Inquiry into purity from filth concerns the thing removed, the thing it is removed by, and the removal itself. Every technical question in the division falls under one of the three." },
       { title: "Sort the substances", body: "The thing removed is impurity, and the substances are three: inanimate things, animals, and parts of animals. Each is then treated in turn." },
@@ -180,6 +188,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Mecca and Medina", formalTitle: "Against strictness about water",
     overview: "The sharpest argument in the book, and it is a historical one. Ghazali argues that a strict standard for water cannot be right, and gives four independent reasons.",
+    thesis: "A standard for water strict enough to satisfy scruple would have made purity hardest in the two cities where it should have been easiest.",
     moves: [
       { title: "Give the reductio", body: "What I do not doubt is that if that were a condition, the places most liable to difficulty in purification would be Mecca and Medina — since neither running waters nor large standing waters are abundant in them." },
       { title: "The first evidence", body: "From the first age of the Messenger to the end of the age of his Companions, not one incident concerning purification is reported, nor any question about how water is to be guarded from impurities. And their water vessels were handled by children and servants who did not guard against impurities." },
@@ -200,6 +209,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "By what, and how", formalTitle: "What removes impurity and the manner of removal",
     overview: "The second and third of the three questions, and the second contains a distinction that keeps the whole division workable.",
+    thesis: "What removes impurity is sorted into solids and liquids, and impurity itself into what has a body and what is only a ruling — which is what stops the search being endless.",
     moves: [
       { title: "Sort the removers", body: "What impurity is removed by is either solid or liquid. Of the solid, there is the stone used in cleansing, which purifies in a particular way; of the liquid, water is the general case." },
       { title: "Divide the impurity for the third question", body: "If the impurity is one of ruling — meaning it has no perceptible substance — then pouring water over it suffices." },
@@ -220,6 +230,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Out of sight", formalTitle: "The etiquette of relieving oneself",
     overview: "A short chapter of practical manners, and its opening instruction sets the register for the whole: the concern is other people before it is anything else.",
+    thesis: "The manners around relieving oneself are aimed almost entirely at other people, which sets the register for the whole quarter.",
     moves: [
       { title: "The first instruction", body: "He should go far from the eyes of those who might look, when in open country, and should screen himself with something if he finds it." },
       { title: "Note what comes first", body: "The chapter's opening concern is being seen, which places the etiquette in the domain of how a person is among others rather than in the domain of ritual validity." },
@@ -240,6 +251,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Ablution", formalTitle: "The manner of ablution and its excellence",
     overview: "The second of the three outward purities, treated first as a procedure and then for what is reported of its worth.",
+    thesis: "Ablution gets the finest technical detail in the book, and its worth is argued only after the procedure is fixed.",
     moves: [
       { title: "Give the procedure", body: "The chapter sets out the manner of ablution in order, part by part, including the reaching of water to the roots of the hair at the four places — the eyebrows, the moustache, the eyelashes, and the rest." },
       { title: "Note the level of detail", body: "The detail here is finer than anything else in the book, down to the corner of the forehead. That is a fair measure of how much of this level's technical weight sits in ablution." },
@@ -260,6 +272,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Bathing", formalTitle: "The manner of the full washing",
     overview: "The completion of the second outward purity, treated in the same procedural register as the chapter before it.",
+    thesis: "The full washing is given in the same part-by-part method as ablution, completing the second of the three outward purities.",
     moves: [
       { title: "Give the procedure", body: "The chapter sets out the manner of the full washing, in the same order-by-part method used for ablution." },
       { title: "Note its place", body: "It completes purity from ritual impurity, which is the second of the three divisions of outward purity named when the scope was declared." },
@@ -280,6 +293,7 @@ export const book03Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "The body's excesses", formalTitle: "Cleaning from what the body produces",
     overview: "The third division and the book's close: nails, hair, and the rest, sorted by whether they are secreted or grown.",
+    thesis: "The book that opened on the innermost self closes on nails and hair, sorted by whether the body secretes them or grows them.",
     moves: [
       { title: "Name the division", body: "The third division is cleaning off what the body itself produces — handled by trimming, shaving, hair removal, circumcision and the like." },
       { title: "The first kind", body: "Dirt and the moistures that are secreted, which the body produces continuously and which are removed by washing." },

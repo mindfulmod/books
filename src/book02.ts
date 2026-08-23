@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const fasl = (id: number) => (id === 1 ? "the first section, the creed itself" : id <= 8 ? "the second section, on graduation and the degrees of belief" : id <= 11 ? "the third section, on the flashes of the evidences" : "the fourth section, on faith and submission");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 2, ${fasl(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The statement", formalTitle: "The exposition of the creed in the two words of the testimony",
     overview: "The book opens with a creed set out in full, and the striking thing is what Ghazali does with it afterwards: three of the four sections are about how it is to be taught rather than about what it says.",
+    thesis: "The creed is set out whole and in order, so that the three sections after it can be about teaching rather than content.",
     moves: [
       { title: "Give the statement", body: "The first section is a continuous exposition of the Sunni creed, organised around the two words of the testimony, which are one of the foundations of Islam. It is written to be read as a whole rather than argued through." },
       { title: "Note the absence of proofs", body: "The section carries almost no demonstration. The evidences are held back for the third section, and the separation is deliberate: a creed and the arguments for a creed are treated as two different objects with two different audiences." },
@@ -40,6 +41,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Memorise first", formalTitle: "The order of the degrees of belief",
     overview: "The second section opens with a developmental sequence, and its first step is the one modern readers find hardest to accept.",
+    thesis: "Belief is presented in a fixed order of degrees, and the order is itself part of the teaching.",
     moves: [
       { title: "Give the instruction", body: "What we have set down in the exposition of the creed should be presented to the child at the beginning of his growth, so that he memorises it by rote." },
       { title: "Give what follows", body: "Then its meaning does not cease to unfold to him in his maturity, little by little. So his beginning is memorising, then understanding, then belief and certainty and assent to it." },
@@ -60,6 +62,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "A specific weakness", formalTitle: "What imitation leaves undone",
     overview: "Ghazali does not defend imitation as sufficient. He names its defect precisely, and the precision is what makes the remedy in the next chapter follow.",
+    thesis: "Belief taken on trust is real belief, and Ghazali says plainly what it still lacks.",
     moves: [
       { title: "Concede the weakness", body: "Yes — the belief resulting from mere imitation is not free of a kind of weakness at the beginning." },
       { title: "Say exactly what the weakness is", body: "In the sense that it admits of removal by its contrary, if that were cast at him. The defect is not that the belief is false, or shallow, or unfelt; it is that it can be dislodged." },
@@ -80,6 +83,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Four strengtheners", formalTitle: "How belief is made to take root",
     overview: "The most counter-intuitive sentence in the book, and then four remedies that no reader would guess from the diagnosis.",
+    thesis: "What strengthens belief is not argument but repetition, practice and company — and Ghazali says so against his own training.",
     moves: [
       { title: "Rule out the obvious remedy", body: "The way to strengthen it and establish it is not that he be taught the craft of dialectic and theology." },
       { title: "Give the first two", body: "Rather he should occupy himself with reciting the Quran and its exegesis, and with reading the reports and their meanings." },
@@ -100,6 +104,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Titrate the dose", formalTitle: "The graduated measure of argument",
     overview: "The heart of the book. Ghazali treats theological argument as a drug, doubt as a symptom, and prescribes explicitly by indication and dose.",
+    thesis: "Argument is prescribed like a dose: enough to settle a doubt, and no more, with an explicit stopping rule.",
     moves: [
       { title: "The first dose, and its indication", body: "There is no harm in their being taught the measure deposited in the Jerusalem Epistle, so that it may serve to repel the effect of the innovators' disputations if those reach them. It is a brief measure, and it is included in this book because it is brief." },
       { title: "The escalation, and its trigger", body: "If there is intelligence in him, and by his intelligence he is alerted to a place where a question arises, or a doubt stirs in his soul — then the feared malady has appeared and the disease has shown itself. There is no harm in his ascending to the measure in the book of Moderation in Belief, which is about fifty leaves." },
@@ -120,6 +125,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Past the dose", formalTitle: "What lies beyond the measure that benefits",
     overview: "Having prescribed two of his own books, Ghazali describes what lies past them, and the passage is the most openly contemptuous in the book.",
+    thesis: "Past the useful dose, argument produces the harm it was meant to prevent.",
     moves: [
       { title: "Set the boundary", body: "The measure that book contains, and its kind among the writings, is what benefit is hoped from. What lies outside it falls into two divisions." },
       { title: "The first division", body: "Inquiry into matters that are not the principles of belief at all — and he gives the examples: inquiry into reliances, into beings, into perceptions." },
@@ -140,6 +146,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Five reticences", formalTitle: "Why the prophets and the truthful withheld things",
     overview: "A remarkable passage in which Ghazali sorts the reasons anything true might be left unsaid, and he is describing his own practice as much as anyone's.",
+    thesis: "Five reasons something might be withheld, none of which permits a private doctrine contradicting the public one.",
     moves: [
       { title: "The first", body: "That the thing is in itself subtle, and most understandings fail at grasping it, so that its grasp is confined to the elect — and it is upon them not to divulge it to those who are not its people." },
       { title: "The second", body: "That it is understandable in itself, and understanding does not fail at it, but mentioning it harms most people. The reason for silence is the effect rather than the difficulty." },
@@ -160,6 +167,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "No hidden doctrine", formalTitle: "That the inward agrees with the outward",
     overview: "The conclusion Ghazali draws from the five reticences, and it forecloses the reading they most invite.",
+    thesis: "Whatever is held inwardly must agree with what is said outwardly, which is the limit on everything the previous section allowed.",
     moves: [
       { title: "State the conclusion", body: "Those five distinctions clear up a great deal — and the heading he gathers them under is that what is held privately agrees with what is said publicly, and does not contradict it." },
       { title: "Say what that rules out", body: "The five explain why something might go unsaid, or be said indirectly, or be kept from most people. Not one of them allows a private doctrine that contradicts the public one." },
@@ -180,6 +188,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Forty principles", formalTitle: "The architecture of the evidences",
     overview: "The third section, and its architecture is exact: four pillars, each turning on ten principles, covering essence, attributes, acts, and what is known only by report.",
+    thesis: "The evidences are built in a fixed architecture, ten principles deep, before any of them is deployed.",
     moves: [
       { title: "The first pillar", body: "Knowledge of God's essence, turning on ten principles: knowledge of His existence, His pre-eternity, His everlastingness; that He is not a substance, nor a body, nor an accident; that He is not specified by a direction nor settled upon a place; that He is seen; and that He is one." },
       { title: "The second pillar", body: "His attributes, comprising ten principles: knowledge of His being living, knowing, powerful, willing, hearing, seeing, and speaking; His being above the inherence of originated things; and that His speech, His knowledge, and His will are pre-eternal." },
@@ -200,6 +209,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "The hard pillar", formalTitle: "The pillar of the divine acts",
     overview: "The third pillar, and the one where Ghazali's school takes its most uncomfortable positions. He states them flatly and without softening.",
+    thesis: "Three claims about human action are held together, and dropping the middle one collapses the whole into fatalism.",
     moves: [
       { title: "The first three principles", body: "That what people do is created by God; that people acquire it as their own; and that God wills it. The middle one is what stops the first from collapsing into fatalism, and the whole pillar depends on holding all three at once." },
       { title: "The uncomfortable ones", body: "That He may impose what is beyond capacity. That He may cause pain to the innocent. That it is not obligatory upon Him to observe what is most beneficial." },
@@ -220,6 +230,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Known by report", formalTitle: "The pillar of the transmitted matters",
     overview: "The fourth pillar, named not for its subject but for how it is known, and its last three principles are unlike anything else in the creed.",
+    thesis: "The transmitted matters are established as a pillar in their own right rather than as consequences of the others.",
     moves: [
       { title: "The eschatological principles", body: "Establishing the gathering and the raising; the questioning of the two who come; the punishment of the grave; the Balance; the Bridge; and the creation of the Garden and the Fire." },
       { title: "The political ones", body: "The rulings of the leadership; that the merit of the Companions follows their order; and the conditions of the leadership." },
@@ -240,6 +251,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Three questions", formalTitle: "Faith and submission, and what lies between them",
     overview: "The last section, and Ghazali opens it by refusing a confused treatment and replacing it with a method — the same method Book 1 used on the intellect.",
+    thesis: "Faith and submission are distinguished, and the space between them is where most of the dispute has lived.",
     moves: [
       { title: "Give the dispute", body: "They differed over whether submission is faith or something else; and if something else, whether it is separate from it and found without it, or bound to it and inseparable. It has been said they are one thing; that they are two things that never meet; and that they are two things bound to one another." },
       { title: "Refuse the existing treatment", body: "Abu Talib al-Makki brought forward on this a discussion of severe confusion and great length. So let us now fall directly upon declaring the truth, without turning aside to reproduce what has nothing settled in it." },
@@ -260,6 +272,7 @@ export const book02Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Assent and surrender", formalTitle: "What the lexical inquiry settles",
     overview: "The first of the three answers, and it is clean enough that the shape of the whole relation falls out of it immediately.",
+    thesis: "Settling what the word means settles the dispute — which is Ghazali's method whenever a quarrel turns on vocabulary.",
     moves: [
       { title: "Define the first", body: "Faith is a word for assent — agreeing that something is so. The verse where Joseph's brothers say their father would not believe them uses it in exactly that sense." },
       { title: "Define the second", body: "Submission is an expression for surrender and yielding — by compliance and obedience, and by leaving rebellion, refusal, and obstinacy." },

@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id <= 2 ? "the first chapter, on the excellence of the Quran" : id <= 5 ? "the second chapter, on the outward manners" : id <= 11 ? "the third chapter, on the inward acts" : "the fourth chapter, on understanding and interpretation");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 8, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Four chapters", formalTitle: "The excellence of the Quran and its people",
     overview: "The book opens with the excellences and then announces a structure that moves steadily inward and ends in a controversy.",
+    thesis: "The book's weight sits in its second half: two chapters on what happens in a reader, against one on what a reader does.",
     moves: [
       { title: "Announce the four", body: "What is said in praise of the Quran and of the people who carry it; the physical manners of reciting; what the heart is doing while reciting; and understanding the Quran, including where interpreting it from your own opinion goes wrong." },
       { title: "Note the shape", body: "Outward manners, then inward acts, then the question of what a reader may take the text to mean. Each chapter is further in than the last, and the fourth is a dispute rather than an instruction." },
@@ -40,6 +41,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "And those who fall short", formalTitle: "The blame attached to falling short",
     overview: "The first chapter gathers praise and reproach in the same breath, which sets a tone the whole book keeps.",
+    thesis: "The praise of reciting is paired immediately with the blame of falling short, so neither half can be read alone.",
     moves: [
       { title: "Give the excellence", body: "The chapter assembles what is reported on the excellence of the Quran, of learning it, of teaching it, and of the standing of its people." },
       { title: "Give the reproach", body: "The blame of those who fall short in reciting it, which is part of the same chapter's stated title rather than a separate section." },
@@ -60,6 +62,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Ten outward", formalTitle: "The outward manners of recitation",
     overview: "The second chapter, and the first of its ten manners concerns the state of the reader before anything is opened.",
+    thesis: "The ten physical manners are stated rather than argued for, because the argument arrives in the chapter after them.",
     moves: [
       { title: "Give the first", body: "The first concerns the state of the reciter: that he be in a state of purity, in a posture of composure and stillness." },
       { title: "Note the ordering", body: "The manners begin with the person and move outward to the act — the state, then the quantity, then the divisions, then the manner of reciting, and so on through the ten." },
@@ -80,6 +83,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "How much, how fast", formalTitle: "The outward manners: posture, quantity, division, and pace",
     overview: "Ghazali gives ten physical manners for reciting. The first five are unusually concrete, and the second contains the sharpest judgement in the chapter.",
+    thesis: "How fast you read has a floor set by comprehension: past a certain rate measured recitation becomes impossible, and everything inward depends on it.",
     moves: [
       { title: "First: how you sit", body: "In ablution, still, composed — standing or sitting, facing the qibla, head lowered, not cross-legged, not lounging, not sitting the way someone sits when he thinks well of himself. His measure: “his sitting alone should be like his sitting in front of his teacher.”" },
       { title: "Second: how much", body: "Reciters vary wildly — some finish the whole Quran in a day and a night, some twice, some three times, others once a month. Ghazali says the thing that settles it is the report: “whoever reads the Quran in less than three days has not understood it.” Anything faster makes measured reading impossible." },
@@ -100,6 +104,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Weeping and the voice", formalTitle: "The outward manners: weeping, the verses, refuge, volume, and beauty",
     overview: "The second five manners, moving from what the reciter feels to what anyone listening would notice.",
+    thesis: "The second five manners each arrive with the failure that shadows them, so beautifying does not slide into performing.",
     moves: [
       { title: "Sixth: weeping", body: "Weeping is recommended with the reading. “Recite the Quran and weep; and if you do not weep, then make yourself weep.” The instruction is unusual in allowing the manufactured version when the real one will not come." },
       { title: "Seventh: giving the verses their due", body: "When you pass a verse of prostration, prostrate — and likewise if you hear one from someone else and that reciter prostrates. The verses are treated as making claims on you as they arrive, rather than as text going past." },
@@ -120,6 +125,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Ten inward", formalTitle: "The inward acts at recitation",
     overview: "The third chapter, and Ghazali lists its ten in a single line before treating them — a sequence that runs from the source of the words to the reader's disavowal of himself.",
+    thesis: "Ten inward acts are named in order, running from understanding where the speech came from to disowning any credit for having understood it.",
     moves: [
       { title: "Give the list", body: "Understanding the origin of the speech; then magnification; then presence of heart; then pondering; then seeking understanding; then clearing away the impediments to understanding; then specification; then being affected; then ascending; then disavowal." },
       { title: "Note the shape", body: "The first two concern what the text is and whose it is. The middle five concern the reader's attention and equipment. The last three concern what happens to him." },
@@ -140,6 +146,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Clothed in letters", formalTitle: "The first act: where the speech came from",
     overview: "The first inward act, and it is a piece of doctrine rather than an instruction — an account of what a reader is holding.",
+    thesis: "The first act is to grasp what it means that God brought His own speech down within reach of human understanding.",
     moves: [
       { title: "State the act", body: "Understanding the greatness of the speech and its loftiness, and God's favour and kindness to His creation in its descending from the throne of His majesty to the level of His creatures' understanding." },
       { title: "Give the difficulty", body: "Think about the kindness in it: God brought the meaning of His own speech — something that belongs to His nature and has no beginning — down within reach of human understanding." },
@@ -160,6 +167,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Magnify, and be present", formalTitle: "The second and third acts",
     overview: "The two acts that follow from the first, and both of them are conditions of attention rather than achievements of it.",
+    thesis: "Magnifying the speaker and being present with the words are two separate acts, and the second is not produced by the first.",
     moves: [
       { title: "Give the second", body: "Magnifying the speaker. The reciter, at the beginning of reciting, should bring into his heart the greatness of the one speaking." },
       { title: "Note what it follows from", body: "It follows from the first act rather than being a separate instruction. If you have grasped where the speech came from, the second act is available to you. If you have not, it is not." },
@@ -180,6 +188,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "And what blocks it", formalTitle: "Pondering, understanding, and the impediments",
     overview: "The middle three acts, and the third of them is the only item in the list stated as a removal.",
+    thesis: "Pondering, understanding, and clearing the obstacles are three distinct operations, and Ghazali locates every obstacle in the reader rather than in the text.",
     moves: [
       { title: "Give the fourth", body: "Pondering, which is beyond presence of heart — for a reader may be present with the words without turning them over, and pondering is the turning." },
       { title: "Give the fifth", body: "Seeking understanding, which is the deliberate pursuit of what is meant. Ghazali separates it from pondering as Book 4 separates understanding the meaning from presence with the utterance." },
@@ -200,6 +209,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Addressed to you", formalTitle: "The seventh act: specification",
     overview: "The item that changes what reading is, and it is stated as a stance the reader takes toward every sentence.",
+    thesis: "Take yourself to be the one addressed by every verse, which turns reading from information into instruction.",
     moves: [
       { title: "State the act", body: "Specification — that the reader take himself to be the one meant by every address in the Quran, so that a command is a command to him and a warning is a warning to him." },
       { title: "Note what it displaces", body: "The default stance is that a text describes people, and that a reader may locate himself among them or not. This act removes that option in advance." },
@@ -220,6 +230,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "And then disavow it", formalTitle: "The last three acts",
     overview: "The three items that are undergone rather than performed, and the last of them takes back what the other two produced.",
+    thesis: "The last three acts climb to the highest state of reading and then immediately disclaim it, so the sequence cannot end in something the reader owns.",
     moves: [
       { title: "Give the eighth", body: "Being affected — that the reader's state change with what he reads, so that he grieves at what warns and expands at what promises." },
       { title: "Give the ninth", body: "Ascending — moving from hearing the words as coming from yourself to hearing them as coming from the One who said them. He calls this the highest state a reader reaches." },
@@ -240,6 +251,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "The objection", formalTitle: "But what about interpreting by opinion?",
     overview: "The fourth chapter opens by putting the reader's objection in his mouth, and it is a serious one that had produced real accusations.",
+    thesis: "The whole third chapter has raised an obvious objection, and Ghazali puts it in the reader's mouth before answering it.",
     moves: [
       { title: "Put the objection", body: "You will probably object: you have made a great deal of understanding the Quran's secrets, and of the meanings that open up to people with clear hearts. How can that be recommended, when the warning is “whoever interprets the Quran by his own opinion should take his seat in the Fire”?" },
       { title: "Give the live controversy", body: "This is why the plain-commentary scholars attacked the weaker figures associated with Sufism for reading the Quran against what is transmitted from Ibn Abbas and the other commentators — and called it unbelief." },
@@ -260,6 +272,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "The limit of himself", formalTitle: "That the transmitted sense is not the only sense",
     overview: "The answer's first half, and its opening sentence is one of the sharpest things Ghazali writes about anyone.",
+    thesis: "Anyone who says the Quran means only what the plain commentary renders is reporting the limit of himself, and the proof is built from authorities the strict side already accepts.",
     moves: [
       { title: "Give the sentence", body: "Anyone who claims the Quran means nothing beyond what the plain commentary renders is telling you where his own limit is." },
       { title: "Give the concession", body: "He is right in informing about himself — but wrong in ruling that all creation be reduced to his degree, which is his limit and his stopping-place." },
@@ -280,6 +293,7 @@ export const book08Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Two things forbidden", formalTitle: "What the prohibition actually forbids",
     overview: "The answer's second half, and it is exact: the report is given a definite scope, and one of the practices it catches is a respectable one.",
+    thesis: "The prohibition is not against finding meaning; it is against two specific moves, and naming them is what makes the rest of the book's method legitimate.",
     moves: [
       { title: "Give the first aspect", body: "That he has an opinion in a matter, and an inclination toward it from his nature and his whim, so he interprets the Quran in agreement with his opinion in order to argue for his aim — and had he not had that opinion, that meaning would not have appeared to him from the Quran." },
       { title: "Give its varieties", body: "Sometimes knowingly — someone uses a verse to prop up his own novelty while knowing perfectly well it does not mean that. And sometimes without realising: a verse will carry several senses, and his understanding leans to whichever one suits his purpose, and he goes with it." },

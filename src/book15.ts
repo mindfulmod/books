@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id <= 4 ? "the first chapter, on the excellence of brotherhood" : id <= 12 ? "the second chapter, on the rights of companionship" : "the third chapter, on the wider ties");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 15, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Three chapters", formalTitle: "The shape of the book",
     overview: "The book on friendship has three chapters, and they move outward from the closest tie to the widest.",
+    thesis: "Three chapters: what friendship is worth, the eight rights it creates, and the claims of people you never chose.",
     moves: [
       { title: "Announce the three", body: "The excellence of affection and brotherhood in God, with its conditions, degrees, and benefits; the rights of companionship, its manners, its reality, and what it entails; and the right of the Muslim, of kin, of the neighbour, and of ownership — and how to live with those connected by these ties." },
       { title: "Note the movement", body: "From a chosen bond, to what that bond obliges, to the ties nobody chooses. The third chapter is about people you are connected to whether or not you would have selected them." },
@@ -40,6 +41,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Conditions and degrees", formalTitle: "The first chapter",
     overview: "Before any rights are listed, the bond itself is given conditions and grades — which is what stops the eight rights from being a uniform demand.",
+    thesis: "The case for brotherhood is built before any duty is named, and its conditions and degrees come with it.",
     moves: [
       { title: "Name the subject", body: "The excellence of affection and of brotherhood in God, and its conditions, its degrees, and its benefits — four things, of which two are qualifications." },
       { title: "Note the conditions", body: "Brotherhood in God is a bond entered on a basis, and the chapter sets out what has to be true of the person and of the ground on which the tie is formed." },
@@ -60,6 +62,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "A contract", formalTitle: "What kind of thing brotherhood is",
     overview: "The sentence that opens the second chapter, and it changes the category of the whole subject.",
+    thesis: "Friendship is treated as a contract, with the marriage contract as the comparison — which is what makes rights follow from it.",
     moves: [
       { title: "Give the claim", body: "Becoming someone's brother is a contract, he says — a tie between two people, like a marriage between two spouses." },
       { title: "Draw the parallel", body: "As marriage entails rights that must be fulfilled in discharge of the right of marriage, so does the contract of brotherhood." },
@@ -80,6 +83,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Who to pick", formalTitle: "Choosing who to be close to",
     overview: "Before any of the duties of friendship, Ghazali asks who is worth having one with — and gives a method for answering it that most advice on the subject skips.",
+    thesis: "What to look for in a friend follows from what you want the friendship for, which is the step most advice on the subject skips.",
     moves: [
       { title: "Start with the flat statement", body: "“Not every person is fit for company.” And the report he puts under it: “a person follows the religion of his close friend, so let each of you look at who he is taking as one.”" },
       { title: "Give the method", body: "What you should look for depends on what you want the friendship for. A condition is just whatever is needed to reach the aim — so name the aim and the conditions become obvious. Most advice about friends skips that step and goes straight to a list of virtues." },
@@ -100,6 +104,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Two hands", formalTitle: "The first right: property",
     overview: "The first right, and its opening image is chosen with unusual care — Ghazali explains why it is the image it is.",
+    thesis: "The first right is over property, and the levels are set by what you would actually hand over.",
     moves: [
       { title: "Give the image", body: "The likeness of two brothers is the likeness of two hands, one of which washes the other." },
       { title: "Explain the choice", body: "He likened them to two hands and not to a hand and a foot, because the two hands cooperate toward a single purpose." },
@@ -120,6 +125,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Three ranks", formalTitle: "How far the sharing goes",
     overview: "The right of property is graded into three, and the anecdote attached to the lowest of them is one of the sharpest in the Ihya.",
+    thesis: "Three levels of sharing, from meeting a need out of your surplus to not dividing what is yours from what is his.",
     moves: [
       { title: "Give the lowest", body: "At the lowest level you treat your friend roughly as you would someone who works for you: you meet his need out of what you happen to have spare." },
       { title: "Give the counsel attached to it", body: "Abu Hazim said: if you have a friend for God's sake, do not do business with him. Ghazali says he meant a friend at this level." },
@@ -140,6 +146,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "My shoe", formalTitle: "The highest rank",
     overview: "The top of the three ranks, given by a verse and then by a detail of speech that is more demanding than the verse.",
+    thesis: "At the highest level the word 'mine' has gone — and the test Ghazali reports for it is a shoe.",
     moves: [
       { title: "Give the verse", body: "The highest level is what the Quran describes the believers with: their affairs are settled by consultation between them, and they spend out of what We have given them." },
       { title: "Give the reading", body: "Meaning that they were mixed together in their properties, none of them distinguishing his own baggage from another's." },
@@ -160,6 +167,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Before being asked", formalTitle: "The second right: the person",
     overview: "The right of the person, and its distinctive clause is about timing rather than about effort.",
+    thesis: "The second right is help in person, given before it is asked for and put ahead of your own business.",
     moves: [
       { title: "Give the right", body: "Help with the person, in the fulfilling of needs and the undertaking of them." },
       { title: "Give the clause", body: "The undertaking of them before being asked." },
@@ -180,6 +188,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Silence", formalTitle: "The third right: the tongue, by keeping still",
     overview: "The longest of the eight, and it is a catalogue of things not said — including several that would be said out of interest rather than malice.",
+    thesis: "The third right is silence: about his faults, in his absence, and in front of him.",
     moves: [
       { title: "Give the first item", body: "That he be silent about mentioning his faults, in his absence and in his presence — rather that he feign ignorance of them." },
       { title: "Give the second", body: "That he be silent about contradicting him in what he says, and not dispute with him or argue him down." },
@@ -200,6 +209,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "And speech", formalTitle: "The fourth right: the tongue, by speaking",
     overview: "The same organ, the opposite instruction — and the pairing is what makes the two rights more than a rule about tact.",
+    thesis: "The fourth right reverses the third — there are things friendship requires you to say, and staying quiet fails it.",
     moves: [
       { title: "State the pairing", body: "For brotherhood, as it requires silence about what is disliked, requires also speech about what is loved." },
       { title: "Note what that rules out", body: "A friend who is merely discreet has satisfied one right and failed the other. Withholding is not the whole of what the tongue owes." },
@@ -220,6 +230,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Slips, and fidelity", formalTitle: "The fifth, sixth, and seventh rights",
     overview: "Three rights of the heart, and the first of them is sorted before it is prescribed.",
+    thesis: "The fifth, sixth and seventh rights cover slips, prayer, and loyalty that outlasts the person.",
     moves: [
       { title: "Give the fifth", body: "Pardoning slips and lapses. And a friend's lapse is either in his religion, or in what concerns you — and the two are treated differently." },
       { title: "Give the sixth", body: "Supplication for the brother in his life and after his death, with everything he loves for himself and for his family and for everything connected to him." },
@@ -240,6 +251,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Lightening", formalTitle: "The eighth right",
     overview: "The last of the eight, and it is the only one that consists entirely in not doing something to a friend.",
+    thesis: "The eighth right is to make yourself light: to drop the ceremony that turns a friendship into an obligation.",
     moves: [
       { title: "Give the right", body: "Lightening, and the leaving of affectation and imposition — that he not burden his brother with what is hard on him." },
       { title: "Note the two halves", body: "Affectation is what you do to yourself on his behalf; imposition is what you ask of him. The right forbids both, and they are the two ways a friendship becomes expensive." },
@@ -260,6 +272,7 @@ export const book15Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "The unchosen", formalTitle: "The third chapter: the wider ties",
     overview: "The last chapter turns to relationships nobody selected, and the question it asks is how to live with people you are simply connected to.",
+    thesis: "The third chapter turns to claims nobody chose — the Muslim, kin, the neighbour, and those you own.",
     moves: [
       { title: "Name the ties", body: "The right of the Muslim, of kin, of the neighbour, and of ownership — and how to live with those who are connected by these causes." },
       { title: "Note what they share", body: "None of them is chosen. A person acquires them by being born somewhere, living somewhere, or belonging to something, and the rights follow from the connection rather than from any decision." },

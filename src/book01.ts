@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id === 1 ? "the first chapter" : id <= 7 ? "the second and third chapters" : id <= 9 ? "the third chapter" : id <= 12 ? "the fourth chapter" : id <= 17 ? "the fifth chapter" : id === 18 ? "the sixth chapter" : "the seventh chapter");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 1, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Why it begins here", formalTitle: "The excellence of knowledge, teaching, and learning",
     overview: "The first book of the Ihya, and its placement is an argument. Ghazali opens the whole forty-book work not with belief and not with prayer but with the question of what is worth knowing.",
+    thesis: "The Ihya opens on knowledge, and the case for it is built at full strength before a single criticism of scholars is allowed in.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports on the excellence of knowledge, of learning, and of teaching are assembled at length, each of the three treated separately, and the chapter closes with the rational evidence rather than the transmitted alone." },
       { title: "Note what the praise does not settle", body: "None of it establishes which knowledge is meant. The book's next six chapters are almost entirely occupied with that question, and several of them are unsparing about the answers being given in his own time." },
@@ -40,6 +41,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Twenty parties", formalTitle: "The knowledge that is an individual obligation",
     overview: "One of the sharpest observations in the Ihya, and it is made almost in passing. Ghazali surveys the answers to a famous question and notices what they all have in common.",
+    thesis: "Twenty parties answer one famous question, and every one of them names the subject it happens to work on.",
     moves: [
       { title: "Put the question", body: "Seeking knowledge is an obligation upon every Muslim. People differed about which knowledge that is, and split over it into more than twenty parties." },
       { title: "Give the verdict on all of them", body: "He declines to reproduce the detail, and says the upshot is that every group placed the obligation on the knowledge it happens to be occupied with." },
@@ -60,6 +62,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The act and its time", formalTitle: "What the individual obligation actually covers",
     overview: "Ghazali's own answer, and it is startlingly deflationary. The obligation is indexed to circumstance and expands only as circumstance does.",
+    thesis: "Ghazali's own answer is not a field at all: whoever knows the act required of him and the time it falls due has known what is obligatory.",
     moves: [
       { title: "Give the rule", body: "This is the truth about the knowledge that is an individual obligation, and its meaning is the knowledge of how the obligatory act is performed. Whoever knows the obligatory act and the time at which it becomes obligatory has known the knowledge that is an individual obligation." },
       { title: "Work the examples", body: "At the time of a prayer, learn that prayer. If he lives to Ramadan, the obligation to learn the fast is renewed by it: that its time is from dawn to sunset, that what is required is intention and abstaining, and that it runs to the sighting of the crescent or two witnesses." },
@@ -80,6 +83,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "And the Perils too", formalTitle: "The obligatory knowledge of the heart",
     overview: "The passage that justifies the existence of the Ihya, and it is stated as a legal claim rather than as an exhortation.",
+    thesis: "The obligation reaches inward states too, and Ghazali argues it as a legal duty rather than as a counsel of perfection.",
     moves: [
       { title: "Grant the Sufi answer, with a condition", body: "What the Sufis said about telling the enemy's suggestions from the angel's prompting is true too — for someone who has taken that work on. The concession is precise, and it is not a brush-off." },
       { title: "Then generalise a different part of it", body: "Since it is usually the case that a person is not free of the motives of evil, of showing off, and of envy, it becomes incumbent on him to learn from the science of the Quarter of Perils whatever he sees himself to need." },
@@ -100,6 +104,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The cupper", formalTitle: "The knowledge that is a communal obligation",
     overview: "The most surprising passage in the book to a modern reader, and Ghazali knows it will be. He anticipates the objection in the middle of the paragraph.",
+    thesis: "A communal obligation is defined by what a town could not function without — which is why medicine sits inside religion's account of duty.",
     moves: [
       { title: "Give the criterion", body: "A communal obligation is a body of knowledge that ordinary life cannot run without. These are the subjects where, if a town had nobody doing them, the town would be in trouble — and if one person does it, that covers it and the obligation lifts from everyone else." },
       { title: "Give the two examples", body: "Such as medicine, since it is necessary for the need of the survival of bodies; and arithmetic, since it is necessary in transactions and in the division of bequests and inheritances." },
@@ -120,6 +125,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Where the line falls", formalTitle: "Revealed and unrevealed knowledge",
     overview: "The division that organises the whole chapter, and its definition of a revealed science is negative and unusually clean.",
+    thesis: "The revealed and the unrevealed sciences are separated by where they come from rather than by how useful they are.",
     moves: [
       { title: "Give the division", body: "The sciences, relative to the purpose in hand, divide into revealed and unrevealed." },
       { title: "Define the first", body: "By revealed I mean what is gained from the prophets, and to which the intellect does not guide, as it guides to arithmetic; nor experience, as it guides to medicine; nor hearing, as it guides to language." },
@@ -140,6 +146,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "How much is enough", formalTitle: "The praised measure of the praised sciences",
     overview: "A short chapter that keeps the scheme from becoming a licence, and it makes its case with an analogy to the body.",
+    thesis: "A praised science can still be studied to a blamed degree, which is why the measure matters as much as the subject.",
     moves: [
       { title: "Give the three classes", body: "Knowledge in this respect is of three kinds: one blamed in its little and its much; one praised in its little and its much, and the more of it the better and more excellent; and one of which the measure of sufficiency is praised while going beyond it and exhausting it is not." },
       { title: "Give the analogy", body: "Like the states of the body. Some of them are praised in little and much, such as health and beauty. Some are blamed in little and much, such as ugliness and bad character." },
@@ -160,6 +167,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "The first word", formalTitle: "What was changed of the terms of the sciences: jurisprudence",
     overview: "The famous passage on five captured words. Ghazali argues that the confusion he is attacking is lexical before it is anything else.",
+    thesis: "Five honourable words were narrowed until they pointed at something smaller, and Ghazali traces each narrowing.",
     moves: [
       { title: "Name the mechanism", body: "The source of the confusion of the blamed sciences with the revealed ones is the distortion of praised names, their alteration, and their transfer, by corrupt purposes, to meanings other than what the righteous forebears and the first generation intended." },
       { title: "Name the five", body: "They are five words: jurisprudence, knowledge, unity, reminding, and wisdom. These are praised names, and those qualified by them hold the positions of religion — but they have now been transferred to blamed meanings." },
@@ -180,6 +188,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "The other four", formalTitle: "Knowledge, unity, reminding, and wisdom",
     overview: "The remaining four captured words, and the last of them gets the most acid line in the book.",
+    thesis: "Knowledge, unity, reminding and wisdom each lost most of their range, and what they now select is what the change was for.",
     moves: [
       { title: "Knowledge", body: "It used to be applied to the knowledge of God, of His signs, and of His acts among His servants and His creation — so much so that when Umar died it was said that the knowledge had gone." },
       { title: "Unity", body: "It has now been made an expression for the craft of theology, for knowing the way of disputation, for encompassing the methods of contradicting opponents, and for the ability to be voluble in it by multiplying questions and raising doubts." },
@@ -200,6 +209,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Why they turned", formalTitle: "The cause of people's turning to the science of disputation",
     overview: "The fourth chapter opens by asking a historical question rather than a moral one: why this science, and why now.",
+    thesis: "People did not drift into disputation; Ghazali gives a datable political reason for the turn.",
     moves: [
       { title: "Put the question historically", body: "Ghazali asks what caused people to turn toward the science of legal disagreement, and answers by tracing changes in patronage, office, and the routes to advancement rather than by attributing it to a decline in piety." },
       { title: "Refuse the flattering comparison", body: "He devotes a section to what he calls the deception in likening these disputations to the consultations of the Companions and the discussions of the forebears, and he treats the comparison as the argument that has to be dismantled first." },
@@ -220,6 +230,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "The wine of the inward", formalTitle: "The blights of disputation and what it breeds",
     overview: "The most concentrated attack in the book, and it works by a single analogy that sets the whole scale of the charge.",
+    thesis: "Disputation breeds a specific and nameable set of vices, and the list is long enough to be the argument.",
     moves: [
       { title: "Name the target precisely", body: "Know and verify that the disputation set up for the purpose of overcoming, of silencing, of showing superiority and eloquence before people, of boasting and wrangling and drawing people's faces toward oneself." },
       { title: "State the charge", body: "It is the wellspring of all the character traits blamed by God and praised by God's enemy." },
@@ -240,6 +251,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "What honesty would look like", formalTitle: "The conditions of permitted disputation",
     overview: "The constructive half of the fourth chapter, and it is specific enough to be checked against a real conversation.",
+    thesis: "Disputation is permitted under conditions strict enough that most of what passes for it does not qualify.",
     moves: [
       { title: "Allow movement", body: "Among the conditions is that a participant not prevent the one helping him examine the matter from moving from one proof to another and from one difficulty to another, for so were the disputations of the forebears." },
       { title: "Bar the devices", body: "That there be excluded from his speech all the innovated fine points of wrangling, in what tells for him and against him alike — such as saying that this is not incumbent on me to mention, or that this contradicts your earlier speech and so is not accepted from you." },
@@ -260,6 +272,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "The prayer of the inmost", formalTitle: "The first duty of the student",
     overview: "The fifth chapter opens with ten duties for the student, and the first is a precondition rather than a practice.",
+    thesis: "Purifying yourself first is not preparation for study; on Ghazali's analogy it is a condition of validity, as ritual purity is for prayer.",
     moves: [
       { title: "Give the first duty", body: "Clear the low traits and bad qualities out first — because knowledge is the heart's worship, the innermost self's prayer, and how the inside draws near to God." },
       { title: "Give the argument", body: "Just as the prayer your body owes is not valid until the body has been cleaned, the worship the inside owes — building the heart up with knowledge — is not valid until the heart has been cleaned of bad character." },
@@ -280,6 +293,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Cut, submit, and wait", formalTitle: "The student's second, third, and fourth duties",
     overview: "Three duties about the student's relationships — to the world, to his teacher, and to controversy — and the third contains the book's most demanding instruction.",
+    thesis: "Three duties about relationships — to the world, to a teacher, and to controversy — and the third asks for a suspension most readers will resist.",
     moves: [
       { title: "Second: cut the attachments", body: "Reduce what ties you to the world, and get away from family and home town, because attachments distract and pull you off. His reason is the same verse he uses everywhere: God has not put two hearts inside any man." },
       { title: "Third: hand over the reins", body: "Do not be arrogant toward the subject or try to give your teacher orders. Hand him the reins of the whole business, in every detail, and take his advice “the way an ignorant patient takes the advice of a kind and skilful doctor.”" },
@@ -300,6 +314,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "A sniff of everything", formalTitle: "The student's fifth, sixth, and seventh duties",
     overview: "The curriculum duties, and they answer a problem every reader has: there is more worth knowing than one life holds.",
+    thesis: "The curriculum starts from an honest premise: a lifetime will not stretch to everything, so take a sniff of each and pour your strength into one.",
     moves: [
       { title: "Fifth: look into everything", body: "Do not leave out any worthwhile branch of knowledge, or any kind of it, without looking far enough into it to see what it is for and where it is going. The point is a map, not mastery." },
       { title: "Sixth: begin with what matters most", body: "Do not plunge into a subject all at once — keep to an order, and start with the most important. Then the reason: “since a lifetime will usually not stretch to all the sciences, the prudent thing is to take the best of each, be content with a sniff of it, and pour the bulk of your strength into completing the noblest one.”" },
@@ -320,6 +335,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "Why this one", formalTitle: "The student's eighth, ninth, and tenth duties",
     overview: "The last three duties are all about aim: how to rank a subject, what you are studying for now, and what you are studying for in the end.",
+    thesis: "The last three duties are all about aim, and the two measures for ranking a subject are given as two because they can disagree.",
     moves: [
       { title: "Eighth: how to rank a subject", body: "Know what actually makes one science nobler than another, and he says it comes to two things: the value of what it yields, and the soundness and strength of its evidence." },
       { title: "Work the test", body: "Two criteria, and they can pull apart. A subject can produce something valuable on weak grounds, or something trivial on unshakeable ones. Ghazali's example elsewhere is the contrast between religious knowledge and arithmetic — one has the higher fruit, the other the firmer proof — which is why he gives two measures rather than one." },
@@ -340,6 +356,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "Four states of wealth", formalTitle: "The duties of the guiding teacher",
     overview: "The chapter on teaching opens with an economic analogy, and it produces both a ranking and one of the most quoted set of images in the Ihya.",
+    thesis: "The teacher's duties are derived from four states a person can be in with respect to his own knowledge.",
     moves: [
       { title: "Give the analogy", body: "A person has four states in his knowledge, as he has in acquiring wealth. The owner of wealth has a state of gaining, so he is an earner; a state of storing what he gained, so he is free of asking; a state of spending on himself, so he benefits; and a state of giving to others, so he is generous — and that is the noblest of his states." },
       { title: "Apply it", body: "So knowledge is acquired as wealth is acquired. It has a state of seeking; a state of obtaining that frees from asking; a state of insight, which is thought about what is obtained and enjoyment of it; and a state of giving insight, which is the noblest of the states." },
@@ -360,6 +377,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 18, shortTitle: "Two knowledges", formalTitle: "The signs of the scholars of the hereafter and the evil scholars",
     overview: "By a wide margin the longest chapter in the book, and the fiercest sustained passage in the Ihya about a class of people.",
+    thesis: "The longest chapter in the book sorts scholars by what they are for rather than by what they know.",
     moves: [
       { title: "State why the chapter exists", body: "Severe warnings have come concerning the evil scholars, showing that they are the most severely punished of creation on the Day of Resurrection. So among the great and important matters is knowing the signs that distinguish the scholars of this world from the scholars of the hereafter." },
       { title: "Define the term", body: "By the scholars of this world we mean the evil scholars, whose aim from knowledge is the enjoyment of the world and reaching status and rank among its people. The definition is by aim rather than by doctrine or by competence." },
@@ -380,6 +398,7 @@ export const book01Chapters: Chapter[] = [
   makeChapter({
     id: 19, shortTitle: "One name, four meanings", formalTitle: "The intellect, its nobility, its reality, and its divisions",
     overview: "The closing chapter, and it ends the book the way the book began: by showing that a dispute is really about a word.",
+    thesis: "One word covers four different things, and separating them dissolves a dispute rather than settling it.",
     moves: [
       { title: "Diagnose the disagreement", body: "People differed over the definition of the intellect and its reality, and most of them were unaware that this name is applied to different meanings — and that became the cause of their disagreement." },
       { title: "Give the resolution", body: "The truth that lifts the covering here is that the intellect is a name applied by sharing to four meanings, as the word for an eye is applied to several things. And what is of this kind should not have one definition sought for all its divisions; each division should be disclosed separately." },

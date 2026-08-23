@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const fasl = (id: number) => (id === 1 ? "the first section, on the kinds of alms" : id <= 9 ? "the second section, on the paying and its inward etiquette" : id <= 11 ? "the third section, on the receiver" : "the fourth section, on voluntary charity");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 5, ${fasl(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Six kinds", formalTitle: "The kinds of alms and the causes of the obligation",
     overview: "The book opens with the technical frame, and the interesting thing about it is how quickly Ghazali passes through it to get to the second section.",
+    thesis: "The legal apparatus takes one section of four; the rest is about the state of the giver and the state of the receiver.",
     moves: [
       { title: "Give the six", body: "Alms, considered by what they attach to, are six kinds: on livestock; on the two currencies; on trade goods; on buried treasure and mines; on crops; and the alms of the fast-breaking." },
       { title: "Announce the four sections", body: "The kinds and the causes of obligation; the paying, with its inward and outward conditions; the receiver, the causes of his entitlement, and the duties of receiving; and voluntary charity, its excellence and the etiquette of taking and giving it." },
@@ -40,6 +41,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "A test of the claim", formalTitle: "Why a financial act is one of the foundations",
     overview: "The first of the eight duties is to understand why this is a pillar at all, and Ghazali's answer turns on what kind of thing love is.",
+    thesis: "Alms is a pillar because professing one God is a claim about love, and love is tested by what you will part with.",
     moves: [
       { title: "Put the question", body: "Understanding the obligation of alms, its meaning, the aspect of testing in it, and why it was made one of the foundations of Islam though it is a financial expenditure and not a worship of the body." },
       { title: "The first meaning", body: "Uttering the two testimonies is a commitment to unity and a witnessing that the Worshipped is one. And the condition of complete fulfilment of it is that there remain for the one professing unity no beloved besides the One — for love does not accept partnership." },
@@ -60,6 +62,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Early", formalTitle: "The time of paying",
     overview: "The second duty, and it is the shortest of the eight: a small adjustment of timing that Ghazali reads as evidence about a state.",
+    thesis: "When you pay is treated as part of the act, not an administrative detail.",
     moves: [
       { title: "Give the duty", body: "The second duty concerns the time of paying. And of the etiquette of the religious is hastening it before the time at which it becomes obligatory." },
       { title: "Say what it shows", body: "Hastening is offered as a demonstration — of readiness, and of the absence of the reluctance that ordinarily attends parting with wealth." },
@@ -80,6 +83,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "So the left hand", formalTitle: "Concealing the gift",
     overview: "The third duty, and it comes with a report that turns concealment into a scale with three points rather than a single instruction.",
+    thesis: "Concealing the gift is the default, and the reason given is what disclosure does to the giver.",
     moves: [
       { title: "Give the duty", body: "Concealment, for that is further from showing off and from seeking reputation. The best charity is the effort of one of little means, to a poor man, in secret." },
       { title: "Give the three stages", body: "A servant does a work in secret and God writes it for him in secret. If he makes it public, it is transferred from the secret and written in the open. And if he talks about it, it is transferred from both the secret and the open and is written as showing off." },
@@ -100,6 +104,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "A third thing", formalTitle: "When the gift should be made public",
     overview: "The fourth duty, which reverses the third under a condition — and then names a consideration that neither of them has mentioned.",
+    thesis: "The default reverses when being seen would get others giving — and the third caution is about the receiver, not you.",
     moves: [
       { title: "Give the condition", body: "Give openly where you know that being seen will get other people doing the same — and guard the intention against showing off, by the method set out in the treatment for it." },
       { title: "Give the second occasion", body: "Or because the person asked in front of a crowd. Then you should not hold back for fear that giving openly looks like display. Give, and guard the intention as far as you can." },
@@ -120,6 +125,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Do not spoil it", formalTitle: "Reproach and injury",
     overview: "The fifth duty, and it is the one with the plainest scriptural warrant: an act that is legally complete can be voided by what accompanies it.",
+    thesis: "Reproach and injury do not reduce the charity; they cancel it, and the verse is explicit.",
     moves: [
       { title: "Give the duty", body: "That he not spoil his charity by reproach and injury. The verse is direct: do not void your charities by reproach and injury." },
       { title: "Note what the verse asserts", body: "Not that reproach lessens the reward but that it voids the charity. The act and the reproach are treated as one thing whose value is settled together." },
@@ -140,6 +146,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "A tenth of much", formalTitle: "Counting the gift small",
     overview: "The sixth duty, and it comes with a general principle about how acts are weighed that reaches well beyond alms.",
+    thesis: "Counting the gift small is a duty, because counting it great is already a claim about yourself.",
     moves: [
       { title: "Give the duty and the reason", body: "That he count the gift small — for if he counts it great he is pleased with it, and self-admiration is among the destroyers and nullifies works. And on the day of Hunayn, when your numbers pleased you and availed you nothing." },
       { title: "Give the principle", body: "It is said: an act of obedience, the more it is counted small, the greater it becomes with God; and a sin, the more it is counted great, the smaller it becomes with God." },
@@ -160,6 +167,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "The best of it", formalTitle: "Choosing what to give",
     overview: "The seventh duty, and it is about quality rather than quantity — which makes it a different obligation from the one the law imposes.",
+    thesis: "What you give is part of the giving: the best of it, the dearest, and the most lawful.",
     moves: [
       { title: "Give the duty", body: "That he select from his wealth the best of it, the dearest to him, the most excellent and the finest of it." },
       { title: "Note what the law requires", body: "The legal obligation is a quantity. Nothing in it prevents a person from satisfying it entirely with what he was least sorry to lose." },
@@ -180,6 +188,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "One aspiration", formalTitle: "Choosing whom to give to",
     overview: "The eighth duty, and the longest. Ghazali argues that the eight legal categories are a floor rather than a specification, and gives six qualities to look for within them.",
+    thesis: "Whom you give to matters, because the recipient is what purifies the charity.",
     moves: [
       { title: "State the principle", body: "That he seek for his charity one by whom the charity is purified, and not be content that the recipient merely be of the general eight categories — for within their generality are particular qualities, and he should observe them." },
       { title: "Give the first quality", body: "That he seek the godfearing who turn away from the world and are devoted to the trade of the hereafter. Do not eat except the food of a godfearing man, and let none eat your food but a godfearing man." },
@@ -200,6 +209,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Who is entitled", formalTitle: "The causes of entitlement",
     overview: "The third section opens with the legal question, and its treatment of what counts as poverty carries the same instinct as Book 3's argument about water.",
+    thesis: "Entitlement is defined by eight named categories, with the exclusions stated as plainly as the inclusions.",
     moves: [
       { title: "State the requirement", body: "Only a free Muslim qualifies, not from the Prophet's two clans, and fitting one of the eight categories the Quran names." },
       { title: "Give the exclusions", body: "Alms do not go to a non-Muslim, to a slave, or to those two clans. A child or someone who has lost their reason can receive them, provided their guardian takes them." },
@@ -220,6 +230,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "The receiver's five", formalTitle: "The duties of the one who receives",
     overview: "The most unusual section in the book. Ghazali gives the recipient five duties of his own, and the first of them is an argument that inverts the whole transaction.",
+    thesis: "The receiver has five duties of his own — which is what most distinguishes this book from other treatments of alms.",
     moves: [
       { title: "Give the first duty", body: "God made this payment your due so that what you have to worry about is taken care of, and your many concerns become one — because what God asks of people is that their concern be single." },
       { title: "Explain the arrangement", body: "Since wisdom required that appetites and needs be given power over a person, and these divide his concern, generosity required a blessing that suffices the needs. So He multiplied wealth and poured it into the hands of His servants, to be an instrument for repelling their needs and a means of freeing them for their obedience." },
@@ -240,6 +251,7 @@ export const book05Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Beyond the owed", formalTitle: "Voluntary charity",
     overview: "The closing section, and it treats the manners of both ends of a gift that nobody is obliged to make.",
+    thesis: "Voluntary giving is treated last and separately, with its own etiquette for taking as well as giving.",
     moves: [
       { title: "Give the excellence", body: "The section opens with what is reported on the excellence of charity — give in charity even with a date, for it fills the hand of the Merciful and grows." },
       { title: "Name what it covers", body: "Its excellence, and the etiquette of taking it and of giving it. Both ends again, as in the two preceding sections." },

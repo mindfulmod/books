@@ -15,7 +15,7 @@ const makeChapter = (seed: Seed): Chapter => ({
   points: seed.moves.slice(0, 3).map((move) => move.body),
   reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
   deep: {
-    thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 33, ${seed.id <= 5 ? "Part One, on hope" : "Part Two, on fear"}, ${seed.formalTitle}.`,

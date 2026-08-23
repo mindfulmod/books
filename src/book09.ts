@@ -2,12 +2,12 @@ import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id <= 4 ? "the first chapter, on the excellence of remembrance" : id <= 9 ? "the second chapter, on supplication and its manners" : "the third, fourth, and fifth chapters, the collections");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 9, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -20,6 +20,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Two and three", formalTitle: "The shape of the book",
     overview: "The book has five chapters, and the division between them is unusually clean: two argue, and three are collections.",
+    thesis: "Two argued chapters and three collections — and the argued ones exist to say how the collections are to be used.",
     moves: [
       { title: "Announce the five", body: "The excellence of remembrance and its benefit, in summary and in detail; the excellence of supplication and its manners, with seeking forgiveness and blessing on the Messenger; transmitted supplications ascribed to their occasions and their authors; selected supplications with the chains omitted; and the supplications transmitted for particular events." },
       { title: "Note the division", body: "The first two chapters set out what remembrance and supplication are and how they are done. The last three are anthologies, and they are the longest part of the book." },
@@ -40,6 +41,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The excellence", formalTitle: "The excellence of remembrance and its benefit",
     overview: "The first chapter gathers what is reported, and the material it gathers is unusually generous — which is what makes the objection in the next section pressing.",
+    thesis: "The reports on remembrance are gathered at full strength first, which is what makes the objection in the next section worth answering.",
     moves: [
       { title: "Gather the reports", body: "The chapter assembles the verses, reports, and traditions on the excellence of remembrance, in summary and then in detail, treating the assemblies of remembrance, the formula of unity, glorification, praise, and the rest in turn." },
       { title: "Note the scale of the claims", body: "The reports carried here place remembrance very high — among them that the best of deeds is that a man die with his tongue moist with the remembrance of God." },
@@ -60,6 +62,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The light thing", formalTitle: "How an easy act outweighs hard ones",
     overview: "The objection and the answer, and the answer is deflationary in a way that changes what the whole first chapter was promising.",
+    thesis: "An act light on the tongue outweighing hard ones is a real problem, and Ghazali's answer takes the ease away rather than explaining it.",
     moves: [
       { title: "Put the objection", body: "If you say: how is it that the remembrance of God, despite its lightness on the tongue and the fewness of its toil, became better and more beneficial than the whole of the acts of worship, with all the hardships in them?" },
       { title: "Mark the limit", body: "The verification of this is not fitting except for the science of unveiling — and what is permitted to be mentioned in the science of practice is the following." },
@@ -80,6 +83,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "A beginning and an end", formalTitle: "What remembrance produces",
     overview: "A short passage that says where remembrance leads, and it turns out to lead to the subject of Book 36.",
+    thesis: "Remembrance has a beginning and an end, and what it produces at the end is not what a beginner should expect from it.",
     moves: [
       { title: "State the structure", body: "Remembrance has a beginning and an end." },
       { title: "Give the beginning", body: "Its beginning necessitates intimacy and love of God." },
@@ -100,6 +104,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The excellence of asking", formalTitle: "The excellence of supplication",
     overview: "The second chapter opens on the verses, and the first of them settles the question of whether asking is wanted before any manner of asking is discussed.",
+    thesis: "Supplication is commanded, and the verse that commands it puts God's nearness before the asking rather than after it.",
     moves: [
       { title: "Give the first verse", body: "When My servants ask you about Me — I am near; I answer the call of the caller when he calls Me, so let them respond to Me." },
       { title: "Give the second", body: "Call upon your Lord humbly and in secret; He does not love the transgressors." },
@@ -120,6 +125,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "When, and how", formalTitle: "The manners of supplication: the first three",
     overview: "Ghazali gives ten manners for asking. The first three are about timing and posture, and they are more specific than most readers expect.",
+    thesis: "The first three manners are the parts of asking you can arrange in advance — a calendar and a posture.",
     moves: [
       { title: "First: watch for the times", body: "Some times are better than others, and he names them by scale — the day of Arafa within the year, Ramadan among the months, Friday within the week, and the hour before dawn within the night. A calendar rather than a mood." },
       { title: "Second: seize the states", body: "Certain situations count too. Abu Hurayra: the gates of heaven open when ranks close in battle, when rain falls, and when the prayer is being established. States, not just dates." },
@@ -140,6 +146,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Not a performance", formalTitle: "The manners of supplication: the fourth, fifth, and sixth",
     overview: "Three manners about how to speak and what to feel, and the fifth is a warning against the most tempting mistake in the whole practice.",
+    thesis: "The fifth manner guards against the most tempting substitution in the practice: asking well-phrased instead of asking well.",
     moves: [
       { title: "Fourth: keep the voice down", body: "Between silence and speaking out — neither muttered nor projected." },
       { title: "Fifth: do not craft your phrasing", body: "Do not go in for rhymed, worked-up prose. His reason is a good one: somebody asking should be in the state of a person pleading, and polish does not suit that. “There will be people who go beyond bounds in supplication.”" },
@@ -160,6 +167,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "The root of it", formalTitle: "The manners of supplication: the last four",
     overview: "The final four, ending with one that Ghazali sets apart from the other nine — and which relocates the whole question of why asking works.",
+    thesis: "Nine of the ten manners are technique; the tenth says the answer turns on what you have put right with people.",
     moves: [
       { title: "Seventh: ask as though you mean it", body: "Be decisive, be certain of the answer, and let your hope be real. “None of you should say when he asks: O God forgive me if You will, O God have mercy on me if You will.” Conditional asking is a way of protecting yourself in advance from not being answered." },
       { title: "Eighth: persist, and repeat", body: "Keep at it, and say it three times. Asking once and stopping is treated as a sign about the asker rather than as efficiency." },
@@ -180,6 +188,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Two particular askings", formalTitle: "Seeking forgiveness, and blessing on the Messenger",
     overview: "The chapter's title names two forms of asking specially, and each has an excellence section of its own.",
+    thesis: "Seeking forgiveness and asking blessing on the Prophet are asking that makes no request, which is why they are treated separately.",
     moves: [
       { title: "Name them", body: "The chapter is titled to include the excellence of seeking forgiveness and the excellence of blessing on the Messenger, alongside the manners of supplication generally." },
       { title: "Note what distinguishes seeking forgiveness", body: "It is the one supplication whose content is fixed by the state of the one asking rather than by what he wants — it is asked because of what he has done, not for something he lacks." },
@@ -200,6 +209,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Three collections", formalTitle: "The transmitted supplications and how they are arranged",
     overview: "The last three chapters are anthologies, and each is arranged on a different principle — which is the most useful thing to know about them.",
+    thesis: "Three anthologies, each organised on a different principle — by author, by source, and by occasion.",
     moves: [
       { title: "The first collection", body: "Supplications transmitted and ascribed to their occasions and their authors — what it is recommended that a person say morning and evening and after each prayer, given with whose supplication each one was." },
       { title: "The second collection", body: "Selected supplications from the transmitted material, with the chains of transmission omitted, gathered from the Messenger and from his Companions." },
@@ -220,6 +230,7 @@ export const book09Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Supplication is a cause", formalTitle: "What asking is for, given the decree",
     overview: "The last thing in the book, and it answers the objection that would make everything before it pointless — in two sentences.",
+    thesis: "If the decree cannot be turned, asking looks pointless — and Ghazali answers by making supplication one of the causes rather than an exception to them.",
     moves: [
       { title: "Put the objection", body: "If you say: what is the benefit of supplication, when the decree has no repelling?" },
       { title: "Give the answer", body: "Among the decree is the repelling of affliction by supplication." },

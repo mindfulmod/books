@@ -28,7 +28,7 @@ const makeChapter = (seed: Seed): Chapter => ({
   relatedNodes: seed.nodes,
   visualModel: seed.model,
   deep: {
-    thesis: seed.moves[0].body,
+    thesis: seed.thesis ?? seed.moves[0].body,
     context: seed.overview,
     moves: seed.moves,
     closeReading: seed.closer,
