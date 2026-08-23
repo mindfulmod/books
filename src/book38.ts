@@ -22,7 +22,7 @@ export const book38Chapters: Chapter[] = [
     overview: "The book opens on a single sustained analogy, and unlike most analogies in the Ihya this one is not an illustration but the actual architecture: the six stations are derived from it one by one.",
     moves: [
       { title: "Set the trade", body: "What partners in trade want at the reckoning is that the profit be safe. The intellect is the merchant on the road of the hereafter, and its demand and its profit is the purifying of the soul, since in that is its success." },
-      { title: "Name the partner", body: "The intellect enlists the soul in this trade, employing it and pressing it into what purifies it, as a merchant enlists the partner or the servant who trades with his money." },
+      { title: "Name the partner", body: "The intellect takes the self on as a partner in this business, putting it to work at whatever cleans it up — the way a merchant takes on a partner or an employee to trade with his money." },
       { title: "Name the difficulty", body: "As a partner becomes an adversary and a disputant who pulls against him over the profit, so the intellect must stipulate with the soul first, watch it second, reckon with it third, and punish or reproach it fourth." },
       { title: "Give the six", body: "The stations of the watch are therefore six: stipulation, vigilance, reckoning, punishment, striving, and reproach. Ghazali says the account of them is necessary, and the rest of the book is that account in order." },
     ],
@@ -61,7 +61,7 @@ export const book38Chapters: Chapter[] = [
     id: 3, shortTitle: "The empty treasury", formalTitle: "The twenty-four treasuries",
     overview: "The image the stipulation is built on, and its third element is the one that does the work. Two of the three treasuries are the ones everyone expects.",
     moves: [
-      { title: "The lit treasury", body: "For each day and night, twenty-four treasuries are spread in rows for the servant. One is opened and he sees it filled with light from the good he did in that hour, and the joy at seeing those lights, which are his means before the King, would astonish the people of the Fire out of feeling its pain if it were shared among them." },
+      { title: "The lit treasury", body: "For every day and night, twenty-four store-rooms are laid out in a row for you. One is opened and you find it full of light from the good you did in that hour — and the joy of seeing it, since it is what you have to show the King, would be enough, if shared among the people of the Fire, to distract them from the pain of it." },
       { title: "The dark treasury", body: "Another is opened, black and dark, its stench rising from it and its darkness covering him, and it is the hour in which he disobeyed. The dread that reaches him from it, if divided among the people of the Garden, would spoil their bliss for them." },
       { title: "The empty treasury", body: "Another is opened empty, holding nothing that gladdens him and nothing that grieves him, and it is the hour in which he slept, or was heedless, or busied himself with something permitted of this world." },
       { title: "Name what it costs", body: "He grieves at its emptiness, and the chagrin that reaches him is that of a man able to win great profit and a great kingdom who neglected it and was lax in it until it escaped him." },
@@ -88,7 +88,7 @@ export const book38Chapters: Chapter[] = [
     ],
     closer: [
       { title: "The force of that last clause", body: "Everyone reading knows they will die, without a trace of doubt, and it governs almost nothing. Ghazali names that as the exact failure mode of the knowledge he has just described, which means the chapter cannot be satisfied by assenting to it. It is the same move as Book 37's sick man, who sees the food and knows it agrees with him and does not reach." },
-      { title: "Why the state matters more than the acts", body: "The acts are the fruit twice removed. Working directly on the acts, without the state, produces the outward conformity the book has no interest in, and the two degrees in the following chapters are degrees of the state and not of the performance." },
+      { title: "Why the state matters more than the acts", body: "Actions are the fruit two steps down. Work straight on the actions without the state and you get the surface compliance this book has no interest in — and the two levels in the chapters that follow are levels of the state, not of the performance." },
     ],
     distinction: ["Two things a person can have of this knowledge", "Assent without dominion", "Free of doubt and governing nothing, as with the knowledge of death.", "Certainty that has taken possession", "The same knowledge having subdued the heart, which is what produces the state."],
     misreading: "Do not treat agreement with the doctrine as having the station. The chapter's whole point is that undoubted knowledge routinely fails to govern, and it names the commonest example so the reader cannot claim otherwise.",
@@ -104,7 +104,7 @@ export const book38Chapters: Chapter[] = [
       { title: "Name it", body: "The first degree is the vigilance of the near among the truthful, and it is the vigilance of magnification and reverence: the heart becomes absorbed in observing that Majesty and broken beneath the awe, so that no room remains in it for turning to anything else at all." },
       { title: "Say why its acts are not detailed", body: "Ghazali declines to lengthen the examination of its acts, because it is confined to the heart. The limbs are disabled from turning even to the permitted, let alone the forbidden, and when they move in obedience they move as if used by it, needing no management to keep them straight." },
       { title: "Give the image", body: "The flock is set right by the shepherd, and the heart is the shepherd. When it becomes absorbed in the One worshipped, the limbs run on rectitude without contrivance. This is the one whose concern has become a single concern, so that God has sufficed him the rest." },
-      { title: "Describe what it looks like", body: "One who reaches it may be so heedless of people that he does not see who is before him though his eyes are open, and does not hear what is said though he is not deaf, and may pass his own son without speaking; one of them told a man who reproached him for it to shake him when passing." },
+      { title: "Describe what it looks like", body: "Somebody who gets this far can be so oblivious to the people around him that he does not see who is standing in front of him though his eyes are open, does not hear what is said to him though he is not deaf, and walks past his own son without a word. One of them, told off for it, said: give me a shake when you pass." },
     ],
     closer: [
       { title: "The argument that it is ordinary", body: "Do not think it far-fetched, he says: you find its like in hearts that magnify the kings of the earth, so that a king's servants may not feel what happens to them in the royal assembly from the intensity of their absorption. Indeed the heart may busy itself with some paltry worldly matter so that a man sinks into thought and walks past the place he intended and forgets the errand he set out for." },
@@ -124,11 +124,11 @@ export const book38Chapters: Chapter[] = [
       { title: "Give al-Hasan's rule", body: "God have mercy on a servant who paused at his intent: if it was for God he went on, and if it was for other than God he held back. The whole degree is contained in the pause." },
       { title: "State it as an obligation", body: "God has decreed upon every servant that he watch his soul at his intent to act and at his moving of a limb, holding back from the intent and from the effort until it is disclosed to him by the light of knowledge that it is for God, so that he carries it out, or that it is for the soul's whim, so that he guards against it." },
       { title: "Say what to do with the thought", body: "He restrains the heart from thinking about it and from intending it, which is a different instruction from refusing the act. The object of the second degree is the thought and not the deed." },
-      { title: "Note who can do it", body: "Ghazali adds that one who knows the blights of souls, the devil's stratagems, and the places of delusion guards against them, while the ignorant does not know them, so how should he guard against them. The pause is only useful to someone who knows what he is looking for." },
+      { title: "Note who can do it", body: "He adds that somebody who knows the faults of the self, the devil's tricks and where the traps are will watch out for them — while somebody who does not know them cannot possibly watch out for them. The pause only helps if you know what you are looking for." },
     ],
     closer: [
       { title: "Why the pause and not the resistance", body: "Resistance operates at the end of the sequence, where the act is already wanted and the cost of refusing is highest. The pause operates at the point where refusing costs almost nothing, which is why the next chapter sets out the sequence explicitly." },
-      { title: "When it does not resolve", body: "Whenever this is obscure to the servant and the situation is dark and nothing is disclosed to him, he should reflect on it by the light of knowledge and seek refuge from the devil's stratagem by way of whim. Ghazali does not pretend the pause always yields an answer." },
+      { title: "When it does not resolve", body: "When it stays murky and nothing comes clear, think it over in the light of what you know, and ask to be kept from the devil's trick coming dressed as your own preference. Ghazali does not pretend the pause always produces an answer." },
     ],
     distinction: ["Two places to intervene in an act", "At the intent", "Before desire has formed, where holding back costs least and the light of knowledge can still be brought.", "At the deed", "After the sequence has run, where the act is wanted and refusal is hardest."],
     misreading: "Do not read the pause as hesitation or scrupulosity. It has a termination condition: it ends when the light of knowledge discloses which of the two the intent is, and Ghazali says what to do when it does not.",
@@ -183,7 +183,7 @@ export const book38Chapters: Chapter[] = [
     moves: [
       { title: "Give the verse", body: "O you who believe, fear God, and let a soul look to what it has sent forward for tomorrow. Ghazali reads this as a pointer to reckoning over acts already past." },
       { title: "Give Umar's rule", body: "Reckon with yourselves before you are reckoned with, and weigh yourselves before you are weighed. The sentence is the station in miniature and supplies its whole rationale." },
-      { title: "Give the forward version", body: "A man asked for advice and was asked in return whether he was one who accepts it; when he said yes, he was told: when you intend a matter, consider its outcome; if it is right guidance, carry it out, and if it is error, desist. Reckoning therefore runs forward as a warning as well as backward as an audit." },
+      { title: "Give the forward version", body: "A man asked for advice and was asked back whether he was the sort who takes it. He said yes, and was told: when you mean to do something, look at how it ends — if it leads somewhere good, do it; if it leads somewhere wrong, stop. So the reckoning runs forward as a warning as well as backward as an audit." },
       { title: "Connect it to repentance", body: "God says to turn to Him all together, and repentance is a looking into the act after finishing it, with regret over it. So reckoning and repentance are the same operation described from two sides, which is why Book 31 stands behind this station." },
     ],
     closer: [
@@ -201,7 +201,7 @@ export const book38Chapters: Chapter[] = [
     id: 10, shortTitle: "Capital, profit, loss", formalTitle: "The reality of reckoning after the act",
     overview: "The analogy returns with its full machinery, and Ghazali extracts an actual procedure from it rather than a sentiment.",
     moves: [
-      { title: "Place the hour", body: "As the servant has a time at the start of the day in which he stipulates with his soul, he should have at the end of the day an hour in which he demands of the soul and reckons with it over all its motions and stillnesses." },
+      { title: "Place the hour", body: "Just as you set terms with yourself at the start of the day, you should have an hour at the end of it where you call yourself to account for everything you did and everything you did not." },
       { title: "Give the commercial parallel", body: "As merchants do with their partners at the end of every year or month or day, out of eagerness for this world and fear of missing something of it which, had they missed it, the good would have been in the missing; and which even if they obtained it remains only a few days." },
       { title: "Draw the reproach", body: "So how should the intelligent man not reckon with himself in what carries the risk of wretchedness and happiness for all time? This laxity is only from heedlessness and abandonment." },
       { title: "State the procedure", body: "The meaning of reckoning with a partner is to look at the capital, and at the profit and the loss, so that the increase becomes clear from the decrease. If there is a surplus obtained he takes it in full and gives thanks; and if there is a loss he demands its guarantee and charges him with it." },

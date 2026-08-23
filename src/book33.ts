@@ -54,7 +54,7 @@ export const book33Chapters: Chapter[] = [
       { title: "Set the terms", body: "The world is the tillage of the hereafter, the heart is the ground, faith is the seed, and acts of obedience run as the tilling and clearing of the ground and the digging of channels and the bringing of water to it." },
       { title: "Name the failure case", body: "A heart absorbed in the world is like salt ground in which the seed does not grow, and faith does not grow with a corrupt heart and bad character any more than seed grows in salt ground." },
       { title: "Set the harvest", body: "The Day of Rising is the harvest, and no one reaps but what he sowed, and no crop grows except from a seed." },
-      { title: "Give the measure", body: "A servant's hope for forgiveness is to be compared with the hope of one who owns a crop. Whoever sought good ground, cast good seed that was neither rotten nor worm-eaten, supplied it with water at its times, and cleared away the thorns, and then sat waiting, is hoping. Anyone else is wishing." },
+      { title: "Give the measure", body: "Compare hoping for forgiveness with hoping for a crop. If you found good ground, sowed good seed that was not rotten or eaten through, watered it when it needed watering, cleared the thorns out, and then sat down to wait — you are hoping. Anybody else is wishing." },
     ],
     closer: [
       { title: "Why an agricultural image", body: "Farming is the standing case of a legitimate expectation about something not yet in hand. The farmer neither controls the outcome nor is merely wishing, which is exactly the position of the person this book is written for." },
@@ -111,9 +111,9 @@ export const book33Chapters: Chapter[] = [
     id: 5, shortTitle: "Above both", formalTitle: "The condition in which neither fear nor hope remains",
     overview: "Before turning to fear, Ghazali records a position that would make his whole subject provisional, and answers it by naming where in the path he is writing.",
     moves: [
-      { title: "State the position", body: "One who has become intimate with God, whose heart the Real possesses and who has become the son of his moment, witnessing continuously, has no turning toward the future left, and therefore neither fear nor hope." },
+      { title: "State the position", body: "Somebody who has grown close to God, whose heart is taken up with Him and who lives entirely in the moment he is in, has nothing left turning toward the future — and so has neither fear nor hope." },
       { title: "Give the reason", body: "Fear and hope are both temporal, both concerned with what is awaited, and both restrain the soul from its own excesses. Where the future has dropped out of view, neither has anything to attach to." },
-      { title: "Report the strongest form", body: "Al-Wasiti said that fear is a veil between God and the servant, and that when the Real appears upon the innermost parts no room remains in them for hope or fear." },
+      { title: "Report the strongest form", body: "Al-Wasiti said fear is a screen between God and a person, and that when God shows Himself in the innermost part there is no room left in it for either hope or fear." },
       { title: "Answer it by location", body: "Ghazali does not dispute the description. He says: we are now speaking of the beginnings of the stations. The book is written for the road rather than for its end." },
     ],
     closer: [
@@ -132,12 +132,12 @@ export const book33Chapters: Chapter[] = [
     overview: "Part Two builds fear on the same architecture and locates its knowledge precisely: fear tracks what a person knows about the causes leading to what he dislikes.",
     moves: [
       { title: "Give the three parts", body: "Fear is composed of knowledge, a state, and an act. The knowledge is knowledge of the cause leading to the disliked outcome, and the burning of the heart that follows is fear itself." },
-      { title: "Give the analogy", body: "One who has offended a king and fallen into his hands fears execution while pardon remains possible, and the pain of his fear tracks the strength of the causes: the gravity of the offence, whether the king is vengeful, whether he is surrounded by those urging revenge, and whether the offender has any intercessor or any merit that would efface what he did." },
-      { title: "Add the other source", body: "Fear may arise not from an offence but from the nature of what is feared, as one who falls into a lion's claws fears it for what a lion is, or as water is feared for flowing and fire for burning." },
+      { title: "Give the analogy", body: "Somebody who has offended a king and been caught fears execution while a pardon is still possible — and how much the fear hurts tracks the specifics: how bad the offence was, whether the king is vengeful, whether he has people around him pushing for revenge, and whether the offender has anyone to speak for him or anything to his credit that would cancel it out." },
+      { title: "Add the other source", body: "Fear can come not from anything you did but from what the thing is: somebody who falls into a lion's claws fears it for being a lion, the way water is feared for flowing and fire for burning." },
       { title: "Apply it", body: "So fear of God arises sometimes from knowing God and His attributes, and that were He to destroy the worlds He would not mind and nothing would prevent Him; sometimes from the multitude of one's own offences; and sometimes from both together." },
     ],
     closer: [
-      { title: "The consequence Ghazali draws", body: "The most fearful of people toward his Lord is the one who knows himself and his Lord best, which is why the words are attributed to the one who said I am the most fearful of you toward God, and why the verse says that only those of His servants who know fear Him." },
+      { title: "The consequence Ghazali draws", body: "The person who fears God most is the one who knows himself and God best — which is why the words belong to the one who said “I am the most fearful of you toward God,” and why the verse says it is only those who know who fear Him." },
       { title: "Why this makes fear a knowledge problem", body: "If fear tracks knowledge of the causes, then a person with little fear has either little knowledge of himself or little knowledge of his Lord, which is a diagnosis rather than a reproach." },
     ],
     distinction: ["Two sources of the same fear", "From one's own record", "The offences are many and the causes leading to the disliked outcome are correspondingly strong.", "From the One feared", "Nothing prevents Him and He is not questioned, which produces fear without reference to any particular offence."],
@@ -194,7 +194,7 @@ export const book33Chapters: Chapter[] = [
       { title: "Gather the testimony", body: "The verses and reports praising fear are assembled, and Ghazali notes that they are numerous, which is part of the argument of the section on which is more beneficial." },
       { title: "Keep the office in view", body: "Fear is praised for what it produces: perseverance in knowledge and action, and restraint of the limbs. The praise attaches to the working whip rather than to the sensation." },
       { title: "Connect it to knowledge", body: "The reports that tie fear to knowledge are given weight, since the section on fear's reality made fear an effect of knowing." },
-      { title: "Prepare the comparison", body: "Having gathered praise for both states, the question of their relative rank can no longer be avoided, and the next section takes it." },
+      { title: "Prepare the comparison", body: "With both states praised at length, the obvious question — which is higher — can no longer be dodged, and the next section takes it." },
     ],
     closer: [
       { title: "Why both were praised so strongly", body: "Because both diseases are real and widespread. Material praising fear is aimed at security, and material praising hope at despair, and a reader who takes either as a general ranking has misread the office of both." },

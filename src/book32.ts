@@ -69,7 +69,7 @@ export const book32Chapters: Chapter[] = [
       { title: "Where this book stands in the quarter", body: "Book 31 ended by naming patience as the half of the remedy that knowledge cannot supply. This is the book that supplies it, which is why Ghazali placed it second in the quarter." },
       { title: "One book, two halves", body: "The structure is a first part on patience, a second on gratitude, and a third pillar in which the two are brought together and the question of which is superior is finally answered." },
     ],
-    distinction: ["Two ways of establishing a virtue", "By transmission", "The reports are gathered and the rank is established from what is said of it.", "By consideration", "The thing is defined and its working shown, which Ghazali says must wait until the reality is set out."],
+    distinction: ["Two ways of establishing a virtue", "By transmission", "The reports are gathered, and how highly patience is rated is established from what is said about it.", "By consideration", "The thing is defined and its working shown, which Ghazali says must wait until the reality is set out."],
     misreading: "Do not read patience as passivity under whatever occurs. The third pillar will state plainly that a person is not commanded to be patient over any harm he is able to remove.",
     reflection: "Notice what you currently mean by the word patience, and hold it lightly until the next section replaces it.",
     audit: ["What do I call patience in myself?", "Is it endurance, or is it something with a direction?", "Which of my difficulties am I enduring that I could be ending?", "What did Book 31 leave me needing?"],
@@ -83,7 +83,7 @@ export const book32Chapters: Chapter[] = [
       { title: "State the architecture", body: "Every station of religion is composed of knowledges, states, and acts. The knowledges are the roots, they bequeath the states, and the states fruit the acts. Knowledges are like trees, states like branches, and acts like fruits." },
       { title: "Show that patience is a human property", body: "It cannot occur in animals, from deficiency, nor in angels, from completeness. Animals are subject to appetite with nothing in them to meet it; angels are wholly turned toward the divine presence with no appetite diverting them, so neither has anything for patience to consist in." },
       { title: "Name the two motives", body: "At maturity a person is given two things: knowledge, from the angel that guides, and strength, from the angel that reinforces. Knowledge alone is not enough, since a person may recognise a harm and be unable to repel it. The resulting force is the motive of religion, and against it stands the motive of caprice." },
-      { title: "Give the definition", body: "Patience is the steadiness of the motive of religion in the face of the motive of appetite. The battlefield of that war is the servant's heart; if the first holds until it subdues the second, he has joined the patient, and if it weakens until appetite prevails, he has joined the other party." },
+      { title: "Give the definition", body: "Patience is the religious motive holding its ground against the pull of appetite. The battlefield is your own heart. If the first holds out until it has the second under control, you are among the patient; if it gives way and appetite takes over, you are on the other side." },
     ],
     closer: [
       { title: "Why the definition is a fighting one", body: "Patience is not calm. It is the steadiness of one army facing another with which it is at war, which is why a person with nothing pulling against him is not being patient, however still he looks." },
@@ -126,7 +126,7 @@ export const book32Chapters: Chapter[] = [
       { title: "Draw the conclusion", body: "Most of the character traits of faith therefore fall inside patience, which is why, asked once about faith, he answered that it is patience, as he said that the pilgrimage is Arafa." },
     ],
     closer: [
-      { title: "The methodological warning", body: "One who takes meanings from names supposes these states differ in their essences because the names differ. One who walks straight looks at the meanings first and then at the names, since meanings are the roots and words the followers, and whoever seeks roots from followers will stumble." },
+      { title: "The methodological warning", body: "Anybody who works out what things are from what they are called will assume these states are different in kind because the words differ. Anybody going about it properly looks at the meanings first and the words second — meanings are the root and words follow along, and looking for roots among the followers is how you trip." },
       { title: "What this does for the reader", body: "It converts a long list of separate virtues into one capacity practised in different places. A person who has been failing at forbearance and succeeding at contentment learns that he is dealing with a single thing under two conditions." },
     ],
     distinction: ["Two ways to read a list of virtues", "One capacity, many places", "The same steadiness named differently by what it meets, so work on it transfers.", "Many separate qualities", "A list of unrelated traits to be acquired one by one, which is what taking meanings from names produces."],
@@ -140,17 +140,17 @@ export const book32Chapters: Chapter[] = [
     id: 5, shortTitle: "Three outcomes of the war", formalTitle: "The divisions of patience according to strength and weakness",
     overview: "Having defined patience as a war between two motives, Ghazali sorts people by how that war has gone. The three states are the same architecture the quarter keeps returning to.",
     moves: [
-      { title: "The first state", body: "The religious motive subdues the caller of caprice until no power of contention remains, and this is reached by continuous patience. Here it is said that whoever endures, prevails. Those who reach this rank are the fewest, and they are the truthful and the near, whose souls have settled on what the religious motive requires." },
+      { title: "The first state", body: "The religious motive gets whim so far under control that it has no fight left in it, and that comes from keeping at it. This is where the saying belongs: whoever holds out, wins. Very few get here — the truthful and those brought near, whose selves have settled into what the religious motive asks." },
       { title: "The second state", body: "The callers of caprice prevail and the contention of the religious motive falls away entirely, so the person surrenders and does not struggle at all, from despair of struggling. These are the heedless, and Ghazali says they are the majority." },
       { title: "The third state", body: "The war continues without either side finally prevailing, and the person is a struggler, sometimes holding and sometimes overcome. This is where most readers of the book actually stand." },
       { title: "Connect it to the remedy", body: "Since the outcome depends on which side is better supplied, the section points directly at the treatment: strengthen the one and weaken the other." },
     ],
     closer: [
-      { title: "The same shape three times", body: "Book 21 sorted hearts into cultivated, forsaken, and contested; Book 31 sorted the repentant into four classes by what follows a fall; this sorts by how the war stands. The architecture is deliberate and the three books read as one account." },
+      { title: "The same shape three times", body: "Book 21 sorted hearts into tended, abandoned and contested; Book 31 sorted the repentant into four classes by what happens after a fall; this one sorts by how the fight is going. The structure is deliberate, and the three books read as one argument." },
       { title: "Why despair is named as the mechanism", body: "The second class does not lose the war so much as decline it, and the stated cause is despair of struggling. That makes it a condition with a treatment rather than a verdict." },
     ],
     distinction: ["Two ways of not fighting", "Having won", "The contention has ceased because the caller of caprice has been subdued, which is the first class.", "Having stopped", "The contention has ceased because the struggle was abandoned in despair, which is the second."],
-    misreading: "Do not read the three states as fixed types. The whole point of the remedy section is that which state a person is in depends on which motive is being supplied.",
+    misreading: "Do not read the three states as fixed personality types. The whole point of the treatment section is that which one you are in depends on which motive is being fed.",
     reflection: "Ask which of the three describes this week rather than your life, and notice that the question had to be asked that way.",
     audit: ["Is my war going, won, or declined?", "Where have I stopped struggling and called it something else?", "Which side have I been supplying?", "What would change if I supplied the other?"],
     nodes: ["three-states", "two-motives"],
@@ -160,7 +160,7 @@ export const book32Chapters: Chapter[] = [
     id: 6, shortTitle: "Where it is needed", formalTitle: "The occasions of need for patience, and that no state is free of it",
     overview: "Ghazali surveys the situations in which patience is required and argues that there is no condition of a servant in which it is not, including the conditions people would describe as good.",
     moves: [
-      { title: "State the claim", body: "The servant is not free of the need for patience in any state whatever, which follows from the definition: wherever something pulls, something must hold." },
+      { title: "State the claim", body: "There is no situation where you do not need patience — which follows straight from the definition: wherever something pulls, something has to hold." },
       { title: "Cover the obvious occasions", body: "Obedience, which is heavy; disobedience, which is attractive; and affliction, which is unwanted. These are the cases everyone recognises." },
       { title: "Cover the unobvious ones", body: "Ease, health, wealth, and success also require patience, because each supplies its own pull. This is where the section does its work, since these are the conditions in which a person supposes patience is not currently his business." },
       { title: "Draw the practical consequence", body: "If no state is exempt, then a person is never between occasions for patience but only ever failing to notice the present one." },
@@ -202,8 +202,8 @@ export const book32Chapters: Chapter[] = [
     moves: [
       { title: "Gather the testimony", body: "The reports on gratitude are assembled, including that the eater who gives thanks stands in the place of the faster who is patient, which is the first hint that the two states are comparable rather than ranked." },
       { title: "Defer the comparison", body: "Ghazali notes the question of which is superior and postpones it. It is answered in the last two sections of the book, and answered twice." },
-      { title: "Give the standing example", body: "Asked why he wept in prayer when what was past and to come had been forgiven him, the answer given is: shall I not be a grateful servant. Gratitude is thereby detached from the settling of an account." },
-      { title: "Prepare the definition", body: "As with patience, the testimony establishes the rank and the analysis follows, and the analysis will show gratitude to have the same three-part structure." },
+      { title: "Give the standing example", body: "Asked why he wept in prayer when everything past and to come had already been forgiven him, he answered: should I not be grateful? Which cuts gratitude loose from settling an account." },
+      { title: "Prepare the definition", body: "As with patience, the quoted sources establish how highly it is rated and the analysis comes after — and the analysis will show gratitude has the same three-part shape." },
     ],
     closer: [
       { title: "Gratitude without a balance", body: "The example is chosen precisely because it removes the transactional reading. Where nothing is outstanding, gratitude is still owed, which means it was never a settlement in the first place." },

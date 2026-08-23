@@ -22,7 +22,7 @@ export const book19Chapters: Chapter[] = [
     overview: "The Ihya's most vehement opening, and the largest claim Ghazali makes for any single practice in the forty books.",
     moves: [
       { title: "Give the claim", body: "The greatest axis in religion — and it is the matter of consequence for which God sent all the prophets." },
-      { title: "Give the consequence of neglect", body: "If its carpet were folded up, and its knowledge and its practice let go, then prophecy would fall idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, lands would fall to ruin, and the servants would perish — and would not perceive their own perishing until the Day of Calling." },
+      { title: "Give the consequence of neglect", body: "If it were rolled up and put away, and its knowledge and its practice let go, then prophecy would stand idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, whole lands would fall to ruin — and people would perish without noticing they had, until the Day of Calling." },
       { title: "Give the turn to the present", body: "What we feared has come to be — to God we belong and to Him we return — for from this axis the practice and the knowledge have worn away, and its reality and its trace have been effaced entirely." },
       { title: "Name what filled the vacancy", body: "So that flattery of creation has taken possession of hearts, and vigilance toward the Creator has been erased from them; and people have let themselves loose in following whim and appetite as beasts are let loose — and a truthful believer, whom no reproacher's reproach touches in God, has become rare on the carpet of the earth." },
     ],
@@ -121,14 +121,14 @@ export const book19Chapters: Chapter[] = [
     id: 6, shortTitle: "When anger rages", formalTitle: "Why knowledge and scruple are not enough",
     overview: "The most psychologically exact passage in the book, and its argument is that the third quality is not an ornament on the first two.",
     moves: [
-      { title: "Give the first gap", body: "Not everyone who knows acts by his knowledge — indeed he may know that he is excessive in hisba and beyond the limit permitted in the law, and yet some purpose of his own carries him to it." },
+      { title: "Give the first gap", body: "Not everyone who knows acts on it. A man may know perfectly well that he is going too far, past the limit the law allows him, and some purpose of his own carries him on anyway." },
       { title: "Give the second gap", body: "Let his speech and his counsel be acceptable — for the corrupt man is mocked when he performs hisba, and that bequeaths boldness against him." },
       { title: "Give the third quality and its function", body: "As for good character: he should be enabled by it for gentleness and kindness, which is the root of this whole matter and its means." },
       { title: "Give the argument", body: "Knowledge and scruple are not sufficient in it. For when anger rages, mere knowledge and scruple do not suffice to suppress it, unless there is in the disposition a receptiveness to it through good character." },
     ],
     closer: [
       { title: "What follows if the third is missing", body: "In truth scruple is not completed except with good character and the power to restrain appetite and anger. By it the one performing hisba bears what befalls him in God's religion — and otherwise, when his reputation or his property or his person is struck by insult or a blow, he forgets the hisba, becomes heedless of God's religion, and busies himself with himself." },
-      { title: "The motive named last", body: "Indeed he may undertake it from the outset seeking rank and a name. Ghazali puts this after the account of what happens under provocation, because a person who set out for standing will not survive the first insult — the two failures are the same failure at different stages." },
+      { title: "The motive named last", body: "He may even have taken it on in the first place to get himself a name. Ghazali puts this straight after the description of what happens under provocation, because somebody who set out for standing will not last past the first insult — the two failures are the same failure caught at different stages." },
     ],
     distinction: ["Two things that fail under provocation", "Knowledge and scruple alone", "Which do not suppress anger once it rages.", "Character", "Which is what the disposition receives them through, and without which scruple is not completed."],
     misreading: "Do not read good character here as pleasantness. Its stated function is the power to restrain appetite and anger, which is what lets a person continue after being insulted.",
@@ -182,7 +182,7 @@ export const book19Chapters: Chapter[] = [
     overview: "The most operationally precise passage in the book: an exact line between what a person may act on and what he may not.",
     moves: [
       { title: "Pose the question", body: "If you say: what is the limit of being apparent and being concealed?" },
-      { title: "Give the rule", body: "Then know that whoever has shut the door of his house and screened himself with its walls — it is not permitted to enter upon him without his leave in order to learn of a disobedience." },
+      { title: "Give the rule", body: "Somebody who has shut his front door and put walls between himself and you cannot be walked in on, without his permission, in order to find out whether he is doing something wrong." },
       { title: "Give the exception", body: "Unless it becomes apparent in the house with an appearing that is known to one outside the house — as the sounds of pipes and strings when they are raised so that they pass beyond the walls of the house. Whoever hears that may enter the house and break the instruments. And likewise when the voices of the drunk are raised with the words customary among them, so that the people of the streets hear them: this is a making-apparent that obliges hisba." },
       { title: "Give the general principle", body: "So then, what is perceived through intervening walls is only a sound or a smell." },
     ],
@@ -261,9 +261,9 @@ export const book19Chapters: Chapter[] = [
     id: 13, shortTitle: "Disliked, or forbidden", formalTitle: "The third chapter, and the distinction that governs it",
     overview: "The chapter of examples opens by refusing to be a list, and by drawing the distinction that decides what silence costs.",
     moves: [
-      { title: "Give the refusal to enumerate", body: "So we shall point to some of them, that their like may be inferred from them — since there is no hope of confining them or exhausting them." },
+      { title: "Give the refusal to enumerate", body: "So he points at a few of them, so you can work out the rest from the pattern — since there is no hope of listing them all." },
       { title: "Give the division", body: "Wrongs divide into the disliked and the forbidden." },
-      { title: "Give the first half", body: "So when we say, this is a disliked wrong — know that preventing it is recommended, and silence about it is disliked and is not unlawful. Except when the doer does not know that it is disliked, in which case mentioning it to him becomes obligatory, because dislike is a ruling in the law, and it is obligatory to convey it to one who does not know it." },
+      { title: "Give the first half", body: "When he says a wrong is disliked, stopping it is recommended and staying quiet about it is itself disliked but not forbidden — unless the person does not know it is disliked, in which case telling him becomes obligatory, because that is a ruling in the law and rulings have to reach people who do not know them." },
       { title: "Give the second half", body: "When we say, a forbidden wrong — or when we say, a wrong, without qualification — we mean by it the forbidden. And silence about it, with the capacity to act, is forbidden." },
     ],
     closer: [

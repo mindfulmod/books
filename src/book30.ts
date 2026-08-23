@@ -217,7 +217,7 @@ export const book30Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 9, shortTitle: "Zeal for religion", formalTitle: "The third class: exempting oneself, and relabelling the fault",
-    overview: "These people knew the inward traits were bad and assumed they did not have them — taking the view that God tests ordinary people with that sort of thing, not men who have got as far in learning as they have. Ghazali's handling of them produces the sharpest test in the book.",
+    overview: "These people knew the inward traits were bad and assumed they were free of them — on the view that God tests ordinary people with that sort of thing, not men who have got as far in learning as they have. Ghazali's handling of them produces the sharpest test in the book.",
     moves: [
       { title: "Name the exemption", body: "They believed themselves too elevated to be tried by pride, envy, and display, so they stopped looking. The conceit that produced the exemption also concealed it." },
       { title: "Record the relabelling", body: "When the marks of pride appeared they said: this is not pride but seeking the honour of religion and manifesting the nobility of knowledge and defeating the innovators; if I wore poor clothing my enemies would gloat, and my humiliation would be a humiliation of Islam." },
@@ -242,7 +242,7 @@ export const book30Chapters: Chapter[] = [
       { title: "Give the refined image", body: "A man weeding a crop searches out every weed he sees and pulls it, but does not search for what has not yet broken the surface. Fine shoots have spread beneath the soil, and while he supposes the work finished they gather strength and ruin the roots of the crop without his knowing." },
       { title: "Describe the hidden motive", body: "He spends day and night gathering sciences, ordering them, refining their expression, and compiling works, believing his motive is the manifestation of religion. The concealed motive may be renown, travellers arriving from every quarter, tongues loosed in praise, heads moving at his words." },
       { title: "Test it on authorship", body: "If somebody claimed his book and scratched his name off it, it would gnaw at him — even though he knows the reward for its usefulness goes to whoever actually wrote it, and God knows perfectly well who that is. The gnawing is the result." },
-      { title: "Follow it into detail", body: "Praising himself in the work, plainly or by attacking others so that the attack establishes his superiority; attributing the weak sayings to their authors and leaving the good ones unattributed so they are taken for his, like one who steals a shirt and makes it into a coat so it will not be recognised." },
+      { title: "Follow it into detail", body: "Praising himself in the book, either openly or by attacking other people so the attack does the work; crediting the weak opinions to whoever said them and leaving the good ones uncredited so they get taken for his own — like a man who steals a shirt and cuts it into a coat so nobody recognises it." },
     ],
     closer: [
       { title: "Among peers", body: "Gathered together, each supposes himself safe. Separate them, give each a following, and each measures his own against the others and is pleased if his is larger, though he knows another is worthier of it. When a student leaves him for another it sits heavily, and afterwards he no longer exerts himself for the man, even where the transfer was better for the student's religion." },
@@ -257,7 +257,7 @@ export const book30Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 11, shortTitle: "A part taken for the whole", formalTitle: "The fifth class: confining knowledge to one department",
-    overview: "Some confined themselves to the science of legal rulings in disputes and transactions, gave that alone the name of jurisprudence, and neglected both the outward and the inward works. Ghazali holds them deluded from two directions at once, in their action and in their knowledge.",
+    overview: "Some restricted themselves to the law of disputes and transactions, gave that alone the name of jurisprudence, and neglected both the visible practice and the inward one. Ghazali holds they are fooled from two directions at once — in what they do and in what they know.",
     moves: [
       { title: "Diagnose the action", body: "They did not restrain the tongue from backbiting, the stomach from the unlawful, or the foot from walking to the rulers, and did not guard their hearts from pride, envy, and display, while supposing themselves occupied with the obligation of their religion." },
       { title: "Give the analogy", body: "A man has a mortal internal illness and needs to learn its remedy and use it, and instead spends night and day studying the rulings for a condition he cannot have, saying that a woman may one day ask him about it." },
@@ -266,7 +266,7 @@ export const book30Chapters: Chapter[] = [
     ],
     closer: [
       { title: "The word that misled him", body: "The cause of the delusion is what he heard in the Law magnifying jurisprudence. He did not consider that the jurisprudence intended there is understanding about God and knowledge of the attributes that produce fear and hope, as in the verse about a party going forth to gain understanding in religion and to warn their people." },
-      { title: "How wide this runs", body: "Ghazali extends the analysis to those whose delusion is inside jurisprudence itself, who suppose that a servant's standing with God follows the ruling of the courtroom, and construct devices to repel rights. A judge cannot see into hearts and rules by the outward release; a release given only to escape harm is not given with a willing soul." },
+      { title: "How wide this runs", body: "He extends it to people whose self-deception is inside the law itself — who assume that where you stand with God follows whatever the courtroom ruled, and who build devices for fending off what they owe. A judge cannot see into hearts and rules on the release he is shown; a release signed only to make the trouble stop was not given willingly." },
     ],
     distinction: ["Two senses of one word", "Understanding about God", "Knowledge of what He loves and hates, producing fear, humility, and God-consciousness.", "Rulings between people", "A necessary discipline for the community's affairs, which does not by itself do the first thing."],
     misreading: "Do not read this as a dismissal of legal scholarship, which Ghazali treats as a communal obligation that someone must discharge. The complaint is about the order of priority and about mistaking a part for the whole.",
@@ -285,7 +285,7 @@ export const book30Chapters: Chapter[] = [
       { title: "Show what it cost", body: "For this corrupt supposition they spent their lives learning disputation and examining the doctrines and contradictions of the innovators, and neglected what the time was owed." },
     ],
     closer: [
-      { title: "The counsel that follows", body: "For one who has not devoted his life to knowledge, Ghazali's advice is not to plunge into the schools or listen to them, but to hold that God is one, that nothing is like Him, that His Messenger is truthful in what he reported, to follow the way of the early community, to believe what came in the Book and the practice without probing for detail, and to occupy himself with God-consciousness, avoiding disobedience, discharging obedience, and compassion toward the Muslims." },
+      { title: "The counsel that follows", body: "For somebody who has not given his life to study, his advice is: do not wade into the schools or even listen to them. Hold that God is one and nothing is like Him, that His Messenger told the truth in what he reported; follow the way of the early community; believe what came in the Book and the practice without picking at the details; and get on with fearing God, keeping clear of what is wrong, doing what is asked, and being kind to people." },
       { title: "Why being right is not protection", body: "This is the clearest demonstration of the book's definition. The content of the belief is correct; the delusion is in the estimate of its importance and in what that estimate displaced." },
     ],
     distinction: ["Two ways a correct position can fail", "Held in proportion", "The truth is held and given the weight it deserves against the rest of what is owed.", "Held as everything", "The truth is correct and is treated as the highest matter, so a life is spent defending it."],
@@ -305,7 +305,7 @@ export const book30Chapters: Chapter[] = [
       { title: "Add the collectors", body: "Those content to memorise the sayings of the ascetics without grasping their meanings; those who spend their time on hearing narrations and seeking rare elevated chains so as to say they narrate from a particular teacher; and those who spend a life on grammar, lexicon, and rare words and suppose themselves the pillars of the community." },
     ],
     closer: [
-      { title: "The measure for language", body: "One who spends his whole life learning penmanship and perfecting letters, saying the sciences cannot be preserved without writing, would be answered that it is enough to learn the script so that it can be read. Had the man of letters reason, he would know that the language of the Arabs is a language like any other." },
+      { title: "The measure for language", body: "Somebody who spends his whole life on handwriting and perfecting his letters, on the grounds that knowledge cannot be preserved without writing, gets the answer: it is enough to learn a script somebody can read. If the man of letters thought about it, he would see that Arabic is a language like any other language." },
       { title: "Why the preacher's case is worst", body: "The others hold material that stands apart from them. The one who speaks about the states of the heart is describing an interior, and the fluency of the description is the very thing he takes as evidence that he possesses it." },
     ],
     distinction: ["Two relations to the same words", "Describing a state", "The vocabulary is accurate and the speaker's own condition remains a separate question.", "Being described by it", "Fluency about the state is treated as evidence of having it, which is the inference that fails."],

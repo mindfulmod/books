@@ -38,7 +38,7 @@ const book22Base: Chapter[] = [
           body:
             "Bad character is framed as a sickness of the heart. That medical language makes later questions of signs, causes, dosage, and treatment part of one continuous argument.",
         },
-      { title: "Set up what must follow", body: "Testimony can establish that character matters; it cannot say what character is. Ghazali therefore closes the case for its rank and immediately turns to definition, because every later question — whether it can change, how it is treated, how its signs are read — depends on knowing what is being changed." },
+      { title: "Set up what must follow", body: "Quoting sources can establish that character matters; it cannot tell you what character is. So he closes the case for its importance and turns straight to defining it, because everything that follows — whether it can change, how it is treated, how you read its signs — depends on knowing what is being changed." },
       ],
       distinction: {
         title: "The opening claim is larger than good manners",
@@ -50,7 +50,7 @@ const book22Base: Chapter[] = [
           "A stable inward quality makes a pattern of fitting actions arise with increasing ease across changing conditions.",
       },
       misreading:
-        "Do not use the praise and blame in this section to rank other people's personalities. Ghazali is creating urgency for inward reform, and the diagnostic work begins with the self.",
+        "Do not use the praise and blame here to grade other people's personalities. Ghazali is building urgency for working on yourself, and the diagnosis starts there.",
       observation:
         "Choose one quality you value. Compare how easily it appears when you are comfortable with how easily it appears when it costs time, status, or appetite.",
       sourceAnchor: "Book 22, section 1, the excellence of good character and blame of bad character.",
@@ -74,7 +74,7 @@ const book22Base: Chapter[] = [
       thesis:
         "Character is a durable inward form: the organized condition that makes certain actions flow easily and repeatedly.",
       context:
-        "Ghazali distinguishes an outward human form from an inward form. Just as the visible form has parts, the inward form has powers whose soundness depends on their quality and relation to one another.",
+        "He separates the shape a person has on the outside from the shape they have on the inside. The visible one has parts; the inner one has powers, and whether it is sound depends on what those powers are like and how they stand to each other.",
       moves: [
         {
           title: "Move beneath the isolated act",
@@ -182,14 +182,14 @@ const book22Base: Chapter[] = [
     relatedNodes: ["character", "habit", "company", "justice"],
     deep: {
       thesis:
-        "Act and disposition form a loop: repeated fitting action educates the inward state, and the formed inward state then makes fitting action easier.",
+        "Behaviour and character run in a loop: doing the right thing repeatedly trains the inner state, and once that state has formed it makes the right thing easier to do.",
       context:
         "After defending the possibility of change, Ghazali explains the general mechanism. Some people begin with a favorable disposition, while others acquire the same quality through practice and formative company.",
       moves: [
         {
           title: "Begin where action is possible",
           body:
-            "A learner performs the actions associated with a desired quality even before those actions feel spontaneous. Practice gives the inward self a repeated direction.",
+            "You do the things a quality would produce before they come naturally. Repetition points the inner self in one direction over and over.",
         },
         {
           title: "Let repetition travel inward",
@@ -211,13 +211,13 @@ const book22Base: Chapter[] = [
         title: "Practice is formative, but performance can still be shallow",
         firstLabel: "Repetition alone",
         first:
-          "Mechanical repetition can remain external if it is detached from sound purpose, attention, and the inward quality being cultivated.",
+          "Going through the motions stays on the surface if it is cut off from a real purpose, from attention, and from the quality you are trying to build.",
         secondLabel: "Formative repetition",
         second:
-          "The act is repeated as training toward a known good, supported by reflection and company, until the inward disposition begins to correspond.",
+          "The act is repeated as training toward something you have actually named, backed by thinking about it and by the people around you, until the character starts to match.",
       },
       misreading:
-        "Do not wait for perfect sincerity or ease before beginning a fitting action. In this account, the rightly directed act is one of the means by which the inward quality is formed.",
+        "Do not wait until it feels sincere or easy before you start. On this account, doing the right thing is one of the ways the inner quality gets built in the first place.",
       observation:
         "Pick one recurrent setting, such as disagreement or spending. Ask which response that setting is currently rehearsing in you each time it occurs.",
       sourceAnchor: "Book 22, section 4, the general means of acquiring good character.",
@@ -1107,7 +1107,7 @@ const book22Extras: Record<number, Extra> = {
   3: {
     model: chain("Four ranks of difficulty", "Ghazali grades them by how much has to be undone before anything can be built.", [["Ignorant", "Distinguishes nothing yet and has not settled into appetite; needs only a teacher and a motive.", "support"], ["Ignorant and astray", "Knows the ugliness and is habituated to it; must uproot one habit and plant another.", "balance"], ["And corrupt", "Believes the ugly traits are obligatory and beautiful, and was raised on them.", "warning"], ["And evil", "Sees excellence in doing much harm and boasts of it; the hardest rank of all.", "warning"]]),
     closer: [
-      { title: "The date-stone", body: "Ghazali's answer to the claim that natures do not change. A date-stone is neither an apple nor a palm, but it was created such that it can become a palm if cultivation is added, and it will never become an apple, not even with cultivation. Anger and appetite cannot be uprooted; they can be made tractable." },
+      { title: "The date-stone", body: "His answer to the claim that people cannot change. A date stone is neither an apple nor a palm tree — but it was made so that it becomes a palm if you tend it, and it will never become an apple however hard you try. Anger and appetite cannot be pulled out. They can be made manageable." },
       { title: "Why appetite is the hardest", body: "Two things make dispositions differ: the strength of the innate drive together with how long it has existed, and reinforcement by repetition and by believing the trait good. Appetite is oldest, created in the child at the beginning; anger comes around seven; discernment later. The oldest is the most disobedient to change." },
     ],
     audit: ["Which rank am I actually in?", "What am I calling my nature that is really my habit?", "Have I mistaken governing a drive for uprooting it?", "How long has this been in me, and does that change the method?"],

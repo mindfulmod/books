@@ -91,7 +91,7 @@ export const book14Chapters: Chapter[] = [
       { title: "Why the category needs defining at all", body: "Without it, everything not certainly forbidden is permitted, and everything not certainly permitted is forbidden. Both collapses are available to a reader, and the chapter exists to prevent them by giving the middle term real content." },
     ],
     distinction: ["Two ways to read the middle category", "As adjacency", "Near the boundary, where falling in becomes likely — which the shepherd describes.", "As a third verdict", "A ruling of its own, which would make guarding against it a legal obligation rather than a protection."],
-    misreading: "Do not read the report as making the doubtful forbidden. What it promises the one who guards against it is the protection of his honour and his religion, which is a different thing from obedience to a prohibition.",
+    misreading: "Do not read the report as making the doubtful forbidden. What it promises somebody who steers clear is that his reputation and his religion stay intact — which is a different thing from obeying a prohibition.",
     reflection: "Notice that the report says many people do not know this category, and that Ghazali takes that as a task rather than an excuse.",
     audit: ["Do I have a middle category?", "Or does everything collapse to one side?", "Am I near a boundary?", "What is promised to one who guards?"],
     nodes: ["shubha", "hima", "halal"],
@@ -141,7 +141,7 @@ export const book14Chapters: Chapter[] = [
     id: 7, shortTitle: "Where it becomes illness", formalTitle: "The boundary Ghazali draws",
     overview: "The most useful section in the book for a scrupulous reader, and it names the exact point at which caution stops being a virtue.",
     moves: [
-      { title: "Name the rank", body: "The second rank, which crowds upon the degree of obsessive scruple, is that a person be scrupulous about eating the foetus found in the belly of a slaughtered animal, and about the lizard." },
+      { title: "Name the rank", body: "The second level, which is already pressing up against obsessiveness, is being uneasy about eating the foetus found inside a slaughtered animal, or about eating lizard." },
       { title: "Give the reason it is over the line", body: "It is established in the sound collections that the slaughter of the foetus is the slaughter of its mother — with a soundness admitting no doubt in its text nor weakness in its chain. And likewise it is established that the lizard was eaten at the Messenger's table." },
       { title: "Give the third rank", body: "That no disagreement is known in a question at all, but the permission is known by a single-chain report — and a man says: people differed about the single report and some do not accept it, so I am being scrupulous, since transmitters may err and even an upright man may be mistaken." },
       { title: "Give the test", body: "This is a scruple the like of which is not transmitted from the Companions, in what they used to hear from an upright person their souls were at rest with." },
