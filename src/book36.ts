@@ -19,6 +19,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The testimony", formalTitle: "The testimony of the Law on the servant's love for God",
     overview: "Ghazali opens by establishing that love of God is required rather than optional, because the book's whole argument depends on the point not being conceded merely as a figure of speech.",
+    thesis: "Loving God is established as required rather than admirable, which is what obliges the analysis that follows.",
     moves: [
       { title: "State the consensus", body: "The community is agreed that love of God and of His Messenger is an obligation, and Ghazali gathers the verses and reports at length before defining anything." },
       { title: "Name the opponent", body: "The position he is writing against is not indifference but a specific claim: that love of God can only mean persistence in obedience, and that love in its literal sense is inconceivable except between like and like." },
@@ -39,6 +40,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Love follows knowing", formalTitle: "The reality of love, its causes, and the sense of the servant's love for God",
     overview: "The central analytic chapter of the book. Ghazali defines love without any reference to God at all, and only afterwards asks whether the definition is satisfied here.",
+    thesis: "Love is defined by what perceives it, which forces the argument for a sixth perception seated in the heart.",
     moves: [
       { title: "The first principle", body: "No love is conceivable except after knowledge and perception, since a person only loves what he knows. This is why an inanimate thing cannot be described as loving; love is a property of the living perceiver." },
       { title: "Sort what is perceived", body: "Perceptions divide into what agrees with the perceiver's nature and pleases it, what conflicts with it and pains it, and what does neither. Whatever has pleasure in its perception is beloved; whatever has pain in its perception is hated; and what has neither is neither." },
@@ -59,6 +61,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Five causes", formalTitle: "That the one deserving love is God alone",
     overview: "Ghazali enumerates every reason anyone loves anything, arrives at five, and then argues that all five are met completely in one place and only partially anywhere else.",
+    thesis: "Every reason anyone loves anything is enumerated, and all five turn out to terminate in one place.",
     moves: [
       { title: "Enumerate", body: "Every kind of love comes back to five causes. Loving your own existence, and being whole, and going on. Loving whoever helps keep that going. Loving somebody who is generous to people in general, even when none of it reaches you. Loving whatever is beautiful in itself, whether to look at or in what it is. And loving somebody you have some hidden affinity with." },
       { title: "Show that they compound", body: "If these causes gather in one person, love is multiplied. A child who is beautiful in form, fine in character, complete in knowledge, sound in judgement, generous to people and to his parent is loved to the utmost, and the strength of the love follows the strength of each quality." },
@@ -79,6 +82,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Benefaction is metaphor", formalTitle: "That benefaction from people is inconceivable except metaphorically",
     overview: "The hardest chapter of the first half, and the one most likely to be misread. Ghazali dismantles the second cause of love by tracing a gift back through everything that had to be true for it to arrive.",
+    thesis: "Kindness from people is argued to be inconceivable except from God, which is the hardest chapter of the first half.",
     moves: [
       { title: "Take the strongest case", body: "Suppose someone hands you his entire treasury and lets you dispose of it as you wish. You will think the benefaction is his, and Ghazali says this is a mistake." },
       { title: "Trace what it required", body: "His benefaction was completed only through him, his wealth, his power over the wealth, and the motive that moved him to turn it toward you. So who granted his existence, the existence of his wealth, his power, his will, and his motive, and who made you beloved to him and turned his face toward you?" },
@@ -99,6 +103,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The instinct in the heart", formalTitle: "That the highest of pleasures is the knowledge of God and the sight of His face",
     overview: "Having established a sixth perception, Ghazali now argues for what its pleasure is, by a method that treats the heart exactly as he treats the stomach and the eye.",
+    thesis: "With a sixth perception established, the highest pleasure follows from what that perception reaches.",
     moves: [
       { title: "State the rule", body: "Pleasures follow perceptions. A human being gathers a set of powers and instincts, each with its own pleasure, and each one's pleasure lies in attaining what its nature was created for." },
       { title: "Insist that nothing is idle", body: "These instincts were not installed in a person in vain. Each power and instinct was installed for some matter that its nature requires, which is why the argument can run from the instinct to its object." },
@@ -119,6 +124,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Imagination and sight", formalTitle: "Why the sight in the hereafter exceeds the knowledge in this world",
     overview: "An unusually precise chapter. Ghazali is asked what the difference is between knowing now and seeing then, and he answers with an argument about clarity rather than about kind.",
+    thesis: "Ghazali is asked what sight in the next life adds to knowledge here, and answers with unusual precision.",
     moves: [
       { title: "Divide the perceptions", body: "What is perceived divides into what enters the imagination, such as imagined forms and coloured, shaped bodies of animals and plants, and what does not enter it, such as the divine essence and everything that is not a body, like knowledge, power, and will." },
       { title: "Give the experiment", body: "Look at somebody, then shut your eyes: their face is there in your imagination as though you were still looking. Open your eyes again and you can tell the difference immediately." },
@@ -139,6 +145,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The vessel", formalTitle: "The causes that strengthen love of God",
     overview: "The practical turn of the first half. Having argued what love is and what it is for, Ghazali names the two things that determine its strength, and gives an image for the first that the rest of the book keeps using.",
+    thesis: "Having argued what love is, the book turns to what actually strengthens it.",
     moves: [
       { title: "Say why strength matters", body: "The happiest in the hereafter are the strongest in this love, since the pleasure increases as the love increases. And this love is acquired here rather than there." },
       { title: "Name the first cause of weakness", body: "One of the causes of the weakness of love of God in hearts is the strength of love of the world, and he lists it without softening: family, wealth, children, relatives, property, animals, gardens, and places of pleasure." },
@@ -159,6 +166,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Why people differ", formalTitle: "The cause of the disparity among people in love",
     overview: "Believers share the root of this love and differ enormously in its degree. Ghazali explains the difference by the same two variables as the last chapter, and then sorts people into three classes.",
+    thesis: "Believers share the root of this love and differ enormously in degree, and Ghazali says why.",
     moves: [
       { title: "State what is shared and what is not", body: "Believers share in the root of the love because they share in its cause, but they differ because they differ in knowledge and in love of the world. Things differ only by the difference of their causes." },
       { title: "Describe the majority", body: "Most people have of God only the attributes and names that struck their hearing, which they received and memorised. Some of them imagine meanings for those names that He is far above, and some do not reach their reality and imagine no corrupt meaning either." },
@@ -179,6 +187,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Hidden by clarity", formalTitle: "The cause of the shortfall of understandings in knowing God",
     overview: "The most striking argument in the book, and one of the most quoted paragraphs in the Ihya. Ghazali poses his own difficulty and answers it by inverting the terms.",
+    thesis: "The most striking argument in the book explains why most people cannot follow it.",
     moves: [
       { title: "Pose the difficulty", body: "The most manifest and evident of existing things is God, and this ought to require that knowledge of Him be the first and easiest of knowledges to understandings. Yet you see the matter to be the opposite, so the cause has to be given." },
       { title: "Set up the example", body: "When we see a person writing or sewing, his being alive is among the most evident things to us, and his life, knowledge, power, and will to sew are clearer to us than the rest of his attributes, inward and outward." },
@@ -199,6 +208,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Longing", formalTitle: "The meaning of longing for God",
     overview: "The first of the three effects of love. Ghazali defines longing so precisely that it becomes possible to say exactly when a person can and cannot have it.",
+    thesis: "Longing is the first effect of love, and Ghazali defines it by what it implies about the state of the one longing.",
     moves: [
       { title: "Tie it to the first half", body: "Whoever denies the reality of this love must deny longing along with it, since longing is only conceivable toward a beloved. The chapter is presented as a consequence rather than as a new topic." },
       { title: "Rule out the present", body: "Longing is a seeking and a looking-out toward something, and what is already present and obtained is not sought. So longing cannot attach to what is fully in hand." },
@@ -219,6 +229,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "His love for the servant", formalTitle: "The love of God for the servant and its meaning",
     overview: "The direction is reversed. Ghazali gathers the testimony that the love runs the other way as well, and is careful about how a word used of a servant can be used here at all.",
+    thesis: "The direction reverses: what it means for God to love a person.",
     moves: [
       { title: "Gather the testimony", body: "The Quranic witnesses are abundant that God loves His servant, and Ghazali cites them before interpreting: that He loves them and they love Him, that He loves those who repent, and that He loves those who purify themselves." },
       { title: "Note the correction", body: "He also cites the rebuttal given to those who claimed to be God's beloved, which is the question of why then He punishes them for their sins. The claim is not left as one anyone may make about himself." },
@@ -239,6 +250,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "The signs", formalTitle: "The signs of the servant's love for God",
     overview: "The chapter the book has been withholding. Ghazali opens it by naming the reason for the delay, and then gives evidence rather than encouragement.",
+    thesis: "The chapter the book has been withholding — how you would know, and Ghazali opens it carefully.",
     moves: [
       { title: "Name the problem", body: "Everyone claims this love, and how easy the claim is and how rare the meaning. A person should not be deceived by the devil's counterfeiting and the soul's tricks whenever it claims this love, so long as he has not tested it by the signs and demanded proofs of it." },
       { title: "Give the image", body: "Love is a good tree whose root is firm and whose branch is in the sky, and whose fruits appear on the heart, the tongue, and the limbs. Those traces indicate the love as smoke indicates fire and fruit indicates the tree." },
@@ -259,6 +271,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Where the gaze rests", formalTitle: "The meaning of intimacy with God",
     overview: "The most useful chapter in the book for a reader trying to understand his own condition. Three states that look unrelated turn out to be one love, differing only by what the lover is looking at.",
+    thesis: "The most useful chapter for a reader trying to locate himself: what intimacy actually is.",
     moves: [
       { title: "State the common root", body: "Intimacy, fear, and longing are all effects of love, except that these effects differ upon the lover according to what he is looking at and what dominates him in his moment." },
       { title: "Derive longing", body: "When what dominates him is looking out from behind the veils of the unseen toward the furthest beauty, and he senses his own falling short of grasping the reality of the majesty, the heart is roused to seek and is disturbed and stirs toward it. This state in its disturbance is called longing, and it is relative to something absent." },
@@ -279,6 +292,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Expansion and its limit", formalTitle: "The expansion and familiarity that the dominance of intimacy yields",
     overview: "A short chapter with a hard edge. Ghazali describes a freedom of speech with God that intimacy produces, and then says plainly what happens to someone who imitates it.",
+    thesis: "A short chapter with a hard edge, on the expansion that comes when intimacy dominates.",
     moves: [
       { title: "Describe the state", body: "When intimacy lasts and dominates and becomes established, and the disquiet of longing does not trouble it and the fear of change and veiling does not spoil it, it yields a kind of expansion in words, in acts, and in intimate address." },
       { title: "Admit how it looks", body: "It may be objectionable in its outward form, because of the boldness in it and the smallness of awe. Ghazali does not soften the appearance of what he is about to permit." },
@@ -299,6 +313,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "The excellence of contentment", formalTitle: "The excellence of contentment",
     overview: "The final movement opens. Ghazali gathers the testimony for contentment and the accounts of those who had it, before taking up the objection that it is not possible at all.",
+    thesis: "The last movement opens on contentment, with the testimony gathered first as usual.",
     moves: [
       { title: "Gather the verses", body: "He begins with the verse in which God is content with them and they are content with Him, and builds the case that contentment is described as running in both directions." },
       { title: "Place it among the stations", body: "Contentment is presented as the fruit of what has come before rather than as a new exercise, which is why it appears at the end of a book on love and not in the book on patience." },
@@ -319,6 +334,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "Two ways it works", formalTitle: "The reality of contentment and how it is conceivable in what opposes desire",
     overview: "The mechanism. Ghazali answers the objection by giving two distinct routes from love to contentment, and is careful that they are genuinely different.",
+    thesis: "The objection to contentment is answered with a mechanism rather than an exhortation.",
     moves: [
       { title: "Diagnose the objection", body: "Whoever says that in what opposes desire and in the kinds of affliction there is only patience, and that contentment is not conceivable, has come at it from the side of denying love. Once love is established, the objection has no ground left." },
       { title: "The first route", body: "The sensation of pain is annulled, so that what would pain him runs over him and he does not feel it, and a wound reaches him and he does not perceive its pain." },
@@ -339,6 +355,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "The guard", formalTitle: "That supplication does not contradict contentment",
     overview: "The sharpest corrective in the book. Ghazali names the error the previous chapter invites and refuses it in the strongest terms he uses anywhere in the quarter.",
+    thesis: "The sharpest corrective in the book: asking God for things does not contradict being content.",
     moves: [
       { title: "State the ruling", body: "Supplication does not contradict contentment and does not take its owner out of the station. Nor does hating acts of disobedience, detesting those who commit them and the causes of them, and working to remove them by commanding right and forbidding wrong." },
       { title: "Name the error and its holders", body: "Some idle and deluded people erred in this and supposed that acts of disobedience, corruption, and unbelief are of God's decree and so must be accepted with contentment. Ghazali calls this ignorance of interpretation and heedlessness of the secrets of the Law." },
@@ -359,6 +376,7 @@ export const book36Chapters: Chapter[] = [
   makeChapter({
     id: 18, shortTitle: "The lovers", formalTitle: "Accounts, sayings, and disclosures of the lovers",
     overview: "The book closes with a long collection of reports, and the closing is deliberate. Having built an argument, Ghazali ends with the material the argument was always about.",
+    thesis: "The book closes on a long collection of accounts, chosen for what they show rather than for what they claim.",
     moves: [
       { title: "Say what the collection is for", body: "The accounts are gathered after the analysis rather than before it, so that they are read as instances of something defined rather than as evidence for something asserted." },
       { title: "Note their variety", body: "They range from sayings that state a position compactly to episodes that only make sense once the earlier chapters have been read, including several that would look like excess without Chapter 14's fence." },

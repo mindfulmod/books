@@ -7,6 +7,7 @@ type Seed = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
+  thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -59,6 +60,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Why patience is praised", formalTitle: "The excellence of patience",
     overview: "Ghazali opens the longest book of the quarter by gathering what is said of patience, and notes at the outset that he is treating both halves in one book because each is bound to the other.",
+    thesis: "The longest book of the quarter opens by establishing how highly patience is rated, before saying what it is.",
     moves: [
       { title: "Gather the testimony", body: "The reports and verses are assembled to establish patience near the centre of religious life rather than at its edge as endurance under difficulty." },
       { title: "Note the reason for the pairing", body: "Patience and gratitude are given one book because each is bound to the other, and the third pillar will show that both duties can fall on the same thing at the same time." },
@@ -79,6 +81,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Two motives at war", formalTitle: "The reality of patience and its meaning",
     overview: "The analytical centre of Part One, and one of the most precise definitions in the whole work. Ghazali locates patience by asking who has it and who cannot, and the answer produces the definition.",
+    thesis: "Patience is the religious motive holding its ground against appetite, with your own heart as the battlefield.",
     moves: [
       { title: "State the architecture", body: "Every station of religion is composed of knowledges, states, and acts. The knowledges are the roots, they bequeath the states, and the states fruit the acts. Knowledges are like trees, states like branches, and acts like fruits." },
       { title: "Show that patience is a human property", body: "It cannot occur in animals, from deficiency, nor in angels, from completeness. Animals are subject to appetite with nothing in them to meet it; angels are wholly turned toward the divine presence with no appetite diverting them, so neither has anything for patience to consist in." },
@@ -99,6 +102,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Half of faith", formalTitle: "That patience is half of faith",
     overview: "Ghazali explains the saying in two ways, according to two senses of the word faith, and the second sense is what gives this book its shape.",
+    thesis: "'Half of faith' is explained two ways, depending on which sense of faith is in play.",
     moves: [
       { title: "The first sense", body: "If faith is taken to include both the affirmations and the acts, then it has two pillars: certainty and patience. Certainty knows that disobedience harms and obedience benefits; patience is acting on that knowledge, since neither leaving disobedience nor holding to obedience is possible without it." },
       { title: "The second sense", body: "If faith is taken as the states that fruit acts, then everything a person meets divides into what benefits and what harms. Toward the harmful his state is patience and toward the beneficial it is gratitude. Ibn Masud's saying follows: faith is two halves, half patience and half gratitude." },
@@ -119,6 +123,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "The names it takes", formalTitle: "The names that arise for patience according to what it is patience toward",
     overview: "One of the most useful sections in the book. A great many virtues turn out to be one thing under different circumstances, and Ghazali lists them with their opposites.",
+    thesis: "A great many named virtues turn out to be patience wearing a different name, depending on what is being endured.",
     moves: [
       { title: "Split bodily from inward", body: "Bodily patience is bearing hardship in the body, whether by doing hard things or by enduring pain, and is praiseworthy when it accords with the Law. The complete kind is patience of the soul against what nature desires." },
       { title: "Give the lexicon", body: "Against the appetites of stomach and sex it is called continence. In a calamity it keeps the name patience, and its opposite is agitation, which is the loosing of caprice into raised voices, struck cheeks, and torn collars. In wealth it is self-restraint, opposed by exultation. In war it is courage, opposed by cowardice." },
@@ -139,6 +144,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Three outcomes of the war", formalTitle: "The divisions of patience according to strength and weakness",
     overview: "Having defined patience as a war between two motives, Ghazali sorts people by how that war has gone. The three states are the same architecture the quarter keeps returning to.",
+    thesis: "Once patience is a war between two motives, three outcomes follow — and which one you are in depends on which motive is being fed.",
     moves: [
       { title: "The first state", body: "The religious motive gets whim so far under control that it has no fight left in it, and that comes from keeping at it. This is where the saying belongs: whoever holds out, wins. Very few get here — the truthful and those brought near, whose selves have settled into what the religious motive asks." },
       { title: "The second state", body: "The callers of caprice prevail and the contention of the religious motive falls away entirely, so the person surrenders and does not struggle at all, from despair of struggling. These are the heedless, and Ghazali says they are the majority." },
@@ -159,6 +165,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Where it is needed", formalTitle: "The occasions of need for patience, and that no state is free of it",
     overview: "Ghazali surveys the situations in which patience is required and argues that there is no condition of a servant in which it is not, including the conditions people would describe as good.",
+    thesis: "There is no situation without something pulling, so there is no situation without a need for patience.",
     moves: [
       { title: "State the claim", body: "There is no situation where you do not need patience — which follows straight from the definition: wherever something pulls, something has to hold." },
       { title: "Cover the obvious occasions", body: "Obedience, which is heavy; disobedience, which is attractive; and affliction, which is unwanted. These are the cases everyone recognises." },
@@ -179,6 +186,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Strengthen one, weaken the other", formalTitle: "The remedy of patience, and what assists it",
     overview: "Part One closes with treatment, and the method follows directly from the definition. If patience is a contest between two motives, then there are exactly two things to do.",
+    thesis: "Treatment follows straight from the definition: if it is a war between two motives, you strengthen one and starve the other.",
     moves: [
       { title: "State the principle", body: "When two wrestle and we want one to prevail, there is no way but to strengthen the one we want uppermost and weaken the other. So the work is to strengthen the motive of religion and weaken the motive of appetite." },
       { title: "Cut the material", body: "The first way of weakening appetite is to look at what supplies its strength, which is rich food, both in kind and in quantity, and to cut it by regular fasting with moderation at breaking, avoiding what stirs desire." },
@@ -199,6 +207,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Why gratitude is praised", formalTitle: "The excellence of gratitude",
     overview: "Part Two opens as Part One did, by gathering what is said of gratitude, and Ghazali begins by noting that the question of which of the two is superior will be deferred to the end of the book.",
+    thesis: "Part Two opens as Part One did, by establishing the rating before giving the analysis.",
     moves: [
       { title: "Gather the testimony", body: "The reports on gratitude are assembled, including that the eater who gives thanks stands in the place of the faster who is patient, which is the first hint that the two states are comparable rather than ranked." },
       { title: "Defer the comparison", body: "Ghazali notes the question of which is superior and postpones it. It is answered in the last two sections of the book, and answered twice." },
@@ -219,6 +228,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Knowing, joy, and act", formalTitle: "The definition of gratitude and its reality",
     overview: "Gratitude is built on the same three-part architecture as patience and as repentance in Book 31, and Ghazali specifies each part exactly.",
+    thesis: "Gratitude is built on the same three-part architecture as patience, which is why the two halves of the book mirror each other.",
     moves: [
       { title: "Give the three parts", body: "Gratitude is a station composed of knowledge, a state, and an act. The knowledge is knowing the blessing as from the Bestower; the state is the joy arising at His bestowing; and the act is undertaking what the Bestower intends and loves." },
       { title: "Specify the knowledge", body: "It is knowledge of three things at once: the blessing itself, the aspect in which it is a blessing for this person, and the essence and attributes of the Bestower by which the bestowal comes about. There must be a blessing, a bestower, and one bestowed upon who receives it by intention and will." },
@@ -239,6 +249,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Thanking without an account", formalTitle: "The way the covering is lifted from gratitude toward God",
     overview: "The hardest section of Part Two. Gratitude between people is an exchange, and Ghazali asks what the same word can mean when neither party can be benefited or harmed by the other.",
+    thesis: "Gratitude between people is an exchange; gratitude toward God cannot be, and this section works out what that leaves.",
     moves: [
       { title: "Pose the difficulty", body: "Thanks between people carries an expectation and a return. Neither is available here, so the ordinary sense of the word cannot simply be transferred." },
       { title: "Locate what changes", body: "Your gratitude changes you, not the one who gave. So what gratitude produces is not a repayment; it is using the gift the way the giver meant it to be used." },
@@ -259,6 +270,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Loved and disliked", formalTitle: "Distinguishing what God loves from what He dislikes",
     overview: "If gratitude is the right use of a blessing, a person needs to know which uses are right. Ghazali therefore takes up how that is known, and gives two routes with very different demands.",
+    thesis: "If gratitude is using a blessing rightly, you need to know what its Giver intended — which turns gratitude into a question about knowledge.",
     moves: [
       { title: "State why the section is necessary", body: "Doing gratitude and leaving ingratitude are not complete without knowing what God loves, since the act that gratitude consists of is undertaking what the Bestower intends." },
       { title: "Give the first route", body: "Transmission: what is disclosed in the Law about what is loved and what is disliked. This route is available to everyone and is where the ordinary reader begins." },
@@ -279,6 +291,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "What counts as a blessing", formalTitle: "The reality of blessing and its divisions",
     overview: "The second pillar of gratitude asks what a blessing actually is. Ghazali sorts the field carefully, and the sorting is what makes the third pillar's argument possible.",
+    thesis: "The second pillar asks what a blessing actually is, and the answer decides how much of your life counts as one.",
     moves: [
       { title: "Begin with the broad sense", body: "Every good, pleasure, and happiness, indeed everything sought and preferred, is called a blessing. But the true blessing is the felicity of the hereafter, and other things are called so only by relation." },
       { title: "Give the crucial division", body: "Worldly causes are mixed, their good blended with their harm. So blessings divide into the absolute, which is a blessing from every aspect, and the restricted, which is a blessing from one aspect and not another." },
@@ -299,6 +312,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "The gift of perceiving", formalTitle: "The sample of blessings: the causes of perception",
     overview: "Ghazali announces that he has gathered the blessings into sixteen kinds and will give a sample, and begins with the faculties by which anything at all is registered.",
+    thesis: "Sixteen headings of blessings begin with the causes of perception, because nothing is received without them.",
     moves: [
       { title: "Explain the method", body: "The point of the sample is not completeness but that the multitude and interlinking of blessings put them beyond counting. What the reader is meant to acquire is a habit of attention, not a list." },
       { title: "Begin below perception", body: "The ascent starts from what does not perceive, so that perception appears as something added rather than assumed. Plants exist more completely than stones, and the ordering continues upward." },
@@ -319,6 +333,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "The gift of wanting", formalTitle: "The sample of blessings: the creation of volitions",
     overview: "The second movement of the sample. Perception alone would be useless, and Ghazali shows why by removing what follows it.",
+    thesis: "Perception alone would leave you aware and inert, so wanting has to be created too.",
     moves: [
       { title: "Pose the removal", body: "If sight were created so that food could be perceived at a distance, and nothing else were created, the perception would accomplish nothing." },
       { title: "Name what is missing", body: "What is needed in addition is an inclination toward what was perceived, so that perceiving it produces a movement toward it." },
@@ -339,6 +354,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "The gift of moving", formalTitle: "The sample of blessings: power and the instruments of motion",
     overview: "The third movement completes the chain. Sensation gives only awareness and volition only a wanting, so something further is required before anything happens at all.",
+    thesis: "Sensation gives awareness and wanting gives an urge; something further is needed before anything happens at all.",
     moves: [
       { title: "State the gap", body: "Sensation yields nothing but perception and volition nothing but a wanting. Neither of them moves a limb, so a third thing is needed." },
       { title: "Name it", body: "Power, together with the instruments through which it acts, which are the limbs and their structures." },
@@ -359,6 +375,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "The gift of food", formalTitle: "The sample of blessings: the sources from which food is produced",
     overview: "The sample turns outward from the body to the world that sustains it, and to the arrangement of people by which what grows becomes what is eaten.",
+    thesis: "The sample turns outward from the body to the world that keeps it running.",
     moves: [
       { title: "Move outward", body: "Having shown the faculties as given, Ghazali turns to what they are supplied with, tracing food back through the sources from which it is produced." },
       { title: "Follow the chain", body: "The tracing runs through the natural sources and then through the human arrangement, since what grows does not become what is eaten without a great many people." },
@@ -379,6 +396,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "Beyond what is seen", formalTitle: "The blessings of God in the creation of the angels",
     overview: "The sample closes by moving past what the senses reach, which is a deliberate ending: the catalogue that began with the faculties of perception finishes with what perception cannot register.",
+    thesis: "The sample closes past what the senses reach, which is where the argument was heading from the first heading.",
     moves: [
       { title: "Move past the visible", body: "Having exhausted the sample within the world of sense, Ghazali extends it to what belongs to the unseen." },
       { title: "Keep to what is disclosed", body: "The account stays inside what is transmitted, which is consistent with the reticence he maintained throughout the sample about matters beyond the science of practice." },
@@ -399,6 +417,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 18, shortTitle: "Why people are not grateful", formalTitle: "The cause that turns people away from gratitude",
     overview: "Having spent the longest stretch of the book establishing that blessings are innumerable, Ghazali asks the obvious question, and the answer is not that people disbelieve it.",
+    thesis: "Having established that everything is a blessing, Ghazali asks why almost nobody is grateful.",
     moves: [
       { title: "State the puzzle", body: "The blessings have been shown to exceed counting, and people are nonetheless ungrateful. Something other than ignorance of the fact must be operating." },
       { title: "Name ignorance and heedlessness", body: "The first cause is simply not knowing what has been given, which is why the sample occupied so much of the book. But the sample was addressed to that, and the problem persists." },
@@ -419,6 +438,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 19, shortTitle: "Both at once", formalTitle: "How patience and gratitude meet on one thing",
     overview: "The third pillar opens on the objection the whole book has been building toward, and its answer is the most practically useful passage in either half.",
+    thesis: "The third pillar takes up the objection the whole book has been inviting: whether the two states can be held at once.",
     moves: [
       { title: "Pose the objection", body: "If God has a blessing in every existent, then trial does not exist, and patience means nothing. And if trial does exist, then gratitude for trial is incoherent, since patience over a trial requires pain and gratitude requires joy, and the two are contraries." },
       { title: "Affirm that trial exists", body: "Trial exists as blessing exists, and affirming one requires affirming the other, since they are contraries: the absence of trial is a blessing and the absence of blessing is a trial." },
@@ -439,6 +459,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 20, shortTitle: "Blessing over trial", formalTitle: "The superiority of blessing over trial",
     overview: "Before answering which of the two states is superior, Ghazali settles the prior question about their objects, and refuses the pious inversion that treats hardship as better than ease.",
+    thesis: "Before ranking the two, Ghazali argues that blessing is superior to trial — which is not the answer most readers expect from this literature.",
     moves: [
       { title: "State the position", body: "Blessing is superior to trial. The romance of affliction is declined, and the ordinary preference for well-being is affirmed rather than corrected." },
       { title: "Give the reason", body: "Blessing is what the whole sample established as pervasive, and what religion itself is described as. Treating trial as the higher condition inverts the account of the world the book has just given." },
@@ -459,6 +480,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 21, shortTitle: "The plain answer", formalTitle: "Which is superior, patience or gratitude: the exposition by concession",
     overview: "Ghazali reports that people have disagreed, dismisses the existing arguments as confused, and then does something unusual: he gives two answers at two levels, and says openly which audience each is for.",
+    thesis: "He reports the existing positions, dismisses them, and gives his own first exposition.",
     moves: [
       { title: "Report the disagreement", body: "Some hold patience superior, some gratitude, some that they are equal, and some that it varies with circumstance, and each party has argued with speech Ghazali calls badly disordered and far from settled." },
       { title: "Announce two levels", body: "There are two levels of explanation. The first meets you where you are: it takes the surface as it stands and does not push for what is underneath." },
@@ -479,6 +501,7 @@ export const book32Chapters: Chapter[] = [
   makeChapter({
     id: 22, shortTitle: "The answer beneath it", formalTitle: "Which is superior, patience or gratitude: the exposition for those seeking realities",
     overview: "The book closes with the second exposition, which Ghazali says is intended to acquaint people of knowledge and insight with the realities, and which reaches a different result from the first.",
+    thesis: "The book closes on the second exposition, which he says is the truer of the two.",
     moves: [
       { title: "Announce the change of level", body: "This is the exposition by which Ghazali intends to acquaint those of knowledge and discernment with the realities of things by way of unveiling, and he distinguishes it explicitly from what precedes." },
       { title: "Relocate the question", body: "The comparison is moved off the two names and onto what each state consists of, which returns to the definitions: patience is the steadiness of the religious motive, and gratitude is knowledge, joy, and right use." },

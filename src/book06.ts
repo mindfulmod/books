@@ -20,6 +20,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The outward", formalTitle: "The obligations, the customs, and what breaking it requires",
     overview: "The shortest book in the Quarter of Worship opens with its legal apparatus, and disposes of it quickly to reach a chapter that is almost entirely argument.",
+    thesis: "The legal requirements take one section, so that everything after it can be about a question the law does not reach.",
     moves: [
       { title: "Give the outward obligations", body: "The first section lists what a fast requires, the customs that go with it, and what has to be done if a fast is broken." },
       { title: "Give the requirements on breaking", body: "The requirements attaching to breaking the fast are four, treated in turn. This is the technical part of the book, and it is complete." },
@@ -40,6 +41,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Three degrees", formalTitle: "The degrees of the fast",
     overview: "The passage this book is known for. Three fasts of the same day, distinguished by what is being restrained rather than by how strictly.",
+    thesis: "Three people fast the same day and do three different things, and only the lowest of them is what the law is measuring.",
     moves: [
       { title: "Give the first", body: "The fast of the generality is restraining the stomach and the genitals from satisfying appetite. This is the fast the first section legislated, in full." },
       { title: "Give the second", body: "The fast of the select is restraining the hearing, the sight, the tongue, the hand, the foot, and the rest of the limbs from sins." },
@@ -60,6 +62,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "What breaks the third", formalTitle: "The fast of the heart, and how it is broken",
     overview: "The third degree is given a page and then a startling test — one that would break the fast of almost every person who has ever kept one.",
+    thesis: "The highest degree has a test attached that would disqualify almost everyone — and Ghazali names whose degree it is rather than prescribing it.",
     moves: [
       { title: "Say how it breaks", body: "Breaking the fast in this fast occurs by thinking of what is other than God and the Last Day, and by thinking of the world." },
       { title: "Give the exception", body: "Except a world wanted for religion — for that is provision for the hereafter and is not of the world. The exception is stated at once, and it is doing real work." },
@@ -80,6 +83,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "The poisoned arrow", formalTitle: "The first duty: lowering the gaze",
     overview: "The fast of the select is completed by six things, and the first of them is given a wider scope than the obvious one.",
+    thesis: "The six duties of the highest fast begin with the eyes, because what the day emptied can be refilled through them.",
     moves: [
       { title: "Give the duty", body: "Lowering the gaze and restraining it from ranging over everything that is blamed and disliked." },
       { title: "Give the wider clause", body: "Over everything that occupies the heart and distracts from the remembrance of God. The second half of the instruction reaches things that are not blamed at all." },
@@ -100,6 +104,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Five that break it", formalTitle: "The second duty: guarding the tongue",
     overview: "The longest of the six duties, and the one where Ghazali's language stops being careful about the difference between spoiling a fast and breaking it.",
+    thesis: "Guarding the tongue gets the longest treatment of the six, and Ghazali stops hedging when he reaches it.",
     moves: [
       { title: "Give the duty", body: "Guarding the tongue from babble, lying, backbiting, tale-bearing, obscenity, harshness, quarrelling, and disputation — and binding it to silence, and occupying it with the remembrance of God and the recitation of the Quran. This is the fast of the tongue." },
       { title: "Give the list", body: "Five things break the faster's fast: lying, backbiting, tale-bearing, false swearing, and looking with desire." },
@@ -120,6 +125,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "The rest of them", formalTitle: "The third and fourth duties: hearing and the limbs",
     overview: "Two duties that extend the same principle outward, and one of them makes a listener a partner.",
+    thesis: "The ear falls under the same rule as the tongue, which makes listening to backbiting a breach of the fast rather than a lesser fault.",
     moves: [
       { title: "Give the third duty", body: "Restraining the hearing from what it is disliked to listen to — since everything forbidden to say is forbidden to listen to." },
       { title: "Give the principle", body: "Ghazali carries the report that the person talking behind someone's back and the person listening are partners in it. The duty is not an add-on; it follows — the ear is under the same rule as the tongue." },
@@ -140,6 +146,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The feedbag", formalTitle: "The fifth duty: not filling what the day emptied",
     overview: "The duty that names the mechanism of the whole fast, and the one most commonly defeated — in a way that Ghazali says voids the benefit entirely.",
+    thesis: "The mechanism of the whole fast is named here: emptying the stomach achieves nothing if the evening refills what the day removed.",
     moves: [
       { title: "Name the mechanism", body: "The life of the fast, and its point, is weakening the drives the devil uses to get a person back to old habits — and that only happens by eating less." },
       { title: "Give the measure", body: "Namely, that he eat the meal he would have eaten each night had he not fasted." },
@@ -160,6 +167,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "After it ends", formalTitle: "The sixth duty: suspended between fear and hope",
     overview: "The last of the six, and it applies not to the fast but to the moment after it — and then Ghazali extends it to everything.",
+    thesis: "The last duty applies after the fast has ended, which is what stops the act closing with a sense of completion.",
     moves: [
       { title: "Give the duty", body: "That his heart after breaking the fast be suspended and wavering between fear and hope." },
       { title: "Give the reason", body: "Since he does not know whether his fast is accepted, so that he is among the near; or rejected, so that he is among the detested." },
@@ -180,6 +188,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Valid, or accepted", formalTitle: "What the jurists mean and what the scholars of the hereafter mean",
     overview: "The most important passage in the book, and one of the clearest statements anywhere in the Ihya of what Ghazali thinks he is doing.",
+    thesis: "Two groups mean two different things by a valid fast, and Ghazali defends both rather than choosing.",
     moves: [
       { title: "Put the objection", body: "You might object: someone who only holds back his stomach and his sexual appetite, and ignores everything else in this book, has a valid fast — the jurists say so. What is that supposed to mean?" },
       { title: "Concede the evidence point", body: "The jurists who deal with the physical act, he answers, establish its physical conditions on weaker evidence than what has just been brought for the inward ones — backbiting especially." },
@@ -200,6 +209,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Nearness by qualities", formalTitle: "The rank between the beasts and the angels",
     overview: "The argument that says what fasting is for, and it ends with a definition of nearness that reaches well past this book.",
+    thesis: "A human being sits between the animals and the angels, and fasting is the nearest a body gets to a quality that has no body.",
     moves: [
       { title: "Place the human rank", body: "A human being sits above the animals, because the light of the intellect gives him the power to break his own appetite — and below the angels, because appetite still has the upper hand and he is tested by having to fight it." },
       { title: "Give the movement", body: "The deeper he goes into appetite the further he sinks, until he is down among the animals. The more he holds it down the higher he rises, until he is up at the level of the angels." },
@@ -220,6 +230,7 @@ export const book06Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Beyond Ramadan", formalTitle: "Voluntary fasting and its arrangement",
     overview: "The closing section, which sorts voluntary fasting by its cycles and closes the book on what is not required.",
+    thesis: "Voluntary fasting is sorted by its cycles, and the book closes on arrangement rather than on exhortation.",
     moves: [
       { title: "Give the principle", body: "The recommendation of fasting is confirmed at particular times, and the section sorts them rather than listing them." },
       { title: "Give the cycles", body: "Days that recur within the week, days that recur within the month, and days that recur within the year — the same cyclical sorting Book 4 uses for the supererogatory prayers." },

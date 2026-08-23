@@ -20,6 +20,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "An old disagreement", formalTitle: "That the question is open",
     overview: "The book opens the way Book 12 opened, on a dispute among people whose seriousness nobody questions — and it names them.",
+    thesis: "The book opens on a genuine disagreement among people the reader is expected to respect, not on a recommendation.",
     moves: [
       { title: "Report the split", body: "The disagreement appeared among the Successors: some went to choosing seclusion and preferring it over mixing, and others to the opposite." },
       { title: "Name a side", body: "Among those who chose seclusion and preferred it was Sufyan al-Thawri, and the chapter names others on both sides rather than leaving the dispute anonymous." },
@@ -40,6 +41,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The same method", formalTitle: "How the question will be settled",
     overview: "The second chapter opens by pointing at another book of the Ihya and saying that this question has the same shape as that one.",
+    thesis: "The question will be settled by weighing named benefits against named harms, person by person — and Ghazali says so at the outset.",
     moves: [
       { title: "Name the parallel", body: "People's disagreement in this resembles their disagreement about the merit of marriage." },
       { title: "Recall what was done there", body: "He refers to the harms of marriage and its benefits, treated in the book on marriage — where the answer came out differently for different people according to which harms they faced." },
@@ -60,6 +62,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Room, and safety", formalTitle: "The first two benefits",
     overview: "The first two benefits of seclusion, and they are of two different kinds: one makes something possible and the other prevents something.",
+    thesis: "The first two benefits are of different kinds: one removes a danger, the other frees a capacity.",
     moves: [
       { title: "Give the first", body: "Freeing oneself for worship and for thought, and finding intimacy in intimate converse with God rather than in converse with people." },
       { title: "Note what it is", body: "A benefit of capacity: it does not remove a danger but creates room. It is the benefit that connects this book to the Quarter of Worship, where the whole practice was arranged around continuity." },
@@ -80,6 +83,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Trials, and people", formalTitle: "The third and fourth benefits",
     overview: "Two benefits about what other people do, and the second of them is an unusually frank list.",
+    thesis: "Two benefits about what other people do to you, and the second is an argument about obligation rather than comfort.",
     moves: [
       { title: "Give the third", body: "Escaping from trials and disputes, and preserving religion and self from plunging into them and being exposed to their dangers." },
       { title: "Note its scope", body: "It is about being drawn into conflicts that are not yours — the quarrels of a place, which reach a person because he is present rather than because he chose them." },
@@ -100,6 +104,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Both directions", formalTitle: "The fifth benefit",
     overview: "The benefit that cuts a flow rather than removing a danger, and it is stated symmetrically on purpose.",
+    thesis: "The fifth benefit cuts off a flow rather than removing a single danger.",
     moves: [
       { title: "Give the benefit", body: "That people's greed for you is cut off, and your greed for people is cut off." },
       { title: "Note the symmetry", body: "Both halves are named, and the order puts theirs first. The benefit is not primarily about being left alone; it is about a two-way traffic in expectation stopping." },
@@ -120,6 +125,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "The tiresome", formalTitle: "The sixth benefit",
     overview: "The last benefit, and it is the most human and the least elevated in the list — which is presumably why it is last.",
+    thesis: "The last benefit is the most ordinary and the least elevated, and Ghazali includes it without apology.",
     moves: [
       { title: "Give the benefit", body: "Escaping from the sight of the tiresome and the foolish, and from enduring their folly and their manners." },
       { title: "Give the phrase", body: "For the sight of a tiresome person is, he says, the blinding affliction — and the chapter's language here is notably unguarded." },
@@ -140,6 +146,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Seven things lost", formalTitle: "The harms of seclusion",
     overview: "The other side of the scales, and Ghazali states it in a way that makes the loss specific rather than general.",
+    thesis: "The harms are stated strongly enough that the weighing is genuine rather than decorative.",
     moves: [
       { title: "Give the principle", body: "Among the religious and worldly aims are those obtained by seeking help from another, and that is not obtained except by mixing." },
       { title: "Draw the consequence", body: "So everything gained from mixing is missed by seclusion — and its being missed is among the harms of seclusion." },
@@ -160,6 +167,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Learn first", formalTitle: "The one case he decides outright",
     overview: "The book's sharpest ruling, and it is the only place where seclusion is not weighed but simply refused.",
+    thesis: "One case is decided outright, and it is the only place in the book where seclusion is simply wrong.",
     moves: [
       { title: "Give the ground", body: "Teaching and learning are the greatest acts of worship in this world — as the Book of Knowledge argued — and that is inconceivable except by mixing." },
       { title: "Give the ruling", body: "So somebody who still needs to learn what is required of him is doing wrong by shutting himself away." },
@@ -180,6 +188,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Three cases", formalTitle: "How the ruling is qualified",
     overview: "Having refused one case outright, Ghazali immediately sorts the rest — and the third of them is the one most likely to apply to a serious reader.",
+    thesis: "Having settled one case, he sorts the rest — and the sorting is by person and circumstance rather than by rule.",
     moves: [
       { title: "The first case", body: "One who needs to learn what is obligatory on him: disobedient by seclusion, and the case is closed." },
       { title: "The second case", body: "If he has learned the obligatory, and plunging into the sciences is not within him, and he sees fit to occupy himself with worship — then he should withdraw." },
@@ -200,6 +209,7 @@ export const book16Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "What the weighing gives", formalTitle: "How the book ends",
     overview: "The book closes as Book 12 closed — with a procedure rather than a verdict, and the procedure is the same one.",
+    thesis: "The book ends with a procedure rather than a verdict, which is the same way Book 12 ended.",
     moves: [
       { title: "Restate the shape", body: "Six benefits of seclusion, seven benefits of mixing whose loss is its harm, and an answer that comes out differently according to which of them apply to a person." },
       { title: "Note the one exception", body: "One case is not weighed at all: where seclusion makes an obligation impossible. Everything else is a comparison." },

@@ -20,6 +20,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The index", formalTitle: "The manners of the outward, and what they are a title to",
     overview: "The preamble of the last book of the quarter, and it states in four clauses what the whole quarter has been doing.",
+    thesis: "How somebody behaves on the outside is the label on what is inside — which is what the previous nine books have been doing.",
     moves: [
       { title: "Give the thesis", body: "How a person behaves on the outside is the label on what is inside." },
       { title: "Give the direction of causation", body: "The movements of the limbs are the fruits of thoughts; and acts are the result of character; and manners are the seepage of knowledge; and the secrets of hearts are the planting-grounds of actions and their springs." },
@@ -40,6 +41,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Sealing the quarter", formalTitle: "Why the book is placed last",
     overview: "Ghazali states the plan for this book in the first person, and the reason is practical before it is devotional.",
+    thesis: "The quarter ends with a portrait because rules given piece by piece never show how the pieces sit together in one person.",
     moves: [
       { title: "Give the resolve", body: "I had resolved to seal the Quarter of Customs of this book with a book comprehending the manners of living — so that it should not be hard for one seeking them to extract them." },
       { title: "Note what a portrait does that rules cannot", body: "Nine books have given arrangements piece by piece. One life described whole shows how the pieces sit together in a single person, which no amount of separate treatment supplies." },
@@ -60,6 +62,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "He asked for it", formalTitle: "The disciplining by the Qur'an",
     overview: "The first exposition, and its opening sentence quietly settles the question of whether any of this is imitable.",
+    thesis: "The perfected character is presented as answered prayer, which is what makes the portrait an example rather than a display.",
     moves: [
       { title: "Give the state described", body: "The Messenger of God was much given to humble entreaty and to imploring, constant in asking of God that He adorn him with the excellences of manners and the noblenesses of character." },
       { title: "Give the two supplications", body: "So he would say in his supplication: O God, make my character good, and my form. And he would say: O God, keep me far from reprehensible characters." },
@@ -80,6 +83,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Thirteen headings", formalTitle: "The announced order",
     overview: "Ghazali lists the book's expositions in advance, and the sequence is not arbitrary.",
+    thesis: "The order runs from what a person is like at rest to what he is like when something is at stake.",
     moves: [
       { title: "Give the opening three", body: "The disciplining of him by the Qur'an; then a gathering of the excellences of his character; then a further collection of his manners and character." },
       { title: "Give the ordinary registers", body: "Then his speech and his laughter; then his character and manners in food; then his character and manners in dress." },
@@ -100,6 +104,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The gathered list", formalTitle: "The excellences, as someone else assembled them",
     overview: "The second exposition, and Ghazali is careful to say it is not his own compilation.",
+    thesis: "Ghazali marks this list as somebody else's gathering, which separates the compiled parts of the book from the argued ones.",
     moves: [
       { title: "Give the attribution", body: "A collection of the excellences of his character, which one of the scholars gathered and picked out from the reports." },
       { title: "Give its form", body: "It runs as a chain of superlatives — he was the most forbearing of people, and so on through a long sequence — which is a recognisable genre rather than an argument." },
@@ -120,6 +125,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Beads strung", formalTitle: "His speech and his laughter",
     overview: "The fourth exposition, and its most quoted line is about restraint rather than eloquence.",
+    thesis: "Eloquence is granted and then immediately qualified: speech like beads on a thread, told apart rather than poured out.",
     moves: [
       { title: "Give the superlative", body: "He was the most eloquent of people in utterance and the sweetest of them in speech." },
       { title: "Give the qualification that follows it", body: "He was sparing of speech, generous in utterance; when he spoke he was no chatterer. And his speech was like beads strung in order." },
@@ -140,6 +146,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "What was found", formalTitle: "His manners in food and in dress",
     overview: "Two expositions on the most ordinary registers there are, and both turn on the same disposition.",
+    thesis: "He ate what was found — which removes the question rather than answering it in either direction.",
     moves: [
       { title: "Give the principle in food", body: "He would eat what was found." },
       { title: "Note what the phrase excludes", body: "Both directions at once. It is not the refusal of good food and it is not the seeking of it — it is the removal of the question, which is what makes it a disposition rather than a rule." },
@@ -160,6 +167,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Who would be just", formalTitle: "His pardon despite capability",
     overview: "The seventh exposition, and one report in it carries the whole heading.",
+    thesis: "The heading is earned not by the reply but by what he said after the man had already walked away.",
     moves: [
       { title: "Give the description", body: "He was the most forbearing of people, and the most desirous of pardon when he had the capacity to do otherwise." },
       { title: "Give the occasion", body: "Until necklaces of gold and silver were brought to him and he divided them among his companions — and a man of the desert people stood up and said: O Muhammad, by God, if God commanded you to be just, I do not see that you are being just." },
@@ -180,6 +188,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Not to his face", formalTitle: "His overlooking of what he disliked",
     overview: "The eighth exposition, and its mechanism is not silence — which is the detail that makes it usable.",
+    thesis: "Overlooking is not silence: the correction still arrived, through somebody else, once the man had gone.",
     moves: [
       { title: "Give the physical description first", body: "He had fine skin and was delicate in body and in feeling. You could read his anger and his pleasure straight off his face, and when his feeling ran high he would keep touching his beard." },
       { title: "Give the rule", body: "He would not confront anyone face to face with what he disliked in him." },
@@ -200,6 +209,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Like the loosed wind", formalTitle: "His generosity and his courage",
     overview: "Two expositions on the registers that cost most, and both are described by comparison rather than by measure.",
+    thesis: "Generosity and courage are described by comparison rather than by measure, which makes them descriptions of character rather than facts about resources.",
     moves: [
       { title: "Give the generosity", body: "He was the most generous of people and the most liberal of them — and in the month of Ramadan he was like the loosed wind." },
       { title: "Note the shape of the image", body: "A wind that has been let go has no direction of its own and no reserve held back. The comparison describes a manner of giving rather than an amount, which is what makes it a description of character." },
@@ -220,6 +230,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "I am not a king", formalTitle: "His humility at the height of his station",
     overview: "The eleventh exposition, and its heading contains the only condition that makes humility mean anything.",
+    thesis: "Humility is registered by what did not happen around him, which is harder to perform than anything he could have said.",
     moves: [
       { title: "Give the heading in full", body: "He was the most severe of people in humility — in the height of his station." },
       { title: "Give the first instance", body: "Ibn 'Amir said: I saw him throwing the pebbles at the jamra on a grey she-camel — no striking, and no driving away, and no calling out, back, back." },
@@ -240,6 +251,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Neither tall nor short", formalTitle: "His form and his constitution",
     overview: "The twelfth exposition describes a physical appearance, and its presence in a book of character is the preamble's thesis taken literally.",
+    thesis: "A physical description belongs in a book about character only if the opening claim is true — and section 12 takes it at its word.",
     moves: [
       { title: "Give the opening", body: "Of the description of the Messenger of God: that he was not conspicuously tall, nor short." },
       { title: "Note the form of the description", body: "It proceeds largely by such balanced negations — not this and not that — which is a recognisable convention of the genre, and which describes proportion rather than distinctiveness." },
@@ -260,6 +272,7 @@ export const book20Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Not the face of a liar", formalTitle: "Why the portrait is the proof",
     overview: "The last exposition of the last book of the quarter, and it turns two hundred pages of description into an argument.",
+    thesis: "The portrait is the evidence: an outside no technique could produce, reporting an inside nobody could have built.",
     moves: [
       { title: "Give the premise", body: "Anyone who saw how he lived, and listened to what is reported of him — his character, his actions, his moods, his habits, his temperament, how he handled every kind of person, how he held them together, won them over and led them." },
       { title: "Extend it", body: "Along with how he answered when questions had him cornered, how well he arranged things for people's good, and how much he packed into rulings on points of law — points whose first subtleties the jurists and the clever cannot get to the bottom of in a whole lifetime." },

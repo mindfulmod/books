@@ -7,6 +7,7 @@ type Seed = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
+  thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -58,6 +59,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "A definition with two halves", formalTitle: "The censure of delusion, its reality, and its definition",
     overview: "Ghazali opens the last book of the quarter by defining its subject with unusual precision. Delusion is a species of ignorance, but not every ignorance is delusion; it requires a particular thing one is deluded about and a particular thing that does the deluding, and it has two conditions that must both hold.",
+    thesis: "Delusion is defined before it is condemned, and the definition is what makes the rest of the book a survey rather than a scolding.",
     moves: [
       { title: "Locate it inside ignorance", body: "Ignorance is to hold a thing to be other than it is. Delusion is one kind of ignorance, so everything said in praise of knowledge and censure of ignorance bears on it." },
       { title: "Add the first condition", body: "The believed content must agree with desire. This is what separates delusion from an ordinary mistake, which the mind can drop as soon as it is corrected." },
@@ -78,6 +80,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The argument underneath", formalTitle: "The false syllogism, and how it is taken apart",
     overview: "Ghazali makes a structural claim that governs the treatment of every case in the book: every deluded person has a cause for his delusion, that cause operates as a proof, and every proof is a kind of syllogism occurring in the soul, even where its owner is unaware of it and could not state it in the terms of the learned.",
+    thesis: "Every delusion rests on an argument nobody has spoken aloud, so the treatment is to state it and find the false premise.",
     moves: [
       { title: "Assert the hidden argument", body: "Delusion always rests on an argument the person has never articulated. The treatment is therefore to make it explicit and locate the false premise." },
       { title: "Take the first example apart", body: "Cash is better than credit; this world is cash and the next is credit; therefore prefer this world. The second premise is true and the first is the deception, because cash is better than credit only when the two are equal in amount and object. The merchant gives one dirham for ten." },
@@ -98,6 +101,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Reading ease as favour", formalTitle: "Being deluded about God, and the two slaves",
     overview: "The most consequential delusion takes God's own gifts as evidence of God's approval. Ghazali reconstructs the argument, shows that its key inference is invalid, and supplies an analogy that reverses the reading entirely.",
+    thesis: "The most consequential delusion takes God's own gifts as evidence that He is pleased.",
     moves: [
       { title: "Reconstruct the reasoning", body: "God has been good to me in this world; every benefactor is a lover; every lover continues to do good in the future. Therefore my future is secure. The past is being used to predict the future by way of an assumed favour." },
       { title: "Find the two faults", body: "The deception lies in supposing that every benefactor is a lover, and beneath that in supposing that worldly ease is a benefaction at all. To those with insight it may indicate the opposite." },
@@ -118,6 +122,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Another man's piety", formalTitle: "Delusion through inherited standing",
     overview: "A particular form of the same error rests a person's safety on someone else's righteousness. Ghazali treats it directly because it is durable, socially reinforced, and produces the precise inversion that the ancestors feared while the descendants feel safe.",
+    thesis: "Resting your safety on an ancestor's piety is like expecting his eating to fill you.",
     moves: [
       { title: "State the syllogism", body: "Whoever loves a person loves his children; God loved your forefathers; therefore He loves you, and you have no need of obedience." },
       { title: "Show the inversion", body: "The forefathers, with the utmost scrupulousness, were afraid; the descendants, with the utmost laxity, feel safe. Ghazali calls this the furthest reach of being deluded about God." },
@@ -138,6 +143,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Hope or wishing", formalTitle: "The difference between hope and delusion",
     overview: "This is the practical centre of the book's first half. Sinners dress their expectation in the language of hope, and Ghazali argues that Satan changed only the name. He then supplies a criterion sharp enough to sort any particular case.",
+    thesis: "The practical centre of the first half: sinners dress up wishing as hope, and the difference is what you have actually done.",
     moves: [
       { title: "Name the substitution", body: "What is actually taking place is wishing upon God. Satan altered its name and called it hope, and by that the ignorant were deceived." },
       { title: "Read the Quran's own usage", body: "Those who believed and emigrated and strove are the ones described as hoping for God's mercy. Hope is attached to those in whom the ground of hope is present." },
@@ -158,6 +164,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Four classes, five mechanisms", formalTitle: "The classes of the deluded and the ways delusion works",
     overview: "Ghazali announces the survey that fills the rest of the book. The deluded are many, but four classes gather them, and before he begins he names the recurring mechanisms by which a person comes to hold a wrong thing to be right.",
+    thesis: "The survey that fills the rest of the book is announced with its classes and its mechanism.",
     moves: [
       { title: "Name the four classes", body: "The scholars, the worshippers, the Sufis, and the possessors of wealth. He chooses these because each begins from something genuinely good, which is what makes the delusion available." },
       { title: "List the mechanisms", body: "Seeing the reprehensible as good; failing to distinguish what one does for oneself from what one does for God; leaving the more important for the less; leaving the obligatory for the supererogatory; and leaving the kernel for the husk." },
@@ -178,6 +185,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The remedy never taken", formalTitle: "The first class: learning that never became action",
     overview: "The first group among the scholars mastered the religious and rational sciences, went deep into them, and neglected to inspect the limbs. They supposed that their learning had placed them where God does not punish, and Ghazali answers with the analogy that governs the whole class.",
+    thesis: "The first class mastered the knowledge and never turned it into anything.",
     moves: [
       { title: "Separate the two sciences", body: "There is the knowledge of practice, which is the lawful and unlawful and the treatment of the soul's traits, and the knowledge of unveiling. The first is wanted only for action, and any knowledge wanted for action has no value without it." },
       { title: "Give the prescription", body: "A man is ill with a condition only a compound remedy will cure. He leaves his homeland, finds a skilled physician, learns the ingredients, quantities, sources, and preparation, writes a fine copy, returns, repeats it and teaches it to the sick. A thousand copies and a thousand cured patients do not relieve his own illness." },
@@ -198,6 +206,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Weeds cut at the top", formalTitle: "The second class: outward action without the heart",
     overview: "These people had both the knowledge and the practice. They kept up the visible obedience and dropped the visible sins. What they never did was look inside — so the traits that grow the sins stayed exactly where they were while the visible growth kept getting trimmed back.",
+    thesis: "The second class did the visible work and never looked inside, so the roots stayed while the growth was trimmed.",
     moves: [
       { title: "Name what was left", body: "Pride, envy, ostentation, the desire for leadership and elevation, wishing ill upon peers, and seeking fame among people. Some did not know these were blameworthy at all." },
       { title: "Give the governing image", body: "A man weeds a crop by cutting the tops and the ends of the weeds rather than pulling them from the root, so the roots strengthen and the growth returns, because the planting-beds of the sins are the blameworthy traits in the heart." },
@@ -218,6 +227,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Zeal for religion", formalTitle: "The third class: exempting oneself, and relabelling the fault",
     overview: "These people knew the inward traits were bad and assumed they were free of them — on the view that God tests ordinary people with that sort of thing, not men who have got as far in learning as they have. Ghazali's handling of them produces the sharpest test in the book.",
+    thesis: "The third class knew the inward faults were real and assumed themselves exempt — which produces the sharpest test in the book.",
     moves: [
       { title: "Name the exemption", body: "They believed themselves too elevated to be tried by pride, envy, and display, so they stopped looking. The conceit that produced the exemption also concealed it." },
       { title: "Record the relabelling", body: "When the marks of pride appeared they said: this is not pride but seeking the honour of religion and manifesting the nobility of knowledge and defeating the innovators; if I wore poor clothing my enemies would gloat, and my humiliation would be a humiliation of Islam." },
@@ -238,6 +248,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "What stays under the soil", formalTitle: "The fourth class: the subtle residues",
     overview: "This group did the whole work. They mastered knowledge, purified the limbs, adorned them with obedience, avoided outward sins, inspected the heart for ostentation, envy, rancour, pride, and the desire for elevation, and struggled to be rid of them. Ghazali says they are deluded still, and the reason is exact.",
+    thesis: "The fourth class did everything, and Ghazali finds what is left in them by a question about authorship.",
     moves: [
       { title: "Give the refined image", body: "A man weeding a crop searches out every weed he sees and pulls it, but does not search for what has not yet broken the surface. Fine shoots have spread beneath the soil, and while he supposes the work finished they gather strength and ruin the roots of the crop without his knowing." },
       { title: "Describe the hidden motive", body: "He spends day and night gathering sciences, ordering them, refining their expression, and compiling works, believing his motive is the manifestation of religion. The concealed motive may be renown, travellers arriving from every quarter, tongues loosed in praise, heads moving at his words." },
@@ -258,6 +269,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "A part taken for the whole", formalTitle: "The fifth class: confining knowledge to one department",
     overview: "Some restricted themselves to the law of disputes and transactions, gave that alone the name of jurisprudence, and neglected both the visible practice and the inward one. Ghazali holds they are fooled from two directions at once — in what they do and in what they know.",
+    thesis: "The fifth class narrowed religion to one department of law and were deluded from two directions at once.",
     moves: [
       { title: "Diagnose the action", body: "They did not restrain the tongue from backbiting, the stomach from the unlawful, or the foot from walking to the rulers, and did not guard their hearts from pride, envy, and display, while supposing themselves occupied with the obligation of their religion." },
       { title: "Give the analogy", body: "A man has a mortal internal illness and needs to learn its remedy and use it, and instead spends night and day studying the rulings for a condition he cannot have, saying that a woman may one day ask him about it." },
@@ -278,6 +290,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Even when right", formalTitle: "The sixth class: disputation, including the party in the right",
     overview: "Ghazali divides the disputants into a straying party and a party in the right, and then makes the striking move of the section: delusion, he says, comprehends them all, and he explains the delusion of the party that holds the correct position.",
+    thesis: "Ghazali splits the disputants into a straying party and a party in the right, and finds delusion in both.",
     moves: [
       { title: "Diagnose the straying party", body: "Their fault is that they did not suspect their own view and did not first establish the conditions of proof and its method, so one of them saw a semblance as a proof and a proof as a semblance." },
       { title: "State the harder case", body: "The party in the right is deluded from another direction: it supposed that disputation is the most important of matters and the most excellent act of drawing near in God's religion." },
@@ -298,6 +311,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Speaking of the states", formalTitle: "The seventh class: preaching, transmission, and language",
     overview: "Ghazali gathers several groups whose common feature is that they handle religious material expertly and mistake the handling for the thing. He is hardest on the highest of them, and says so.",
+    thesis: "Several groups are gathered here whose common feature is that the medium became the work.",
     moves: [
       { title: "Begin with the highest", body: "Those who speak of the soul's traits, of fear, hope, patience, gratitude, trust, detachment, certainty, and sincerity. Their delusion is the severest, because they suppose that speaking of these qualities and calling people to them has made them so." },
       { title: "Show the inference they run", body: "He supposes that he could not have gone deep into the science of love unless he loved, nor grasped the fine points of sincerity unless he were sincere, nor found the hidden faults of the soul unless he were free of them, and that he could not know nearness and distance unless he were brought near." },
@@ -318,6 +332,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "The message and the consonants", formalTitle: "The second class of the deluded: the worshippers",
     overview: "Among those devoted to worship and action, Ghazali finds delusion in prayer, in recitation, in fasting, in pilgrimage, and in the correcting of others. The pattern is consistent: care is spent lavishly on a part of the act while the point of the act is unattended.",
+    thesis: "Among the devoted, delusion is found in the act itself rather than in any failure to perform it.",
     moves: [
       { title: "Show misallocated scruple", body: "One overcome by anxiety in ablution treats remote possibilities of impurity in water as near, and when it comes to eating treats near possibilities of the unlawful as remote. Umar performed ablution from a Christian woman's jar despite the evident possibility, and abandoned whole areas of the lawful for fear of falling into the unlawful." },
       { title: "Follow it into prayer", body: "Anxiety about the intention until the congregation is missed and the time expires; anxiety about the pronouncing of the opening until its very form is altered; and then heedlessness for the whole of the prayer that follows, while the person supposes that the effort spent at the outset distinguishes him." },
@@ -338,6 +353,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "The armour and the review", formalTitle: "The third class of the deluded: the Sufis",
     overview: "Ghazali writes about this group as somebody who belongs to it, and says at the outset how common self-deception is among them. He works from copying the appearance, through copying the vocabulary, to dropping the Law altogether.",
+    thesis: "Ghazali writes about the Sufis as somebody who belongs among them, working from copied appearance to abandoned law.",
     moves: [
       { title: "Describe the imitation", body: "They matched the truthful among the Sufis in dress and bearing, in expressions, manners, observances, and terminology, in sitting on the mat with the head bowed into the collar like one absorbed in thought, in the drawn sigh and the lowered voice, and having taken on these things supposed themselves Sufis, never having wearied themselves with struggle, discipline, or the watching of the heart, which are the first stations of the path." },
       { title: "Give the review", body: "An old woman hears that the brave are entered in the register and granted a province. She puts on a coat of mail and a helmet, learns the warriors' verses and their melodies until they come easily, learns their swagger in the field and the motions of their hands, and presents herself at the camp to have her name entered. At the review she is ordered stripped of the helmet and mail and tested in single combat, and is found to be a weak old woman who cannot bear the weight of the armour." },
@@ -358,6 +374,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "Names in the brickwork", formalTitle: "The fourth class of the deluded: the possessors of wealth",
     overview: "The last class spends real money on real goods and is deluded in the spending. Ghazali examines the source of the wealth, the choice of object, and the conditions attached to the gift, and finds a test that settles most cases immediately.",
+    thesis: "The last class spends real money on real goods and is deluded about what the spending is doing.",
     moves: [
       { title: "Begin with the source", body: "Some build mosques, schools, hostels, and bridges from wealth gained by injustice, plunder, and bribes, and write their names on them in brick so that their memory endures. They exposed themselves to displeasure in the earning and again in the spending, when what was required was return to the owners, or to their heirs, or to the most important interests." },
       { title: "Give the decisive test", body: "If one of them were required to spend a single dinar without his name being written on the place, it would weigh on him and his soul would not consent, though God is aware of it whether the name is written or not. Were his aim God's face rather than the faces of people, he would not need the inscription." },
@@ -378,6 +395,7 @@ export const book30Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "Not yet", formalTitle: "The last trap: being deluded by the escape",
     overview: "Ghazali ends the book, and the whole quarter, by turning the analysis on the reader who has understood it. Having named every snare, he describes the one that waits for the person who has evaded them, and then the one that waits after that.",
+    thesis: "The book, and the whole quarter, ends by turning the analysis on the person who has just escaped it.",
     moves: [
       { title: "Give Satan's last speech", body: "You have exhausted me and escaped by your intelligence and the completeness of your reason. I overcame many of the saints and the great and could not overcome you. How enduring you are, and how great your rank with God, that He strengthened you to defeat me and let you perceive every entrance of my deception." },
       { title: "Name what happens next", body: "He listens, believes it, and marvels at himself for his flight from delusion, so his self-admiration becomes the utmost delusion. Conceit is greater than any sin, which is why Satan said: when you supposed that by your knowledge you escaped me, by your ignorance you fell into my snares." },

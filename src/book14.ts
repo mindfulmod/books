@@ -20,6 +20,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Seven chapters", formalTitle: "The shape of the book",
     overview: "The book Book 13 was pointing at, and its seven chapters run from a definition through a practical procedure to some very specific difficulties.",
+    thesis: "Seven chapters, and the whole book exists because Book 13 kept pointing at a question it could not answer.",
     moves: [
       { title: "Announce the seven", body: "The excellence of seeking the lawful and the blame of the unlawful, with the degrees of each; the ranks of the doubtful and their sources; investigation, asking, plunging in, and neglecting, and where each belongs; how a repentant man gets out from under financial wrongs; the stipends and gifts of rulers; entering upon rulers and mixing with them; and scattered questions." },
       { title: "Note the middle", body: "The second and third chapters are the heart of it. One defines the doubtful and ranks it; the other says what a person is actually supposed to do when he meets it." },
@@ -40,6 +41,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Degrees of foulness", formalTitle: "That the unlawful is not one thing",
     overview: "The first chapter grades what is forbidden, and the grading turns on something other than the act.",
+    thesis: "What is forbidden is not one thing but a graded range, and the grading is what makes scruple answerable.",
     moves: [
       { title: "Give the first distinction", body: "What is taken by a defective contract is unlawful, but it is not at the degree of what is seized by force — the seized is graver, since in it there is both the abandoning of the Law's route in acquiring and the harming of another." },
       { title: "Name what the lighter case lacks", body: "In the defective contract there is no harming; there is only the abandoning of the route of compliance. The severity tracks whether anyone was hurt." },
@@ -60,6 +62,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "No fixed number", formalTitle: "Why he refuses to count the degrees",
     overview: "A short methodological remark, and it is unusual enough to be worth its own section.",
+    thesis: "Ghazali declines to number the degrees, and the refusal is deliberate enough to be worth its own section.",
     moves: [
       { title: "Give the refusal", body: "Once you know the sources of the intensifying, there is no need to confine it to three degrees or four." },
       { title: "Give the reason", body: "For that would run as arbitrariness and caprice, and it is seeking an enumeration of what has no enumerator." },
@@ -80,6 +83,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Three divisions", formalTitle: "The report the second chapter rests on",
     overview: "The second chapter opens on the report that establishes the doubtful as a category at all, and then says which part of it is the problem.",
+    thesis: "The doubtful is established as a third category between the clear and the forbidden, with its own rules.",
     moves: [
       { title: "Give the report", body: "The lawful is clear and the unlawful is clear, and between them are doubtful matters which many people do not know. Whoever guards against the doubtful has protected his honour and his religion, and whoever falls into the doubtful falls into the unlawful — like a shepherd grazing around a preserve, who is likely to fall into it." },
       { title: "State what it establishes", body: "This report is explicit in establishing the three divisions. The middle category is not a gap between two others; it is named and given a status of its own." },
@@ -100,6 +104,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Rain, before it lands", formalTitle: "The absolutely lawful",
     overview: "A definition and a single example, and the example is chosen to be almost unattainable — which is the point of it.",
+    thesis: "The absolutely lawful is defined and then illustrated with an example chosen to be almost unattainable.",
     moves: [
       { title: "Give the definition", body: "The absolutely lawful is what is free, in itself, of the attributes requiring prohibition — and whose causes are free of anything to which a prohibition or a dislike attaches." },
       { title: "Note the two conditions", body: "The thing, and its history. Both have to be clear, which means the definition reaches backward through every hand the thing has passed through." },
@@ -120,6 +125,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Degrees of scruple", formalTitle: "How far a person may take it",
     overview: "Scruple is graded like everything else in the chapter, and the lowest degree is the one that carries a legal consequence.",
+    thesis: "Scruple has degrees like everything else here, and the lowest of them is where most people should stop.",
     moves: [
       { title: "Give the first degree", body: "The first degree is that whose avoidance is a condition of being reckoned upright, and of casting off the mark of corruption. It is the scruple of those whose testimony is accepted." },
       { title: "Note that it is not optional", body: "This degree has a legal consequence attached: a person who does not observe it is not a person whose word stands in court. Everything above it is voluntary." },
@@ -140,6 +146,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Where it becomes illness", formalTitle: "The boundary Ghazali draws",
     overview: "The most useful section in the book for a scrupulous reader, and it names the exact point at which caution stops being a virtue.",
+    thesis: "The most useful section for a scrupulous reader: Ghazali draws the line past which caution has become the problem.",
     moves: [
       { title: "Name the rank", body: "The second level, which is already pressing up against obsessiveness, is being uneasy about eating the foetus found inside a slaughtered animal, or about eating lizard." },
       { title: "Give the reason it is over the line", body: "It is established in the sound collections that the slaughter of the foetus is the slaughter of its mother — with a soundness admitting no doubt in its text nor weakness in its chain. And likewise it is established that the lizard was eaten at the Messenger's table." },
@@ -160,6 +167,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Four rulings", formalTitle: "When to ask, and when not to",
     overview: "The third chapter's governing statement, and it refuses both of the two obvious answers in a single sentence.",
+    thesis: "When to ask about money and when not to — and he rejects both of the obvious answers.",
     moves: [
       { title: "Refuse the first answer", body: "Everyone who presents you with food or a gift, or from whom you wish to buy — it is not for you to search into it and ask, and to say: this is something whose lawfulness I have not verified, so I will not take it until I investigate." },
       { title: "Refuse the second", body: "It is also not for you to abandon investigation and take everything you are not certain is forbidden." },
@@ -180,6 +188,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "The unknown man", formalTitle: "What you owe someone you know nothing about",
     overview: "The chapter's central case, and Ghazali's answer is more permissive than almost any reader expects.",
+    thesis: "What you owe somebody you know nothing about turns out to be less than a careful reader expects.",
     moves: [
       { title: "Define the unknown", body: "The unknown is the one with whom there is no circumstantial sign indicating his corruption and wrongdoing — nor anything indicating his righteousness, like the clothing of particular groups and other such marks." },
       { title: "Give the historical argument", body: "The Companions in their campaigns and journeys stayed in villages and did not refuse them, and entered towns and did not guard against the markets — and the unlawful existed in their time too. And no asking is reported from them except upon a misgiving." },
@@ -200,6 +209,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Asking is a harm", formalTitle: "Why investigation can be forbidden",
     overview: "The claim that makes the chapter's structure work, and it puts a harm on the side of the investigator.",
+    thesis: "Investigating can itself be forbidden, because it puts a cost on the person being investigated.",
     moves: [
       { title: "Give the addition", body: "I add to this and say: it is not for him to ask." },
       { title: "Give the scrupulous alternative", body: "If you are being careful, then eating nothing whose source you do not know is fine — but decline gently. And if you have to eat, eat without asking." },
@@ -220,6 +230,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Perhaps, and perhaps", formalTitle: "The symmetry argument",
     overview: "The chapter's sharpest passage, and it turns a scrupulous person's own reasoning back on him in two sentences.",
+    thesis: "The sharpest passage in the book turns a scrupulous person's own reasoning back on him.",
     moves: [
       { title: "Give the objection", body: "If you say: perhaps he will not be hurt by the asking —" },
       { title: "Give the reply", body: "I say: perhaps he will be hurt." },
@@ -240,6 +251,7 @@ export const book14Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "The hard residue", formalTitle: "The last four chapters",
     overview: "Four chapters of specific difficulty, and their subjects are what a doctrine of scruple runs into when it meets an actual society.",
+    thesis: "Four chapters of specific difficulty, whose subjects are exactly what a doctrine of the doubtful has to survive.",
     moves: [
       { title: "The fourth", body: "How a repentant man gets out from under financial wrongs — what must be returned, to whom, and what is to be done when the person wronged cannot be found." },
       { title: "The fifth", body: "The stipends and gifts of rulers: what of them is lawful and what is forbidden. A question about the source of public money and about who may receive it." },

@@ -20,6 +20,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Three chapters", formalTitle: "The excellences, and the shape of the book",
     overview: "The book announces three chapters and the third is unlike the other two — a sustained reading of a journey as a figure for another journey.",
+    thesis: "Three chapters, and the third is unlike the other two — which is where the whole interest of the book lies.",
     moves: [
       { title: "Announce the three", body: "What is said in praise of the pilgrimage, of Mecca and of the ancient House; a summary of its parts and when it becomes obligatory; the physical acts in order, from setting out to coming home; and then its finer manners, its hidden meanings, and what the heart is meant to be doing." },
       { title: "Give the first chapter's content", body: "The excellences of the pilgrimage, of the House, and of Mecca and Medina, together with travelling to the mosques — and then the conditions of obligation, the validity of the elements, the obligations, and the prohibitions." },
@@ -40,6 +41,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Conditions", formalTitle: "The conditions of obligation and of validity",
     overview: "The legal frame, given plainly, and the last of its four parts is what makes the pilgrimage unlike the other acts of the quarter.",
+    thesis: "The legal frame is given plainly and quickly, and its last part is what makes the inward chapter possible.",
     moves: [
       { title: "Give the four", body: "The conditions of the obligation of the pilgrimage; the validity of its elements; its obligations; and its prohibitions." },
       { title: "Note the conditions of obligation", body: "The pilgrimage is owed once, and only by one able to reach it. It is the one act of the quarter whose obligation depends on means and on a route, which is why the conditions come first and are treated separately." },
@@ -60,6 +62,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Ten groupings", formalTitle: "The outward acts in order",
     overview: "The longest chapter in the book, and its organising principle is simply the order in which things happen.",
+    thesis: "The physical acts are organised by nothing more than the order in which they happen, from setting out to coming home.",
     moves: [
       { title: "Give the principle", body: "The second chapter puts the physical acts in order, from setting out to coming home, in ten groups." },
       { title: "Give the sequence", body: "The travelling from setting out to consecration; consecration from the appointed place to entering Mecca; entering Mecca to the circling; the circling; the running; the standing and what precedes it; the remaining acts after the standing; the lesser pilgrimage and what follows it; the farewell circling; and the visit to Medina." },
@@ -80,6 +83,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Ten fine points", formalTitle: "The fine manners of the pilgrimage",
     overview: "The third chapter opens with ten manners, and the first of them is about money — which sets the register for everything that follows.",
+    thesis: "Ten fine manners, and the first is about where your money came from rather than about how you behave.",
     moves: [
       { title: "Give the first", body: "That the expenditure be lawful, and that the hand be empty of a trade that occupies the heart and scatters the concern." },
       { title: "Note the two halves", body: "One is about where the money came from, and the other about what is being carried alongside the journey. The second is not a legal condition at all and is the kind of thing this chapter exists for." },
@@ -100,6 +104,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The substitute", formalTitle: "The place of the pilgrimage in religion",
     overview: "The inward chapter opens by asking what the pilgrimage is actually for, and the answer he gives is historical and comparative rather than pious.",
+    thesis: "Ghazali answers what the pilgrimage is for historically and comparatively, not devotionally.",
     moves: [
       { title: "State the general principle", body: "There is no arrival at God except by keeping clear of appetites, restraining from pleasures, confining oneself to the necessities in them, and devoting oneself to God in all motions and stillnesses." },
       { title: "Give the earlier solution", body: "For this reason the monastics in the former communities withdrew from people, took to the mountain tops, and preferred wildness from people, seeking intimacy with God. They left present pleasures and bound themselves to hard strivings, and God praised them in His Book." },
@@ -120,6 +125,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Whoever seeks something great", formalTitle: "Understanding, longing, and resolving",
     overview: "The first three of twelve stages, and Ghazali's framing of the whole sequence is that each one is a sign for whoever will read it.",
+    thesis: "Twelve inward stages begin with understanding, longing and resolve — three things that happen before anyone leaves.",
     moves: [
       { title: "Give the sequence", body: "The first of the pilgrimage is understanding — the place of the pilgrimage in religion; then longing for it; then resolving upon it; then cutting the attachments that prevent it; then buying the garment; then the provision; then the mount; then setting out; then the desert; then consecrating; then entering; then completing the acts." },
       { title: "Say what each one is", body: "Every one of these things, he says, is a reminder for anyone who will remember, a lesson for anyone who will take one, a nudge for someone serious about this, and a hint for anyone paying attention." },
@@ -140,6 +146,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The creditor", formalTitle: "Cutting the attachments",
     overview: "The fourth stage, and the most vivid passage in the book. Ghazali turns an abstract requirement into a figure that speaks.",
+    thesis: "Cutting your attachments is treated as a rehearsal, and Ghazali makes the ordinary act of settling your affairs into the vivid centre of the book.",
     moves: [
       { title: "Say what it means", body: "Cutting the attachments means the returning of wrongs and sincere repentance to God from all sins." },
       { title: "Give the figure", body: "Every wrong is an attachment, and every attachment is like a creditor present, hanging on his collar, calling out to him and saying: where are you going?" },
@@ -160,6 +167,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Provision that spoils", formalTitle: "The provision, and the longer journey",
     overview: "The sixth stage, and the point where the parallel between the two journeys becomes explicit and starts doing work.",
+    thesis: "What you travel on is the point of comparison: the next journey is longer, and most of what you think are your supplies stays behind.",
     moves: [
       { title: "Give the requirement", body: "Get what you travel on from somewhere lawful." },
       { title: "Catch the moment", body: "When he senses in himself an eagerness to increase it, and to seek what will keep over the length of the journey and not change or spoil before reaching the destination —" },
@@ -180,6 +188,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "The certain journey", formalTitle: "The mount, and the bier",
     overview: "The seventh stage, and it carries the sharpest reasoning in the book: an argument about how people allocate their precautions.",
+    thesis: "The animal you ride prompts the one you will actually be carried on, and the reasoning is sharper than the image suggests.",
     moves: [
       { title: "Give the thanks", body: "When the animal is brought, thank God inwardly for having made animals serve you, carrying the load so you do not have to." },
       { title: "Give the parallel", body: "Let it remind you of the thing you will actually be carried on to the next life: the bier. In this one respect the pilgrimage runs parallel to that journey the whole way." },
@@ -200,6 +209,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Two unstitched garments", formalTitle: "The consecrated garment and the shroud",
     overview: "The eighth stage, and the parallel is so exact that Ghazali points to the detail of the tailoring.",
+    thesis: "The two plain garments are the shroud, and Ghazali points at the detail rather than leaving the parallel implied.",
     moves: [
       { title: "Give the parallel", body: "When you buy the two plain garments, let them remind you of the shroud and being wrapped in it." },
       { title: "Give the possibility", body: "For he will wear these two at the nearing of the House of God — and perhaps his journey to it will not be completed, and he will meet God wrapped in the garments of the shroud, inevitably." },
@@ -220,6 +230,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Accepted and turned away", formalTitle: "The first sight of the House",
     overview: "The stage at which the journey arrives, and Ghazali attaches to it the largest of the parallels — and then a general rule for all of them.",
+    thesis: "Arriving is given the largest promise in the book, and it is a promise about seeing rather than about having arrived.",
     moves: [
       { title: "Give the moment", body: "When you first catch sight of the House, hold in your heart what it is — and take it as though you were seeing the Lord of the House, from the sheer weight of what you are giving Him." },
       { title: "Give the hope", body: "Hope that God will let you see His face, as He has let you see His House. And thank Him for getting you this far and putting you among the people who arrive." },
@@ -240,6 +251,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Not your body", formalTitle: "The circling, and what is actually circling",
     overview: "The most doctrinally loaded passage in the book. Ghazali says what the circling is, denies the obvious reading of it, and then explains what a rite is.",
+    thesis: "The circling that counts is the heart going round, and the House is a visible stand-in for a presence no eye can see.",
     moves: [
       { title: "Say what it is", body: "Circling the House is a prayer. So bring to it the same reverence, fear, hope and love the Book of Prayer set out." },
       { title: "Give the resemblance", body: "In circling you are imitating the angels who surround the Throne and go round it." },
@@ -260,6 +272,7 @@ export const book07Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "A stair", formalTitle: "The two worlds, and what the method yields",
     overview: "The doctrine underneath the whole chapter, stated once and briefly, and it explains why any of the readings work at all.",
+    thesis: "The doctrine holding the whole chapter up is stated once and briefly: an outward act can be a resemblance, and resemblance carries a promise of its own.",
     moves: [
       { title: "State the relation", body: "The world of sovereignty and the seen is a stair to the world of the unseen and the Kingdom — for one to whom God opens the door." },
       { title: "Give the instance", body: "To this correspondence the indication was made, that the Frequented House in the heavens is opposite the Kaaba — for the circling of the angels around it is like the circling of humans around this House." },

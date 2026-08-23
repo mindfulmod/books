@@ -20,6 +20,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The excellence of intention", formalTitle: "The excellence of intention",
     overview: "The book opens on the most quoted sentence in the tradition, and Ghazali's first job is to keep it from being read as a slogan.",
+    thesis: "The most quoted sentence in the tradition opens the book, and the rest of it is an attempt to say what it means.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports on intention are assembled first, headed by the report that acts are only by intentions, which the following chapters will spend most of their effort qualifying." },
       { title: "Announce the three parts", body: "The book has a part on the reality of intention and its meaning, a part on sincerity and its realities, and a part on truthfulness and its reality. The three are treated as one subject examined at increasing depth." },
@@ -40,6 +41,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Knowledge, will, power", formalTitle: "The reality of intention",
     overview: "The definition the whole book runs on. Ghazali builds it out of an analysis of any voluntary act at all, which is what lets him say later that an intention cannot be manufactured.",
+    thesis: "Intention is defined out of components, and the definition is what the whole book runs on.",
     moves: [
       { title: "Collapse the vocabulary", body: "Intention, will, and purpose are expressions converging on one meaning: a state and attribute of the heart, flanked by two things, a knowledge and an act." },
       { title: "Order the two", body: "The knowledge precedes it, because it is its root and its condition. The act follows it, because it is its fruit and its branch. The order is not incidental; the rest of the book depends on it." },
@@ -60,6 +62,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The act takes its ruling", formalTitle: "The classes of intentions",
     overview: "A short bridge chapter that states the mechanism the founding report describes, in one sentence, and it is the sentence the whole book is a commentary on.",
+    thesis: "A short bridge chapter stating the mechanism the classification depends on.",
     moves: [
       { title: "State the mechanism", body: "The act follows the motive behind it and acquires its ruling from it. This is what the report about acts and intentions is asserting, put as a rule about causes." },
       { title: "Note what follows immediately", body: "If the act takes its ruling from the motive, then two people performing identical acts may be in wholly different positions, and one person performing an act may be in a different position at the end of it than at the start." },
@@ -80,6 +83,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Better than the act", formalTitle: "The secret of the saying that the believer's intention is better than his action",
     overview: "A model of Ghazali's method. He takes a famous saying, walks through three plausible explanations of it, breaks each one, and only then gives his own.",
+    thesis: "A famous saying is taken apart and rebuilt, which is Ghazali's method in miniature.",
     moves: [
       { title: "The first explanation, and its break", body: "One might suppose the preference is because intention is a secret that none but God sees while the act is outward, and secret acts have merit. This is true in itself but is not what is meant: if a person intended to remember God in his heart, the generality of the saying would make the intention to reflect better than the reflecting." },
       { title: "The second, and its break", body: "One might suppose it is because the intention lasts to the end of the act while acts do not last. This is weak, because it reduces to saying that much action is better than little. And it is not even so: the intention in prayer may last only a few moments while the acts continue." },
@@ -100,6 +104,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "What cannot be converted", formalTitle: "The detail of the acts connected with intention",
     overview: "The first of the two great restrictions. Ghazali divides all acts into three classes and states flatly that one of them is outside the reach of intention entirely.",
+    thesis: "All acts divide three ways with respect to intention, and this is the first of two great restrictions.",
     moves: [
       { title: "Divide the acts", body: "Acts, however many kinds they divide into, are three classes: acts of disobedience, acts of obedience, and permissible acts. The three are governed differently, which is why the general rule needed this chapter." },
       { title: "State the restriction", body: "Acts of disobedience do not change from their place by intention. The ignorant should not understand from the generality of the report that a wrong act turns into an act of obedience by intention." },
@@ -120,6 +125,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "You cannot just decide", formalTitle: "That intention is not subject to choice",
     overview: "The chapter that changes how the rest of the book is read. Ghazali describes exactly what most people do when told to have a good intention, and says it is not an intention at all.",
+    thesis: "Intention cannot be chosen — which changes how everything before and after it should be read.",
     moves: [
       { title: "Describe the mistake", body: "The ignorant hears the counsel to improve and multiply intentions, along with the report that acts are only by intentions, and says to himself, at his teaching or his trading or his eating, that he intends to teach for God or to eat for God, and supposes that to be an intention." },
       { title: "Refuse it", body: "Far from it. That is talk of the self and talk of the tongue and thought, or a passage from one passing notion to another, and intention is far removed from all of that. Intention is only the rousing of the soul and its turning and inclining toward what has appeared to it to hold its purpose, immediately or later." },
@@ -140,6 +146,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The excellence of sincerity", formalTitle: "The excellence of sincerity",
     overview: "Part Two opens. The testimony is gathered again, and one report in it becomes the hinge of the argument in Part Three.",
+    thesis: "Part Two opens on sincerity, with the testimony gathered and one report doing most of the work.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports commending sincerity are assembled, including the command to worship God making the religion sincerely His, before any definition is given." },
       { title: "Carry the report of the three", body: "Among the reports is the one about the first three brought to judgement, in which a scholar is asked what he did with what he knew and answers truthfully as to the deeds, and is told that he lies, because he wanted it said that he was a scholar." },
@@ -160,6 +167,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Pure milk", formalTitle: "The reality of sincerity",
     overview: "The definition, and one of the most startling analytic moves in the Ihya. Ghazali defines sincerity so strictly by its form that it produces a conclusion he states without flinching.",
+    thesis: "The definition of sincerity contains the most startling analytic move in the book: by it, a man giving purely for show is sincere.",
     moves: [
       { title: "Define by purity", body: "Everything that can be mixed with something else, when it is clarified of the admixture and freed from it, is called pure, and the act so clarified is called sincerity. The Quranic image is pure milk, between dung and blood, palatable to the drinkers; its purity is that there be in it no admixture of anything that could mingle with it." },
       { title: "Name the opposite", body: "Sincerity is opposed by associating, so whoever is not sincere is associating, except that association has degrees, some hidden and some plain." },
@@ -180,6 +188,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "What the masters said", formalTitle: "The sayings of the masters on sincerity",
     overview: "A collection that is really an argument. Ghazali gathers the famous definitions and, for each one, says which single blight it addresses, so that the collection becomes a map instead of a list.",
+    thesis: "A collection of the masters' sayings that is really an argument about which fault each one addresses.",
     moves: [
       { title: "The first saying and its scope", body: "Al-Susi said sincerity is not being able to see your own sincerity — because anyone who notices sincerity in his sincerity has a sincerity that needs its own sincerity. Ghazali reads that as being about clearing self-satisfaction out of the act, and notes it deals with one fault only." },
       { title: "The comprehensive one", body: "Sahl said sincerity is that everything you do and everything you refrain from is for God alone. Ghazali calls that the definition that gathers the rest up, and puts Ibrahim ibn Adham's version — sincerity is meaning it honestly with God — alongside it." },
@@ -200,6 +209,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "The second grade", formalTitle: "The degrees of the admixtures and blights that trouble sincerity",
     overview: "The most practically useful chapter in the book, and the one that catches serious readers. Ghazali describes two grades of showing off, and the second is dressed as a good.",
+    thesis: "The most practically useful chapter: the degrees of mixture, and which of them leave anything standing.",
     moves: [
       { title: "Sort the blights", body: "The blights that disturb sincerity are some plain and some hidden, some weak along with being plain, and some strong along with being hidden. The differences in degree are not understood except by an example." },
       { title: "The first grade", body: "The devil enters upon a man praying, sincere in his prayer, when a group looks at him or someone comes in, and says: beautify your prayer, so that this person present looks at you with an eye of dignity and does not disdain you or speak against you. So his limbs become humble, his extremities still, and his prayer beautiful. This is manifest showing off, and it is not hidden even from beginners." },
@@ -220,6 +230,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "The arithmetic", formalTitle: "The ruling on a mixed act and the meriting of reward by it",
     overview: "Ghazali refuses to leave the question of a partly sincere act as a warning, and gives an explicit rule with four outcomes. He also marks it as his own judgement.",
+    thesis: "Ghazali refuses to leave the mixed act unresolved, and gives a rule while saying plainly that God alone knows.",
     moves: [
       { title: "Frame the disagreement", body: "When an act is not pure and an admixture of showing off or of the soul's shares mingles with it, people have differed over whether it merits reward, or punishment, or nothing at all, so that it is neither for a person nor against him." },
       { title: "Settle the clear cases", body: "If nothing was meant but display, it counts against him, full stop. If the act was purely for God, it earns reward. The only real question is about the mixed case." },
@@ -240,6 +251,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "The excellence of truthfulness", formalTitle: "The excellence of truthfulness",
     overview: "Part Three opens on what looks like the simplest of the three subjects and turns out to be the widest.",
+    thesis: "Part Three opens on what looks like the simplest of the three and turns out to have six meanings.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports praising truthfulness are gathered, and in the Quran's own ordering the truthful come immediately after the prophets." },
       { title: "Signal the widening", body: "The next chapter will show that the word is used in six meanings, of which speech is only the first, so the testimony gathered here is not testimony about honesty alone." },
@@ -260,6 +272,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Speech, intention, resolve", formalTitle: "The reality of truthfulness, its meaning and its degrees: the first three",
     overview: "The first half of Ghazali's list. The three are ordered by how much of a person they involve, and the second of them turns out to be sincerity under another name.",
+    thesis: "The first three meanings of truthfulness, ordered by how much of a person each one reaches.",
     moves: [
       { title: "Enumerate the six", body: "Truthfulness is used in six meanings: in speech, in intention and will, in resolve, in fulfilling the resolve, in action, and in realising all the stations of religion. Whoever has all of them is a siddiq." },
       { title: "The first: speech", body: "Truthfulness of the tongue is only in reporting, or in what entails a report and points to it, and the report concerns either the past or the future, and into the future enters keeping a promise and breaking it. It is a right upon every servant to guard his words and speak only truth, and this is the best known and most manifest of the kinds." },
@@ -280,6 +293,7 @@ export const book37Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Fulfilment, action, stations", formalTitle: "The reality of truthfulness, its meaning and its degrees: the last three",
     overview: "The second half of the list, and the closing of the book. The fourth meaning is harder than the third, the fifth inverts the treatment for showing off, and the sixth is named as rare.",
+    thesis: "The last three, ending on a level Ghazali says many eminent Companions did not reach — which is what makes it a level rather than a demand.",
     moves: [
       { title: "The fourth: fulfilment", body: "Truthfulness in fulfilling the resolve is harder than truthfulness in the resolve, because people are generous with resolve and then flinch at fulfilment, from its severity and from the stirring of appetite when the occasion and the means arrive." },
       { title: "Give the Quranic case", body: "Among them are those who covenanted with God that if He gave them of His bounty they would give charity and be among the righteous; and when He gave them of His bounty they were miserly with it and turned away. So He made the resolve a covenant, made breaking it a lie, and made fulfilling it truthfulness." },

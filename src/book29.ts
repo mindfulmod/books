@@ -7,6 +7,7 @@ type Seed = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
+  thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -58,6 +59,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "A contested garment", formalTitle: "The censure of pride",
     overview: "Ghazali opens the book by gathering the censure of pride from the Quran and the prophetic reports. The severity is stated in the sharpest terms the material allows, and the reason given is not that pride is unpleasant company but that it lays a claim on a description belonging to God alone.",
+    thesis: "Pride is condemned as something swelling inside the heart, not as a social position — so it cannot be read off where somebody sits.",
     moves: [
       { title: "Name the contested attribute", body: "The censure is framed by the divine saying that greatness is a cloak and majesty a waist-wrapper, and that whoever contests them is broken. Pride is condemned as a claim, not merely as a bad manner." },
       { title: "State the measure", body: "The reports set the disqualifying quantity at a mustard seed's weight in the heart, which places pride among the conditions that cannot be safely held in reserve." },
@@ -78,6 +80,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The gait and the hem", formalTitle: "The censure of strutting and displaying the marks of pride in gait and dress",
     overview: "Having condemned it in general, he turns to how it shows: a way of carrying yourself that advertises what is going on inside. The reports are against the trailing hem and the swagger, and every story that follows works the same way — by bringing the strutting man back to some plain fact about his own body.",
+    thesis: "How pride shows: a bearing that advertises the inside, and stories that all work by returning the strutting man to a fact about his body.",
     moves: [
       { title: "Identify the outward tell", body: "Gait, the deliberately trailing garment, and the tilted bearing are named because they broadcast a claim of superiority without a word being spoken." },
       { title: "Note the corrective method", body: "Hasan al-Basri, Tawus, and Mutarrif each interrupt a strutting man not with a rule but with a reminder of what a body contains, begins as, and becomes." },
@@ -98,6 +101,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Lowered and raised", formalTitle: "The excellence of humility",
     overview: "Ghazali balances the censure with a long gathering on humility's worth. The governing report is that no one lowers himself for God without being raised, and the examples chosen show humility as an active practice of proximity rather than a mood of self-deprecation.",
+    thesis: "Humility is praised at length and immediately bounded — humble without being abject.",
     moves: [
       { title: "State the exchange", body: "The central saying is that God adds nothing to a servant through pardon except honour, and that no one humbles himself for God without being raised by God." },
       { title: "Qualify it immediately", body: "The report praises being humble without being abject, which sets up the boundary he works out fully in the section on how far the training goes." },
@@ -118,6 +122,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Three beliefs and a swelling", formalTitle: "The reality of pride and its bane",
     overview: "This is the analytical centre of Part One. Ghazali separates pride as an inward disposition from the acts it produces, specifies the exact beliefs required to generate it, and then explains why a state so small can be treated as a barrier to every virtue at once.",
+    thesis: "Pride needs three beliefs, not one, which is why thinking well of yourself is not yet pride.",
     moves: [
       { title: "Split the inward from the outward", body: "Pride proper is a disposition in the soul; the behaviours are its fruits. When it shows on the limbs it is called takabbur, and when it does not, the person is said to have pride within him." },
       { title: "Specify the three beliefs", body: "Pride needs three things: you put yourself at some level, you put somebody else at some level, and you place yours above theirs. Thinking well of yourself alone will not do it, and neither will looking down on somebody alone." },
@@ -138,6 +143,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Three objects of pride", formalTitle: "The object of pride, its degrees, divisions, and fruits",
     overview: "Ghazali classifies pride by what it is directed at: God, the messengers, or other people. The third looks mildest and receives the longest treatment, because he argues that it is grave for two separate reasons and that it reliably grows into the first two.",
+    thesis: "Pride sorts by what it is aimed at, and one of the three objects makes it something worse than a fault of character.",
     moves: [
       { title: "Pride toward God", body: "The most extreme form has no source but sheer ignorance and tyranny, and appears in those who refused the very status of servant." },
       { title: "Pride toward the messengers", body: "Here the refusal is to submit to a human being like oneself. Ghazali distinguishes those whose pride blocked them from even recognising the truth from those who recognised it and could not bring themselves to acknowledge it." },
@@ -158,6 +164,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Seven grounds", formalTitle: "The things through which people become proud",
     overview: "No one is proud without magnifying himself, and no one magnifies himself without believing he holds some perfection. Ghazali reduces the whole field to seven grounds, two religious and five worldly, then shows in detail why the religious two are the most dangerous.",
+    thesis: "Nobody is proud without magnifying himself, so the question becomes what people magnify themselves by.",
     moves: [
       { title: "Name the seven", body: "The religious grounds are knowledge and works; the worldly are lineage, beauty, strength, wealth, and numerous supporters. Every case reduces to one of these." },
       { title: "Explain why knowledge is fastest", body: "Learning readily produces a man who expects to be greeted first, treats a courtesy as a debt owed to him, and looks at ordinary people as though at cattle, while in the matter of the hereafter he fears for them more than for himself and hopes for himself more than for them." },
@@ -178,6 +185,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Four motives", formalTitle: "The motives that provoke pride and the causes that inflame it",
     overview: "Ghazali distinguishes the single inward cause of pride from the several causes of its outward expression, and in doing so produces the diagnostic that organises the rest of the book: a test that separates pride from ostentation by asking what survives solitude.",
+    thesis: "The inward cause of pride is single; the things that provoke it are many, and Ghazali keeps them apart.",
     moves: [
       { title: "One cause within", body: "Inward pride has a single source, which is conceit. When a person is pleased with himself, with his knowledge, or with his works, he magnifies himself and becomes proud." },
       { title: "Three loci for the outward act", body: "Outward pride has causes located in the proud person, in the person he is proud toward, or in neither: giving conceit, rancour and envy, and ostentation, or four drivers in total." },
@@ -198,6 +206,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Where it actually shows", formalTitle: "The character of the humble, and where humility and pride actually appear",
     overview: "Ghazali moves from analysis to inventory. Pride shows in bearing, glance, voice, gait, sitting, and every ordinary transaction, and he lists the specific places where the two dispositions become legible, ending with the hardest case, which is dress.",
+    thesis: "Pride and humility both show in bearing and speech, and this section is the inventory rather than the analysis.",
     moves: [
       { title: "List the ordinary occasions", body: "Loving that people stand for you; not visiting others even when the visit would benefit them; refusing to let someone sit beside you rather than before you; not walking unless others walk behind; doing no work with your own hands at home; not carrying your own goods from the market; and how you bear being insulted." },
       { title: "Give the counter-examples concretely", body: "Sufyan al-Thawri comes when summoned so that his humility can be seen tested; Umar ibn Abd al-Aziz fills the lamp himself rather than wake a sleeping servant, and observes that he left as Umar and returned as Umar with nothing diminished." },
@@ -218,6 +227,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Uprooting the root", formalTitle: "Treating pride, first station: uprooting the root by knowledge and practice",
     overview: "Ghazali announces two stations of treatment and takes the first here: pulling the tree out of its bed in the heart. The cure has a knowledge half and a practice half, and he states plainly that neither completes the healing without the other.",
+    thesis: "The first station of treatment goes at the root by knowledge, before any behaviour is addressed.",
     moves: [
       { title: "State the two halves", body: "The knowledge half is that a person come to know himself and know his Lord, which suffices to remove pride; the practice half is humility toward God in act and toward creation by persisting in the conduct of the humble." },
       { title: "Walk the three stages of the self", body: "The meditation follows a single Quranic passage through beginning, middle, and end: a person who was not a thing mentioned, then made from a despised drop, then made to die and be buried, then raised when God wills." },
@@ -238,6 +248,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Five tests", formalTitle: "Treating pride, second station: the seven grounds and the five tests",
     overview: "The second station treats pride as it arises from each of the seven specific grounds, and closes with five practical trials. Ghazali notes that the soul may sincerely claim to be free of pride and be lying, and that only the trials will show it.",
+    thesis: "The second station takes the seven grounds one at a time, because a general cure does not reach a particular pride.",
     moves: [
       { title: "Treat the external grounds first", body: "Lineage, beauty, strength, wealth, and supporters are treated as pride in something outside oneself. A man proud of his wealth is proud of his horse and his house, and would be lowly again if the horse died; a man proud of a ruler's favour has built on a heart more agitated than a boiling pot." },
       { title: "Give the scholar two knowledges", body: "The proof against the learned is more binding, and what is borne from the ignorant is not borne from them; and greatness suits God alone, who has said that a servant has worth with Him so long as he sees no worth for himself." },
@@ -258,6 +269,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "The mean", formalTitle: "The limit of training in the disposition of humility",
     overview: "Ghazali closes Part One by placing humility on the same scheme as every other trait: two extremes and a mean. The excess is pride; the deficiency is self-abasement and flattery; and the praiseworthy state is justice, which gives each his due.",
+    thesis: "Humility sits on the same scale as everything else in the Ihya: there is a deficiency below it as well as an excess above.",
     moves: [
       { title: "Name all three positions", body: "The side inclining to excess is called pride, the side inclining to deficiency is called self-abasement and degradation, and the middle is humility." },
       { title: "Show that the deficiency is a real fault", body: "A scholar who gives up his seat to a cobbler, straightens the man's sandals, and runs behind him to the door has descended into abasement, and this is not praiseworthy either." },
@@ -278,6 +290,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Two ways to stop trying", formalTitle: "The censure of conceit",
     overview: "Part Two opens on conceit. Ghazali gathers its censure and then reports the saying that pairs it with despair, and the reason given for the pairing turns out to be the whole argument of this half of the book.",
+    thesis: "Conceit is separated from pride because it needs no other person — which makes it harder to notice.",
     moves: [
       { title: "Gather the censure", body: "The Quranic instances chosen are Hunayn, where numbers pleased the believers and availed nothing; those who supposed their fortresses would protect them; and those who reckon they are doing good work." },
       { title: "Note that error is no protection", body: "Ghazali observes at once that a person may be conceited about a deed in which he is mistaken exactly as about one in which he is right, which prepares the eighth kind treated at the end of the book." },
@@ -298,6 +311,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "What conceit does next", formalTitle: "The bane of conceit",
     overview: "Ghazali enumerates the consequences. Conceit is not treated as a discrete fault but as a generator, and the list moves outward from its effect on pride, through its effect on the accounting of sins and works, to its effect on a person's capacity to learn anything at all.",
+    thesis: "Conceit is treated as a cause rather than a symptom, and the consequences are enumerated as its fruits.",
     moves: [
       { title: "It produces pride", body: "Conceit is one of the causes of pride, so from conceit is born pride and from pride the many banes already described." },
       { title: "It disables the accounting of sins", body: "Some sins he does not recall or inspect, supposing himself in no need of inspecting them; those he does recall he belittles rather than magnifies, and so makes no serious effort to repair them." },
@@ -318,6 +332,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Three states and a claim", formalTitle: "The reality of conceit and presumption, and their definitions",
     overview: "This is the sharpest analysis in Part Two. Ghazali takes a real perfection a person actually possesses, distinguishes three possible states toward it, identifies exactly one of them as conceit, and then defines the further condition that goes beyond it.",
+    thesis: "The sharpest analysis in the second part: a real quality, correctly perceived, and a false conclusion drawn from it.",
     moves: [
       { title: "Grant the perfection", body: "Conceit only ever concerns a quality that genuinely is a perfection. The analysis does not depend on the person being wrong about what he has." },
       { title: "Name the first two states", body: "He may fear its loss and be anxious that it be spoiled or stripped away, and this is not conceit. Or he may not fear its loss but rejoice in it as a blessing from God rather than as something attributed to himself, and this is not conceit either." },
@@ -338,6 +353,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "Who holds the keys", formalTitle: "The general treatment of conceit",
     overview: "Every illness is treated by its contrary, and the cause of conceit is pure ignorance, so its treatment is the knowledge that contradicts that ignorance. Ghazali runs the argument as a dilemma and closes every exit, then gives the parable that makes it usable.",
+    thesis: "Every illness is treated by its opposite, so the treatment for conceit is fixed once its cause is named.",
     moves: [
       { title: "Pose the dilemma", body: "Ask on what basis you are pleased with the act: as its locus, or as its producer. If as its locus, a receptacle is subject and passageway and contributes nothing to bringing a thing about, so there is nothing there to be pleased with." },
       { title: "Follow the second horn", body: "If as its producer, by your choice and your power, then examine where that power, will, limbs, and enabling conditions came from. If all of it is God's gift without prior claim, then the wonder belongs to His generosity, not to yourself." },
@@ -358,6 +374,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "Counted as provision", formalTitle: "The chain of causes: that there is no agent but God",
     overview: "Ghazali extends the argument outward to the complaint that lies beneath much conceit: the sense that the distribution of gifts is unjust. He answers it with a test that the complainant can run on himself, then returns to conceit with the cases of David and Hunayn.",
+    thesis: "The complaint underneath conceit is answered by extending the chain of causes until nothing is left that you gave yourself.",
     moves: [
       { title: "State the complaint", body: "An intelligent man in poverty looks at a heedless man in wealth and comes close to seeing injustice, asking why he was denied a day's food while the ignorant were given the comforts of the world." },
       { title: "Show the complaint is incoherent", body: "Had both been given to him, the poor and ignorant man would have the same complaint with better standing. Ali's answer is that a man's intellect is reckoned as part of his provision." },
@@ -378,6 +395,7 @@ export const book29Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "Eight kinds", formalTitle: "The kinds of conceit and the detail of their treatment",
     overview: "Ghazali closes the book by sorting conceit into eight kinds with a treatment for each. The list overlaps the seven grounds of pride but is not identical, because conceit can attach to things no one would boast of, and the last kind is the one he calls hardest of all.",
+    thesis: "Eight kinds of conceit, each with its own treatment, because the general cure does not reach the particular case.",
     moves: [
       { title: "Give the first four", body: "Conceit in the body, in strength, in intellect, and in noble lineage. Each treatment recalls how quickly the thing can be removed: a fever dissolves strength beyond recovery, a slight illness of the brain deranges the mind." },
       { title: "Give the treatment for intellect", body: "Its fruit is acting on one's own opinion alone, abandoning consultation, and deeming dissenters fools. The remedy is precise: measure your intellect from others rather than from yourself, and from your adversaries rather than your friends, since the flatterer praises and increases the conceit; and look at fools delighted by their own intellect while people laugh at them, and fear being one of them without knowing." },

@@ -7,6 +7,7 @@ type Seed = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
+  thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -54,6 +55,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "When being known becomes a goal", formalTitle: "The censure of fame and spreading renown",
     overview: "Ghazali opens by warning against deliberately seeking a name that circulates among people. The danger is not that every beneficial person becomes unknown. It is that being known becomes a reward pursued for itself and begins governing religious work.",
+    thesis: "Being known is not the fault; being known becoming the reward is.",
     moves: [
       { title: "Name the object", body: "The censured appetite seeks the expansion of one's name and notice in human hearts, not merely the completion of a useful task." },
       { title: "Separate result from pursuit", body: "Getting known because you taught or served where it was needed, without going after it, is not the same thing as building a name on purpose." },
@@ -74,6 +76,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The shelter of obscurity", formalTitle: "The virtue of obscurity and anonymity",
     overview: "Obscurity can protect the heart from comparison, performance, and the constant management of reputation. Ghazali praises it as a form of safety, not as contempt for society or refusal of every responsibility.",
+    thesis: "Obscurity is praised for what it removes: comparison, performance, and the constant management of a reputation.",
     moves: [
       { title: "Reduce the audience", body: "Fewer people watching means fewer moments spent working out who will praise you, who will criticise, and what it all does for your standing." },
       { title: "Recover ordinary action", body: "A person can serve, worship, learn, and repent without turning each act into evidence for a public identity." },
@@ -94,6 +97,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The appetite for standing", formalTitle: "The censure of status",
     overview: "Status places a person inside the attention and deference of others. Ghazali censures its love when human hearts become a territory to possess and their response becomes a source of control, pleasure, and imagined security.",
+    thesis: "Status is censured when other people's hearts become territory to hold.",
     moves: [
       { title: "Locate the possession", body: "Status is held not in a chest but in other people's beliefs, praise, assistance, preference, and willingness to defer." },
       { title: "See the instability", body: "Because the possession lives in changing hearts, it requires repeated performance and remains vulnerable to rumor, criticism, and replacement." },
@@ -114,6 +118,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "What status actually is", formalTitle: "The reality of status",
     overview: "Ghazali defines status with precision: it is a position in people's hearts produced by their belief in a person's excellence. That inward belief then yields outward effects such as praise, service, support, preference, and respect.",
+    thesis: "Status is belief in your excellence held inside other people — which is exactly where its instability comes from.",
     moves: [
       { title: "Begin with belief", body: "Status begins when another person attributes excellence, usefulness, knowledge, power, lineage, or character to the subject." },
       { title: "Follow belief into conduct", body: "The attributed quality changes how the observer speaks, assists, obeys, gives access, or yields priority." },
@@ -134,6 +139,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Why status can exceed wealth", formalTitle: "Why status is naturally loved more than wealth",
     overview: "Status can be loved more intensely than money because it can generate money, feels harder to steal, and reproduces through the speech of admirers. Yet this apparently durable asset is still lodged in changing human judgment.",
+    thesis: "Status is loved harder than money because it generates money, cannot be stolen, and reproduces through other people's speech.",
     moves: [
       { title: "Status procures means", body: "Influence can draw service, opportunity, gifts, protection, and wealth without each benefit being purchased directly." },
       { title: "It appears less vulnerable", body: "A store of money can be taken at once, while a reputation seems distributed across many minds and therefore safer." },
@@ -154,6 +160,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Real and imagined perfection", formalTitle: "True perfection and imaginary perfection",
     overview: "The appetite for status borrows strength from the human love of perfection. Ghazali separates qualities that truly perfect the person from images of completeness created by possessions, followers, and control over what cannot remain.",
+    thesis: "The appetite for status runs on the human love of being complete, which is why images of completeness work on it.",
     moves: [
       { title: "Honor the original desire", body: "Wanting completion is not itself the error. The error begins when a temporary sign is mistaken for the reality it is meant to indicate." },
       { title: "Test dependence", body: "A perfection that disappears when observers, titles, wealth, or bodily power depart cannot be the stable completion the heart seeks." },
@@ -174,6 +181,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Useful standing and its excess", formalTitle: "What is praised and censured in love of status",
     overview: "Some measure of standing may be needed to live, teach, protect rights, or carry responsibility among people. Ghazali therefore distinguishes limited, truthful, instrumental status from limitless appetite and deception.",
+    thesis: "Some standing is genuinely needed, so the fault is limitlessness and deception rather than the thing itself.",
     moves: [
       { title: "Name the needed function", body: "Trust and recognized competence may be required before a person can teach, adjudicate, organize, or protect a claim." },
       { title: "Limit the measure", body: "The standing should not exceed what the task actually needs or become a general demand for distinction." },
@@ -194,6 +202,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Why praise tastes sweet", formalTitle: "Causes of loving praise and disliking blame",
     overview: "Ghazali gives four causes for pleasure in praise: it confirms a desired perfection, signals possession of the praiser's heart, may spread through an influential voice, and demonstrates standing over the speaker. Blame reverses these pleasures and threatens the constructed position.",
+    thesis: "One compliment pays four different rewards at once, and treatment only starts once you name which one you were enjoying.",
     moves: [
       { title: "Confirmation", body: "Praise can feel like evidence that a quality the self hopes to possess is real." },
       { title: "Possession of a heart", body: "The pleased person enjoys knowing that another person's inward judgment has become favorable." },
@@ -214,6 +223,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Treating love of status", formalTitle: "The treatment of love of status",
     overview: "Treatment joins knowledge and action. Knowledge exposes the instability, anxiety, and mortality of standing. Action reduces covetous dependence on what people can grant and deliberately practices conditions in which the name is less protected.",
+    thesis: "Treating love of status pairs knowledge with action: seeing what standing is worth, and practising conditions where it is not protected.",
     moves: [
       { title: "See impermanence", body: "A position held in other hearts can change quickly and cannot accompany the person beyond death." },
       { title: "Count present anxiety", body: "Status is not only a future loss. Preserving it creates present fear, compromise, monitoring, and rivalry." },
@@ -234,6 +244,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Treating love of praise", formalTitle: "The treatment of love of praise",
     overview: "Praise is treated by returning judgment to its proper source, testing whether the praised quality is real, and refusing to treat favorable speech as security. If the quality is absent, praise is dangerous misinformation. If present, it remains vulnerable to loss and mixed intention.",
+    thesis: "Praise is treated by asking whether the quality is real, which forks into two quite different problems.",
     moves: [
       { title: "Ask whether it is true", body: "If the praised quality is not present, pleasure rests on error and should produce concern rather than confidence." },
       { title: "Ask whether it endures", body: "A real quality can weaken, become corrupted by self-admiration, or fail before completion, so present praise does not guarantee an ending." },
@@ -254,6 +265,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Treating fear of criticism", formalTitle: "The treatment of dislike of blame",
     overview: "Ghazali distinguishes criticism that is true and well intended, true and hostile, or false. Each requires a different response. The first offers correction, the second still exposes a real fault, and the third becomes a test of patience rather than proof.",
+    thesis: "Criticism divides three ways, and each kind calls for a different response.",
     moves: [
       { title: "True and advising", body: "Take the correction as a favour: they are right, and they meant well by telling you." },
       { title: "True and hostile", body: "Reject the malice without rejecting the fact. An enemy may still reveal what a friend avoided saying." },
@@ -274,6 +286,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Four states before praise and blame", formalTitle: "Four states of people in relation to praise and blame",
     overview: "The first part closes with four states. A person may be governed outwardly and inwardly, restrained outwardly while still affected inside, equal toward praise and blame, or so reversed that praise is feared as trial and criticism welcomed as correction. Ghazali sets a realistic intermediate aim for ordinary readers.",
+    thesis: "Four states before praise and blame, with a realistic intermediate aim named for ordinary readers.",
     moves: [
       { title: "Governed outside and inside", body: "Praise energizes and blame stops the person, while the heart openly wants the audience's favorable judgment." },
       { title: "Restrained outside, moved inside", body: "Conduct remains steadier, but pleasure and pain still reveal dependence in the heart." },
@@ -294,6 +307,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "What ostentation is", formalTitle: "The censure and reality of ostentation",
     overview: "Part Two defines ostentation as seeking status in people's hearts through acts of worship. The act may retain its religious appearance while its practical audience and expected reward shift toward human notice.",
+    thesis: "Ostentation is seeking standing in people's hearts through acts of worship, with the act keeping its religious form throughout.",
     moves: [
       { title: "Keep the outward act fixed", body: "The diagnosis begins with a deed that appears devotional or morally serious." },
       { title: "Locate the human audience", body: "The person wants observers to form a favorable belief about devotion, restraint, knowledge, or character." },
@@ -314,6 +328,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Five forms of display", formalTitle: "The five outward forms through which display occurs",
     overview: "Ghazali groups the vehicles of display into five: body and appearance, attire and presentation, speech, action, and associates or visitors. The taxonomy widens diagnosis beyond obviously public ritual.",
+    thesis: "Display travels through five vehicles, which widens the diagnosis well past obviously public ritual.",
     moves: [
       { title: "Body", body: "Physical appearance can be arranged to imply fasting, night worship, grief, austerity, or intense religious labor." },
       { title: "Attire and speech", body: "Clothing, vocabulary, tone, remembered reports, and public counsel can be shaped to signal a desired religious identity." },
@@ -334,6 +349,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "Degrees of mixed motive", formalTitle: "Degrees of ostentation by intention, act, and sought purpose",
     overview: "The text analyzes degree through three pillars: the intention, the act displayed, and the worldly purpose sought. Within intention it distinguishes audience as the sole initiator, a weak devotional motive, equal motives, and a sincere motive that is strengthened by being seen.",
+    thesis: "Degree is analysed through three pillars, and the intention pillar alone has four gradations.",
     moves: [
       { title: "Inspect the initiator", body: "Ask whether the act would begin at all without observers, or whether a sincere purpose already had enough force to start it." },
       { title: "Inspect the displayed object", body: "Display may attach to the root act, to its qualities and completions, or to external additions that make it more visible." },
@@ -354,6 +370,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "The hidden traces", formalTitle: "Hidden ostentation and pleasure at disclosure",
     overview: "Ostentation can remain after obvious performance has been removed. An audience may make the act easier, disclosure may feel sweet afterward, or hidden work may create an expectation of special treatment even when no one knows its source.",
+    thesis: "Ostentation survives the removal of an audience, which is what makes the hidden kind harder to catch than the obvious kind.",
     moves: [
       { title: "Direct initiation", body: "The clearest trace is an act that would not occur without an observer." },
       { title: "Audience as energy", body: "A person may act alone yet become noticeably quicker, longer, or more careful when someone appears." },
@@ -374,6 +391,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "What affects an act", formalTitle: "What nullifies an act and what does not",
     overview: "Ghazali examines when an audience motive is present, whether it changes or continues the act, and whether later pleasure was deliberately pursued. The analysis is detailed and belongs with the complete legal and theological discussion, not a simple app score.",
+    thesis: "What actually nullifies an act is a detailed legal question, and Ghazali treats it as one.",
     moves: [
       { title: "Before the act", body: "A motive that determines whether the act begins must be distinguished from a thought that arrives without acceptance." },
       { title: "During the act", body: "If the audience changes continuation, quality, length, or effort, the new motive has entered the living structure of the deed." },
@@ -394,6 +412,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 18, shortTitle: "Two stages of treatment", formalTitle: "The treatment of ostentation",
     overview: "Treatment has two stages. First, uproot the deeper love of praise, fear of criticism, and desire for what people possess. Second, repel the live sequence through which a passing awareness becomes pleasure, desire, and resolve.",
+    thesis: "Treatment runs in two stages: uproot the roots, and interrupt the live sequence when it starts.",
     moves: [
       { title: "Uproot the roots", body: "Knowledge exposes the cost of human judgment, while concealed practice weakens dependence on its reward." },
       { title: "Notice the sequence", body: "An audience is noticed, desire for its response appears, pleasure follows, and resolve may then redirect the act." },
@@ -414,6 +433,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 19, shortTitle: "When public good is permitted", formalTitle: "Permission to display good acts",
     overview: "A good act may be shown when there is a real likelihood that others will imitate it and the person can monitor the heart. Public disclosure after completion can be even more dangerous because speech is easy and exaggeration tempting.",
+    thesis: "A good act may be shown where others are genuinely likely to follow — and disclosure after the fact is the more dangerous case.",
     moves: [
       { title: "Require a public benefit", body: "Visibility needs more than a vague hope. There should be a plausible educational or encouraging effect that cannot be reached as well another way." },
       { title: "Test personal capacity", body: "The person must be able to notice and resist the appetite for distinction rather than assuming a good outcome purifies every motive." },
@@ -434,6 +454,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 20, shortTitle: "Concealing faults without performing virtue", formalTitle: "Permission to conceal sins and faults",
     overview: "Concealing a fault is not automatically ostentation. Valid motives include respecting God's concealment, avoiding the spread of wrongdoing, shame, and preventing a bad example. The boundary is crossed when concealment becomes active manufacture of a false pious identity.",
+    thesis: "Hiding a fault is not display; manufacturing a piety you do not have is.",
     moves: [
       { title: "Honor concealment", body: "A person need not make private sin into public identity, especially where disclosure would spread harm without repairing a right." },
       { title: "Protect others", body: "Keeping it quiet can stop the thing becoming ordinary, stop others copying it, stop a scandal, and spare people who had nothing to do with it." },
@@ -454,6 +475,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 21, shortTitle: "Do not abandon good from fear", formalTitle: "Abandoning acts for fear of ostentation and zeal awakened by others",
     overview: "Stopping a good act merely because people might accuse one of display allows the audience to govern by criticism instead of praise. The text also distinguishes artificial performance from genuine zeal that awakens when seeing others engaged in good.",
+    thesis: "Dropping a good act for fear of looking showy hands the audience control by criticism instead of by praise.",
     moves: [
       { title: "Keep the duty", body: "If an act is sound and required or beneficial, the possibility of social suspicion is not itself a reason to abandon it." },
       { title: "Treat the motive", body: "Continue the good while resisting the desire for praise rather than granting that desire power to cancel the act." },
@@ -474,6 +496,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 22, shortTitle: "Before, during, and after", formalTitle: "What the disciple keeps in heart before, during, and after action",
     overview: "The book closes by carrying vigilance across the whole life of an act. Before it begins, the person seeks contentment with God's knowledge. During it, especially when difficult, motive is watched. Afterward, disclosure is avoided and hidden claims to praise or special treatment are examined.",
+    thesis: "The book closes by carrying vigilance across the whole life of an act, because motive can enter before it starts and after it ends.",
     moves: [
       { title: "Before", body: "Establish why the act should exist and practice being content that God knows it even if no human witness does." },
       { title: "During", body: "Watch for the audience changing energy, pace, completion, beauty, or the imagined reward of the act." },

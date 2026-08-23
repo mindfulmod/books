@@ -20,6 +20,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Two chapters", formalTitle: "The shape of the book",
     overview: "A short book with an unusually tidy architecture: one chapter on why and how a person travels, and one on what he has to know before he goes.",
+    thesis: "One chapter on why and how you travel, one on what a traveller has to know — a tidier architecture than the subject suggests.",
     moves: [
       { title: "Announce the two", body: "The manners from the first rising to the last return, with the intention of travel and its benefit — in two sections; and what a traveller must learn of the dispensations of travel, the indicators of the direction of prayer, and the times." },
       { title: "Note what the second is", body: "A short technical chapter. A traveller loses the ordinary means of knowing where the prayer direction is and when the times fall, and gains dispensations he must know the limits of." },
@@ -40,6 +41,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Flight or seeking", formalTitle: "The first cut",
     overview: "The book's organising division, and it is exhaustive by construction — every journey is one or the other.",
+    thesis: "Every journey is either flight from something or seeking something, and the division is exhaustive by construction.",
     moves: [
       { title: "Place travel", body: "Travel is a kind of movement and mixing, and in it are benefits and it has harms — as we mentioned in the Book of Companionship and the Book of Seclusion." },
       { title: "Give the division", body: "The benefits that impel toward travel are not free of either flight or seeking." },
@@ -60,6 +62,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Plague, and prices", formalTitle: "What is fled: the worldly injuries",
     overview: "The first branch of flight, and the examples are ordinary and unembarrassed.",
+    thesis: "The worldly reasons for leaving are listed plainly and none of them is treated as unworthy.",
     moves: [
       { title: "Name the category", body: "What is fled is either a matter with an injury in worldly affairs." },
       { title: "Give the examples", body: "Like plague and epidemic when it appears in a town, or a fear whose cause is strife or a quarrel, or a rise in prices." },
@@ -80,6 +83,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Status and wealth", formalTitle: "What is fled: the injuries in religion",
     overview: "The second branch of flight, and it is the one that connects this book to the two before it.",
+    thesis: "The second branch of flight is what connects this book to the rest of the quarter.",
     moves: [
       { title: "Name the category", body: "Or a matter with an injury in religion." },
       { title: "Give the first example", body: "Like one afflicted in his town with status and wealth and an abundance of causes that block him from devoting himself to God — so he prefers exile and obscurity, and avoids affluence and status." },
@@ -100,6 +104,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Three knowledges", formalTitle: "What is sought: knowledge",
     overview: "The first branch of seeking, and its three kinds are wider than a reader expects — the third of them is geography.",
+    thesis: "Seeking knowledge covers more ground than a reader expects, and it is sorted into three kinds.",
     moves: [
       { title: "Give the division", body: "What is sought is either worldly, like wealth and status, or religious. And the religious is either knowledge or action." },
       { title: "Give the first kind of knowledge", body: "Either a science among the religious sciences." },
@@ -120,6 +125,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Worship, and visiting", formalTitle: "What is sought: action",
     overview: "The second branch of seeking, and its two halves are treated very differently — one is brief and the other is where the difficulties are.",
+    thesis: "Seeking through action divides in two, and Ghazali treats the halves very differently.",
     moves: [
       { title: "Divide it", body: "Action is either worship or visitation." },
       { title: "Give the worship", body: "Worship is the pilgrimage, the lesser pilgrimage, and struggle in God's path — three journeys with fixed forms, treated at length elsewhere in the work." },
@@ -140,6 +146,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Before setting out", formalTitle: "The manners of departure",
     overview: "The second section treats the journey as a sequence, and its first stage is what is settled before anyone leaves.",
+    thesis: "The journey is treated as a sequence, and it begins before you have left.",
     moves: [
       { title: "Name the scope", body: "The manners from the first rising to the last return — so the sequence begins before departure and ends after arrival home." },
       { title: "Give the settling", body: "Beginning with what is put right before going: wrongs returned, debts settled, and provision left for those who depend on the traveller." },
@@ -160,6 +167,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "On the road", formalTitle: "The manners of the journey itself",
     overview: "The middle of the sequence, and its instructions are mostly about the people a traveller is with rather than about the travelling.",
+    thesis: "The middle of the journey is almost entirely about the people you are travelling with.",
     moves: [
       { title: "Name the register", body: "The manners of the road: how the day is arranged, how the party moves, how the animals are treated, and how the travellers conduct themselves toward one another." },
       { title: "Give a representative instruction", body: "Among them, that the backs of mounts are not to be taken as chairs — and that a rider dismount morning and evening, which is a rule about the animal rather than about the traveller." },
@@ -180,6 +188,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Coming back", formalTitle: "The manners of return",
     overview: "The end of the sequence, and the book insists that a journey is not over when the destination is reached.",
+    thesis: "A journey is not over when you arrive back, which is the point of giving return its own stage.",
     moves: [
       { title: "Name the scope again", body: "To the last return. The section's own title runs to the traveller's arrival home rather than to his arrival anywhere." },
       { title: "Give the shape", body: "The manners of returning: what is said on approach, how a traveller comes back to his household, and what he brings." },
@@ -200,6 +209,7 @@ export const book17Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "What he must know", formalTitle: "The second chapter",
     overview: "The technical chapter, and its subject is precisely what a traveller stops being able to take for granted.",
+    thesis: "The technical chapter covers exactly what changes for a person who is no longer at home.",
     moves: [
       { title: "Name the three", body: "What a traveller must learn of the dispensations of travel, the indicators of the direction of prayer, and the times." },
       { title: "Give the dispensations", body: "Travel gives two dispensations in purification — wiping over footgear, and dry ablution — and two in the obligatory prayer, which are shortening and combining." },

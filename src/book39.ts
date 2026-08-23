@@ -19,6 +19,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The excellence of thought", formalTitle: "The excellence of reflection",
     overview: "The shortest book in the quarter opens the way the others do, and the testimony it gathers is doing something specific: establishing that reflection is an act and not a mood.",
+    thesis: "The shortest book in the quarter opens as the others do, by establishing the rating before the analysis.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports commending reflection are assembled, including the reports that an hour of it outweighs long stretches of other worship, and the account is kept short because the analytic chapters follow immediately." },
       { title: "Signal the structure", body: "The book has four parts: the excellence, the reality of reflection and its fruit, the channels along which it runs, and how to reflect on the creation. Two of the four are definitions." },
@@ -39,6 +40,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Two knowledges", formalTitle: "The reality of reflection",
     overview: "The definition, and it is one of the most precise sentences in the Ihya. Ghazali gives it in a line and then works a single example all the way through.",
+    thesis: "The definition of reflection is one of the most precise sentences in the quarter.",
     moves: [
       { title: "Give the definition", body: "The meaning of thought is bringing two knowledges present in the heart, in order to derive from them a third knowledge." },
       { title: "Set the example", body: "Take someone drawn to what is in front of him, who prefers this life, and who wants to know that the next one deserves preferring. Ghazali says there are two ways he can get there." },
@@ -59,6 +61,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The beginning and the key", formalTitle: "The fruit of reflection",
     overview: "The chapter that earns the book its position in the quarter. Ghazali names the specific fruit narrowly and then shows what follows from it.",
+    thesis: "What reflection produces is what earns the book its place, and it is a chain rather than a feeling.",
     moves: [
       { title: "Name the fruits broadly", body: "The fruit of reflection is knowledges, states, and acts. That is the full list, and Ghazali immediately narrows it." },
       { title: "Name the specific fruit", body: "But its particular fruit is knowledge and nothing else. The other two are consequences rather than products, and the distinction is what the rest of the chapter runs on." },
@@ -79,6 +82,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "The sword's three names", formalTitle: "The six names of one operation",
     overview: "A short lexical passage that is easy to skim and repays not skimming, because it is a lesson in how Ghazali reads vocabulary throughout the Ihya.",
+    thesis: "Six names turn out to describe one operation, which is worth not skimming.",
     moves: [
       { title: "List the names", body: "Bringing the two knowledges present in order to reach the third is called reflection, consideration, recollection, examination, contemplation, and pondering. Six words for one operation." },
       { title: "Sort them", body: "Pondering, contemplation, and reflection are synonyms upon one meaning with no different meanings beneath them. Recollection, consideration, and examination differ in meaning, although the thing named is one." },
@@ -99,6 +103,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Four channels", formalTitle: "The channels along which reflection runs",
     overview: "The map, and Ghazali claims it is exhaustive. He then proves the exhaustiveness with an argument rather than asserting it.",
+    thesis: "A map of where reflection can run, claimed as exhaustive — and then proved to be.",
     moves: [
       { title: "Set the boundary", body: "You can think about religious things or about anything else, and only the first is what this book is about. By religion he means the dealings between a person and God." },
       { title: "Give the first division", body: "Everything you can think about here is either about you — your qualities and your states — or about God, His qualities and His acts. Nothing falls outside those two." },
@@ -119,6 +124,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Three questions", formalTitle: "Reflecting on one's own attributes",
     overview: "The procedure for the first two channels, and it is precise enough to actually run. He sorts what needs examining, then gives three questions to put to each item.",
+    thesis: "The procedure for the first two channels, precise enough to actually run.",
     moves: [
       { title: "Sort what is examined", body: "Both the loved things and the hated things split the same way: the visible ones, which are what you do and do not do, and the hidden ones, which are the traits that save or destroy a person and sit in the heart — the subject of two whole quarters of the Ihya." },
       { title: "Sort the outward further", body: "Acts of disobedience divide into what belongs to the seven limbs and what is ascribed to the whole body, such as fleeing from battle, disobeying parents, and settling in a forbidden dwelling. The division is given so that nothing falls outside the audit." },
@@ -139,6 +145,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The descent", formalTitle: "Reflection in the state of fear",
     overview: "A worked example of the operation applied to a single state, and its form is as instructive as its content: an ordered descent with each stage supplying the next.",
+    thesis: "A worked example: the operation applied to producing one particular state.",
     moves: [
       { title: "Set the starting point", body: "If you want to arrive at fear, start by looking at your own sins, the visible and the hidden ones. The sequence begins with something you actually have, not with an imagined scene." },
       { title: "Move outward in time", body: "Then look at death and how hard it is, then at what comes after it, then at the terror of the summons, then at the terror of everyone being gathered onto one ground." },
@@ -159,6 +166,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "The bat and the sun", formalTitle: "The higher station, and why it is closed",
     overview: "The most striking passage in the book. Ghazali names the highest possible object of reflection, and then spends the chapter arguing that almost nobody should attempt it.",
+    thesis: "The most striking passage in the book names a higher station and then closes it.",
     moves: [
       { title: "Name the station", body: "The second division is reflection on God's majesty, greatness, and might, and in it are two stations. The higher station is reflection on His essence, His attributes, and the meanings of His names." },
       { title: "State the prohibition", body: "This is among what was forbidden, where it was said: reflect on God's creation and do not reflect on God's essence. And the reason is given rather than left as an instruction: because intellects are bewildered in it." },
@@ -179,6 +187,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "What is nearest", formalTitle: "How to reflect on the creation",
     overview: "The lower station and the book's largest part. Ghazali opens it with a method, and the method is a deliberate movement toward the ordinary.",
+    thesis: "The lower station and the book's largest part: how to reflect on what has been made.",
     moves: [
       { title: "State the field", body: "Everything in existence other than God is His act and His creation, and every atom of it, of substance and accident and attribute and thing qualified, holds wonders in which His wisdom, power, majesty, and greatness appear." },
       { title: "Admit that it cannot be finished", body: "Enumerating that is not possible, for if the sea were ink for it the sea would run out before a tenth of a tenth of it ran out. So he will point to summaries, to serve as an example for what is not mentioned." },
@@ -199,6 +208,7 @@ export const book39Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Knowing the author", formalTitle: "The knots of the summaries",
     overview: "The closing chapter, and it states plainly what the whole survey of creation has been for, using an analogy any reader can check against his own experience.",
+    thesis: "The closing chapter states plainly what the whole book has been for.",
     moves: [
       { title: "State what the survey is not", body: "There is in these summaries no reflection on God's essence, which keeps the closing consistent with the fence set in the earlier chapter." },
       { title: "State what it produces", body: "But there is inevitably gained, from reflection on the creation, knowledge of the Creator and of His greatness, His majesty, and His power. And the more you gather of knowing the wonder of His making, the more complete your knowledge of His majesty becomes." },

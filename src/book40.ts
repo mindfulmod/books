@@ -20,6 +20,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The last book", formalTitle: "The excellence of remembering death",
     overview: "The longest book in the Ihya opens, and its opening is a structure rather than an argument. Ghazali announces two halves and eight chapters, and the announcement is worth reading closely.",
+    thesis: "The longest book in the Ihya opens on a practice, not a doctrine — and the practice is remembering.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports commending the remembrance of death are assembled, including the exchange in which the wisest of people is named as the one most frequent in remembering it and best in preparing for it." },
       { title: "Announce the first half", body: "The first half treats death's preliminaries and what follows it, up to the blast of the trumpet, in eight chapters: the excellence of remembering it; long hope; the throes; the deaths of the Messenger and the caliphs; the speech of the dying; the sayings at funerals and graves; the reality of death and what the dead meets in the grave; and what is known of the dead through dreams." },
@@ -40,6 +41,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "An occupied heart", formalTitle: "The way to realise the remembrance of death",
     overview: "The first analytic chapter, and it answers a question most readers have already asked themselves: why does thinking about death change nothing?",
+    thesis: "Most readers assume the thought of death simply arrives; Ghazali explains why it lands on nothing.",
     moves: [
       { title: "State the diagnosis", body: "Death is dreadful and its danger is great, and people's heedlessness of it comes from how little they think about it and remember it." },
       { title: "Correct the diagnosis", body: "Somebody who does think about it is not thinking with an empty heart — his is already taken up with wanting things here. So the thought of death lands on nothing and does nothing." },
@@ -60,6 +62,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Two causes", formalTitle: "The cause of long hope and its treatment",
     overview: "The heart of the book's analytic content. Ghazali names two causes of the long horizon, and the second one is described with unusual precision.",
+    thesis: "Two causes of a long horizon are named, which is the heart of the book's analytic content.",
     moves: [
       { title: "Name them", body: "Long hope has two causes: one is ignorance, and the other is love of the world." },
       { title: "Work the second", body: "Once somebody has settled into the world — its appetites, its pleasures, the things holding him there — leaving it becomes heavy, so his heart refuses to think about death, which is what will cause the leaving. Everybody pushes away what they do not want to look at." },
@@ -80,6 +83,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Ten more attach", formalTitle: "The machinery of deferral",
     overview: "The most recognisable passage in the book, and one of the most exact descriptions of procrastination in any literature.",
+    thesis: "The machinery of putting it off, and it is the most recognisable passage in the book.",
     moves: [
       { title: "Set the scene", body: "If the matter of death and the need to prepare for it does occur to him in some state, he defers and promises himself, and says: the days are before you, until you grow older, and then you will repent." },
       { title: "Follow the ladder down", body: "When he gets older it becomes: wait until you are actually old. And when he is old: wait until you have finished building this house, or planting this land, or got back from this trip." },
@@ -100,6 +104,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Seven horizons", formalTitle: "The ranks of people in long and short hope",
     overview: "A ladder of seven rungs, and its measure is startlingly concrete: not what a person believes about death but how far ahead he provisions.",
+    thesis: "Seven rungs, measured not by what a person believes but by how far ahead he has actually provisioned.",
     moves: [
       { title: "The first two rungs", body: "Some expect to go on and want to go on forever. Some expect to last until they are worn out with age — the furthest they have ever seen anyone get — and that is somebody who loves this world hard." },
       { title: "The third and fourth", body: "Some hope to a year, and do not busy themselves arranging beyond it, and reckon no existence for themselves in the coming year — but such a one prepares in summer for winter and in winter for summer, and when he has gathered his year's sufficiency he busies himself with worship. And some hope for the length of a summer or a winter, so he does not store winter clothes in summer nor summer clothes in winter." },
@@ -120,6 +125,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "The two brothers", formalTitle: "Hastening to act, and the blight of delay",
     overview: "The chapter that explains why the horizon matters at all, using an analogy anyone can check, and then makes an observation about time that is easy to miss.",
+    thesis: "Why the horizon matters at all: it is what decides whether anything gets done today.",
     moves: [
       { title: "Give the analogy", body: "A man with two absent brothers, expecting one tomorrow and the other after a month or a year, does not prepare for the one arriving in a month or a year. He prepares for the one he expects tomorrow." },
       { title: "Draw the principle", body: "So preparation is the result of the nearness of the expectation. It is not the result of conviction, or of affection, or of the importance of the visitor." },
@@ -140,6 +146,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Five blows", formalTitle: "The throes of death and their severity",
     overview: "The third chapter of the first half, and it opens with an argument before it opens with descriptions.",
+    thesis: "The third chapter opens on what dying is actually like, and does not soften it.",
     moves: [
       { title: "State the minimum case", body: "If there were before the poor servant no distress and no terror and no punishment except the throes of death by themselves, that alone would be fit to spoil his living, cloud his joy, and part him from his inadvertence." },
       { title: "Add the timing", body: "It would be fit that he lengthen his thought about it and make his preparation great, especially since he is exposed to it at every breath." },
@@ -160,6 +167,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Three things wanted", formalTitle: "The states recommended for the dying",
     overview: "A short and unusually gentle chapter, and its structure is a triad that covers the body, the tongue, and the heart.",
+    thesis: "A short and unusually gentle chapter, whose structure is itself the argument.",
     moves: [
       { title: "The form", body: "What is loved at death, from the appearance of the dying person, is quietness and stillness." },
       { title: "The tongue", body: "From his tongue, that it be uttering the testimony." },
@@ -180,6 +188,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Particular deaths", formalTitle: "The deaths of the Messenger and the caliphs",
     overview: "The longest chapter in the first half, and the one that most clearly shows what the book is doing. Almost none of it is argument.",
+    thesis: "The longest chapter of the first half, and the one that does most of its work by accumulation.",
     moves: [
       { title: "Say what it contains", body: "A sustained narrative of the last illness and death of the Messenger, followed by the deaths of Abu Bakr, Umar, Uthman, and Ali, given in detail and largely without commentary." },
       { title: "Note the absence of a thesis", body: "Ghazali does not extract a lesson at the close of each account. The accounts are laid end to end, and the reader is left with the particulars." },
@@ -200,6 +209,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "What they said", formalTitle: "The speech of the dying",
     overview: "A collection of last words, and its selection is worth noticing: the powerful are placed first and they do not come off well.",
+    thesis: "A collection of last words, and what was selected tells you what Ghazali thought they showed.",
     moves: [
       { title: "Open with a ruler", body: "The chapter opens with Muʿawiya, who at the end asked to be seated, praised God, wept, and said: you remember your Lord, Muʿawiya, after decrepitude and decline — would that this had been while the branch of youth was green and full." },
       { title: "Give his prayer", body: "He wept until the sound of it carried, and said: my Lord, have mercy on a sinning old man with a hard heart. Make the stumble smaller and forgive the slip, and turn with Your patience toward somebody who hopes in nobody but You and trusts nobody else." },
@@ -220,6 +230,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Visiting graves", formalTitle: "The sayings at graves, and the ruling on visiting them",
     overview: "The sixth chapter, and the one place in the book where Ghazali gives a legal ruling with a stated history and a stated purpose.",
+    thesis: "The one place in the book where visiting the dead is given a ruling rather than a description.",
     moves: [
       { title: "Give the ruling", body: "Visiting graves is recommended in general, for the sake of recollection and consideration. And visiting the graves of the righteous is for the sake of blessing along with consideration." },
       { title: "Give its history", body: "The Messenger had forbidden the visiting of graves and then permitted it afterward, in the report: I had forbidden you to visit graves, so visit them, for they remind you of the hereafter — only do not say anything improper." },
@@ -240,6 +251,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "A change of state", formalTitle: "The reality of death",
     overview: "The book's central definition, and Ghazali reaches it by clearing away three positions first. The definition itself is one line.",
+    thesis: "The book's central definition, reached by a route rather than asserted.",
     moves: [
       { title: "Name the first supposition", body: "People hold false suppositions about the reality of death. Some supposed that death is annihilation, and that there is no gathering and no raising and no consequence for good or evil, and that a person's death is like the death of animals and the drying of plants." },
       { title: "The second", body: "A group supposed that he is annihilated by death and is neither pained by anything harmful nor delighted by any reward while he is in the grave, until he is returned at the time of the gathering." },
@@ -260,6 +272,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "The questioning", formalTitle: "What the dead meets in the grave",
     overview: "The chapters on the grave, the questioning, and what precedes the trumpet. They are the most vivid material in the first half and rest entirely on the previous chapter's definition.",
+    thesis: "The grave, the questioning, and what follows — presented as what the tradition transmits.",
     moves: [
       { title: "Say what they cover", body: "The speech of the grave to its occupant, the questioning by the two who come, the constriction of the grave, and the punishment of the grave, given through the reports at length." },
       { title: "Note what they presuppose", body: "Every one of these requires that something is undergone between death and the gathering, which is exactly what the second of the three refused suppositions denies. The definition in Chapter 12 is what licenses this chapter to exist." },
@@ -280,6 +293,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Zayd and Amr", formalTitle: "What can and cannot be known of a particular person",
     overview: "The most important guard in the book, and it sits at the opening of the chapter on dreams. Ghazali draws a hard line between general knowledge and particular judgement.",
+    thesis: "The most important guard in the book: nothing here licenses a verdict about any particular person.",
     moves: [
       { title: "State what is known", body: "The lights of insight gained from the Book, the Sunna, and the paths of consideration acquaint us with the states of the dead in general, and with their division into the happy and the wretched." },
       { title: "State what is not", body: "But the state of this Zayd or that Amr in particular is not disclosed at all." },
@@ -300,6 +314,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "From the trumpet", formalTitle: "The second half, and what it surveys",
     overview: "The whole second half of the book, and Ghazali lists its contents in order at its opening. The order itself is the argument of this section.",
+    thesis: "The whole second half surveyed at once, with Ghazali listing what it covers.",
     moves: [
       { title: "Give the list", body: "The blast of the trumpet; the ground of the gathering and its people; the length of the Day; the Day and its calamities and its names; the questioning about sins; the Balance; the adversaries and the returning of wrongs; the Bridge; the intercession; the Basin." },
       { title: "Continue it", body: "Then Hell and its terrors; then the Garden and the kinds of its bliss, the number of the gardens and their gates and chambers and walls and rivers and trees, the clothing of its people and their couches, and the description of their food." },
@@ -320,6 +335,7 @@ export const book40Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "How it ends", formalTitle: "The breadth of mercy, with which the book is sealed",
     overview: "The last section of the last book of the Ihya. Forty books of scrutiny, reckoning, and warning close on a sequence about mercy, ending with a single image.",
+    thesis: "Forty books end on the breadth of mercy, which is a decision about how to finish rather than an afterthought.",
     moves: [
       { title: "The first report", body: "God says on the Day of Resurrection: bring out of the Fire whoever remembered Me a day, or feared Me in a station." },
       { title: "The card", body: "A man is brought with scrolls of misdeeds, and a single card is produced bearing the testimony that there is no god but God and that Muhammad is His messenger. He says: my Lord, what is this card beside these scrolls? And he is told: you will not be wronged. The scrolls are placed in one pan and the card in the other, and the scrolls fly up and the card weighs heavy — for nothing outweighs the name of God." },

@@ -19,6 +19,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Why trust is praised", formalTitle: "The excellence of trust",
     overview: "Ghazali opens by gathering the testimony for trust, and states at once that the book has two halves because trust rests on a knowledge that has to be set out first.",
+    thesis: "The testimony for trust is gathered first, and it is strong enough that the rest of the book has to work against it.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports praising reliance on God are gathered first, and there are enough of them to establish how highly it is rated before anything gets defined." },
       { title: "Announce the structure", body: "Trust is composed of knowledge, a state, and an act, as every station is. The first part of the book treats the knowledge, which is unity, and the second treats the state and the acts." },
@@ -39,6 +40,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Four degrees, one walnut", formalTitle: "The reality of the unity that is the root of trust",
     overview: "The most quoted passage in the book. Ghazali sorts unity into four degrees using a single image, and is unusually direct about where the theologians sit in it.",
+    thesis: "Unity sorts into four degrees, and only the fourth is the one the Sufis mean by annihilation.",
     moves: [
       { title: "Give the image", body: "Unity has four ranks, divided into a kernel, the kernel of the kernel, a shell, and the shell of the shell. The comparison is a walnut, which has two shells, a kernel, and an oil within the kernel." },
       { title: "The first two degrees", body: "The first is to say the words with the tongue while the heart is heedless of them or denies them, which is the unity of the hypocrites. The second is that the heart assents to the meaning of the words, as the generality of Muslims do." },
@@ -59,6 +61,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "His is the dominion", formalTitle: "Belief in the power that trust rests on",
     overview: "The second component of the knowledge. Unity establishes that there is one; this establishes that the one is able, without which reliance would have no object.",
+    thesis: "Believing God can is the second thing trust needs, and it is not the same as believing He exists.",
     moves: [
       { title: "State what is required", body: "Belief in the completeness of the power expressed by the words that His is the dominion, so that nothing relied upon is beyond what He can do." },
       { title: "Say why it is separate", body: "A person may hold that there is one and still act as though a particular matter lies outside what can be reached, which is a failure in this component rather than in unity." },
@@ -79,6 +82,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "His is the praise", formalTitle: "Belief in the generosity and wisdom that trust rests on",
     overview: "The third component, and the hardest. Power alone would not produce reliance; what is also needed is belief that the power is exercised with wisdom and generosity.",
+    thesis: "Power alone would not be enough to rest on, which is why generosity and wisdom are the third component and the hardest.",
     moves: [
       { title: "State the component", body: "Belief in the generosity and wisdom indicated by the words that His is the praise, so that what is done is done well and not arbitrarily." },
       { title: "Say why power alone is insufficient", body: "One may believe that an agent is able and still not rely on him, if he doubts that the ability will be exercised with care. This is the same gap the advocate analogy makes explicit in Part Two." },
@@ -99,6 +103,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The advocate", formalTitle: "The definition of trust",
     overview: "Part Two opens with the definition, and Ghazali gives it through an analogy that turns an inward state into four checkable beliefs.",
+    thesis: "The word comes from appointing an agent, and the definition is built out of that comparison.",
     moves: [
       { title: "Derive the word", body: "The word comes from appointing an agent. To entrust something to somebody is to hand it over and depend on him for it. The person you hand it to is the agent, and you are the one relying — provided you are actually at ease about it and not suspecting him of letting you down." },
       { title: "Give the analogy", body: "Someone falsely accused by a deception appoints an advocate to expose it. He is not truly relying on him unless he believes four things about him." },
@@ -119,6 +124,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Three stations", formalTitle: "The degrees of trust",
     overview: "Trust is not one condition, and Ghazali sorts it into three stations so that the reader can locate his own without either claiming or disowning the whole state.",
+    thesis: "Trust is three stations, not one condition, and most disagreement about it is people describing different ones.",
     moves: [
       { title: "Give the first station", body: "The condition of a person whose heart is at rest with the agent as the client is with an advocate he fully credits, while he continues to act as a client acts." },
       { title: "Give the second", body: "A closer condition, in which the reliance is like a child's on its mother: the child knows nothing but her, flees to nothing but her, and does not deliberate about arrangements at all." },
@@ -139,6 +145,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "What the masters meant", formalTitle: "What the masters said about the states of trust",
     overview: "Ghazali collects the definitions given by earlier figures and shows that each reports a station rather than contradicting the others, which is his standard method with a disputed subject.",
+    thesis: "The masters' definitions are collected and sorted by which station each is actually describing.",
     moves: [
       { title: "State the method", body: "The definitions differ because each speaker described his own station, which is the habit of the masters. Rather than choosing between them, Ghazali assigns each to the degree it reports." },
       { title: "Work an example", body: "Dhul-Nun answered that trust is the removal of lords and the cutting of causes, which Ghazali reads as pointing to the knowledge of unity and to the acts respectively; and when pressed, casting the self into servanthood and taking it out of lordship, which points only at disowning power and contrivance." },
@@ -159,6 +166,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Trust and earning", formalTitle: "The acts of those who trust",
     overview: "The question the whole second half exists to answer. If a person relies on God, does he work? Ghazali's answer is unambiguous and occupies the rest of the book.",
+    thesis: "The question the second half exists for: whether trusting means doing nothing.",
     moves: [
       { title: "Reject the inference", body: "Trust does not mean giving up work. What breaks reliance is not your hand moving; it is something inside you shifting toward relying on something else." },
       { title: "Locate reliance correctly", body: "Somebody who takes a practical step is not relying on his own resourcefulness and strength, so long as his heart is resting on the One who made resourcefulness and strength. The step and the reliance sit on different levels." },
@@ -179,6 +187,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "With dependents", formalTitle: "The trust of one who has others to provide for",
     overview: "Ghazali takes the case that most sharply tests any doctrine of reliance, since the risk of abandoning means falls on people who did not choose it.",
+    thesis: "Somebody with dependants is the case that most tests the doctrine, and Ghazali takes it directly.",
     moves: [
       { title: "Separate the case", body: "Somebody with people depending on him is not in the position of somebody risking only himself, and the rules differ accordingly." },
       { title: "Give the reason", body: "What may be a permissible risk for a person alone becomes an imposition on others when others depend on him, and their claim is not dissolved by his station." },
@@ -199,6 +208,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Holding causes", formalTitle: "The states of those who trust in their attachment to causes",
     overview: "Ghazali illustrates the three stations by how each relates to the chain of causes, using a worked example rather than a definition.",
+    thesis: "The three stations are illustrated by how each relates to what a person is attached to.",
     moves: [
       { title: "Use an example", body: "The stations are shown by how a person at each relates to a cause and to the cause behind it, which makes the abstract degrees concrete." },
       { title: "Show the first station", body: "The one at the first station takes the cause and rests his heart elsewhere, which is the condition already established as fully compatible with work." },
@@ -219,6 +229,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Storing", formalTitle: "That storing with a heart free of what is stored does not annul trust",
     overview: "A specific case treated at length, because setting something aside looks like the clearest possible contradiction of reliance, and Ghazali argues that it need not be.",
+    thesis: "Storing something up is treated at length, because it is where trust looks most obviously contradicted.",
     moves: [
       { title: "State the position", body: "Storing something up, with a heart empty of what is stored, does not necessarily annul trust." },
       { title: "Give the reason", body: "Since the state is located in where the heart rests, and not in whether a cupboard is full, the same act is compatible with reliance and with its absence." },
@@ -239,6 +250,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "When it is taken", formalTitle: "The manners of those who trust when their goods are stolen",
     overview: "A short and revealing section. Having permitted storing, Ghazali treats what happens when the store is lost, since that is where the claim to a free heart is tested.",
+    thesis: "Having permitted storing, Ghazali immediately says how somebody who stores should behave when it is lost.",
     moves: [
       { title: "Take the moment as the test", body: "The loss of what was stored is where the previous section's condition is either confirmed or exposed, since the person's response is not chosen in advance." },
       { title: "Give the manners", body: "The conduct prescribed concerns what the person does with the loss inwardly as much as what he does about recovering it." },
@@ -259,6 +271,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Leaving treatment", formalTitle: "That leaving medical treatment is praised in some conditions",
     overview: "Ghazali grants a limited case for leaving treatment, and the care with which he bounds it is as important as the grant itself.",
+    thesis: "Leaving off medical treatment is granted a limited case, carefully bounded.",
     moves: [
       { title: "State the grant", body: "In some conditions, leaving treatment is praiseworthy and indicates strength of trust." },
       { title: "Bound it by certainty", body: "The grant applies where the remedy is speculative rather than where its effect is established, which is the distinction between kinds of causes he drew earlier." },
@@ -279,6 +292,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Against the general claim", formalTitle: "A refutation of those who say leaving treatment is better in every case",
     overview: "Ghazali gives a whole section to refusing the generalisation of what he has just permitted, which is one of the clearest examples in the work of a limit being defended.",
+    thesis: "A whole section is spent refusing to generalise that case, which tells you how often it was generalised.",
     moves: [
       { title: "State the position refused", body: "That leaving treatment is better in every condition, which some had held on the strength of the reports about trust." },
       { title: "Give the argument against", body: "Since means are not what removes reliance, and since the effect of some remedies is established, refusing them is not a higher state but a misplacement of where trust operates." },
@@ -299,6 +313,7 @@ export const book35Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "Saying you are ill", formalTitle: "The states of those who trust in disclosing or concealing illness",
     overview: "The book closes on a small and precise question that gathers its whole method: whether to mention that you are unwell.",
+    thesis: "The book ends on a small precise question that gathers the whole doctrine: what you say about your own state.",
     moves: [
       { title: "Pose the question", body: "Whether one who trusts should disclose an illness or conceal it, since disclosure can look like complaint and concealment can look like display." },
       { title: "Refuse a single answer", body: "The answer depends on the purpose and the effect rather than on the act, exactly as with every other case in the second half." },

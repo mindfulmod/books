@@ -20,6 +20,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Four circles", formalTitle: "The shape of the book",
     overview: "The Quarter of Customs opens here, and its first book is organised by how many people are at the table.",
+    thesis: "The Quarter of Customs opens on eating, and the book is organised by how many people are present.",
     moves: [
       { title: "Announce the four", body: "What the eater must observe even if he eats alone; what the manners add because of gathering together to eat; what is particular to setting food before visiting brethren; and what is particular to invitation and hospitality." },
       { title: "Note the principle", body: "Each chapter adds to the one before it rather than replacing it. The solitary eater's manners still hold in company; company adds seven more; hosting adds further; and a formal invitation adds a sequence of six." },
@@ -40,6 +41,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The root", formalTitle: "That the food be wholesome",
     overview: "The first manner of the first chapter, and it is not a manner at all — it is a condition on the food, stated as an obligation.",
+    thesis: "The first item is not a manner at all but a condition: where the food came from.",
     moves: [
       { title: "State it", body: "That the food, after being lawful in itself, be wholesome in the direction of its earning, agreeing with the practice and with scrupulousness — not acquired by a cause disliked in the Law, nor by the ruling of whim or of dissembling in religion." },
       { title: "Note the two conditions", body: "Lawful in itself, and wholesome in how it was got. The second is the one that requires looking backward past the food to the transaction that brought it, and it is where the manner does its work." },
@@ -60,6 +62,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Before", formalTitle: "The manners that come before eating",
     overview: "The remaining manners of the first part, and they are practical and brief — with a reason given for each rather than an instruction alone.",
+    thesis: "The manners before eating are brief and practical, and one of them is about who else is at the table.",
     moves: [
       { title: "Give the second", body: "Washing the hand. Ablution before food removes poverty, and after it removes ailment." },
       { title: "Give the reason", body: "Because the hand is not free of soiling in the handling of work. A report and a practical reason are given together, which is the pattern of this chapter." },
@@ -80,6 +83,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "During", formalTitle: "The manners of the eating itself",
     overview: "The second part, and among its small practical items are two that are unexpectedly wide.",
+    thesis: "The manners of eating itself are small and specific, and two of them are about not making other people wait.",
     moves: [
       { title: "Give the frame", body: "That he begin with the name of God at the start and praise at the end — and if he says the name with each morsel that is good, so that greed does not distract him from the remembrance of God." },
       { title: "Give the manner of taking", body: "That he eat with the right hand, make the morsel small, chew it well, and not extend his hand to another until he has swallowed — for that is haste in eating. And that he eat from what is nearest him, except fruit, in which he may range his hand." },
@@ -100,6 +104,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "After", formalTitle: "What is recommended when the eating is done",
     overview: "The third part, and it opens on the item that the whole Quarter of Perils will later build on.",
+    thesis: "Finishing the meal opens onto gratitude, which is where the Quarter of Perils will later do most of its work.",
     moves: [
       { title: "Give the first", body: "That he stop before satiety." },
       { title: "Give the practical items", body: "That he lick his fingers, then wipe them, then wash them; and that he pick up the crumbs of the food. Whoever eats what falls from the table lives in plenty and is kept well in his children." },
@@ -120,6 +125,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Seven more", formalTitle: "What eating in company adds",
     overview: "The second chapter, and everything in it is about deferring to someone else at a table.",
+    thesis: "Eating with others adds nothing but deference — every item in the chapter is about giving way to somebody else.",
     moves: [
       { title: "Give the number", body: "What is added because of gathering and sharing in the eating is seven." },
       { title: "Give the first", body: "Do not start eating while somebody present has a better claim to start — by age, by learning, or by having provided the food." },
@@ -140,6 +146,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Setting it before them", formalTitle: "Feeding visiting brethren",
     overview: "The third chapter, and it treats the case that falls between eating together and formal hospitality: someone has come, and there is food.",
+    thesis: "Feeding visitors falls between eating together and formal hospitality, and gets its own treatment.",
     moves: [
       { title: "Give the excellence", body: "Setting food before brethren has great merit, and the chapter gathers what is reported on it before giving the manners." },
       { title: "Name the case", body: "It is not an invitation. Someone has come and is present, and the food is what the household has — which is a different situation from one arranged in advance." },
@@ -160,6 +167,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Six places", formalTitle: "The sequence of hospitality",
     overview: "The fourth chapter, and it sorts a social occasion into six moments, each with its own manners — including two that belong to the guest.",
+    thesis: "Hospitality is sorted into six moments, each with its own duties, from the invitation to the walk to the door.",
     moves: [
       { title: "Give the six", body: "The places of the manners in hospitality are six: the invitation first, then the acceptance, then the attendance, then the presenting of the food, then the eating, then the departure." },
       { title: "Note whose they are", body: "The first and the fourth belong to the host; the second, third, and sixth belong to the guest; and the fifth belongs to both. The chapter divides the duties between the two parties by moment." },
@@ -180,6 +188,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Do not burden yourselves", formalTitle: "The warning attached to hospitality",
     overview: "The hardest and most surprising thing in the book, and it is aimed at hosts who are trying too hard.",
+    thesis: "The hardest thing in the book is aimed at hosts: do not put yourself out for a guest, because the strain is what spoils it.",
     moves: [
       { title: "Give the instruction", body: "Do not burden yourselves for the guest, so that you come to dislike him." },
       { title: "Give the consequence", body: "Because anyone who resents the guest has resented God — and God resents whoever resents Him." },
@@ -200,6 +209,7 @@ export const book11Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "The quarter opens", formalTitle: "What this book begins",
     overview: "The first book of the Quarter of Customs closes, and what it has established governs the nine books that follow it.",
+    thesis: "The first book of the quarter establishes the pattern the other nine will follow: an ordinary act, taken apart by who is present.",
     moves: [
       { title: "Note where the quarter starts", body: "Not with an unusual case but with the most frequent act in a life, treated at the four levels of company at which it happens." },
       { title: "Note the method", body: "A condition on the thing itself, placed first and marked as belonging among the obligations; then manners with reasons attached; then additions for each degree of company; then a sequence for a formal occasion." },

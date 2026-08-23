@@ -7,6 +7,7 @@ type Seed = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
+  thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -62,6 +63,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Knowledge, regret, act", formalTitle: "The reality of repentance and its definition",
     overview: "Ghazali opens the Quarter of Deliverance by defining repentance as a compound rather than a feeling. It is three ordered things, and the order is causal: the first necessitates the second and the second the third.",
+    thesis: "Repentance is defined as three things joined, which is what makes the rest of the book able to sort cases.",
     moves: [
       { title: "Begin with knowledge", body: "Knowing how much damage sins do, and that they stand between you and everything you love. By knowing, Ghazali means belief plus certainty: believing that sins are poison, and being certain enough that the belief is firm, free of doubt, and running the show." },
       { title: "The state that follows", body: "When that knowledge is realised, a pain arises in the heart at the loss of what it loves. Where the loss came about by the person's own act, the pain attaches to the act, and pain at one's own act for having lost one's beloved is what the word regret means." },
@@ -82,6 +84,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Why it is required", formalTitle: "The obligation of repentance and its excellence",
     overview: "Having defined it, Ghazali establishes that repentance is obligatory and gathers what is said of its worth. The section is testimony rather than technique, and it sets the register for the whole quarter.",
+    thesis: "Having defined it, Ghazali establishes it as obligatory rather than admirable.",
     moves: [
       { title: "Establish the obligation", body: "Repentance is not presented as a devotional extra for those inclined to it, but as something owed, which is why the sections that follow can ask when it is owed and by whom." },
       { title: "Gather its worth", body: "The reports assembled place the returning servant in a position that the never-fallen would not obviously occupy, which is the note the quarter opens on." },
@@ -102,6 +105,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "All three parts", formalTitle: "That repentance is obligatory in all three of its parts",
     overview: "Ghazali returns to the definition to make a point about obligation. It is not enough that repentance be owed as a whole; each of the three parts is separately required, and regret is inside the obligation rather than a spontaneous accompaniment to it.",
+    thesis: "All three parts are obligatory, not just the regret — which is what the definition was for.",
     moves: [
       { title: "State the claim", body: "Knowledge, regret, and abandonment are each obligatory, and the obligation is not discharged by supplying two of them." },
       { title: "Answer the obvious objection", body: "Regret looks like a feeling, and feelings are not commanded. Ghazali's answer runs through the causal order: regret is produced by knowledge, and knowledge is within reach, so what is required is the work that produces the state." },
@@ -122,6 +126,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Immediately", formalTitle: "That the obligation of repentance is immediate",
     overview: "Ghazali argues that repentance is owed at once rather than at some point, and the argument matters because deferral is the ordinary form of refusal. Almost nobody declines to repent; a great many intend to later.",
+    thesis: "The obligation is immediate, because every hour of delay is a separation chosen deliberately.",
     moves: [
       { title: "State the claim", body: "The obligation falls due immediately, not at leisure, and delay is itself a further matter rather than a neutral interval." },
       { title: "Give the reason from the nature of sin", body: "If sins stand between you and everything you love, then every hour you put it off is an hour of that separation chosen deliberately — which is a different thing from the original slip." },
@@ -142,6 +147,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Everyone, always", formalTitle: "That the obligation is universal in persons and in states",
     overview: "The third claim of the first pillar closes the last exit: there is no person and no condition exempt from repentance, and Ghazali says plainly that nobody is ever free of it.",
+    thesis: "There is no person and no state exempt, which closes the last exit.",
     moves: [
       { title: "State the universality", body: "The obligation is general across persons and across states, so that no one is detached from it at all." },
       { title: "Remove the exemption by rank", body: "Advancement does not exempt. The higher a person's knowledge of God, the greater the smallest opposition appears to him, which is the argument the section on magnifying minor sins develops." },
@@ -162,6 +168,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Necessarily accepted", formalTitle: "That repentance meeting its conditions is necessarily accepted",
     overview: "The first pillar closes on the question every reader is holding. Ghazali's answer is unusually firm: repentance that gathers its conditions is accepted without exception, and he argues this before the reader learns what the conditions are.",
+    thesis: "The question every reader is holding — whether a repentance that meets its conditions is accepted — is answered directly.",
     moves: [
       { title: "State the claim without hedging", body: "Every sound repentance is accepted, necessarily. The uncertainty a person feels is about whether his repentance was sound, not about whether sound repentance is received." },
       { title: "Relocate the anxiety", body: "This is the section's real work. It moves the reader's question from the unanswerable one, about what will be done with him, to the answerable one, about whether the three parts are actually present." },
@@ -182,6 +189,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Sorting the sins", formalTitle: "The divisions of sins in relation to the servant's attributes",
     overview: "The second pillar turns to what is repented from. Ghazali sorts sins by the human attribute they arise from, which produces a classification useful for treatment rather than merely for description.",
+    thesis: "Sins are sorted by which of your own traits they come out of, which wires this book into the anatomy of Book 21.",
     moves: [
       { title: "Sort by source, not by severity", body: "He sorts them by which of a person's own traits the sins come out of, which wires this book straight into the anatomy of the heart's forces in Book 21." },
       { title: "Show why the sorting matters", body: "Sins arising from different attributes need different treatments, since each is cured by opposing its own cause. A classification by outward severity would not tell a person what to do." },
@@ -202,6 +210,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Minor and major", formalTitle: "The ruling on minor and major sins",
     overview: "Ghazali takes up the distinction everyone assumes and asks what it actually rests on. His treatment is careful, and it prepares the section that follows by showing how unstable the categories are in practice.",
+    thesis: "The distinction between minor and major is taken up and asked what it actually rests on.",
     moves: [
       { title: "Grant the distinction", body: "The division into minor and major is real and is recognised in the sources, so the section does not begin by dissolving it." },
       { title: "Show that it is not a fixed list", body: "What makes a sin major is examined rather than assumed, and the examination shows the categories to be sensitive to circumstance in ways a fixed list would obscure." },
@@ -222,6 +231,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "How the weighing works", formalTitle: "How ranks and depths are distributed over good and evil deeds",
     overview: "The longest section of the second pillar takes up the mechanics of the reckoning. Ghazali is careful about what can and cannot be known here, and marks the boundary of his own account explicitly.",
+    thesis: "How degrees of good and evil are distributed is the mechanics the rest of the pillar depends on.",
     moves: [
       { title: "Set out the question", body: "How the outcomes are distributed across what a person did, and by what causes the distribution is affected." },
       { title: "Work from what is disclosed", body: "Ghazali's method is to follow what the Quran details and to stop where it stops, saying there is no exposition after God's exposition." },
@@ -242,6 +252,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "What makes a small sin big", formalTitle: "The causes by which minor sins become great",
     overview: "The second pillar closes with its most practical section. A small sin does not stay small on its own terms, and Ghazali enumerates exactly what enlarges it.",
+    thesis: "A small sin grows for nameable reasons, and this is the most practical section of the pillar.",
     moves: [
       { title: "Persistence", body: "There is no minor sin with persistence and no major sin with seeking forgiveness. The image is drops of water falling on a stone in succession, which wear it, where the same quantity poured at once leaves no mark. And a great sin is rarely committed suddenly: the adulterer rarely without preliminaries, the killer rarely without prior enmity, so every great sin is flanked by small ones before and after." },
       { title: "Deeming it small", body: "Every sin a servant magnifies becomes small with God, because magnifying it issues from the heart's aversion, and aversion limits its effect; deeming it small issues from familiarity, and familiarity deepens the mark. The believer sees his sin as a mountain above him that he fears will fall; the hypocrite sees it as a fly that passed his nose and he waved away." },
@@ -262,6 +273,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "The sign of real regret", formalTitle: "The conditions of repentance and its permanence to the end of life",
     overview: "The third pillar asks what makes a repentance complete and what keeps it standing. Ghazali begins with the condition that cannot be faked and gives its outward sign.",
+    thesis: "What makes a repentance complete, and what keeps it standing for the rest of a life.",
     moves: [
       { title: "Name the central condition", body: "Regret is the condition that carries the others, and Ghazali gives its mark plainly: the sign of sound regret is tenderness of the heart and abundance of tears." },
       { title: "Answer the natural objection", body: "Sins are acts desired by nature, so how does a person find their bitterness? The answer runs through the account of a corrupted appetite, which recoils from what is wholesome and craves what harms it, and the objection is answered by the reader's own experience rather than by assertion." },
@@ -282,6 +294,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "What is owed to people", formalTitle: "Expiation, and making up what was taken from others",
     overview: "The hardest part of this pillar. Repentance settles what is between you and God on the terms already set out. It does not settle what you owe other people, and Ghazali does not soften the difference.",
+    thesis: "Repentance settles what is between you and God; it does not settle what you owe other people, and Ghazali does not soften the difference.",
     moves: [
       { title: "State the asymmetry", body: "What pertains to God's right is discharged by the return. What pertains to a person's right is not, and remains owed after the repentance is otherwise complete." },
       { title: "Describe the work required", body: "Take the wrongs one at a time, track down the people you wronged wherever they have got to, and either get them to let you off or pay them back." },
@@ -302,6 +315,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Repenting from some things", formalTitle: "Repenting from some sins while persisting in others",
     overview: "Ghazali takes up a set of hard cases about partial repentance, and reports the disagreement among scholars rather than smoothing it. The section is unusually procedural for this book.",
+    thesis: "Partial repentance is worked through as a set of hard cases rather than dismissed.",
     moves: [
       { title: "Pose the case", body: "Whether a person can repent of one great sin while persisting in another, or of small sins while persisting in a great one he knows to be great." },
       { title: "Report that it is possible", body: "Ghazali holds that such a repentance is conceivable, since the person may genuinely believe what he is repenting of to be wrong while remaining overcome elsewhere." },
@@ -322,6 +336,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Four kinds of returning", formalTitle: "The classes of servants in the permanence of repentance",
     overview: "Ghazali sorts the repentant into four ranks, and names each with the Quranic name of the soul in that condition. This is the section that connects the book back to the anatomy of Book 21.",
+    thesis: "Four classes of the repentant, each named by what happens after the next fall.",
     moves: [
       { title: "The first class", body: "Somebody who repents and stays straight for the rest of his life, makes up what he let slide, and never talks to himself about going back — apart from the slips nobody is free of. This is what gets called sincere repentance, and this is the settled soul that returns to its Lord content." },
       { title: "The second class", body: "One who travels the road of uprightness in the main obediences and leaves all the great enormities, but is not free of sins that befall him, not deliberately and without a formed prior resolve; and whenever he falls he blames himself, regrets, grieves, and renews his resolve. This is the reproachful soul." },
@@ -342,6 +357,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "When it happens again", formalTitle: "What the repentant should hasten to when a sin recurs",
     overview: "Ghazali closes the third pillar with the practical case the previous section identified. A person has repented and has fallen again, and the question is what to do in the hour after.",
+    thesis: "The practical case the previous section produced: what to do the moment a sin recurs.",
     moves: [
       { title: "Take the case as normal", body: "The section assumes recurrence rather than treating it as a failure of the whole enterprise, which is consistent with the second and third classes being ordinary conditions." },
       { title: "Give the first move", body: "The repentance is renewed rather than reconsidered. What is at issue is the next hour, not a verdict on the previous months." },
@@ -362,6 +378,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "Why the knot holds", formalTitle: "The remedy of repentance, and the causes of persistence",
     overview: "The fourth pillar treats the reader who has understood everything so far and has still not moved. Ghazali diagnoses persistence before treating it, and reduces its causes to two.",
+    thesis: "The fourth pillar is for the reader who has understood all of it and is still not moving.",
     moves: [
       { title: "Divide the readers", body: "People are of two kinds: one raised on good with no lapse, whom Ghazali calls rare, and one not free of committing sins, who divides again into the persistent and the repentant. The pillar is written for the first of those two." },
       { title: "State the method", body: "There is no cure without a treatment, and no treatment until you have worked out what the illness is — because a treatment is nothing but the contradiction of whatever caused it. Anything with a cause is cured by breaking the cause, and nothing is undone except by its opposite." },
@@ -382,6 +399,7 @@ export const book31Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "Four things to accept", formalTitle: "The treatment, and the conditions of being treatable",
     overview: "The book closes on a medical parallel worked out in detail. Ghazali sets out four things a sick person must assent to before treatment can begin, and gives the religious counterpart of each.",
+    thesis: "The book closes on a medical parallel worked out in full, including who is not treatable and why.",
     moves: [
       { title: "The first assent", body: "That being ill and being well both have causes you can actually get at, in the order God arranged them. That is what believing in medicine amounts to, and anybody who does not believe it will never start a course of treatment. The equivalent here is believing that happiness has a cause — doing what you were asked — and misery has one too." },
       { title: "The second assent", body: "That a particular physician knows his art, is skilled in it, and is truthful in what he says, neither concealing nor lying. Faith in medicine as such does not help without this. Its counterpart is knowledge of the Messenger's truthfulness and that what he says is true." },

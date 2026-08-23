@@ -20,6 +20,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Two chapters", formalTitle: "The shape of the book",
     overview: "The most contested book of the quarter, and its structure is a declaration of method: the ruling first, and only then what listening does to a person.",
+    thesis: "The structure is the argument: the case against is transmitted in full before a word is said for the other side.",
     moves: [
       { title: "Announce the two", body: "The permissibility of audition; and the manners of audition and its effects — in the heart by ecstasy, and in the limbs by dancing, crying out, and the tearing of garments." },
       { title: "Give the order of the first chapter", body: "The statements expressing the schools; then the evidence for permissibility; then the answer to what those who hold it forbidden relied upon. The opposing case is transmitted before the argument for the position he will take." },
@@ -40,6 +41,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The other side", formalTitle: "The prohibiting authorities, stated first",
     overview: "The opening of the first chapter, and what it transmits is not a caricature — it is the position of major jurists, in their own words.",
+    thesis: "The prohibiting position is given in the words of the men who held it, with the legal consequences they attached.",
     moves: [
       { title: "Name the source", body: "Al-Qadi Abu al-Tayyib al-Tabari related from al-Shafi'i, Malik, Abu Hanifa, Sufyan, and a group of the scholars words from which it is inferred that they held it forbidden." },
       { title: "Give al-Shafi'i's words", body: "Al-Shafi'i said, in the Book of the Manners of Judging, that singing is a frivolity, disliked, resembling the false — and that whoever does much of it is a fool whose testimony is rejected." },
@@ -60,6 +62,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Three steps", formalTitle: "The chain the book is built on",
     overview: "One sentence at the head of the first chapter sets the architecture of the whole book, and it separates three things usually run together.",
+    thesis: "Audition, ecstasy and movement are three separate links with three separate questions — which is what lets the argument be conducted at all.",
     moves: [
       { title: "Give the first term", body: "Audition is the first matter." },
       { title: "Give the second", body: "Audition fruits a state in the heart called ecstasy." },
@@ -80,6 +83,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Four listeners", formalTitle: "The first station: understanding",
     overview: "The second chapter's opening, and the most useful thing in the book: the same sound, four listeners, four different acts.",
+    thesis: "The same sound reaches four listeners and does four different things, and the ruling follows the listener rather than the sound.",
     moves: [
       { title: "Give the first station", body: "The first degree of audition is the understanding of what is heard, and the applying of it to a meaning that occurs to the listener." },
       { title: "Give the chain again", body: "Then the understanding fruits ecstasy, and the ecstasy fruits movement in the limbs. So consider these three stations." },
@@ -100,6 +104,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The camel shares it", formalTitle: "The first state",
     overview: "The lowest of the four, and his verdict on it is two things at once: permitted, and the poorest kind of listening there is.",
+    thesis: "Listening by nature alone is permitted and is the poorest kind there is, and both judgements are stated.",
     moves: [
       { title: "Give the state", body: "That his listening be by mere nature — that is, he has no share in the audition but the enjoyment of the melodies and the notes." },
       { title: "Give the ruling", body: "This is permitted." },
@@ -120,6 +125,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "The one he refuses", formalTitle: "The second state",
     overview: "The only one of the four Ghazali condemns, and he declines to discuss it beyond saying so.",
+    thesis: "The one state Ghazali condemns he condemns by refusing to discuss it — and it is the state that understands what it hears.",
     moves: [
       { title: "Give the state", body: "That he listen with understanding, but applies it to a created form — either a specific one or an unspecified one." },
       { title: "Name whose it is", body: "This is the audition of the young and of the people of appetites, and their application of what is heard is according to their appetites and the demand of their states." },
@@ -140,6 +146,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "His own dealings", formalTitle: "The third state",
     overview: "The state of the aspirant, and it is the one this book's practical half is actually written for.",
+    thesis: "The aspirant's listening applies what he hears to his own alternation before God, which is why beginners have it and the settled do not.",
     moves: [
       { title: "Give the state", body: "That he applies what he hears to the states of his own soul in its dealing with God — and to the turning of his states, between enablement at one time and hindrance at another." },
       { title: "Name whose it is", body: "This is the audition of the aspirants, especially the beginners." },
@@ -160,6 +167,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "The drunk has no report", formalTitle: "The fourth state",
     overview: "The highest of the four, described in a passage of unusual precision — and immediately qualified.",
+    thesis: "The highest state is described by an argument that makes it impossible to claim from inside.",
     moves: [
       { title: "Give the state", body: "The listening of somebody who has gone past the states and stations, so that understanding anything but God has left him — until he has left himself too, and his own states and dealings with them." },
       { title: "Give the image", body: "He is like one astonished, plunged into the sea of the very eye of witnessing — whose state resembles the state of the women who cut their hands at the sight of Joseph's beauty, until they were astonished and their sensation fell away." },
@@ -180,6 +188,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "By the Real, or by the self", formalTitle: "The second station: ecstasy",
     overview: "The middle link of the chain, and the definition Ghazali quotes for it contains the sharpest sentence in the book.",
+    thesis: "One incoming, two hearers, opposite outcomes — and Dhu al-Nun's line is the whole doctrine in a sentence.",
     moves: [
       { title: "Note the difficulty", body: "People have long discussion about the reality of ecstasy — the Sufis, and those who examine the way audition suits the spirits. So he transmits their words and then discloses the reality." },
       { title: "Give Dhu al-Nun's definition", body: "Dhu al-Nun al-Misri said of audition that it is a true incoming that comes to unsettle hearts toward the Real." },
@@ -200,6 +209,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "What the limbs do", formalTitle: "The third station: movement",
     overview: "The last link, and the one that produces most of the objection — treated last and separately, which is the point of the chain.",
+    thesis: "The visible link is the last of three, and therefore the least informative about what is happening in a person.",
     moves: [
       { title: "Name the subject", body: "The effects of audition in the limbs — by dancing, by crying out, and by the tearing of garments, as the book's own second chapter title puts it." },
       { title: "Recall the division", body: "Movement is either unmeasured, which is called agitation, or measured, which is called clapping and dancing — the distinction drawn at the head of the first chapter." },
@@ -220,6 +230,7 @@ export const book18Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "What is settled", formalTitle: "What the book does and does not decide",
     overview: "The book closes, and what a reader is left with is a method for sorting a case rather than a verdict on a practice.",
+    thesis: "What survives disagreeing with him is the method: three links and four listeners.",
     moves: [
       { title: "Say what is established", body: "That the question was disputed among the founders of the schools; that audition, ecstasy, and movement are three links with three questions; and that the first link's ruling depends on the state of the listener." },
       { title: "Say what follows from that", body: "That no assessment of the sound, the gathering, or the movement settles the case by itself — which is Ghazali's position and the reason his argument takes the shape it does." },

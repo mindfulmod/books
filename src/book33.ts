@@ -3,7 +3,7 @@ import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = {
-  id: number; shortTitle: string; formalTitle: string; overview: string;
+  id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -30,6 +30,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Hope has a definition", formalTitle: "The reality of hope",
     overview: "Ghazali opens by separating a station from a state, then locates hope by a temporal analysis, and arrives at a definition with a condition attached that decides everything else in the book.",
+    thesis: "Hope is separated from a station, and then located precisely enough that wishing can be told from it.",
     moves: [
       { title: "Separate station from state", body: "A quality is called a station when it settles and abides, and a state when it is passing and quick to depart. Yellowness is fixed in gold, quick to pass in a frightened face, and intermediate in a sick man, and the heart's qualities divide the same way." },
       { title: "Sort by time", body: "Whatever meets you is present, past, or awaited. What is past and occurs to you is memory; what is present is finding and tasting; what is awaited and comes to dominate the heart is anticipation." },
@@ -50,6 +51,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The farmer's measure", formalTitle: "Measuring a hope by the sower's",
     overview: "Here is the image that makes the whole business of causes usable: measure your hope for forgiveness exactly the way a farmer measures his hope for a crop.",
+    thesis: "Measure your hope for forgiveness the way a farmer measures his hope for a crop — by what you actually did to the ground.",
     moves: [
       { title: "Set the terms", body: "The world is the tillage of the hereafter, the heart is the ground, faith is the seed, and acts of obedience run as the tilling and clearing of the ground and the digging of channels and the bringing of water to it." },
       { title: "Name the failure case", body: "A heart absorbed in the world is like salt ground in which the seed does not grow, and faith does not grow with a corrupt heart and bad character any more than seed grows in salt ground." },
@@ -70,6 +72,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Why hope is praised", formalTitle: "The excellence of hope and the encouragement toward it",
     overview: "Having defined hope and bounded it, Ghazali gathers what is said in its praise, and the order matters: the boundary was set before the encouragement was offered.",
+    thesis: "With hope defined and bounded, the testimony for it can be gathered without encouraging the thing he just ruled out.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports on the breadth of mercy are assembled, and they are considerable." },
       { title: "Note the placement", body: "They come after the definition rather than before it, so that a reader who arrives at them already knows the difference between hope and wishing." },
@@ -90,6 +93,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "How hope is produced", formalTitle: "The remedy of hope and the way its state is obtained",
     overview: "Hope is a state, and states cannot be summoned directly. Ghazali therefore treats it as something produced by working on its cause, exactly as he treated regret in Book 31.",
+    thesis: "Hope is a state and cannot be summoned, so the remedy works on what produces it rather than on the state itself.",
     moves: [
       { title: "State the method", body: "Since the state follows knowledge, the way to obtain hope is to supply the knowledge that produces it rather than to command the feeling." },
       { title: "Identify who needs it", body: "The treatment is aimed at the person in whom despair dominates, or the one whose effort has collapsed, and not at the person already inclined to feel secure." },
@@ -110,6 +114,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Above both", formalTitle: "The condition in which neither fear nor hope remains",
     overview: "Before turning to fear, Ghazali records a position that would make his whole subject provisional, and answers it by naming where in the path he is writing.",
+    thesis: "A position is recorded that would abolish both fear and hope — and Ghazali reports it before turning to fear.",
     moves: [
       { title: "State the position", body: "Somebody who has grown close to God, whose heart is taken up with Him and who lives entirely in the moment he is in, has nothing left turning toward the future — and so has neither fear nor hope." },
       { title: "Give the reason", body: "Fear and hope are both temporal, both concerned with what is awaited, and both restrain the soul from its own excesses. Where the future has dropped out of view, neither has anything to attach to." },
@@ -130,6 +135,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Fear has a cause", formalTitle: "The reality of fear",
     overview: "Part Two builds fear on the same architecture and locates its knowledge precisely: fear tracks what a person knows about the causes leading to what he dislikes.",
+    thesis: "Fear is built on the same architecture as hope, and located in the same place.",
     moves: [
       { title: "Give the three parts", body: "Fear is composed of knowledge, a state, and an act. The knowledge is knowledge of the cause leading to the disliked outcome, and the burning of the heart that follows is fear itself." },
       { title: "Give the analogy", body: "Somebody who has offended a king and been caught fears execution while a pardon is still possible — and how much the fear hurts tracks the specifics: how bad the offence was, whether the king is vengeful, whether he has people around him pushing for revenge, and whether the offender has anyone to speak for him or anything to his credit that would cancel it out." },
@@ -150,6 +156,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The whip", formalTitle: "The degrees of fear and its variation in strength and weakness",
     overview: "The most immediately useful section of the book. Fear is praiseworthy, and one might therefore suppose more is always better; Ghazali says plainly that this is an error, and supplies the test.",
+    thesis: "Fear comes in degrees, and the most useful thing in the book is that too much of it is treated as a failure rather than as zeal.",
     moves: [
       { title: "Give the image", body: "Fear is God's whip, by which He drives His servants to persevere in knowledge and action so that they may reach nearness by them. It is best that a beast not be without a whip, and likewise a child, but that does not show that excess in beating is praiseworthy." },
       { title: "Name the three degrees", body: "Fear has deficiency, excess, and balance, and the praiseworthy is the balance and the middle." },
@@ -170,6 +177,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "What is feared", formalTitle: "The kinds of fear according to what is feared",
     overview: "Ghazali sorts fear by its object, and the sorting matters because the objects differ enormously in what they should produce.",
+    thesis: "Sorting fear by what is feared matters, because the same feeling aimed at different objects is a different thing.",
     moves: [
       { title: "Sort by object", body: "Fear takes its character from what is feared, and the same word covers conditions that have almost nothing else in common." },
       { title: "Distinguish fearing consequences from fearing Him", body: "Fear of punishment and fear of the One are different in kind, and Ghazali ranks them accordingly." },
@@ -190,6 +198,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Why fear is praised", formalTitle: "The excellence of fear and the encouragement toward it",
     overview: "The counterpart to the section on hope's excellence, and Ghazali gathers a considerable body of material, which sets up the comparison that follows.",
+    thesis: "The counterpart to hope's excellence — gathered after the analysis, so it cannot be misread.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports praising fear are assembled, and Ghazali notes that they are numerous, which is part of the argument of the section on which is more beneficial." },
       { title: "Keep the office in view", body: "Fear is praised for what it produces: perseverance in knowledge and action, and restraint of the limbs. The praise attaches to the working whip rather than to the sensation." },
@@ -210,6 +219,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "A corrupt question", formalTitle: "Whether the better is the dominance of fear, of hope, or their balance",
     overview: "The pivot of the whole book. Ghazali refuses the question as posed and replaces it with a better one, and the replacement is the most transferable thing in either half.",
+    thesis: "Ghazali refuses the question as posed and replaces it with one that can actually be answered.",
     moves: [
       { title: "Refuse the question", body: "Asking whether fear is better than hope is a corrupt question, resembling asking whether bread is better than water. Bread is better for the hungry and water for the thirsty; if both are present, look to which need is stronger; and if they are equal, the two are equal." },
       { title: "Give the reason", body: "Whatever is wanted for a purpose has its merit appear by reference to that purpose and not to itself. Fear and hope are two remedies by which hearts are treated, so their merit is according to the disease present." },
@@ -230,6 +240,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "How fear is produced", formalTitle: "The remedy by which the state of fear is obtained",
     overview: "As with hope, fear is a state and cannot be commanded. Ghazali gives the way it is produced, which follows from having made it an effect of knowledge.",
+    thesis: "Fear cannot be commanded either, so its remedy also works on the causes.",
     moves: [
       { title: "State the method", body: "Since fear follows knowledge of the causes leading to what is disliked, the way to obtain it is to supply that knowledge rather than to demand the feeling." },
       { title: "Work on both sources", body: "The two sources named in the reality section give two lines of work: knowing one's own record, and knowing the One feared. Most people have access to the first and neglect the second." },
@@ -250,6 +261,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "A bad end", formalTitle: "The meaning of a bad ending",
     overview: "Most of the fear recorded in this book returns to fear about how a person will finish. Ghazali therefore explains what that means, and distinguishes two ranks of it.",
+    thesis: "Most of the fear in this book returns to one thing: how a life ends.",
     moves: [
       { title: "Give the graver rank", body: "That at the throes of death, when its terrors appear, doubt or denial should come to dominate the heart, and the soul be taken in that state, so that what dominated becomes a veil between the person and God permanently." },
       { title: "Give the lesser rank", body: "That at death the love of some worldly matter or an appetite for it should dominate the heart, so that it is represented there and absorbs him until no room remains in that state for anything else." },
@@ -270,6 +282,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Those who feared most", formalTitle: "The fear of the prophets and the angels",
     overview: "Ghazali closes with two long collections of accounts, and the first is of those whose standing would seem to exempt them, which is the point of gathering it.",
+    thesis: "The accounts of the prophets and angels are gathered to establish that fear rises with knowledge rather than falling with it.",
     moves: [
       { title: "Choose the hardest cases", body: "The accounts are of prophets and angels, whose position would appear to remove the ground of fear, and who are reported as fearing most." },
       { title: "Draw the inference", body: "If fear tracks knowledge of oneself and of the One feared, then those who know most fear most, which is what the collection is assembled to display." },
@@ -290,6 +303,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Within reach", formalTitle: "The fear of the companions and the early community",
     overview: "The book ends with accounts of people the reader can more nearly imagine being, and it ends there deliberately.",
+    thesis: "The book ends with people the reader can more nearly imagine being.",
     moves: [
       { title: "Bring the argument closer", body: "Having shown the claim in prophets and angels, Ghazali gathers the same evidence in people whose circumstances a reader can recognise." },
       { title: "Show fear reaching the limbs", body: "The accounts are chosen for what the fear produced rather than for what it felt like, which is the test the section on degrees supplied." },

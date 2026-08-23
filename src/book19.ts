@@ -20,6 +20,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The greatest axis", formalTitle: "The book's opening claim",
     overview: "The Ihya's most vehement opening, and the largest claim Ghazali makes for any single practice in the forty books.",
+    thesis: "The largest claim in the Ihya for any single practice: the axis every prophet was sent to establish.",
     moves: [
       { title: "Give the claim", body: "The greatest axis in religion — and it is the matter of consequence for which God sent all the prophets." },
       { title: "Give the consequence of neglect", body: "If it were rolled up and put away, and its knowledge and its practice let go, then prophecy would stand idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, whole lands would fall to ruin — and people would perish without noticing they had, until the Day of Calling." },
@@ -40,6 +41,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Some of you", formalTitle: "A collective duty, not an individual one",
     overview: "Immediately after the largest claim comes the limit on it, and Ghazali reads it out of a single word.",
+    thesis: "The limit arrives immediately after the claim, and Ghazali reads it out of one word in the verse.",
     moves: [
       { title: "Give the ruling", body: "That it is a collective duty and not an individual one — so that when a community undertakes it, the obligation falls from the others." },
       { title: "Give the grammatical argument", body: "For He did not say, be all of you enjoiners of right — rather He said, let there be from among you a community. So whenever one person or a group undertakes it, the burden falls from the others." },
@@ -60,6 +62,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Four chapters", formalTitle: "The shape of the book",
     overview: "The book announces four chapters, and the proportions tell you what Ghazali thought the difficulty actually was.",
+    thesis: "Four chapters, and the proportions say the difficulty is in the conditions rather than in the obligation.",
     moves: [
       { title: "Name the first", body: "On the obligation of enjoining right and forbidding wrong, and its merit — the shortest of the four." },
       { title: "Name the second", body: "On its pillars and its conditions — by far the longest, and the substance of the book." },
@@ -80,6 +83,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Four pillars", formalTitle: "The anatomy of hisba",
     overview: "The second chapter opens by splitting the act into four parts, and every subsequent condition attaches to one of them.",
+    thesis: "The act splits into four pillars, and an intervention can fail at any one of them without failing at the others.",
     moves: [
       { title: "Name the term", body: "The pillars are in hisba — which is an expression comprehending both enjoining right and forbidding wrong." },
       { title: "Give the first two", body: "The first pillar is the one performing it; the second is what it is performed against — the wrong itself." },
@@ -100,6 +104,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Who may", formalTitle: "The first pillar: the one performing it",
     overview: "The formal conditions are short and unsurprising, and Ghazali disposes of them quickly to get to the ones that matter.",
+    thesis: "Eligibility is short and quickly given; competence is what the chapter actually spends its length on.",
     moves: [
       { title: "Give the formal conditions", body: "The first pillar is the one performing hisba, and he has conditions: that he be legally responsible, a Muslim, and capable." },
       { title: "Give the exclusions", body: "So the insane, the child, the unbeliever, and the incapable fall outside it." },
@@ -120,6 +125,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "When anger rages", formalTitle: "Why knowledge and scruple are not enough",
     overview: "The most psychologically exact passage in the book, and its argument is that the third quality is not an ornament on the first two.",
+    thesis: "Knowledge and scruple do not survive provocation, which is why good character is the load-bearing quality rather than an ornament.",
     moves: [
       { title: "Give the first gap", body: "Not everyone who knows acts on it. A man may know perfectly well that he is going too far, past the limit the law allows him, and some purpose of his own carries him on anyway." },
       { title: "Give the second gap", body: "Let his speech and his counsel be acceptable — for the corrupt man is mocked when he performs hisba, and that bequeaths boldness against him." },
@@ -140,6 +146,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Four conditions", formalTitle: "The second pillar: what may be addressed",
     overview: "One sentence sets four conditions on the object, and between them they exclude most of what people intervene in.",
+    thesis: "Four conditions on what may be addressed at all, and between them they disqualify most of what is done in this name.",
     moves: [
       { title: "Give the sentence", body: "The second pillar of hisba is what the hisba is about — and it is every wrong existing at present, apparent to the one performing hisba without spying, known to be a wrong without independent reasoning." },
       { title: "Take the first condition", body: "That it be a wrong: that its occurrence is guarded against in the law." },
@@ -160,6 +167,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Wrong, not sin", formalTitle: "Why the word was chosen",
     overview: "A deliberate change of vocabulary, and Ghazali explains it with an argument that quietly widens the office and narrows the accusation.",
+    thesis: "Choosing 'wrong' over 'sin' widens what may be prevented and narrows what the intervention asserts.",
     moves: [
       { title: "Give the choice", body: "We have turned aside from the word disobedience to this one, because wrong is more general than disobedience." },
       { title: "Give the first case", body: "Since whoever sees a child or a madman drinking wine, it is upon him to pour out his wine and prevent him." },
@@ -180,6 +188,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "A sound or a smell", formalTitle: "What a wall conceals",
     overview: "The most operationally precise passage in the book: an exact line between what a person may act on and what he may not.",
+    thesis: "The line is physical, not a judgement: what passes through a wall is only a sound or a smell.",
     moves: [
       { title: "Pose the question", body: "If you say: what is the limit of being apparent and being concealed?" },
       { title: "Give the rule", body: "Somebody who has shut his front door and put walls between himself and you cannot be walked in on, without his permission, in order to find out whether he is doing something wrong." },
@@ -200,6 +209,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Against whom", formalTitle: "The third pillar: the one addressed",
     overview: "The shortest pillar, and its condition follows directly from the choice of vocabulary two sections earlier.",
+    thesis: "The condition on the person collapses to almost nothing, because the earlier change of vocabulary did the work.",
     moves: [
       { title: "Give the condition", body: "The third pillar is the one hisba is performed upon, and his condition is that he be of a description such that the act he is prevented from is a wrong in his case." },
       { title: "Give the minimum", body: "The least that suffices in that is that he be a human being — which is deliberately low, and follows from the earlier argument that a wrong needs no culpable agent." },
@@ -220,6 +230,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Ten degrees", formalTitle: "The fourth pillar: the act itself",
     overview: "The book's spine: a graded ladder of ten rungs, given in order, from finding out to gathering troops.",
+    thesis: "Ten rungs in order, begun at the lowest and climbed only on failure — which turns a permission into a procedure.",
     moves: [
       { title: "Give the frame", body: "The fourth pillar is the act of hisba itself, and it has degrees and manners." },
       { title: "Give the first five", body: "As for the degrees: the first is finding out, then informing, then forbidding, then preaching and counsel, then reproach and harsh words." },
@@ -240,6 +251,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "The first rung is forbidden", formalTitle: "Finding out, and why it is not allowed",
     overview: "The most striking move in the book: the ladder is introduced, and then its bottom rung is immediately prohibited.",
+    thesis: "The ladder's own first rung is forbidden, and Ghazali names the step most people take first in order to rule it out.",
     moves: [
       { title: "Name it and forbid it", body: "As for the first degree, which is finding out — and by it we mean seeking knowledge of the occurrence of the wrong — that is forbidden. It is the spying we have mentioned." },
       { title: "Give the four examples", body: "So he should not steal a hearing at another's house in order to hear the sound of strings; nor sniff in order to catch the smell of wine; nor touch what is in a man's garment in order to know the shape of a pipe; nor question his neighbours so that they may tell him what goes on in his house." },
@@ -260,6 +272,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Disliked, or forbidden", formalTitle: "The third chapter, and the distinction that governs it",
     overview: "The chapter of examples opens by refusing to be a list, and by drawing the distinction that decides what silence costs.",
+    thesis: "The chapter of examples refuses to be a list, and the classification it gives is what decides what silence costs.",
     moves: [
       { title: "Give the refusal to enumerate", body: "So he points at a few of them, so you can work out the rest from the pattern — since there is no hope of listing them all." },
       { title: "Give the division", body: "Wrongs divide into the disliked and the forbidden." },
@@ -280,6 +293,7 @@ export const book19Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Two rungs only", formalTitle: "The fourth chapter: rulers and sultans",
     overview: "The book's last chapter closes almost all of the ladder, and the test it substitutes is exact.",
+    thesis: "Almost the whole ladder closes where power is involved, and the test that replaces it is about who bears the harm.",
     moves: [
       { title: "Recall the ladder in short form", body: "We have already mentioned the degrees of enjoining right: that its first is informing, its second preaching, its third harshness in speech, and its fourth prevention by compulsion — carrying someone to the truth by striking and punishment." },
       { title: "Give the ceiling", body: "What is permitted of all that, with rulers, is the first two ranks: informing and preaching." },

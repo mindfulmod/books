@@ -20,6 +20,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "The partnership", formalTitle: "The frontier-watch and its six stations",
     overview: "The book opens on a single sustained analogy, and unlike most analogies in the Ihya this one is not an illustration but the actual architecture: the six stations are derived from it one by one.",
+    thesis: "One sustained analogy runs the whole book: a merchant, a partner, and a set of accounts.",
     moves: [
       { title: "Set the trade", body: "What business partners want when they settle up is that the profit is safe. The intellect is the merchant on the road to the next life, and what it is after — its whole profit — is getting the self clean, because that is where its success lies." },
       { title: "Name the partner", body: "The intellect takes the self on as a partner in this business, putting it to work at whatever cleans it up — the way a merchant takes on a partner or an employee to trade with his money." },
@@ -40,6 +41,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The morning charge", formalTitle: "The first station: stipulating with the soul",
     overview: "The practical opening of the day. Ghazali gives the terms a person sets with his own soul, and the tone of the passage is closer to an address than to a rule.",
+    thesis: "The day opens by setting terms with yourself, and Ghazali gives the terms.",
     moves: [
       { title: "State what stipulation is", body: "The intellect assigns the soul its duties, imposes on it its conditions, guides it to the road of success, and binds it firmly to travelling those roads. All of it happens before anything has been done." },
       { title: "Give the address", body: "The charge is spoken to the soul directly: that it has died and been returned, and so beware, and beware again, of squandering this day, since every breath of the breaths is a jewel that has no price." },
@@ -60,6 +62,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The empty treasury", formalTitle: "The twenty-four treasuries",
     overview: "The image the stipulation is built on, and its third element is the one that does the work. Two of the three treasuries are the ones everyone expects.",
+    thesis: "Twenty-four store-rooms, one for each hour, and the third of them is what makes the image bite.",
     moves: [
       { title: "The lit treasury", body: "For every day and night, twenty-four store-rooms are laid out in a row for you. One is opened and you find it full of light from the good you did in that hour — and the joy of seeing it, since it is what you have to show the King, would be enough, if shared among the people of the Fire, to distract them from the pain of it." },
       { title: "The dark treasury", body: "Another is opened, black and dark, its stench rising from it and its darkness covering him, and it is the hour in which he disobeyed. The dread that reaches him from it, if divided among the people of the Garden, would spoil their bliss for them." },
@@ -80,6 +83,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Like the knowledge of death", formalTitle: "The second station: the reality of vigilance and its degrees",
     overview: "The definition, and it is unusually careful. Ghazali separates three things that are normally run together, and then explains why knowing something is not enough.",
+    thesis: "Vigilance is defined carefully, because the whole book turns on the state rather than on the acts.",
     moves: [
       { title: "Give the ordinary sense", body: "The reality of vigilance is regarding the watcher and turning one's concern to him. Whoever guards against some matter on account of another is said to be watching him and observing his side." },
       { title: "Separate the three", body: "What is meant is a state of the heart, which a kind of knowledge fruits, and which itself fruits acts in the limbs and in the heart. So there is a knowledge, a state that follows from it, and acts that follow from the state." },
@@ -100,6 +104,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The shepherd", formalTitle: "The first degree: the vigilance of the near",
     overview: "The higher degree, and Ghazali treats it briefly and then spends most of the chapter proving that it is not exotic.",
+    thesis: "The higher degree is described briefly and then set aside as not the reader's business yet.",
     moves: [
       { title: "Name it", body: "The first degree is the vigilance of the near among the truthful, and it is the vigilance of magnification and reverence: the heart becomes absorbed in observing that Majesty and broken beneath the awe, so that no room remains in it for turning to anything else at all." },
       { title: "Say why its acts are not detailed", body: "Ghazali declines to lengthen the examination of its acts, because it is confined to the heart. The limbs are disabled from turning even to the permitted, let alone the forbidden, and when they move in obedience they move as if used by it, needing no management to keep them straight." },
@@ -120,6 +125,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Pause at the intent", formalTitle: "The second degree: the vigilance of the companions of the right hand",
     overview: "The degree almost every reader is in, and the one with an actual procedure. It is a rule about timing rather than about intensity.",
+    thesis: "The degree almost every reader is in, and the one that comes with something you can actually do.",
     moves: [
       { title: "Give al-Hasan's rule", body: "God have mercy on a servant who paused at his intent: if it was for God he went on, and if it was for other than God he held back. The whole degree is contained in the pause." },
       { title: "State it as an obligation", body: "God has decreed upon every servant that he watch his soul at his intent to act and at his moving of a limb, holding back from the intent and from the effort until it is disclosed to him by the light of knowledge that it is for God, so that he carries it out, or that it is for the soul's whim, so that he guards against it." },
@@ -140,6 +146,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "The first step", formalTitle: "The sequence from a passing thought",
     overview: "The reason the pause belongs where it does. Ghazali sets out a chain of five links and says the material of evil is to be cut at the first.",
+    thesis: "A chain of five links, with the instruction to cut it at the first.",
     moves: [
       { title: "State the chain", body: "The first step into falsehood, if it is not repelled, bequeaths desire; and desire bequeaths intent; and intent bequeaths firm purpose; and purpose bequeaths the act; and the act bequeaths ruin and detestation." },
       { title: "Draw the instruction", body: "So the material of evil should be cut off at its first source, which is the passing thought, since everything after it follows it." },
@@ -160,6 +167,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Three registers", formalTitle: "The three registers spread for every motion",
     overview: "The most exacting passage in the book, and the one this edition builds its diagnostic on. Three questions are put to a single act, and each is a gate to the next.",
+    thesis: "Three registers are spread for every movement, which is the most exacting passage in the book.",
     moves: [
       { title: "Give the frame", body: "For every motion of a servant's motions, however small, three registers are spread: the first is why, the second is how, and the third is for whom." },
       { title: "The first register", body: "Why did you do this? Was it incumbent on you to do it for your Master, or did you incline to it by your appetite and your whim? If he is safe from it, he is asked about the second." },
@@ -180,6 +188,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Before you are reckoned", formalTitle: "The third station: the excellence of reckoning with the soul",
     overview: "The station that gives the book half its title. Ghazali gathers the testimony and, in doing so, quietly connects reckoning to repentance.",
+    thesis: "The station that gives the book half its title, and it is an audit rather than a mood.",
     moves: [
       { title: "Give the verse", body: "O you who believe, fear God, and let a soul look to what it has sent forward for tomorrow. Ghazali reads this as a pointer to reckoning over acts already past." },
       { title: "Give Umar's rule", body: "Reckon with yourselves before you are reckoned with, and weigh yourselves before you are weighed. The sentence is the station in miniature and supplies its whole rationale." },
@@ -200,6 +209,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Capital, profit, loss", formalTitle: "The reality of reckoning after the act",
     overview: "The analogy returns with its full machinery, and Ghazali extracts an actual procedure from it rather than a sentiment.",
+    thesis: "The commercial machinery returns in full, and this is where it does the most work.",
     moves: [
       { title: "Place the hour", body: "Just as you set terms with yourself at the start of the day, you should have an hour at the end of it where you call yourself to account for everything you did and everything you did not." },
       { title: "Give the commercial parallel", body: "As merchants do with their partners at the end of every year or month or day, out of eagerness for this world and fear of missing something of it which, had they missed it, the good would have been in the missing; and which even if they obtained it remains only a few days." },
@@ -220,6 +230,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Charging the loss", formalTitle: "The fourth station: punishing the soul for its shortfall",
     overview: "The station modern readers find hardest, and it is worth reading closely for what it actually specifies and what it merely reports.",
+    thesis: "The station modern readers find hardest, and it is worth reading before deciding about it.",
     moves: [
       { title: "State why the station exists", body: "Whenever he reckons with his soul and it has not come out clear of committing a wrong or falling short, he should not neglect it. For if he neglects it, committing wrongs becomes easy for him, and his soul grows familiar with them, and weaning it becomes hard, and in that is its ruin." },
       { title: "Give the principle", body: "The punishment is matched to the limb that took the profit. If he ate a doubtful morsel from his soul's appetite, he should punish the stomach with hunger; if he looked at what was not his to look at, he should punish the eye by withholding the look; and likewise each limb by preventing it from its appetites." },
@@ -240,6 +251,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Making good", formalTitle: "The fifth station: striving",
     overview: "The station that distinguishes stopping a leak from repairing the damage, and it addresses a failure the previous stations do not reach.",
+    thesis: "Striving is what separates stopping a leak from actually going somewhere.",
     moves: [
       { title: "Separate the two cases", body: "If he reckons and sees that his soul has committed a wrong, he punishes it with the punishments already given. If he sees it slackening through laziness in some virtue or some regular practice, that is a different failure and takes a different treatment." },
       { title: "Give the treatment", body: "He should discipline it by making the regular practices heavier upon it, and bind it to kinds of duties, as a mending of what was missed and a making good of what it neglected." },
@@ -260,6 +272,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "When it will not comply", formalTitle: "The treatment when the soul does not obey",
     overview: "Ghazali raises the objection every reader has by this point in the book, and his answer is notably practical and notably modest.",
+    thesis: "The objection every reader has by now — what if it does not obey — is raised and answered.",
     moves: [
       { title: "Put the objection", body: "If you say that my soul does not comply with me in striving and in persevering in the regular practices, what is the way to treat it? The question is posed in the first person and taken at face value." },
       { title: "The first answer", body: "Your way in that is to make it hear what has come in the reports concerning the excellence of those who strive. The soul is treated by what it is exposed to rather than by being commanded again." },
@@ -280,6 +293,7 @@ export const book38Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Your worst enemy", formalTitle: "The sixth station: rebuking and reproaching the soul",
     overview: "The book closes on the station the commercial model does not predict, and it turns out to be the mechanism by which the soul changes what it is.",
+    thesis: "The book closes on the one station the commercial model cannot supply, because you cannot dissolve this partnership.",
     moves: [
       { title: "Name the adversary", body: "Your most hostile enemy is your soul, which is between your two sides. It was created commanding to evil, inclining to wickedness, fleeing from good, and you were commanded to purify it and straighten it and lead it with chains of compulsion to the worship of its Lord." },
       { title: "State the alternative", body: "If you neglect it, it bolts and runs off, and you will not get hold of it afterward. And if you keep at it with rebuke and reproach and censure and blame, your soul is the reproachful soul by which God swore." },

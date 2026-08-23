@@ -20,6 +20,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Five chapters", formalTitle: "The shape of the book",
     overview: "The book on earning has five chapters, and the middle three are a single ascending argument: what the law allows, what justice requires beyond it, and what excellence adds beyond that.",
+    thesis: "Five chapters, of which the middle three are one continuous argument about what a trader owes the person opposite him.",
     moves: [
       { title: "Announce the five", body: "The excellence of earning and the urging toward it; the knowledge of sound selling, buying, and dealings; justice in dealing; excellence in it; and the merchant's compassion for himself and his religion." },
       { title: "Note the ascent", body: "The second chapter gives what makes a transaction valid. The third gives what makes it free of wrongdoing, which is not the same thing. The fourth gives what goes beyond both." },
@@ -40,6 +41,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The excellence of earning", formalTitle: "The urging toward work",
     overview: "The first chapter, and its opening verse establishes that earning is not a concession but a design.",
+    thesis: "Earning is placed among the things religion requires rather than tolerated as a distraction from it.",
     moves: [
       { title: "Give the verse", body: "We made the day for livelihood. Ghazali notes that it is mentioned in the course of enumerating blessings, which is what settles the register of the whole chapter." },
       { title: "Note what that establishes", body: "Working for a living is placed among the things given rather than among the things permitted. A day made for livelihood is a provision, not an allowance." },
@@ -60,6 +62,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The law of it", formalTitle: "The second chapter: what makes a transaction valid",
     overview: "The technical chapter, and it is the longest single stretch of law in the Quarter of Customs.",
+    thesis: "The legal chapter is the longest stretch of law in the quarter, and this edition gives its shape rather than its rulings.",
     moves: [
       { title: "Name the subject", body: "The knowledge of earning by way of sale, of usury, of the forward sale, of hire, of the silent partnership, and of partnership — and the conditions the Law lays on each." },
       { title: "Note what it settles", body: "Whether a transaction is concluded, and on what terms. It is a chapter of contract law and it is given in the ordinary manner of such chapters." },
@@ -80,6 +83,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Valid, and still wrong", formalTitle: "The sentence the third chapter opens on",
     overview: "One of the sharpest openings in the Ihya, and it states a principle of law that most readers do not know.",
+    thesis: "Wrongdoing in trade is defined by a principle wide enough to catch things no list of prohibited practices would.",
     moves: [
       { title: "Give the sentence", body: "A dealing may proceed in a way that the jurist rules valid and concluded — and yet it contains a wrongdoing by which the dealer exposes himself to God's wrath." },
       { title: "Give the reason", body: "Since not every prohibition entails the invalidity of the contract. The gap between the two standards is not a moral observation but a technical fact about how prohibitions work." },
@@ -100,6 +104,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Harms that spread", formalTitle: "The wrongs whose harm is general",
     overview: "The first division of wrongdoing, and its two named kinds are a matter of markets rather than of individuals.",
+    thesis: "Some wrongs damage people who were never party to the transaction, which is why they are treated first.",
     moves: [
       { title: "Give the first kind", body: "Hoarding. The seller of food stores it, waiting with it for prices to rise — and it is a general wrongdoing, and its doer is blamed in the Law." },
       { title: "Give the reports", body: "Whoever hoards food for forty days and then gives it in charity, his charity is no expiation for his hoarding. And: whoever hoards food for forty days has quit God and God has quit him." },
@@ -120,6 +125,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Tell them everything", formalTitle: "The wrongs that harm the other party",
     overview: "The second division, and its rule is stated as broadly as a rule can be — followed by an obligation of disclosure that admits no exception.",
+    thesis: "The rule about harming the other party is stated as broadly as a rule can be, and deliberately so.",
     moves: [
       { title: "Give the rule", body: "Everything by which the party dealt with is harmed is a wrongdoing — and justice is that a man not harm his Muslim brother." },
       { title: "Give the disclosure obligation", body: "That he make plain all the defects of the goods, the hidden and the apparent, and conceal nothing of them. That is obligatory." },
@@ -140,6 +146,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Capital and profit", formalTitle: "Justice is not the whole of it",
     overview: "The fourth chapter opens with an accounting metaphor that reframes the whole book, and it is the passage the book is remembered for.",
+    thesis: "Being fair is where the accounting starts, not where it finishes — because nobody in business settles for getting his capital back.",
     moves: [
       { title: "Note the pairing", body: "God commanded justice and excellence together — indeed God commands justice and excellence." },
       { title: "Give the first half", body: "Justice is a cause of deliverance only, and it runs in trade as capital runs." },
@@ -160,6 +167,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Six doors", formalTitle: "The ways excellence is attained",
     overview: "Six things, each of which gives the other party something not owed to them — and two of them are unusually concrete.",
+    thesis: "Six ways of giving the other party something they were not owed, which is what excellence in trade actually consists of.",
     moves: [
       { title: "The first", body: "In the margin taken: that he not take from his counterpart a margin beyond what is customarily overlooked. The taking of a margin itself is permitted; the excellence is in its size." },
       { title: "The second", body: "In bearing the loss: if he buys food from a weak person, or something from a poor one, there is no harm in his bearing the disadvantage and being lenient." },
@@ -180,6 +188,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "His capital is his religion", formalTitle: "The fifth chapter turns to the trader",
     overview: "The book's last chapter changes subject: from what a man owes his counterparties to what his trade is doing to him.",
+    thesis: "The last chapter changes subject entirely: from what you owe your customer to what you owe your own religion while trading.",
     moves: [
       { title: "State the danger", body: "The merchant should not let his livelihood occupy him from his return, so that his life is wasted and his bargain a loss — for what escapes him of profit in the hereafter is not made up by what he attains here." },
       { title: "Name the transaction", body: "So he would have bought the life of this world with the hereafter. The whole chapter is framed as a trade a man makes without noticing it." },
@@ -200,6 +209,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Seven things", formalTitle: "What the trader's compassion requires",
     overview: "Seven observances, and they run from why a person trades to what he does while standing in the market.",
+    thesis: "Seven observances, running from why a person trades at all to what he does at the end of a day.",
     moves: [
       { title: "The first", body: "Good intention and belief at the beginning of the trade: he should intend by it abstention from asking, and the sufficing of his household." },
       { title: "The second", body: "That he intend, by standing in his craft or his trade, the discharge of one of the communal obligations — for the crafts and the trades, if they were abandoned, livelihoods would collapse." },
@@ -220,6 +230,7 @@ export const book13Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Consult your heart", formalTitle: "The sixth observance",
     overview: "The last substantial thing in the book, and the most quoted sentence in it — a direct instruction to go past the legal opinion.",
+    thesis: "The most quoted sentence in the book: do not go by the legal opinions — ask your own heart.",
     moves: [
       { title: "State it", body: "That he not confine himself to avoiding the forbidden, but guard against the places of doubt and the occasions of suspicion." },
       { title: "Give the instruction", body: "He should not look to the legal opinions — but he should seek the verdict of his own heart." },

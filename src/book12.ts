@@ -20,6 +20,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "A disagreement", formalTitle: "That the scholars differed",
     overview: "The book opens not on a recommendation but on a dispute, and Ghazali sets out three standing positions before taking any of them.",
+    thesis: "The book opens on a disagreement rather than a recommendation, and Ghazali reports both sides at strength.",
     moves: [
       { title: "Give the first position", body: "The scholars have differed about the merit of marriage. Some went so far as to claim that it is better than devoting oneself to the worship of God." },
       { title: "Give the second", body: "Others acknowledged its merit but placed devoting oneself to worship above it — so long as the soul does not long for marriage with a longing that disturbs the state and calls to intercourse." },
@@ -40,6 +41,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "For whom", formalTitle: "The method the chapter announces",
     overview: "The sentence that governs the whole book, and it makes the answer depend on the person asking rather than on the subject.",
+    thesis: "One sentence governs the whole book: the answer differs from person to person, so the question is never simply whether marriage is good.",
     moves: [
       { title: "State the order of business", body: "The truth in it is not disclosed except by our first presenting what has come in the reports encouraging toward it and away from it — then explaining the benefits of marriage and its harms." },
       { title: "Give the purpose", body: "So that from them the merit of marriage, and of leaving it, becomes clear in the case of everyone who is safe from its harms or is not safe from them." },
@@ -60,6 +62,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The root", formalTitle: "The first benefit: the child",
     overview: "The first of five benefits, and Ghazali gives it a status the other four do not have.",
+    thesis: "The first benefit is given a standing the other four do not have, which is why it is treated alone.",
     moves: [
       { title: "Name it", body: "The first benefit is the child." },
       { title: "Give its status", body: "It is the root, and for it marriage was instituted." },
@@ -80,6 +83,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Fortification, and rest", formalTitle: "The second and third benefits",
     overview: "Two benefits that concern the person rather than the world, and the second of them is unexpectedly warm.",
+    thesis: "The second and third benefits concern what marriage does to the person rather than what it produces.",
     moves: [
       { title: "Give the second", body: "Fortification against the devil, breaking the urge, repelling the harms of appetite, lowering the gaze, and guarding the private parts." },
       { title: "Note its structure", body: "It is stated as a set of five effects rather than one, and it is the benefit that will decide the chapter's second worked case — where a person who fears for himself is told that marriage is better." },
@@ -100,6 +104,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "And two more", formalTitle: "The fourth and fifth benefits",
     overview: "The last two benefits, and the fifth is the one that reverses the direction of everything before it.",
+    thesis: "The fifth benefit reverses the direction of the argument: what looks like a burden is counted as the gain.",
     moves: [
       { title: "Give the fourth", body: "Freeing the heart from the managing of the house, and from taking on the work of cooking, sweeping, spreading, cleaning the vessels, and preparing what is needed." },
       { title: "Note what it assumes", body: "It describes an arrangement in which that work is done by someone else, and it counts the freeing of one person from it as a benefit to him. It is a description of a household of Ghazali's time and place." },
@@ -120,6 +125,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "The strongest", formalTitle: "The first harm",
     overview: "Three harms are given, and the first is named as the strongest of them — and it is entirely economic.",
+    thesis: "Three harms, and the first is named the strongest — which sets up the weighing rather than settling it.",
     moves: [
       { title: "Name it", body: "The first, and it is the strongest of them, is the inability to seek the lawful." },
       { title: "Give the reason", body: "For that is not easy for everyone, especially in these times with the disturbance of livelihoods. So marriage becomes a cause for expanding the seeking and for feeding from the unlawful — and in that is his destruction and the destruction of his household." },
@@ -140,6 +146,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "And two more", formalTitle: "The second and third harms",
     overview: "The remaining two harms, ranked below the first, and the third has a further stage that Ghazali adds separately.",
+    thesis: "The remaining harms are ranked below the first, and the third carries a further condition of its own.",
     moves: [
       { title: "Give the second", body: "Falling short of fulfilling their rights, and patience with their character, and bearing harm from them — and this is below the first in strength." },
       { title: "Note the symmetry again", body: "It is the fifth benefit stated as a failure. What trains a person who can carry it damages a person who cannot, and the ranking below the first harm reflects that it depends on the person rather than on circumstances." },
@@ -160,6 +167,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Profit and capital", formalTitle: "The weighing, in worked cases",
     overview: "The chapter's conclusion, and it is not a verdict but two worked cases — the first of which comes out against marriage.",
+    thesis: "The chapter ends in two worked cases that come out differently, which is the method rather than a failure to decide.",
     moves: [
       { title: "Set the first case", body: "Whoever is not in distress from appetite, and the benefit of his marriage would be the effort to obtain a child, and the harm is the need to earn the unlawful and the occupation from God — then celibacy is better for him." },
       { title: "Give the reason", body: "For there is no good in what occupies from God, and no good in earning the unlawful; and the matter of the child does not make up for the deficiency of these two." },
@@ -180,6 +188,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "The contract", formalTitle: "What the second chapter covers",
     overview: "Having decided whether, the book turns to how — and the second chapter is legal where the first was deliberative.",
+    thesis: "Having settled whether, the book turns to how — and that chapter is legal in a way this edition presents in outline only.",
     moves: [
       { title: "Name the subject", body: "The manners observed in the contract and in the two contracting parties — the elements and conditions by which a contract is concluded, and what is observed of the woman's circumstances." },
       { title: "Note the two halves", body: "One half is the law of the contract: what makes it valid, who may conclude it, and what must be present. The other is the qualities Ghazali recommends looking for, which are counsel rather than conditions." },
@@ -200,6 +209,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Both sides", formalTitle: "What the third chapter covers",
     overview: "The longest chapter of the book treats the marriage itself, and its structure is the most important thing about it: it examines both parties.",
+    thesis: "The longest chapter treats the marriage itself, and much of it addresses an eleventh-century world directly.",
     moves: [
       { title: "Name the subject", body: "The manners of living together, and what runs through the duration of the marriage — and the examination of what is upon the husband and what is upon the wife." },
       { title: "Note the division", body: "Duties are set out on both sides, in order, rather than the obligations of one party being treated as the subject and the other as its object." },
@@ -220,6 +230,7 @@ export const book12Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "What is left open", formalTitle: "What the book does and does not settle",
     overview: "The book closes, and what it has established is a method rather than an answer — which is what its opening promised.",
+    thesis: "What the book actually establishes is a method for a personal question, not an answer to a general one.",
     moves: [
       { title: "Say what it settled", body: "That the question is open among the scholars; that it is answered by weighing five benefits against three harms; and that the answer differs by person, since the same circumstance appears in both lists." },
       { title: "Say what it did not", body: "It gives no general verdict. Its two worked cases come out on opposite sides, and the fact that moves between them is a fact about the person rather than about marriage." },

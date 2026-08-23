@@ -8,6 +8,7 @@ type Seed = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
+  thesis?: string;
   moves: Array<{ title: string; body: string }>;
   closer: Array<{ title: string; body: string }>;
   distinction: [string, string, string, string, string];
@@ -59,6 +60,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Four words, several meanings", formalTitle: "The meanings of soul, spirit, heart, and intellect",
     overview: "Ghazali opens the whole quarter by clearing away a confusion he says is the source of most errors in this field: four words are in circulation, each carries more than one meaning, and few even among senior scholars keep the senses apart.",
+    thesis: "Four words carry five meanings between them, and most errors in this field come from not keeping them apart.",
     moves: [
       { title: "Split the word heart", body: "One sense is the pine-cone-shaped flesh in the left of the chest, which animals have and corpses have, and which belongs to the physician's concern rather than the religious one. The other is a subtle lordly reality connected to that flesh, and this is the human being's true self, the one that perceives, knows, is addressed, and is held responsible." },
       { title: "Split the word spirit", body: "One sense is a subtle body rising from the heart's cavity and spreading through the vessels, which is the physicians' usage. The other is the same knowing, perceiving subtlety already described." },
@@ -79,6 +81,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "The heart's forces", formalTitle: "The visible and inward forces that serve the heart",
     overview: "The heart governs through armies. Ghazali divides them into those seen with the eye and those seen only with insight, and explains why a governing faculty needed armies at all: because it was made for a journey, and a journey needs a mount and provision.",
+    thesis: "The heart governs through armies, and it needed them because it was made for a journey.",
     moves: [
       { title: "Name the visible army", body: "Hand, foot, eye, ear, tongue and the rest of the organs, inside and out, all work for the heart and do what it says. It tells the eye to open and the eye opens; it tells the foot to move and the foot moves." },
       { title: "Explain the need", body: "The heart needed these because it was made for a journey to God, and the journey requires a mount and provision. Its mount is the body and its provision is knowledge, and what enables it to take on that provision is right action." },
@@ -99,6 +102,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "The city within", formalTitle: "Three analogies for the heart and its inward forces",
     overview: "Appetite and anger can follow the heart completely, in which case they help it on its road, or they can rebel until they own it. Ghazali offers three analogies for the same structure, each making a different part of it obvious.",
+    thesis: "Three analogies for one arrangement, and each shows a different way the arrangement can fail.",
     moves: [
       { title: "The realm and its ministers", body: "The body is the self's realm. The limbs and faculties are craftsmen and workers; the reflective intellect is a wise counsellor and vizier; appetite is a lying, scheming servant who fetches supplies and disguises poison as advice; and anger is the chief of police." },
       { title: "Show how the realm is governed well", body: "When the ruler takes his adviser's counsel, ignores what that other official wants, and puts his chief of police over him so that he is being managed rather than doing the managing — the kingdom runs properly and justice follows. A person does this by putting the intellect over both and using each against the other." },
@@ -119,6 +123,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Knowledge and will", formalTitle: "What distinguishes the human heart",
     overview: "Animals have appetite, anger, and both outward and inward perception; a sheep sees the wolf and knows to flee. Ghazali therefore asks what is left that belongs to the human heart alone, and answers with two things.",
+    thesis: "Animals have appetite, anger and perception too — so what distinguishes a human heart has to be something else.",
     moves: [
       { title: "The first is knowledge", body: "Knowledge of worldly and otherworldly matters and of intelligible realities, which lie beyond the senses. Universal necessary judgments belong to the intellect: a person judges that no single thing can be in two places at once, and that is a judgment about every thing, though the senses reached only some." },
       { title: "The second is will", body: "When the intellect perceives the outcome of a matter and where its good lies, a longing arises toward that good and toward its means. This is not the will of appetite; it is often its opposite." },
@@ -139,6 +144,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "Four recurring dispositions", formalTitle: "The gathered qualities and images of the heart",
     overview: "Ghazali gathers the heart's qualities under four admixtures present in every person, then gives the image the book is remembered for: four creatures gathered in one skin.",
+    thesis: "Four admixtures are present in every person, and the heart's qualities are gathered under them.",
     moves: [
       { title: "Name the four", body: "The predatory, the bestial, the satanic, and the lordly. From anger come the acts of beasts of prey; from appetite the acts of cattle; from the lordly element a claim to mastery, elevation, and sole authority; and from discernment joined to appetite and anger a satanic capacity to reach ends by scheming and to show evil in the guise of good." },
       { title: "Give the image", body: "It is as if gathered in a person's skin were a pig, a dog, a devil, and a sage. The pig is appetite, blamed not for its colour or shape but for its greed; the dog is anger, ferocious not by form but by savagery." },
@@ -159,6 +165,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Knowing and the mirror", formalTitle: "The heart as a mirror in relation to knowledge",
     overview: "Ghazali defines knowledge with a precision the rest of the book depends on, then gives the five reasons a mirror fails to show a form and applies each to the heart. This is the analytical centre of the book.",
+    thesis: "Knowledge is a form appearing in a mirror, and a mirror fails for exactly five reasons.",
     moves: [
       { title: "Separate the three things", body: "There is the mirror, there are the realities of things, and there is the arrival of the likeness of those realities in the mirror. The knower is the heart in which the likeness comes to be; the known is the reality; and knowledge is the arrival of the likeness." },
       { title: "Correct the obvious picture", body: "The mirror works better than a hand gripping a sword, because the thing itself never gets into the heart. Somebody who knows fire does not have fire in his heart; what he has is a likeness that matches it." },
@@ -179,6 +186,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Kinds of knowledge", formalTitle: "Intellectual, religious, worldly, and otherworldly knowledge",
     overview: "Ghazali sorts knowledge into rational and religious, then divides the rational again, and refuses both of the positions that most readers arrive holding.",
+    thesis: "Knowledge sorts into rational and religious, and Ghazali refuses both positions most readers arrive holding.",
     moves: [
       { title: "Divide the rational", body: "The necessary, which a person finds himself made upon since childhood and cannot say when or whence it came, and the acquired, gained by learning and inference. Both are called intellect." },
       { title: "Place the religious", body: "The religious sciences are taken from the prophets, by learning the Book and the practice and understanding their meanings after hearing them. By these the heart's condition is completed and it is kept sound of its diseases." },
@@ -199,6 +207,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Learning and inspiration", formalTitle: "Different ways knowledge comes to the heart",
     overview: "Knowledge that is not necessary arrives in two ways: it storms the heart as if cast into it, or it is acquired by inference and instruction. Ghazali names each precisely, and then makes a claim about the difference that is easy to miss.",
+    thesis: "Knowledge arrives either by being cast in or by being worked for, and the difference is not where most readers put it.",
     moves: [
       { title: "Name the three", body: "What arrives without contrivance and without the person knowing whence is inspiration, a breathing into the heart, and belongs to the friends of God. What arrives with the witnessing of the angel who casts it is revelation, and belongs to the prophets. What is acquired by inference belongs to the scholars." },
       { title: "Give the picture", body: "The heart is a mirror facing the Preserved Tablet, on which is inscribed everything decreed to the Day of Rising, and a veil hangs between the two. The likeness of knowledge passing from one mirror to the other is like a form printing from one facing mirror into another." },
@@ -219,6 +228,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "Reservoir and polished wall", formalTitle: "Two tangible examples for ways of knowing",
     overview: "Ghazali supplies two images to make the previous section concrete, one for where knowledge enters and one for what the two kinds of work actually do.",
+    thesis: "Two images make the previous section concrete: one for where knowledge enters, one for what the two kinds of work do.",
     moves: [
       { title: "Give the reservoir", body: "A pool may be filled by channels dug to it from outside, or the earth beneath it may be cleared away until clear water breaks up from its floor, and that water is purer, more lasting, and sometimes more abundant." },
       { title: "Read the image", body: "The heart is the pool, knowledge is the water, and the five senses are the channels. Knowledge may be driven to the heart along the channels of the senses until it is full, and the channels may instead be stopped by seclusion and lowered gaze while the heart's own depth is cleared, until the springs break open from within." },
@@ -239,6 +249,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Witness from revelation", formalTitle: "Religious testimony for knowledge beyond ordinary instruction",
     overview: "Having described a way of knowing that does not proceed by instruction, Ghazali turns to the question a careful reader will already be asking, and gathers the textual grounds for it.",
+    thesis: "Having described a knowing that does not proceed by instruction, Ghazali gathers the textual grounds for it.",
     moves: [
       { title: "State what is being supported", body: "The claim is not that anything may be believed on the strength of an impression, but that the heart has a route to knowledge that does not run through the senses and instruction." },
       { title: "Gather the grounds", body: "The verse that those who struggle in God will be guided to His ways; the report that whoever acts on what he knows is given by God knowledge of what he did not know; and the report that if the devils did not hover over the hearts of the children of Adam they would look upon the kingdom of the heavens." },
@@ -259,6 +270,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Promptings and influence", formalTitle: "How destructive suggestions gain influence over the heart",
     overview: "Ghazali turns from knowing to the traffic of thoughts, and builds the causal chain that the rest of the quarter depends on. It begins with something that arrives unbidden and ends with a moving limb.",
+    thesis: "A chain that starts with something arriving unbidden and ends with a moving limb.",
     moves: [
       { title: "Define the prompting", body: "The closest effects produced in the heart are its promptings, meaning the thoughts and recollections that occur to it. They are called promptings because they occur after the heart had been heedless of them." },
       { title: "Give the chain", body: "The beginning of actions is the prompting. The prompting moves desire, desire moves resolve, resolve moves intention, and intention moves the limbs. Nothing is intended before it has occurred to the mind." },
@@ -279,6 +291,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Guarding the entrances", formalTitle: "The principal ways destructive suggestions enter",
     overview: "Ghazali gives the fortress image and draws an obligation from it: guarding the heart is required of every responsible person, guarding cannot be done without knowing the gates, and so knowing the gates is itself required.",
+    thesis: "Guarding the heart is obligatory, guarding needs knowing the gates, so knowing the gates is obligatory too.",
     moves: [
       { title: "Give the image and the duty", body: "The heart is a fort and the enemy seeks to enter and own it. The fort cannot be kept except by guarding its gates, and no one can guard gates he does not know. What a duty cannot be discharged without is itself a duty." },
       { title: "Identify what the gates are", body: "The ways in are a person's own traits. There are many, and Ghazali sticks to the big ones — the gates wide enough that the sheer number of the enemy's troops does not narrow them." },
@@ -299,6 +312,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Thought and accountability", formalTitle: "Passing thoughts, inclination, resolve, and moral responsibility",
     overview: "Ghazali says the truth of this question cannot be reached until the heart's acts are set out in order from their first appearance to the moving of a limb. He then sets them out, and answers the question link by link.",
+    thesis: "The heart's acts are set out in order so that responsibility can be located link by link rather than asserted.",
     moves: [
       { title: "The first state", body: "The prompting. A form occurs to the heart, as when it occurs to a person that a woman is behind him on the road and that he would see her if he turned. This is what is called the speech of the soul." },
       { title: "The second state", body: "The stirring of desire toward the look, which is the movement of appetite in the nature. This is called the inclination of the nature, and it is born of the first." },
@@ -319,6 +333,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "Remembrance and recurrence", formalTitle: "Whether destructive suggestions can cease entirely",
     overview: "Ghazali reports five positions on whether suggestion is wholly cut off when a person is occupied with remembrance, and then does something he does very rarely: he accepts all of them.",
+    thesis: "Five positions on whether suggestion ever stops, and Ghazali does something rare: he accepts all of them.",
     moves: [
       { title: "Set out the range", body: "One group holds the suggestion's root is not annihilated but runs in the heart without effect, since a heart wholly taken up with remembrance is screened from being affected, as a preoccupied person may hear a voice without understanding it." },
       { title: "Continue the range", body: "Another holds that neither the suggestion nor its effect falls away, only its dominance, so that it whispers from a distance and weakly. Another holds that suggestion and remembrance each vanish for an instant and alternate so rapidly that they seem simultaneous, like scattered points on a ball that run together when it is spun." },
@@ -339,6 +354,7 @@ export const book21Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "Change and steadiness", formalTitle: "The heart's rapid change and three broad conditions",
     overview: "The book closes on movement. The heart is called the heart because of its turning, and Ghazali sorts hearts by whether that turning has settled in a direction, ending the book where the quarter's remaining nine books will begin.",
+    thesis: "The heart is named for its turning, and hearts are sorted by whether the turning has settled in a direction.",
     moves: [
       { title: "State the condition", body: "The heart is in continual change and being acted upon, and these turnings, which knowledge does not reach on its own, are known only by those who watch and keep account of their states with God." },
       { title: "The first heart", body: "A heart built up with God-consciousness, purified by discipline and cleansed of the filth of character. Promptings of good strike into it from the treasuries of the unseen; the intellect turns to consider what occurred and its use becomes clear; and the angel, finding the heart good in its substance and lit by knowledge, finds it fit to alight in, and reinforces it, so that good draws on good without end." },

@@ -20,6 +20,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Five states of lacking", formalTitle: "The reality of poverty and the states and names of the poor",
     overview: "Ghazali defines poverty precisely, notes that on the definition everything but God is poor, then narrows to poverty of wealth and sorts those who lack it into five states, each with its own name.",
+    thesis: "Poverty is defined precisely, and on the definition it turns out to be a relation rather than a bank balance.",
     moves: [
       { title: "Define it", body: "Poverty is the lack of what one needs. Lacking what one does not need is not called poverty, and if what is needed is present and within reach then the one who needs it is not poor." },
       { title: "Take the definition to its end", body: "On that definition everything other than God is poor, since each thing needs its existence to continue into the next moment and that continuance is derived. Only one existent has an underived existence, so there is one rich and everything else is in need of Him." },
@@ -40,6 +41,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 2, shortTitle: "Why poverty is praised", formalTitle: "The excellence of poverty in general",
     overview: "Ghazali gathers the reports praising poverty, and the placement after the five states means the reader already knows that the praise cannot attach to circumstance alone.",
+    thesis: "The reports praising poverty are gathered, and where they sit in the book matters as much as what they say.",
     moves: [
       { title: "Gather the testimony", body: "The verses, reports, and sayings praising the poor are assembled, and they are extensive." },
       { title: "Note what the praise attaches to", body: "Since the previous section established five different states within the same circumstance, the praise cannot be attaching to the mere absence of money." },
@@ -60,6 +62,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Which poor", formalTitle: "The particular excellence of the pleased, the satisfied, and the truthful among the poor",
     overview: "Ghazali narrows the praise to specific states within poverty, which is where the general commendation becomes a description of something a person can actually be.",
+    thesis: "The praise narrows to particular states inside poverty rather than covering everyone whose hands are empty.",
     moves: [
       { title: "Name the states praised", body: "The particular excellence attaches to those who are pleased, those who are satisfied, and those who are truthful in their condition, rather than to everyone whose hands are empty." },
       { title: "Explain why these", body: "Each of the three names a disposition that the previous section's ladder identified, and each is a state a person occupies rather than a circumstance he suffers." },
@@ -80,6 +83,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 4, shortTitle: "Poverty over wealth", formalTitle: "The excellence of poverty over wealth",
     overview: "The comparison the whole first part has been building toward, and Ghazali handles it with the same care he brings to every comparison of states.",
+    thesis: "The comparison the first part has been building toward, taken at its strongest rather than its most comfortable.",
     moves: [
       { title: "State the position", body: "Poverty is given precedence over wealth, and the reports supporting it are assembled." },
       { title: "Locate the reason", body: "The precedence rests on what each condition tends to produce rather than on the conditions themselves, which is consistent with the treatment of blessing and trial in Book 32." },
@@ -100,6 +104,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 5, shortTitle: "The matched pair", formalTitle: "The relation of the satisfied poor man to the grateful rich man",
     overview: "The sharpest form of the comparison, and Ghazali takes it seriously rather than settling it by preference. Each side is represented by its best case.",
+    thesis: "The sharpest form of the comparison: the satisfied poor man against the grateful rich one.",
     moves: [
       { title: "Match the cases", body: "The comparison is set between a poor man who is satisfied and a rich man who is grateful, so that neither side is represented by its failure." },
       { title: "Show why it is hard", body: "Both states are praised in their own right, both are dispositions rather than circumstances, and each has something the other lacks." },
@@ -120,6 +125,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 6, shortTitle: "Conduct in poverty", formalTitle: "The manners of the poor man in his poverty",
     overview: "Ghazali turns from the analysis of states to conduct, and the instructions are aimed at keeping a person in the state he claims rather than at enduring the circumstance.",
+    thesis: "From the analysis of states to conduct — what poverty actually asks of somebody in it.",
     moves: [
       { title: "Aim the instructions", body: "The manners are given to someone in the condition, and their purpose is to protect the disposition that made the condition praiseworthy." },
       { title: "Guard the inward", body: "Since the five states are inward, the conduct that maintains them concerns what the person does with his attention as much as what he does with his hands." },
@@ -140,6 +146,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Receiving without asking", formalTitle: "The manners of the poor man in accepting a gift that comes unasked",
     overview: "A gift that arrives without being sought is a distinct case, and Ghazali treats it carefully because both accepting and refusing can be wrong.",
+    thesis: "A gift that arrives unasked is its own case, and needs its own rules.",
     moves: [
       { title: "Separate the case", body: "What arrives unasked is not what was sought, and the rules differ accordingly." },
       { title: "Examine the giver's purpose", body: "The considerations include why it is being given and what accepting would place the receiver under, which is why the case cannot be settled by a rule about money alone." },
@@ -160,6 +167,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 8, shortTitle: "Asking", formalTitle: "The prohibition of asking without necessity, and the manners of the one compelled",
     overview: "Ghazali forbids asking without necessity and then treats the compelled case with unusual care, since the fifth state of poverty is exactly the one in which asking may be required.",
+    thesis: "Asking without necessity is forbidden, which forces the question of what necessity is.",
     moves: [
       { title: "State the prohibition", body: "Asking without necessity is forbidden, and the reasons given concern what it does to the asker as much as what it takes from the giver." },
       { title: "Name what it costs the asker", body: "Asking places a person under obligation and installs a habit of looking to people, which is the disposition the whole first part has been examining." },
@@ -180,6 +188,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 9, shortTitle: "How much is enough", formalTitle: "The measure of sufficiency that makes asking forbidden",
     overview: "Having permitted asking under necessity, Ghazali has to say what counts as having enough, and the answer is deliberately not a single figure.",
+    thesis: "Having permitted asking under necessity, Ghazali has to fix the line, and does.",
     moves: [
       { title: "Pose the question", body: "If asking is permitted only under necessity, then the boundary has to be located: how much a person must have before asking becomes forbidden to him." },
       { title: "Refuse a single figure", body: "The measure varies with circumstances, as with the measure of food in Book 23, and a fixed number would misdescribe the cases." },
@@ -200,6 +209,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 10, shortTitle: "Those who ask", formalTitle: "The states of those who ask",
     overview: "The first part closes by sorting those who ask, which completes the anatomy: having sorted those who lack, Ghazali sorts those who approach others about it.",
+    thesis: "The first part closes by sorting those who ask, which completes the account of the state.",
     moves: [
       { title: "Sort the askers", body: "Those who ask are not one kind, and their states differ as widely as the five states of those who lack." },
       { title: "Distinguish need from habit", body: "The central division is between one who asks from genuine necessity and one for whom asking has become a way of living." },
@@ -220,6 +230,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 11, shortTitle: "Detachment is an exchange", formalTitle: "The reality of abstinence",
     overview: "Part Two opens with a definition that reframes the whole subject. Detachment is not the absence of desire but its redirection, and it therefore has two conditions.",
+    thesis: "Detachment is defined by what you turn toward, not by what you give up — which reframes the whole second part.",
     moves: [
       { title: "Give the definition", body: "Abstinence is the turning of desire away from a thing toward what is better than it. Whoever turns from one thing to another, by sale or exchange, turns from the first because he is disinterested in it and toward the second because he desires it." },
       { title: "Name the two sides", body: "His condition with respect to what is left is called abstinence, and with respect to what is taken it is called desire and love. Both are present in one act." },
@@ -240,6 +251,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 12, shortTitle: "Why detachment is praised", formalTitle: "The excellence of abstinence",
     overview: "The testimony for detachment, gathered after the definition, so that a reader knows the praise attaches to an exchange rather than to a deprivation.",
+    thesis: "The testimony is gathered after the definition, so that detachment is not confused with deprivation.",
     moves: [
       { title: "Gather the testimony", body: "The verses, reports, and sayings are assembled, and they are among the most extensive in the quarter." },
       { title: "Read them through the definition", body: "Every commendation of leaving the world is, on the definition, a commendation of taking something judged better, which changes what the reader is being urged toward." },
@@ -260,6 +272,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 13, shortTitle: "Graded by what you take", formalTitle: "The degrees and divisions of abstinence",
     overview: "Since detachment was defined by what is turned toward, its degrees follow from that, and Ghazali grades them by the object of the desire that carried the exchange.",
+    thesis: "Since detachment was defined by its object, its degrees follow from how completely the object has changed.",
     moves: [
       { title: "Give the highest degree", body: "One who turns from everything other than God, including the gardens themselves, and loves nothing but God, is the absolutely detached." },
       { title: "Give the degree below it", body: "One who turns from every worldly portion but still desires the equivalents in the hereafter is detached, but below the first, since what he took is of the same kind as what he left." },
@@ -280,6 +293,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 14, shortTitle: "What is left", formalTitle: "The object of abstinence",
     overview: "Ghazali turns from the structure of the exchange to its content, and asks what exactly a person is turning from when he is said to be detached from the world.",
+    thesis: "From the structure of the exchange to its content: what exactly is being turned away from.",
     moves: [
       { title: "Name the object", body: "The world here is not the created order but the portion of it a person takes as his own, which is the same distinction Book 26 established." },
       { title: "Exclude what cannot be left", body: "Since detachment requires an exchange, what is genuinely necessary cannot simply be abandoned, and the section on necessities takes that up directly." },
@@ -300,6 +314,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 15, shortTitle: "Sorted by the object", formalTitle: "The division of abstinence according to the kinds of what is left",
     overview: "Having named the object, Ghazali sorts detachment by its kinds, so that a person's condition can be described in one area rather than as a single verdict.",
+    thesis: "Detachment is sorted by kind, so that it can be located rather than merely aspired to.",
     moves: [
       { title: "Sort by kind", body: "Detachment is divided according to the kinds of thing turned from, so that a person may be detached in one and not in another." },
       { title: "Make it a description rather than a verdict", body: "The sorting converts a single judgment into a set of specific ones, which is how the partial degree of the previous section becomes usable." },
@@ -320,6 +335,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 16, shortTitle: "What cannot be left", formalTitle: "Abstinence in what is necessary for life",
     overview: "The hardest case for a doctrine of detachment: things that cannot be dispensed with. Ghazali does not resolve it by pretending they can be.",
+    thesis: "The hardest case for any doctrine of detachment: the things nobody can do without.",
     moves: [
       { title: "Pose the difficulty", body: "Food, clothing, and shelter cannot be abandoned, so detachment with respect to them cannot mean going without them." },
       { title: "Relocate the exchange", body: "What can be exchanged is not the thing but the measure and the attachment, which returns the reader to the measures of Book 23 and the restricted blessings of Book 32." },
@@ -340,6 +356,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 17, shortTitle: "The six in detail", formalTitle: "Detachment in food, clothing, dwelling, furnishings, and what is possessed",
     overview: "The longest stretch of the book, in which the principle is applied to each necessity in turn, with the concreteness that makes the rest of the analysis operable.",
+    thesis: "The principle is applied across food, clothing, housing and furnishing — the longest stretch of the book.",
     moves: [
       { title: "Work through each", body: "Each of the six is taken separately, since the measure of need differs and what counts as excess in one is not what counts in another." },
       { title: "Give concrete measures", body: "The treatment is specific rather than exhortatory, as with the four measures of eating in Book 23, so that a reader can locate himself." },
@@ -360,6 +377,7 @@ export const book34Chapters: Chapter[] = [
   makeChapter({
     id: 18, shortTitle: "How it is recognised", formalTitle: "The signs of abstinence",
     overview: "The book closes as Book 22 did, with signs, because a state that only its holder can see needs an external test if it is to be checked at all.",
+    thesis: "The book closes with signs, because a state only its holder can see needs an external test to be checkable at all.",
     moves: [
       { title: "State the need for signs", body: "Since detachment is an inward exchange, a person can claim it without having made it, and the signs are what make the claim checkable." },
       { title: "Give the governing sign", body: "The clearest is indifference between having and not having: whether the arrival or departure of a thing changes the person, which is the sixth state named at the very start of the book." },
