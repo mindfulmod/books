@@ -101,7 +101,7 @@ export const book05Chapters: Chapter[] = [
     id: 5, shortTitle: "A third thing", formalTitle: "When the gift should be made public",
     overview: "The fourth duty, which reverses the third under a condition — and then names a consideration that neither of them has mentioned.",
     moves: [
-      { title: "Give the condition", body: "Do it openly where you know that letting it be seen will encourage other people to do the same — and guard your intention against showing off, by the method set out in the treatment of that." },
+      { title: "Give the condition", body: "Give openly where you know that being seen will get other people doing the same — and guard the intention against showing off, by the method set out in the treatment for it." },
       { title: "Give the second occasion", body: "Or because the person asked in front of a crowd. Then you should not hold back for fear that giving openly looks like display. Give, and guard the intention as far as you can." },
       { title: "Name the third consideration", body: "This is because in disclosure there is a third thing to beware of, besides reproach and showing off — and that is the tearing of the poor man's covering. For he may be hurt at being seen in the form of one in need." },
       { title: "Weigh the three against each other", body: "So disclosure is answerable to three cautions at once: reproach, showing off, and the tearing of the poor man's covering. The first two fall on the giver and the third on the receiver — which is why the condition that opens this duty is about others being encouraged to imitate, and not about the giver's own comfort." },

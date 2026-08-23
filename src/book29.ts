@@ -61,14 +61,14 @@ export const book29Chapters: Chapter[] = [
     moves: [
       { title: "Name the contested attribute", body: "The censure is framed by the divine saying that greatness is a cloak and majesty a waist-wrapper, and that whoever contests them is broken. Pride is condemned as a claim, not merely as a bad manner." },
       { title: "State the measure", body: "The reports set the disqualifying quantity at a mustard seed's weight in the heart, which places pride among the conditions that cannot be safely held in reserve." },
-      { title: "Locate it inwardly", body: "The sayings describe a swelling within the heart rather than an office, a reputation, or a visible rank, so the diagnosis cannot be read off a person's social position." },
+      { title: "Locate it inwardly", body: "The sayings describe something swelling inside the heart, not a job, a reputation, or a visible position — so you cannot diagnose it from where somebody sits in the world." },
       { title: "Turn the censure inward", body: "The early figures Ghazali quotes apply the warning to themselves. Abu Bakr's counsel that no Muslim should be belittled, because the small among them is great with God, keeps the reader from using the chapter on someone else." },
     ],
     closer: [
       { title: "Why the measure is so small", body: "The mustard seed is not rhetorical excess. Ghazali will argue in a later section that pride functions by closing off every other virtue at once, which is why any surviving portion is treated as decisive." },
       { title: "Reports gathered, not graded", body: "This section is a collection of transmitted censure. The synthesis reports what Ghazali assembled and the qualifications he attached, without independently grading each narration." },
     ],
-    distinction: ["The censure has a precise object", "A contested attribute", "Pride is censured as a claim on greatness that belongs only to God.", "A social position", "Holding rank, competence, or public responsibility is not what these reports condemn."],
+    distinction: ["The censure has a precise object", "A contested attribute", "Pride is censured as a claim on greatness that belongs only to God.", "A social position", "Having standing, being good at something, or carrying public responsibility is not what these reports are against."],
     misreading: "Do not read the severity as a verdict that every capable or well-regarded person is among those censured. The sayings describe an inward state the person may not yet have located in himself.",
     reflection: "Read one of these censures as addressed to you rather than to someone you already have in mind. Notice how quickly the mind reaches for a different subject.",
     audit: ["Whom did I picture when I read the censure?", "What claim about my own worth would I defend hardest?", "Where do I treat a rank as evidence of value rather than a task?", "Which person have I quietly filed as beneath consideration?"],
@@ -77,7 +77,7 @@ export const book29Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 2, shortTitle: "The gait and the hem", formalTitle: "The censure of strutting and displaying the marks of pride in gait and dress",
-    overview: "Having stated the general censure, Ghazali turns to its most visible expression: a bearing that advertises the inward state. The reports condemn the trailing hem and the swaggering walk, and the anecdotes that follow all work by returning the strutting person to a plain fact about his own body.",
+    overview: "Having condemned it in general, he turns to how it shows: a way of carrying yourself that advertises what is going on inside. The reports are against the trailing hem and the swagger, and every story that follows works the same way — by bringing the strutting man back to some plain fact about his own body.",
     moves: [
       { title: "Identify the outward tell", body: "Gait, the deliberately trailing garment, and the tilted bearing are named because they broadcast a claim of superiority without a word being spoken." },
       { title: "Note the corrective method", body: "Hasan al-Basri, Tawus, and Mutarrif each interrupt a strutting man not with a rule but with a reminder of what a body contains, begins as, and becomes." },
@@ -100,9 +100,9 @@ export const book29Chapters: Chapter[] = [
     overview: "Ghazali balances the censure with a long gathering on humility's worth. The governing report is that no one lowers himself for God without being raised, and the examples chosen show humility as an active practice of proximity rather than a mood of self-deprecation.",
     moves: [
       { title: "State the exchange", body: "The central saying is that God adds nothing to a servant through pardon except honour, and that no one humbles himself for God without being raised by God." },
-      { title: "Qualify it immediately", body: "The report praises the one who is humble without wretchedness, which introduces the boundary Ghazali will develop fully in the section on the limit of training." },
+      { title: "Qualify it immediately", body: "The report praises being humble without being abject, which sets up the boundary he works out fully in the section on how far the training goes." },
       { title: "Show it as approach, not withdrawal", body: "The illustrations turn on drawing near what others avoid: seating the afflicted beside oneself, eating with the ill, taking a servant's hand and going where she wishes." },
-      { title: "Anchor it in a choice", body: "Offered the rank of a prophet-king or that of a servant-messenger, the choice recorded is the latter, taken on Gabriel's counsel to be humble before one's Lord." },
+      { title: "Anchor it in a choice", body: "Offered the position of a prophet who is also a king, or that of a messenger who is a servant, he took the second — on Gabriel's advice to stay humble before his Lord." },
     ],
     closer: [
       { title: "Humility as capacity", body: "The reports present humility less as an opinion about oneself than as the condition that makes several other goods possible: pardon, gentle counsel, and unembarrassed company." },
@@ -120,7 +120,7 @@ export const book29Chapters: Chapter[] = [
     overview: "This is the analytical centre of Part One. Ghazali separates pride as an inward disposition from the acts it produces, specifies the exact beliefs required to generate it, and then explains why a state so small can be treated as a barrier to every virtue at once.",
     moves: [
       { title: "Split the inward from the outward", body: "Pride proper is a disposition in the soul; the behaviours are its fruits. When it shows on the limbs it is called takabbur, and when it does not, the person is said to have pride within him." },
-      { title: "Specify the three beliefs", body: "Pride requires that a person assign a rank to himself, assign a rank to another, and place his own above it. Merely thinking well of oneself, or merely despising another, is not sufficient." },
+      { title: "Specify the three beliefs", body: "Pride needs three things: you put yourself at some level, you put somebody else at some level, and you place yours above theirs. Thinking well of yourself alone will not do it, and neither will looking down on somebody alone." },
       { title: "Locate the state itself", body: "On those three beliefs follows an elation, a reliance, and a self-importance. That swelling, not the belief alone, is the disposition of pride." },
       { title: "Separate pride from conceit", body: "Pride needs someone to be proud toward; conceit does not. A solitary human being could be conceited, but could not be proud. This distinction organises the whole two-part book." },
     ],
@@ -128,7 +128,7 @@ export const book29Chapters: Chapter[] = [
       { title: "Why it closes every door", body: "Ghazali's argument for the severity is structural. A person holding self-importance cannot love for others what he loves for himself, cannot be humble, cannot drop rancour, cannot hold to truthfulness, cannot restrain anger, cannot drop envy, cannot give gentle counsel, and above all cannot accept it. Every blameworthy trait becomes necessary to protect his standing, and every praiseworthy one becomes unaffordable." },
       { title: "The worst variety", body: "The species Ghazali singles out is the pride that prevents a person from gaining knowledge and accepting truth. The prophetic definition he cites gives pride two banes exactly: rejecting the truth and disdaining people." },
     ],
-    distinction: ["Pride and conceit differ structurally", "Pride", "Requires an other, and consists in placing one's own rank above his.", "Conceit", "Requires no other at all, and consists in magnifying a blessing while forgetting its Giver."],
+    distinction: ["Pride and conceit differ structurally", "Pride", "Needs somebody else, and consists in putting yourself above them.", "Conceit", "Requires no other at all, and consists in magnifying a blessing while forgetting its Giver."],
     misreading: "Do not treat any high estimate of one's own competence as pride. Ghazali is explicit that a person may think much of himself and still see another as equal or greater, in which case the disposition has not formed.",
     reflection: "Recall the last time accepting a correction felt expensive. Ask which of the three beliefs was in place at that moment.",
     audit: ["Do I hold a rank for myself, a rank for him, and mine above it?", "Which virtue have I found unaffordable lately?", "When truth arrived from someone I rate below me, what happened?", "Whom have I disdained this week, and on what ground?"],

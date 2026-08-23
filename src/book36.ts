@@ -46,7 +46,7 @@ export const book36Chapters: Chapter[] = [
       { title: "The second principle", body: "Since love follows perception, it divides as the perceptions and senses divide. Each sense has its own pleasure: the eye in beautiful forms, the ear in fine measured sound, smell in fragrance, taste in flavour, touch in softness." },
     ],
     closer: [
-      { title: "The sixth perception", body: "Ghazali reads a single report as the proof. Three things of this world were made beloved, and one of them is perfume, in which only smell has a share, and another is women, in which only sight and touch have a share. Then prayer is called the coolness of the eye and made the fullest of the beloved things, and no one of the five obtains it. So there is a sixth perception whose seat is the heart, and it is grasped only by one who has a heart." },
+      { title: "The sixth perception", body: "He builds the proof out of one report. Three things in this world were made beloved. One is perfume, where only smell gets anything. Another is women, where only sight and touch do. Then prayer is called the coolness of the eye and set above the rest — and not one of the five senses reaches it. So there is a sixth way of perceiving, seated in the heart, and only somebody with a heart picks it up." },
       { title: "Why the argument is built this way", body: "He has not asserted a special faculty and then looked for evidence. He has taken a definition that works for the eye and the tongue, applied it to a case the five senses cannot account for, and let the gap do the work. What is shared with animals is named as shared, and what is not is separated on the evidence." },
     ],
     distinction: ["Two readings of the same report", "Three pleasures of one kind", "Perfume, companionship, and prayer all pleasures of the senses, which the report's own wording will not support.", "Five senses and a sixth", "The third belongs to a perception the five do not reach, which is what the chapter is establishing."],
@@ -60,7 +60,7 @@ export const book36Chapters: Chapter[] = [
     id: 3, shortTitle: "Five causes", formalTitle: "That the one deserving love is God alone",
     overview: "Ghazali enumerates every reason anyone loves anything, arrives at five, and then argues that all five are met completely in one place and only partially anywhere else.",
     moves: [
-      { title: "Enumerate", body: "The kinds of love return to five causes: a person's love for his own existence, perfection, and continuance; his love for one who benefits him in what preserves that existence; his love for one who is beneficent in himself toward people, even where the benefit does not reach him; his love for whatever is beautiful in itself, whether in outward form or inward; and his love for one with whom he has a hidden inward affinity." },
+      { title: "Enumerate", body: "Every kind of love comes back to five causes. Loving your own existence, and being whole, and going on. Loving whoever helps keep that going. Loving somebody who is generous to people in general, even when none of it reaches you. Loving whatever is beautiful in itself, whether to look at or in what it is. And loving somebody you have some hidden affinity with." },
       { title: "Show that they compound", body: "If these causes gather in one person, love is multiplied. A child who is beautiful in form, fine in character, complete in knowledge, sound in judgement, generous to people and to his parent is loved to the utmost, and the strength of the love follows the strength of each quality." },
       { title: "Draw the conclusion", body: "The completeness and the gathering of all five is inconceivable except in one place. In anything else only single ones are found, and found as imagination rather than as fact." },
       { title: "Handle the obvious objection", body: "Love of the Messenger, of the learned, and of the godly is praised, because the beloved of the beloved is beloved, the messenger of the beloved is beloved, and the lover of the beloved is beloved. All of it returns to the root and does not pass beyond it." },
@@ -107,7 +107,7 @@ export const book36Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the method matters more than the conclusion", body: "The conclusion could have been asserted on its own. Deriving it from a rule that the reader has already accepted about hunger and sight makes the claim a consequence rather than a piety, and Ghazali's clause about nothing being installed in vain is the hinge the whole derivation turns on." },
-      { title: "The corollary about deprivation", body: "One who prefers another pleasure to this one has been deprived of this one, in the way that a man who has lost the relevant capacity cannot rank the scent of a violet correctly. The failure is in the faculty, not in the object, which is why the chapter does not argue with the preference directly." },
+      { title: "The corollary about deprivation", body: "Somebody who prefers another pleasure to this one has simply been shut out of this one — the way a man who has lost his sense of smell cannot place the scent of a violet properly. The failure is in the faculty, not in the thing, which is why the chapter never argues with the preference head-on." },
     ],
     distinction: ["Two reasons a pleasure is not preferred", "It is inferior", "A judgement about the object, which would require having tasted it.", "It is not perceived", "A condition of the perceiver, which is what Ghazali says is actually the case."],
     misreading: "Do not read the chapter as disparaging the pleasures of the senses. It grounds its whole argument on their being real and rightly ordered to their objects.",
@@ -121,7 +121,7 @@ export const book36Chapters: Chapter[] = [
     overview: "An unusually precise chapter. Ghazali is asked what the difference is between knowing now and seeing then, and he answers with an argument about clarity rather than about kind.",
     moves: [
       { title: "Divide the perceptions", body: "What is perceived divides into what enters the imagination, such as imagined forms and coloured, shaped bodies of animals and plants, and what does not enter it, such as the divine essence and everything that is not a body, like knowledge, power, and will." },
-      { title: "Give the experiment", body: "One who has looked at a person and then closed his eye finds that person's form present in his imagination as though he were looking at it. Yet on opening the eye and seeing, he perceives a difference between the two." },
+      { title: "Give the experiment", body: "Look at somebody, then shut your eyes: their face is there in your imagination as though you were still looking. Open your eyes again and you can tell the difference immediately." },
       { title: "Locate the difference exactly", body: "The difference does not go back to any discrepancy between the two forms, since the seen form matches the imagined one. The separation consists only in an increase of clarity and disclosure; the form has become more completely unveiled by being seen." },
       { title: "Give the second image", body: "It is like a figure seen at first light before the day has spread, and then seen when the light is complete. Neither state differs from the other except by an increase of unveiling." },
     ],
@@ -166,7 +166,7 @@ export const book36Chapters: Chapter[] = [
       { title: "Give the analogy", body: "The companions of a great jurist all share in loving him, and the jurists among them love him otherwise than those who love him by reputation. The love follows the acquaintance, which is the same rule the first half established." },
     ],
     closer: [
-      { title: "What the middle class is protected from", body: "Ghazali's ordering is worth noticing. The one who inquired badly stands below the one who did not inquire at all, so the disparity is not a simple ladder of effort. Safety and nearness are different goods, and the route between them passes through the place where people go astray." },
+      { title: "What the middle class is protected from", body: "His ordering is worth noticing: the man who investigated badly ends up below the man who never investigated at all. So this is not a straight ladder of effort. Being safe and being close are two different goods, and the road between them runs through the place where people get lost." },
       { title: "Why an analogy from the schools", body: "He chose a case his readers were inside. Everyone in his audience knew the difference between loving a master whose reasoning one has followed and loving one whose name one has heard praised, and that difference is exactly the one the chapter needs." },
     ],
     distinction: ["Two ways of holding the names", "Received and left", "Held as submission without inquiry, which Ghazali places among the people of safety.", "Imagined badly", "Meanings supplied that He is above, which he places below the first."],
@@ -191,7 +191,7 @@ export const book36Chapters: Chapter[] = [
     ],
     distinction: ["Two reasons a thing is not seen", "Too dim", "Nothing reaches the eye, which is how the difficulty is usually posed.", "Too manifest", "Nothing is absent from the view for it to be marked against, which is Ghazali's answer."],
     misreading: "Do not take the argument as saying the matter is simple. It says the difficulty has an unexpected source, which is a different claim and does not make the work shorter.",
-    reflection: "Consider how you know that the person in front of you is alive, and by which sense.",
+    reflection: "Work out how you know the person in front of you is alive — and which sense told you.",
     audit: ["What do I know without any sense reporting it?", "Have I mistaken constancy for absence?", "Where does my vocabulary fail me here?", "Do I expect this to be easy once explained?"],
     nodes: ["marifa", "manifestness", "disparity"],
     model: pair("The inversion", "The example is one the reader already accepts before it is applied.", [["What sight reports", "Height, colour, and outward detail, some unknown and some doubted.", "balance"], ["What no sense reports", "Life, power, will, and knowledge, which are the clearest things of all.", "support"]]),

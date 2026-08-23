@@ -161,8 +161,8 @@ export const book02Chapters: Chapter[] = [
     id: 8, shortTitle: "No hidden doctrine", formalTitle: "That the inward agrees with the outward",
     overview: "The conclusion Ghazali draws from the five reticences, and it forecloses the reading they most invite.",
     moves: [
-      { title: "State the conclusion", body: "Many things have become disclosed by these five divisions — and the heading under which he gathers them is that the inward agrees with the outward and is not at variance with it." },
-      { title: "Say what that rules out", body: "The five explain why something might be unsaid, said obliquely, or held back from most people. None of them permits an inward doctrine that contradicts the outward one." },
+      { title: "State the conclusion", body: "Those five distinctions clear up a great deal — and the heading he gathers them under is that what is held privately agrees with what is said publicly, and does not contradict it." },
+      { title: "Say what that rules out", body: "The five explain why something might go unsaid, or be said indirectly, or be kept from most people. Not one of them allows a private doctrine that contradicts the public one." },
       { title: "Apply it to the common people", body: "So we see fit to restrict all the common people to the exposition of the creed we have set down, and that they be burdened with nothing more in the first degree." },
       { title: "Give the exception", body: "Except where there is fear of disturbance because of the spread of innovation — in which case he ascends, in the second degree, to a creed containing brief flashes of the evidences, without depth." },
     ],
@@ -170,7 +170,7 @@ export const book02Chapters: Chapter[] = [
       { title: "Why the heading is necessary", body: "A chapter arguing that the truthful withhold things is one sentence away from a doctrine of two teachings. Ghazali writes that sentence himself and makes it the heading, which is a stronger move than leaving the point implicit." },
       { title: "The exception's condition", body: "The escalation is triggered by the spread of innovation and the fear of disturbance — a condition of the environment rather than of the person. That is a different trigger from the one in the previous chapter, where a doubt had actually stirred in the individual, and the two are meant to be distinguished." },
     ],
-    distinction: ["Two things reticence could mean", "The same doctrine, unsaid", "Withheld, deferred, or expressed obliquely, with no second teaching behind it.", "A different doctrine", "An inward teaching at variance with the outward, which the heading of this passage denies."],
+    distinction: ["Two things reticence could mean", "The same doctrine, unsaid", "Withheld, deferred, or expressed obliquely, with no second teaching behind it.", "A different doctrine", "A private teaching that contradicts the public one — which the heading of this passage rules out."],
     misreading: "Do not detach the five reticences from this heading. Ghazali placed the denial of a contrary inward doctrine directly after them, and reading the five without it inverts the passage.",
     reflection: "Notice how quickly a doctrine of degrees becomes a doctrine of two truths, and what stops it here.",
     audit: ["Have I assumed a hidden teaching?", "What triggers escalation, on his account?", "Is my trigger the person or the environment?", "Does my inward agree with my outward?"],
@@ -201,7 +201,7 @@ export const book02Chapters: Chapter[] = [
     id: 10, shortTitle: "The hard pillar", formalTitle: "The pillar of the divine acts",
     overview: "The third pillar, and the one where Ghazali's school takes its most uncomfortable positions. He states them flatly and without softening.",
     moves: [
-      { title: "The first three principles", body: "That the acts of servants are created by God; that they are acquired by the servants; and that they are willed by God. The second is what keeps the first from being fatalism, and the pillar depends on holding all three." },
+      { title: "The first three principles", body: "That what people do is created by God; that people acquire it as their own; and that God wills it. The middle one is what stops the first from collapsing into fatalism, and the whole pillar depends on holding all three at once." },
       { title: "The uncomfortable ones", body: "That He may impose what is beyond capacity. That He may cause pain to the innocent. That it is not obligatory upon Him to observe what is most beneficial." },
       { title: "The principle underneath them", body: "That there is no obligation except by the Law. The three preceding claims follow from this one: if moral obligation is constituted by the Law rather than discovered by reason, then nothing is owed by God prior to it." },
       { title: "The last three", body: "That He is bounteous in creating and originating; that the sending of prophets is possible; and that the prophethood of Muhammad is established and supported by miracle." },
@@ -261,7 +261,7 @@ export const book02Chapters: Chapter[] = [
     id: 13, shortTitle: "Assent and surrender", formalTitle: "What the lexical inquiry settles",
     overview: "The first of the three answers, and it is clean enough that the shape of the whole relation falls out of it immediately.",
     moves: [
-      { title: "Define the first", body: "Faith is an expression for assent. The verse in which the brothers say that their father would not be one who assents to them uses the word in exactly that sense." },
+      { title: "Define the first", body: "Faith is a word for assent — agreeing that something is so. The verse where Joseph's brothers say their father would not believe them uses it in exactly that sense." },
       { title: "Define the second", body: "Submission is an expression for surrender and yielding — by compliance and obedience, and by leaving rebellion, refusal, and obstinacy." },
       { title: "Locate the first", body: "Assent has a particular seat, which is the heart; the tongue is its interpreter. It happens in one place only." },
       { title: "Locate the second", body: "But surrender is general across the heart, the tongue, and the limbs. For every assent of the heart is a surrender and a leaving of refusal and denial — and so on through the other two." },

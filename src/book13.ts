@@ -144,7 +144,7 @@ export const book13Chapters: Chapter[] = [
       { title: "Note the pairing", body: "God commanded justice and excellence together — indeed God commands justice and excellence." },
       { title: "Give the first half", body: "Justice is a cause of deliverance only, and it runs in trade as capital runs." },
       { title: "Give the second", body: "Excellence is a cause of winning and of attaining happiness, and it runs in trade as profit runs." },
-      { title: "Draw the conclusion", body: "So it does not befit a religious person to confine himself to justice and the avoidance of wrongdoing and to leave the doors of excellence — since no one who trades contents himself with recovering his capital." },
+      { title: "Draw the conclusion", body: "So it does not suit a religious person to stop at being fair and not cheating anyone, leaving the doors of decency shut — because nobody in business settles for getting his capital back." },
     ],
     closer: [
       { title: "Why the metaphor lands", body: "It is addressed to merchants in their own terms. Nobody in trade regards preserving capital as a successful year, and the argument simply asks why the same person would regard the equivalent in his dealings with God as sufficient." },
@@ -163,7 +163,7 @@ export const book13Chapters: Chapter[] = [
     moves: [
       { title: "The first", body: "In the margin taken: that he not take from his counterpart a margin beyond what is customarily overlooked. The taking of a margin itself is permitted; the excellence is in its size." },
       { title: "The second", body: "In bearing the loss: if he buys food from a weak person, or something from a poor one, there is no harm in his bearing the disadvantage and being lenient." },
-      { title: "The fifth", body: "That he accept a rescission from whoever asks it — for no one asks to undo a sale except one who regrets it and is harmed by it, and it does not befit a man to be content to be the cause of someone's harm." },
+      { title: "The fifth", body: "Let somebody cancel if they ask to — because nobody asks to undo a sale unless he regrets it and it is costing him, and it does not suit a man to be comfortable being the reason somebody is out of pocket." },
       { title: "The sixth", body: "That he deliberately deal with a group of the poor on credit, resolving at the time not to demand payment from them if no means appear for them." },
     ],
     closer: [

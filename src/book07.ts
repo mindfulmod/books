@@ -84,7 +84,7 @@ export const book07Chapters: Chapter[] = [
       { title: "Give the first", body: "That the expenditure be lawful, and that the hand be empty of a trade that occupies the heart and scatters the concern." },
       { title: "Note the two halves", body: "One is about where the money came from, and the other about what is being carried alongside the journey. The second is not a legal condition at all and is the kind of thing this chapter exists for." },
       { title: "Say what the ten cover", body: "The manners run through the conduct of the journey — provision, company, bearing, expenditure, and the treatment of those met along the way — and none of them concerns the validity of the rites." },
-      { title: "Place them", body: "They sit between the physical acts and the inward reading and belong to neither. They are how you behave on the journey, not what you perform at the sites or what you understand by it." },
+      { title: "Place them", body: "They sit between the physical acts and the inward reading and belong to neither. They are how you behave on the way, not what you perform at the sites or what you make of it." },
     ],
     closer: [
       { title: "Why lawful expenditure comes first", body: "The pilgrimage is the one act of worship that must be bought. Everything else in the quarter can be performed by someone with nothing, and this cannot — which makes the source of the money a question the other books never have to raise." },
@@ -99,7 +99,7 @@ export const book07Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 5, shortTitle: "The substitute", formalTitle: "The place of the pilgrimage in religion",
-    overview: "The inward chapter opens by asking what the pilgrimage is for, and the answer is historical and comparative rather than pious.",
+    overview: "The inward chapter opens by asking what the pilgrimage is actually for, and the answer he gives is historical and comparative rather than pious.",
     moves: [
       { title: "State the general principle", body: "There is no arrival at God except by keeping clear of appetites, restraining from pleasures, confining oneself to the necessities in them, and devoting oneself to God in all motions and stillnesses." },
       { title: "Give the earlier solution", body: "For this reason the monastics in the former communities withdrew from people, took to the mountain tops, and preferred wildness from people, seeking intimacy with God. They left present pleasures and bound themselves to hard strivings, and God praised them in His Book." },
@@ -248,7 +248,7 @@ export const book07Chapters: Chapter[] = [
     ],
     closer: [
       { title: "The proportion he draws", body: "As the body is an outward likeness, in the world of the seen, for the heart, which is not beheld by sight and is in the world of the unseen. Two likeness-relations set equal: House is to Presence as body is to heart. It is the clearest statement of the two-worlds doctrine in the Quarter of Worship." },
-      { title: "The licence for the outward rite", body: "Since most people fall short of circling like that, they were told to imitate it as far as they can, and promised that whoever resembles a people belongs with them. The physical act is not a replacement for the inward one. It is a resemblance — and resemblance gets a promise of its own." },
+      { title: "The licence for the outward rite", body: "Since most people cannot circle like that, they were told to copy it as far as they can, with the promise that whoever resembles a people belongs with them. The physical act is not a substitute for the inward one. It is a resemblance — and resemblance comes with a promise of its own." },
     ],
     distinction: ["Two things that circle", "The body around the House", "Which Ghazali explicitly denies is the aim, while requiring it.", "The heart around the Presence", "Beginning and ending nowhere else, which is what the physical act is a picture of."],
     misreading: "Do not conclude that the bodily circling is dispensable. The passage that denies it is the aim is the same passage that grounds it, on the principle that whoever resembles a people is of them.",

@@ -99,7 +99,7 @@ export const book18Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 5, shortTitle: "The camel shares it", formalTitle: "The first state",
-    overview: "The lowest of the four, and Ghazali's judgement on it is two things at once — permitted, and the meanest rank there is.",
+    overview: "The lowest of the four, and his verdict on it is two things at once: permitted, and the poorest kind of listening there is.",
     moves: [
       { title: "Give the state", body: "That his listening be by mere nature — that is, he has no share in the audition but the enjoyment of the melodies and the notes." },
       { title: "Give the ruling", body: "This is permitted." },
@@ -108,9 +108,9 @@ export const book18Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why permitted and mean at once", body: "The two judgements are independent and both are stated. Something can be entirely lawful and also be the lowest thing available, and Ghazali says both in consecutive sentences rather than letting either crowd out the other." },
-      { title: "The argument in the camel", body: "It is a ranking by what the capacity requires. Pleasure in sound requires only life, which is why it cannot be a high rank — the same reasoning Book 36 used when it argued from the five senses to a sixth, and Book 6 used to place the human between the beasts and the angels." },
+      { title: "The argument in the camel", body: "He is ranking by what the capacity costs. Taking pleasure in sound requires nothing but being alive, which is why it cannot be high — the same reasoning Book 36 uses to argue from five senses to a sixth, and Book 6 uses to place a human between the animals and the angels." },
     ],
-    distinction: ["Two judgements on one act", "Permitted", "Lawful, and stated without qualification.", "The meanest rank", "Because the capacity it requires is nothing more than being alive."],
+    distinction: ["Two judgements on one act", "Permitted", "Lawful, and stated without qualification.", "The poorest kind", "Because the capacity it requires is nothing more than being alive."],
     misreading: "Do not collapse the two judgements into one. Saying a thing is the lowest available is not saying it is forbidden, and Ghazali is careful to say both.",
     reflection: "Ask what your listening would require of you if a camel could do it too.",
     audit: ["Is this all my listening is?", "Permitted, or high?", "What capacity does it require?", "Have I confused lawful with good?"],
@@ -161,7 +161,7 @@ export const book18Chapters: Chapter[] = [
     id: 8, shortTitle: "The drunk has no report", formalTitle: "The fourth state",
     overview: "The highest of the four, described in a passage of unusual precision — and immediately qualified.",
     moves: [
-      { title: "Give the state", body: "The audition of one who has passed beyond the states and the stations, so that understanding anything other than God has departed from him — until he has departed from himself, and from his own states and dealings." },
+      { title: "Give the state", body: "The listening of somebody who has gone past the states and stations, so that understanding anything but God has left him — until he has left himself too, and his own states and dealings with them." },
       { title: "Give the image", body: "He is like one astonished, plunged into the sea of the very eye of witnessing — whose state resembles the state of the women who cut their hands at the sight of Joseph's beauty, until they were astonished and their sensation fell away." },
       { title: "Give the further step", body: "He has passed away also from the witnessing — since if the heart turns toward the witnessing, and toward itself as witnessing, it has become heedless of the Witnessed." },
       { title: "Give the argument", body: "For one enraptured by what is seen has no attention, in his absorption, to his seeing, nor to his eye by which he sees, nor to his heart by which he takes pleasure. The drunk has no report of his drunkenness, and the one taking pleasure has no report of his pleasure — his report is only of what is taken pleasure in." },
@@ -171,7 +171,7 @@ export const book18Chapters: Chapter[] = [
       { title: "What the argument rules out", body: "Any report of the state from inside it. If attending to the pleasure is already a departure from it, then a person describing his own absorption was not absorbed — which makes the fourth state something nobody can claim while in it, and the sharpest available guard against pretending to it." },
     ],
     distinction: ["Two things a person can attend to", "The Witnessed", "Which is the state, and admits no attention to anything else.", "His own witnessing", "Which is a departure from it, however elevated it feels."],
-    misreading: "Do not treat this as a rank to aim for. Ghazali says it is mostly a snatching lightning that does not last, and that lasting it would exceed what human strength bears.",
+    misreading: "Do not treat this as something to aim at. He says it is mostly a snatch of lightning that does not hold, and that if it did hold, human strength could not carry it.",
     reflection: "Notice that the argument makes describing this state evidence of not being in it.",
     audit: ["Have I attended to my own state?", "Could this be claimed from inside?", "What does the drunk know?", "Is this something to aim at?"],
     nodes: ["fana", "ahwal", "wajd"],

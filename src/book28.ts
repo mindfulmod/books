@@ -56,7 +56,7 @@ export const book28Chapters: Chapter[] = [
     overview: "Ghazali opens by warning against deliberately seeking a name that circulates among people. The danger is not that every beneficial person becomes unknown. It is that being known becomes a reward pursued for itself and begins governing religious work.",
     moves: [
       { title: "Name the object", body: "The censured appetite seeks the expansion of one's name and notice in human hearts, not merely the completion of a useful task." },
-      { title: "Separate result from pursuit", body: "Renown that follows necessary teaching or service without being sought is not treated like fame cultivated as the purpose of the work." },
+      { title: "Separate result from pursuit", body: "Getting known because you taught or served where it was needed, without going after it, is not the same thing as building a name on purpose." },
       { title: "Trace the burden", body: "A public name creates new dependence on opinion, protection of image, and fear of falling from the position already gained." },
       { title: "Return to function", body: "The work should remain intelligible through the good it serves even if recognition is reduced, delayed, or transferred to another person." },
     ],
@@ -75,7 +75,7 @@ export const book28Chapters: Chapter[] = [
     id: 2, shortTitle: "The shelter of obscurity", formalTitle: "The virtue of obscurity and anonymity",
     overview: "Obscurity can protect the heart from comparison, performance, and the constant management of reputation. Ghazali praises it as a form of safety, not as contempt for society or refusal of every responsibility.",
     moves: [
-      { title: "Reduce the audience", body: "Fewer observing eyes remove many occasions for calculating praise, criticism, rank, and social return." },
+      { title: "Reduce the audience", body: "Fewer people watching means fewer moments spent working out who will praise you, who will criticise, and what it all does for your standing." },
       { title: "Recover ordinary action", body: "A person can serve, worship, learn, and repent without turning each act into evidence for a public identity." },
       { title: "Accept hidden fruit", body: "The good of an act need not be completed by human recognition when its true object is already present." },
       { title: "Keep duty intact", body: "Obscurity is praiseworthy only while it does not become an excuse for abandoning obligations that genuinely require appearing." },
@@ -165,7 +165,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Mortality is a sorting test", body: "What death necessarily removes is exposed as an external attachment, however refined its appearance." },
     ],
     distinction: ["Two meanings of completion", "True formation", "Knowledge, character, and right relation become qualities of the person.", "Imagined completion", "Possessions and public position enlarge the self's image while remaining external and temporary."],
-    misreading: "Do not turn this hierarchy into contempt for lawful external means. The error is assigning them the rank of final perfection.",
+    misreading: "Do not turn this ordering into contempt for perfectly lawful outward things. The mistake is treating them as the finished article.",
     reflection: "Name one achievement whose value would survive if no title, audience, or visible symbol remained.",
     audit: ["What makes me feel complete only when witnessed?", "Which quality has actually changed my conduct?", "What will necessarily leave me?", "Which aspiration deserves more training than display?"],
     nodes: ["perfection", "image"],
@@ -181,7 +181,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Permit truthful necessity", body: "Accurately naming a real qualification can be allowed where the responsibility would otherwise be lost or misassigned." },
     ],
     closer: [
-      { title: "Instrumental does not mean harmless", body: "Necessary visibility still exposes the heart. Permission describes the outward route, not a certificate of pure motive." },
+      { title: "Instrumental does not mean harmless", body: "Being visible because you have to be still leaves the heart exposed. Permission covers what you may do; it says nothing about why you are doing it." },
       { title: "Concealment without false claim", body: "A person need not announce every fault, but concealing a fault differs from manufacturing signs of a virtue not possessed." },
     ],
     distinction: ["The boundary is purpose plus truth", "Needed recognition", "A real quality is disclosed in proportion to a defined responsibility.", "Expansive status", "Recognition is multiplied beyond need or acquired through a false image."],
@@ -198,7 +198,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Confirmation", body: "Praise can feel like evidence that a quality the self hopes to possess is real." },
       { title: "Possession of a heart", body: "The pleased person enjoys knowing that another person's inward judgment has become favorable." },
       { title: "Expected spread", body: "Praise from an influential person promises that the same image may travel into more hearts." },
-      { title: "Displayed power", body: "The praise itself may feel like proof that the speaker recognizes the subject's higher rank or influence." },
+      { title: "Displayed power", body: "The praise can feel like proof that the person saying it has registered your standing." },
     ],
     closer: [
       { title: "One sentence, four rewards", body: "The same compliment may provide reassurance, affection, publicity, and dominance at once. Treatment improves when the exact reward is named." },
@@ -277,7 +277,7 @@ export const book28Chapters: Chapter[] = [
     moves: [
       { title: "Governed outside and inside", body: "Praise energizes and blame stops the person, while the heart openly wants the audience's favorable judgment." },
       { title: "Restrained outside, moved inside", body: "Conduct remains steadier, but pleasure and pain still reveal dependence in the heart." },
-      { title: "Equal response", body: "Praise and blame no longer determine the action or significantly disturb the inward state." },
+      { title: "Equal response", body: "Praise and blame no longer decide what you do, and no longer unsettle you much inside." },
       { title: "Reversed concern", body: "Praise is feared as a trial, while true criticism is valued for revealing what still needs repair." },
     ],
     closer: [
@@ -286,7 +286,7 @@ export const book28Chapters: Chapter[] = [
     ],
     distinction: ["Steadiness has two layers", "Outward steadiness", "The act does not start, stop, or distort under social response.", "Inward freedom", "Pleasure and pain no longer possess the heart even before conduct is considered."],
     misreading: "Do not claim the highest state because you remained outwardly calm once. The chapter distinguishes behavior from inward movement.",
-    reflection: "Locate yourself separately on the outward and inward layers instead of choosing one flattering label.",
+    reflection: "Place yourself on the outward and the inward separately, rather than picking whichever single description flatters most.",
     audit: ["Does praise change my action?", "Does criticism change it?", "What happens inwardly while conduct stays stable?", "Can I receive truth without needing its social flavor?"],
     nodes: ["four-states", "steadiness"],
     model: chain("A four-stage horizon", "The sequence moves from social rule toward freedom and useful correction.", [["Governed", "Audience controls action and heart.", "warning"], ["Outwardly steady", "Action stabilizes while the heart still moves.", "support"], ["Equal", "Praise and blame lose governing force.", "balance"], ["Reversed concern", "Praise is feared as trial and true criticism used as medicine.", "balance"]]),

@@ -42,7 +42,7 @@ export const book40Chapters: Chapter[] = [
     overview: "The first analytic chapter, and it answers a question most readers have already asked themselves: why does thinking about death change nothing?",
     moves: [
       { title: "State the diagnosis", body: "Death is dreadful and its danger is great, and people's heedlessness of it comes from how little they think about it and remember it." },
-      { title: "Correct the diagnosis", body: "One who does remember it does not remember it with an empty heart, but with a heart occupied by the appetite of this world. So the remembrance of death does not take effect in his heart." },
+      { title: "Correct the diagnosis", body: "Somebody who does think about it is not thinking with an empty heart — his is already taken up with wanting things here. So the thought of death lands on nothing and does nothing." },
       { title: "Give the remedy", body: "The way to do it is to empty your heart of everything except the death in front of you." },
       { title: "Give the image", body: "Like somebody about to cross a dangerous desert or put out to sea, who can think of nothing else. When the thought lands on the heart directly it usually does something, and at that point his pleasure in the world drops and his heart breaks a little." },
     ],
@@ -82,7 +82,7 @@ export const book40Chapters: Chapter[] = [
     overview: "The most recognisable passage in the book, and one of the most exact descriptions of procrastination in any literature.",
     moves: [
       { title: "Set the scene", body: "If the matter of death and the need to prepare for it does occur to him in some state, he defers and promises himself, and says: the days are before you, until you grow older, and then you will repent." },
-      { title: "Follow the ladder down", body: "When he grows older he says: until you become an old man. And when he becomes an old man he says: until you finish building this house, or cultivating this estate, or return from this journey." },
+      { title: "Follow the ladder down", body: "When he gets older it becomes: wait until you are actually old. And when he is old: wait until you have finished building this house, or planting this land, or got back from this trip." },
       { title: "Keep following it", body: "Or finish settling this child and his outfitting and arranging a dwelling for him; or finish subduing this enemy who gloats over you. The examples are chosen so that each one is a real obligation." },
       { title: "Name the mechanism", body: "So he keeps deferring and delaying, and he plunges into no occupation but that ten other occupations attach themselves to the completion of that occupation, and so on by degrees." },
     ],
@@ -101,7 +101,7 @@ export const book40Chapters: Chapter[] = [
     id: 5, shortTitle: "Seven horizons", formalTitle: "The ranks of people in long and short hope",
     overview: "A ladder of seven rungs, and its measure is startlingly concrete: not what a person believes about death but how far ahead he provisions.",
     moves: [
-      { title: "The first two rungs", body: "Some hope to remain and desire it forever. Some hope to remain until decrepitude, which is the furthest age they have witnessed, and this is one who loves the world intensely." },
+      { title: "The first two rungs", body: "Some expect to go on and want to go on forever. Some expect to last until they are worn out with age — the furthest they have ever seen anyone get — and that is somebody who loves this world hard." },
       { title: "The third and fourth", body: "Some hope to a year, and do not busy themselves arranging beyond it, and reckon no existence for themselves in the coming year — but such a one prepares in summer for winter and in winter for summer, and when he has gathered his year's sufficiency he busies himself with worship. And some hope for the length of a summer or a winter, so he does not store winter clothes in summer nor summer clothes in winter." },
       { title: "The fifth and sixth", body: "Some have a hope that returns to a day and a night, so he prepares only for his day and not for tomorrow. And some have a hope that does not pass an hour, on the counsel that when you rise in the morning you do not speak to yourself of the evening, and when evening comes you do not speak to yourself of the morning." },
       { title: "The seventh", body: "Some do not reckon remaining even an hour. The ladder therefore ends where planning ends, and the rungs are separated by nothing except the length of the horizon a person actually provisions for." },
@@ -123,7 +123,7 @@ export const book40Chapters: Chapter[] = [
     moves: [
       { title: "Give the analogy", body: "A man with two absent brothers, expecting one tomorrow and the other after a month or a year, does not prepare for the one arriving in a month or a year. He prepares for the one he expects tomorrow." },
       { title: "Draw the principle", body: "So preparation is the result of the nearness of the expectation. It is not the result of conviction, or of affection, or of the importance of the visitor." },
-      { title: "Apply it", body: "One who expects death after a year has his heart occupied with the period and forgets what lies beyond it, and that prevents him from ever hastening to act, because he sees room for himself in that year." },
+      { title: "Apply it", body: "Somebody who expects to die in a year has his mind on the year and forgets what comes after it — and that is exactly what stops him hurrying, because he can see room to move inside it." },
       { title: "Make the observation", body: "Then he rises each day still expecting the full year, and does not subtract the day that has passed. The horizon does not shorten as it is spent, which is why a distant expectation never becomes a near one on its own." },
     ],
     closer: [
@@ -202,7 +202,7 @@ export const book40Chapters: Chapter[] = [
     overview: "A collection of last words, and its selection is worth noticing: the powerful are placed first and they do not come off well.",
     moves: [
       { title: "Open with a ruler", body: "The chapter opens with Muʿawiya, who at the end asked to be seated, praised God, wept, and said: you remember your Lord, Muʿawiya, after decrepitude and decline — would that this had been while the branch of youth was green and full." },
-      { title: "Give his prayer", body: "He wept until his weeping rose, and said: my Lord, have mercy on the sinning old man with the hard heart; lessen the stumble and forgive the slip, and turn with Your forbearance upon one who hopes for none but You and trusts no one besides You." },
+      { title: "Give his prayer", body: "He wept until the sound of it carried, and said: my Lord, have mercy on a sinning old man with a hard heart. Make the stumble smaller and forgive the slip, and turn with Your patience toward somebody who hopes in nobody but You and trusts nobody else." },
       { title: "Give the second voice", body: "An elder of Quraysh, seen with the creases of age in his skin, said: is the whole world anything but what we have tried and seen? We met its bloom in our vigour and our enjoyment of our living, and it did not leave us long before it undid that from us, state after state and handhold after handhold." },
       { title: "Note the ordering", body: "Caliphs and commanders come before the righteous in the chapter's own title, and the effect of that order is that the reader hears the regret before he hears the composure." },
     ],
