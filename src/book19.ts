@@ -22,7 +22,7 @@ export const book19Chapters: Chapter[] = [
     overview: "The Ihya's most vehement opening, and the largest claim Ghazali makes for any single practice in the forty books.",
     thesis: "The largest claim in the Ihya for any single practice: the axis every prophet was sent to establish.",
     moves: [
-      { title: "Give the claim", body: "The greatest axis in religion — and it is the matter of consequence for which God sent all the prophets." },
+      { title: "Give the claim", body: "The greatest axis in religion — the thing every prophet was sent to establish." },
       { title: "Give the consequence of neglect", body: "If it were rolled up and put away, and its knowledge and its practice let go, then prophecy would stand idle, religion would waste away, listlessness would spread, error would run loose, ignorance would circulate, corruption would go unchecked, the tear would widen, whole lands would fall to ruin — and people would perish without noticing they had, until the Day of Calling." },
       { title: "Give the turn to the present", body: "What we feared has come to be — to God we belong and to Him we return — for from this axis the practice and the knowledge have worn away, and its reality and its trace have been effaced entirely." },
       { title: "Name what filled the vacancy", body: "So that flattery of creation has taken possession of hearts, and vigilance toward the Creator has been erased from them; and people have let themselves loose in following whim and appetite as beasts are let loose — and a truthful believer, whom no reproacher's reproach touches in God, has become rare on the carpet of the earth." },
@@ -171,7 +171,7 @@ export const book19Chapters: Chapter[] = [
     moves: [
       { title: "Give the choice", body: "We have turned aside from the word disobedience to this one, because wrong is more general than disobedience." },
       { title: "Give the first case", body: "Since whoever sees a child or a madman drinking wine, it is upon him to pour out his wine and prevent him." },
-      { title: "Give the argument", body: "This is not called disobedience with respect to the madman — since a disobedience with no one disobeying by it is impossible. So the word wrong indicates it better, and is more general than the word disobedience." },
+      { title: "Give the argument", body: "You cannot call it disobedience on the madman's part, since a disobedience with nobody disobeying is not possible. So the word wrong indicates it better, and is more general than the word disobedience." },
       { title: "Remove the second misunderstanding", body: "That is not because of the grossness of the act's outward form and its being visible among people — rather, if he met this wrong in solitude, preventing it would be obligatory." },
     ],
     closer: [
@@ -259,7 +259,7 @@ export const book19Chapters: Chapter[] = [
       { title: "Give the justification of the entry", body: "His crossing of the man's property by entering, in order to arrive at repelling the wrong, is like breaking his head by a blow to prevent him, whenever he has need of it." },
     ],
     closer: [
-      { title: "Why the ladder has a rung below zero", body: "Because listing finding out first and then forbidding it is more instructive than omitting it. It names the thing most people actually do first, marks it as the one step that is not permitted at any point, and does so before the reader has learned any of the steps that are." },
+      { title: "Why the ladder has a rung below zero", body: "Because listing finding out first and then forbidding it is more instructive than omitting it. He names the step most people take first, marks it as the one that is never permitted, and does it before the reader has learned any of the steps that are." },
       { title: "The exact shape of the exception", body: "Two upright men, at the outset, without his enquiring. Every clause is doing work: the number, their standing, that the report was unsolicited, and that he did not go looking. The rule survives only if all four hold, and the difference between this and asking the neighbours is entirely in who initiated it." },
     ],
     distinction: ["Two ways knowledge arrives", "Unsolicited", "Two upright men, at the outset, without enquiry — which opens the door.", "Sought", "By listening, sniffing, touching, or asking, which is the forbidden rung."],
@@ -302,7 +302,7 @@ export const book19Chapters: Chapter[] = [
     ],
     closer: [
       { title: "What the test actually asks", body: "Not how bad the wrong is, and not how likely the speaking is to work, but who bears the consequence. Harm falling on the speaker alone permits and even commends the speech; harm reaching others forbids it — which makes the decisive question one about other people rather than about courage." },
-      { title: "What the chapter then reports", body: "It was the practice of the predecessors to expose themselves to danger and to declare their objection openly, without concern for the destruction of their lives, and to expose themselves to kinds of torment — because they knew that this was martyrdom. And the report given: the best of martyrs is Hamza b. 'Abd al-Muttalib, then a man who rose to an imam and enjoined him and forbade him in the matter of God, and he killed him for that. The chapter that most tightly restricts confronting power also contains its highest praise, and the two are not in tension: what is closed is force and spillover, and what is praised is speech at one's own cost." },
+      { title: "What the chapter then reports", body: "It was the practice of the predecessors to expose themselves to danger and to declare their objection openly, without concern for the destruction of their lives, and to expose themselves to kinds of torment — because they knew that this was martyrdom. And the report given: the best of martyrs is Hamza b. 'Abd al-Muttalib, then a man who stood up to a ruler, told him to do right and to stop doing wrong for God's sake, and was killed for it. The chapter that most tightly restricts confronting power also contains its highest praise, and the two are not in tension: what is closed is force and spillover, and what is praised is speech at one's own cost." },
     ],
     distinction: ["Two questions before speaking to power", "Who bears the harm?", "The speaker alone, which permits and commends it; or others, which forbids it.", "How bad is it?", "Which is not the test the chapter gives, however natural the question."],
     misreading: "Do not read the praise of the predecessors as licence for the upper rungs. The same chapter closes compulsion to individuals absolutely, and permits harshness only when the cost falls on the speaker alone.",

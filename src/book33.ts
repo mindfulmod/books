@@ -72,7 +72,7 @@ export const book33Chapters: Chapter[] = [
   makeChapter({
     id: 3, shortTitle: "Why hope is praised", formalTitle: "The excellence of hope and the encouragement toward it",
     overview: "Having defined hope and bounded it, Ghazali gathers what is said in its praise, and the order matters: the boundary was set before the encouragement was offered.",
-    thesis: "With hope defined and bounded, the testimony for it can be gathered without encouraging the thing he just ruled out.",
+    thesis: "With hope defined and bounded, the praise for it can be gathered without encouraging the wishing he has just ruled out.",
     moves: [
       { title: "Gather the testimony", body: "The verses and reports on the breadth of mercy are assembled, and they are considerable." },
       { title: "Note the placement", body: "They come after the definition rather than before it, so that a reader who arrives at them already knows the difference between hope and wishing." },

@@ -485,7 +485,7 @@ export const book32Chapters: Chapter[] = [
       { title: "Report the disagreement", body: "Some hold patience superior, some gratitude, some that they are equal, and some that it varies with circumstance, and each party has argued with speech Ghazali calls badly disordered and far from settled." },
       { title: "Announce two levels", body: "There are two levels of explanation. The first meets you where you are: it takes the surface as it stands and does not push for what is underneath." },
       { title: "Say who it is for", body: "It is what should be addressed to the generality, whose understandings fall short of grasping obscure realities, and it is the kind of speech preachers should rely on." },
-      { title: "Give the answer at that level", body: "Looking at the plain sense of what is transmitted, patience is preferred, since the reports on its excellence are more numerous and some are explicit in preferring it." },
+      { title: "Give the answer at that level", body: "Read straight off the transmitted reports, patience wins: there are more of them praising it, and some prefer it outrightt." },
     ],
     closer: [
       { title: "The nurse", body: "A compassionate nurse should not mend an infant with fat birds and kinds of sweets, but with mild milk, delaying the choicer foods until his constitution can bear them. The image licenses the two-level structure without pretending the first level is the whole truth." },
@@ -503,7 +503,7 @@ export const book32Chapters: Chapter[] = [
     overview: "The book closes with the second exposition, which Ghazali says is intended to acquaint people of knowledge and insight with the realities, and which reaches a different result from the first.",
     thesis: "The book closes on the second exposition, which he says is the truer of the two.",
     moves: [
-      { title: "Announce the change of level", body: "This is the exposition by which Ghazali intends to acquaint those of knowledge and discernment with the realities of things by way of unveiling, and he distinguishes it explicitly from what precedes." },
+      { title: "Announce the change of level", body: "In this second exposition Ghazali sets out to show readers with knowledge and discernment what these things actually are, and he distinguishes it explicitly from what precedes." },
       { title: "Relocate the question", body: "The comparison is moved off the two names and onto what each state consists of, which returns to the definitions: patience is the steadiness of the religious motive, and gratitude is knowledge, joy, and right use." },
       { title: "Answer the objection about works", body: "To the objection that the Law urges acts and magnifies their merit, Ghazali answers that when a physician praises a remedy this does not show the remedy to be pleasant, which separates the commendation of a thing from its intrinsic rank." },
       { title: "Reach the result", body: "Once both are seen as what they are, the two states are not competitors of the kind the disagreement assumed, and the question dissolves rather than being decided in the terms it was posed." },

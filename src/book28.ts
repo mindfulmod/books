@@ -181,7 +181,7 @@ export const book28Chapters: Chapter[] = [
   makeChapter({
     id: 7, shortTitle: "Useful standing and its excess", formalTitle: "What is praised and censured in love of status",
     overview: "Some measure of standing may be needed to live, teach, protect rights, or carry responsibility among people. Ghazali therefore distinguishes limited, truthful, instrumental status from limitless appetite and deception.",
-    thesis: "Some standing is genuinely needed, so the fault is limitlessness and deception rather than the thing itself.",
+    thesis: "Some standing is genuinely needed, so the fault lies in wanting it without limit, and in deception — not in having it.",
     moves: [
       { title: "Name the needed function", body: "Trust and recognized competence may be required before a person can teach, adjudicate, organize, or protect a claim." },
       { title: "Limit the measure", body: "The standing should not exceed what the task actually needs or become a general demand for distinction." },
@@ -457,7 +457,7 @@ export const book28Chapters: Chapter[] = [
     thesis: "Hiding a fault is not display; manufacturing a piety you do not have is.",
     moves: [
       { title: "Honor concealment", body: "A person need not make private sin into public identity, especially where disclosure would spread harm without repairing a right." },
-      { title: "Protect others", body: "Keeping it quiet can stop the thing becoming ordinary, stop others copying it, stop a scandal, and spare people who had nothing to do with it." },
+      { title: "Protect others", body: "Keeping it quiet can stop the behaviour becoming ordinary, stop others copying it, stop a scandal, and spare people who had nothing to do with it." },
       { title: "Repair what requires repair", body: "Keeping a fault private does not cancel anything else you owe: you still repent, still pay back what you took, still answer for it, and still tell anyone whose rights or safety depend on knowing." },
       { title: "Do not fabricate virtue", body: "Remaining silent about a fault differs from arranging signs that positively persuade people of a piety one does not possess." },
     ],

@@ -28,7 +28,7 @@ export const book09Chapters: Chapter[] = [
       { title: "Note where the argument sits", body: "Two objections are raised in this book and both are answered — why an easy act outweighs hard ones, and what supplication is for given the decree. Both are in the argued chapters, and the second is the last thing in the book." },
     ],
     closer: [
-      { title: "Why the collections are so large", body: "Supplication is the one act of worship whose content is words, and words can be given exactly. A book on prayer can describe the acts; a book on supplication can hand over the thing itself, and three quarters of this one does." },
+      { title: "Why the collections are so large", body: "Supplication is the one act of worship whose content is words, and words can be given exactly. A book on prayer can describe the acts; a book on supplication can hand over the words themselves, and three quarters of this one does." },
       { title: "What this edition does with them", body: "The collections are what they are: texts to be used. This edition presents their organising principles and treats the argued chapters at length; a reader wanting the supplications should go to the text, where they are given with their occasions and, in one chapter, with their chains." },
     ],
     distinction: ["Two kinds of chapter here", "Argued", "What remembrance and supplication are, how they are done, and the two objections.", "Collected", "The supplications themselves, arranged three different ways."],
@@ -109,7 +109,7 @@ export const book09Chapters: Chapter[] = [
       { title: "Give the first verse", body: "When My servants ask you about Me — I am near; I answer the call of the caller when he calls Me, so let them respond to Me." },
       { title: "Give the second", body: "Call upon your Lord humbly and in secret; He does not love the transgressors." },
       { title: "Give the third", body: "Your Lord said: call upon Me and I will answer you — those who are too proud for My worship will enter Hell abased." },
-      { title: "Note what the third establishes", body: "Calling is placed inside worship, and declining to call is described as pride. Supplication is not an optional recourse on this reading; it is a form of the thing itself." },
+      { title: "Note what the third establishes", body: "Calling is placed inside worship, and declining to call is described as pride. On this reading supplication is not a fallback. It is one of the causes." },
     ],
     closer: [
       { title: "What the verses settle in advance", body: "The chapter's ten manners are about how to ask, and the last section of the book answers what asking accomplishes. Both presuppose that asking is wanted, and the verses are placed first so that neither discussion has to establish it." },
@@ -176,7 +176,7 @@ export const book09Chapters: Chapter[] = [
     ],
     closer: [
       { title: "The story he attaches to the tenth", body: "In Moses' time a severe drought came, and he went out with the people to pray for rain. Nothing. Three times, and still nothing — until it was revealed to him: I will not answer any of you, because of tale-bearing. So they repented, and the rain came. Three faultless public prayers had failed on a sin between people that nobody had connected to the drought." },
-      { title: "What the tenth does to the other nine", body: "The first nine are technique — timing, posture, voice, phrasing, persistence, order. The tenth says the root is elsewhere: put right what you owe people, and turn up with your whole attention. Which means the other nine can all be observed exactly while the thing that actually decides the matter is untouched — the same shape Book 3 gives for washing and Book 4 for prayer." },
+      { title: "What the tenth does to the other nine", body: "The first nine are technique — timing, posture, voice, phrasing, persistence, order. The tenth says the root is elsewhere: put right what you owe people, and turn up with your whole attention. Which means all nine can be kept exactly while what actually decides the outcome is left untouched — the same shape Book 3 gives for washing and Book 4 for prayer." },
     ],
     distinction: ["Two places the answer could turn on", "What you have put right", "Repentance and restitution, which he calls the root and the near cause.", "How you asked", "Time, posture, voice, phrasing, persistence — nine manners, all of them real, none of them the root."],
     misreading: "The tenth does not make the other nine pointless. Ghazali gives all ten and means all ten; he is saying which one decides the matter when they come apart.",

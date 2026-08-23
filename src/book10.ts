@@ -44,7 +44,7 @@ export const book10Chapters: Chapter[] = [
     thesis: "Devotions are varied because the soul tires of repetition — so variation is a concession built into the design rather than a weakness in the practitioner.",
     moves: [
       { title: "State the fact", body: "The soul, by what it was created upon of weariness and boredom, does not endure one kind of the means that assist remembrance and thought." },
-      { title: "Say what it does", body: "Put it on one unchanging pattern and it gets bored and starts finding the thing heavy. As the report has it: God does not tire until you tire." },
+      { title: "Say what it does", body: "Put it on one unchanging pattern and it gets bored and starts finding the practice heavy. As the report has it: God does not tire until you tire." },
       { title: "Draw the principle", body: "So of the necessity of kindness toward it is that it be given rest by moving from one kind to another and from one sort to another, according to each time." },
       { title: "Give the mechanism", body: "Moving between things keeps the pleasure up; the pleasure keeps the appetite up; and a lasting appetite is what keeps a person at it. That is why the daily devotions are divided up and varied rather than kept uniform." },
     ],

@@ -170,9 +170,9 @@ export const book12Chapters: Chapter[] = [
     thesis: "The chapter ends in two worked cases that come out differently, which is the method rather than a failure to decide.",
     moves: [
       { title: "Set the first case", body: "Whoever is not in distress from appetite, and the benefit of his marriage would be the effort to obtain a child, and the harm is the need to earn the unlawful and the occupation from God — then celibacy is better for him." },
-      { title: "Give the reason", body: "For there is no good in what occupies from God, and no good in earning the unlawful; and the matter of the child does not make up for the deficiency of these two." },
+      { title: "Give the reason", body: "There is no good in anything that takes you away from God, and none in earning unlawfully — and having a child does not make up for either." },
       { title: "Give the accounting", body: "Marriage for the sake of a child is an effort in seeking a life for a child that is only supposed, and this is a deficiency in religion that is immediate. So his preserving of his own life and guarding it from destruction is more important than the effort for a child — and that is profit, and religion is capital." },
-      { title: "Set the second case", body: "But if to the matter of the child is added the need to break appetite, because of the soul's longing — then one looks. If the bridle of godfearing is not strong in his head and he fears fornication for himself, then marriage is better for him." },
+      { title: "Set the second case", body: "But if wanting a child is joined to a real need to break appetite, because the desire is strong — then it has to be weighed. If the bridle of godfearing is not strong in his head and he fears fornication for himself, then marriage is better for him." },
     ],
     closer: [
       { title: "The accounting metaphor", body: "That is profit, and religion is capital. A supposed future good weighed against an immediate deficiency, and the deficiency touches the capital rather than the return — which is why the arithmetic comes out as it does even though the benefit at stake was called the root." },

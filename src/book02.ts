@@ -49,7 +49,7 @@ export const book02Chapters: Chapter[] = [
       { title: "Call it a grace", body: "It is of God's grace upon the human heart that He expanded it, at the beginning of its growth, for faith, without need of argument and proof." },
     ],
     closer: [
-      { title: "Why the order is memorise first", body: "Understanding is placed second, not first, which inverts the order most teaching assumes. The thing memorised is a form that meaning can later fill, and Ghazali's phrase is that the meaning keeps unfolding — which requires that something already be there for it to unfold within." },
+      { title: "Why the order is memorise first", body: "Understanding is placed second, not first, which inverts the order most teaching assumes. What you memorise is a shape that meaning can fill later, and Ghazali's phrase is that the meaning keeps unfolding — which needs something already there for it to unfold within." },
       { title: "The observation he adds", body: "How could that be denied, when the beginnings of all the beliefs of the common people are pure instruction and sheer imitation? The claim is empirical: whatever anyone thinks belief ought to rest on, this is in fact how everyone's began." },
     ],
     distinction: ["Two orders of teaching", "Memorise, then understand", "A form held first, into which meaning unfolds over years.", "Understand, then hold", "Comprehension as the entry condition, which the chapter says describes nobody's actual beginning."],
@@ -148,10 +148,10 @@ export const book02Chapters: Chapter[] = [
     overview: "A remarkable passage in which Ghazali sorts the reasons anything true might be left unsaid, and he is describing his own practice as much as anyone's.",
     thesis: "Five reasons something might be withheld, none of which permits a private doctrine contradicting the public one.",
     moves: [
-      { title: "The first", body: "That the thing is in itself subtle, and most understandings fail at grasping it, so that its grasp is confined to the elect — and it is upon them not to divulge it to those who are not its people." },
+      { title: "The first", body: "That the point is subtle in itself, and most minds fail to grasp it, so grasping it stays confined to a few — and it is upon them not to divulge it to those who are not its people." },
       { title: "The second", body: "That it is understandable in itself, and understanding does not fail at it, but mentioning it harms most people. The reason for silence is the effect rather than the difficulty." },
-      { title: "The third", body: "That it is such that if stated plainly it would be understood and there would be no harm in it — but it is expressed obliquely, by way of metaphor and symbol, so that its impact may be greater." },
-      { title: "The fourth", body: "That a person grasps the thing in summary and then grasps it in detail, by verification and by taste, so that it becomes a state clothing him. The two knowledges then differ, and the second is not conveyable by stating the first." },
+      { title: "The third", body: "That it is such that if stated plainly it would be understood and there would be no harm in it — but it is put indirectly, in metaphor and symbol, so that its impact may be greater." },
+      { title: "The fourth", body: "That a person grasps it first in outline and then in detail, by working it through and by tasting it, until it becomes a state he wears. The two knowledges then differ, and the second is not conveyable by stating the first." },
     ],
     closer: [
       { title: "Why the third is the interesting one", body: "It is the only one where nothing is being withheld. The content could be said plainly and harmlessly, and is not, because the indirect form lands harder. That is a claim about how understanding works rather than about who deserves what." },
@@ -275,7 +275,7 @@ export const book02Chapters: Chapter[] = [
     thesis: "Settling what the word means settles the dispute — which is Ghazali's method whenever a quarrel turns on vocabulary.",
     moves: [
       { title: "Define the first", body: "Faith is a word for assent — agreeing that something is so. The verse where Joseph's brothers say their father would not believe them uses it in exactly that sense." },
-      { title: "Define the second", body: "Submission is an expression for surrender and yielding — by compliance and obedience, and by leaving rebellion, refusal, and obstinacy." },
+      { title: "Define the second", body: "Submission means surrender and yielding: complying, obeying, and dropping rebellion, refusal and obstinacy." },
       { title: "Locate the first", body: "Assent has a particular seat, which is the heart; the tongue is its interpreter. It happens in one place only." },
       { title: "Locate the second", body: "But surrender is general across the heart, the tongue, and the limbs. For every assent of the heart is a surrender and a leaving of refusal and denial — and so on through the other two." },
     ],

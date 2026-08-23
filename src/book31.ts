@@ -172,7 +172,7 @@ export const book31Chapters: Chapter[] = [
     moves: [
       { title: "State the claim without hedging", body: "Every sound repentance is accepted, necessarily. The uncertainty a person feels is about whether his repentance was sound, not about whether sound repentance is received." },
       { title: "Relocate the anxiety", body: "This is the section's real work. It moves the reader's question from the unanswerable one, about what will be done with him, to the answerable one, about whether the three parts are actually present." },
-      { title: "Support the claim from the sources", body: "Ghazali says the matter is clear to those with insight and then reinforces it with verses and reports, which is his usual order when a conclusion is likely to be resisted." },
+      { title: "Support the claim from the sources", body: "Ghazali says this is obvious to anyone with insight, then backs it with verses and reports — his usual order when a conclusion is likely to be resisted." },
       { title: "Note what is not being promised", body: "Acceptance of the repentance is not the same as removal of every consequence. The third pillar deals at length with rights owed to people, which acceptance does not discharge." },
     ],
     closer: [
@@ -298,7 +298,7 @@ export const book31Chapters: Chapter[] = [
     moves: [
       { title: "State the asymmetry", body: "What pertains to God's right is discharged by the return. What pertains to a person's right is not, and remains owed after the repentance is otherwise complete." },
       { title: "Describe the work required", body: "Take the wrongs one at a time, track down the people you wronged wherever they have got to, and either get them to let you off or pay them back." },
-      { title: "Give the reason the work matters", body: "If his good deeds do not suffice for the wrongs standing against him, the deficit is met from the other side, and he is destroyed by other people's evils. Ghazali presents this as the plain arithmetic of the matter." },
+      { title: "Give the reason the work matters", body: "If his good deeds do not suffice for the wrongs standing against him, the deficit is met from the other side, and he is destroyed by other people's evils. Ghazali presents it as simple arithmetic." },
       { title: "Keep it within reach", body: "The instruction is not despair but enumeration. Wrongs are countable, people are findable, and the alternative to doing it one by one is leaving the whole of it standing." },
     ],
     closer: [

@@ -134,7 +134,7 @@ export const book14Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the first degree is the important one", body: "It is the only one with a public consequence. The higher degrees are between a person and his own conscience; this one determines whether the community can rely on him, which is why the chapter starts there rather than at the top." },
-      { title: "The shape of the ascent", body: "Each degree leaves something permitted, for a reason that is one step further from the thing itself. That gives the ascent a direction and also, eventually, a limit — which the next section is entirely about." },
+      { title: "The shape of the ascent", body: "Each degree still permits something, on a reason one step further removed from the food itself. That gives the ascent a direction and also, eventually, a limit — which the next section is entirely about." },
     ],
     distinction: ["Two kinds of scruple", "With a consequence", "The first degree, whose absence disqualifies a person's testimony.", "Voluntary", "Everything above it, which is between a person and his own conscience."],
     misreading: "Do not read the ascent as an unlimited good. The next section marks the point at which further scruple stops being scruple, and Ghazali names it without hedging.",

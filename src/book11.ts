@@ -212,7 +212,7 @@ export const book11Chapters: Chapter[] = [
     thesis: "The first book of the quarter establishes the pattern the other nine will follow: an ordinary act, taken apart by who is present.",
     moves: [
       { title: "Note where the quarter starts", body: "Not with an unusual case but with the most frequent act in a life, treated at the four levels of company at which it happens." },
-      { title: "Note the method", body: "A condition on the thing itself, placed first and marked as belonging among the obligations; then manners with reasons attached; then additions for each degree of company; then a sequence for a formal occasion." },
+      { title: "Note the method", body: "A condition on the food itself, placed first and marked as an obligation; then manners with reasons attached; then additions for each degree of company; then a sequence for a formal occasion." },
       { title: "Note what recurs", body: "Two themes run through all four chapters: that what is present is enough, and that the presence of another person is what generates the additional duties. Both will govern the books on marriage, companionship, earning, and travel that follow." },
       { title: "Note the register", body: "The book moralises very little. Most of it is practical, with reasons given, and its two heaviest moments are a condition on the food and a warning to hosts about their own hearts." },
     ],

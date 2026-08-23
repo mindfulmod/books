@@ -108,7 +108,7 @@ export const book17Chapters: Chapter[] = [
     moves: [
       { title: "Give the division", body: "What is sought is either worldly, like wealth and status, or religious. And the religious is either knowledge or action." },
       { title: "Give the first kind of knowledge", body: "Either a science among the religious sciences." },
-      { title: "Give the second", body: "Or knowledge of one's own character and attributes, by way of experience — which is a kind of knowledge obtained by being taken out of one's usual conditions and seeing what one becomes." },
+      { title: "Give the second", body: "Or learning your own character by experience — the kind of knowledge you only get by being taken out of your usual conditions and seeing what one becomes." },
       { title: "Give the third", body: "Or knowledge of the signs of the earth and its wonders, like the travel of Dhu al-Qarnayn and his going about in the regions of the earth." },
     ],
     closer: [

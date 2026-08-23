@@ -23,7 +23,7 @@ export const book03Chapters: Chapter[] = [
     thesis: "The strongest texts about washing the body turn out, read carefully, to be making a claim about the inside.",
     moves: [
       { title: "Start with the texts", body: "Religion is built on cleanliness. The key to prayer is purification. Purification is half of faith. In it are men who love to purify themselves, and God loves those who purify themselves. God does not want to make things hard for you, but wants to purify you." },
-      { title: "Draw the conclusion", body: "Anyone paying attention, Ghazali says, reads all that and concludes that the thing that matters most is cleaning the inside." },
+      { title: "Draw the conclusion", body: "Anyone paying attention, Ghazali says, reads all that and concludes that what matters most is cleaning the inside." },
       { title: "Say why", body: "Because it would be a stretch to think \"purification is half of faith\" means tidying up your outside by pouring water over it while the inside stays wrecked and packed with filth." },
       { title: "Notice what he just did", body: "He did not soften the texts to make room for his point. He collected them at full strength first, then asked what a careful reader would actually take them to mean. The conclusion arrives as a reading of the evidence rather than an exception to it." },
     ],
@@ -133,7 +133,7 @@ export const book03Chapters: Chapter[] = [
       { title: "Name the two things that spoil it", body: "It becomes a fault if you make it the foundation of religion and start looking down on people who are relaxed about it — the way the early generations were. And it becomes a fault if the point is to look good to other people, which is simply showing off." },
     ],
     closer: [
-      { title: "And when it counts in your favour", body: "It becomes genuinely good, he says, when the intention is the good of the thing rather than appearance; when you do not condemn anyone who skips it; when you do not let it push the prayer past the start of its time; and when it does not take you away from something better, or from learning. Meet those and an ordinary act of washing becomes an act of worship." },
+      { title: "And when it counts in your favour", body: "It becomes genuinely good, he says, when you are doing it for its own sake rather than for how it looks; when you do not condemn anyone who skips it; when you do not let it push the prayer past the start of its time; and when it does not take you away from something better, or from learning. Meet those and an ordinary act of washing becomes an act of worship." },
       { title: "Note the shape of the test", body: "Every one of the four conditions is about something other than the washing itself — your opinion of other people, your timing, your priorities, your motive. That is consistent with the whole book: the physical act is settled and easy, and everything difficult about it is attached to it rather than in it." },
     ],
     distinction: ["The same act, three verdicts", "Good", "Done for its own sake, without contempt for others, without crowding out prayer or learning.", "A fault", "Treated as the foundation of religion, or done to be seen."],
@@ -169,8 +169,8 @@ export const book03Chapters: Chapter[] = [
     overview: "The technical treatment begins, and it is organised by three questions: what is removed, what removes it, and how the removal is done.",
     thesis: "Purity from filth is organised as three questions — what is removed, what removes it, how — rather than as a list of cases.",
     moves: [
-      { title: "Set the three questions", body: "Inquiry into purity from filth concerns the thing removed, the thing it is removed by, and the removal itself. Every technical question in the division falls under one of the three." },
-      { title: "Sort the substances", body: "The thing removed is impurity, and the substances are three: inanimate things, animals, and parts of animals. Each is then treated in turn." },
+      { title: "Set the three questions", body: "Purity from filth breaks into three questions: what is being removed, what removes it, and how the removing is done. Every technical question in the division falls under one of the three." },
+      { title: "Sort the substances", body: "What is removed is impurity, and it comes from three sources: inanimate things, animals, and parts of animals. Each is then treated in turn." },
       { title: "Note the method", body: "The sorting is by kind of substance rather than by degree of severity, which keeps the rulings general and prevents the treatment from becoming a list of cases." },
       { title: "Place the section", body: "This is the most purely juristic material in the Ihya's opening quarter, and Ghazali gives it plainly, without the analysis of inward states that characterises the rest of the work." },
     ],

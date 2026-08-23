@@ -193,7 +193,7 @@ export const book07Chapters: Chapter[] = [
       { title: "Give the thanks", body: "When the animal is brought, thank God inwardly for having made animals serve you, carrying the load so you do not have to." },
       { title: "Give the parallel", body: "Let it remind you of the thing you will actually be carried on to the next life: the bier. In this one respect the pilgrimage runs parallel to that journey the whole way." },
       { title: "Give the question", body: "So ask whether this journey, on this animal, is fit to be your supplies for that one. And how close that is — for all you know death is near, and you will be riding the bier before you ride the camel." },
-      { title: "Give the argument", body: "Riding the bier is certain, and the easing of the means of the journey is doubtful. So how does he take precautions for the doubtful journey, and provide for its provision and its mount, and neglect the matter of the certain journey?" },
+      { title: "Give the argument", body: "Riding the bier is certain, and the easing of the means of the journey is doubtful. So how does he take precautions for the journey that may not happen, arranging its supplies and its mount, and ignore the one that certainly will?" },
     ],
     closer: [
       { title: "Why the argument is about allocation", body: "It grants everything about the pilgrimage journey: that it is worth preparing for, that provision and a mount are needed, that care is appropriate. The whole force is in a comparison of two allocations of the same care, one to a journey that may not happen and one to a journey that certainly will." },
@@ -218,7 +218,7 @@ export const book07Chapters: Chapter[] = [
     ],
     closer: [
       { title: "Why the detail matters", body: "The parallel could have rested on both being white, or both being simple. Ghazali picks the one feature that is a rule rather than a resemblance: the consecrated garment must be unstitched, and so is a shroud. The figure is anchored in a legal requirement rather than in an impression." },
-      { title: "What the stage does to the sequence", body: "It is the point at which the two journeys stop being parallel and start being possibly the same one. The clause about the journey perhaps not being completed is placed here rather than earlier, at the exact moment the pilgrim is buying the thing he might be buried in." },
+      { title: "What the stage does to the sequence", body: "It is the point at which the two journeys stop being parallel and start being possibly the same one. The clause about the journey perhaps not being completed is placed here rather than earlier, at the exact moment the pilgrim is buying what he might be buried in." },
     ],
     distinction: ["Two meetings, one dress", "The House", "Approached in a dress contrary to a person's customs, which the law requires.", "The Meeting", "Approached in a dress contrary to the world's, which nobody chooses."],
     misreading: "Do not treat the parallel as poetic. Its anchor is a legal detail — that neither garment is stitched — and Ghazali points to it explicitly rather than leaving the resemblance impressionistic.",

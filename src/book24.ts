@@ -102,7 +102,7 @@ const book24Base: Chapter[] = [
     thesis: "Speech becomes superfluous when its quantity outlives the purpose that justified it.",
     context: "Ghazali treats this bane as closely related to the first. The difference is exact: the subject may concern the person, but the amount exceeds what the concern requires.",
     moves: [
-      { title: "Grant the valid purpose", body: "The section does not deny that the matter should be discussed. It asks how much expression is actually needed." },
+      { title: "Grant the valid purpose", body: "The section does not deny that the subject is worth discussing. It asks how much expression is actually needed." },
       { title: "Locate completion", body: "Once the meaning is understood and the fitting action is possible, the primary work of the speech is complete." },
       { title: "Watch repetition", body: "Repeating and embellishing can be driven by anxiety, self-display, pleasure in speaking, or failure to listen for whether the purpose has already been met." },
       { title: "Practice sufficient form", body: "The remedy is not abrupt minimalism. It is language proportionate to understanding, relationship, and the real task." },
@@ -206,7 +206,7 @@ const book24Base: Chapter[] = [
     moves: [
       { title: "Return to ordinary purpose", body: "For common needs, speech exists to make an intention understood and a matter possible to address." },
       { title: "Detect artificiality", body: "Forced rhyme, unusual diction, and elaborate prefaces become suspect when they have no work beyond displaying command of speech." },
-      { title: "Name the hidden audience", body: "The performer may be seeking distinction, praise, or superiority rather than the listener's grasp of the matter." },
+      { title: "Name the hidden audience", body: "He may be after distinction, praise, or the upper hand rather than actually being understood." },
       { title: "Preserve fitting beauty", body: "In preaching and exhortation, rhythm and graceful form may help awaken, attract, warn, or console. There the beauty belongs to the purpose." },
     ],
     distinction: { title: "Plain speech and beautiful speech are not moral opposites", firstLabel: "Beauty in service", first: "Form helps the listener understand, remember, feel, or act in a way the purpose requires.", secondLabel: "Display in disguise", second: "Form calls attention to the speaker and makes understanding secondary to admiration." },
@@ -630,7 +630,7 @@ const book24Extras: Record<number, Extra24> = {
   },
   4: {
     closer: [
-      { title: "The object rather than the manner", body: "What is censured here is entering talk about what is morally false in itself. It is possible to discuss such matters calmly, briefly, and truthfully, and still be doing the thing this bane names." },
+      { title: "The object rather than the manner", body: "What is censured here is entering talk about what is morally false in itself. You can discuss something calmly, briefly and truthfully and still be doing exactly what this bane describes." },
       { title: "Why the company matters", body: "Ghazali's treatment attends to what a conversation makes ordinary. Repeated entry into false talk shifts what a person can hear without objection, which is a slower harm than any single instance." },
     ],
     audit: ["What did I discuss that should not have been a subject?", "What has become ordinary in my hearing?", "Did I object, change the subject, or join in?", "Whose company decides what I talk about?"],

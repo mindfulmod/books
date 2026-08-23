@@ -64,7 +64,7 @@ export const book13Chapters: Chapter[] = [
     overview: "The technical chapter, and it is the longest single stretch of law in the Quarter of Customs.",
     thesis: "The legal chapter is the longest stretch of law in the quarter, and this edition gives its shape rather than its rulings.",
     moves: [
-      { title: "Name the subject", body: "The knowledge of earning by way of sale, of usury, of the forward sale, of hire, of the silent partnership, and of partnership — and the conditions the Law lays on each." },
+      { title: "Name the subject", body: "What you need to know about earning through sale, usury, forward sales, hire, silent partnership and ordinary partnership — and the conditions the law puts on each." },
       { title: "Note what it settles", body: "Whether a transaction is concluded, and on what terms. It is a chapter of contract law and it is given in the ordinary manner of such chapters." },
       { title: "Note what it does not settle", body: "Whether the transaction was right. That question is opened by the very first sentence of the chapter that follows, which says that a valid contract can still be a wrong." },
       { title: "Note the register", body: "Given plainly and without argument, as the legal chapters of the Quarter of Worship were. Its content follows the school Ghazali wrote within." },

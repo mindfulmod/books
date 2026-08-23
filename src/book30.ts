@@ -103,10 +103,10 @@ export const book30Chapters: Chapter[] = [
     overview: "The most consequential delusion takes God's own gifts as evidence of God's approval. Ghazali reconstructs the argument, shows that its key inference is invalid, and supplies an analogy that reverses the reading entirely.",
     thesis: "The most consequential delusion takes God's own gifts as evidence that He is pleased.",
     moves: [
-      { title: "Reconstruct the reasoning", body: "God has been good to me in this world; every benefactor is a lover; every lover continues to do good in the future. Therefore my future is secure. The past is being used to predict the future by way of an assumed favour." },
+      { title: "Reconstruct the reasoning", body: "God has been good to me in this world; every benefactor is a lover; every lover continues to do good in the future. Therefore my future is secure. The past is being used to predict the future, on the assumption that he is favoured." },
       { title: "Find the two faults", body: "The deception lies in supposing that every benefactor is a lover, and beneath that in supposing that worldly ease is a benefaction at all. To those with insight it may indicate the opposite." },
       { title: "Give the analogy", body: "A man has two young slaves, one he loves and one he dislikes. The one he loves he keeps from play, holds to school, forbids the harmful delicacies, and gives bitter medicine. The one he dislikes he neglects to live as he wishes. The neglected boy concludes that he is the favoured one, because nothing is withheld from him." },
-      { title: "Name the exact failure", body: "The possibility that ease indicates abandonment is available to the mind, but it does not agree with desire. So Satan, by way of desire, inclines the heart to the reading that suits it. Ghazali says explicitly: and this is the definition of delusion." },
+      { title: "Name the exact failure", body: "The possibility that ease indicates abandonment is available to the mind, but it does not agree with desire. So Satan works through desire, tilting the heart toward whichever reading suits it. Ghazali says explicitly: and this is the definition of delusion." },
     ],
     closer: [
       { title: "The reverse reading", body: "Those with insight grieved when the world came to them and said it was a sin whose punishment had been hastened, and welcomed poverty as the mark of the righteous. The deluded reads honour into abundance and humiliation into constraint, and the Quran answers both readings with a single word of refusal." },
@@ -211,7 +211,7 @@ export const book30Chapters: Chapter[] = [
       { title: "Name what was left", body: "Pride, envy, ostentation, the desire for leadership and elevation, wishing ill upon peers, and seeking fame among people. Some did not know these were blameworthy at all." },
       { title: "Give the governing image", body: "A man weeds a crop by cutting the tops and the ends of the weeds rather than pulling them from the root, so the roots strengthen and the growth returns, because the planting-beds of the sins are the blameworthy traits in the heart." },
       { title: "Add the surface images", body: "A cesspit plastered white; a grave adorned outside and carrion within; a dark house with a lamp set on its roof; a man expecting the king who whitewashes his door and leaves the dungheaps in the middle of the house." },
-      { title: "Give the medical form", body: "A patient with scabies is given an ointment for the surface and a draught to cut the matter at its source. He is content with the ointment, abandons the draught, and continues taking what increases the matter, so he keeps painting the surface while the eruption continues from within." },
+      { title: "Give the medical form", body: "A patient with scabies is given an ointment for the skin and a draught to cut off what is causing it. He settles for the ointment, drops the draught, and goes on consuming whatever is feeding it — so he keeps painting the skin while the eruption goes on from within." },
     ],
     closer: [
       { title: "The verse behind it", body: "God does not look at your appearance or your wealth; He looks at your hearts and your actions. They tended the actions and not the hearts — and the heart is the root, since nobody is saved except someone who comes to God with a sound one." },

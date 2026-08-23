@@ -49,7 +49,7 @@ export const book15Chapters: Chapter[] = [
       { title: "Say why the grading matters", body: "The eight rights of the next chapter are stated in full. Without the degrees, they would read as a single standard that almost no friendship meets — and the chapter on property makes the grading explicit by dividing that right into three ranks." },
     ],
     closer: [
-      { title: "The benefits", body: "The chapter treats them alongside the conditions, which is the Ihya's usual order: establish that the thing repays what is about to be asked of it, and only then say what it requires." },
+      { title: "The benefits", body: "The chapter treats them alongside the conditions, which is the Ihya's usual order: establish that it repays what is about to be asked of it, and only then say what it requires." },
       { title: "What conditions do to a claim", body: "A bond with conditions can be examined. Someone who claims brotherhood can be asked on what ground, and the story in the chapter on property turns on exactly that — a man is told he was not ashamed to claim brotherhood in God and then behave as he did." },
     ],
     distinction: ["Two ways to hold a friendship", "Graded", "With degrees, so that the rights fall differently on different ties.", "Uniform", "One standard for every friendship, which almost none would meet."],
