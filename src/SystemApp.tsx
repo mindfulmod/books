@@ -2220,14 +2220,15 @@ return (
                     compact
                   />
                 )}
-                <div className="core-points">
-                  <span>Three things to hold</span>
-                  {chapter.points.map((point, index) => (
-                    <div key={point}><i>{index + 1}</i><p>{point}</p></div>
-                  ))}
+                {/* Core used to print the first three argument moves verbatim, which meant
+                    a reader moving on to Deep re-read them immediately. It now carries the
+                    section's claim and its guard, and Deep carries the argument itself. */}
+                <div className="core-claim">
+                  <span>What this section claims</span>
+                  <p>{deepReading.thesis}</p>
                 </div>
                 <button className="continue-button" onClick={() => setSaved((current) => ({ ...current, depth: "deep" }))}>
-                  Follow the full distinction <ArrowRight size={17} weight="bold" />
+                  Follow the full argument <ArrowRight size={17} weight="bold" />
                 </button>
               </div>
             )}

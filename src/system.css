@@ -7140,6 +7140,32 @@ body.system-page {
   }
 }
 
+/* Core depth carries the section's claim; the argument itself belongs to Deep. */
+.core-claim {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--journey);
+  background: color-mix(in srgb, var(--journey) 6%, #fbfaf7);
+  border-radius: 0 8px 8px 0;
+}
+
+.core-claim span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--journey) 70%, #6f5a33);
+  margin-bottom: 8px;
+}
+
+.core-claim p {
+  margin: 0;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 1.06rem;
+  line-height: 1.5;
+  color: #23303a;
+}
+
 /* ============================================================================
    MOBILE SHELL
    One surface at a time inside a book-home → reader hierarchy. Everything here is scoped to
