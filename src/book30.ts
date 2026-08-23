@@ -337,7 +337,7 @@ export const book30Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 15, shortTitle: "The armour and the review", formalTitle: "The third class of the deluded: the Sufis",
-    overview: "Ghazali writes about this class as one who belongs to it, and remarks at the outset how prevalent delusion is among them. He moves from imitation of appearance, through imitation of vocabulary, to the abandonment of the Law itself.",
+    overview: "Ghazali writes about this group as somebody who belongs to it, and says at the outset how common self-deception is among them. He works from copying the appearance, through copying the vocabulary, to dropping the Law altogether.",
     moves: [
       { title: "Describe the imitation", body: "They matched the truthful among the Sufis in dress and bearing, in expressions, manners, observances, and terminology, in sitting on the mat with the head bowed into the collar like one absorbed in thought, in the drawn sigh and the lowered voice, and having taken on these things supposed themselves Sufis, never having wearied themselves with struggle, discipline, or the watching of the heart, which are the first stations of the path." },
       { title: "Give the review", body: "An old woman hears that the brave are entered in the register and granted a province. She puts on a coat of mail and a helmet, learns the warriors' verses and their melodies until they come easily, learns their swagger in the field and the motions of their hands, and presents herself at the camp to have her name entered. At the review she is ordered stripped of the helmet and mail and tested in single combat, and is found to be a weak old woman who cannot bear the weight of the armour." },

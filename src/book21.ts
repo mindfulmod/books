@@ -281,7 +281,7 @@ export const book21Chapters: Chapter[] = [
     overview: "Ghazali gives the fortress image and draws an obligation from it: guarding the heart is required of every responsible person, guarding cannot be done without knowing the gates, and so knowing the gates is itself required.",
     moves: [
       { title: "Give the image and the duty", body: "The heart is a fort and the enemy seeks to enter and own it. The fort cannot be kept except by guarding its gates, and no one can guard gates he does not know. What a duty cannot be discharged without is itself a duty." },
-      { title: "Identify what the gates are", body: "The entrances are the servant's own traits. They are many, and Ghazali confines himself to the great ones, the ones wide enough not to be narrowed by the number of the enemy's forces." },
+      { title: "Identify what the gates are", body: "The ways in are a person's own traits. There are many, and Ghazali sticks to the big ones — the gates wide enough that the sheer number of the enemy's troops does not narrow them." },
       { title: "Name the first two", body: "Anger and appetite. Anger is the ghoul of the intellect, and when the intellect's forces weaken the other side attacks. When a person is angry the enemy plays with him as a child plays with a ball." },
       { title: "Report the three warnings", body: "In the exchange with Moses, the enemy asks to be remembered at three: at anger, because his spirit is then in the person's heart; at the meeting of the ranks, where he brings wife and children to mind until the person turns away; and at sitting alone with a woman not of one's kin." },
     ],

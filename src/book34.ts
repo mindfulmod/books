@@ -263,7 +263,7 @@ export const book34Chapters: Chapter[] = [
     moves: [
       { title: "Give the highest degree", body: "One who turns from everything other than God, including the gardens themselves, and loves nothing but God, is the absolutely detached." },
       { title: "Give the degree below it", body: "One who turns from every worldly portion but still desires the equivalents in the hereafter is detached, but below the first, since what he took is of the same kind as what he left." },
-      { title: "Give the partial degree", body: "One who leaves some worldly portions and not others is detached in the part he left, as one who leaves wealth but not standing, or leaves expansive eating but not adornment." },
+      { title: "Give the partial degree", body: "Somebody who gives up some of what the world offers and not the rest is detached in the part he gave up — a man who lets go of money but not standing, or of good food but not good clothes." },
       { title: "Draw the practical consequence", body: "Since the grading follows the object taken, a person can locate his own degree by asking what he actually wanted more, which is checkable in a way that intensity of renunciation is not." },
     ],
     closer: [

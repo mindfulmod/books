@@ -103,7 +103,7 @@ export const book32Chapters: Chapter[] = [
       { title: "The first sense", body: "If faith is taken to include both the affirmations and the acts, then it has two pillars: certainty and patience. Certainty knows that disobedience harms and obedience benefits; patience is acting on that knowledge, since neither leaving disobedience nor holding to obedience is possible without it." },
       { title: "The second sense", body: "If faith is taken as the states that fruit acts, then everything a person meets divides into what benefits and what harms. Toward the harmful his state is patience and toward the beneficial it is gratitude. Ibn Masud's saying follows: faith is two halves, half patience and half gratitude." },
       { title: "Derive the corollary", body: "Since caprice has two branches, appetite seeking the pleasant and anger fleeing the painful, and fasting is patience against appetite alone, fasting is half of patience, and therefore a quarter of faith." },
-      { title: "Read the method", body: "Ghazali offers this as a worked example of how the Law's proportions are to be understood, which depends on knowing that the word faith is used in several ways rather than one." },
+      { title: "Read the method", body: "He offers it as a worked example of how to read the proportions the Law gives, which only works once you know that the word faith is used in several senses and not one." },
     ],
     closer: [
       { title: "Why the second sense matters most here", body: "It is the sense that produces this book. If patience and gratitude are the two states covering everything a person meets, then a single book treating both covers the whole field, which is exactly Ghazali's claim in the introduction." },
@@ -241,13 +241,13 @@ export const book32Chapters: Chapter[] = [
     overview: "The hardest section of Part Two. Gratitude between people is an exchange, and Ghazali asks what the same word can mean when neither party can be benefited or harmed by the other.",
     moves: [
       { title: "Pose the difficulty", body: "Thanks between people carries an expectation and a return. Neither is available here, so the ordinary sense of the word cannot simply be transferred." },
-      { title: "Locate what changes", body: "What the servant's gratitude alters is the servant, not the Bestower. The act that gratitude produces is therefore not a repayment but a use of the blessing in the way its Giver intended." },
+      { title: "Locate what changes", body: "Your gratitude changes you, not the one who gave. So what gratitude produces is not a repayment; it is using the gift the way the giver meant it to be used." },
       { title: "State the consequence", body: "Gratitude for a thing becomes the using of it for what it was given for, which makes gratitude a practical rather than a ceremonial matter and connects it directly to the section on distinguishing what God loves." },
       { title: "Follow the attribution back", body: "Ghazali presses the attribution to its end: that He is the praiser and the praised, that all began from Him and returns to Him, and that everything perishes except His face. He marks this as touching the secret of the decree, which he declines to disclose." },
     ],
     closer: [
       { title: "Why he marks his own limit", body: "As in Book 31's treatment of the reckoning, Ghazali stops where he judges disclosure improper and says so. The reticence is stated rather than performed, and the reader is told which question has been left." },
-      { title: "What survives the difficulty", body: "Even before the metaphysics, the practical result stands: since gratitude changes the servant rather than the Giver, its whole content is the right use of what was given." },
+      { title: "What survives the difficulty", body: "Even before any of the metaphysics, the practical upshot holds: since gratitude changes you and not the giver, all it can consist of is using well what you were given." },
     ],
     distinction: ["Two things thanks can be", "A repayment", "Something returns to the giver, which is how thanks works between people.", "A right use", "Nothing returns; the blessing is used for what it was given for, and the change is in the receiver."],
     misreading: "Do not read the difficulty as making gratitude toward God empty. Ghazali's answer is that its content is heavier rather than lighter, since it becomes the whole use a person makes of what he has.",
@@ -423,7 +423,7 @@ export const book32Chapters: Chapter[] = [
       { title: "Pose the objection", body: "If God has a blessing in every existent, then trial does not exist, and patience means nothing. And if trial does exist, then gratitude for trial is incoherent, since patience over a trial requires pain and gratitude requires joy, and the two are contraries." },
       { title: "Affirm that trial exists", body: "Trial exists as blessing exists, and affirming one requires affirming the other, since they are contraries: the absence of trial is a blessing and the absence of blessing is a trial." },
       { title: "Apply the earlier division", body: "Blessing divides into absolute and restricted, and so does trial. The absolute trial in this world is unbelief, disobedience, and bad character; the restricted are poverty, illness, fear, and the rest, which are trials in worldly terms and not in religion." },
-      { title: "Give the rule", body: "A person is not commanded to be patient over any harm he is able to repel. If a man leaves water while thirsty until his pain is great, he is not told to endure it but to remove it. Patience is over a pain whose removal is not in the servant's power." },
+      { title: "Give the rule", body: "Nobody is told to be patient about a harm he could simply stop. A man who stays thirsty next to water until it hurts is not told to bear it — he is told to drink. Patience is for a pain you cannot do anything about." },
     ],
     closer: [
       { title: "Where the two duties meet", body: "Since patience in this world therefore attaches to what is not an absolute trial, and what is not an absolute trial may be a blessing from some aspect, both duties can fall on one thing at once. Wealth is the standing example, and so is any restricted blessing." },
@@ -461,7 +461,7 @@ export const book32Chapters: Chapter[] = [
     overview: "Ghazali reports that people have disagreed, dismisses the existing arguments as confused, and then does something unusual: he gives two answers at two levels, and says openly which audience each is for.",
     moves: [
       { title: "Report the disagreement", body: "Some hold patience superior, some gratitude, some that they are equal, and some that it varies with circumstance, and each party has argued with speech Ghazali calls badly disordered and far from settled." },
-      { title: "Announce two levels", body: "There are two stations of exposition. The first is by concession, looking at the outward and not demanding investigation of the reality." },
+      { title: "Announce two levels", body: "There are two levels of explanation. The first meets you where you are: it takes the surface as it stands and does not push for what is underneath." },
       { title: "Say who it is for", body: "It is what should be addressed to the generality, whose understandings fall short of grasping obscure realities, and it is the kind of speech preachers should rely on." },
       { title: "Give the answer at that level", body: "Looking at the plain sense of what is transmitted, patience is preferred, since the reports on its excellence are more numerous and some are explicit in preferring it." },
     ],

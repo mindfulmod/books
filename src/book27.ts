@@ -43,14 +43,14 @@ export const book27Chapters: Chapter[] = [
     formalTitle: "Introduction and the fourteen announced discussions",
     overview: "Ghazali opens by treating wealth as an unavoidable field of testing. Its absence produces poverty, which can be met by contentment or greed. Its presence can be met by withholding or spending, and spending itself can become either waste or measured use. The book announces fourteen discussions to separate these closely neighboring states.",
     points: ["Wealth is difficult because both absence and presence expose the heart.", "Every outward condition branches into opposed inward responses.", "The book moves from judgment to diagnosis, treatment, and a complete rule of use."],
-    reflection: "Name your present financial condition, then name the inward response it is producing rather than assuming the condition itself tells the whole story.",
+    reflection: "Name where you actually stand financially, then name what it is doing to you inside — rather than assuming the situation itself tells the whole story.",
     relatedNodes: ["trial", "absence", "presence", "branches"],
     thesis: "Book 27 is a decision map for wealth: it refuses to call poverty, possession, earning, keeping, or spending good or bad without asking what inward quality and outward conduct each condition produces.",
     context: "The introduction presents a compact branching structure before listing fourteen discussions. A person without wealth may be content or greedy. Greed may turn toward what other people possess or toward earning. A person with wealth may withhold or spend. Spending may become extravagance or measured economy.",
     moves: [
       { title: "Begin with unavoidable need", body: "No one is entirely independent of material means, so the spiritual problem cannot be solved by pretending wealth has no place in human life." },
       { title: "Test absence", body: "Lack can reveal contentment and freedom from people, or it can intensify greed, humiliation, and fixation on what others hold." },
-      { title: "Test possession", body: "Having can enable service and generosity, or produce miserliness, fear, preoccupation, and a false sense of independence." },
+      { title: "Test possession", body: "Money can put you in a position to help people and to give. It can also make you tight, frightened, distracted, and convinced you need nobody." },
       { title: "Test spending", body: "Opening the hand is not the final criterion because spending can still cross into waste. The praised state is purposeful and measured." },
     ],
     closeReading: [
@@ -112,7 +112,7 @@ export const book27Chapters: Chapter[] = [
     moves: [
       { title: "Reject pure categories", body: "A cause capable of producing both salvation and destruction cannot be praised or censured without specifying the use and result." },
       { title: "Restore the hierarchy", body: "External goods serve the body; the body serves knowledge, action, and purification. Reversing this order makes the lower consume the higher." },
-      { title: "Name enabled goods", body: "Charity, pilgrimage, care of dependents, hospitality, learning, and public works can require material capacity." },
+      { title: "Name enabled goods", body: "Giving, making the pilgrimage, looking after the people who depend on you, feeding guests, studying, building something for everyone — all of them can take money." },
       { title: "Keep money instrumental", body: "Currency has no final use in itself. It measures and transfers access to other goods, so loving it as an end is a confusion about its created role." },
     ],
     closeReading: [
@@ -142,7 +142,7 @@ export const book27Chapters: Chapter[] = [
     context: "The text does not limit beneficial spending to alms for poverty. It also discusses hospitality, gifts, maintaining social honor, hiring others so time remains for irreplaceable work, and endowments or public structures whose benefit continues.",
     moves: [
       { title: "Support the person", body: "Food, clothing, shelter, family life, and other necessities can quiet urgent needs and make disciplined attention possible." },
-      { title: "Reach particular people", body: "Charity answers need, while hospitality, gifts, assistance, and social grace build relationships and embody generosity." },
+      { title: "Reach particular people", body: "Charity meets a need. Feeding people, giving presents, lending a hand and simply being gracious do something else: they build the relationship, and they are what generosity actually looks like." },
       { title: "Recover irreplaceable time", body: "Paying for lawful help can protect time for knowledge, remembrance, thought, or work that another person cannot perform on one's behalf." },
       { title: "Build common benefit", body: "Water, bridges, places of worship, care facilities, lodging, and endowments extend benefit beyond a single recipient and moment." },
     ],
@@ -173,9 +173,9 @@ export const book27Chapters: Chapter[] = [
     context: "Ghazali compares wealth to a serpent containing both poison and antidote. The metaphor does not ask the reader to deny the benefits already named. It asks for the practical knowledge required to extract benefit without being harmed by capacity, habit, or preoccupation.",
     moves: [
       { title: "Capacity activates desire", body: "When an unavailable pleasure becomes attainable, the motive to pursue it may awaken with new force. Ability is therefore a fresh trial, not mere relief." },
-      { title: "Luxury resets the baseline", body: "A permissible refinement becomes familiar, familiarity becomes expectation, and maintaining expectation can pressure the person toward flattery, compromise, or doubtful means." },
+      { title: "Luxury resets the baseline", body: "Something perfectly allowable becomes normal, normal becomes expected, and keeping up what you expect is what starts pushing you toward flattering people, cutting corners, and money you would rather not look at too closely." },
       { title: "Possession creates a management world", body: "Property, trade, savings, and goods generate partners, workers, security, records, disputes, and repeated decisions." },
-      { title: "Guarding enters the heart", body: "Even hidden money can occupy thought through questions of use, loss, discovery, inheritance, and protection." },
+      { title: "Guarding enters the heart", body: "Even money nobody knows about takes up room in your head: what to do with it, whether you will lose it, whether somebody will find it, who gets it, how to keep it safe." },
     ],
     closeReading: [
       { title: "Why lawful luxury still matters", body: "Ghazali is distinguishing legal permission from spiritual effect. A lawful habit may still expand dependence and narrow the freedom to tell the truth." },
@@ -234,7 +234,7 @@ export const book27Chapters: Chapter[] = [
     moves: [
       { title: "Make the baseline gentle", body: "A life with constantly expanding expenditure cannot easily feel sufficient. Deliberate economy closes some channels through which new need is manufactured." },
       { title: "Shorten anxious projection", body: "Planning remains, but the heart stops treating every imagined illness, loss, or future difficulty as a demand for endless present accumulation." },
-      { title: "Value freedom from leverage", body: "Contentment is made desirable by seeing the dignity and truthfulness it protects, while greed is seen with its fatigue and dependence." },
+      { title: "Value freedom from leverage", body: "You come to want contentment by seeing what it keeps intact — your dignity, and your ability to say what is true. And you go off greed by seeing how tired it makes you and how much it puts you at other people's mercy." },
       { title: "Redirect comparison", body: "Instead of taking luxurious consumption as the measure, the reader studies lives marked by restraint and looks at those with less worldly provision rather than only those with more." },
       { title: "Count accumulation's burden", body: "Risk, guarding, loss, delay, distraction, and accountability are placed inside the picture that desire normally presents as pure gain." },
     ],
@@ -265,7 +265,7 @@ export const book27Chapters: Chapter[] = [
     thesis: "Generosity is wealth restored to movement: what has reached one person becomes a route by which need is met, dignity is protected, community is strengthened, and the heart is loosened from exclusive possession.",
     context: "This discussion gathers praise of generosity, feeding, kindness, and serving people's needs. Its repeated images portray generosity as nearness, mercy, and a disposition through which benefits entrusted to one person reach others.",
     moves: [
-      { title: "Match virtue to condition", body: "The person without wealth practices contentment and reduced greed. The person with wealth practices generosity and distance from miserliness." },
+      { title: "Match virtue to condition", body: "If you have little, the work is being content and wanting less. If you have plenty, the work is giving and not turning tight." },
       { title: "Move from object to benefit", body: "The moral question is not only whether money leaves the hand but whether a real need, good, relationship, or public service is advanced." },
       { title: "Let repeated giving form character", body: "Generosity becomes an inward readiness that notices needs and experiences giving as fitting rather than as repeated injury." },
       { title: "Treat possession as entrusted capacity", body: "A blessing brings responsibilities toward people. Refusing every claim on the benefit can expose the possessive fiction beneath ownership." },
@@ -296,7 +296,7 @@ export const book27Chapters: Chapter[] = [
     thesis: "The generous stories train perception as much as spending: they portray a person whose first instinct is to find the path by which benefit can reach another without delay or humiliation.",
     context: "This source discussion is a collection of inherited reports and anecdotes rather than a continuous argument. The application here draws out recurring moral patterns without treating every narrated amount or circumstance as a universal instruction.",
     moves: [
-      { title: "See beyond minimum compliance", body: "Many stories begin where a narrow account of obligation would stop. The generous person asks what kindness, dignity, or service the situation calls for." },
+      { title: "See beyond minimum compliance", body: "Most of these stories start where a strict account of what you owe would have stopped. A generous person asks a different question: what does this situation actually call for?" },
       { title: "Notice before repeated asking", body: "A need that becomes visible only after persistent request exposes not only the requester's condition but the observer's inattention." },
       { title: "Include personal service", body: "Some accounts join giving to direct help. Money does not become a way to keep distance from the person being served." },
       { title: "Release fear of decrease", body: "The narrative contrast is between a heart that sees giving as a path of benefit and a heart that sees every release as threat." },
@@ -419,7 +419,7 @@ export const book27Chapters: Chapter[] = [
     moves: [
       { title: "Reject retention as a complete test", body: "Everyone keeps some wealth for needs and duties. If all retention were miserliness, no one could escape the vice." },
       { title: "Preserve legal obligations", body: "Zakat, maintenance, debts, and other rights cannot be withheld without entering a clear form of miserliness and wrongdoing." },
-      { title: "Add social grace", body: "Hospitality, family ease, gifts, and ordinary magnanimity create fitting claims that vary with relationship, wealth, and circumstance." },
+      { title: "Add social grace", body: "Having people round, being easy with your family, giving presents, being decent about money — these create real claims on you, and how much they claim depends on who the person is, what you have, and the situation." },
       { title: "Compare purposes", body: "The heart is miserly when preserving the money is ranked above a purpose that should reasonably and morally take priority." },
     ],
     closeReading: [
@@ -451,7 +451,7 @@ export const book27Chapters: Chapter[] = [
       { title: "Diagnose what is loved", body: "The person may be protecting future pleasures and safety, or may have forgotten every use and simply enjoy the fact of possession and control." },
       { title: "Shorten the imagined future", body: "Mortality and the fate of accumulated wealth expose how much labor is being spent to protect a future that is neither unlimited nor owned." },
       { title: "Restore trust and responsibility", body: "Concern for dependents remains a duty, but it is not allowed to become an argument for limitless hoarding or distrust of their Creator and their own agency." },
-      { title: "Practice the contrary", body: "A fitting gift is made despite reluctance. Repetition weakens the association between release and danger until generosity becomes less forced." },
+      { title: "Practice the contrary", body: "Give something suitable even though you do not want to. Do it often enough and letting go stops feeling like exposure, and giving stops being an effort." },
     ],
     closeReading: [
       { title: "Money as a messenger", body: "Ghazali compares money to a messenger that reaches desired goods. Loving the messenger after the destination has been forgotten reveals the loss of instrumental order." },

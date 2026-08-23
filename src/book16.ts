@@ -162,7 +162,7 @@ export const book16Chapters: Chapter[] = [
     overview: "The book's sharpest ruling, and it is the only place where seclusion is not weighed but simply refused.",
     moves: [
       { title: "Give the ground", body: "Teaching and learning are the greatest acts of worship in this world — as the Book of Knowledge argued — and that is inconceivable except by mixing." },
-      { title: "Give the ruling", body: "So one who needs to learn what is obligatory upon him is disobedient by seclusion." },
+      { title: "Give the ruling", body: "So somebody who still needs to learn what is required of him is doing wrong by shutting himself away." },
       { title: "Note the word", body: "Disobedient. Not unwise, not premature — the withdrawal is itself a wrong, because it makes an obligation impossible to discharge." },
       { title: "Give the saying", body: "Hence al-Nakha'i and others said: become learned, then withdraw." },
     ],

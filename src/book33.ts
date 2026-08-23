@@ -49,7 +49,7 @@ export const book33Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 2, shortTitle: "The farmer's measure", formalTitle: "Measuring a hope by the sower's",
-    overview: "Ghazali gives the image that makes the condition of causes usable. Hope for forgiveness is to be measured exactly as a farmer measures his hope for a crop.",
+    overview: "Here is the image that makes the whole business of causes usable: measure your hope for forgiveness exactly the way a farmer measures his hope for a crop.",
     moves: [
       { title: "Set the terms", body: "The world is the tillage of the hereafter, the heart is the ground, faith is the seed, and acts of obedience run as the tilling and clearing of the ground and the digging of channels and the bringing of water to it." },
       { title: "Name the failure case", body: "A heart absorbed in the world is like salt ground in which the seed does not grow, and faith does not grow with a corrupt heart and bad character any more than seed grows in salt ground." },

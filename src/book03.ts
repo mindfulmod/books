@@ -251,7 +251,7 @@ export const book03Chapters: Chapter[] = [
       { title: "How this connects to the opening", body: "Ablution is the clearest case of what the opening warned about: a physical act, exactly specified, easy to get right — and perfectly possible to perform flawlessly while your character is untouched. The frame set in sections 1 to 7 earns its keep most where the detail is finest." },
     ],
     distinction: ["Two orders of presentation", "Procedure, then merit", "Used here, where nobody doubts the act's worth and needs to know how it is done.", "Merit, then definition", "Used throughout the rest of the Ihya, where the testimony has to establish that the subject repays study."],
-    misreading: "Do not read the fineness of the detail as the book contradicting its own opening. The opening said the outward is one rank of four, not that it should be done carelessly.",
+    misreading: "Do not read all this fine detail as the book contradicting its own opening. The opening said the body is one level of four — not that it should be handled carelessly.",
     reflection: "Notice that this is the easiest rank to perfect, and ask what that does to a person who perfects it.",
     audit: ["Which rank am I most exact about?", "Why that one?", "Does exactness here reach anywhere else?", "What does the opening say about this?"],
     nodes: ["wudu", "zahir", "maratib"],

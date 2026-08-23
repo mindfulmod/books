@@ -129,7 +129,7 @@ const book24Base: Chapter[] = [
     context: "Ghazali separates three early categories in increasing seriousness: what does not concern the person, excessive treatment of a concern, and entry into morally false or sinful matter. That sequence prevents all three from being blurred into generic overtalk.",
     moves: [
       { title: "Keep the categories distinct", body: "A topic can be unnecessary without being sinful, or excessive while still legitimate. This bane begins when the subject or mode itself carries moral corruption." },
-      { title: "Follow the slide", body: "Unmeasured talk makes transition easier. Once restraint is lowered, conversation can move from neutral surplus into exposure, fantasy, accusation, or celebration of wrongdoing." },
+      { title: "Follow the slide", body: "Talking without limit makes the slide easy. Once the brakes are off, a conversation moves from harmless surplus into telling people things, into fantasy, into accusation, and finally into enjoying somebody's wrongdoing." },
       { title: "Retain valid purpose", body: "A difficult subject may need to be named for justice, protection, teaching, or repair. The issue is not the mere appearance of morally serious material." },
       { title: "Exit when purpose ends", body: "The practical discipline is to refuse participation when a sound purpose is absent or has been replaced by entertainment and appetite." },
     ],
@@ -306,7 +306,7 @@ const book24Base: Chapter[] = [
     moves: [
       { title: "Recognize a real good", body: "Playfulness can open the heart and create social ease. The section does not deny that benefit." },
       { title: "Limit constancy", body: "When joking becomes the person's constant occupation, life is organized around play and the person becomes known by it." },
-      { title: "Limit excess", body: "Unmeasured laughter can generate resentment and dissolve gravity, attention, and restraint." },
+      { title: "Limit excess", body: "Laughing without any measure to it breeds resentment, and it dissolves seriousness, attention and restraint along the way." },
       { title: "Keep truth and non-harm", body: "Ghazali's positive example joins humor with truthfulness. The joke does not need fabrication or cruelty to work." },
     ],
     distinction: { title: "Shared delight and purchased laughter are different", firstLabel: "Measured play", first: "The humor is truthful, occasional, and leaves those present with dignity and warmth.", secondLabel: "Humor at any cost", second: "The speaker needs laughter enough to fabricate, persist, expose, or make another person carry the wound." },
@@ -332,7 +332,7 @@ const book24Base: Chapter[] = [
     moves: [
       { title: "Locate belittlement", body: "The act represents another person's body, speech, craft, error, or condition as beneath regard." },
       { title: "See the medium", body: "Words are only one route. Imitation, gesture, and visual representation can communicate the defect more forcefully." },
-      { title: "Follow the group effect", body: "The audience is invited to bond through the target's diminishment. Laughter becomes social confirmation of contempt." },
+      { title: "Follow the group effect", body: "Everyone else is being invited to bond by watching somebody shrink. The laugh stops being a reaction and becomes the group agreeing that he is beneath them." },
       { title: "Protect the person's pain", body: "Ghazali connects the prohibition to injury and humiliation, and warns that the mocked person may be better than the mocker." },
     ],
     distinction: { title: "Humor with a person is not humor made from a person", firstLabel: "Mutual play", first: "Those involved retain agency and dignity, and the delight is not built on contempt or injury.", secondLabel: "Ridicule", second: "A body, error, voice, or vulnerability is displayed so others can enjoy the person's reduction." },
@@ -358,7 +358,7 @@ const book24Base: Chapter[] = [
     moves: [
       { title: "Recognize the trust", body: "A contextual signal can make speech confidential even without a formal contract. The listener is expected to understand the entrusted character of the disclosure." },
       { title: "Preserve agency", body: "The person who keeps a secret can choose when and whether it is revealed. Disclosure places that choice in someone else's hands." },
-      { title: "Account for harm", body: "Where revelation injures reputation, safety, relationship, or property, the betrayal carries direct damage." },
+      { title: "Account for harm", body: "Where letting it out damages somebody's name, their safety, a relationship or their property, the betrayal has done real harm on its own." },
       { title: "Retain nobility without damage", body: "Ghazali still treats needless disclosure as base when no obvious injury follows because the entrusted boundary itself has been ignored." },
     ],
     distinction: { title: "Receiving information is not receiving permission", firstLabel: "Custody", first: "The listener protects the confidence and lets the confider retain authority over its movement.", secondLabel: "Appropriation", second: "The listener treats access as ownership and redistributes the story for interest, status, or social currency." },
@@ -379,7 +379,7 @@ const book24Base: Chapter[] = [
     points: ["A promise creates a claim on future conduct.", "Intention at the moment of promising is central to the diagnosis.", "A genuine obstacle is not equated with a deliberately false promise."],
     reflection: "Before saying yes, name the time, capacity, and dependency the promise requires. Honest uncertainty is kinder than confident unreliability.",
     relatedNodes: ["promise", "trust", "intention", "limits"],
-    thesis: "Truthfulness in promising begins before the future arrives, with present intention and a sober account of capacity.",
+    thesis: "Being truthful in a promise starts long before the deadline. It starts with meaning it now, and with an honest look at what you can actually do.",
     context: "Ghazali uses the section to condemn the ease with which language outruns resolve. He recommends guarded formulations and explicitly states that one who intended fulfillment but was prevented by an excuse is not treated like the person who planned to fail.",
     moves: [
       { title: "See the speed mismatch", body: "The tongue can commit in a moment, while fulfillment may require resources, patience, and sacrifice that the self later resists." },
@@ -388,7 +388,7 @@ const book24Base: Chapter[] = [
       { title: "Distinguish real inability", body: "When an unforeseen obstacle prevents a sincerely intended promise, Ghazali does not collapse the case into deliberate hypocrisy." },
     ],
     distinction: { title: "Failure has more than one moral structure", firstLabel: "False promise", first: "The person promises without intent to fulfill, or abandons fulfillment without a genuine barrier.", secondLabel: "Prevented fulfillment", second: "The person intended and prepared to fulfill, but a real obstacle made completion unavailable." },
-    misreading: "Do not use good intention to excuse chronic overpromising. Ghazali's distinction protects genuine inability, not repeated carelessness toward capacity and means.",
+    misreading: "Do not use meaning well as cover for promising more than you can deliver, over and over. His distinction protects somebody who genuinely could not — not somebody careless about what he can actually manage.",
     sourceAnchor: "Book 24, bane 13, false promises.",
     model: { kind: "pair", title: "Two failures that look alike", items: [
       { label: "Intent absent", body: "The promise was false at formation or was abandoned without a compelling barrier.", role: "warning" },
@@ -412,7 +412,7 @@ const book24Base: Chapter[] = [
       { title: "Fear convenient necessity", body: "Because ranking goods is difficult and self-interest is persuasive, he repeatedly counsels avoiding falsehood except where the need is real and serious." },
     ],
     distinction: { title: "A difficult truth and a harmful disclosure are not always identical", firstLabel: "Truth within responsibility", first: "The speaker tells the truth or uses silence and fitting indirection when these can protect the relevant goods.", secondLabel: "Narrow conflict", second: "Truthful disclosure would cause a grave wrong that cannot otherwise be prevented, creating an exceptional moral conflict." },
-    misreading: "Do not convert Ghazali's exceptional cases into a broad license for social convenience, salesmanship, self-protection, or avoiding accountability. He states that doubt returns the person to the prohibition.",
+    misreading: "Do not turn his narrow exceptions into general permission for smoothing things over, selling, covering yourself, or dodging responsibility. He says outright that if you are in doubt, you are back under the prohibition.",
     sourceAnchor: "Book 24, bane 14, lying in speech and oath, including the subsections on exceptions and indirect phrasing.",
     model: { kind: "chain", title: "The narrow test for an exception", items: [
       { label: "Protected good", body: "A real and morally weighty good is at stake, not mere comfort or reputation.", role: "support" },
@@ -561,9 +561,9 @@ const book24Base: Chapter[] = [
     thesis: "Responsible sacred speech matches confidence and verbal precision to the speaker's knowledge while remaining teachable about unintended implications.",
     context: "The nineteenth bane gives period-specific examples in which conjunctions, pronouns, titles, and familiar expressions imply a relation the speaker may not mean. Ghazali does not assign the same responsibility to every audience and explicitly connects full correction to learning and eloquence.",
     moves: [
-      { title: "Respect the weight of relation", body: "A small connective phrase can suggest equality, dependence, ownership, or causation beyond what the speaker intended." },
+      { title: "Respect the weight of relation", body: "One small joining word can imply that two things are equal, or that one depends on the other, or belongs to it, or caused it — none of which the speaker meant." },
       { title: "Correct form to protect meaning", body: "Ghazali's examples adjust wording so the intended theological order is expressed more carefully rather than left to implication." },
-      { title: "Scale responsibility to training", body: "He says complete correction belongs to learned and eloquent people, while ignorance changes the assessment of accidental error." },
+      { title: "Scale responsibility to training", body: "He says getting this completely right belongs to people who are learned and good with words, and that not knowing any better changes how an accidental slip should be judged." },
       { title: "Remain teachable", body: "The practical posture is neither careless confidence nor obsessive panic, but willingness to learn better language for weighty subjects." },
     ],
     distinction: { title: "Careful correction is not language policing", firstLabel: "Protecting meaning", first: "A correction explains the implication, offers clearer wording, and accounts for the speaker's knowledge and intent.", secondLabel: "Performing superiority", second: "Technical precision becomes a means of humiliation, gatekeeping, or pretending every accidental phrase carries expert-level culpability." },

@@ -189,7 +189,7 @@ export const book31Chapters: Chapter[] = [
       { title: "Keep the purpose in view", body: "The anatomy exists so that a person can locate his own case. The pillar closes by asking what makes a small sin great, which is a question about a particular person's particular act." },
     ],
     closer: [
-      { title: "Why this is not a list of prohibitions", body: "Books of rulings enumerate what is forbidden. This section asks where a sin comes from in the person committing it, which is the question a book on repentance has to answer if repentance is to be more than an apology." },
+      { title: "Why this is not a list of prohibitions", body: "Law books list what is forbidden. This section asks where a sin comes from inside the person doing it — which is the question a book on repentance has to answer if repentance is going to be more than an apology." },
       { title: "The link back to the Perils quarter", body: "The attributes named are the ones the previous ten books diagnosed. Read together, the Perils quarter supplies the anatomy and this section supplies the sorting that makes it actionable." },
     ],
     distinction: ["Two ways to classify a wrong", "By its source", "The attribute it arises from, which indicates the treatment.", "By its severity", "Its gravity, which matters for the ruling and does not tell the person what to do next."],
@@ -284,7 +284,7 @@ export const book31Chapters: Chapter[] = [
     overview: "The hardest part of this pillar. Repentance settles what is between you and God on the terms already set out. It does not settle what you owe other people, and Ghazali does not soften the difference.",
     moves: [
       { title: "State the asymmetry", body: "What pertains to God's right is discharged by the return. What pertains to a person's right is not, and remains owed after the repentance is otherwise complete." },
-      { title: "Describe the work required", body: "The wrongs are to be taken one by one, and the person is to search out those wronged through the regions of the world, seek their release, or repay them." },
+      { title: "Describe the work required", body: "Take the wrongs one at a time, track down the people you wronged wherever they have got to, and either get them to let you off or pay them back." },
       { title: "Give the reason the work matters", body: "If his good deeds do not suffice for the wrongs standing against him, the deficit is met from the other side, and he is destroyed by other people's evils. Ghazali presents this as the plain arithmetic of the matter." },
       { title: "Keep it within reach", body: "The instruction is not despair but enumeration. Wrongs are countable, people are findable, and the alternative to doing it one by one is leaving the whole of it standing." },
     ],
@@ -364,7 +364,7 @@ export const book31Chapters: Chapter[] = [
     overview: "The fourth pillar treats the reader who has understood everything so far and has still not moved. Ghazali diagnoses persistence before treating it, and reduces its causes to two.",
     moves: [
       { title: "Divide the readers", body: "People are of two kinds: one raised on good with no lapse, whom Ghazali calls rare, and one not free of committing sins, who divides again into the persistent and the repentant. The pillar is written for the first of those two." },
-      { title: "State the method", body: "There is no cure without a remedy, and no remedy for one who has not identified the disease, since a remedy is nothing but the contradiction of the causes of the disease. Whatever arises from a cause is cured by dissolving that cause, and nothing is annulled except by its opposite." },
+      { title: "State the method", body: "There is no cure without a treatment, and no treatment until you have worked out what the illness is — because a treatment is nothing but the contradiction of whatever caused it. Anything with a cause is cured by breaking the cause, and nothing is undone except by its opposite." },
       { title: "Name the two causes", body: "There is no cause for persistence except heedlessness and appetite. Nothing opposes heedlessness but knowledge, and nothing opposes appetite but patience in cutting off the causes that stir it." },
       { title: "Give the compound", body: "So the remedy is a preparation kneaded from the sweetness of knowledge and the bitterness of patience, as oxymel combines the sweetness of sugar with the sourness of vinegar, each aiming at a different end, and the two together subduing what stirs the bile." },
     ],
@@ -383,7 +383,7 @@ export const book31Chapters: Chapter[] = [
     id: 17, shortTitle: "Four things to accept", formalTitle: "The treatment, and the conditions of being treatable",
     overview: "The book closes on a medical parallel worked out in detail. Ghazali sets out four things a sick person must assent to before treatment can begin, and gives the religious counterpart of each.",
     moves: [
-      { title: "The first assent", body: "That sickness and health have causes reachable by choice, in the order the Causer of causes arranged. This is faith in the principle of medicine, and one who does not hold it will not undertake treatment at all. Its counterpart is faith that felicity has a cause, which is obedience, and wretchedness a cause, which is disobedience." },
+      { title: "The first assent", body: "That being ill and being well both have causes you can actually get at, in the order God arranged them. That is what believing in medicine amounts to, and anybody who does not believe it will never start a course of treatment. The equivalent here is believing that happiness has a cause — doing what you were asked — and misery has one too." },
       { title: "The second assent", body: "That a particular physician knows his art, is skilled in it, and is truthful in what he says, neither concealing nor lying. Faith in medicine as such does not help without this. Its counterpart is knowledge of the Messenger's truthfulness and that what he says is true." },
       { title: "The third assent", body: "Listening to the physician about what he warns against in general, until fear dominates and drives the person to abstain. Its counterpart is attending to what urges God-consciousness and warns against sins, until fear arises that is strong enough to carry the patience which is the other half of the remedy." },
       { title: "The fourth assent", body: "Listening to the physician about his own illness specifically, and what he in particular must avoid. Not every patient must abstain from everything and not every remedy benefits him; each ailment has a knowledge and a treatment of its own." },

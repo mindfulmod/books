@@ -85,7 +85,7 @@ export const book26Chapters: Chapter[] = [
       { title: "Refuse permanence", body: "What rises within the world will be lowered. The heart is trained not to interpret present elevation as a final verdict." },
     ],
     closeReading: [
-      { title: "Why abundance receives special attention", body: "Scarcity makes dependence visible. Abundance can conceal it by giving the self repeated evidence of control, comparison, and choice." },
+      { title: "Why abundance receives special attention", body: "When you have little, you can see what you depend on. When you have plenty it hides, because you keep getting evidence that you are in control, that you compare well, and that you get to choose." },
       { title: "Why stewardship differs from ownership", body: "A steward uses, guards, and answers for what passes through the hand. Absolute ownership imagines that the object exists to establish the self and cannot justly be reclaimed." },
     ],
     distinction: { title: "Attraction and enslavement are not identical", firstLabel: "Attractive trust", first: "A created good is received with gratitude, responsibility, and awareness that it can depart.", secondLabel: "Governing love", second: "Its increase and decrease determine the heart's direction, rivalry, fear, and sense of worth." },
@@ -109,7 +109,7 @@ export const book26Chapters: Chapter[] = [
     context: "The chapter gathers many voices rather than advancing one continuous proof. Across their different images, a stable pattern appears: time is short, conditions reverse, accumulation outlives its collector, and the wise take what serves the journey.",
     moves: [
       { title: "Expose the timescale error", body: "The person knows abstractly that life ends while planning emotionally as if present arrangements could continue without limit." },
-      { title: "See reversal in every condition", body: "Health, wealth, youth, security, and social gathering all carry their opposite possibilities. Their changeability forbids final reliance." },
+      { title: "See reversal in every condition", body: "Health, money, youth, safety, people around you — every one of them carries its opposite inside it. Because they can all turn, none of them will bear your full weight." },
       { title: "Take provision instead of residence", body: "The traveler image turns detachment into proportion. A traveler does not reject provision; the traveler refuses to build the entire purpose around a stopping place." },
       { title: "Shorten occupation by shortening expectation", body: "When the imagined future contracts, many tasks lose their false urgency and attention can return to what survives the change." },
     ],
@@ -145,7 +145,7 @@ export const book26Chapters: Chapter[] = [
       { title: "Bring the end into the present reading", body: "The wise person does not wait for disappearance to learn that disappearance was always underway." },
     ],
     closeReading: [
-      { title: "Why shadow is more exact than ruin", body: "Ruin shows a completed change. Shadow shows movement concealed inside apparent continuity, which better explains ordinary heedlessness." },
+      { title: "Why shadow is more exact than ruin", body: "A ruin shows you a change that has already finished. A shadow shows movement hidden inside something that looks like it is staying put — which is much closer to how people actually fail to notice." },
       { title: "Why the dream image does not erase accountability", body: "Ghazali does not say actions are unreal. He says the goods people cling to are reclassified at waking while reward and responsibility remain." },
     ],
     distinction: { title: "Temporary does not mean morally meaningless", firstLabel: "Temporary field", first: "The condition changes and cannot be finally possessed, but choices within it bear consequences.", secondLabel: "Meaningless illusion", second: "Nothing done here would matter because the entire field lacked truth or accountability." },
@@ -171,13 +171,13 @@ export const book26Chapters: Chapter[] = [
     context: "The middle examples use vivid and sometimes severe inherited images. Their shared analytical work is to lengthen the frame of evaluation beyond the moment in which desire presents the object.",
     moves: [
       { title: "Attend to the invitation", body: "The object presents a real or imagined sweetness and concentrates attention on immediate access." },
-      { title: "See what appetite omits", body: "Maintenance, fear of loss, comparison, dependence, satiety, and accountability are absent from the first image." },
+      { title: "See what appetite omits", body: "None of it is in the picture you first form: the upkeep, the fear of losing it, the comparing, the depending, getting sick of it, and having to answer for it." },
       { title: "Trace reciprocity", body: "The more the person gives identity and love to the share, the more its change can govern mood, time, and conduct." },
       { title: "Evaluate the complete arc", body: "Wisdom asks what the pleasure requires before, during, and after possession, and what remains when it leaves." },
     ],
     closeReading: [
       { title: "Beauty is not the lie", body: "A created beauty can be genuinely beautiful. The lie arises when beauty is asked to promise permanence, sufficiency, or freedom from consequence." },
-      { title: "Cost is not only future punishment", body: "Ghazali also points to present costs: divided attention, fear, rivalry, maintenance, dependence, and grief at separation." },
+      { title: "Cost is not only future punishment", body: "He also points at what it costs you right now: your attention is split, you are afraid of losing it, you find yourself competing, it has to be looked after, you come to depend on it, and it hurts when it goes." },
     ],
     distinction: { title: "Enjoyment differs from enthronement", firstLabel: "Received enjoyment", first: "A pleasure is taken within a lawful measure, thanked for, and allowed to pass without becoming the final good.", secondLabel: "Enthroned enjoyment", second: "The pleasure sets the scale of success and commands increasing time, compromise, and fear." },
     misreading: "Do not infer that every pleasant experience is a deception. The error lies in the incomplete promise the heart attaches to it and the rule it receives.",
@@ -207,7 +207,7 @@ export const book26Chapters: Chapter[] = [
       { title: "Keep the caravan in view", body: "Care for the means only to the degree that they sustain travel. Excessive maintenance can make the means defeat their purpose." },
     ],
     closeReading: [
-      { title: "The informed guest still enjoys", body: "Knowledge of impermanence does not erase fragrance or gratitude. It prevents enjoyment from becoming a claim of permanent possession." },
+      { title: "The informed guest still enjoys", body: "Knowing it will not last does not spoil the smell of it, or stop you being grateful. What it stops is enjoyment turning into a claim that the thing is yours for good." },
       { title: "Grief reveals the imagined contract", body: "Some grief belongs to love and human life. The example targets the added protest that treats return as a violation of ownership rather than part of the known condition." },
     ],
     distinction: { title: "Use is not the same as possession", firstLabel: "Grateful use", first: "The share is received, cared for, and used according to purpose while its temporary status remains present.", secondLabel: "Possessive claim", second: "Access becomes an inward contract that the share must remain and continue serving the self." },
@@ -227,7 +227,7 @@ export const book26Chapters: Chapter[] = [
     points: ["World and hereafter first name near and later states.", "Immediate delight can belong functionally to the hereafter.", "The decisive question is what fruit accompanies the servant beyond death."],
     reflection: "For one activity you enjoy now, ask what fruit, habit, or attachment is being formed beyond the moment of enjoyment.",
     relatedNodes: ["near-state", "later-state", "fruit", "definition"],
-    thesis: "Temporal location explains the word's nearness, but moral classification depends on the share's fruit and relation to the servant's final end.",
+    thesis: "The word means near, and this life is what is nearest in time — but whether something counts as worldly depends on what it leaves behind and how it stands to where you are actually going.",
     context: "Chapter 4 begins by saying that censure is insufficient without knowing what must and must not be avoided. Ghazali then gives a precise threefold classification of immediate shares.",
     moves: [
       { title: "Start with nearness", body: "Every present portion, desire, and pleasure before death can be called part of the nearer life in an etymological sense." },
@@ -239,7 +239,7 @@ export const book26Chapters: Chapter[] = [
       { title: "Why heart states matter", body: "The same external time contains different orientations. Near and later are not merely dates; they name what the heart is organizing itself around." },
       { title: "Why present delight is preserved", body: "Ghazali explicitly notes that knowledge and worship can be among the most delightful present experiences while still belonging to the hereafter in his moral classification." },
     ],
-    distinction: { title: "Present pleasure and blameworthy world are not coextensive", firstLabel: "Present with enduring fruit", first: "The activity is enjoyed now and its result accompanies the servant beyond the immediate state.", secondLabel: "Present without enduring fruit", second: "The share ends with itself or leaves only attachment, distraction, or accountability." },
+    distinction: { title: "Present pleasure and blameworthy world are not coextensive", firstLabel: "Present with enduring fruit", first: "You enjoy it now, and what it produces goes with you past the moment.", secondLabel: "Present without enduring fruit", second: "The share ends with itself or leaves only attachment, distraction, or accountability." },
     misreading: "Do not define worldliness by whether something is visible, embodied, or enjoyable now. Ghazali's own classification is functional and relational.",
     selfAudit: ["What is this activity leaving in the heart?", "Does its fruit survive the moment of consumption?", "Would I still value it if no one could see or praise it?", "What would be left of this an hour after it ends?"],
     sourceAnchor: "Book 26, chapter 4, opening definition of near and later states.",
@@ -258,7 +258,7 @@ export const book26Chapters: Chapter[] = [
     points: ["Knowledge and sincere action can be delightful now and still belong to the hereafter.", "Fruitless immediate enjoyment includes sin and permissible excess beyond need.", "Necessary provision changes category through purpose and use."],
     reflection: "Place one regular expenditure into the threefold map by examining its actual purpose, measure, and fruit rather than its label.",
     relatedNodes: ["fruit", "means", "excess", "intention"],
-    thesis: "The central classification of Book 26 judges neither matter nor pleasure in isolation, but the lasting fruit, necessary function, intention, and measure of the servant's share.",
+    thesis: "The classification at the heart of this book judges neither the object nor the pleasure on its own. It judges what lasts of it, what it is actually needed for, what you meant by it, and how much of it you took.",
     context: "This is the book's most important safeguard against overgeneralization. Ghazali gives two extremes and a middle: what remains, what ends without fruit, and what serves the work that remains.",
     moves: [
       { title: "Name what accompanies", body: "Knowledge of God and sincere action are the two things Ghazali names as remaining in fruit after death." },
@@ -351,7 +351,7 @@ export const book26Chapters: Chapter[] = [
     reflection: "For one possession, separate the object, your actual share, the labor that maintains it, and the heart's attachment to its presence.",
     relatedNodes: ["objects", "share", "occupation", "inner-world"],
     thesis: "Worldliness is a system of relation: created objects become personal shares, shares create bodily occupations, and both can recruit the heart's love, pride, rivalry, and fear.",
-    context: "Chapter 5 shifts from the servant's moral classification to a social account of the world itself. Ghazali names three dimensions, then distinguishes the heart's relation from the body's relation.",
+    context: "Chapter 5 turns from how a person should classify things to an account of the world as a social arrangement. He names three dimensions, then separates how the heart relates to it from how the body does.",
     moves: [
       { title: "Identify the objects", body: "Land, plants, minerals, animals, and human relations provide food, medicine, tools, exchange, transport, shelter, and companionship." },
       { title: "Identify the share", body: "The servant seeks use, pleasure, possession, service, and sometimes control over bodies or esteem within hearts." },
@@ -413,7 +413,7 @@ export const book26Chapters: Chapter[] = [
     reflection: "When using a public good, notice the layers of cooperation and just restraint that make your private use possible.",
     relatedNodes: ["cooperation", "city", "justice", "law"],
     thesis: "Necessary provision leads beyond private labor into civic dependence, where justice and political arts become part of protecting the conditions of ordinary life.",
-    context: "Ghazali moves from crafts to association. The argument explains why homes form settlements, why settlements need defense, why conflict requires judgment, and why legal knowledge is necessary for transactions and boundaries.",
+    context: "He moves from trades to people living together, and the argument runs: houses turn into settlements, settlements have to be defended, fights have to be judged, and judging them takes somebody who knows the law of deals and boundaries.",
     moves: [
       { title: "Admit individual insufficiency", body: "The farmer needs tools; the toolmaker needs food; both depend on builders, carriers, and forms of protection." },
       { title: "Form settlement", body: "Shared buildings and fortified towns answer weather, theft, and the need for mutual defense." },
@@ -449,7 +449,7 @@ export const book26Chapters: Chapter[] = [
       { title: "Solve the timing mismatch", body: "The farmer may need a tool when the carpenter does not need food, so stored goods and shops make exchange available across time." },
       { title: "Solve the distance mismatch", body: "Villages and cities do not produce every food or tool, so carriers and traders move goods between places." },
       { title: "Solve the comparison mismatch", body: "Unlike goods need a durable common measure, which produces currency, minting, valuation, and money exchange." },
-      { title: "See the abyss of extension", body: "Every solution creates more tools, offices, learning, protection, and opportunities for gain. Without remembered purpose, occupation calls forth occupation without end." },
+      { title: "See the abyss of extension", body: "Every fix produces more tools, more jobs, more to learn, more to guard, and more ways to make money. Forget what it was all for and the work simply keeps generating more work." },
     ],
     closeReading: [
       { title: "Social benefit and personal motive can diverge", body: "Ghazali notes that trade can organize benefit for many even when the trader's immediate motive is accumulation. A system's utility does not automatically purify every intention within it." },
@@ -474,11 +474,11 @@ export const book26Chapters: Chapter[] = [
     points: ["Necessary means become false ends when their original purpose is forgotten.", "Extreme rejection of the world can also depart from the path.", "The balanced course neither follows every desire nor eliminates every desire, and neither takes everything nor abandons every created means."],
     reflection: "Where are you closest to one of the two errors: turning the means into the destination, or treating a necessary means as though using it were failure?",
     relatedNodes: ["false-end", "extremes", "balance", "provision"],
-    thesis: "The book ends with disciplined proportion: take what sustains obedience, restrain what crosses reason and revelation, and refuse both indulgent absorption and destructive renunciation.",
+    thesis: "The book ends on keeping the proportions right: take what keeps you able to do what you were asked, hold back what goes against reason and revelation, and refuse both losing yourself in it and throwing everything away.",
     context: "After tracing occupations, Ghazali lists people who mistake survival, pleasure, wealth, reputation, or authority for happiness. He then lists errors produced by extreme withdrawal and states the middle path modeled by the Prophet and companions.",
     moves: [
       { title: "Expose circular survival", body: "Some work to eat and eat to work without recovering a purpose beyond maintaining the cycle." },
-      { title: "Expose substituted ends", body: "Others locate happiness in sensual satisfaction, stored wealth, visible reputation, or control over people." },
+      { title: "Expose substituted ends", body: "Other people put happiness in what feels good, in money put away, in a name others can see, or in having people do what they say." },
       { title: "Reject false renunciation", body: "Self-harm, total eradication of human qualities, abandonment of law, and claims to have outgrown worship are not the cure." },
       { title: "State the middle", body: "Take provision for the journey, restrain desires that exceed reason and revelation, and preserve useful means without making them final ends." },
     ],

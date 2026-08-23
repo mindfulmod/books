@@ -118,7 +118,7 @@ export const book39Chapters: Chapter[] = [
   }),
   makeChapter({
     id: 6, shortTitle: "Three questions", formalTitle: "Reflecting on one's own attributes",
-    overview: "The procedure for the first two channels, and it is exact enough to run. Ghazali sorts what is to be examined and then gives three questions to put to each item.",
+    overview: "The procedure for the first two channels, and it is precise enough to actually run. He sorts what needs examining, then gives three questions to put to each item.",
     moves: [
       { title: "Sort what is examined", body: "Both the loved things and the hated things split the same way: the visible ones, which are what you do and do not do, and the hidden ones, which are the traits that save or destroy a person and sit in the heart — the subject of two whole quarters of the Ihya." },
       { title: "Sort the outward further", body: "Acts of disobedience divide into what belongs to the seven limbs and what is ascribed to the whole body, such as fleeing from battle, disobeying parents, and settling in a forbidden dwelling. The division is given so that nothing falls outside the audit." },

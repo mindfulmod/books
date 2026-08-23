@@ -63,7 +63,7 @@ export const book11Chapters: Chapter[] = [
     moves: [
       { title: "Give the second", body: "Washing the hand. Ablution before food removes poverty, and after it removes ailment." },
       { title: "Give the reason", body: "Because the hand is not free of soiling in the handling of work. A report and a practical reason are given together, which is the pattern of this chapter." },
-      { title: "Note what else the part covers", body: "The setting of the food, the manner of sitting to it, the intention with which it is approached, and the contentment with what is present rather than the seeking of more." },
+      { title: "Note what else the part covers", body: "How the food is laid out, how you sit down to it, what you intend by it, and being content with what is there instead of wanting more." },
       { title: "Note the register", body: "These are ordinary instructions with ordinary reasons. The chapter does not moralise them, and its one weighty item was the first, which was about the food rather than the eater." },
     ],
     closer: [

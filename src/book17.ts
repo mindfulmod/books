@@ -63,7 +63,7 @@ export const book17Chapters: Chapter[] = [
     moves: [
       { title: "Name the category", body: "What is fled is either a matter with an injury in worldly affairs." },
       { title: "Give the examples", body: "Like plague and epidemic when it appears in a town, or a fear whose cause is strife or a quarrel, or a rise in prices." },
-      { title: "Divide it", body: "It is either general, as in those cases, or particular — like one who is targeted with harm in a town and flees from it." },
+      { title: "Divide it", body: "It is either general, as in those cases, or particular — somebody singled out for harm in a town who gets out." },
       { title: "Note what the list includes", body: "Disease, disorder, a personal quarrel, and the cost of living. None of them is treated as an unworthy reason to move, and the book does not pause to justify any of them." },
     ],
     closer: [
@@ -83,7 +83,7 @@ export const book17Chapters: Chapter[] = [
     moves: [
       { title: "Name the category", body: "Or a matter with an injury in religion." },
       { title: "Give the first example", body: "Like one afflicted in his town with status and wealth and an abundance of causes that block him from devoting himself to God — so he prefers exile and obscurity, and avoids affluence and status." },
-      { title: "Give the second", body: "Or like one who is compelled toward an innovation, or toward an office it is not lawful to undertake, so that he seeks to flee from it." },
+      { title: "Give the second", body: "Or somebody being pushed into some novelty, or into a post he is not allowed to hold, who leaves to get away from it." },
       { title: "Note the word", body: "Afflicted with status and wealth. The vocabulary treats prosperity as a trial rather than as a good, which is the register of Books 26 and 27 and not of ordinary counsel." },
     ],
     closer: [

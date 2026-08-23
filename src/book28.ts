@@ -61,7 +61,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Return to function", body: "The work should remain intelligible through the good it serves even if recognition is reduced, delayed, or transferred to another person." },
     ],
     closer: [
-      { title: "Unavoidable visibility", body: "Ghazali recognizes that teaching, reform, and public responsibility may make a person known. The diagnostic question is whether usefulness explains the visibility or visibility explains the activity." },
+      { title: "Unavoidable visibility", body: "He accepts that teaching, putting things right, and carrying public responsibility will make somebody known. The question to ask is which way round it runs: are you visible because you are useful, or are you busy because it keeps you visible?" },
       { title: "The hidden contract", body: "Fame becomes a fragile wage. The person must keep receiving attention for the act to continue feeling worthwhile." },
     ],
     distinction: ["Renown can arrive by two routes", "Unintended renown", "A needed work becomes known while recognition remains incidental.", "Sought fame", "The work is selected, shaped, or prolonged so that the name will spread."],
@@ -102,7 +102,7 @@ export const book28Chapters: Chapter[] = [
     ],
     closer: [
       { title: "A distributed possession", body: "Status feels stable because many people carry it, yet that distribution also means its owner cannot fully control it." },
-      { title: "The cost of preservation", body: "The more identity depends on deference, the more criticism and equality feel like material loss." },
+      { title: "The cost of preservation", body: "The more of you is built out of people deferring, the more it hurts when somebody criticises you — or simply treats you as an equal. Both start to feel like something being taken." },
     ],
     distinction: ["Standing can serve or rule", "Instrumental standing", "Enough trust and authority to fulfill a real responsibility.", "Possessed standing", "The response of people is desired as power, pleasure, and proof of personal worth."],
     misreading: "Do not treat leadership, expertise, or earned trust as automatically blameworthy. The analysis concerns the love and use of standing.",
@@ -138,7 +138,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Status procures means", body: "Influence can draw service, opportunity, gifts, protection, and wealth without each benefit being purchased directly." },
       { title: "It appears less vulnerable", body: "A store of money can be taken at once, while a reputation seems distributed across many minds and therefore safer." },
       { title: "It reproduces socially", body: "A convinced admirer can carry the person's standing into new circles, multiplying it through praise." },
-      { title: "Its weakness is concealed", body: "The same social transmission can reverse through criticism, new information, rivalry, or simple forgetfulness." },
+      { title: "Its weakness is concealed", body: "The same word of mouth that built your standing can pull it down — through one criticism, something new coming out, somebody competing with you, or people simply forgetting." },
     ],
     closer: [
       { title: "Leverage explains intensity", body: "The love of status is not only love of compliments. It is love of the many powers that favorable belief can unlock." },
@@ -201,7 +201,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Displayed power", body: "The praise can feel like proof that the person saying it has registered your standing." },
     ],
     closer: [
-      { title: "One sentence, four rewards", body: "The same compliment may provide reassurance, affection, publicity, and dominance at once. Treatment improves when the exact reward is named." },
+      { title: "One sentence, four rewards", body: "One compliment can hand you all four at once — it settles your doubts, it feels like affection, it might travel, and it puts you above the person saying it. You get somewhere with this only once you name which of the four you were actually enjoying." },
       { title: "Why criticism feels larger than information", body: "Blame can threaten identity, relationship, future spread, and standing simultaneously, so the reaction may exceed the factual content." },
     ],
     distinction: ["Praise can inform or intoxicate", "Useful testimony", "A report supplies evidence that helps correct or continue an act.", "Reputational reward", "The report is consumed as proof, possession, spread, or superiority."],
@@ -241,8 +241,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Use the information", body: "Keep whatever evidence helps preserve a good act, and release the reputational intoxication attached to the report." },
     ],
     closer: [
-      { title: "False praise is not a gift", body: "Being pleased by a quality one lacks deepens distance from reality because social belief begins to replace formation." },
-      { title: "True praise is still incomplete", body: "Accuracy about an outward quality cannot settle intention, acceptance, endurance, or the final state of the person." },
+      { title: "False praise is not a gift", body: "Enjoying praise for something you do not actually have pushes you further from the truth about yourself, because what people believe about you starts standing in for the work of becoming it." },
+      { title: "True praise is still incomplete", body: "Somebody can be entirely right about a quality you visibly have and still know nothing about why you did it, whether it was accepted, whether you will keep it up, or how you will end." },
     ],
     distinction: ["A compliment contains two possible things", "Evidence", "Specific information can help preserve or improve a real good.", "Verdict", "Favorable speech is treated as proof of worth, sincerity, or secure outcome."],
     misreading: "Do not respond by performing self-contempt. The treatment is truthful proportion, not a new display of humility.",
@@ -255,7 +255,7 @@ export const book28Chapters: Chapter[] = [
     id: 11, shortTitle: "Treating fear of criticism", formalTitle: "The treatment of dislike of blame",
     overview: "Ghazali distinguishes criticism that is true and well intended, true and hostile, or false. Each requires a different response. The first offers correction, the second still exposes a real fault, and the third becomes a test of patience rather than proof.",
     moves: [
-      { title: "True and advising", body: "Receive the correction as help because both the information and the intention serve reform." },
+      { title: "True and advising", body: "Take the correction as a favour: they are right, and they meant well by telling you." },
       { title: "True and hostile", body: "Reject the malice without rejecting the fact. An enemy may still reveal what a friend avoided saying." },
       { title: "False accusation", body: "Do not make another person's error into an inward verdict. Respond according to justice, harm, and patience rather than wounded status alone." },
       { title: "Thank the disclosure", body: "A fault seen before death can still be treated; the exposure of what is real may therefore carry a benefit despite pain." },
@@ -317,7 +317,7 @@ export const book28Chapters: Chapter[] = [
     moves: [
       { title: "Body", body: "Physical appearance can be arranged to imply fasting, night worship, grief, austerity, or intense religious labor." },
       { title: "Attire and speech", body: "Clothing, vocabulary, tone, remembered reports, and public counsel can be shaped to signal a desired religious identity." },
-      { title: "Action", body: "Prayer, recitation, charity, service, and composure can be altered in pace, completion, or visibility for observers." },
+      { title: "Action", body: "Praying, reciting, giving, helping, keeping your composure — any of them can be quietly adjusted when somebody is watching: done slower, done more completely, or done where it will be seen." },
       { title: "Associates", body: "Visitors, teachers, students, companions, and prestigious relationships can be displayed as borrowed evidence of rank." },
     ],
     closer: [
@@ -398,7 +398,7 @@ export const book28Chapters: Chapter[] = [
       { title: "Uproot the roots", body: "Knowledge exposes the cost of human judgment, while concealed practice weakens dependence on its reward." },
       { title: "Notice the sequence", body: "An audience is noticed, desire for its response appears, pleasure follows, and resolve may then redirect the act." },
       { title: "Interrupt before resolve", body: "The person answers the suggestion with dislike and refusal rather than treating its mere arrival as defeat." },
-      { title: "Remain watchful", body: "Reliance on God and wariness of recurring temptation are compatible; vigilance is part of using the means of protection." },
+      { title: "Remain watchful", body: "Trusting God and staying wary of a temptation that keeps coming back are not in tension. Watching for it is one of the means of protection, not a failure to rely." },
     ],
     closer: [
       { title: "Roots and moments", body: "Long-term attachment makes the temptation attractive, while moment-to-moment vigilance determines whether the attraction governs a particular act." },
@@ -436,8 +436,8 @@ export const book28Chapters: Chapter[] = [
     overview: "Concealing a fault is not automatically ostentation. Valid motives include respecting God's concealment, avoiding the spread of wrongdoing, shame, and preventing a bad example. The boundary is crossed when concealment becomes active manufacture of a false pious identity.",
     moves: [
       { title: "Honor concealment", body: "A person need not make private sin into public identity, especially where disclosure would spread harm without repairing a right." },
-      { title: "Protect others", body: "Concealment may prevent normalization, imitation, scandal, or needless injury to people not involved." },
-      { title: "Repair what requires repair", body: "Concealment does not cancel repentance, restitution, accountability, or disclosure to those whose rights and safety require it." },
+      { title: "Protect others", body: "Keeping it quiet can stop the thing becoming ordinary, stop others copying it, stop a scandal, and spare people who had nothing to do with it." },
+      { title: "Repair what requires repair", body: "Keeping a fault private does not cancel anything else you owe: you still repent, still pay back what you took, still answer for it, and still tell anyone whose rights or safety depend on knowing." },
       { title: "Do not fabricate virtue", body: "Remaining silent about a fault differs from arranging signs that positively persuade people of a piety one does not possess." },
     ],
     closer: [

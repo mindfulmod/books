@@ -36,7 +36,7 @@ const book22Base: Chapter[] = [
         {
           title: "Name the danger",
           body:
-            "Bad character is framed as a sickness of the heart. That medical language makes later questions of signs, causes, dosage, and treatment part of one continuous argument.",
+            "Bad character is presented as an illness of the heart. Once it is put that way, everything that follows — the symptoms, the causes, the dose, the treatment — belongs to one continuous argument.",
         },
       { title: "Set up what must follow", body: "Quoting sources can establish that character matters; it cannot tell you what character is. So he closes the case for its importance and turns straight to defining it, because everything that follows — whether it can change, how it is treated, how you read its signs — depends on knowing what is being changed." },
       ],
@@ -129,9 +129,9 @@ const book22Base: Chapter[] = [
     relatedNodes: ["character", "anger", "appetite", "habit", "justice"],
     deep: {
       thesis:
-        "The powers of the self remain, but their direction, proportion, and habitual obedience can be changed through discipline.",
+        "The drives stay where they are. What discipline changes is where they point, how strong they get, and whether they do as they are told.",
       context:
-        "This section answers a fatalistic objection. Ghazali uses the evident effects of training and differences in human receptivity to argue for real moral formation without promising effortless transformation.",
+        "This section answers the objection that people simply are how they are. He points at what training visibly does, and at how differently people take to it, to argue that character really can be formed — without pretending it is easy.",
       moves: [
         {
           title: "Reject immutability",
@@ -160,7 +160,7 @@ const book22Base: Chapter[] = [
           "Training preserves the power while changing what it follows, when it acts, and how strongly it responds.",
       },
       misreading:
-        "Possibility is not a promise of equal speed. Ghazali's argument leaves room for differences in temperament, habit, knowledge, and the depth of attachment to a vice.",
+        "That it is possible does not mean it happens at the same rate for everyone. His argument leaves room for differences in temperament, in habit, in what you know, and in how deep a fault has its hooks in.",
       observation:
         "Find one reaction that now comes more easily than it did a year ago. Identify the repeated conditions that trained it, whether for better or worse.",
       sourceAnchor: "Book 22, section 3, character's receptivity to change through discipline.",
@@ -274,7 +274,7 @@ const book22Base: Chapter[] = [
           "The destination is the fitting mean under wise judgment, not permanent occupation of the opposite excess.",
       },
       misreading:
-        "The section includes demanding exercises from Ghazali's ascetic setting. They describe a historical program under guidance, not universal prescriptions to imitate without judgment, capacity, or context.",
+        "The section includes hard exercises from the ascetic world Ghazali was writing in. They describe a programme people followed under supervision — not instructions to copy regardless of your judgement, your capacity, or your circumstances.",
       observation:
         "When a correction fails, ask whether the diagnosis was wrong, the dose was too large, or the exercise trained a new excess instead of restoring balance.",
       sourceAnchor: "Book 22, section 5, the detailed path for refining character.",
@@ -470,7 +470,7 @@ const book22Base: Chapter[] = [
         {
           title: "Look for a constellation",
           body:
-            "Good character is not reduced to cheerfulness, softness, or one admired habit. The section gathers humility, truthfulness, patience, restraint, generosity, and other mutually supporting qualities.",
+            "Good character is not just being cheerful, or being soft, or having one habit people admire. The section gathers humility, truthfulness, patience, restraint and generosity together, because they hold each other up.",
         },
         {
           title: "Test beyond favorable conditions",
@@ -551,7 +551,7 @@ const book22Base: Chapter[] = [
           "Particular corrective practices reflect Ghazali's medieval context and require ethical, legal, developmental, and scholarly judgment before any modern application.",
       },
       misreading:
-        "Do not convert a descriptive presentation of medieval pedagogy into blanket parenting instructions. Preserve the chapter's argument about formation while reading its concrete methods in context.",
+        "This describes how children were taught in Ghazali's time; do not take it as parenting advice. Keep the argument about when character forms, and read the specific methods as belonging to their period.",
       observation:
         "Study one repeated environment rather than one isolated lesson. What does it reward, what does it normalize, and what kind of response does it make easy?",
       sourceAnchor: "Book 22, section 10, early education and the formation of children's character.",

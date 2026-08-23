@@ -69,7 +69,7 @@ const book23Base: Chapter[] = [
         {
           title: "Keep need distinct from rule",
           body:
-            "The later sections make clear that food remains necessary and that practice must differ by person and condition. The opening severity is aimed at appetite's domination, not at denying creaturely dependence on nourishment.",
+            "Later sections make it clear that food is still necessary and that what suits one person will not suit another. The harshness at the start is aimed at appetite running the show, not at pretending people do not need to eat.",
         },
       ],
       distinction: {
@@ -132,7 +132,7 @@ const book23Base: Chapter[] = [
     },
     deep: {
       thesis:
-        "Hunger is useful only insofar as it changes attention, humility, impulse, time, or generosity in a spiritually fruitful direction.",
+        "Going hungry is only worth anything to the extent that it actually shifts something — what you can attend to, how humble you are, what you reach for, how your time goes, what you give away.",
       context:
         "Ghazali explicitly refuses to make bitterness the measure of medicine. He organizes this section as a list of ten benefits, but many of them work together: reduced satiety affects sleep and impulse, which affects time and attention, which can affect worship and giving.",
       moves: [
@@ -244,7 +244,7 @@ const book23Base: Chapter[] = [
         {
           title: "Simplify the desired type",
           body:
-            "The attraction of refined or especially desired foods can be trained separately from raw quantity. This allows diagnosis to ask whether the ruling attachment is to fullness, frequency, or variety.",
+            "The pull of good food is a different thing from how much you eat, and can be worked on separately — which lets you ask a sharper question: is it being full you are attached to, eating often, or eating well?",
         },
         {
           title: "Stop worshipping the regimen",
@@ -414,7 +414,7 @@ const book23Base: Chapter[] = [
         {
           title: "Return to truthfulness",
           body:
-            "The safer movement is toward congruence: neither advertising an attainment nor constructing a false public austerity. The inward purpose of restraint must remain more important than the social meaning attached to it.",
+            "The safer direction is making the two match: neither advertising what you have managed nor putting on a show of going without. What the restraint is for has to stay more important to you than what it says about you.",
         },
       ],
       distinction: {
@@ -494,7 +494,7 @@ const book23Base: Chapter[] = [
         {
           title: "Match support to condition",
           body:
-            "Within his account, fasting and marriage can each serve as supports in different conditions. Neither is treated as a magical technique detached from intention, capacity, and obligations.",
+            "On his account fasting and marriage can each prop a person up, in different situations. Neither is a trick that works on its own, apart from what you meant, what you can manage, and what you owe.",
         },
       ],
       distinction: {
@@ -589,7 +589,7 @@ const book23Base: Chapter[] = [
         {
           title: "Restore the other person's rights",
           body:
-            "Marriage is not completed by solving the aspirant's difficulty. Good intention, conduct, maintenance of obligations, and the spouse's rights remain part of the moral evaluation.",
+            "Marriage is not finished business once it has solved your problem. What you meant by it, how you behave, whether you keep up what you owe, and what your wife is entitled to are all still part of the reckoning.",
         },
       ],
       distinction: {

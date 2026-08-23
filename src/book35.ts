@@ -180,7 +180,7 @@ export const book35Chapters: Chapter[] = [
     id: 9, shortTitle: "With dependents", formalTitle: "The trust of one who has others to provide for",
     overview: "Ghazali takes the case that most sharply tests any doctrine of reliance, since the risk of abandoning means falls on people who did not choose it.",
     moves: [
-      { title: "Separate the case", body: "One who provides for others is not in the position of one who risks only himself, and the rules differ accordingly." },
+      { title: "Separate the case", body: "Somebody with people depending on him is not in the position of somebody risking only himself, and the rules differ accordingly." },
       { title: "Give the reason", body: "What may be a permissible risk for a person alone becomes an imposition on others when others depend on him, and their claim is not dissolved by his station." },
       { title: "Draw the practical rule", body: "The one with dependents is held to means that the solitary might set aside, and Ghazali treats this as a requirement rather than a concession." },
       { title: "Keep the state available", body: "The requirement concerns the outward act, and the inward reliance remains fully available while it is met, which is the point the previous section established." },
