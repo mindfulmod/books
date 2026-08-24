@@ -622,10 +622,16 @@ export const book25Process: ProcessStage[] = [
 ];
 
 export const book25Sources: SourceLink[] = [
-  { label: "Primary Arabic text", note: "Public Arabic text used to verify the complete announced sequence, definitions, three degrees of anger, causes, treatments, eight fruits of rancour, four degrees and seven causes of envy, peer comparison, and final three states.", url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B0%D9%85_%D8%A7%D9%84%D8%BA%D8%B6%D8%A8_%D9%88%D8%A7%D9%84%D8%AD%D9%82%D8%AF_%D9%88%D8%A7%D9%84%D8%AD%D8%B3%D8%AF" },
-  { label: "Ihya bibliography and Book 25 status", note: "Ghazali.org's book-by-book bibliography identifies Book 25 as The Condemnation of Rancor and Envy and notes that a complete standalone English translation remains in progress.", url: "https://www.ghazali.org/ihya/" },
-  { label: "Older English rendering", note: "The public Volume 3 rendering provides an accessible but explicitly abridged English comparison for the anger, hatred, and envy material. It is not treated as a complete critical translation.", url: "https://ghazali.org/ihya/english/ihya-vol3.htm" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 25 was read and used to establish anger as protective capacity with a deficiency and an excess, the treatments before and after it is roused, the eight fruits of rancour, and the definition and degrees of envy.", url: "https://shamela.ws/book/9472/910" },
+  { label: "The nature of anger", note: "The passage placing anger as protective capacity, naming its deficiency as a real fault, and tracing excess through appearance, speech, action, and the heart.", url: "https://shamela.ws/book/9472/912" },
+  { label: "Whether the root can be removed", note: "The passage refusing eradication, preserving the necessary protective force, and relocating the work to the attachments and the action channel.", url: "https://shamela.ws/book/9472/915" },
+  { label: "Treatment after it is roused", note: "The passage giving the reflections in descending order of conviction, the self-exemption question, and the physical interruptions.", url: "https://shamela.ws/book/9472/919" },
+  { label: "The permitted measure of reply", note: "The passage refusing moral symmetry, limiting a true claim, and holding authority back when the provocation is personal.", url: "https://shamela.ws/book/9472/925" },
+  { label: "The reality and degrees of envy", note: "The passage defining envy as disliking a blessing in its holder, preserving emulation, and grading the four degrees.", url: "https://shamela.ws/book/9472/935" },
+  { label: "The causes of envy", note: "The passage naming the seven causes, ending with a general meanness toward divine generosity that has no rivalry in it.", url: "https://shamela.ws/book/9472/938" },
+  { label: "The required degree", note: "The passage conceding the involuntary first movement, requiring its inward refusal, and separating the three states.", url: "https://shamela.ws/book/9472/945" },
   { label: "Historical English study text", note: "Project Gutenberg's public edition of selected moral and religious teachings includes an older English chapter on anger, enmity, and envy for historical comparison.", url: "https://www.gutenberg.org/files/73140/73140-h/73140-h.htm" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 export const book25: SystemBook = {

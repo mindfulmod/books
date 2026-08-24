@@ -1119,21 +1119,14 @@ export const book22Journeys: Journey[] = [
 ];
 
 export const book22Sources: SourceLink[] = [
-  {
-    label: "Primary Arabic text",
-    note: "Public text used to verify the eleven-section sequence, definitions, analogies, and conceptual claims.",
-    url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9_%D8%A7%D9%84%D9%86%D9%81%D8%B3_%D9%88%D8%AA%D9%87%D8%B0%D9%8A%D8%A8_%D8%A7%D9%84%D8%A3%D8%AE%D9%84%D8%A7%D9%82_%D9%88%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9_%D8%A3%D9%85%D8%B1%D8%A7%D8%B6_%D8%A7%D9%84%D9%82%D9%84%D8%A8",
-  },
-  {
-    label: "Forty-book structure",
-    note: "Cross-check for the book's place after The Wonders of the Heart in the Quarter of Perils.",
-    url: "https://www.ghazali.org/site/ihya.htm",
-  },
-  {
-    label: "Published English edition",
-    note: "T. J. Winter's translation of Books 22 and 23. Used for edition and title cross-checking; this app uses original English synthesis.",
-    url: "https://its.org.uk/catalogue/al-ghazali-on-disciplining-the-soul-and-on-breaking-the-two-desires-paperback/",
-  },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 22 was read and used to establish the four capacities and their mean, the argument that character is receptive to discipline, the treatment by the fitting contrary with its dose, and the four routes to knowing one's own faults.", url: "https://shamela.ws/book/9472/794" },
+  { label: "The reality of good and bad character", note: "The passage defining character as a settled disposition, naming the four capacities, and placing vice on both sides of each.", url: "https://shamela.ws/book/9472/798" },
+  { label: "Signs of disease and of health", note: "The passage assessing the heart by whether it performs its proper work, warning that present ease is no test, and requiring the treatment to stop at restoration.", url: "https://shamela.ws/book/9472/808" },
+  { label: "That treatment means opposing desire", note: "The passage gathering the testimony that the road runs through striving against caprice, and locating the fault at the point of rule rather than in the desire itself.", url: "https://shamela.ws/book/9472/811" },
+  { label: "The signs of good character", note: "The passage listing the signs as a constellation and requiring that they be read under provocation rather than in favourable conditions.", url: "https://shamela.ws/book/9472/815" },
+  { label: "Aspiration and the gradual path", note: "The passage setting the conditions of aspiration, the barriers that consume the attention training needs, and the progression by stages.", url: "https://shamela.ws/book/9472/820" },
+  { label: "Published English edition", note: "T. J. Winter's translation of Books 22 and 23. Used for edition and title cross-checking; this app uses original English synthesis.", url: "https://its.org.uk/catalogue/al-ghazali-on-disciplining-the-soul-and-on-breaking-the-two-desires-paperback/" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({

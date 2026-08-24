@@ -1,4 +1,4 @@
-import { conceptNodes, contentSources } from "./data";
+import { conceptNodes } from "./data";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { MirrorSubject, SystemBook, TaxonomyGroup } from "./systemTypes";
 import { book21Journeys } from "./book21journeys";
@@ -460,6 +460,19 @@ export const book21Movements: TaxonomyGroup[] = [
 
 export const book21ConceptNodes: ConceptNode[] = [...conceptNodes, ...book21ExtraNodes];
 
+const book21Sources: SourceLink[] = [
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 21 was read and used to establish the four senses of heart, spirit, soul and intellect, the armies that serve the heart, the mirror and its five obstructions, the chain from passing thought to act, and the three conditions of the heart.", url: "https://shamela.ws/book/9472/748" },
+  { label: "The armies of the heart", note: "The passage deriving the inward and outward forces from what the heart's journey requires, and reducing them to will, power, and knowledge.", url: "https://shamela.ws/book/9472/751" },
+  { label: "Three analogies", note: "The passage giving the realm with its ministers, the frontier post, and the rider with horse and hound, in which appetite and anger are equipment rather than enemies.", url: "https://shamela.ws/book/9472/752" },
+  { label: "The mirror and its obstructions", note: "The passage comparing the heart to a mirror and naming the five reasons a heart lacks what it lacks, including the clear mirror turned the wrong way.", url: "https://shamela.ws/book/9472/759" },
+  { label: "The reservoir and the two walls", note: "The passage giving the two tangible examples: channels dug from outside against springs opened from within, and the painters set against the polishers.", url: "https://shamela.ws/book/9472/766" },
+  { label: "How suggestions gain influence", note: "The passage on the promptings of the heart, the argument from smoke and light that unlike effects indicate unlike causes, and the naming of angel and devil.", url: "https://shamela.ws/book/9472/772" },
+  { label: "The chain and what is held against a person", note: "The passage running from passing thought to desire, resolve, intention and act, and settling which links a person answers for.", url: "https://shamela.ws/book/9472/787" },
+  { label: "The three conditions of the heart", note: "The passage on the heart's rapid change and its three broad states, which the book's closing section presents.", url: "https://shamela.ws/book/9472/791" },
+  { label: "Published Book 21 edition", note: "Walter James Skellie translation, edited by T. J. Winter. Used for title and chapter cross-checking, not copied as page text.", url: "https://fonsvitae.com/product/al-ghazali-the-marvels-of-the-heart-science-of-the-spirit-book-xxi-of-the-revival-of-the-religious-sciences/" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
+];
+
 export const book21: SystemBook = {
   id: 21,
   title: "The Wonders of the Heart",
@@ -468,7 +481,7 @@ export const book21: SystemBook = {
   chapters: book21Chapters,
   conceptNodes: book21ConceptNodes,
   journeys: book21Journeys,
-  sources: contentSources,
+  sources: book21Sources,
   taxonomy: {
     title: "The book's three movements",
     note: "Ghazali announces no numbered contents for this book, so these follow the turn of his own argument: the heart and its forces, the heart and knowing, and the traffic of thoughts.",

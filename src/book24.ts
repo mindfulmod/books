@@ -969,10 +969,16 @@ export const book24Instrument: Instrument = {
 };
 
 export const book24Sources: SourceLink[] = [
-  { label: "Primary Arabic text", note: "Public Arabic text used to verify the opening discourse, full sequence of twenty banes, definitions, qualifications, motives, remedies, and closing theological sections.", url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%A2%D9%81%D8%A7%D8%AA_%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 24 was read and used to establish the twenty banes in order, the definition of backbiting and the duty it places on the listener, the motives and the licensed exceptions, and the treatment of tale-bearing.", url: "https://shamela.ws/book/9472/853" },
+  { label: "The danger of the tongue", note: "The opening passage on the breadth of speech's moral field, the ease that lets habit outrun judgement, and silence as a safeguard.", url: "https://shamela.ws/book/9472/854" },
+  { label: "Backbiting is not confined to the tongue", note: "The passage extending backbiting to writing, gesture, imitation, and indirect identification.", url: "https://shamela.ws/book/9472/890" },
+  { label: "The motives behind backbiting", note: "The passage naming the payoffs — anger, envy, conformity, humour, self-display — and the pious forms that conceal them.", url: "https://shamela.ws/book/9472/892" },
+  { label: "The licensed exceptions", note: "The passage tying each permitted disclosure to a recognised good that cannot be reached without identifying the person.", url: "https://shamela.ws/book/9472/898" },
+  { label: "Tale-bearing and how to meet it", note: "The passage setting the receiver's duties: not to believe, not to reward the carrier, not to convert the report into suspicion, and not to repeat it.", url: "https://shamela.ws/book/9472/902" },
+  { label: "What is owed by the one praised", note: "The passage turning the treatment of praise toward its recipient and the pride, satisfaction, and sense of completion it can produce.", url: "https://shamela.ws/book/9472/907" },
   { label: "Published English edition", note: "Fons Vitae's 2024 edition, translated by Michael Abdurrahman Fitzgerald and Fouad Aresmouk, used to cross-check the established English title and twenty-chapter organization.", url: "https://fonsvitae.com/product/al-ghazali-the-banes-of-the-tongue-book-24-of-the-revival-of-the-religious-sciences/" },
   { label: "Official edition introduction", note: "Publisher-hosted introduction and bibliographic context for the current English edition.", url: "https://fonsvitae.com/wp-content/uploads/2024/02/March-10th-2024-final-0000-Intro-KLH-1.pdf" },
-  { label: "Forty-book structure", note: "Cross-check for Book 24's place in the Quarter of Perils after Breaking the Two Desires.", url: "https://www.ghazali.org/site/ihya.htm" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 export const book24: SystemBook = {

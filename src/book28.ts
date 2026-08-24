@@ -722,11 +722,17 @@ export const book28AudienceChamber: AudienceChamberItem[] = [
 ];
 
 export const book28Sources: SourceLink[] = [
-  { label: "Primary Arabic, Part One", note: "Public Arabic text used to verify the twelve announced discussions on fame, obscurity, status, perfection, praise, criticism, and treatment.", url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B0%D9%85_%D8%A7%D9%84%D8%AC%D8%A7%D9%87_%D9%88%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%A1/%D8%A7%D9%84%D8%B4%D8%B7%D8%B1_%D8%A7%D9%84%D8%A3%D9%88%D9%84" },
-  { label: "Primary Arabic, Part Two", note: "Public Arabic text used to verify the ten-part movement on ostentation, its forms and degrees, hidden traces, treatment, disclosure, concealment, continuation, and vigilance.", url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B0%D9%85_%D8%A7%D9%84%D8%AC%D8%A7%D9%87_%D9%88%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%A1/%D8%A7%D9%84%D8%B4%D8%B7%D8%B1_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 28 was read and used to establish the reality of status, true and imaginary perfection, the causes of loving praise, the three pillars of ostentation and its degrees, and what does and does not nullify an act.", url: "https://shamela.ws/book/9472/1020" },
+  { label: "The reality of status", note: "The passage locating status in other people's beliefs and tracing how an attributed quality converts into deference and access.", url: "https://shamela.ws/book/9472/1024" },
+  { label: "True and imaginary perfection", note: "The passage granting the desire for completion and testing candidates by whether they survive the loss of observers, titles, wealth, and strength.", url: "https://shamela.ws/book/9472/1028" },
+  { label: "Why praise is loved", note: "The passage naming the causes of loving praise and disliking blame, and sorting the four states of people in relation to them.", url: "https://shamela.ws/book/9472/1032" },
+  { label: "The reality of ostentation", note: "The passage analysing display into the act, the audience, and the return sought, and listing the outward forms through which it operates.", url: "https://shamela.ws/book/9472/1043" },
+  { label: "The degrees of ostentation", note: "The passage giving the graded cases, including the second grade in which the temptation arrives dressed as concern for those who imitate you.", url: "https://shamela.ws/book/9472/1047" },
+  { label: "What nullifies an act", note: "The passage separating a motive present before the act, one entering during it, and pleasure arising after it is complete.", url: "https://shamela.ws/book/9472/1053" },
+  { label: "The licence to conceal sins", note: "The passage permitting a private sin to stay private, and distinguishing silence about a fault from arranging signs of a piety one lacks.", url: "https://shamela.ws/book/9472/1065" },
   { label: "Accessible English abridgment", note: "Shaykh Ahmad al-Shami's explicitly abridged English rendering was used as a cross-check for terminology and the main argumentative sequence.", url: "https://masud.co.uk/the-condemnation-of-status-and-fame/" },
   { label: "Fons Vitae edition record", note: "The publisher lists Book 28, Censure of Status and Ostentation, among forthcoming volumes. This app does not claim access to a published complete Fons Vitae English edition.", url: "https://fonsvitae.com/product/forthcoming-ghazali-series-books/" },
-  { label: "Ihya bibliography", note: "Ghazali.org's book-by-book bibliography identifies Book 28 and available translation records.", url: "https://www.ghazali.org/site/ihya.htm" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 export const book28: SystemBook = {

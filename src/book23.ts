@@ -1121,26 +1121,16 @@ export const book23Journeys: Journey[] = [
 ];
 
 export const book23Sources: SourceLink[] = [
-  {
-    label: "Primary Arabic text",
-    note: "Public text used to verify the prologue, seven-section sequence, four duties, middle, ostentation analysis, and marriage counsel.",
-    url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D9%83%D8%B3%D8%B1_%D8%A7%D9%84%D8%B4%D9%87%D9%88%D8%AA%D9%8A%D9%86",
-  },
-  {
-    label: "Published English edition",
-    note: "T. J. Winter's translation of Books 22 and 23. Used to cross-check the established English title and section sequence.",
-    url: "https://its.org.uk/catalogue/al-ghazali-on-disciplining-the-soul-and-on-breaking-the-two-desires-paperback/",
-  },
-  {
-    label: "Official edition sample",
-    note: "Publisher sample containing the English contents and bibliographic context for the combined Books 22 and 23 volume.",
-    url: "https://its.org.uk/wp-content/uploads/2012/09/Al-Ghazali-on-Disciplining-the-Soul-Breaking-the-Two-Desires.pdf",
-  },
-  {
-    label: "Forty-book structure",
-    note: "Cross-check for Book 23's place in the Quarter of Perils after Disciplining the Soul and Refining Character.",
-    url: "https://www.ghazali.org/site/ihya.htm",
-  },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 23 was read and used to establish the benefits of hunger, the three variables of the discipline, the balanced destination rather than maximum weakness, and the treatment of ostentation in abstaining.", url: "https://shamela.ws/book/9472/825" },
+  { label: "The merit of hunger", note: "The opening passage gathering the testimony on hunger and satiety, before the benefits and the method are analysed.", url: "https://shamela.ws/book/9472/826" },
+  { label: "The benefits of hunger", note: "The passage giving the medicine analogy, the effects on attention and pride, and the argument that satiety energises a cluster of connected appetites.", url: "https://shamela.ws/book/9472/830" },
+  { label: "The method of the discipline", note: "The passage requiring lawful provision first, then separating quantity, interval, and quality as three distinct interventions.", url: "https://shamela.ws/book/9472/835" },
+  { label: "The variance of the rule", note: "The passage naming the balanced destination, explaining the severity of the praise as a counterweight, and refusing any fixed quantity.", url: "https://shamela.ws/book/9472/842" },
+  { label: "Ostentation in abstaining", note: "The passage on the two cases: concealed appetite dressed as austerity, and honest abstinence enjoyed for the standing it confers.", url: "https://shamela.ws/book/9472/844" },
+  { label: "What the aspirant must observe", note: "The passage on the aspirant and marriage, in which the judgement changes with his condition rather than with the value of marriage.", url: "https://shamela.ws/book/9472/847" },
+  { label: "Published English edition", note: "T. J. Winter's translation of Books 22 and 23. Used to cross-check the established English title and section sequence.", url: "https://its.org.uk/catalogue/al-ghazali-on-disciplining-the-soul-and-on-breaking-the-two-desires-paperback/" },
+  { label: "Official edition sample", note: "Publisher sample containing the English contents and bibliographic context for the combined Books 22 and 23 volume.", url: "https://its.org.uk/wp-content/uploads/2012/09/Al-Ghazali-on-Disciplining-the-Soul-Breaking-the-Two-Desires.pdf" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 type Extra23 = { closer: Array<{ title: string; body: string }>; audit: string[] };

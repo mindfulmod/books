@@ -684,10 +684,14 @@ export const book26RelationLens: RelationLensItem[] = [
 ];
 
 export const book26Sources: SourceLink[] = [
-  { label: "Primary Arabic text", note: "Public Arabic text used to verify the five source chapters, fourteen examples, threefold classification, inner and outer relations, root crafts, civic sequence, markets, mistaken ends, and closing middle.", url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B0%D9%85_%D8%A7%D9%84%D8%AF%D9%86%D9%8A%D8%A7" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 26 was read and used to establish the images of impermanence, the threefold classification of what remains and what does not, the three dimensions of the world, the derivation of the crafts, and the balanced course that closes the book.", url: "https://shamela.ws/book/9472/947" },
+  { label: "The censure of this world", note: "The opening passage refusing an undefined warning and asking what the world is and what wisdom belongs to its creation.", url: "https://shamela.ws/book/9472/948" },
+  { label: "The world described by examples", note: "The passage giving the images: the shadow, the dream, the guesthouse, and the provisions that spoil at the first stop.", url: "https://shamela.ws/book/9472/960" },
+  { label: "The world in relation to the servant", note: "The passage refusing to condemn all present pleasure and sorting what remains, what gives an immediate share only, and what is a necessary means.", url: "https://shamela.ws/book/9472/965" },
+  { label: "The world in itself and its occupations", note: "The passage analysing the world into objects, share, and occupation, deriving the crafts from bodily need, and following the extension into markets and money.", url: "https://shamela.ws/book/9472/970" },
   { label: "Complete English edition", note: "Matthew B. Ingalls's complete translation, The Censure of This World, published by Fons Vitae in 2023 as Book 26 of the Revival.", url: "https://fonsvitae.com/product/al-ghazali-the-censure-of-this-world-book-26-of-the-revival-of-the-religious-sciences/" },
   { label: "Edition record and contents", note: "Google Books records the 200-page Fons Vitae edition, ISBN 9781941610640, and summarizes the fourteen metaphors, moral definition, and sociological account of vocations.", url: "https://books.google.com/books/about/The_Censure_of_This_World.html?id=X-qbzwEACAAJ" },
-  { label: "Ihya bibliography", note: "Ghazali.org identifies Book 26 and the complete Matthew Ingalls English translation within its book-by-book bibliography.", url: "https://www.ghazali.org/rrs-ovr/" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 export const book26: SystemBook = {

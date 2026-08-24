@@ -768,11 +768,16 @@ export const book27WealthAudit: WealthAuditItem[] = [
 ];
 
 export const book27Sources: SourceLink[] = [
-  { label: "Primary Arabic text", note: "Public Arabic text used to verify the introduction, fourteen discussions, benefits and harms, five-part treatment of greed, generosity and miserliness, altruism, the exact boundary, treatment, five duties, and closing comparison.", url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B0%D9%85_%D8%A7%D9%84%D8%A8%D8%AE%D9%84_%D9%88%D8%B0%D9%85_%D8%AD%D8%A8_%D8%A7%D9%84%D9%85%D8%A7%D9%84" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 27 was read and used to establish the benefits and harms of wealth, the treatment of greed by contentment, the definition of generosity and miserliness, and the five gates of a person's duty in his property.", url: "https://shamela.ws/book/9472/977" },
+  { label: "The harms and benefits of wealth", note: "The passage sorting what wealth enables from what it activates, including the way capacity awakens desires that lack had kept dormant.", url: "https://shamela.ws/book/9472/981" },
+  { label: "Greed, covetousness, and contentment", note: "The passage defining covetousness as hope fastened on a person, and naming the social cost of needing another's favour.", url: "https://shamela.ws/book/9472/983" },
+  { label: "The treatment of greed", note: "The passage prescribing deliberate economy, the shortening of anxious projection, and the redirection of comparison downward.", url: "https://shamela.ws/book/9472/987" },
+  { label: "Generosity and miserliness defined", note: "The passage refusing retention as the test and locating miserliness in what the retention is preferred over.", url: "https://shamela.ws/book/9472/1005" },
+  { label: "The five duties in one's property", note: "The passage gathering the complete duties: purpose, source, amount, outlet, and intention.", url: "https://shamela.ws/book/9472/1009" },
+  { label: "Wealth, poverty, and false comparison", note: "The passage weighing the two conditions and warning against the comparison that borrows an exemplar's wealth without his restraint.", url: "https://shamela.ws/book/9472/1010" },
   { label: "Complete English edition", note: "Nancy Roberts's complete translation, The Censure of Wealth and Miserliness, published by Fons Vitae as Book 27 of the Revival.", url: "https://fonsvitae.com/product/al-ghazali-the-censure-of-wealth-and-miserliness/" },
   { label: "Edition record", note: "Independent Publishers Group records the 190-page Fons Vitae edition, publication in January 2025, and ISBN 9781941610725.", url: "https://www.ipgbook.com/the-censure-of-wealth-and-miserliness-products-9781941610725.php" },
-  { label: "Ihya bibliography", note: "Ghazali.org identifies Book 27 and Nancy Roberts's complete English translation in its book-by-book bibliography.", url: "https://www.ghazali.org/rrs-ovr/" },
-  { label: "Accessible English abridgment", note: "Fazl-ul-Karim's older abridged English rendering was consulted only as a secondary cross-check and explicitly states that it is not a literal complete translation.", url: "https://www.ghazali.org/ihya/english/ihya-vol3.htm" },
+  { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
 
 export const book27: SystemBook = {
