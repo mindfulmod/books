@@ -39,6 +39,8 @@ const book22Base: Chapter[] = [
             "Bad character is presented as an illness of the heart. Once it is put that way, everything that follows — the symptoms, the causes, the dose, the treatment — belongs to one continuous argument.",
         },
       { title: "Set up what must follow", body: "Quoting sources can establish that character matters; it cannot tell you what character is. So he closes the case for its importance and turns straight to defining it, because everything that follows — whether it can change, how it is treated, how you read its signs — depends on knowing what is being changed." },
+      { title: "Note where character is being placed", body: "The point of gathering all this testimony is positional rather than decorative. Character usually sits at the edge of religion — the polish on somebody who has the important things right, admirable but not load-bearing. The reports place it near the middle: a man is asked what religion is and told it is good character; the heaviest thing on the scales is named as good character. Which means a person cannot be doing well at religion and badly at this." },
+      { title: "See what calling it an illness commits him to", body: "And the way bad character is described settles the shape of the next ten sections. It is called a disease of the heart, and once that word is used the rest follows without further argument: a disease has symptoms, so there will be signs to read; it has causes, so there will be a diagnosis; it has a remedy, so there will be a treatment, and the treatment will have a dose. Every section in the book is one of those, and the medical frame is what holds them together." },
       ],
       distinction: {
         title: "The opening claim is larger than good manners",
@@ -96,6 +98,21 @@ const book22Base: Chapter[] = [
           body:
             "A power can miss the fitting mean through excess or deficiency. Moral repair therefore cannot be reduced to simply having more force or less desire.",
         },
+        {
+          title: "Note why a single act proves nothing",
+          body:
+            "The definition starts by refusing to read character off an action, and the reason is practical rather than technical. A man can do a generous thing once, under pressure, having thought hard about it — and nothing follows about what he is. What the word names is the settled place an act comes from, so that it arrives without the calculation being run again. Which is why the whole book is about changing a source rather than about changing behaviour.",
+        },
+        {
+          title: "Follow the four capacities",
+          body:
+            "Four powers, and the fourth is not like the other three. Knowledge discerns, anger repels, appetite seeks — three functions, each with a job. Justice does not have a job of its own; it is the ordering of the other three so that each works in the right measure and the right place. Which means it cannot be strengthened directly. It is a relation among the others, and it is what fails first when any of them grows out of proportion.",
+        },
+        {
+          title: "See why vice runs in both directions",
+          body:
+            "And placing vice on both sides of each power is what stops the book from becoming a manual for suppression. A power misses the mark by too much or by too little — so cowardice and recklessness are both failures of anger, and gluttony and a dead appetite are both failures of desire. A person who reads his own problem as having too much of something, and applies more force, may be moving away from the mean rather than toward it.",
+        },
       ],
       distinction: {
         title: "Ease is part of the definition, but not a shortcut",
@@ -149,6 +166,9 @@ const book22Base: Chapter[] = [
             "People begin from different temperaments and histories. A tendency strengthened by repeated action and defended by belief is harder to redirect than one that has not yet become entrenched.",
         },
       { title: "Keep the claim modest", body: "The argument establishes that character is receptive to discipline, not that any disposition can be remade at will or at speed. Ghazali's own conclusion is bounded: the roots remain, the measure changes, and the rate differs by temperament, habit, and conviction." },
+      { title: "Take the argument against fixity", body: "The argument that character can change is put practically rather than metaphysically. If it could not, then advice, teaching and self-discipline would all be pointless activities — and everybody, including the people who say character is fixed, behaves as though they were not. We train children, correct servants, and expect improvement. The practice is the evidence, and a theory that makes the practice absurd is the thing that has to give." },
+      { title: "Note what is not being claimed", body: "And the claim is fenced carefully at both ends, which is what keeps it honest. The roots stay — anger and appetite are not removed and are not meant to be, because a person who could not defend himself or want anything would be worse off, not better. What changes is the measure. And the rate differs by temperament, by how long the habit has run, and by whether the person has a belief propping it up — which is why the same treatment works quickly on one man and slowly on another." },
+      { title: "See why belief makes a habit harder", body: "The hardest case named is the tendency that has a conviction defending it, and that is worth pausing on. An appetite indulged out of weakness is only a habit. An appetite indulged by somebody who has worked out a reason why it is fine has recruited the discerning power to its own side — which is the satanic combination the book on the heart described, and it means the faculty that was supposed to do the correcting is now the thing arguing against it." },
       ],
       distinction: {
         title: "Training changes rule, not human nature into stone",
@@ -205,6 +225,21 @@ const book22Base: Chapter[] = [
           title: "Look for stable pleasure",
           body:
             "Completion is not mere outward compliance. A quality has become settled when its fitting acts are performed readily and are no longer experienced only as an alien burden.",
+        },
+        {
+          title: "Note the order the method reverses",
+          body:
+            "The method starts at the one end where a person actually has purchase, and it reverses the order everybody assumes. You do not wait until you are generous and then give; you give, repeatedly, before it comes naturally, and the giving is what turns the inside. Which sounds like play-acting until you notice that no other route is available — nobody can reach in and adjust a disposition directly, and the limbs are the only part of the system that takes instructions.",
+        },
+        {
+          title: "Take the comparison with a craft",
+          body:
+            "And the comparison to learning to write is exact rather than encouraging. Nobody writes well by understanding how; a person copies letters badly, many times, and the awkwardness gradually stops being awkward until the hand does it without being told. Character is claimed to work the same way — which also means the early stage is meant to feel forced, and feeling forced is not evidence the thing is not taking.",
+        },
+        {
+          title: "See what the test of completion is",
+          body:
+            "And completion is defined by something a person can actually notice in himself: the fitting act is done readily and has stopped feeling like something imposed from outside. That is a higher bar than doing the right thing reliably, and a lower one than never feeling the pull the other way. What has changed is not that the appetite is gone but that acting against it is no longer the hard part of the day.",
         },
       ],
       distinction: {
@@ -263,6 +298,21 @@ const book22Base: Chapter[] = [
           body:
             "When the full contrary cannot yet be sustained, Ghazali allows gradual transition. A nearer, less harmful state can become a bridge toward the final balanced condition.",
         },
+        {
+          title: "Note that diagnosis comes first",
+          body:
+            "The chapter's whole method turns on one instruction: find out what is actually wrong before prescribing anything. The guide is told to look at this person's character, his circumstances, his age, his habits and what dominates him — and the reason is that a generic exercise chosen without that will treat a disorder the man does not have. Which makes most general spiritual advice useless in exactly the way a general prescription is useless.",
+        },
+        {
+          title: "Follow the rule of the contrary, and its limit",
+          body:
+            "And the rule is to treat by the opposite: a tendency hardened one way is corrected by repeated action the other way. A miser is not cured by withholding more. But the limit is stated in the same breath — the correction is still aiming at a just measure, not at the far extreme. A miser driven into reckless spending has changed which side of the mean he is failing on, and the book's own definition of vice makes that a failure too.",
+        },
+        {
+          title: "Take the two concessions seriously",
+          body:
+            "And the two adjustments are what make the treatment usable on real people. The dose has to fit the case: what is medicine for one man is unnecessary for another and destabilising for a third. And where the full opposite cannot be sustained yet, a nearer and less damaging state is allowed as a bridge. Neither concession lowers the target. Both concede that a remedy nobody can take is not a remedy.",
+        },
       ],
       distinction: {
         title: "A contrary practice is medicine, not a new permanent extreme",
@@ -319,6 +369,21 @@ const book22Base: Chapter[] = [
           title: "Stop at restoration",
           body:
             "Corrective effort must be monitored. Once the balanced condition is reached, continuing the same pressure may drive the person into the opposite disorder.",
+        },
+        {
+          title: "Note how the heart is assessed",
+          body:
+            "The test is borrowed from the body and it is the same test throughout: an organ is judged sick when it stops doing what it is for. An eye that does not see, a stomach that does not digest. So the heart is assessed by whether it is doing its own work — knowing, loving, choosing and worshipping well — rather than by how it feels. Which is what allows a person to be diagnosed while feeling perfectly comfortable.",
+        },
+        {
+          title: "Follow why pleasure is not the test",
+          body:
+            "And the warning about pleasure is the sharpest thing in the section, because it removes the instrument everybody actually uses. A sick condition makes the thing that feeds it attractive, and the medicine unpleasant — so ease is evidence of nothing on its own. A man who finds his habits congenial and finds correction burdensome has described a symptom, not a diagnosis, and he will read it the wrong way round every time unless he is told.",
+        },
+        {
+          title: "Take the instruction to stop",
+          body:
+            "And the last instruction is the one that is almost always missed: once the balance is reached, the same pressure applied further pushes the person into the opposite disorder. Treatment has an endpoint. Which follows directly from vice being possible on both sides — a remedy is a corrective force, and a corrective force that keeps running after the correction is made becomes the cause of the next thing needing correcting.",
         },
       ],
       distinction: {
@@ -377,6 +442,21 @@ const book22Base: Chapter[] = [
           body:
             "What appears ugly in another person can prompt a search for the same seed in oneself. The method redirects moral scrutiny inward instead of ending in blame.",
         },
+        {
+          title: "Note the problem the four routes address",
+          body:
+            "All four routes exist because of one difficulty: the faculty a person would use to inspect himself is the faculty that has been compromised. He cannot see his own character straight, and the harder the fault the better it is hidden. So every method here works by getting the information from somewhere outside — a guide, a friend, an enemy, or other people generally — and none of them relies on introspection.",
+        },
+        {
+          title: "Take the commissioned friend seriously",
+          body:
+            "And the second route is more demanding than it sounds. It is not having honest friends; it is asking a trusted, intelligent, religious friend to watch you and report what he finds. That is a request most friendships cannot survive, and it converts the relationship from mutual reassurance into something with a job. Which is why the qualifications are stated — the wrong person given that commission does damage rather than good.",
+        },
+        {
+          title: "Follow the use made of an enemy",
+          body:
+            "And the third is the cleverest. An enemy exaggerates and means harm, so nothing he says can be taken at face value. But resentment says the things flattery leaves out, and the useful response is neither belief nor dismissal but examination — go and look, and see whether there is anything there. It is a way of extracting information from a source with every reason to distort it, and it costs nothing but the willingness to check.",
+        },
       ],
       distinction: {
         title: "Feedback is a mirror, not a sovereign judge",
@@ -430,6 +510,9 @@ const book22Base: Chapter[] = [
             "Opposition creates room for knowledge and justice to resume their roles. The aim is an appetite that serves fitting ends in fitting measure.",
         },
       { title: "Note what opposition is not", body: "Refusing desire's command is not the destruction of desire, which the third section already ruled out. The testimony is gathered to support a change of rule rather than a change of nature — the appetite that returns to fitting service is the same appetite." },
+      { title: "Note where the real problem is located", body: "The section makes a distinction that changes what is being treated. A desire can be present and not obeyed — that is the ordinary condition and it is not a disease. The problem arises when appetite starts recruiting the judgement: supplying reasons, producing excuses, and settling which way the person goes while looking like his own considered view. What is wrong is not the strength of the wanting but who is in charge." },
+      { title: "See why resistance is prescribed", body: "And that explains why opposing desire is the treatment rather than merely a discipline. Refusing a desire's command does not weaken the desire much and is not meant to. It makes room for knowledge and justice to resume their functions — it breaks the chain by which appetite reaches the limbs, so the other faculties get a turn. The aim is an appetite that serves fitting ends in fitting measure, which is what it was created for." },
+      { title: "Note what the testimony is not saying", body: "And the testimony gathered here is easy to misread as calling for the destruction of desire, which the third section already ruled out. The appetite that comes back into fitting service is the same appetite that was giving the orders. Nothing has been removed. What has changed is the order of authority, and that is what the whole body of religious testimony on striving against caprice is being brought to support." },
       ],
       distinction: {
         title: "Desire may be resisted without being declared evil in itself",
@@ -483,6 +566,9 @@ const book22Base: Chapter[] = [
             "One or two changes can be real without completing the work. Character is a stable inward form, so its signs must be read across time and situations.",
         },
       { title: "Say what the signs are for", body: "The signs are diagnostic rather than certifying. They tell a person where the work still is, which is why the section is placed among the treatments and not at the end of the book as a conclusion." },
+      { title: "Note why the signs come as a set", body: "Good character is not one quality and the section refuses to let it be. Humility, truthfulness, patience, restraint, generosity — listed together because each of them props up the others and any one of them alone is unreliable. A man can be gentle and dishonest, or generous and vain. What is being described is a whole condition, and a single admirable trait is as likely to be a temperament as an achievement." },
+      { title: "Take the test seriously", body: "And the test is what separates this from a description of a pleasant person. Anybody looks patient when nothing is crossing him; the reading has to be taken under injury, provocation, contradiction and loss, because those are the conditions under which anger and appetite make their bid. Which means the signs cannot be checked at will — a person has to wait for the occasions, and the occasions are unwelcome." },
+      { title: "See why the signs are placed here", body: "And they are diagnostic rather than certifying, which is why the section sits among the treatments rather than at the end of the book. Their function is to tell a person where the work still is. A reader looking for confirmation that he has arrived is using them for the one purpose they were not built for, and the warning against premature certification is aimed exactly at him." },
       ],
       distinction: {
         title: "A gentle presentation and a sound inward order can diverge",
@@ -540,6 +626,21 @@ const book22Base: Chapter[] = [
           body:
             "The goal is not permanent external control. Repeated fitting action should help the learner come to recognize and prefer what is good.",
         },
+        {
+          title: "Note why the child gets a section",
+          body:
+            "Placing a section on children inside a book about treating one's own character is not a digression — it is the same argument from the easier end. Everything the book has claimed about formation is most obviously true of a child: habits laid down early become easy, and correcting them later is harder in proportion to how long they have run. The child's case is the proof of the adult's method, observed where nobody disputes it.",
+        },
+        {
+          title: "See how wide the account of teaching is",
+          body:
+            "And the list of what forms a child is deliberately broad: food, clothing, praise, restraint, study, play, the example in front of him, the shape of his day. None of that is instruction, and all of it teaches. Which follows from the book's own claim that character is caught by proximity before it is stated as a rule — the same reason the choice of companions is treated as a matter of formation rather than of company.",
+        },
+        {
+          title: "Take the aim seriously",
+          body:
+            "And the aim named at the end is what keeps this from being a programme of control. The point is not a child who behaves because he is being watched; it is one who comes to recognise and prefer what is good, so the external management can end. Which is exactly the completion the book described for adults — the fitting act performed readily and no longer felt as an imposition — arrived at from the other direction.",
+        },
       ],
       distinction: {
         title: "An enduring formation principle sits inside a historical pedagogy",
@@ -596,6 +697,21 @@ const book22Base: Chapter[] = [
           title: "Advance by stages",
           body:
             "Training reveals the next obstacle as capacity grows. Gradual progression allows the remedy to fit the actual condition rather than an imagined version of the self.",
+        },
+        {
+          title: "Note what aspiration rests on",
+          body:
+            "Aspiration is treated as a consequence rather than a virtue, and the consequence of something specific: being certain the destination is worth it. Which explains a failure everybody has watched. A person with no settled aim does not lack willpower; he has nothing for the willpower to serve, so the next attractive thing or the next uncomfortable demand redirects him, and each redirection feels reasonable at the time.",
+        },
+        {
+          title: "Follow why the barriers come first",
+          body:
+            "And the path is described as beginning with clearing rather than with effort — attachments, unfinished obligations, a disordered routine. These are not moral failings and they are what consumes the attention training requires. Which is the same principle as the reservoir in the book on the heart: the work is often not adding something but removing what is standing in the room.",
+        },
+        {
+          title: "See why the stages cannot be planned in advance",
+          body:
+            "And the last point is the one that governs the whole quarter. Training reveals the next obstacle as capacity grows — you cannot see what is wrong at the fourth stage from where you stand at the first, because the fault at the fourth is currently hidden behind the fault at the first. Which is why the remedy has to be fitted to the actual condition rather than to a person's picture of himself, and why a guide is worth more than a plan.",
         },
       ],
       distinction: {
