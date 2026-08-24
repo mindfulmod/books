@@ -14,6 +14,7 @@ import {
   Lightbulb,
   LinkSimple,
   ListBullets,
+  MagnifyingGlass,
   Shield,
   Sparkle,
   Target,
@@ -969,6 +970,120 @@ const bookTotalIdeas = (item: SystemBook) => {
   return bookTotalNodes(item) + directSections;
 };
 
+type SearchHit = {
+  bookId: number;
+  bookTitle: string;
+  chapterId: number;
+  formalTitle: string;
+  shortTitle: string;
+  snippet: string;
+  score: number;
+};
+
+// The whole corpus is already in memory, so search is a scan rather than an index. Titles and
+// the section claim outrank argument prose so that a query naming a subject lands on the
+// section about it rather than on the first section that happens to mention it.
+function buildSearchHits(all: SystemBook[], raw: string): SearchHit[] {
+  const query = raw.trim().toLowerCase();
+  if (query.length < 3) return [];
+  const hits: SearchHit[] = [];
+  for (const entry of all) {
+    for (const chapter of entry.chapters) {
+      const deep = chapter.deep;
+      const title = `${chapter.formalTitle} ${chapter.shortTitle}`.toLowerCase();
+      const claim = `${chapter.overview} ${deep?.thesis ?? ""}`.toLowerCase();
+      const moves = (deep?.moves ?? []).map((move) => `${move.title} ${move.body}`).join(" ").toLowerCase();
+      let score = 0;
+      if (title.includes(query)) score += 100;
+      if (entry.title.toLowerCase().includes(query)) score += 40;
+      if (claim.includes(query)) score += 25;
+      if (moves.includes(query)) score += 10;
+      if (!score) continue;
+      const source = claim.includes(query) ? `${chapter.overview} ${deep?.thesis ?? ""}` : (deep?.moves ?? []).map((m) => m.body).join(" ");
+      const at = source.toLowerCase().indexOf(query);
+      const rawFrom = Math.max(0, at - 70);
+      // snap to a word boundary so snippets do not open mid-word
+      const from = rawFrom === 0 ? 0 : source.indexOf(" ", rawFrom) + 1 || rawFrom;
+      const rawTo = Math.min(source.length, at + query.length + 110);
+      const to = rawTo === source.length ? rawTo : source.lastIndexOf(" ", rawTo);
+      const snippet = `${from > 0 ? "…" : ""}${source.slice(from, to).trim()}${to < source.length ? "…" : ""}`;
+      hits.push({
+        bookId: entry.id,
+        bookTitle: entry.title,
+        chapterId: chapter.id,
+        formalTitle: chapter.formalTitle,
+        shortTitle: chapter.shortTitle,
+        snippet,
+        score,
+      });
+    }
+  }
+  return hits.sort((a, b) => b.score - a.score || a.bookId - b.bookId || a.chapterId - b.chapterId).slice(0, 40);
+}
+
+function SearchOverlay({
+  all,
+  onOpen,
+  onClose,
+}: {
+  all: SystemBook[];
+  onOpen: (bookId: number, chapterId: number) => void;
+  onClose: () => void;
+}) {
+  const [query, setQuery] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  const hits = useMemo(() => buildSearchHits(all, query), [all, query]);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  return (
+    <div className="search-overlay" role="dialog" aria-modal="true" aria-label="Search the forty books">
+      <div className="search-panel">
+        <div className="search-field">
+          <MagnifyingGlass size={18} weight="bold" />
+          <input
+            ref={inputRef}
+            type="search"
+            value={query}
+            placeholder="Search all forty books — a subject, a phrase, an image"
+            onChange={(event) => setQuery(event.target.value)}
+            aria-label="Search query"
+          />
+          <button onClick={onClose} aria-label="Close search"><X size={17} weight="bold" /></button>
+        </div>
+
+        {query.trim().length > 0 && query.trim().length < 3 && (
+          <p className="search-note">Keep typing — search starts at three characters.</p>
+        )}
+        {query.trim().length >= 3 && (
+          <p className="search-note">
+            {hits.length === 0 ? "Nothing found in the forty books." : `${hits.length}${hits.length === 40 ? "+" : ""} section${hits.length === 1 ? "" : "s"}`}
+          </p>
+        )}
+
+        <ul className="search-results">
+          {hits.map((hit) => (
+            <li key={`${hit.bookId}:${hit.chapterId}`}>
+              <button onClick={() => onOpen(hit.bookId, hit.chapterId)}>
+                <span className="search-result-book">Book {hit.bookId} · {hit.bookTitle}</span>
+                <strong>{hit.formalTitle}</strong>
+                <span className="search-result-snippet">{hit.snippet}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function Library({
   available,
   currentBookId,
@@ -1586,6 +1701,7 @@ function SystemApp() {
   const [saved, setSaved] = useState<SavedState>(initialState);
   const [activeConcept, setActiveConcept] = useState<string | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [activeTaxonomy, setActiveTaxonomy] = useState("all");
   const [activeProcess, setActiveProcess] = useState("all");
   const isMobile = useIsMobile();
@@ -1629,6 +1745,35 @@ function SystemApp() {
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
   }, [saved]);
+
+  const openFromSearch = (bookId: number, chapterId: number) => {
+    setSearchOpen(false);
+    const nextBook = books.find((item) => item.id === bookId);
+    if (!nextBook) return;
+    const target = nextBook.chapters.find((item) => item.id === chapterId) ?? nextBook.chapters[0];
+    const journey = nextBook.journeys.find((item) => item.nodes.some((node) => node.chapterId === target.id))
+      ?? nextBook.journeys.find((item) => item.id === nextBook.defaultJourneyId)
+      ?? nextBook.journeys[0];
+    const node = journey.nodes.find((item) => item.chapterId === target.id);
+    const key = node ? ideaKey(nextBook.id, journey.id, node.id) : chapterKey(nextBook.id, target.id);
+    setActiveConcept(null);
+    setActiveTaxonomy("all");
+    setActiveProcess("all");
+    if (isMobile) {
+      setMobileSurface("reader");
+      setMobileTab("sections");
+      setDepthMenuOpen(false);
+      setReaderChromeVisible(true);
+    }
+    setSaved((current) => ({
+      ...current,
+      bookId: nextBook.id,
+      journeyId: journey.id,
+      nodeId: (node ?? journey.nodes[0]).id,
+      chapterId: node ? undefined : target.id,
+      visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
+    }));
+  };
 
   const selectBook = (bookId: number) => {
     setLibraryOpen(false);
@@ -1942,6 +2087,16 @@ return (
             <span>Book {book.id} of 40</span>
             <em>{books.length} prepared</em>
           </button>
+          <button
+            className="search-trigger"
+            onClick={() => setSearchOpen(true)}
+            aria-haspopup="dialog"
+            aria-expanded={searchOpen}
+            aria-label="Search all forty books"
+          >
+            <MagnifyingGlass size={15} weight="bold" />
+            <span>Search</span>
+          </button>
           <strong>{book.title}</strong>
         </div>
 
@@ -1962,6 +2117,10 @@ return (
           onSelectBook={selectBook}
           onClose={() => setLibraryOpen(false)}
         />
+      )}
+
+      {searchOpen && (
+        <SearchOverlay all={books} onOpen={openFromSearch} onClose={() => setSearchOpen(false)} />
       )}
 
       {isMobile && mobileSurface === "book" && (
