@@ -83,8 +83,7 @@ type SavedState = {
 const books = [book01, book02, book03, book04, book05, book06, book07, book08, book09, book10, book11, book12, book13, book14, book15, book16, book17, book18, book19, book20, book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33, book34, book35, book36, book37, book38, book39, book40];
 
 const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
-  { id: "glance", label: "30 seconds", short: "30s" },
-  { id: "understand", label: "Understand", short: "Core" },
+  { id: "glance", label: "In brief", short: "Brief" },
   { id: "deep", label: "Go deep", short: "Deep" },
   { id: "sources", label: "Grounding", short: "Source" },
 ];
@@ -2378,19 +2377,10 @@ return (
             {saved.depth === "glance" && (
               <div className="depth-content glance-content">
                 <p className="big-idea">{overrideChapter ? chapter.overview : node.summary}</p>
-                <div className="do-not-collapse">
-                  <span>Keep this distinction</span>
-                  <strong>{overrideChapter ? deepReading.misreading : node.guardrail}</strong>
+                <div className="core-claim">
+                  <span>What this section claims</span>
+                  <p>{deepReading.thesis}</p>
                 </div>
-                <button className="continue-button" onClick={() => setSaved((current) => ({ ...current, depth: "understand" }))}>
-                  Understand why <ArrowRight size={17} weight="bold" />
-                </button>
-              </div>
-            )}
-
-            {saved.depth === "understand" && (
-              <div className="depth-content understand-content">
-                <p>{chapter.overview}</p>
                 {chapter.visualModel && (
                   <ConceptModel
                     key={`compact:${book.id}:${chapter.id}`}
@@ -2398,12 +2388,9 @@ return (
                     compact
                   />
                 )}
-                {/* Core used to print the first three argument moves verbatim, which meant
-                    a reader moving on to Deep re-read them immediately. It now carries the
-                    section's claim and its guard, and Deep carries the argument itself. */}
-                <div className="core-claim">
-                  <span>What this section claims</span>
-                  <p>{deepReading.thesis}</p>
+                <div className="do-not-collapse">
+                  <span>Keep this distinction</span>
+                  <strong>{overrideChapter ? deepReading.misreading : node.guardrail}</strong>
                 </div>
                 <button className="continue-button" onClick={() => setSaved((current) => ({ ...current, depth: "deep" }))}>
                   Follow the full argument <ArrowRight size={17} weight="bold" />
@@ -2467,7 +2454,7 @@ return (
                 </div>
                 <button
                   className="deep-close"
-                  onClick={() => setSaved((current) => ({ ...current, depth: "understand" }))}
+                  onClick={() => setSaved((current) => ({ ...current, depth: "glance" }))}
                   aria-label="Return to the concept map"
                 >
                   <X size={18} weight="bold" />

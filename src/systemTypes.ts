@@ -1,6 +1,6 @@
 import type { Chapter, ConceptNode } from "./data";
 
-export type Depth = "glance" | "understand" | "deep" | "sources";
+export type Depth = "glance" | "deep" | "sources";
 
 export type Glyph =
   | "name"

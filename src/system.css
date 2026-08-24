@@ -912,7 +912,6 @@ body.system-page {
   transform: translateX(3px);
 }
 
-.understand-content > p,
 .deep-content > p,
 .source-content > p {
   color: #4f5a6f;
@@ -4049,7 +4048,6 @@ body.system-page {
 }
 
 .system-warm .do-not-collapse strong,
-.system-warm .understand-content > p,
 .system-warm .deep-content > p,
 .system-warm .source-content > p,
 .system-warm .core-points p,
