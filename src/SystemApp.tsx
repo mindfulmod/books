@@ -165,6 +165,25 @@ function fallbackDeepReading(chapter: Chapter, node: JourneyNode, book: SystemBo
   };
 }
 
+// Symbolic plates ship at 1600x900 with a 480x270 companion. Both display sites are small
+// (a 116px banner and a 235-390px sidebar), so `sizes` lets the browser take the 480w file
+// almost everywhere and skip roughly 700KB per plate.
+function Plate({ src, alt, sizes }: { src: string; alt: string; sizes: string }) {
+  const thumb = src.replace(".jpg", "-thumb.jpg");
+  return (
+    <img
+      src={thumb}
+      srcSet={`${thumb} 480w, ${src} 1600w`}
+      sizes={sizes}
+      width={1600}
+      height={900}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+    />
+  );
+}
+
 function glyphFor(kind: Glyph) {
   const props = { size: 25, weight: "duotone" as const };
   switch (kind) {
@@ -2062,7 +2081,7 @@ return (
                   style={{ "--card-color": item.color } as CSSProperties}
                 >
                   <span className="question-visual" aria-hidden="true">
-                    <img src={item.image.replace(".jpg", "-thumb.jpg")} alt="" loading="lazy" />
+                    <img src={item.image.replace(".jpg", "-thumb.jpg")} alt="" loading="lazy" decoding="async" width={480} height={270} />
                     <span className="question-number">{item.number}</span>
                   </span>
                   <span className="question-copy">
@@ -2090,7 +2109,7 @@ return (
               <p>{journey.description}</p>
             </div>
             <figure className="journey-illustration" key={journey.id}>
-              <img src={journey.image} alt={journey.imageAlt} />
+              <Plate src={journey.image} alt={journey.imageAlt} sizes="(max-width: 760px) 92vw, 240px" />
               <span className="illustration-shine" aria-hidden="true" />
               <figcaption>
                 <span><Sparkle size={14} weight="fill" /> Symbolic plate</span>
@@ -2300,7 +2319,7 @@ return (
             <div className="deep-reader-body">
               <aside className="deep-reader-summary">
                 <figure>
-                  <img src={journey.image} alt={journey.imageAlt} />
+                  <Plate src={journey.image} alt={journey.imageAlt} sizes="(max-width: 760px) 112px, (max-width: 1030px) 250px, 250px" />
                   <figcaption><Sparkle size={14} weight="fill" /> Journey {journey.number} symbolic plate</figcaption>
                 </figure>
                 <div className="deep-stage-label">
