@@ -71,6 +71,21 @@ const book23Base: Chapter[] = [
           body:
             "Later sections make it clear that food is still necessary and that what suits one person will not suit another. The harshness at the start is aimed at appetite running the show, not at pretending people do not need to eat.",
         },
+        {
+          title: "Note why the stomach comes first",
+          body:
+            "Of all the appetites available, the book starts with the one that recurs every few hours and can never be finally settled. That is what makes it strategic rather than merely important. A desire that returns three times a day, and is satisfied each time, is training the self continuously in one lesson — that wanting is followed by getting — and it is running that lesson more often than any other appetite in a person's life.",
+        },
+        {
+          title: "Follow the outward trace",
+          body:
+            "And the sequence he follows outward is worth noticing: from the stomach to wealth, and from wealth to standing. Neither of the last two is condemned here on its own account. They appear because they are what an expanding appetite recruits — money to supply it and reputation to protect the supply — which is why the two books that follow this one in the quarter are about exactly those, and why this one has to come first.",
+        },
+        {
+          title: "Take the qualification seriously",
+          body:
+            "And the qualification at the end is not a softening added out of politeness. The later sections state plainly that food is necessary, that the target is a balanced nature rather than maximum weakness, and that what suits one person will not suit another. The harshness at the opening is aimed at appetite doing the governing, and a reader who takes the first section as the book's position will build a discipline the fourth section explicitly forbids.",
+        },
       ],
       distinction: {
         title: "Reporting Ghazali's witness is not authenticating every report",
@@ -160,6 +175,21 @@ const book23Base: Chapter[] = [
           title: "Keep historical claims in context",
           body:
             "The section also makes claims about bodily health within medieval medicine. They help explain Ghazali's complete list, but they should not be converted into present-day clinical guidance.",
+        },
+        {
+          title: "Note what the medicine analogy prevents",
+          body:
+            "The analogy is doing protective work rather than illustrative. Medicine is taken for what it does, not for how it tastes — so nobody concludes that the worse it tastes the better it works. Applied to hunger, that blocks the inference the whole subject invites: that discomfort is itself the good, and more of it is more of the good. Hunger is assessed by what it recovers or resists, which means a quantity of it that recovers nothing is not a lesser virtue but no virtue.",
+        },
+        {
+          title: "See why the appetites are treated as a cluster",
+          body:
+            "And the claim that satiety energises sexual desire, excessive talk and sleep is what makes this one intervention rather than a diet. The appetites are treated as connected, so pressure applied at the point of supply reaches several of them at once. Which explains why a book on breaking two desires spends most of its length on the first: the second is partly reached through it, and the book says so rather than treating them as parallel problems.",
+        },
+        {
+          title: "Note where the surplus is directed",
+          body:
+            "And the saving is given a direction, which is the detail most easily skipped. Less concern with food frees labour and money — and Ghazali does not leave that as a benefit to the person. The surplus goes to people who need it, or it has simply become another private accumulation, which is the thing the next book in the quarter is about. Discipline that enriches the disciplined has produced the fault it was meant to treat.",
         },
       ],
       distinction: {
@@ -251,6 +281,21 @@ const book23Base: Chapter[] = [
           body:
             "The examples are means toward governing appetite. The next section makes the limiting principle explicit: the intended state is balanced freedom for worship and thought, not maximal weakness.",
         },
+        {
+          title: "Note why lawfulness comes first",
+          body:
+            "Making lawful acquisition the first duty of a chapter on eating less is a considered ordering. A reduced meal obtained by corrupt means has not become spiritually sound by being small — the reduction addresses appetite while leaving the wrong untouched, and it produces a man who is austere and still eating what he should not. The whole apparatus of the book on the lawful and the unlawful is presupposed here in a single sentence.",
+        },
+        {
+          title: "Separate the three variables",
+          body:
+            "And the section's most useful move is pulling apart three things people run together. How much you eat at a sitting. How long you go between sittings. And how good the food is. These are separate interventions with separate effects, and a person can be strict about one while the attachment lives entirely in another. Which yields a sharper question than eat less: is it fullness you are attached to, frequency, or quality.",
+        },
+        {
+          title: "Take the warning about the regimen",
+          body:
+            "And the section ends by refusing to let the method become the point. The intervals, the amounts, the plainness of the food are means of governing appetite, and the state being aimed at is freedom for worship and thought. A person who has made the regimen itself the object has acquired a new attachment with a devotional name on it, which is harder to see and harder to give up than the one he started with.",
+        },
       ],
       distinction: {
         title: "A training lever is not a universal command",
@@ -330,6 +375,21 @@ const book23Base: Chapter[] = [
           title: "Let conditions differ",
           body:
             "People vary in body, habit, work, weakness, and strength of appetite. Ghazali therefore refuses to make a fixed quantity or interval the aim in itself.",
+        },
+        {
+          title: "Note how the destination is defined",
+          body:
+            "The destination is stated in terms of what it makes possible rather than what it costs: a nature not weighed down by fullness and not distracted by the pain of hunger. Both halves are limits. Which means the condition is identified by freedom for worship and thought — and a person too hungry to attend to anything has missed it in the same way as one too full, though only one of those failures looks like failure.",
+        },
+        {
+          title: "Follow the explanation of the harsh language",
+          body:
+            "And the account of why the praise of hunger is pitched so strongly is the most useful thing in the book for reading the rest of it. Human appetite already leans hard toward satiety. Language that merely recommended balance would be read from inside that lean and heard as permission. The severity is a counterweight applied against a known bias — which means it is calibrated for the reader's starting position, not a statement of where he should end up.",
+        },
+        {
+          title: "Note when overcorrection is licensed and when it stops",
+          body:
+            "And the same reasoning licenses leaning past the mean deliberately: while appetite is still unruly, pressure beyond the final target is what loosens the established pull. But the licence expires. Once the power has become governable, the same pressure produces a different disorder — which is the rule from the book on character applied here, and the reason no fixed quantity or interval can be the aim.",
         },
       ],
       distinction: {
@@ -416,6 +476,21 @@ const book23Base: Chapter[] = [
           body:
             "The safer direction is making the two match: neither advertising what you have managed nor putting on a show of going without. What the restraint is for has to stay more important to you than what it says about you.",
         },
+        {
+          title: "Note the two cases and what separates them",
+          body:
+            "The two cases look similar and are structurally different. The first man cannot leave the food, hides that, and puts on austerity — so the outward and the inward disagree, and the fault is the pretence. The second genuinely abstains and enjoys being known for it — nothing is hidden and nothing is false. The appetite has simply changed its object, from the food to the standing that abstaining confers.",
+        },
+        {
+          title: "Take the comparison of the two dangers",
+          body:
+            "And the judgement that the second is the more dangerous is what makes the section worth having. Appetite for food is obvious, admits of a plain remedy, and the person knows he has it. Appetite for standing is concealed, is fed by the very discipline meant to treat the first, and produces no symptom the person can catch. The scorpion and the snake are not offered to excuse the first; they are a ranking of two things that are both bad.",
+        },
+        {
+          title: "See where the remedy lands",
+          body:
+            "And the remedy is truthfulness rather than further austerity, which is the right answer and an uncomfortable one. Neither advertise what you manage nor perform what you go without — let the inside and the outside say the same thing. Which requires the person to care more about what the restraint is for than about what it says about him, and there is no exercise that produces that. It is a matter of what he actually wants.",
+        },
       ],
       distinction: {
         title: "The same restraint can serve two different rulers",
@@ -495,6 +570,21 @@ const book23Base: Chapter[] = [
           title: "Match support to condition",
           body:
             "On his account fasting and marriage can each prop a person up, in different situations. Neither is a trick that works on its own, apart from what you meant, what you can manage, and what you owe.",
+        },
+        {
+          title: "Note where the treatment is aimed",
+          body:
+            "The intervention is placed at the gaze and the thought that follows it, and the reason is mechanical rather than moral. Attachment gathers momentum: what is easy to redirect at the look is hard at the thought, and harder still once the thought has settled into wanting. The mount and the gate image is about where a thing can still be turned — and the answer is much earlier than where people usually try.",
+        },
+        {
+          title: "Follow why both departures are named",
+          body:
+            "And the praised state is defined by what it does not do rather than by how little of it there is. The faculty is present and working, and it does not overthrow the judgement meant to direct it. Which places the fault at the point of rule, exactly as the book on character did — and means that a person in whom the desire has been extinguished has not reached the target, he has lost a created function.",
+        },
+        {
+          title: "See how the two supports are handled",
+          body:
+            "And neither fasting nor marriage is offered as a device that works by itself. Each props a person up in a different situation, and which one applies depends on what he meant by it, what he can sustain, and what he owes to other people. That last clause is doing real work: it means the choice is not settled by what will most efficiently manage his desire, because one of the two options creates obligations to somebody else.",
         },
       ],
       distinction: {
@@ -590,6 +680,21 @@ const book23Base: Chapter[] = [
           title: "Restore the other person's rights",
           body:
             "Marriage is not finished business once it has solved your problem. What you meant by it, how you behave, whether you keep up what you owe, and what your wife is entitled to are all still part of the reckoning.",
+        },
+        {
+          title: "Note who is being addressed",
+          body:
+            "The counsel is aimed at the aspirant — somebody who has entered a concentrated course of discipline — and not at every Muslim in every circumstance. That restriction matters because the advice inverts under it. Deferring marriage to protect a beginner's concentration is sound counsel for a man in that situation and poor counsel for almost anyone else, and the book on marriage had already worked the general case at length with an entirely different set of scales.",
+        },
+        {
+          title: "Follow the test that decides it",
+          body:
+            "And what decides the case is a factual question the man can answer about himself: can he actually guard the gaze and the thought. If he can, remaining unmarried protects his focus at the beginning. If desire keeps defeating the guard, the same choice becomes destabilising rather than protective — and the supports are tried first, in order, before marriage is considered as the stronger answer. Nothing here is a judgement about marriage; the value that changes is the man's condition.",
+        },
+        {
+          title: "Take the last requirement seriously",
+          body:
+            "And the section closes by refusing the reading it has been inviting. Marriage is not finished business once it has solved the aspirant's problem. What he intended by it, how he conducts himself, whether he keeps up what is owed, and what his wife is entitled to all remain part of the reckoning — which is the correction to a chapter that has, up to that point, been discussing another person entirely as an instrument of somebody's discipline.",
         },
       ],
       distinction: {
