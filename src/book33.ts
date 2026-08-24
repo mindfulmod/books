@@ -12,7 +12,6 @@ type Seed = {
 
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
-  points: seed.moves.slice(0, 3).map((move) => move.body),
   reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
   deep: {
     thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,

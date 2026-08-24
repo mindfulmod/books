@@ -147,7 +147,7 @@ function fallbackDeepReading(chapter: Chapter, node: JourneyNode, book: SystemBo
     thesis: chapter.overview,
     context:
       `This section belongs to ${book.title}. Its argument is presented here as an original English synthesis, organized to preserve the distinction selected on the map.`,
-    moves: chapter.points.map((point, index) => ({
+    moves: (chapter.points ?? []).map((point, index) => ({
       title: `Argument move ${String(index + 1).padStart(2, "0")}`,
       body: point,
     })),

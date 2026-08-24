@@ -9,11 +9,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The excellence of good character and the blame of bad character",
     overview:
       "Ghazali begins by establishing the religious importance of character through Qur'anic passages, reports, and sayings. Character is not treated as decorative etiquette. It concerns the inward condition from which a person's conduct repeatedly emerges.",
-    points: [
-      "Good character is presented as a central part of faithful and excellent living.",
-      "Bad character is treated as an illness of the inward life, not merely a social inconvenience.",
-      "The opening testimony creates urgency before the book turns to definition, diagnosis, and treatment.",
-    ],
     reflection:
       "A polished moment can be useful without yet proving a settled character. Notice what appears when patience, generosity, or restraint becomes costly.",
     relatedNodes: ["character", "health", "justice"],
@@ -64,11 +59,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The true nature of good and bad character",
     overview:
       "Character is defined as a stable disposition of the soul from which actions proceed readily without needing fresh deliberation each time. Ghazali then relates sound character to the balanced operation of knowledge, anger, appetite, and justice.",
-    points: [
-      "A passing mood or one difficult performance is not yet a settled character.",
-      "Wisdom, courage, temperance, and justice name the sound states of four inward capacities.",
-      "Good character lies in fitting balance, while vice appears through excess, deficiency, or disordered rule.",
-    ],
     reflection:
       "Ask not only what you did, but what kind of inward arrangement made that response feel natural, difficult, attractive, or repellent.",
     relatedNodes: ["character", "knowledge", "anger", "appetite", "justice"],
@@ -136,11 +126,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The receptivity of character to change through discipline",
     overview:
       "Ghazali rejects the claim that character cannot change. Training does not erase the roots of anger and appetite; it brings them under sound measure. People differ in native disposition, accumulated habit, conviction, and therefore in how readily they change.",
-    points: [
-      "Advice, education, and discipline would be pointless if settled qualities could never change.",
-      "The goal is to govern anger and appetite, not abolish capacities needed for human life.",
-      "Change is possible without being equally quick or easy for every person.",
-    ],
     reflection:
       "Replace the question ‘Is this simply who I am?’ with the more exact question ‘What has this power been trained to do?’",
     relatedNodes: ["character", "anger", "appetite", "habit", "justice"],
@@ -192,11 +177,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The general means by which good character is acquired",
     overview:
       "Good character may be aided by natural disposition, but it is also acquired by repeatedly performing fitting actions and by keeping company with people of sound character. Outward action and inward disposition influence one another until effort can become stable ease.",
-    points: [
-      "Repeated action can impress its quality upon the inward disposition.",
-      "The company a person keeps teaches patterns even without formal instruction.",
-      "A virtue is not complete merely because its actions are performed occasionally or painfully.",
-    ],
     reflection:
       "Look for the small act whose repetition would teach the inward quality you want, rather than waiting to feel fully formed before acting.",
     relatedNodes: ["character", "habit", "company", "justice"],
@@ -264,11 +244,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The detailed path to refining character",
     overview:
       "Ghazali compares the guide of souls to a physician. The fault must be diagnosed, its direction understood, and a contrary practice prescribed in a measure the person can bear. One identical regimen for everyone may fail or even harm.",
-    points: [
-      "A vice is treated by practicing the fitting quality that opposes its direction.",
-      "The treatment depends on the person's condition, history, strength, and dominant fault.",
-      "When a direct correction is too difficult, gradual movement can lead the person toward balance.",
-    ],
     reflection:
       "Before choosing a remedy, name whether the present fault is an excess, a deficiency, or the wrong power taking command.",
     relatedNodes: ["diagnosis", "health", "justice", "habit"],
@@ -336,11 +311,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The signs of diseases of the heart and its return to health",
     overview:
       "An organ is sick when it cannot perform its proper function. Ghazali applies this pattern to the heart and asks what its love, knowledge, choices, and pleasures reveal. Recovery appears when fitting action becomes ordered and increasingly welcome.",
-    points: [
-      "Illness is recognized in relation to the proper function of the thing that is ill.",
-      "Immediate pleasure is not always health, because a diseased appetite may enjoy what sustains its disease.",
-      "Treatment must stop at balance rather than carrying correction into an opposite fault.",
-    ],
     reflection:
       "Do not ask only whether an action feels easy now. Ask what that ease has been trained to love and what function it helps the heart fulfill.",
     relatedNodes: ["health", "diagnosis", "habit", "justice"],
@@ -408,11 +378,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The ways a person comes to know the faults of the self",
     overview:
       "Because self-love can hide defects, Ghazali gives four routes to self-knowledge: a discerning guide, a truthful and perceptive friend, criticism from an enemy, and observing in oneself what one dislikes in other people.",
-    points: [
-      "A guide can diagnose patterns the learner cannot yet see.",
-      "A trustworthy friend is asked for honest observation rather than reassurance.",
-      "Even hostile criticism and disliked traits in others may disclose material for careful self-examination.",
-    ],
     reflection:
       "Treat feedback as evidence to investigate, not as a verdict to obey or a discomfort to dismiss.",
     relatedNodes: ["diagnosis", "company", "character", "health"],
@@ -480,11 +445,6 @@ const book22Base: Chapter[] = [
     formalTitle: "Religious testimony that treatment involves opposing desire",
     overview:
       "Ghazali gathers Qur'anic passages, reports, and sayings to place resistance to ruling desire inside his religious account of discipline. Read beside the earlier sections, opposition means refusing desire's command so that it can return to fitting service.",
-    points: [
-      "The argument is presented through scriptural and religious testimony.",
-      "Desire becomes a treatment target when it overrules knowledge and right measure.",
-      "Opposition belongs to a wider program of discipline, not hatred of every human need or inclination.",
-    ],
     reflection:
       "When desire speaks strongly, separate the existence of the desire from the claim that it deserves command.",
     relatedNodes: ["appetite", "justice", "knowledge", "habit"],
@@ -536,11 +496,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The signs of good character",
     overview:
       "Good character is known through a constellation of qualities described in scripture and through conduct under pressure. A few easy improvements do not settle the matter; patience, truthfulness, humility, and restraint must be tested when the self is crossed.",
-    points: [
-      "No single pleasant trait stands in for the whole of good character.",
-      "Scriptural descriptions supply a connected profile of the believer's qualities.",
-      "Response to injury, disagreement, loss, and provocation reveals what comfort can conceal.",
-    ],
     reflection:
       "Judge a quality across conditions. The revealing moment is often not the calm intention but the response when another person obstructs it.",
     relatedNodes: ["character", "health", "anger", "justice"],
@@ -592,11 +547,6 @@ const book22Base: Chapter[] = [
     formalTitle: "Disciplining children in early growth and improving their character",
     overview:
       "Ghazali describes the child as an impressionable trust whose early habits, teachers, companions, rewards, and surroundings shape later character. The section belongs to a medieval pedagogical setting and should be read as a historical account, not copied as a universal modern parenting manual.",
-    points: [
-      "Early formation matters because repeated patterns have not yet become deeply fixed.",
-      "Example, companionship, environment, and habituation educate alongside explicit instruction.",
-      "The chapter's enduring formation model must be distinguished from every period-specific disciplinary detail.",
-    ],
     reflection:
       "Whether considering a child or an adult learner, ask what the surrounding environment praises, rehearses, and makes easy each day.",
     relatedNodes: ["habit", "company", "character", "cultivation"],
@@ -664,11 +614,6 @@ const book22Base: Chapter[] = [
     formalTitle: "The conditions of aspiration and the gradual path of discipline",
     overview:
       "The closing section turns from general theory to the beginning of a seeker's path. Resolve must be grounded in certainty, obstacles must be addressed, duties and guidance must structure the effort, and training proceeds gradually rather than through unmeasured intensity.",
-    points: [
-      "A durable beginning requires a clear aim and conviction strong enough to organize action.",
-      "Guidance, companionship, and established duties protect effort from self-invention and drift.",
-      "The path is gradual because hidden faults and capacities become visible by stages.",
-    ],
     reflection:
       "A dramatic beginning can feel powerful while remaining unstructured. Ask what will still guide the effort when intensity falls.",
     relatedNodes: ["cultivation", "company", "habit", "knowledge"],

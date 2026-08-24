@@ -717,7 +717,7 @@ function App() {
                     <span aria-hidden="true">
                       <StoryGlyph storyId={visualStory.id} size={18} />
                     </span>
-                    <strong>{chapter.points[0]}</strong>
+                    <strong>{chapter.points?.[0]}</strong>
                   </div>
                 </article>
               )}
@@ -959,7 +959,7 @@ function App() {
                 <div className="visual-takeaway">
                   <h3>Argument in one view</h3>
                   <div className="takeaway-flow">
-                    {chapter.points.map((point, index) => (
+                    {(chapter.points ?? []).map((point, index) => (
                       <div className="takeaway-node" key={point}>
                         <span className="takeaway-icon">
                           <StoryGlyph storyId={visualStory.id} index={index} size={19} />

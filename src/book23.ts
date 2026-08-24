@@ -9,11 +9,6 @@ const book23Base: Chapter[] = [
     formalTitle: "The merit of hunger and the condemnation of satiety",
     overview:
       "Ghazali opens with a causal diagnosis. He treats appetite for food as an early root from which other desires can gain force, then gathers religious reports and sayings to create urgency around restraining satiety. This section states the problem and its religious register before the book explains method and measure.",
-    points: [
-      "The target is appetite taking command, not the existence of a bodily need.",
-      "Ghazali links the stomach, sexual desire, wealth, status, rivalry, and display in a proposed sequence of reinforcement.",
-      "The reports are part of his argument and must not be confused with independent modern authentication of every narration.",
-    ],
     reflection:
       "When one desire is repeatedly indulged, notice whether it remains isolated or begins recruiting attention, spending, comparison, and the wish to be seen.",
     relatedNodes: ["appetite", "hunger", "satiety", "desire"],
@@ -109,11 +104,6 @@ const book23Base: Chapter[] = [
     formalTitle: "The benefits of hunger and the evils of satiety",
     overview:
       "Ghazali lists ten benefits of hunger within his ascetic framework. He compares hunger to medicine: its value is not the unpleasant sensation itself, but the functions it may serve, including clearer attention, a softened heart, humility, compassion, reduced secondary impulses, less sleep, freer time, lighter material demands, and greater capacity to give.",
-    points: [
-      "Pain is not presented as the benefit; a claimed spiritual or practical effect is the point of the discipline.",
-      "Several benefits form chains, such as lighter eating, reduced sleep, more time, and greater readiness for worship.",
-      "Medical claims in this section belong to Ghazali's medieval physiological setting and are not modern health advice.",
-    ],
     reflection:
       "Evaluate a discipline by the function it restores. Does it actually free attention, soften conduct, or release resources, or has discomfort itself become the measure of success?",
     relatedNodes: ["hunger", "attention", "compassion", "measure"],
@@ -214,11 +204,6 @@ const book23Base: Chapter[] = [
     formalTitle: "The method by which discipline breaks the greed of the stomach",
     overview:
       "Ghazali organizes food discipline around four matters: lawful provision, quantity, timing, and type. He explicitly recommends gradual reduction for a person accustomed to eating much and describes a range of historical ascetic regimens. The governing concern is to retrain greed without confusing severity with the final aim.",
-    points: [
-      "Lawful provision comes before reducing quantity or delaying a meal.",
-      "Quantity should be changed gradually when sudden reduction would overburden or weaken the person.",
-      "Fixed amounts, intervals, and austere foods are examples from an ascetic setting, not universal schedules.",
-    ],
     reflection:
       "Before intensifying a practice, ask which variable you are changing, why that variable matters, and what evidence would show that the dose is too large.",
     relatedNodes: ["lawful", "measure", "gradualism", "discipline"],
@@ -319,11 +304,6 @@ const book23Base: Chapter[] = [
     formalTitle: "The variance in the rule and merit of hunger according to circumstances",
     overview:
       "Ghazali states that the ultimate aim in character and action is the middle. The best condition for a balanced person is neither heaviness from fullness nor pain that makes hunger itself the center of attention. Corrective pressure may lean harder against an unruly appetite, but people and states differ, and the pressure is not the destination.",
-    points: [
-      "Praise of extreme hunger can serve as counter-pressure because ordinary appetite already pulls strongly toward satiety.",
-      "The balanced state leaves the person free for worship and thought rather than preoccupied by either fullness or hunger.",
-      "A stronger correction may be temporary when appetite is dominant, and it should ease when balance is restored.",
-    ],
     reflection:
       "Ask whether the current correction still restores freedom or whether it has become a new source of fixation. The same practice can change meaning as the condition changes.",
     relatedNodes: ["moderation", "measure", "discipline", "attention"],
@@ -414,11 +394,6 @@ const book23Base: Chapter[] = [
     formalTitle: "Ostentation in renouncing desirable foods and eating frugally",
     overview:
       "Ghazali warns that restraint can be captured by the desire to appear restrained. One person hides continued indulgence while performing austerity in public. Another truly abstains but delights in being known for it, exchanging appetite for food for the more dangerous appetite for status.",
-    points: [
-      "Private indulgence paired with public austerity divides the actual state from the performed image.",
-      "Real abstinence can still become corrupted when public recognition is the hidden reward.",
-      "Truthfulness about one's actual condition is safer than performing a spiritual rank one has not attained.",
-    ],
     reflection:
       "If no one could know about a restraint, would its meaning, intensity, or attractiveness change? The answer can reveal which appetite is being fed.",
     relatedNodes: ["intention", "reputation", "discipline", "truthfulness"],
@@ -514,11 +489,6 @@ const book23Base: Chapter[] = [
     formalTitle: "The discourse on sexual desire",
     overview:
       "Ghazali gives sexual desire a proper place and a limit. He identifies pleasure as an analogy for promised delight and desire as a means for continuation of progeny. The praised condition is neither excess nor absence, but a power moderated under reason and religious law. He emphasizes intervention at the early stages of gaze and thought before attachment becomes established.",
-    points: [
-      "The faculty is not treated as evil simply because it exists; Ghazali names functions it serves.",
-      "Both excess and deficiency can miss the fitting condition, while moderation means obedient rather than ruling desire.",
-      "Early attention matters because an established attachment is harder to reverse than an initial gaze or thought.",
-    ],
     reflection:
       "Map the earliest point at which attention becomes voluntary reinforcement. Earlier recognition usually leaves more room for a calm and proportionate choice.",
     relatedNodes: ["desire", "moderation", "gaze", "attention"],
@@ -609,11 +579,6 @@ const book23Base: Chapter[] = [
     formalTitle: "What the aspirant must observe in renouncing or undertaking marriage",
     overview:
       "The final section addresses the murid, an aspirant within a classical ascetic path. Ghazali weighs whether marriage would distract a beginning aspirant or protect a person who cannot guard gaze and thought. The decision turns on actual condition, and marriage brings duties of intention, good conduct, and fulfillment of rights.",
-    points: [
-      "This is counsel for a particular ascetic audience, not a universal ruling that every reader should copy.",
-      "Ghazali names hunger, lowering the gaze, and absorbing occupation as supports before considering marriage for an ungovernable desire.",
-      "If marriage is undertaken, its ethical obligations and the rights of another person cannot be treated as a mere technique for self-management.",
-    ],
     reflection:
       "A remedy that involves another person's life must be judged not only by what it solves for the self, but also by the rights and responsibilities it creates.",
     relatedNodes: ["aspirant", "gaze", "marriage", "rights"],

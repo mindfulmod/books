@@ -40,7 +40,8 @@ export type Chapter = {
   shortTitle: string;
   formalTitle: string;
   overview: string;
-  points: string[];
+  /** Legacy summary bullets. Used only by the original /isfahan route; the reader builds from `deep`. */
+  points?: string[];
   reflection: string;
   relatedNodes: string[];
   deep?: DeepReading;

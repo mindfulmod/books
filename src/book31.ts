@@ -29,7 +29,6 @@ const makeChapter = (seed: Seed): Chapter => ({
   shortTitle: seed.shortTitle,
   formalTitle: seed.formalTitle,
   overview: seed.overview,
-  points: seed.moves.slice(0, 3).map((move) => move.body),
   reflection: seed.reflection,
   relatedNodes: seed.nodes,
   visualModel: seed.model,

@@ -6,7 +6,7 @@ type Seed = { id: number; shortTitle: string; formalTitle: string; overview: str
 const part = (id: number) => (id <= 7 ? "the opening, on the levels of purity" : id <= 11 ? "the first division, purity from filth" : "the remaining divisions of outward purity");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
-  points: seed.moves.slice(0, 3).map((m) => m.body), reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
   deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
