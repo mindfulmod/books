@@ -61,6 +61,9 @@ export const book28Chapters: Chapter[] = [
       { title: "Separate result from pursuit", body: "Getting known because you taught or served where it was needed, without going after it, is not the same thing as building a name on purpose." },
       { title: "Trace the burden", body: "A public name creates new dependence on opinion, protection of image, and fear of falling from the position already gained." },
       { title: "Return to function", body: "The work should remain intelligible through the good it serves even if recognition is reduced, delayed, or transferred to another person." },
+      { title: "Note where the fault is located", body: "The distinction the book opens on is between an outcome and a pursuit. Becoming known because you taught, or served where the need was, is not the fault — the name arrived and nothing was done to fetch it. What is censured is the appetite for expansion of one's name in other people's minds, which is a project rather than a result, and which can run underneath work that looks identical from outside." },
+      { title: "Take the test at the end", body: "And the test offered is the only one that separates them reliably: would the work still make sense to you if the recognition were reduced, delayed, or given to somebody else? That is answerable in advance and it does not require diagnosing your own sincerity. If the act stays intelligible through the good it serves, it was the good. If it collapses, something else was holding it up." },
+      { title: "See what the burden actually is", body: "And the cost is described as a new set of dependencies rather than as a sin. A public name has to be maintained: opinion has to be tracked, the image protected, and there is now a height to fall from. None of that existed before, none of it serves the work, and all of it arrives automatically with the name — which is why the next section can praise obscurity without praising idleness." },
     ],
     closer: [
       { title: "Unavoidable visibility", body: "He accepts that teaching, putting things right, and carrying public responsibility will make somebody known. The question to ask is which way round it runs: are you visible because you are useful, or are you busy because it keeps you visible?" },
@@ -82,6 +85,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Recover ordinary action", body: "A person can serve, worship, learn, and repent without turning each act into evidence for a public identity." },
       { title: "Accept hidden fruit", body: "The good of an act need not be completed by human recognition when its true object is already present." },
       { title: "Keep duty intact", body: "Obscurity is praiseworthy only while it does not become an excuse for abandoning obligations that genuinely require appearing." },
+      { title: "Note what fewer observers actually buys", body: "The benefit is stated in terms of attention rather than of virtue, which makes it checkable. Fewer people watching means fewer moments spent calculating who will approve, who will object, and what any of it does to your standing — and those moments are real, they occupy the same attention that everything else in the quarter is competing for. Obscurity is being recommended as the removal of a tax." },
+      { title: "Take the qualification seriously", body: "And the qualification at the end is what keeps this from becoming a licence. Obscurity is praiseworthy only while it does not become the reason for dropping obligations that genuinely require a person to appear — teaching where teaching is needed, testifying, taking a responsibility nobody else will take. Which means a man can use the virtue of this section to commit the failure the book on enjoining right described, and the section closes that door as it opens." },
     ],
     closer: [
       { title: "Safety is not rank", body: "Choosing a safer condition is not a claim of inward superiority. A hidden person can still perform inwardly for an imagined audience." },
@@ -103,6 +108,9 @@ export const book28Chapters: Chapter[] = [
       { title: "See the instability", body: "Because the possession lives in changing hearts, it requires repeated performance and remains vulnerable to rumor, criticism, and replacement." },
       { title: "Notice the reach", body: "Standing can procure service, access, protection, and even wealth, making it a particularly attractive form of power." },
       { title: "Restore proportion", body: "Only the social standing actually needed for lawful life and service should be treated as a means rather than a final acquisition." },
+      { title: "Note where the possession is held", body: "The definition is the sharpest thing in the book: status is not held anywhere you can put it. It exists in other people's beliefs, their praise, their willingness to help and defer — which means the owner does not own it in any ordinary sense, and cannot inspect it, secure it, or count it. Everything strange about the appetite follows from that one structural fact." },
+      { title: "Follow the instability", body: "And because it lives in hearts that change, it requires continual performance to maintain and can be damaged by things the person never sees — a rumour, a criticism made elsewhere, somebody newer. So the holder is committed to indefinite upkeep of an asset he does not control, which is a considerably worse position than owning something that can simply be stolen." },
+      { title: "Take the point about reach", body: "And what makes it so attractive despite that is its reach: standing procures service, access, protection, and money — without any of them being paid for. It is the one possession that converts into all the others. Which is why the next section will argue it is loved more than wealth, and why the limit proposed here is only as much of it as lawful life and service actually require." },
     ],
     closer: [
       { title: "A distributed possession", body: "Status feels stable because many people carry it, yet that distribution also means its owner cannot fully control it." },
@@ -124,6 +132,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Follow belief into conduct", body: "The attributed quality changes how the observer speaks, assists, obeys, gives access, or yields priority." },
       { title: "Recognize partial need", body: "Life with others requires some credibility and mutual trust, so the category cannot be rejected without qualification." },
       { title: "Test truthfulness", body: "The most corrupt route fabricates or performs a quality that is not possessed so that its social effects can still be collected." },
+      { title: "Follow the two-step mechanism", body: "Status is analysed into two steps and the separation matters. First somebody attributes a quality to you — knowledge, usefulness, power, good character, lineage. Then that belief changes how he acts: how he speaks to you, what he gives you access to, whether he yields. So the standing is an effect of a belief, and the belief is about a quality. Nothing in the chain requires the quality to be real." },
+      { title: "Note where the corruption enters", body: "Which is exactly where the worst case sits: fabricating or performing a quality you do not have, so that its social effects can still be collected. That is theft rather than vanity — the returns are being drawn on a belief the person knows to be false. And it is distinguished from the ordinary need for credibility, which the section preserves, since nobody can live among others with no trust extended to him at all." },
     ],
     closer: [
       { title: "Why definition matters", body: "Once status is seen as belief producing conduct, the reader can inspect which perceived excellence is being advertised and what return is expected." },
@@ -145,6 +155,8 @@ export const book28Chapters: Chapter[] = [
       { title: "It appears less vulnerable", body: "A store of money can be taken at once, while a reputation seems distributed across many minds and therefore safer." },
       { title: "It reproduces socially", body: "A convinced admirer can carry the person's standing into new circles, multiplying it through praise." },
       { title: "Its weakness is concealed", body: "The same word of mouth that built your standing can pull it down — through one criticism, something new coming out, somebody competing with you, or people simply forgetting." },
+      { title: "Follow why status outranks wealth in the appetite", body: "Three reasons are given and each is a real advantage. Influence draws service, opportunity, gifts and protection without any of it being purchased. Money can be taken in a single night, while a reputation is spread across many minds and looks safer for being distributed. And it reproduces on its own — one convinced admirer carries it into rooms you have never entered, which is a return no amount of money generates by itself." },
+      { title: "Take the concealed weakness", body: "And the fourth observation undoes the second. The same distribution that makes a reputation look secure is what makes it impossible to defend: one criticism, one disclosure, one rival, or simply people's attention moving on, and the thing dissolves in exactly the minds that were holding it. So the appearance of safety is produced by the same feature that guarantees its fragility, which is why the appetite feels prudent and is not." },
     ],
     closer: [
       { title: "Leverage explains intensity", body: "The love of status is not only love of compliments. It is love of the many powers that favorable belief can unlock." },
@@ -166,6 +178,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Test dependence", body: "A perfection that disappears when observers, titles, wealth, or bodily power depart cannot be the stable completion the heart seeks." },
       { title: "Distinguish knowledge from control", body: "Knowledge and sound character form the person inwardly, while control over external things expands a domain that must still be lost." },
       { title: "Redirect aspiration", body: "The cure is not to desire nothing, but to desire qualities whose value is not borrowed from public assignment." },
+      { title: "Note that the desire is honoured first", body: "The treatment begins by conceding that wanting completion is right — the error is not the aspiration but taking a sign for the thing it points at. Which matters, because a correction that condemned the desire itself would be asking a person to want less than he is built to want, and the section instead asks him to want something that will actually answer it." },
+      { title: "Take the test of dependence", body: "And the test is clean: a perfection that vanishes when the observers, the titles, the money, or the bodily strength go was never the completion the heart was after — it was borrowed, and the loan is always called in. Which sorts the candidates without any moral vocabulary at all. Knowledge and sound character form the person; control over external things enlarges a domain that has to be surrendered, and the distinction is between what a man is and what he has been lent." },
     ],
     closer: [
       { title: "The counterfeit succeeds by resemblance", body: "Prestige feels like perfection because it gathers signs of reach, distinction, and completion around the self." },
@@ -187,6 +201,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Limit the measure", body: "The standing should not exceed what the task actually needs or become a general demand for distinction." },
       { title: "Guard the route", body: "Deceiving people about a quality not possessed is condemned because the social effects are taken through false belief." },
       { title: "Permit truthful necessity", body: "Accurately naming a real qualification can be allowed where the responsibility would otherwise be lost or misassigned." },
+      { title: "Note the three tests applied to standing", body: "Three questions are put to any piece of standing and they are independent. Is there a function that actually requires it — teaching, judging, organising, defending a claim. Is the amount no more than the function needs. And was it acquired by true belief rather than by deceiving people about a quality you lack. A man can pass two and fail the third, and the failure of the third is the one the book treats as theft." },
+      { title: "See what the last permission protects", body: "And the closing permission answers a real difficulty: sometimes a responsibility will go to the wrong person unless somebody states a genuine qualification. Accurately naming what you can do is allowed there — which prevents the doctrine from producing a world in which the competent are silent and the confident are appointed. The permission is bounded by the need, and it is truthfulness that makes it available at all." },
     ],
     closer: [
       { title: "Instrumental does not mean harmless", body: "Being visible because you have to be still leaves the heart exposed. Permission covers what you may do; it says nothing about why you are doing it." },
@@ -208,6 +224,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Possession of a heart", body: "The pleased person enjoys knowing that another person's inward judgment has become favorable." },
       { title: "Expected spread", body: "Praise from an influential person promises that the same image may travel into more hearts." },
       { title: "Displayed power", body: "The praise can feel like proof that the person saying it has registered your standing." },
+      { title: "Note how the four causes differ", body: "The four are genuinely different appetites wearing one face. One wants evidence that a hoped-for quality is real. One enjoys knowing that somebody's inward judgement has come round. One is looking past the speaker to where the praise will travel. And one takes the praise as proof that the person saying it has registered your position. Only the first is about the quality at all; the other three are about the audience." },
+      { title: "See why the first is the most treatable", body: "And the first is the one the next section will work on, because it can be examined. If the praise is evidence, then the question of whether the quality is actually there becomes urgent — and a man who wanted evidence should be more disturbed by praise he does not deserve than pleased by it. The other three do not care whether the quality is real, which is why they need a different remedy." },
     ],
     closer: [
       { title: "One sentence, four rewards", body: "One compliment can hand you all four at once — it settles your doubts, it feels like affection, it might travel, and it puts you above the person saying it. You get somewhere with this only once you name which of the four you were actually enjoying." },
@@ -229,6 +247,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Count present anxiety", body: "Status is not only a future loss. Preserving it creates present fear, compromise, monitoring, and rivalry." },
       { title: "Cut material leverage", body: "Contentment with one's lawful share reduces the need to control the people who possess opportunities and resources." },
       { title: "Practice anonymity", body: "Measured acts that surrender special recognition teach the heart that useful action can survive ordinary treatment." },
+      { title: "Note the argument from present cost", body: "The treatment does not rely only on the future. Status is not merely something that will be lost — holding it costs continuously, in the form of fear, monitoring, compromise and rivalry, all of which are being paid now. Which is the more persuasive half of the argument for most people, since a distant loss is easy to discount and a present anxiety is not." },
+      { title: "Take the two practical measures", body: "And the two practical measures work on the supply rather than the appetite. Contentment with a lawful share reduces the need to influence the people who control opportunities — cut the material leverage and much of the reason for cultivating standing goes with it. And deliberately doing things without special recognition teaches the heart, by demonstration rather than argument, that useful action survives ordinary treatment." },
     ],
     closer: [
       { title: "Knowledge needs exposure", body: "Understanding impermanence may remain abstract until the person actually experiences being overlooked, corrected, or treated as ordinary." },
@@ -250,6 +270,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Ask whether it endures", body: "A real quality can weaken, become corrupted by self-admiration, or fail before completion, so present praise does not guarantee an ending." },
       { title: "Ask who truly knows", body: "People see fragments and appearances, while hidden motive and final outcome are not secured by their judgment." },
       { title: "Use the information", body: "Keep whatever evidence helps preserve a good act, and release the reputational intoxication attached to the report." },
+      { title: "Follow the three questions", body: "The three questions dismantle the pleasure from three directions. Is the quality actually there — if not, the pleasure is resting on somebody's error. Will it last — a real quality can decay, or be spoiled by self-admiration, or fail before the end, so present praise settles nothing about the outcome. And does the person know — they see fragments and surfaces, while the motive and the ending are not in their view." },
+      { title: "Take the practical conclusion", body: "And the conclusion is unusually balanced for a treatment of this kind: keep whatever in the report helps preserve a good act, and let go of the intoxication. Praise does sometimes carry useful information — that something worked, that it was needed, that it should continue. The instruction separates the information from the feeling rather than requiring a person to refuse both." },
     ],
     closer: [
       { title: "False praise is not a gift", body: "Enjoying praise for something you do not actually have pushes you further from the truth about yourself, because what people believe about you starts standing in for the work of becoming it." },
@@ -271,6 +293,8 @@ export const book28Chapters: Chapter[] = [
       { title: "True and hostile", body: "Reject the malice without rejecting the fact. An enemy may still reveal what a friend avoided saying." },
       { title: "False accusation", body: "Do not make another person's error into an inward verdict. Respond according to justice, harm, and patience rather than wounded status alone." },
       { title: "Thank the disclosure", body: "A fault seen before death can still be treated; the exposure of what is real may therefore carry a benefit despite pain." },
+      { title: "Note how the cases are sorted", body: "Blame is sorted by two variables — whether it is true, and whether it is kindly meant — and each combination gets a different response. True and well-meant is a favour on both counts. True and hostile requires separating the malice from the fact, which is the hardest of the three and the one the book on knowing one's faults already recommended. And false accusation is answered by justice and patience rather than by wounded standing." },
+      { title: "Take the argument at the close", body: "And the closing argument is the one that changes the emotional register. A fault seen before death can still be treated — so the exposure of something real, however painful and however badly intended, has arrived while there is time. Which makes the informant, even a hostile one, the bearer of something valuable, and puts the pain in a different account from the information." },
     ],
     closer: [
       { title: "Separate content from carrier", body: "Hostility can contaminate how criticism is delivered without making every factual claim false." },
@@ -292,6 +316,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Restrained outside, moved inside", body: "Conduct remains steadier, but pleasure and pain still reveal dependence in the heart." },
       { title: "Equal response", body: "Praise and blame no longer decide what you do, and no longer unsettle you much inside." },
       { title: "Reversed concern", body: "Praise is feared as a trial, while true criticism is valued for revealing what still needs repair." },
+      { title: "Note that the scale has four rungs, not two", body: "The four states separate outward conduct from inward response, which produces a rung most people do not know exists. A man whose behaviour is steady under praise and blame may still be moved inwardly by both — and from the outside he is indistinguishable from somebody at the third state. Which means the visible improvement can be complete while the actual work has barely started." },
+      { title: "Take the fourth state seriously", body: "And the fourth is not a further degree of indifference but a reversal: praise is treated as a danger and true criticism as valuable, because one obscures what still needs repair and the other reveals it. Which is a coherent position rather than a pose — if the object is to be corrected, then the thing that shows you a fault is worth more than the thing that hides it." },
     ],
     closer: [
       { title: "A realistic horizon", body: "The text does not encourage easy claims to the highest state. It indicates that people like the author and reader may realistically work toward outward steadiness while continuing inward treatment." },
@@ -313,6 +339,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Locate the human audience", body: "The person wants observers to form a favorable belief about devotion, restraint, knowledge, or character." },
       { title: "Name the sought return", body: "That belief is expected to yield esteem, access, trust, protection, service, or another social benefit." },
       { title: "Judge with precision", body: "Legal and moral detail varies by act, intention, and purpose, so the app maps the structure without pronouncing on a reader's sincerity." },
+      { title: "Note the structure being described", body: "Ostentation is analysed into three parts and all three have to be present. There is an act that looks devotional or morally serious. There is an audience whose favourable belief is wanted. And there is a return expected from that belief — esteem, access, trust, protection, service. Remove any one and it is something else, which is why the diagnosis has to be structural rather than a matter of how a person feels while acting." },
+      { title: "See why the treatment stops short of verdicts", body: "And the book is careful about what it will not do. The legal and moral detail varies by the act, by the intention and by the purpose sought, so the structure can be mapped while the question of any particular person's sincerity is left where it belongs. Which is the same restraint the book on the remembrance of death applied to the question of anybody's fate." },
     ],
     closer: [
       { title: "Why worship matters", body: "Using an act that belongs to devotion as currency for human hearts joins sacred appearance to worldly acquisition." },
@@ -334,6 +362,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Attire and speech", body: "Clothing, vocabulary, tone, remembered reports, and public counsel can be shaped to signal a desired religious identity." },
       { title: "Action", body: "Praying, reciting, giving, helping, keeping your composure — any of them can be quietly adjusted when somebody is watching: done slower, done more completely, or done where it will be seen." },
       { title: "Associates", body: "Visitors, teachers, students, companions, and prestigious relationships can be displayed as borrowed evidence of rank." },
+      { title: "Note how wide the five channels are", body: "The five channels cover essentially everything a person presents. The body can be arranged to imply fasting, night vigil, grief or hard religious labour. Clothing, vocabulary, tone and the reports one has ready can signal an identity. Actions can be adjusted. And other people — teachers, students, visitors, prestigious connections — can be displayed as borrowed evidence. There is no part of a person's public existence that is not a possible instrument." },
+      { title: "Take the point about adjusted action", body: "And the third channel is the one that catches the sincere. Praying, reciting, giving, helping, keeping your composure — the act is real and would have happened anyway, and it is quietly done more slowly, more completely, or somewhere it will be seen. Nothing false has been asserted and no act has been manufactured. What changed is a detail nobody would notice, including, usually, the person making the change." },
     ],
     closer: [
       { title: "A taxonomy of vehicles", body: "The five forms identify where display travels. They do not make every austere body, garment, eloquent statement, careful act, or respected relationship blameworthy." },
@@ -355,6 +385,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Inspect the displayed object", body: "Display may attach to the root act, to its qualities and completions, or to external additions that make it more visible." },
       { title: "Inspect the sought purpose", body: "The social return may enable wrongdoing, secure a permissible worldly benefit, or simply prevent being seen as ordinary or negligent." },
       { title: "Keep combinations visible", body: "The three pillars can combine in many ways, so one label should not erase the difference between initiation, enhancement, and later pleasure." },
+      { title: "Note the three pillars and why they matter separately", body: "The three questions are about different moments and they come apart. Would the act have started at all without observers — that is about initiation. Is the display attached to the act itself, to its qualities, or to additions that make it more visible — that is about what is being shown. And what return is being sought — enabling something wrong, securing a permitted worldly benefit, or merely avoiding being thought ordinary. A person can be clean on one and compromised on another." },
+      { title: "Take the third pillar's mildest case", body: "And the mildest of the sought purposes is the most common and the least examined: not wanting to be seen as negligent or unremarkable. There is no ambition in it and no benefit collected — the man simply does not want a certain impression to form. It is still the structure, and naming it is what keeps the treatment from applying only to obvious self-promotion." },
     ],
     closer: [
       { title: "Four strengths of intention", body: "Audience may be everything, stronger than devotion, equal to it, or only an added strengthening of an already sufficient sincere motive." },
@@ -376,6 +408,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Audience as energy", body: "A person may act alone yet become noticeably quicker, longer, or more careful when someone appears." },
       { title: "Pleasure at disclosure", body: "The act may remain unchanged while later discovery produces a pleasure that reveals appetite for favorable belief." },
       { title: "Expected treatment", body: "A hidden deed may still create an inward claim to respect, service, greeting, priority, or tolerance from people who do not even know it." },
+      { title: "Note the descending visibility of the four traces", body: "The four traces run from obvious to nearly undetectable. An act that would not happen without an observer. An act done alone that becomes faster, longer or more careful when somebody appears. An act unchanged, followed by pleasure when it comes out. And a hidden deed that quietly creates an expectation of being treated better by people who do not know about it. Each is harder to catch than the last, and the last requires no audience at all." },
+      { title: "Take the fourth trace seriously", body: "And the fourth is the strangest and the most revealing. A man does something nobody sees, and afterwards finds he expects a certain respect, a certain priority, a certain tolerance — from people who have no idea. The claim is entirely internal and cannot be collected, which shows what was actually wanted: not the benefit, but the standing itself, held privately as a fact about oneself." },
     ],
     closer: [
       { title: "Four sound reasons for joy", body: "Ghazali also describes joy in God's concealment and disclosure, hope of similar mercy later, hope that others imitate good, and joy at righteous affection. The last is tested by equal happiness when another person receives the praise." },
@@ -397,6 +431,8 @@ export const book28Chapters: Chapter[] = [
       { title: "During the act", body: "If the audience changes continuation, quality, length, or effort, the new motive has entered the living structure of the deed." },
       { title: "After the act", body: "Simple pleasure at accidental disclosure does not automatically rewrite an originally sincere act, though it can expose a condition needing treatment." },
       { title: "Seek qualified detail", body: "Questions of invalidation, reward, and legal effect require the full source and qualified scholarship. The reader can still observe timing and influence responsibly." },
+      { title: "Note why timing is the organising question", body: "Sorting by before, during and after is what makes the analysis usable, because the same pleasure means different things at different moments. A motive that determines whether the act begins is part of the act. A motive that changes how it continues has entered it midway. And pleasure at an accidental disclosure afterwards arrives when the deed is already complete, and cannot reach back into it." },
+      { title: "Take the distinction that protects the scrupulous", body: "And the distinction between a motive and a thought is the one that saves a careful person from paralysis. A thought about how this will look arrives unbidden in nearly everybody, and its arrival is not acceptance of it. What matters is whether it was taken up and given power over the act. A reader who treats every such arrival as evidence of insincerity will be unable to do anything, which is a worse outcome than the fault being treated." },
     ],
     closer: [
       { title: "Timing prevents collapse", body: "Initiation, continuation, and aftermath are morally connected but not identical. A later feeling should not be casually projected backward as the sole cause." },
@@ -418,6 +454,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Notice the sequence", body: "An audience is noticed, desire for its response appears, pleasure follows, and resolve may then redirect the act." },
       { title: "Interrupt before resolve", body: "The person answers the suggestion with dislike and refusal rather than treating its mere arrival as defeat." },
       { title: "Remain watchful", body: "Trusting God and staying wary of a temptation that keeps coming back are not in tension. Watching for it is one of the means of protection, not a failure to rely." },
+      { title: "Follow the four-stage sequence", body: "The sequence is the practical core of the treatment: an audience is noticed, a desire for their response appears, pleasure follows, and only then may resolve redirect the act. Four stages, and the fault is completed at the fourth. Which means there are three earlier points at which nothing has yet gone wrong — and locating them is what allows a person to intervene instead of concluding, at the first stage, that he is a hypocrite." },
+      { title: "Take the point about watchfulness and reliance", body: "And the closing note answers an objection the treatment invites. Trusting God and staying alert to a temptation that keeps returning are not in tension — the watching is one of the means of protection rather than a failure to rely. Which is the same position the book on trust in God will take at length: the means are part of what is relied upon, not a substitute for reliance." },
     ],
     closer: [
       { title: "Roots and moments", body: "Long-term attachment makes the temptation attractive, while moment-to-moment vigilance determines whether the attraction governs a particular act." },
@@ -439,6 +477,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Test personal capacity", body: "The person must be able to notice and resist the appetite for distinction rather than assuming a good outcome purifies every motive." },
       { title: "Prefer safer routes", body: "When imitation does not require identity, the example can often be shared without centering the actor." },
       { title: "Guard later narration", body: "Telling people about completed acts creates a fresh performance with its own temptations, even if the original deed was concealed." },
+      { title: "Note how narrow the permission is", body: "The permission to let a good act be seen is fenced by two independent conditions, and both have to hold. There must be a plausible benefit — teaching or encouraging somebody — that could not be got as well another way. And the person must be able to notice and resist the appetite for distinction, rather than assuming a good purpose sterilises his motives. The second condition is about him, and it is the one people skip." },
+      { title: "Take the two practical cautions", body: "And two practical points follow. Where imitation does not require knowing who did it, the example can usually be shared without the actor at the centre — which satisfies the benefit while removing the exposure. And narrating a completed act is a fresh performance with its own temptations, even where the original was genuinely hidden. The concealment is not banked; it can be spent afterwards." },
     ],
     closer: [
       { title: "Public benefit and private risk coexist", body: "The chapter does not demand a fantasy of zero exposure. It weighs likely benefit against a danger the person must continue monitoring." },
@@ -460,6 +500,9 @@ export const book28Chapters: Chapter[] = [
       { title: "Protect others", body: "Keeping it quiet can stop the behaviour becoming ordinary, stop others copying it, stop a scandal, and spare people who had nothing to do with it." },
       { title: "Repair what requires repair", body: "Keeping a fault private does not cancel anything else you owe: you still repent, still pay back what you took, still answer for it, and still tell anyone whose rights or safety depend on knowing." },
       { title: "Do not fabricate virtue", body: "Remaining silent about a fault differs from arranging signs that positively persuade people of a piety one does not possess." },
+      { title: "Note the reasons for concealing a fault", body: "The permission to keep a private sin private is grounded in effects rather than in comfort. Disclosure can make a behaviour look ordinary, can supply somebody with the idea, can create a scandal, and can damage people who had nothing to do with it. None of those is about protecting the person who sinned — which is what distinguishes this from simply hiding." },
+      { title: "Take the list of what concealment does not cancel", body: "And the section is careful that nothing else is discharged by it. Repentance still stands; what was taken still has to be returned; the answering still has to happen; and anybody whose rights or safety depend on knowing still has to be told. Which leaves concealment covering exactly one thing — the public identity — and none of the substance." },
+      { title: "See the line drawn at the end", body: "And the last distinction is the one that keeps this from becoming licence for the display treated in the rest of the book. Staying silent about a fault is one thing; arranging signs that persuade people of a piety you do not have is another. The first withholds information and the second supplies false information, and the whole book turns on that difference." },
     ],
     closer: [
       { title: "Privacy is not image fraud", body: "The chapter protects a field for repentance and restraint without converting every non-disclosure into a claim of perfection." },
@@ -481,6 +524,8 @@ export const book28Chapters: Chapter[] = [
       { title: "Treat the motive", body: "Continue the good while resisting the desire for praise rather than granting that desire power to cancel the act." },
       { title: "Examine awakened zeal", body: "Seeing others can remind, encourage, and activate a sincere capacity that was dormant rather than manufacture a false purpose." },
       { title: "Test what remains", body: "After the audience leaves, observe whether the awakened effort continues in some fitting form." },
+      { title: "Note the refusal to let suspicion cancel the act", body: "The instruction is firm and it corrects a genuine over-correction. If an act is sound and either required or beneficial, the possibility that somebody will suspect your motives is not a reason to drop it — because that would hand the desire for praise the power to cancel good deeds, which is a stranger victory for it than being obeyed. The prescription is to continue the act and treat the motive, in that order." },
+      { title: "Take the analysis of awakened zeal", body: "And the case of zeal awakened by watching others is handled with more care than it usually gets. Seeing somebody else act can remind, encourage, and switch on a sincere capacity that was simply dormant — which is not the manufacture of a false purpose. The test proposed is temporal rather than introspective: after the audience has gone, see whether the effort continues in some fitting form." },
     ],
     closer: [
       { title: "Audience rule has two faces", body: "Performing for praise and abandoning good from fear of accusation both let human judgment decide the act." },
@@ -502,6 +547,8 @@ export const book28Chapters: Chapter[] = [
       { title: "During", body: "Watch for the audience changing energy, pace, completion, beauty, or the imagined reward of the act." },
       { title: "After", body: "Do not reopen the deed through unnecessary disclosure, narrative embellishment, or expectation that people should somehow repay it." },
       { title: "Return", body: "If a hidden trace appears, treat it with renewed intention and humility rather than either self-certification or despair." },
+      { title: "Note what each of the three moments asks", body: "The three moments ask three different questions and none of them is how sincere do I feel. Before: why should this act exist, and can you be content that God knows it if nobody does. During: is the audience changing your energy, pace, completeness, or the reward you are imagining. After: are you reopening the deed by telling people, embellishing it, or expecting to be repaid. Each is a matter of observable fact rather than of self-assessment." },
+      { title: "Take the closing instruction", body: "And the closing instruction rules out both of the wrong responses to finding something. Self-certification — deciding you are clean and need not look again — and despair, deciding the act was worthless and you are a hypocrite. What is prescribed instead is renewed intention and humility, which treats a trace of display as an occasion for work rather than as a verdict. Which is how the whole quarter handles every fault it names." },
     ],
     closer: [
       { title: "The act is longer than its performance", body: "Preparation and aftermath belong to moral vigilance because motive can enter before the first movement or after the outward deed has ended." },
