@@ -2239,7 +2239,7 @@ return (
                   <BookOpenText size={21} weight="duotone" />
                   <p><strong>Grounded to Book {book.id}, section {chapter.id}</strong><span>{chapter.formalTitle}</span></p>
                 </div>
-                <p>This prototype uses original English synthesis. It is designed to preserve the section's distinctions while guiding the reader back to primary and published texts.</p>
+                <p>This edition uses original English synthesis. It is designed to preserve the section's distinctions while guiding the reader back to primary and published texts.</p>
                 <div className="source-anchor-note">
                   <span>Source anchor</span>
                   <strong>{deepReading.sourceAnchor}</strong>

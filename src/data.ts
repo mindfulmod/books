@@ -420,7 +420,7 @@ export const quarters: Quarter[] = [
 export const contentSources = [
   {
     label: "Primary Arabic text",
-    note: "Public text used to verify the sequence, analogies, and conceptual claims in this prototype.",
+    note: "Public text used to verify the sequence, analogies, and conceptual claims in this edition.",
     url: "https://ar.wikisource.org/wiki/%D8%A5%D8%AD%D9%8A%D8%A7%D8%A1_%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%AF%D9%8A%D9%86/%D9%83%D8%AA%D8%A7%D8%A8_%D8%B4%D8%B1%D8%AD_%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8_%D8%A7%D9%84%D9%82%D9%84%D8%A8",
   },
   {
