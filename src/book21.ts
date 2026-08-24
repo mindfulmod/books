@@ -1,6 +1,6 @@
 import { conceptNodes } from "./data";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { MirrorSubject, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { MirrorSubject, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 import { book21Journeys } from "./book21journeys";
 
 type Seed = {
