@@ -50,7 +50,7 @@ const pair = (title: string, caption: string, items: Array<[string, string, "sup
   kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
 });
 
-export const book28Chapters: Chapter[] = [
+const book28Base: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "When being known becomes a goal", formalTitle: "The censure of fame and spreading renown",
     overview: "Ghazali opens by warning against deliberately seeking a name that circulates among people. The danger is not that every beneficial person becomes unknown. It is that being known becomes a reward pursued for itself and begins governing religious work.",
@@ -566,6 +566,89 @@ export const book28Chapters: Chapter[] = [
     model: chain("One act through three times", "Vigilance surrounds the deed without replacing it.", [["Before", "Purpose is named and divine knowledge is enough.", "support"], ["During", "Audience effects are noticed and refused authority.", "balance"], ["After", "Disclosure and social claims are restrained.", "balance"], ["Return", "Hidden traces prompt renewal rather than despair.", "support"]]),
   }),
 ];
+
+const book28Deepening: Partial<Record<number, { title: string; body: string }>> = {
+  2: {
+    title: "What obscurity is protecting",
+    body: "The gain is not that fewer people know the person; it is that fewer decisions have to pass through an imagined audience. Service can then be measured by whether it helped, worship by whether it was faithfully completed, and repentance by whether the fault was left behind. Obscurity removes some of the social calculations surrounding these acts. It does not perform the acts, purify their motives, or excuse a duty that requires appearing.",
+  },
+  3: {
+    title: "Why status demands continual work",
+    body: "Money can remain where it was placed, but standing lives in judgments that are always being revised. The person who treats those judgments as a possession must therefore keep supplying evidence for them: new usefulness, visible loyalty, distinction, or success. This explains why the appetite does not settle after recognition arrives. The thing acquired is made of attention, so maintaining it requires more attention from both the audience and the person seeking it.",
+  },
+  4: {
+    title: "The definition exposes the transaction",
+    body: "Once status is divided into belief and social effect, a useful diagnostic appears. Ask which excellence people are being encouraged to believe in, whether it is real, and what their belief is expected to produce. The return may be praise, access, obedience, protection, or preference. This does not condemn ordinary credibility. It distinguishes the amount of trust a responsibility needs from an image designed to collect benefits beyond that responsibility.",
+  },
+  5: {
+    title: "Why reputation can feel like a better investment",
+    body: "Status appears to solve several problems at once. It can open doors, attract assistance, protect material interests, and spread without the person being present. That reach helps explain why attachment to reputation can survive even when attachment to money has weakened. Yet every benefit still depends on other people continuing to hold and transmit a favorable judgment. The apparent reserve is therefore powerful in use but never secure in ownership.",
+  },
+  6: {
+    title: "Redirecting rather than shrinking aspiration",
+    body: "Ghazali's argument does not ask the reader to become indifferent to excellence. It asks whether the excellence belongs to the person or merely surrounds the person. Knowledge and character remain when a title is removed; control and admiration do not. The practical redirection is therefore from collecting signs of completion to acquiring qualities that actually form judgment, intention, and conduct. The desire for perfection is retained while its object is corrected.",
+  },
+  7: {
+    title: "Three limits on useful standing",
+    body: "Useful standing is bounded by function, truth, and measure. It must answer a responsibility that really needs social trust; it must rest on qualities actually possessed; and it should not keep expanding after the task can be fulfilled. These limits also explain why necessity does not settle the inward question. A public role may be fully permitted while praise, control, or fear of losing position is quietly becoming its private reward.",
+  },
+  9: {
+    title: "Why treatment needs both understanding and practice",
+    body: "Knowing that reputation is unstable can remain emotionally weak while a person continues arranging life around it. Corrective practice supplies the missing evidence: being overlooked without withdrawing, being corrected without retaliation, and serving without ownership of the credit. These experiences reveal the exact dependence that abstract reflection identified. Their purpose is not humiliation or cultivated eccentricity, but learning that useful action and personal worth do not collapse when special treatment disappears.",
+  },
+  11: {
+    title: "Use criticism without surrendering judgment",
+    body: "The three-way division prevents two opposite errors. Rejecting a true criticism because its speaker is hostile loses information that can still repair a fault. Accepting a false criticism as a verdict lets another person's words replace evidence. The task is to separate factual content, intention, and response: correct what is true, refuse what is false, and treat the heart's need to remain publicly flawless in either case.",
+  },
+  13: {
+    title: "The transaction hidden inside the form",
+    body: "An outward act of worship can remain unchanged while the expected recipient of its social effect changes. The act is directed to God in form, yet it is also being used to produce admiration, trust, or rank in observers. That is why visibility alone cannot diagnose ostentation and privacy alone cannot cure it. The decisive issue is whether human standing has become a return for which the devotional act is being performed.",
+  },
+  14: {
+    title: "How the five vehicles help diagnosis",
+    body: "The taxonomy moves attention away from one stereotyped image of public worship. A body can be arranged to suggest spiritual effort; clothing can signal austerity; speech can advertise knowledge; action can be adjusted for witnesses; and respected company can lend borrowed standing. None of these signs proves a motive. Their value is diagnostic: they show the places where a person may begin managing what observers infer about an inward life they cannot see.",
+  },
+  15: {
+    title: "Why the three pillars must stay separate",
+    body: "A mixed act cannot be understood by asking only whether an audience mattered. One must ask what initiated the act, which part was changed for observers, and what worldly return was sought. An audience might initiate the whole deed, add polish to an act that would already occur, or affect only an optional extension. Keeping those cases separate prevents a passing social motive from being treated as identical to a deed built around display from the start.",
+  },
+  16: {
+    title: "The hidden bargain can survive secrecy",
+    body: "A person may conceal the deed and still expect its effects: unusual consideration, instinctive deference, or gratitude that nobody has been told to give. This is more hidden than enjoying later disclosure because no public claim has been spoken. The claim exists as resentment when ordinary treatment continues. That resentment can reveal that the private act had quietly created a debt in the person's imagination, even though the supposed debtor never knew of it.",
+  },
+  17: {
+    title: "A timeline is safer than a single verdict",
+    body: "The before-during-after analysis keeps distinct questions from collapsing into one. Before the act, ask what made it begin. During it, ask whether being seen altered continuation or form. After it, ask whether later pleasure was sought and whether it reopened the deed through disclosure. This timeline supports honest observation without pretending to settle the detailed questions of validity and reward that Ghazali treats with greater legal and theological precision.",
+  },
+  18: {
+    title: "Root work changes what the moment offers",
+    body: "Momentary resistance is harder when praise, fear of criticism, or material dependence has been rehearsed for years. Root treatment reduces the attractiveness of the suggestion before it arrives; live vigilance stops a remaining suggestion from becoming resolve. Neither scale replaces the other. A person can understand the roots yet obey the thought in the moment, or resist many moments while leaving the deeper appetite untouched and ready to return.",
+  },
+  19: {
+    title: "A narrow permission, not a general strategy",
+    body: "Public example is justified by a likely benefit to others, not merely by the possibility that somebody somewhere might be inspired. The person must also be able to monitor the private risk, and the visibility should be no greater than the benefit requires. If the example works without identifying the actor, that route preserves the teaching while reducing exposure. The permission therefore remains tied to purpose, proportion, and continuing watchfulness.",
+  },
+  21: {
+    title: "Why stopping can serve the same audience",
+    body: "Praise can govern an act by making it attractive, while fear of being accused can govern it by making it shameful. In both cases the audience decides whether the good continues. Ghazali's answer is not to ignore motive, but to separate the two tasks: keep the sound or required act in place, then treat the desire for human approval within it. Abandonment would remove the field in which that treatment must be practiced.",
+  },
+  22: {
+    title: "One act, three opportunities for return",
+    body: "Vigilance before an act establishes its reason for existing. Vigilance during it protects its measure when difficulty or observation changes the emotional conditions. Vigilance afterward keeps a completed deed from becoming material for a new performance. At each point, discovering a mixed motive calls for renewed purpose rather than a final declaration of sincerity or hypocrisy. The practice is repeated correction across the act's whole life, not certainty about the hidden heart.",
+  },
+};
+
+export const book28Chapters: Chapter[] = book28Base.map((chapter) => {
+  const extra = book28Deepening[chapter.id];
+  if (!extra || !chapter.deep) return chapter;
+  return {
+    ...chapter,
+    deep: {
+      ...chapter.deep,
+      closeReading: [...(chapter.deep.closeReading ?? []), extra],
+    },
+  };
+});
 
 export const book28ConceptNodes: ConceptNode[] = [
   ["fame", "Fame", "A name becomes a reward", "Recognition begins governing which good acts feel worthwhile."],

@@ -58,7 +58,7 @@ const book24Base: Chapter[] = [
     misreading: "Do not reduce the opening to the slogan that silence is always morally superior. Ghazali's concern is governance of a dangerous power, not the removal of every duty to teach, advise, reconcile, testify, or comfort.",
     sourceAnchor: "Book 24, opening discourse on the danger of the tongue and the virtue of silence.",
     model: { kind: "spectrum", title: "Four fields of speech", items: [
-      { label: "Pure harm", body: "Where speech carries harm without a countervailing good, Ghazali's logic directs the person to silence.", role: "warning" },
+      { label: "Pure harm", body: "Where speech carries harm without an offsetting good, Ghazali's logic directs the person to silence.", role: "warning" },
       { label: "Mixed, harm heavier", body: "Where benefit and harm mix but harm is stronger, silence remains the safer judgment.", role: "warning" },
       { label: "Neither benefit nor harm", body: "Neutral excess consumes a finite life even when it does not directly injure another person.", role: "support" },
       { label: "Clear benefit", body: "Useful speech remains, although intention and hidden admixtures still require attention.", role: "balance" },

@@ -319,7 +319,7 @@ export const book32Chapters: Chapter[] = [
     overview: "The second pillar of gratitude asks what a blessing actually is. Ghazali sorts the field carefully, and the sorting is what makes the third pillar's argument possible.",
     thesis: "The second pillar asks what a blessing actually is, and the answer decides how much of your life counts as one.",
     moves: [
-      { title: "Begin with the broad sense", body: "Every good, pleasure, and happiness, indeed everything sought and preferred, is called a blessing. But the true blessing is the felicity of the hereafter, and other things are called so only by relation." },
+      { title: "Begin with the broad sense", body: "Every good, pleasure, and happiness — indeed, everything sought and preferred — can be called a blessing. But complete blessing is the lasting happiness of the hereafter. Other things are called blessings only in relation to that end." },
       { title: "Give the crucial division", body: "Worldly causes are mixed, their good blended with their harm. So blessings divide into the absolute, which is a blessing from every aspect, and the restricted, which is a blessing from one aspect and not another." },
       { title: "Sort by what things are wanted for", body: "Some things are preferred for themselves and not for anything else; some are sought only for something else, with no purpose in themselves at all, such as the two currencies; and some are sought both for themselves and for what they lead to, such as health." },
       { title: "Sort again by their qualities", body: "Goods divide again into the useful, the pleasant, and the beautiful, and Ghazali distinguishes the absolute, which gathers all these, from the restricted, which has some and not others, since many a useful thing is not pleasant." },
@@ -335,7 +335,7 @@ export const book32Chapters: Chapter[] = [
     reflection: "Take something you are grateful for and name the aspect in which it is not a blessing. Most worldly things have one.",
     audit: ["Which of my blessings are restricted?", "What is this good for, and what is it bad for?", "Am I treating a means as an end?", "Which useful things in my life are not pleasant, and how do I treat them?"],
     nodes: ["blessing", "absolute", "restricted"],
-    model: chain("Sorting the field", "Each division prepares the argument of the third pillar.", [["Broadly", "Everything sought and preferred is called a blessing.", "balance"], ["Truly", "The felicity of the hereafter; the rest are so called by relation.", "support"], ["Absolute", "A blessing from every aspect, without a harmful side.", "support"], ["Restricted", "A blessing in one aspect and a harm in another, as wealth is.", "warning"]]),
+    model: chain("Sorting the field", "Each division prepares the argument of the third pillar.", [["Broadly", "Everything sought and preferred is called a blessing.", "balance"], ["Completely", "The lasting happiness of the hereafter; the rest are called blessings by relation.", "support"], ["Absolute", "A blessing from every aspect, without a harmful side.", "support"], ["Restricted", "A blessing in one aspect and a harm in another, as wealth is.", "warning"]]),
   }),
   makeChapter({
     id: 13, shortTitle: "The gift of perceiving", formalTitle: "The sample of blessings: the causes of perception",
@@ -522,7 +522,7 @@ export const book32Chapters: Chapter[] = [
     reflection: "Notice whether you have quietly come to believe that difficulty is holier than ease, and where you learned it.",
     audit: ["Do I secretly rank hardship above well-being?", "What would I ask for if asking were allowed?", "Have I confused suspicion of comfort with preference for pain?", "What good has come from my difficulties, and does that make them better?"],
     nodes: ["blessing", "trial"],
-    model: pair("Ordering the two conditions", "The ordering is settled before the states are compared.", [["Blessing", "The better condition, and what the sample showed to be pervasive.", "support"], ["Trial", "Productive of good under patience, and not thereby the higher state.", "balance"]]),
+    model: pair("Ordering the two conditions", "The ordering is settled before the states are compared.", [["Blessing", "The better condition, and what the sample showed to be pervasive.", "support"], ["Trial", "Productive of good when met with patience, but not automatically the higher state.", "balance"]]),
   }),
   makeChapter({
     id: 21, shortTitle: "The plain answer", formalTitle: "Which is superior, patience or gratitude: the exposition by concession",

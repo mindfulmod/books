@@ -351,7 +351,7 @@ export const book17Instrument: Instrument = {
 export const book17Sources: SourceLink[] = [
   { label: "Primary Arabic text", note: "The complete public Arabic of Book 17 was read and used to establish the two chapters, the taxonomy of journeys, the manners of the sequence, and the technical requirements on a traveller.", url: "https://shamela.ws/book/9472/604" },
   { label: "The kinds of travel", note: "The passage naming travel a kind of movement and mixing, dividing every journey into flight or seeking, and setting out the branches of each.", url: "https://shamela.ws/book/9472/605" },
-  { label: "Travel in seeking knowledge", note: "The passage treating the first division of seeking, and its being obligatory or supererogatory according to the knowledge sought.", url: "https://shamela.ws/book/9472/605" },
+  { label: "Travel in seeking knowledge", note: "The passage treating the first division of seeking, and whether it is obligatory or voluntary according to the knowledge sought.", url: "https://shamela.ws/book/9472/605" },
   { label: "The manners of the journey", note: "The section giving the manners from the first rising to the last return, including the conduct of a travelling party.", url: "https://shamela.ws/book/9472/613" },
   { label: "What a traveller must learn", note: "The second chapter, on the dispensations of travel, the indicators of the direction of prayer, and the determining of the times.", url: "https://shamela.ws/book/9472/617" },
   { label: "The dispensations", note: "The passage naming two dispensations in purification and two in the obligatory prayer, each with the conditions attaching to it.", url: "https://shamela.ws/book/9472/618" },

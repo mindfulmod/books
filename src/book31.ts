@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { Journey, RepentanceSubject, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { ConceptLab, Journey, RepentanceSubject, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = {
   id: number;
@@ -366,7 +366,7 @@ export const book31Chapters: Chapter[] = [
     thesis: "Four classes of the repentant, each named by what happens after the next fall.",
     moves: [
       { title: "The first class", body: "Somebody who repents and stays straight for the rest of his life, makes up what he let slide, and never talks to himself about going back — apart from the slips nobody is free of. This is what gets called sincere repentance, and this is the settled soul that returns to its Lord content." },
-      { title: "The second class", body: "One who travels the road of uprightness in the main obediences and leaves all the great enormities, but is not free of sins that befall him, not deliberately and without a formed prior resolve; and whenever he falls he blames himself, regrets, grieves, and renews his resolve. This is the reproachful soul." },
+      { title: "The second class", body: "The second person follows the main obligations and avoids the gravest sins, but still falls into lesser wrongs without planning or prior resolve. Whenever he falls, he holds himself accountable, regrets what happened, grieves, and renews his resolve. This is the self-reproaching soul." },
       { title: "The third class", body: "One who repents, holds for a time, then is overcome in one or two appetites deliberately, while still keeping to the obediences and leaving much that he could do; afterwards he regrets and says he will repent and struggle, and his soul makes it fair to him and he defers day after day. This is the soul that makes things fair to itself." },
       { title: "The fourth class", body: "One who returns and does not regret, and here the deferral has stopped even pretending. This is the soul commanding to evil, and Ghazali places it outside the classes of the repentant proper." },
       { title: "Note that the classes are the souls of Book 21", body: "The four classes are the three names for the soul from the book on the heart, now sorted by what a person does after he falls. The settled soul returning to its Lord content; the reproachful soul that blames itself each time; the soul that makes things fair to itself; and the soul commanding to evil. Which means this section is not a moral league table — it is a diagnostic that tells a reader which of his own conditions he is in." },
@@ -405,7 +405,7 @@ export const book31Chapters: Chapter[] = [
     reflection: "Decide now what your first move will be the next time, since the decision is much harder to make in the hour itself.",
     audit: ["What did I do in the hour after the last lapse?", "Did I renew or did I reassess?", "What good act could I have put against it?", "Am I planning for recurrence or treating it?"],
     nodes: ["renewal", "recurrence"],
-    model: chain("The hour after", "Ghazali specifies the sequence because the hour itself is where it is hardest to think.", [["It happened", "Deliberately or by being overcome; the class matters less than the next step.", "warning"], ["Renew at once", "The repentance is remade rather than reconsidered.", "support"], ["Put a good deed against it", "Driving off the bad with the good, effacing what can be effaced.", "support"], ["Refuse both exits", "Neither despair nor the promise to repent later.", "balance"]]),
+    model: chain("The hour after", "Ghazali specifies the sequence because the hour itself is where it is hardest to think.", [["It happened", "Deliberately or by being overcome; the class matters less than the next step.", "warning"], ["Renew at once", "The repentance is remade rather than reconsidered.", "support"], ["Put a good deed against it", "Answer the bad with good and erase what can be erased.", "support"], ["Refuse both exits", "Neither despair nor the promise to repent later.", "balance"]]),
   }),
   makeChapter({
     id: 16, shortTitle: "Why the knot holds", formalTitle: "The remedy of repentance, and the causes of persistence",
@@ -637,6 +637,57 @@ export const book31RepentanceSubjects: RepentanceSubject[] = [
   },
 ];
 
+const book31ConceptLab: ConceptLab = {
+  kind: "arcade",
+  title: "Repentance has a load-bearing order",
+  note: "Move through one concrete case from recognition to repair. Every bay remains visible because a later act without the earlier cause, or an inward return without past repair, leaves the sequence incomplete.",
+  prompt: "Walk one return from first recognition to what remains owed",
+  architecture: {
+    form: "Double-arched hypostyle bays",
+    reference: "Great Mosque of Córdoba",
+    note: "Córdoba's repeating double arches supply the visual rhythm for ordered stages. The sequence is an editorial learning aid, not an image used in the source text.",
+    url: "https://whc.unesco.org/en/list/313",
+  },
+  scenes: [
+    {
+      id: "private", label: "A private wrong", chapterId: 4,
+      setup: "Use a wrong that has not created a claim held by another person. The last bay may be clear, but the other four still have to be present.",
+      takeaway: "Repentance is not one emotion. Ghazali presents knowledge producing regret, and regret producing action directed toward present, future, and past.",
+      steps: [
+        { id: "knowledge", label: "Knowledge", micro: "See the harm", body: "The beginning is knowledge of the act's harm, not merely familiarity with a rule. This perception is what can produce the next part.", role: "support" },
+        { id: "regret", label: "Regret", micro: "Grieve the loss", body: "Regret is pain for the harm as one's own act. Fear of discovery or damage to reputation has a different object and cannot stand in for it.", role: "support" },
+        { id: "present", label: "Present", micro: "Stop now", body: "The action turns first toward the present: the wrong is left now, rather than scheduled to be left when conditions become easier.", role: "support" },
+        { id: "future", label: "Future", micro: "Resolve for life", body: "The same action faces forward as a resolve not to return. Cutting off the occasions that feed a habit gives that resolve a practical form.", role: "balance" },
+        { id: "past", label: "Past", micro: "Check what remains", body: "If no right is owed to another person, do not manufacture one. The past-facing limb is clear only after that question has honestly been asked.", role: "balance" },
+      ],
+    },
+    {
+      id: "right-owed", label: "A right is owed", chapterId: 12,
+      setup: "Now use money, credit, work, or another right taken from a person. The inward return and the person's continuing claim must be held together.",
+      takeaway: "A return toward God does not erase a right held by another person. Repair belongs inside the account of repentance rather than being an optional consequence after it.",
+      steps: [
+        { id: "knowledge", label: "Knowledge", micro: "Name who lost what", body: "Knowledge becomes concrete: identify the person, the right, and the loss. A general admission can leave the actual harm out of view.", role: "support" },
+        { id: "regret", label: "Regret", micro: "Grieve their loss", body: "The pain concerns what was done to them, not primarily what disclosure might do to one's own standing.", role: "support" },
+        { id: "present", label: "Present", micro: "Stop the taking", body: "The wrong has to stop in the present tense. Continuing it while planning a later repair leaves this part absent.", role: "support" },
+        { id: "future", label: "Future", micro: "Refuse the return", body: "The resolve must survive the return of opportunity. Where possible, remove the access or situation that made repetition easy.", role: "balance" },
+        { id: "past", label: "Past", micro: "Return or seek release", body: "The person's right remains. Ghazali's account requires it to be returned or knowingly released; a private inward change does not settle that claim.", role: "warning" },
+      ],
+    },
+    {
+      id: "recurring", label: "A recurring habit", chapterId: 16,
+      setup: "Use a habit that has survived several sincere attempts. This view separates the structure of repentance from the additional treatment needed for persistence.",
+      takeaway: "A lapse does not make renewed repentance meaningless. Persistence has causes—heedlessness and appetite—so return is renewed while those causes are treated with knowledge and patience.",
+      steps: [
+        { id: "knowledge", label: "Knowledge", micro: "Make the cost present", body: "Heedlessness is treated by renewing knowledge until the harm is present to the mind rather than held as a distant fact.", role: "support" },
+        { id: "regret", label: "Regret", micro: "Let knowledge move", body: "When the loss is truly present, pain follows. Repeated words without renewed perception can leave this causal link weak.", role: "support" },
+        { id: "present", label: "Present", micro: "Return in this hour", body: "After a lapse, the immediate task is to stop and renew the return now, not to turn the lapse into a final judgment about oneself.", role: "support" },
+        { id: "future", label: "Future", micro: "Cut the occasion", body: "Appetite is treated with patience, including refusing and removing the situations that repeatedly stir it.", role: "balance" },
+        { id: "past", label: "Past", micro: "Repair what the lapse added", body: "Attend to any new consequence the lapse produced. Where another person's right is involved, the same requirement of repair still applies.", role: "warning" },
+      ],
+    },
+  ],
+};
+
 export const book31Sources: SourceLink[] = [
   { label: "Primary Arabic text", note: "The complete public Arabic of Book 31 was read in full and used to establish the four pillars, the three-part definition, the causes that magnify a minor sin, the four classes of the repentant, and the closing medical parallel.", url: "https://shamela.ws/book/9472/1161" },
   { label: "The four pillars announced", note: "The page on which Ghazali sets out the book's own structure: the reality of repentance, what is repented from, the conditions and permanence, and the remedy for the knot of persistence. The definition follows immediately.", url: "https://shamela.ws/book/9472/1162" },
@@ -661,6 +712,7 @@ export const book31: SystemBook = {
     note: "The filters follow Ghazali's own four pillars: six movements on repentance itself, four on what is repented from, five on completeness and permanence, and two on the remedy. The two long pillars are presented as several consecutive readings rather than one, at the joints his own text supplies.",
     groups: book31Movements,
   },
+  conceptLab: book31ConceptLab,
   repentanceCheck: {
     title: "The three-part check",
     note: "Ghazali defines repentance as knowledge, then regret, then an act facing present, future, and past at once. Take one thing you have repented of and check whether all five points are actually present. This locates a missing limb so the work can begin; it settles nothing about whether your repentance was accepted.",

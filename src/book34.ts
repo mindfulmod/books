@@ -16,7 +16,7 @@ const chain = (title: string, caption: string, items: Array<[string, string, "su
 const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
 const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
 
-export const book34Chapters: Chapter[] = [
+const book34Base: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Five states of lacking", formalTitle: "The reality of poverty and the states and names of the poor",
     overview: "Ghazali defines poverty precisely, notes that on the definition everything but God is poor, then narrows to poverty of wealth and sorts those who lack it into five states, each with its own name.",
@@ -434,6 +434,67 @@ export const book34Chapters: Chapter[] = [
     model: pair("The sign the book closes on", "It is the same test the book opened with.", [["Equal either way", "Arrival and departure change nothing, which is the state above the five.", "support"], ["Changed by which way", "The circumstance still governs, and the exchange has not been made.", "warning"]]),
   }),
 ];
+
+const book34Deepening: Partial<Record<number, { title: string; body: string }>> = {
+  2: {
+    title: "Praise attaches to a way of carrying poverty",
+    body: "The reports cannot mean that every lack is desirable, because Ghazali has just distinguished detachment, contentment, satisfaction, grasping, and compulsion within the same outward condition. Their force is therefore read through the state of the heart: reduced distraction, freedom from grasping, patience, and orientation toward God. Poverty can remove one field of temptation, but it does not automatically supply any of those responses or excuse neglect of a need that should be met.",
+  },
+  3: {
+    title: "Why inward state changes the meaning of lack",
+    body: "Two people may possess equally little while moving in opposite directions. One is freed from seeking what is absent; another is occupied by it all day. A third may be in genuine need and obliged to seek help. The praise therefore follows a truthful relation to the circumstance, not the circumstance in isolation. This protects the compelled person from being blamed for need and prevents the grasping person from claiming a virtue on the strength of an empty hand.",
+  },
+  4: {
+    title: "What the general preference is comparing",
+    body: "The preference for poverty rests on tendencies, not on a claim that every poor person is better than every wealthy person. Wealth ordinarily brings more objects to acquire, manage, fear losing, and answer for; poverty can reduce that field. But the actual state still matters. A resentful or grasping poverty may be spiritually worse than wealth held with gratitude, right expenditure, and little attachment, which is why the matched comparison has to follow.",
+  },
+  5: {
+    title: "Why gratitude and satisfaction cannot be compared by labels",
+    body: "The satisfied poor person has fewer means and bears their absence well. The grateful wealthy person has more means and directs them through recognition, restraint, and use. Each state contains a real excellence and a distinct exposure. Ghazali's method asks what the condition is doing to the heart and what duties it creates, rather than letting the attractive name of either state decide the case before its actual qualities are examined.",
+  },
+  6: {
+    title: "Conduct makes the claimed state testable",
+    body: "A person may call himself content while repeatedly displaying deprivation, resenting those with more, or lowering himself before possible givers. The manners expose these contradictions. Guarding complaint, refusing spiritual performance, preserving dignity, and meeting obligations show whether the state governs conduct when lack becomes painful. The point is not to hide genuine need. It is to prevent poverty from becoming either a public identity that seeks distinction or a private grievance that consumes the heart.",
+  },
+  7: {
+    title: "Acceptance and refusal each need a reason",
+    body: "An unsolicited gift does not create the humiliation or pressure involved in asking, but it still requires judgment. The receiver examines whether the gift is lawful, what the giver intends, whether accepting creates an unhealthy claim, and what accepting or refusing will do to the heart. Refusal is not automatically purer: it can display detachment, injure the giver, or reject provision that should be used. The decision follows truth and consequence, not a single posture.",
+  },
+  8: {
+    title: "Necessity changes the act without removing its cost",
+    body: "Asking exposes the asker to dependence on another person's response and can burden the person approached. That is why Ghazali treats unnecessary asking severely. Genuine necessity changes the case because preserving life, bodily function, dependents, or an obligation may require help. Even then, the request should be truthful, proportionate, and directed where assistance can responsibly be given. Permission answers the need; it does not turn repeated asking into an identity or habit.",
+  },
+  9: {
+    title: "Sufficiency is a relation, not a universal number",
+    body: "The same amount can be enough for one person and inadequate for another because needs, dependents, health, prices, and time differ. Ghazali therefore asks what kind of provision is needed, how much of it answers that need, and for how long. This avoids both false precision and unlimited self-certification. A boundary remains available, but it must be justified by the person's actual responsibilities rather than borrowed from somebody else's circumstance or expanded by every possible future concern.",
+  },
+  10: {
+    title: "The giver also needs a diagnosis",
+    body: "Sorting askers prevents generosity from becoming careless or contemptuous. A person in immediate necessity, someone unable to earn, and someone trained into habitual asking do not present the same case, even if their words are similar. The giver must attend to evidence, urgency, dignity, and likely effect without claiming access to the hidden heart. The aim is help ordered to the real need, not reward for a performance or punishment based on suspicion.",
+  },
+  12: {
+    title: "Detachment names an exchange of value",
+    body: "Leaving something is only half the movement. Ghazali's definition asks what is preferred instead, because deprivation without a better object may be compulsion, inability, or loss rather than detachment. The praise attaches to turning from a lesser share toward what is judged better and more lasting. This preserves lawful use of necessary things while exposing the inward mistake of treating them as final, and it keeps austerity itself from becoming the new object of pride.",
+  },
+  14: {
+    title: "The real object may be less visible than the possession",
+    body: "What is left is not simply the physical object. A person may give up ownership while retaining longing, comparison, pride in renunciation, or concern with how the sacrifice is seen. Conversely, an object required for duty may remain in the hand without ruling the heart. Specifying the object therefore moves the inquiry from inventory to relation: which share, pleasure, status, or claim is being preferred, and what higher good is meant to replace it?",
+  },
+  15: {
+    title: "A person can be detached in one field and attached in another",
+    body: "Sorting by object replaces a flattering global identity with a usable map. Someone may be free regarding food yet governed by clothing, indifferent to possessions yet hungry for reputation, or restrained in housing while attached to authority. These are not contradictions once detachment is treated as a relation exercised in particular fields. The classification identifies where freedom is real, where necessity remains, and where an unexamined share still carries the heart.",
+  },
+  17: {
+    title: "Concrete measures turn aspiration into examination",
+    body: "Food, clothing, housing, and furnishings each serve different needs and therefore require different questions about quantity, quality, duration, and purpose. The worked examples do not create one timeless lifestyle for every reader. They demonstrate how to reason from necessity and use toward a limit. Without that reasoning, a person can call any comfort necessary or imitate another person's austerity while ignoring health, dependents, climate, work, and the duties his own circumstances create.",
+  },
+};
+
+export const book34Chapters: Chapter[] = book34Base.map((chapter) => {
+  const extra = book34Deepening[chapter.id];
+  if (!extra || !chapter.deep) return chapter;
+  return { ...chapter, deep: { ...chapter.deep, closeReading: [...(chapter.deep.closeReading ?? []), extra] } };
+});
 
 export const book34ConceptNodes: ConceptNode[] = [
   ["faqr", "Poverty", "Lacking what you need", "Lacking what is not needed is not poverty, and what is within reach is not lacked."],

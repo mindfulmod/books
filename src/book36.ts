@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { ConceptLab, Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const makeChapter = (seed: Seed): Chapter => ({
@@ -117,9 +117,9 @@ export const book36Chapters: Chapter[] = [
     moves: [
       { title: "State the rule", body: "Pleasures follow perceptions. A human being gathers a set of powers and instincts, each with its own pleasure, and each one's pleasure lies in attaining what its nature was created for." },
       { title: "Insist that nothing is idle", body: "These instincts were not installed in a person in vain. Each power and instinct was installed for some matter that its nature requires, which is why the argument can run from the instinct to its object." },
-      { title: "Work the examples", body: "Anger was created for retaliation, so its pleasure is in overcoming. The appetite for food was created to obtain the nourishment on which subsistence depends, so its pleasure is in attaining it. Hearing, sight, and smell likewise, so that no instinct is free of pleasure and pain relative to what it perceives." },
+      { title: "Work the examples", body: "Anger was created for retaliation, so its pleasure is in overcoming. The appetite for food was created to obtain the nourishment on which survival depends, so its pleasure is in reaching that nourishment. Hearing, sight, and smell work in the same way. Every instinct therefore has pleasure and pain connected to what it perceives." },
       { title: "Apply the rule to the heart", body: "In the heart there is an instinct called the divine light, and sometimes called the intellect. The same rule then gives its pleasure without any further premise: the pleasure of a faculty is in attaining what it was made for." },
-      { title: "Follow the rule about instincts", body: "The argument is a general rule applied to one case, and the rule is stated first: each power and instinct has its pleasure in attaining what its nature was made for. Anger was made for retaliation, so its pleasure is in prevailing. The appetite for food was made to obtain what subsistence depends on, so its pleasure is in getting it. Hearing, sight and smell run the same way." },
+      { title: "Follow the rule about instincts", body: "The argument begins with a general rule: each power and instinct finds pleasure in reaching what it was made for. Anger was made for retaliation, so its pleasure is in prevailing. The appetite for food was made to obtain what survival depends on, so its pleasure is in getting nourishment. Hearing, sight, and smell follow the same pattern." },
       { title: "Take the premise that nothing is idle", body: "And the load-bearing premise is stated separately: none of these instincts was installed in vain, each being there for something its nature requires. Which is what licenses the argument to run from the instinct to its object rather than the other way. Grant that and the conclusion about the heart needs no further premise — the divine light in the heart has a pleasure, and it is in attaining what it was made for." },
     ],
     closer: [
@@ -602,6 +602,66 @@ export const book36Instrument: Instrument = {
   ],
 };
 
+const book36ConceptLab: ConceptLab = {
+  kind: "arcade",
+  title: "One root, several forms of love",
+  note: "Move across causes, capacity, and effects without collapsing them into one feeling. The repeated bays show things that share a root; they are not a ladder of spiritual rank.",
+  prompt: "Trace what is loved, why it is loved, and what the gaze produces",
+  architecture: {
+    form: "Double-arched hypostyle bays",
+    reference: "Great Mosque of Córdoba",
+    note: "Córdoba's repeating double arches hold several expressions of one underlying structure. The mapping is editorial and is not an image used in Ghazali's text.",
+    url: "https://whc.unesco.org/en/list/313",
+  },
+  scenes: [
+    {
+      id: "five-causes", label: "Why anything is loved", chapterId: 3,
+      setup: "Ghazali offers five causes as an exhaustive account of why anything is loved, then asks where they gather completely rather than partially.",
+      takeaway: "The conclusion is reached by tracing existing loves backward. Love of a messenger, teacher, or righteous person can return to the root rather than compete with it.",
+      steps: [
+        { id: "self", label: "Continuance", micro: "Existence and wholeness", body: "Every living thing loves its own existence, perfection, and continuance, and dislikes its perishing or diminishment.", role: "support" },
+        { id: "benefit", label: "Preservation", micro: "Who helps it continue", body: "A person loves whoever helps preserve that existence and wards off what would damage or destroy it.", role: "support" },
+        { id: "beneficence", label: "Generosity", micro: "Good reaching others", body: "Someone generous is loved even when the benefit does not reach the observer personally. Beneficence can be loved in itself.", role: "support" },
+        { id: "beauty", label: "Beauty", micro: "Outward or inward", body: "Whatever is beautiful in itself is loved, whether the beauty is visible in form or inward in character, knowledge, and judgment.", role: "support" },
+        { id: "affinity", label: "Affinity", micro: "A hidden correspondence", body: "Love can arise from an inward correspondence between two people that is not reducible to benefit or visible beauty.", role: "balance" },
+      ],
+    },
+    {
+      id: "strength", label: "What strengthens love", chapterId: 7,
+      setup: "Ghazali names two variables: how much room other attachments occupy and how much knowledge or acquaintance is present.",
+      takeaway: "Emptying is only half the work. Available capacity with no acquaintance remains empty; knowledge with no available room remains crowded out.",
+      steps: [
+        { id: "occupied", label: "Occupied vessel", micro: "Room already taken", body: "Family, wealth, children, property, gardens, and pleasures can occupy capacity without each attachment being treated as forbidden.", role: "balance" },
+        { id: "emptying", label: "Making room", micro: "The first route", body: "Reducing occupation increases available capacity. The vessel image describes displacement: room used in one direction is room unavailable in another.", role: "support" },
+        { id: "knowing", label: "Acquaintance", micro: "The second route", body: "Love follows knowing, so strengthening knowledge supplies something for the heart's perception to reach and love.", role: "support" },
+        { id: "stronger", label: "Stronger love", micro: "Room and knowledge meet", body: "Strength grows through both routes together: capacity becomes available and acquaintance gives the gaze an object.", role: "support" },
+      ],
+    },
+    {
+      id: "three-views", label: "One love, three views", chapterId: 13,
+      setup: "Longing, intimacy, and fear are not three competing disciplines here. Ghazali derives them from the same love by changing what dominates attention.",
+      takeaway: "These states can alternate without the root changing. The immediate variable is where the gaze rests, not a decision to manufacture a preferred feeling.",
+      steps: [
+        { id: "root", label: "Love", micro: "The common root", body: "All three states are effects of love. None of them proves that the root has vanished simply because another effect was present yesterday.", role: "support" },
+        { id: "longing", label: "Longing", micro: "Toward what is absent", body: "Looking beyond what has been grasped and sensing the shortfall stirs the heart toward what remains absent.", role: "balance" },
+        { id: "intimacy", label: "Intimacy", micro: "Toward what is present", body: "Looking at what has been disclosed without turning to what is missing gladdens the heart in what it presently observes.", role: "support" },
+        { id: "fear", label: "Fear", micro: "Toward might and severance", body: "Looking toward self-sufficiency and might, while the possibility of distance occurs, pains the heart with fear.", role: "warning" },
+      ],
+    },
+    {
+      id: "claim-and-sign", label: "How a claim is tested", chapterId: 12,
+      setup: "Because the inward claim is easy and its meaning rare, Ghazali looks for effects that can disagree with what the soul says about itself.",
+      takeaway: "A sign is useful because it stands outside the claim. The traces do not create love, but their presence or absence can test what is being asserted.",
+      steps: [
+        { id: "claim", label: "The claim", micro: "Easy to make", body: "The soul says that it loves. Consulting that same claim again cannot verify it, especially when Ghazali has warned that the soul counterfeits it.", role: "warning" },
+        { id: "heart", label: "The heart", micro: "An inward trace", body: "The root produces effects in the heart. These are read as fruits rather than treated as the love itself.", role: "balance" },
+        { id: "tongue", label: "The tongue", micro: "A spoken trace", body: "What repeatedly occupies speech can provide evidence outside a private feeling, though no single utterance settles the claim.", role: "balance" },
+        { id: "limbs", label: "The limbs", micro: "A lived trace", body: "Conduct supplies the most external trace. Ghazali's tree image places fruits on heart, tongue, and limbs together rather than letting one stand for all.", role: "support" },
+      ],
+    },
+  ],
+};
+
 export const book36Sources: SourceLink[] = [
   { label: "Primary Arabic text", note: "The complete public Arabic of Book 36 was read and used to establish the definition of love, the five causes, the derivation of longing, intimacy, and fear, and the two routes to contentment.", url: "https://shamela.ws/book/9472/1452" },
   { label: "The reality of love", note: "The passage defining love as the nature's inclination toward what pleases it, and arguing from a single report for a perception seated in the heart that the five senses do not reach.", url: "https://shamela.ws/book/9472/1455" },
@@ -625,6 +685,7 @@ export const book36: SystemBook = {
     note: "Ghazali's own eighteen expositions in his own order. The first nine establish what love is and why it differs between people, the next five treat its effects, and the last four treat contentment as a further fruit of the same root.",
     groups: book36Movements,
   },
+  conceptLab: book36ConceptLab,
   instrument: book36Instrument,
   editorialNote: "The five journeys, eighteen reading sections, visual models, and diagnostic are editorial learning aids. The eighteen sections correspond one to one with Ghazali's own eighteen expositions and preserve his order, which places the analysis before the accounts and the definition of love before any application of it. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration, and Ghazali's own book carries the graders' notes alongside several of them. The chapter on benefaction argues that a human giver is a channel rather than a source; it is a claim about causes and not a rule about manners, and the Ihya elsewhere requires thanking people. The chapter on expansion permits a boldness of address from those established in intimacy and states that one who imitates it without the station is destroyed by it; the permission and the warning are presented together because separating them produces the error Ghazali names. The chapter on supplication is included in full because contentment is most often misread as withdrawal, and Ghazali refutes that reading in the strongest terms he uses in this quarter. The diagnostic reports what his chapters say about a pair of answers and cannot pronounce on anyone's state.",
 };

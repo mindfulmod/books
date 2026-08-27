@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { FaultMirror, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { ConceptLab, FaultMirror, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 const book22Base: Chapter[] = [
   {
@@ -1289,6 +1289,57 @@ export const book22FaultMirrors: FaultMirror[] = [
   },
 ];
 
+const book22ConceptLab: ConceptLab = {
+  kind: "courtyard",
+  title: "Character is an inward arrangement",
+  note: "Keep the four capacities and the conduct they produce in view. A single good act can occur under strain; character names the settled order from which a pattern begins to arise readily.",
+  prompt: "Change the proportion, then watch what becomes easy",
+  architecture: {
+    form: "Four-iwan courtyard",
+    reference: "Masjed-e Jāme’ of Isfahan",
+    note: "The four-iwan plan holds four capacities around one inward form. This spatial arrangement is editorial and is not an analogy used in Ghazali's text.",
+    url: "https://whc.unesco.org/en/list/1397",
+  },
+  scenes: [
+    {
+      id: "balanced", label: "The powers in balance", chapterId: 2,
+      setup: "Knowledge discerns, anger defends, appetite seeks, and justice keeps each power within the fitting measure and place.",
+      takeaway: "The mean is not a bland average. It is the fitting proportion determined by sound knowledge in a concrete situation.",
+      steps: [
+        { id: "justice", label: "Justice", micro: "Orders the relation", body: "Justice holds anger and appetite to the direction of sound discernment. It is the ordering of the powers, not merely a fourth appetite competing with them.", role: "support", position: "center" },
+        { id: "knowledge", label: "Knowledge", micro: "Discerns what fits", body: "The sound condition of knowing distinguishes truth from falsehood and right action from wrong. Its virtue is wisdom.", role: "support", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Seeks in measure", body: "Appetite continues to seek nourishment and fitting goods, but under the direction of intellect and the Law. Its sound condition is temperance.", role: "balance", position: "east" },
+        { id: "anger", label: "Anger", micro: "Defends in measure", body: "Anger's contraction and expansion remain available where wisdom requires them. Its sound condition is courage, not the absence of force.", role: "balance", position: "west" },
+        { id: "conduct", label: "Conduct", micro: "Begins to flow readily", body: "Repeated fitting acts emerge with increasing readiness. This stable inward source—not one isolated performance—is what the definition calls character.", role: "support", position: "south" },
+      ],
+    },
+    {
+      id: "anger-excess", label: "Anger exceeds its measure", chapterId: 5,
+      setup: "The defensive power is not evil in itself. Disorder begins when its force or timing no longer follows sound judgment.",
+      takeaway: "Treatment is by a fitting contrary and a measured dose. Simply applying more force can move a person farther from the mean.",
+      steps: [
+        { id: "justice", label: "Justice", micro: "The proportion is lost", body: "The relation among the powers is disordered. Repair means restoring a fitting measure, not flattening every strong response.", role: "warning", position: "center" },
+        { id: "knowledge", label: "Knowledge", micro: "Must diagnose first", body: "Discernment has to identify whether the fault is excess, deficiency, or the wrong power taking command before a contrary practice can fit it.", role: "support", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "May recruit the force", body: "A wanted object can enlist anger against whatever blocks it. The resulting force may look defensive while actually serving appetite.", role: "balance", position: "east" },
+        { id: "anger", label: "Anger", micro: "Acts beyond judgment", body: "The power expands beyond what wisdom requires. Ghazali places vice on both sides, so the remedy aims at courage rather than at helplessness.", role: "warning", position: "west" },
+        { id: "conduct", label: "Conduct", micro: "Rehearses the excess", body: "Every repeated act makes the response more ready next time. The loop can deepen the fault, but the same formative mechanism is also what makes change possible.", role: "warning", position: "south" },
+      ],
+    },
+    {
+      id: "training", label: "A quality being trained", chapterId: 4,
+      setup: "A person performs the act a desired quality would produce before that act feels natural, then repeats it until the inward source changes.",
+      takeaway: "Early effort is not proof of insincerity. In Ghazali's craft analogy, awkward repetition is the route by which a stable capacity is formed.",
+      steps: [
+        { id: "justice", label: "Named quality", micro: "The inward aim", body: "The goal is a disposition, not credit for one performance. Naming the quality keeps repetition connected to the formation being sought.", role: "support", position: "center" },
+        { id: "knowledge", label: "Discernment", micro: "Chooses the fitting act", body: "Knowledge identifies what the desired quality would require here, so practice does not become blind repetition.", role: "support", position: "north" },
+        { id: "appetite", label: "Resistance", micro: "The old ease remains", body: "The contrary inclination may still feel natural. That resistance marks the starting condition; it does not show that practice cannot travel inward.", role: "balance", position: "east" },
+        { id: "anger", label: "Deliberate effort", micro: "The act is carried", body: "The limbs are directed to perform the fitting act despite resistance, just as the hand copies letters awkwardly while learning to write.", role: "balance", position: "west" },
+        { id: "conduct", label: "New readiness", micro: "Repetition becomes character", body: "With continued formation, the fitting act becomes easier and is no longer experienced only as an alien burden. That readiness is the evidence the source has changed.", role: "support", position: "south" },
+      ],
+    },
+  ],
+};
+
 export const book22Movements: TaxonomyGroup[] = [
   { id: "what", label: "What character is", description: "The excellence of good character and the blame of its opposite, and the definition the rest of the book depends on.", color: "#b45f4c", chapterIds: [1, 2] },
   { id: "change", label: "That it can change", description: "The argument against fixed temperament, the general means of acquiring good character, and the detailed path.", color: "#2c78b8", chapterIds: [3, 4, 5] },
@@ -1310,6 +1361,7 @@ export const book22: SystemBook = {
     note: "Ghazali's own order, grouped by what each stretch of the book is doing: defining character, arguing it can change, diagnosing and treating it, and setting the pace.",
     groups: book22Movements,
   },
+  conceptLab: book22ConceptLab,
   faultMirrors: {
     title: "The four mirrors",
     note: "Ghazali gives four routes by which a person comes to know his own faults, and notes that the first two have become rare. Work out which are actually open to you. The routes report faults; they do not treat them, and the treatment is the subject of the sections around this one.",

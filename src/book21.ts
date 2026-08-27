@@ -1,6 +1,6 @@
 import { conceptNodes } from "./data";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { MirrorSubject, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { ConceptLab, MirrorSubject, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 import { book21Journeys } from "./book21journeys";
 
 type Seed = {
@@ -199,7 +199,7 @@ export const book21Chapters: Chapter[] = [
     overview: "Ghazali sorts knowledge into rational and religious, then divides the rational again, and refuses both of the positions that most readers arrive holding.",
     thesis: "Knowledge sorts into rational and religious, and Ghazali refuses both positions most readers arrive holding.",
     moves: [
-      { title: "Divide the rational", body: "The necessary, which a person finds himself made upon since childhood and cannot say when or whence it came, and the acquired, gained by learning and inference. Both are called intellect." },
+      { title: "Divide the rational", body: "Necessary knowledge is present from childhood, and a person cannot say when or where it came from. Acquired knowledge is gained through learning and inference. Both are called intellect." },
       { title: "Place the religious", body: "The religious sciences are taken from the prophets, by learning the Book and the practice and understanding their meanings after hearing them. By these the heart's condition is completed and it is kept sound of its diseases." },
       { title: "Refuse both extremes", body: "Whoever calls to pure imitation while setting the intellect wholly aside is ignorant, and whoever is content with bare intellect apart from the lights of the Book and the practice is deluded. Be neither, and join the two roots." },
       { title: "Give the reason", body: "The rational sciences are like foods and the revealed sciences are like medicines. A sick person is harmed by food when the medicine is missing, and the diseases of hearts cannot be treated except by the remedies drawn from the Law." },
@@ -222,11 +222,11 @@ export const book21Chapters: Chapter[] = [
     overview: "Knowledge that is not necessary arrives in two ways: it storms the heart as if cast into it, or it is acquired by inference and instruction. Ghazali names each precisely, and then makes a claim about the difference that is easy to miss.",
     thesis: "Knowledge arrives either by being cast in or by being worked for, and the difference is not where most readers put it.",
     moves: [
-      { title: "Name the three", body: "What arrives without contrivance and without the person knowing whence is inspiration, a breathing into the heart, and belongs to the friends of God. What arrives with the witnessing of the angel who casts it is revelation, and belongs to the prophets. What is acquired by inference belongs to the scholars." },
+      { title: "Name the three", body: "Knowledge that arrives without deliberate effort, and without the person knowing its source, is inspiration: a meaning breathed into the heart and associated with the friends of God. Knowledge that arrives with a witnessed angel conveying it is revelation and belongs to the prophets. Knowledge acquired through inference belongs to scholars." },
       { title: "Give the picture", body: "The heart is a mirror facing the Preserved Tablet, on which is inscribed everything decreed to the Day of Rising, and a veil hangs between the two. The likeness of knowledge passing from one mirror to the other is like a form printing from one facing mirror into another." },
       { title: "Describe how the veil moves", body: "A veil between two mirrors is sometimes lifted by hand and sometimes moved by the blowing of the wind. So the winds of divine kindnesses blow and the coverings lift from the eyes of hearts, sometimes like a flash of lightning and sometimes in succession, and its permanence is exceedingly rare." },
       { title: "State the actual difference", body: "Inspiration is no different from study in the knowledge itself, or in where it sits, or in what causes it. The only difference is that a screen has been taken away — and taking it away is not yours to arrange." },
-      { title: "Note where the three ways differ", body: "The three are separated by exactly one variable: what the recipient is aware of. Knowledge arriving with no contrivance and no sense of where it came from is inspiration. The same arriving with the angel who casts it visible is revelation. And knowledge reached by inference is what scholars have. The content is not what distinguishes them, and neither is the source — only what was apparent to the person while it arrived." },
+      { title: "Note where the three ways differ", body: "The three ways differ in what the recipient is aware of. Knowledge arriving without deliberate effort and with no awareness of its source is inspiration. Knowledge conveyed by a visible angel is revelation. Knowledge reached through inference belongs to scholars. The distinction is not the content or its ultimate source, but what was apparent to the person as the knowledge arrived." },
       { title: "Take the claim about the veil seriously", body: "And the concluding claim is more deflationary than it first appears. Inspiration differs from study neither in the knowledge itself, nor in where it sits, nor in what produced it. The only difference is that a screen has been removed — and, he adds, removing it is not yours to arrange. Which strips the whole category of any suggestion of technique, and makes the difference between the scholar and the one inspired a matter of what was in the way rather than of what either of them did." },
     ],
     closer: [
@@ -270,7 +270,7 @@ export const book21Chapters: Chapter[] = [
     thesis: "Having described a knowing that does not proceed by instruction, Ghazali gathers the textual grounds for it.",
     moves: [
       { title: "State what is being supported", body: "The claim is not that anything may be believed on the strength of an impression, but that the heart has a route to knowledge that does not run through the senses and instruction." },
-      { title: "Gather the grounds", body: "The verse that those who struggle in God will be guided to His ways; the report that whoever acts on what he knows is given by God knowledge of what he did not know; and the report that if the devils did not hover over the hearts of the children of Adam they would look upon the kingdom of the heavens." },
+      { title: "Gather the grounds", body: "Ghazali gathers three kinds of support. He cites the verse promising guidance to those who strive for God, a report connecting action on existing knowledge with further knowledge from God, and a report that describes devils as veiling human hearts from perceiving the heavenly kingdom." },
       { title: "Read the obstruction backwards", body: "The lights of knowledge were never veiled from hearts by any withholding on the Giver's part, since the Giver is far above withholding. They were veiled by impurity, clouding, and occupation on the hearts' part. Hearts are like vessels: while full of water no air enters them." },
       { title: "Set the condition", body: "Purity is the door of remembrance, remembrance the door of unveiling, and unveiling the door of the greatest triumph. Every stage is conditioned on the one before it, which is why nothing here can be claimed as a shortcut." },
       { title: "Note the careful statement of the claim", body: "The section opens by fencing the claim before defending it: this is not that anything may be believed on the strength of an impression, but that the heart has a route to knowledge not running through the senses and instruction. That distinction is doing all the work. The first would license every private conviction; the second is a claim about how knowledge can arrive, and says nothing about how any particular arrival should be assessed." },
@@ -281,7 +281,7 @@ export const book21Chapters: Chapter[] = [
       { title: "The ranks of faith", body: "Ghazali distinguishes three: the faith of the generality, which is pure imitation; the faith of the theologians, mixed with some inference and near the first in degree; and the faith of the knowers, witnessed by the light of certainty. His illustration is a report that a person is in the house, believed on a truthful informant's word, then on hearing his voice from within, then on entering and seeing him." },
       { title: "The proportion he keeps", body: "The higher rank is described without being made available on request. Every account of how the veil lifts in this book is paired with a condition that has to be met first, and the conditions are ordinary: purity, obedience, and turning away from appetite." },
     ],
-    distinction: ["Two things an unusual knowledge might be", "A lifted obstruction", "The heart's own capacity operating once what stood in the way has been removed.", "A private authority", "A claim that what occurs to a person is thereby true, which nothing here supports."],
+    distinction: ["Two things an unusual knowledge might be", "A lifted obstruction", "The heart's own capacity operating once what stood in the way has been removed.", "A private authority", "A claim that whatever occurs to a person must therefore be true, which nothing here supports."],
     misreading: "Do not conclude that this licenses acting on impressions or setting aside instruction. Ghazali's own conditions here are purity, obedience, and struggle, all of which are checkable.",
     reflection: "Ask which of the three ranks of faith describes your own assent to something you would say you are certain of.",
     audit: ["What is my certainty actually resting on?", "Have I met any of the stated conditions?", "What is occupying the vessel?", "Would I recognise the difference between clarity and preference?"],
@@ -460,6 +460,57 @@ export const book21Movements: TaxonomyGroup[] = [
 
 export const book21ConceptNodes: ConceptNode[] = [...conceptNodes, ...book21ExtraNodes];
 
+const book21ConceptLab: ConceptLab = {
+  kind: "courtyard",
+  title: "Who governs the inner city?",
+  note: "Hold every faculty in view while changing only the chain of command. The parts do not become good or bad by disappearing; their order changes what the whole person becomes.",
+  prompt: "Compare the same inner city under three governments",
+  architecture: {
+    form: "Four-iwan courtyard",
+    reference: "Masjed-e Jāme’ of Isfahan",
+    note: "The four-iwan plan is borrowed as a spatial memory aid. The diagram is editorial and is not an analogy found in Ghazali's text.",
+    url: "https://whc.unesco.org/en/list/1397",
+  },
+  scenes: [
+    {
+      id: "ordered", label: "Ordered city", chapterId: 3,
+      setup: "The heart governs, reflective intellect advises, and appetite and anger perform the limited work for which they were given.",
+      takeaway: "Discipline is not the destruction of appetite or anger. It is the restoration of a proper government in which both remain useful and neither rules.",
+      steps: [
+        { id: "heart", label: "Heart", micro: "The governor", body: "The knowing, responsible self receives counsel and directs the other forces toward the journey for which the person was made.", role: "support", position: "center" },
+        { id: "intellect", label: "Intellect", micro: "The wise adviser", body: "Reflective intellect sees outcomes and advises the heart. Good order begins when this counsel is preferred over appetite's disguised advice.", role: "support", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Draws what benefits", body: "Appetite draws provision toward the body. It is needed, but its claim about what is beneficial must be judged rather than simply obeyed.", role: "balance", position: "east" },
+        { id: "anger", label: "Anger", micro: "Repels what harms", body: "Anger guards and repels harm. In a sound order it is directed by judgment and can be used to restrain appetite rather than enforce it.", role: "balance", position: "west" },
+        { id: "limbs", label: "Senses and limbs", micro: "Report and carry out", body: "The senses bring reports inward like scouts, and the limbs carry decisions outward. They serve the direction established above them.", role: "support", position: "south" },
+      ],
+    },
+    {
+      id: "appetite-rules", label: "Appetite rules", chapterId: 5,
+      setup: "The visible person may remain capable and intelligent, but intellect is recruited to devise better ways of satisfying a want.",
+      takeaway: "Intelligence does not prove good government. A highly capable intellect can become appetite's strategist, making an inverted order more effective.",
+      steps: [
+        { id: "heart", label: "Heart", micro: "A ruler in name", body: "The heart retains responsibility but has yielded practical command. It approves what appetite wants after the reasons have been supplied.", role: "warning", position: "center" },
+        { id: "intellect", label: "Intellect", micro: "Recruited strategist", body: "Reasoning is not absent. It is busy devising means, justifications, and routes to the object appetite already selected.", role: "warning", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Sets the destination", body: "What should have fetched provision now decides what the whole city is for. Its wants arrive in the form of advice rather than announcing themselves as appetite.", role: "warning", position: "east" },
+        { id: "anger", label: "Anger", micro: "Enforces the want", body: "The guarding force is turned against whatever blocks satisfaction, so resistance feels like an injury that must be overcome.", role: "warning", position: "west" },
+        { id: "limbs", label: "Senses and limbs", micro: "Search and serve", body: "Attention searches for opportunities and the limbs carry out the plan. The machinery works; the government is what has failed.", role: "balance", position: "south" },
+      ],
+    },
+    {
+      id: "anger-rules", label: "Anger rules", chapterId: 5,
+      setup: "The guard becomes the ruler. Perception scans for offence, reasoning proves the need to prevail, and action follows before judgment can recover its place.",
+      takeaway: "Anger is not condemned merely for being forceful. The danger is a guarding power becoming the source of judgment and making every faculty serve retaliation.",
+      steps: [
+        { id: "heart", label: "Heart", micro: "Carried by the guard", body: "The responsible self is moved by the force that was meant to serve it, so urgency is mistaken for authority.", role: "warning", position: "center" },
+        { id: "intellect", label: "Intellect", micro: "Builds the case", body: "Reasoning collects evidence for injury and victory. Its skill remains, but its conclusion has effectively been chosen before inquiry begins.", role: "warning", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Supplies the reward", body: "Appetite can support anger with the imagined satisfaction of winning, status, or relief after retaliation.", role: "balance", position: "east" },
+        { id: "anger", label: "Anger", micro: "Commands the city", body: "The power made to repel harm now defines what counts as harm and orders the response. Guard and governor have exchanged places.", role: "warning", position: "west" },
+        { id: "limbs", label: "Senses and limbs", micro: "Scan and strike", body: "The senses notice confirming signs of offence and the limbs enact the answer, often before a wider account can enter.", role: "warning", position: "south" },
+      ],
+    },
+  ],
+};
+
 const book21Sources: SourceLink[] = [
   { label: "Primary Arabic text", note: "The complete public Arabic of Book 21 was read and used to establish the four senses of heart, spirit, soul and intellect, the armies that serve the heart, the mirror and its five obstructions, the chain from passing thought to act, and the three conditions of the heart.", url: "https://shamela.ws/book/9472/748" },
   { label: "The armies of the heart", note: "The passage deriving the inward and outward forces from what the heart's journey requires, and reducing them to will, power, and knowledge.", url: "https://shamela.ws/book/9472/751" },
@@ -487,6 +538,7 @@ export const book21: SystemBook = {
     note: "Ghazali announces no numbered contents for this book, so these follow the turn of his own argument: the heart and its forces, the heart and knowing, and the traffic of thoughts.",
     groups: book21Movements,
   },
+  conceptLab: book21ConceptLab,
   mirrorObstructions: {
     title: "The five obstructions",
     note: "Ghazali gives five reasons a mirror fails to show a form and states that hearts lack the knowledge they lack for these reasons and no others. Choose something you are trying to see clearly and work the five in order. This locates an obstruction so that the fitting treatment can begin; it settles nothing about the matter you were trying to see.",

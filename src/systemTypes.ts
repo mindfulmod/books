@@ -306,6 +306,40 @@ export type Instrument = {
   items: InstrumentCase[];
 };
 
+export type ConceptLabKind = "courtyard" | "arcade" | "paired";
+
+export type ConceptLabStep = {
+  id: string;
+  label: string;
+  micro: string;
+  body: string;
+  role: InstrumentRole;
+  position?: "center" | "north" | "east" | "south" | "west";
+};
+
+export type ConceptLabScene = {
+  id: string;
+  label: string;
+  setup: string;
+  takeaway: string;
+  chapterId: number;
+  steps: ConceptLabStep[];
+};
+
+export type ConceptLab = {
+  kind: ConceptLabKind;
+  title: string;
+  note: string;
+  prompt: string;
+  architecture: {
+    form: string;
+    reference: string;
+    note: string;
+    url: string;
+  };
+  scenes: ConceptLabScene[];
+};
+
 export type SystemBook = {
   id: number;
   title: string;
@@ -375,6 +409,7 @@ export type SystemBook = {
     note: string;
     items: DutyCase[];
   };
+  conceptLab?: ConceptLab;
   instrument?: Instrument;
   editorialNote?: string;
 };

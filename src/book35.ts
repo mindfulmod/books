@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { ConceptLab, Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const makeChapter = (seed: Seed): Chapter => ({
@@ -15,7 +15,7 @@ const chain = (title: string, caption: string, items: Array<[string, string, "su
 const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
 const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
 
-export const book35Chapters: Chapter[] = [
+const book35Base: Chapter[] = [
   makeChapter({
     id: 1, shortTitle: "Why trust is praised", formalTitle: "The excellence of trust",
     overview: "Ghazali opens by gathering the testimony for trust, and states at once that the book has two halves because trust rests on a knowledge that has to be set out first.",
@@ -116,21 +116,21 @@ export const book35Chapters: Chapter[] = [
       { title: "Derive the word", body: "The word comes from appointing an agent. To entrust something to somebody is to hand it over and depend on him for it. The person you hand it to is the agent, and you are the one relying — provided you are actually at ease about it and not suspecting him of letting you down." },
       { title: "Give the analogy", body: "Someone falsely accused by a deception appoints an advocate to expose it. He is not truly relying on him unless he believes four things about him." },
       { title: "Name the four", body: "The utmost guidance, so that he knows where the deceptions lie and nothing of their subtlety escapes him. The utmost power, so that he dares to state the truth plainly and is not stopped by flattery, fear, shame, or cowardice. The utmost eloquence, which is power in the tongue to express whatever the heart has grasped. And the deepest compassion, which moves him to spend everything he has on it." },
-      { title: "Give the failure condition", body: "If he doubts any one of the four, or supposes that his opponent's advocate is more complete in them, his soul is not at rest with his agent; his heart remains disturbed and absorbed in contrivance to make up for what he fears his agent lacks." },
+      { title: "Give the failure condition", body: "If the client doubts any of the four qualities, or thinks the opposing advocate has them more fully, he cannot rest with his own agent. The heart remains disturbed and absorbed in personal planning meant to compensate for what the agent is feared to lack." },
       { title: "Note how much the derivation settles", body: "Deriving the word from appointing an agent settles a great deal before any theology arrives. Entrusting something means handing it over and depending on somebody for it — with the condition that you are actually at ease and not suspecting him. Which makes trust a relation with a definite structure, and means the question of whether somebody has it is a question about his ease rather than about his opinions." },
       { title: "Take the four beliefs about the advocate", body: "And the four things the client must believe are precise and they are separable. That the advocate knows where every deception lies. That he has the nerve to state the truth plainly and will not be stopped by flattery, fear, shame or cowardice. That he can actually say what he has grasped. And that he cares enough to spend everything he has on it. Knowledge, courage, expression, compassion — and a doubt about any one of them is enough." },
-      { title: "Follow the failure condition", body: "And the failure is described in a way anybody who has been in the position will recognise. Doubt one of the four, or think the other side's advocate is stronger in them, and the heart stays disturbed — and the client starts contriving, working out how to make up for what he fears his man lacks. That contriving is the visible symptom, and it is the exact opposite of the ease the word was defined by." },
+      { title: "Follow the failure condition", body: "The failure is described in a way anyone in this position will recognize. Doubt one of the four qualities, or think the other side's advocate has them more fully, and the heart remains disturbed. The client starts making compensating plans for what he fears his representative lacks. That preoccupation is the visible symptom, and it is the opposite of the ease by which reliance was defined." },
     ],
     closer: [
       { title: "What the analogy accomplishes", body: "It converts an inward state that a person can only claim into four beliefs he can check. Where reliance is absent, the analogy says which of the four is the reason, which is exactly what an exhortation to trust more cannot do." },
       { title: "How the four transfer", body: "Applied to God, the third condition cannot fail, so the only thing left to doubt is whether the matter is known, whether it can be done, and whether it is cared about. Anxiety that survives assent to all three is not about the Trustee at all." },
     ],
-    distinction: ["Two people with an advocate", "At rest", "All four are believed of him, so the client is not occupied with contrivance.", "Contriving", "One of the four is doubted, and the doubt shows as preoccupation rather than as a stated disbelief."],
+    distinction: ["Two people with an advocate", "At rest", "All four qualities are trusted, so the client is not consumed by personal planning.", "Trying to compensate", "One quality is doubted, and that doubt appears as preoccupation rather than as a stated disbelief."],
     misreading: "Do not read the analogy as making reliance a legal transaction. It is offered to locate the specific belief that is missing, which is what the rest of Part Two builds on.",
     reflection: "Take the matter you are most anxious about and ask which of the three transferable conditions you actually doubt.",
-    audit: ["Which of the four would I hesitate over?", "Is my anxiety about knowledge, power, or care?", "What contrivance is my heart occupied with?", "If I doubt none of them, what is the anxiety about?"],
+    audit: ["Which of the four would I hesitate over?", "Is my anxiety about knowledge, power, or care?", "What personal plan is my heart using as its guarantee?", "If I doubt none of them, what is the anxiety about?"],
     nodes: ["tawakkul", "four-conditions"],
-    model: chain("The advocate's four conditions", "Doubting any one keeps the heart contriving.", [["Guidance", "He knows where the deception lies, and nothing subtle escapes him.", "support"], ["Power", "He dares state the truth without flattery, fear, shame, or cowardice.", "support"], ["Expression", "He can put into words whatever his heart has grasped.", "support"], ["Compassion", "He will actually spend everything he can on the matter.", "support"]]),
+    model: chain("The advocate's four conditions", "Doubting any one keeps the heart busy trying to compensate.", [["Guidance", "He knows where the deception lies, and nothing subtle escapes him.", "support"], ["Power", "He dares state the truth without flattery, fear, shame, or cowardice.", "support"], ["Expression", "He can put into words whatever his heart has grasped.", "support"], ["Compassion", "He will actually spend everything he can on the matter.", "support"]]),
   }),
   makeChapter({
     id: 6, shortTitle: "Three stations", formalTitle: "The degrees of trust",
@@ -161,7 +161,7 @@ export const book35Chapters: Chapter[] = [
     thesis: "The masters' definitions are collected and sorted by which station each is actually describing.",
     moves: [
       { title: "State the method", body: "The definitions differ because each speaker described his own station, which is the habit of the masters. Rather than choosing between them, Ghazali assigns each to the degree it reports." },
-      { title: "Work an example", body: "Dhul-Nun answered that trust is the removal of lords and the cutting of causes, which Ghazali reads as pointing to the knowledge of unity and to the acts respectively; and when pressed, casting the self into servanthood and taking it out of lordship, which points only at disowning power and contrivance." },
+      { title: "Work an example", body: "Dhul-Nun described trust as removing rival masters and cutting attachment to causes. Ghazali reads the first phrase as pointing to knowledge of divine unity and the second to action. When pressed further, Dhul-Nun described placing the self in servanthood and removing it from claims of mastery. Ghazali takes this as giving up the claim to independent power and control." },
       { title: "Work a second", body: "Abu Abdullah al-Qurashi answered that it is attachment to God in every state, which covers all three stations, and then that it is leaving every cause that leads to a cause, which points at the third alone." },
       { title: "Give the illustration", body: "Abraham's answer to Gabriel, that he had no need of him, is read as leaving a cause that leads to a cause: asking would have been a cause producing the cause of Gabriel's protection, and it was left in the confidence that God, if He willed, would appoint Gabriel to it Himself." },
       { title: "Note the method being used on the sources", body: "Rather than adjudicating between the masters, Ghazali assigns each saying to the degree it reports — which is the same move he made with the four positions on suggestion in the book on the heart and with the intellect in the book on knowledge. A long-standing disagreement turns out to be several correct descriptions of different things, and the resolution is a sorting rather than a verdict." },
@@ -187,7 +187,7 @@ export const book35Chapters: Chapter[] = [
       { title: "Locate reliance correctly", body: "Somebody who takes a practical step is not relying on his own resourcefulness and strength, so long as his heart is resting on the One who made resourcefulness and strength. The step and the reliance sit on different levels." },
       { title: "Sort the means", body: "Ghazali distinguishes causes that are certain, those that are probable, and those that are speculative, and the treatment of each differs, which is what makes the subject a practical one." },
       { title: "Keep the state central", body: "The test is always where the heart is resting, because the same visible act fits both conditions and so cannot settle it on its own." },
-      { title: "Take the refusal of the obvious inference", body: "The inference the whole subject invites is refused flatly: trust does not mean giving up work. And the reason is located exactly — what breaks reliance is not the hand moving but something inside shifting toward resting on a different support. Which means the visible act cannot settle the question in either direction, and a man who has stopped working has not thereby acquired anything." },
+      { title: "Take the refusal of the obvious inference", body: "The inference invited by the whole subject is refused directly: trust does not mean giving up work. What breaks reliance is not the hand moving, but the heart shifting toward a different support. The visible act therefore cannot settle the question in either direction. A person who stops working has not automatically gained trust." },
       { title: "Note the sorting of causes", body: "And the causes are sorted into the certain, the probable and the speculative, which is what makes this a practical subject rather than a devotional one. The three are treated differently — and it is that distinction, more than anything else, that the sections on medical treatment rest on. Refusing a remedy whose effect is established is a different act from declining one that might work." },
     ],
     closer: [
@@ -364,6 +364,43 @@ export const book35Chapters: Chapter[] = [
   }),
 ];
 
+const book35Deepening: Partial<Record<number, { title: string; body: string }>> = {
+  9: {
+    title: "Responsibility changes what reliance requires",
+    body: "A person may choose to bear uncertainty for himself, but dependents possess claims that his private spiritual exercise cannot cancel. Food, shelter, treatment, and protection must therefore be pursued through the available lawful means. This does not place those means outside reliance. It locates reliance in the heart while the hand fulfills responsibility. The stricter test is whether provision is sought without treating income, storage, or personal control as the independent source of safety.",
+  },
+  10: {
+    title: "The same outward means can belong to different stations",
+    body: "Two people may take the same precaution while relying differently. One rests on the cause as though it guarantees the result; another uses it while recognizing its limits and dependence; a third may be inwardly free enough to use or leave a less certain cause without disturbance. The example prevents station from being inferred from appearance. What matters is where confidence settles, how loss is received, and whether the means remains a servant rather than becoming the object trusted.",
+  },
+  11: {
+    title: "Storage reveals what the future means to the heart",
+    body: "Setting provision aside can serve a real future duty, especially where dependents, predictable need, or interruption of income are involved. The inward question is whether the store supports responsible action or becomes a private guarantee against dependence on God. Ghazali's test through possible loss makes that difference visible. Violent disturbance, despair, or collapse when the store disappears may reveal that the object was carrying a promise no created cause could actually make.",
+  },
+  12: {
+    title: "Loss distinguishes use from reliance",
+    body: "Before a store is lost, responsible planning and inward dependence can look identical to anxious hoarding. Loss separates them. The person may seek recovery, protect rights, and prevent further harm; ordinary action is not forbidden. The test is whether the heart treats the missing provision as though its true support has vanished with it. Recovery belongs to the use of causes, while inward collapse exposes the larger claim that had been placed upon the cause.",
+  },
+  13: {
+    title: "Why a personal permission cannot become public advice",
+    body: "Leaving a treatment can only be considered within the strength of the evidence for that treatment, the person's actual state, and the rights affected by the decision. A less certain remedy and an established effective treatment are not one category. Nor is a choice borne privately the same as exposing dependents or others to preventable harm. The limited permission preserves an exceptional station; its boundaries prevent that exception from being mistaken for the ordinary meaning of trust.",
+  },
+  14: {
+    title: "The general claim confuses reliance with a visible posture",
+    body: "If taking medicine were itself a failure of trust, the inward state could be diagnosed from one outward act. Ghazali has denied that method throughout the book. Prophetic precedent, differences among causes, and the duties of preservation all show why the criterion must remain inward while conduct remains governed by law and responsibility. Refusing a means can arise from trust, but it can also arise from ignorance, display, fear, or an unsupported claim to spiritual rank.",
+  },
+  15: {
+    title: "Disclosure is judged by what the words are doing",
+    body: "Saying that one is ill may seek treatment, explain an absence, protect another person, or ask for necessary help. The same words may also invite pity, display endurance, or turn complaint into a habit. A rule based only on speaking or remaining silent cannot separate those functions. The closing question therefore gathers the book's method in miniature: preserve truthful and useful means, then examine where the heart seeks relief, recognition, and support while using them.",
+  },
+};
+
+export const book35Chapters: Chapter[] = book35Base.map((chapter) => {
+  const extra = book35Deepening[chapter.id];
+  if (!extra || !chapter.deep) return chapter;
+  return { ...chapter, deep: { ...chapter.deep, closeReading: [...(chapter.deep.closeReading ?? []), extra] } };
+});
+
 export const book35ConceptNodes: ConceptNode[] = [
   ["tawakkul", "Trust", "Reliance on an agent", "The heart's rest upon the one entrusted, which follows from what is believed about him."],
   ["tawhid", "Unity", "The root of trust", "There is one, He is able, and the ability is exercised with wisdom and generosity."],
@@ -371,7 +408,7 @@ export const book35ConceptNodes: ConceptNode[] = [
   ["power", "Power", "His is the dominion", "Nothing relied upon exceeds what can be done, including by causes not in view."],
   ["wisdom", "Wisdom", "His is the praise", "Ability alone produces fear; ability exercised with care produces reliance."],
   ["decree", "The decree", "Where the account stops", "Ghazali marks the point at which disclosure was withheld and does not go past it."],
-  ["four-conditions", "Four conditions", "The advocate", "Guidance, power, expression, and compassion; doubting one keeps the heart contriving."],
+  ["four-conditions", "Four conditions", "The advocate", "Guidance, power, expression, and compassion; doubting one keeps the heart busy trying to compensate."],
   ["three-stations", "Three stations", "Client, child, washed", "Each is real, the first is where most readers are, and the third is rare."],
   ["means", "Means", "Not what removes trust", "The stirring of a hand is not the stirring of the inmost self."],
   ["causes", "Kinds of cause", "Certain, probable, speculative", "The treatment differs by kind, which is what makes the subject practical."],
@@ -405,7 +442,7 @@ export const book35Journeys: Journey[] = [
     image: assetUrl("assets/system/book35-the-advocate.jpg"), imageAlt: "A bright court chamber where a sealed brief lies on an empty advocate's bench, the client's seat drawn back and still.", minutes: 12, color: "#586fa8",
     nodes: [
       node("derive-word", "Derive the word", "From agency", "To entrust is to commit a matter and rest on the one entrusted with it.", "The state is rest, not resolve.", 5, "name"),
-      node("four-conditions", "Take the four conditions", "Guidance, power, expression, care", "The client is not truly relying unless he believes all four of his advocate.", "Doubting one shows as contrivance rather than as stated disbelief.", 5, "pattern"),
+      node("four-conditions", "Take the four conditions", "Guidance, power, expression, care", "The client is not truly relying unless he believes all four of his advocate.", "Doubting one appears as compensating plans rather than stated disbelief.", 5, "pattern"),
       node("transfer-them", "Transfer them", "Three that remain", "Applied to the One relied on, expression is not a possible deficiency.", "What can be doubted is knowledge, power, or care.", 5, "clear"),
       node("find-the-doubt", "Find your doubt", "Which one is it", "Where reliance is absent, the analogy names the belief responsible.", "This is what an exhortation to trust more cannot do.", 5, "diagnose"),
       node("if-none", "Ask if none", "Then what is it about", "Anxiety surviving assent to all three is not about the Trustee.", "That result points at the means rather than at the belief.", 8, "mirror"),
@@ -493,19 +530,74 @@ export const book35Instrument: Instrument = {
             { id: "abandoned", label: "I have set aside means I could take", note: "Ghazali's book argues at length that this is not what trust consists of." },
             { id: "resting", label: "My composure depends on them holding", note: "The heart has moved into the arrangement, which is what removes the state." },
             { id: "working", label: "I act, and my composure does not depend on it", note: "The hand moves and the heart rests elsewhere, which is the first station." },
-            { id: "none-taken", label: "There are no means available to me", note: "Nothing to take, which makes this the case patience rather than contrivance addresses." },
+            { id: "none-taken", label: "There are no means available to me", note: "There is no practical means to take, so this is a case for patience rather than further planning." },
           ],
         },
       ],
       verdicts: [
         { key: "none|resting", name: "The reliance has moved", role: "warning", chapterId: 11, body: "You doubt none of the three and your composure still depends on the arrangement holding. On Ghazali's account that is where the reliance has actually settled, whatever is believed in the abstract.", action: "The test he gives for a store applies directly: not its size but what its loss would do to you. Work at the belief rather than at the arrangement, since the arrangement is not what is failing." },
-        { key: "none|abandoned", name: "This is not what trust is", role: "warning", chapterId: 8, body: "You doubt none of the three and have set aside means available to you. Ghazali spends most of Part Two arguing that the stirring of a hand is not what removes reliance and that abandoning means is not the state.", action: "Take the means back. Abu Bakr blocked the snake holes in the cave, and Ghazali reasons that one who guards is not relying on his own contrivance but on the Creator of contrivance." },
+        { key: "none|abandoned", name: "This is not what trust is", role: "warning", chapterId: 8, body: "You doubt none of the three and have set aside means available to you. Ghazali spends most of Part Two arguing that moving the hand does not remove reliance and that abandoning means is not the spiritual state.", action: "Take the means back. Abu Bakr blocked the snake holes in the cave, and Ghazali reasons that taking precautions is reliance on the Creator who made those precautions effective, not on one's planning alone." },
         { key: "none|working", name: "The first station", role: "support", chapterId: 6, body: "You doubt none of the three, you act, and your composure does not rest on the outcome of your acting. That is the first station of trust as Ghazali describes it, and it is a real station rather than a lesser substitute.", action: "Hold it without reaching for the further degrees. He says the third is rare and that the sayings describing it come from people speaking of the furthest stations, so measuring yourself against them is failing a test set for someone else." },
-        { key: "none|none-taken", name: "Nothing to contrive", role: "balance", chapterId: 6, body: "There are no means and no doubt about the Trustee, which is the condition in which reliance has nothing standing in front of it.", action: "This is where Book 32's rule applies: a harm you cannot remove is the case patience was defined for. Reliance and patience are doing the same work here, and neither asks you to arrange anything." },
+        { key: "none|none-taken", name: "Nothing left to arrange", role: "balance", chapterId: 6, body: "There are no means and no doubt about the Trustee, which is the condition in which reliance has nothing standing in front of it.", action: "This is where Book 32's rule applies: a harm you cannot remove is the case patience was defined for. Reliance and patience are doing the same work here, and neither asks you to arrange anything." },
         { key: "knows|*", name: "The first condition", role: "balance", chapterId: 5, body: "What you doubt is whether the matter is fully known, which is the first of the advocate's conditions. Ghazali's client is not at rest because he suspects that some subtlety has escaped his agent.", action: "This doubt usually rests on the matter feeling too small, too tangled, or too private to be in view. Take it to the first part of the book: unity is what settles whether anything at all falls outside." },
         { key: "able|*", name: "The second condition", role: "balance", chapterId: 3, body: "What you doubt is whether anything can be done, which Ghazali treats as a separate belief from unity itself. A person may hold that there is one and still act as though a particular matter lies outside reach.", action: "The belief required concerns what is possible rather than what is likely. Hamdun's answer is the one to sit with: that among what is possible there are hidden causes besides the apparent ones." },
         { key: "cares|*", name: "The fourth condition", role: "warning", chapterId: 4, body: "What you doubt is whether it is cared about, which is the hardest of the components and the one Ghazali treats under the wisdom and generosity that His is the praise. Ability without care produces fear rather than reliance.", action: "He does not resolve this by argument alone and marks where his account stops. Do not treat the doubt as a failure of resolve; it is the component the book itself calls the finest, and it is worked at rather than decided." },
         { key: "*|*", name: "Read both together", role: "balance", chapterId: 8, body: "A doubt about one condition alongside a particular relation to means. Ghazali's method throughout Part Two is to locate the belief first, since the outward act is compatible with both states and settles nothing by itself.", action: "Take the doubt as the primary reading and the arrangement as evidence about it. What the hand did is never the diagnosis in this book; where the heart rests always is." },
+      ],
+    },
+  ],
+};
+
+const book35ConceptLab: ConceptLab = {
+  kind: "paired",
+  title: "The hand can move while the heart rests",
+  note: "Keep the outward arrangement and the inward resting place separate. The same visible act can belong to trust or to dependence on the means, while abandoning the act can still leave the heart anxious.",
+  prompt: "Compare what the hand does with where composure actually rests",
+  architecture: {
+    form: "White-marble Saudi colonnade",
+    reference: "The Grand Mosque in Mecca",
+    note: "The white-and-gold arcade language comes from the mosque's Saudi colonnades. It gives two levels a shared structure; the comparison itself is editorial.",
+    url: "https://saudipedia.com/en/grand-mosque",
+  },
+  scenes: [
+    {
+      id: "means-trust", label: "Means used, trust intact", chapterId: 8,
+      setup: "A person plans, works, takes an established precaution, or uses a lawful means—and does not treat the arrangement as the source of security.",
+      takeaway: "Ghazali moves the criterion away from the hand. Taking a means and relying on it are different acts occurring on different levels.",
+      steps: [
+        { id: "outward", label: "The hand", micro: "Takes the means", body: "The practical step is taken. Abu Bakr's blocking of the snake holes supplies Ghazali's governing example that precaution and trust can stand together.", role: "support" },
+        { id: "inward", label: "The heart", micro: "Rests beyond it", body: "Composure does not depend on the arrangement being independently decisive. The heart rests on the One who made both the capacity to act and the result.", role: "support" },
+        { id: "test", label: "The revealing test", micro: "If the plan fails", body: "Failure can disappoint and still reveal that the deepest support was not thought to have disappeared with the arrangement.", role: "balance" },
+      ],
+    },
+    {
+      id: "means-guarantee", label: "Means treated as guarantee", chapterId: 11,
+      setup: "The outward act can look identical: a store is kept, a plan is made, and work continues. The difference appears in what the person requires from it inwardly.",
+      takeaway: "Quantity is not the decisive test. What the loss of the arrangement does to composure reveals where reliance had settled.",
+      steps: [
+        { id: "outward", label: "The hand", micro: "Makes the same plan", body: "Nothing in the visible arrangement proves the state. The cupboard can be full in either condition, which is why the diagnosis cannot stop at the act.", role: "balance" },
+        { id: "inward", label: "The heart", micro: "Requires the plan", body: "The arrangement becomes the resting place. Security is experienced as present when it holds and as gone when it does not.", role: "warning" },
+        { id: "test", label: "The revealing test", micro: "Loss discloses it", body: "The store's disappearance exposes the inward attachment more reliably than a claim made while it remains safely in place.", role: "warning" },
+      ],
+    },
+    {
+      id: "means-abandoned", label: "Means abandoned, anxiety remains", chapterId: 8,
+      setup: "A person stops taking a practical step and calls the stopping trust, while attention remains fixed on what might happen.",
+      takeaway: "Abandoning means is not a shortcut to the inward state. The hand can become still while the heart remains more occupied by the cause than before.",
+      steps: [
+        { id: "outward", label: "The hand", micro: "Stops acting", body: "The visible act has been removed, but Ghazali does not treat this by itself as evidence of trust.", role: "warning" },
+        { id: "inward", label: "The heart", micro: "Keeps arranging", body: "Worry, rehearsal, and inward compensation continue. Stillness of the limbs has not produced rest in the heart.", role: "warning" },
+        { id: "test", label: "The revealing test", micro: "Occupation increases", body: "If leaving the means makes the cause dominate attention even more, the outward imitation has not established the claimed station.", role: "balance" },
+      ],
+    },
+    {
+      id: "dependents", label: "Others depend on it", chapterId: 9,
+      setup: "A person has people whose food, safety, or ordinary rights depend on his arrangements. Their risk is not his private spiritual experiment.",
+      takeaway: "A right held by another person changes what the hand is required to do without making inward trust unavailable.",
+      steps: [
+        { id: "outward", label: "The hand", micro: "Keeps required means", body: "The practical means must be kept where abandoning it transfers an unchosen risk to dependents.", role: "support" },
+        { id: "inward", label: "The heart", micro: "Keeps the same reliance", body: "Meeting another person's claim does not displace reliance. The inward state remains fully available while the duty is carried out.", role: "support" },
+        { id: "test", label: "The revealing test", micro: "Whose risk is this?", body: "Before setting aside a means, ask who bears the consequence. A station between a servant and God does not cancel someone else's right.", role: "warning" },
       ],
     },
   ],
@@ -532,6 +624,7 @@ export const book35: SystemBook = {
     note: "Four movements on unity, which Ghazali treats as the knowledge underlying trust, and eleven on trust itself. His long exposition of unity is presented as three consecutive readings following the three components he names in the opening.",
     groups: book35Movements,
   },
+  conceptLab: book35ConceptLab,
   instrument: book35Instrument,
   editorialNote: "The five journeys, fifteen reading sections, visual models, and diagnostic are editorial learning aids. The sequence preserves Ghazali's two parts, unity first as the knowledge and then trust as the state and its acts. The English is an original synthesis made from a complete reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration. Ghazali marks the point at which the question of the decree touches what he declines to disclose, and where he stops this synthesis stops. His grant regarding the leaving of medical treatment is narrowly bounded to remedies whose effect is not established, and he devotes an entire following section to refuting those who generalise it; both are presented together here because separating them produces the position he refutes. Nothing in this book or this synthesis is medical advice, and the sections on dependents make explicit that a risk falling on others is not a person's to take. The diagnostic locates a belief so that work can begin and cannot pronounce on anyone's state.",
 };

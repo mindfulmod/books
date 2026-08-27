@@ -269,7 +269,7 @@ export const book02Chapters: Chapter[] = [
     reflection: "Notice how consistently the sorting by warrant is carried through, including where the result is surprising.",
     audit: ["What warrant does this rest on?", "Have I sorted by subject instead?", "What must be granted before this pillar?", "Which of these have I examined?"],
     nodes: ["samiyyat", "arkan", "nubuwwa"],
-    model: chain("Why this pillar comes last", "It cannot stand before the one before it.", [["Prophethood established", "The last principle of the third pillar, supported by miracle.", "support"], ["Report becomes warrant", "What the Messenger conveyed is thereby held.", "support"], ["The ten follow", "Gathering, questioning, Balance, Bridge, Garden and Fire, and the leadership.", "support"]]),
+    model: chain("Why this pillar comes last", "It cannot stand before the one before it.", [["Prophethood established", "The last principle of the third pillar, supported by miracle.", "support"], ["Report becomes warrant", "What the Messenger conveyed is accepted on that basis.", "support"], ["The ten follow", "Gathering, questioning, Balance, Bridge, Garden and Fire, and the leadership.", "support"]]),
   }),
   makeChapter({
     id: 12, shortTitle: "Three questions", formalTitle: "Faith and submission, and what lies between them",

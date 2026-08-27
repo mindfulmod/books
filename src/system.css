@@ -7776,6 +7776,275 @@ body.system-page {
 }
 
 /* ---------------------------------------------------------------------------
+   Concept labs — architectural memory structures for difficult relationships
+   --------------------------------------------------------------------------- */
+
+.concept-lab {
+  margin-top: 52px;
+  padding-top: 28px;
+  border-top: 1px solid #dfc69d;
+}
+
+.concept-lab-header > span,
+.concept-lab-provenance small,
+.concept-lab-brief > span,
+.concept-lab-reading small {
+  display: block;
+  color: color-mix(in srgb, var(--journey) 76%, #8b5b22);
+  font-size: 7px;
+  font-weight: 830;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.concept-lab-header h4 {
+  margin-top: 7px;
+  color: #3f3020;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 580;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.concept-lab-header > p {
+  max-width: 75ch;
+  margin-top: 11px;
+  color: #715e45;
+  font-size: 11px;
+  line-height: 1.68;
+}
+
+.concept-lab-provenance {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) minmax(140px, auto);
+  align-items: center;
+  gap: 14px;
+  margin-top: 19px;
+  padding: 12px 14px;
+  border: 1px solid rgba(190, 151, 91, 0.3);
+  border-radius: 3px 15px 3px 15px;
+  background: linear-gradient(105deg, rgba(255, 253, 246, 0.96), rgba(248, 235, 205, 0.7));
+}
+
+.concept-lab-arch-mark {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 3px;
+  width: 48px;
+  height: 38px;
+  padding: 7px 6px 0;
+  border-bottom: 2px solid #c39447;
+}
+
+.concept-lab-arch-mark i,
+.concept-lab-arch-mark b {
+  display: block;
+  height: 28px;
+  border: 1px solid #d6b36f;
+  border-bottom: 0;
+  border-radius: 16px 16px 0 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.concept-lab-arch-mark b { height: 34px; border-color: #b98535; }
+.concept-lab-provenance strong { display: block; margin-top: 3px; color: #493820; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 15px; font-weight: 620; }
+.concept-lab-provenance p { max-width: 64ch; margin-top: 3px; color: #806c50; font-size: 9px; line-height: 1.48; }
+.concept-lab-provenance > a { display: inline-flex; align-items: center; justify-content: flex-end; gap: 5px; color: #85652e; font-size: 8px; font-weight: 770; line-height: 1.35; text-align: right; text-decoration: none; }
+.concept-lab-provenance > a:hover { color: #4c3a20; }
+
+.concept-lab-scenes {
+  display: flex;
+  gap: 7px;
+  margin-top: 18px;
+  padding-bottom: 3px;
+  overflow-x: auto;
+  scrollbar-color: #d2b98e transparent;
+  scrollbar-width: thin;
+}
+
+.concept-lab-scenes button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+  min-height: 35px;
+  padding: 7px 13px;
+  border: 1px solid #dcc8a8;
+  border-radius: 999px;
+  color: #705d42;
+  background: #fffaf0;
+  font-size: 9px;
+  font-weight: 720;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease, transform 120ms ease;
+}
+
+.concept-lab-scenes button small { color: #ac8750; font-size: 7px; letter-spacing: 0.08em; }
+.concept-lab-scenes button:hover,
+.concept-lab-scenes button.active { border-color: var(--journey); color: #3f3020; background: color-mix(in srgb, var(--journey) 8%, #fffaf0); }
+.concept-lab-scenes button:active { transform: scale(0.975); }
+
+.concept-lab-brief {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.28fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-left: 3px solid #c79a4c;
+  background: linear-gradient(90deg, #fff7e8, #fffdf7);
+}
+
+.concept-lab-brief p { color: #5d4a33; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 15px; line-height: 1.5; }
+
+.concept-lab-structure {
+  position: relative;
+  isolation: isolate;
+  margin-top: 16px;
+  padding: 22px;
+  border: 1px solid #ddc8a5;
+  border-radius: 5px 26px 5px 26px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(244, 201, 102, 0.24), transparent 33%),
+    linear-gradient(145deg, #fffdf8, #f7ead2);
+  overflow: hidden;
+}
+
+.concept-lab-structure::before {
+  position: absolute;
+  inset: 9px;
+  z-index: -1;
+  border: 1px solid rgba(187, 139, 67, 0.18);
+  border-radius: 2px 20px 2px 20px;
+  content: "";
+  pointer-events: none;
+}
+
+.concept-lab-structure > button {
+  position: relative;
+  min-width: 0;
+  border: 1px solid #dec8a5;
+  color: #4a3823;
+  background: rgba(255, 253, 247, 0.93);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(92, 61, 23, 0.06);
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.concept-lab-structure > button:hover { transform: translateY(-2px); box-shadow: 0 11px 24px rgba(92, 61, 23, 0.11); }
+.concept-lab-structure > button.active { border-color: var(--journey); background: color-mix(in srgb, var(--journey) 7%, #fffdf7); box-shadow: 0 0 0 2px color-mix(in srgb, var(--journey) 12%, transparent), 0 12px 26px rgba(92, 61, 23, 0.12); }
+.concept-lab-structure > button.warning.active { border-color: #bd6958; background: #fff8f2; box-shadow: 0 0 0 2px rgba(189, 105, 88, 0.12), 0 12px 26px rgba(92, 61, 23, 0.12); }
+.concept-lab-structure > button.balance.active { border-color: #c9933f; }
+.concept-lab-structure > button > small { display: block; color: #b0894f; font-size: 7px; font-weight: 800; letter-spacing: 0.1em; }
+.concept-lab-structure > button > strong { display: block; margin-top: 4px; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 16px; font-weight: 620; line-height: 1.14; }
+.concept-lab-structure > button > em { display: block; margin-top: 5px; color: #806d53; font-size: 8px; font-style: normal; line-height: 1.35; }
+
+.concept-lab-structure.courtyard {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) minmax(145px, 1.1fr) minmax(130px, 1fr);
+  grid-template-areas: ". north ." "west center east" ". south .";
+  gap: 12px;
+  min-height: 440px;
+  align-items: stretch;
+}
+
+.concept-lab-structure.courtyard > button { display: flex; min-height: 104px; flex-direction: column; justify-content: center; padding: 16px 18px; border-radius: 3px 23px 3px 23px; text-align: center; }
+.concept-lab-structure.courtyard .at-north { grid-area: north; border-radius: 70px 70px 4px 4px; }
+.concept-lab-structure.courtyard .at-east { grid-area: east; border-radius: 4px 70px 70px 4px; }
+.concept-lab-structure.courtyard .at-south { grid-area: south; border-radius: 4px 4px 70px 70px; }
+.concept-lab-structure.courtyard .at-west { grid-area: west; border-radius: 70px 4px 4px 70px; }
+.concept-lab-structure.courtyard .at-center { grid-area: center; z-index: 2; min-height: 145px; border: 2px solid #c7994e; border-radius: 50%; background: rgba(255, 251, 237, 0.96); }
+.concept-lab-structure.courtyard .concept-lab-bay { display: none; }
+.concept-lab-water { position: absolute; top: 50%; left: 50%; z-index: 1; width: 180px; height: 180px; border: 1px solid rgba(56, 153, 157, 0.25); border-radius: 50%; background: repeating-radial-gradient(circle, rgba(76, 165, 170, 0.12) 0 1px, transparent 2px 12px); transform: translate(-50%, -50%); pointer-events: none; }
+.concept-lab-water i { position: absolute; inset: 18px; border: 1px solid rgba(196, 151, 73, 0.24); border-radius: 50%; }
+
+.concept-lab-structure.arcade,
+.concept-lab-structure.paired {
+  display: grid;
+  grid-template-columns: repeat(var(--lab-count), minmax(118px, 1fr));
+  gap: 8px;
+  padding-top: 34px;
+}
+
+.concept-lab-structure.arcade::after,
+.concept-lab-structure.paired::after { position: absolute; right: 20px; bottom: 21px; left: 20px; z-index: -1; height: 5px; border: 1px solid #c69a52; background: #f5d995; content: ""; }
+.concept-lab-structure.arcade > button,
+.concept-lab-structure.paired > button { min-height: 216px; padding: 118px 14px 18px; border-radius: 76px 76px 3px 3px; text-align: center; }
+.concept-lab-bay { position: absolute; top: 15px; right: 17px; left: 17px; height: 84px; border: 3px solid #d5a64f; border-bottom-width: 7px; border-radius: 60px 60px 2px 2px; background: linear-gradient(180deg, #fff 0 45%, #f4d487 46% 53%, #fff9ea 54%); }
+.concept-lab-bay i { position: absolute; right: 12%; bottom: 0; left: 12%; height: 46px; border: 2px solid #bd704e; border-bottom: 0; border-radius: 40px 40px 0 0; }
+.concept-lab-bay b { position: absolute; top: -12px; left: 50%; width: 7px; height: 100px; border: 1px solid #d2b06f; border-radius: 4px; background: linear-gradient(90deg, #fff, #eed6a5, #fff); transform: translateX(-50%); }
+
+.concept-lab-structure.paired { gap: 12px; background: radial-gradient(circle at 50% 18%, rgba(239, 199, 103, 0.28), transparent 38%), #fffdf8; }
+.concept-lab-structure.paired > button { padding-top: 126px; border-color: #e1cdac; background: rgba(255, 255, 253, 0.96); }
+.concept-lab-structure.paired .concept-lab-bay { height: 91px; border-color: #bf9147; background: linear-gradient(180deg, #fff 0 49%, #d5ad63 50% 56%, #fff 57%); box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px rgba(193, 148, 73, 0.28); }
+.concept-lab-structure.paired .concept-lab-bay i { right: 18%; left: 18%; border-color: #d6b16e; }
+
+.concept-lab-reading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  gap: 0;
+  margin-top: 13px;
+  overflow: hidden;
+  border: 1px solid #e0cba9;
+  border-left: 4px solid #4d9a7c;
+  border-radius: 3px 18px 3px 18px;
+  background: #fffaf0;
+}
+
+.concept-lab-reading.balance { border-left-color: #cf9340; }
+.concept-lab-reading.warning { border-left-color: #be6655; }
+.concept-lab-reading > div { padding: 19px 20px; }
+.concept-lab-reading > div > span { color: #46341f; font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 21px; font-weight: 620; }
+.concept-lab-reading > div > p { margin-top: 7px; color: #68553e; font-size: 11px; line-height: 1.68; }
+.concept-lab-reading aside { padding: 17px 19px; border-left: 1px solid #e4d1b2; background: #f9efdE; }
+.concept-lab-reading aside p { margin-top: 6px; color: #5e4a32; font-size: 10px; line-height: 1.6; }
+.concept-lab-reading aside button { display: inline-flex; align-items: center; gap: 6px; margin-top: 11px; padding: 7px 0; border: 0; color: color-mix(in srgb, var(--journey) 72%, #6d491d); background: transparent; font-size: 8px; font-weight: 780; cursor: pointer; }
+.concept-lab button:focus-visible,
+.concept-lab a:focus-visible { outline: 2px solid var(--journey); outline-offset: 3px; }
+
+@media (max-width: 767px) {
+  .concept-lab { margin-top: 38px; padding-top: 24px; }
+  .concept-lab-header h4 { font-size: 27px; }
+  .concept-lab-header > p { font-size: 12px; }
+  .concept-lab-provenance { grid-template-columns: 42px minmax(0, 1fr); gap: 10px; padding: 11px 12px; }
+  .concept-lab-arch-mark { width: 40px; }
+  .concept-lab-provenance > a { grid-column: 2; justify-content: flex-start; text-align: left; }
+  .concept-lab-scenes { margin-right: -14px; padding-right: 14px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .concept-lab-scenes::-webkit-scrollbar { display: none; }
+  .concept-lab-scenes button { min-height: 42px; scroll-snap-align: start; font-size: 10px; }
+  .concept-lab-brief { grid-template-columns: 1fr; gap: 7px; padding: 14px 15px; }
+  .concept-lab-brief p { font-size: 16px; }
+  .concept-lab-structure { margin-right: -2px; margin-left: -2px; padding: 15px; }
+  .concept-lab-structure.courtyard { grid-template-columns: 1fr 1fr; grid-template-areas: "center center" "north east" "west south"; gap: 9px; min-height: 0; }
+  .concept-lab-structure.courtyard > button { min-height: 116px; padding: 14px 11px; border-radius: 30px 30px 4px 4px; }
+  .concept-lab-structure.courtyard .at-center { min-height: 132px; border-radius: 70px; }
+  .concept-lab-water { top: 82px; width: 140px; height: 140px; }
+  .concept-lab-structure.arcade,
+  .concept-lab-structure.paired { display: flex; gap: 9px; margin-right: -14px; padding: 24px 14px 20px 15px; overflow-x: auto; scroll-padding-left: 15px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .concept-lab-structure.arcade::-webkit-scrollbar,
+  .concept-lab-structure.paired::-webkit-scrollbar { display: none; }
+  .concept-lab-structure.arcade > button,
+  .concept-lab-structure.paired > button { flex: 0 0 68%; min-height: 238px; padding: 130px 16px 19px; scroll-snap-align: start; }
+  .concept-lab-structure.arcade > button:last-of-type,
+  .concept-lab-structure.paired > button:last-of-type { margin-right: 22%; }
+  .concept-lab-structure > button > strong { font-size: 18px; }
+  .concept-lab-structure > button > em { font-size: 10px; }
+  .concept-lab-reading { grid-template-columns: 1fr; }
+  .concept-lab-reading > div { padding: 17px; }
+  .concept-lab-reading > div > p { font-size: 12px; }
+  .concept-lab-reading aside { border-top: 1px solid #e4d1b2; border-left: 0; }
+  .concept-lab-reading aside p { font-size: 11px; }
+  .concept-lab-reading aside button { min-height: 42px; font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concept-lab * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+/* ---------------------------------------------------------------------------
    Search across the forty books
    --------------------------------------------------------------------------- */
 

@@ -293,6 +293,111 @@ function ConceptModel({ model, compact = false }: { model: VisualModel; compact?
   );
 }
 
+function ConceptLabPanel({
+  lab,
+  chapterId,
+  onSelectChapter,
+}: {
+  lab: NonNullable<SystemBook["conceptLab"]>;
+  chapterId: number;
+  onSelectChapter: (chapterId: number) => void;
+}) {
+  const chapterScene = lab.scenes.find((scene) => scene.chapterId === chapterId) ?? lab.scenes[0];
+  const [activeSceneId, setActiveSceneId] = useState(chapterScene.id);
+  const activeScene = lab.scenes.find((scene) => scene.id === activeSceneId) ?? lab.scenes[0];
+  const [activeStepId, setActiveStepId] = useState(activeScene.steps[0].id);
+  const activeStep = activeScene.steps.find((step) => step.id === activeStepId) ?? activeScene.steps[0];
+
+  useEffect(() => {
+    setActiveSceneId(chapterScene.id);
+  }, [chapterScene.id, lab]);
+
+  useEffect(() => {
+    setActiveStepId(activeScene.steps[0].id);
+  }, [activeScene.id, activeScene.steps]);
+
+  return (
+    <section className={`concept-lab concept-lab-${lab.kind}`} aria-labelledby={`concept-lab-title-${lab.title.replace(/\s+/g, "-").toLowerCase()}`}>
+      <header className="concept-lab-header">
+        <span>Concept lab</span>
+        <h4 id={`concept-lab-title-${lab.title.replace(/\s+/g, "-").toLowerCase()}`}>{lab.title}</h4>
+        <p>{lab.note}</p>
+      </header>
+
+      <div className="concept-lab-provenance">
+        <span className="concept-lab-arch-mark" aria-hidden="true"><i /><b /><i /></span>
+        <div>
+          <small>Architectural grammar</small>
+          <strong>{lab.architecture.form}</strong>
+          <p>{lab.architecture.note}</p>
+        </div>
+        <a href={lab.architecture.url} target="_blank" rel="noreferrer" aria-label={`Read about ${lab.architecture.reference}`}>
+          {lab.architecture.reference}<LinkSimple size={13} weight="bold" />
+        </a>
+      </div>
+
+      {lab.scenes.length > 1 && (
+        <div className="concept-lab-scenes" role="tablist" aria-label="Choose a worked example">
+          {lab.scenes.map((scene, index) => (
+            <button
+              key={scene.id}
+              className={scene.id === activeScene.id ? "active" : ""}
+              onClick={() => setActiveSceneId(scene.id)}
+              role="tab"
+              aria-selected={scene.id === activeScene.id}
+            >
+              <small>{String(index + 1).padStart(2, "0")}</small>
+              {scene.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div className="concept-lab-brief">
+        <span>{lab.prompt}</span>
+        <p>{activeScene.setup}</p>
+      </div>
+
+      <div
+        className={`concept-lab-structure ${lab.kind}`}
+        role="tablist"
+        aria-label={`${activeScene.label}: parts of the concept`}
+        style={{ "--lab-count": activeScene.steps.length } as CSSProperties}
+      >
+        {activeScene.steps.map((step, index) => (
+          <button
+            key={step.id}
+            className={`${step.role} ${step.position ? `at-${step.position}` : ""}${step.id === activeStep.id ? " active" : ""}`}
+            onClick={() => setActiveStepId(step.id)}
+            role="tab"
+            aria-selected={step.id === activeStep.id}
+          >
+            <span className="concept-lab-bay" aria-hidden="true"><i /><b /></span>
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            <strong>{step.label}</strong>
+            <em>{step.micro}</em>
+          </button>
+        ))}
+        {lab.kind === "courtyard" && <div className="concept-lab-water" aria-hidden="true"><i /></div>}
+      </div>
+
+      <div className={`concept-lab-reading ${activeStep.role}`} role="tabpanel">
+        <div>
+          <span>{activeStep.label}</span>
+          <p>{activeStep.body}</p>
+        </div>
+        <aside>
+          <small>Hold the whole pattern</small>
+          <p>{activeScene.takeaway}</p>
+          <button onClick={() => onSelectChapter(activeScene.chapterId)}>
+            Read the source section <ArrowRight size={14} weight="bold" />
+          </button>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
 function WorldLens({
   lens,
   chapterId,
@@ -1900,6 +2005,15 @@ function SystemApp() {
   // place from one definition.
   const interactives = (
     <>
+          {book.conceptLab && (
+            <ConceptLabPanel
+              key={`concept-lab:${book.id}`}
+              lab={book.conceptLab}
+              chapterId={chapter.id}
+              onSelectChapter={openSection}
+            />
+          )}
+
           {book.relationLens && (
             <WorldLens
               key={`lens:${book.id}:${chapter.id}`}
@@ -2001,7 +2115,7 @@ function SystemApp() {
     ? book.chapters[chapterIndex + 1]
     : null;
   const hasTool = Boolean(
-    book.instrument ?? book.relationLens ?? book.wealthAudit ?? book.audienceChamber
+    book.conceptLab ?? book.instrument ?? book.relationLens ?? book.wealthAudit ?? book.audienceChamber
     ?? book.solitudeTest ?? book.dutyFinder ?? book.repentanceCheck ?? book.foodMeasures
     ?? book.faultMirrors ?? book.mirrorObstructions ?? book.substitutionTest,
   );

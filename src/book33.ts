@@ -1,6 +1,6 @@
 import { assetUrl } from "./assetUrl";
 import type { Chapter, ConceptNode, VisualModel } from "./data";
-import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
+import type { ConceptLab, Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
 type Seed = {
   id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string;
@@ -129,7 +129,7 @@ export const book33Chapters: Chapter[] = [
       { title: "Report the strongest form", body: "Al-Wasiti said fear is a screen between God and a person, and that when God shows Himself in the innermost part there is no room left in it for either hope or fear." },
       { title: "Answer it by location", body: "Ghazali does not dispute the description. He says: we are now speaking of the beginnings of the stations. The book is written for the road rather than for its end." },
       { title: "Take the position seriously", body: "The position is a real one and it is not being caricatured: somebody wholly taken up with God, living in the moment he is in, has nothing turned toward the future — and since fear and hope are both about what is awaited, neither has anything to attach to. Al-Wasiti's form of it is stronger still, that fear is itself a screen, and that when God discloses Himself there is no room left for either." },
-      { title: "Note how the objection is answered", body: "And Ghazali's answer is unusual in that it disputes nothing. He does not deny the description or weaken the report — he says that we are now speaking of the beginnings of the stations. Which places the whole book on the road rather than at its end, and quietly disqualifies the objection as advice: a reader who is not there cannot act on an account of what is true there, and using it to set aside fear and hope is taking a description of an arrival as a licence for the journey." },
+      { title: "Note how the objection is answered", body: "Ghazali answers without disputing the description or weakening the report. He says that the present discussion concerns the beginnings of the stations. The whole book is therefore guidance for the road, not a description of its highest end. A reader who has not reached that end cannot use its conditions as instructions for the journey. Doing so would turn a description of arrival into permission to set aside the fear and hope still needed along the way." },
     ],
     closer: [
       { title: "Why he includes it at all", body: "Including a position that appears to make his subject unnecessary, and answering it by placing rather than refuting it, is characteristic. It tells the reader what kind of book he is holding." },
@@ -148,10 +148,10 @@ export const book33Chapters: Chapter[] = [
     thesis: "Fear is built on the same architecture as hope, and located in the same place.",
     moves: [
       { title: "Give the three parts", body: "Fear is composed of knowledge, a state, and an act. The knowledge is knowledge of the cause leading to the disliked outcome, and the burning of the heart that follows is fear itself." },
-      { title: "Give the analogy", body: "Somebody who has offended a king and been caught fears execution while a pardon is still possible — and how much the fear hurts tracks the specifics: how bad the offence was, whether the king is vengeful, whether he has people around him pushing for revenge, and whether the offender has anyone to speak for him or anything to his credit that would cancel it out." },
+      { title: "Give the analogy", body: "Someone who has offended a king and been caught fears execution even while a pardon remains possible. The strength of that fear depends on the details: the seriousness of the offence, the king's tendency toward vengeance, the influence of people demanding punishment, and whether the offender has an advocate or any good standing that might count in his favor." },
       { title: "Add the other source", body: "Fear can come from nothing you did at all, but simply from what you are facing: somebody who falls into a lion's claws fears it for being a lion, the way water is feared for flowing and fire for burning." },
       { title: "Apply it", body: "So fear of God arises sometimes from knowing God and His attributes, and that were He to destroy the worlds He would not mind and nothing would prevent Him; sometimes from the multitude of one's own offences; and sometimes from both together." },
-      { title: "Take the analogy of the offender", body: "The analogy is worked with unusual specificity, and the specificity is the point. A man who has offended a king and been caught fears execution while a pardon is still possible — and how much the fear hurts depends on how bad the offence was, whether the king is vengeful, whether there are people around him pushing for revenge, and whether the man has anyone to speak for him or anything to his credit. Fear is not one quantity; it is a function of several things a person can actually assess." },
+      { title: "Take the analogy of the offender", body: "The analogy is unusually specific because each detail changes the fear. Someone caught after offending a king may still hope for pardon, but fear will vary with the seriousness of the offence and the king's tendency toward vengeance. It will also vary with the influence of people demanding punishment and whether the offender has an advocate or any good standing. Fear is not one fixed quantity; several assessable conditions shape it." },
       { title: "Note the second source of fear", body: "And then a wholly different source is named: fear that has nothing to do with anything you did. A man who falls into a lion's claws fears it for being a lion, as water is feared for flowing and fire for burning. Which means fear of God can arise from His attributes alone — that were He to destroy the worlds He would not mind and nothing would prevent Him — with no reference to the person's record at all. The two sources produce fears of quite different characters." },
     ],
     closer: [
@@ -292,7 +292,7 @@ export const book33Chapters: Chapter[] = [
       { title: "Explain why it is feared", body: "Because neither rank is a verdict on a life as a whole but a condition at a moment, and no present state guarantees what that moment will hold." },
       { title: "Draw the practical consequence", body: "What can be worked on is not the moment but what a person is habitually full of, since what dominates at the end is what dominated before it." },
       { title: "Note the two ranks and what separates them", body: "The two ranks are separated by what dominates at the moment, and the lesser one is the more disturbing. The graver is doubt or denial coming to dominate as the terrors appear. The lesser is the love of some worldly thing or an appetite for it dominating instead — so that it fills the moment and leaves no room for anything else. No unbelief is required for the second, only a preoccupation, which is a condition most people are in most days." },
-      { title: "Take the practical conclusion", body: "And the conclusion is the one useful thing that can be said about a moment nobody can rehearse: what dominates at the end is what dominated before it. So the work is not on the moment, which is unreachable, but on what a person is habitually full of — which is exactly the subject of the ten books preceding this one, and why the fear of a bad ending is not a reason for anxiety so much as a reason for the rest of the Ihya." },
+      { title: "Take the practical conclusion", body: "No one can rehearse the final moment, but Ghazali identifies one practical principle: what dominates at the end is ordinarily what dominated beforehand. The work therefore concerns what habitually fills the person, not an unreachable future instant. That is the subject of the ten books preceding this one. Fear of a bad ending should direct a person toward that work rather than toward helpless anxiety." },
     ],
     closer: [
       { title: "Why the second rank is the practical one", body: "The first is catastrophic and rare in the reader's imagination; the second is continuous with ordinary life, since it consists of being full of something at the end because one was full of it throughout." },
@@ -396,7 +396,7 @@ export const book33Journeys: Journey[] = [
       node("king-analogy", "Weigh the causes", "The offence and the offended", "Gravity of the offence, the disposition of the One offended, any intercessor, any merit.", "Each factor raises or lowers the fear.", 6, "balance"),
       node("two-sources", "Find the two sources", "Your record, or Him", "Fear arises from the multitude of offences, from the attributes of the One feared, or both.", "Most people have only the first.", 6, "know"),
       node("most-fearful", "Read the consequence", "Knowing most, fearing most", "The most fearful is the one who knows himself and his Lord best.", "Low fear is a diagnosis rather than a reproach.", 6, "mirror"),
-      node("sort-objects", "Sort the objects", "Punishment, end, separation", "Ask what would have to be guaranteed for the fear to disappear.", "Fear of consequences is not thereby illegitimate.", 8, "pattern"),
+      node("sort-objects", "Sort the objects", "Punishment, end, separation", "Ask what would have to be guaranteed for the fear to disappear.", "Fear of consequences is not illegitimate for that reason.", 8, "pattern"),
     ],
   },
   {
@@ -500,6 +500,61 @@ export const book33Instrument: Instrument = {
   ],
 };
 
+const book33ConceptLab: ConceptLab = {
+  kind: "paired",
+  title: "Fear and hope are medicines, not trophies",
+  note: "Read both states by what they produce. Ghazali refuses to rank them in isolation because an instrument is measured by the need it treats and the useful work it performs.",
+  prompt: "Compare the expectation, the restraint, and the conduct that follows",
+  architecture: {
+    form: "White-marble Saudi colonnade",
+    reference: "The Grand Mosque in Mecca",
+    note: "The colonnade provides a shared white-and-gold frame for two inward forces and their result. The comparison is an editorial learning aid.",
+    url: "https://saudipedia.com/en/grand-mosque",
+  },
+  scenes: [
+    {
+      id: "balanced", label: "Both are working", chapterId: 10,
+      setup: "The expectation has real grounds, and fear reaches conduct without passing into paralysis.",
+      takeaway: "For one who has left outward and inward sin, Ghazali says the more beneficial condition is balance. Both states continue doing work.",
+      steps: [
+        { id: "hope", label: "Hope", micro: "Expectation with causes", body: "Like the farmer who prepares ground, casts sound seed, waters it, and clears thorns, the expectation rests on causes that can actually be named.", role: "support" },
+        { id: "fear", label: "Fear", micro: "Reaches the limbs", body: "Fear restrains conduct from sin and binds it to obedience. It has reached the balanced degree rather than stopping as feeling or passing into despair.", role: "support" },
+        { id: "result", label: "What follows", micro: "Striving continues", body: "Hope draws the person forward and fear guards the path. Neither produces the collapse that its excess or absence would create.", role: "balance" },
+      ],
+    },
+    {
+      id: "wishing", label: "Wishing with security", chapterId: 2,
+      setup: "Forgiveness is expected while its grounds are absent or broken, and nothing in fear is restraining conduct.",
+      takeaway: "Changing the label is part of the treatment. Anticipation without a cause is wishing; expectation on broken causes is delusion, not hope.",
+      steps: [
+        { id: "hope", label: "The expectation", micro: "No sound ground", body: "The feeling may be strong, but the farmer's measure fails: the ground, seed, watering, or clearing has not been established.", role: "warning" },
+        { id: "fear", label: "The restraint", micro: "Nothing reaches conduct", body: "Security has removed fear's practical work. Ghazali treats feeling safe as a disease requiring fear, not as evidence of a higher state.", role: "warning" },
+        { id: "result", label: "What follows", micro: "The causes remain broken", body: "Expectation continues without changing conduct. The remedy is to establish a cause and restore a fear that reaches the limbs.", role: "warning" },
+      ],
+    },
+    {
+      id: "despair", label: "Fear passes the balance", chapterId: 7,
+      setup: "Fear moves beyond useful restraint into despair, so the striving it was meant to produce begins to stop.",
+      takeaway: "More fear is not always better. Ghazali's praiseworthy degree is the middle; excess ends in despair just as deficiency ends in security.",
+      steps: [
+        { id: "hope", label: "Hope", micro: "The needed medicine", body: "Hope becomes more beneficial here because the expectation and effort have collapsed. It is restored through grounds, not reassurance alone.", role: "support" },
+        { id: "fear", label: "Fear", micro: "Past its useful dose", body: "The state has exceeded the measure that drives action. A medicine has become harmful through excess rather than through being false in itself.", role: "warning" },
+        { id: "result", label: "What follows", micro: "Effort is paralysed", body: "Despair stops the very striving fear was given to produce. The diagnosis therefore calls for the opposite emphasis, not intensification.", role: "warning" },
+      ],
+    },
+    {
+      id: "fear-feeling", label: "Fear stops at feeling", chapterId: 7,
+      setup: "A verse or reminder causes tears and disturbance, but the same conduct resumes after the moment passes.",
+      takeaway: "Intensity of feeling is not the test. Ghazali checks fear by whether it changes what the limbs do.",
+      steps: [
+        { id: "hope", label: "Hope", micro: "May still be grounded", body: "Nothing about the emotion alone settles whether hope is sound. Its own test remains whether the causes are in place.", role: "balance" },
+        { id: "fear", label: "Fear", micro: "A deficient degree", body: "The state is felt but does not reach action. Ghazali likens weak fear to a weak switch used on a strong beast: it cannot direct what it touches.", role: "warning" },
+        { id: "result", label: "What follows", micro: "No durable restraint", body: "Because conduct remains unchanged, knowledge must be strengthened until fear performs the work for which it is valued.", role: "balance" },
+      ],
+    },
+  ],
+};
+
 export const book33Sources: SourceLink[] = [
   { label: "Primary Arabic text", note: "The complete public Arabic of Book 33 was read in full and used to establish the definition of hope and its condition of causes, the reality and degrees of fear, and the resolution of the comparison between them.", url: "https://shamela.ws/book/9472/1301" },
   { label: "The farmer's measure", note: "The passage in which hope for forgiveness is measured against the sower's: good ground, sound seed, water at its times, and thorns cleared away.", url: "https://shamela.ws/book/9472/1302" },
@@ -522,6 +577,7 @@ export const book33: SystemBook = {
     note: "Five movements on hope and nine on fear, following Ghazali's own two parts. His long treatments of hope's remedy and of the meaning of a bad ending are each presented as a single reading rather than split, since his text supplies no internal joints there.",
     groups: book33Movements,
   },
+  conceptLab: book33ConceptLab,
   instrument: book33Instrument,
   editorialNote: "The five journeys, fourteen reading sections, visual models, and diagnostic are editorial learning aids. The sequence preserves Ghazali's two parts, hope first and then fear. The English is an original synthesis made from a complete reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration. This book treats despair, the fear of dying badly, and states of severe distress. Ghazali is explicit that fear passing beyond the balance goes out into despair and ends the striving it was meant to produce, and that the praiseworthy degree is the middle; nothing here recommends the intensification of fear without measure. The diagnostic locates a condition so that a fitting emphasis can begin. It cannot pronounce on forgiveness, acceptance, or anyone's standing, and it is not a substitute for help where distress is severe.",
 };
