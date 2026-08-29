@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inner Dimensions of the Prayer — Ibn Qayyim al-Jawziyyah — a visual summary</title>
+<style>
+/* ═══════════════════════════════════════════════════════════
+   TOKENS — palette from the book's governing image: water on
+   parched land. Teal = irrigated heart (ṣalāh).
+   Ochre = parched heart (samāʿ). Neutrals carry a green bias.
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --ground:#EDF1EE; --ground-2:#E3E9E5; --panel:#F7FAF8;
+  --ink:#16211F; --ink-soft:#3C4B47; --muted:#6E7F7A;
+  --rule:#C9D4CF; --rule-soft:#DCE4E0;
+  --water:#0E6E63; --water-deep:#094F47; --water-wash:#DCEAE6;
+  --earth:#A8741A; --earth-deep:#7E5610; --earth-wash:#F1E7D3;
+  --sky:#EAF1F0;
+
+  --display:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Book Antiqua",Georgia,serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+
+  --measure:66ch; --rail:212px;
+  --s1:.35rem; --s2:.7rem; --s3:1.1rem; --s4:1.7rem; --s5:2.6rem; --s6:4rem; --s7:5.5rem;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ground:#0B1614; --ground-2:#101E1B; --panel:#12211E;
+    --ink:#E4EDE9; --ink-soft:#B4C4BF; --muted:#7E918C;
+    --rule:#24352F; --rule-soft:#1B2A26;
+    --water:#4FBFAE; --water-deep:#7FD6C7; --water-wash:#10302B;
+    --earth:#D3A250; --earth-deep:#E7BE76; --earth-wash:#2C2314;
+    --sky:#0F1D1B;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1614; --ground-2:#101E1B; --panel:#12211E;
+  --ink:#E4EDE9; --ink-soft:#B4C4BF; --muted:#7E918C;
+  --rule:#24352F; --rule-soft:#1B2A26;
+  --water:#4FBFAE; --water-deep:#7FD6C7; --water-wash:#10302B;
+  --earth:#D3A250; --earth-deep:#E7BE76; --earth-wash:#2C2314;
+  --sky:#0F1D1B;
+}
+:root[data-theme="light"]{
+  --ground:#EDF1EE; --ground-2:#E3E9E5; --panel:#F7FAF8;
+  --ink:#16211F; --ink-soft:#3C4B47; --muted:#6E7F7A;
+  --rule:#C9D4CF; --rule-soft:#DCE4E0;
+  --water:#0E6E63; --water-deep:#094F47; --water-wash:#DCEAE6;
+  --earth:#A8741A; --earth-deep:#7E5610; --earth-wash:#F1E7D3;
+  --sky:#EAF1F0;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:5rem;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;}
+}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+
+/* ═══════════════════════════════ PROGRESS + NAV ═══ */
+#progress{position:fixed;top:0;left:0;height:2px;background:var(--water);width:0;z-index:60;transition:width .1s linear;}
+
+/* mobile / tablet: sticky bar */
+#topbar{
+  position:sticky;top:0;z-index:55;display:flex;align-items:center;gap:var(--s2);
+  padding:.6rem clamp(1rem,4vw,2rem);background:color-mix(in srgb,var(--ground) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+}
+#topbar .now{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--water);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.btn{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+  background:transparent;color:var(--ink-soft);border:1px solid var(--rule);border-radius:2px;
+  padding:.42rem .6rem;cursor:pointer;white-space:nowrap;
+}
+.btn:hover{color:var(--water);border-color:var(--water);}
+
+#sheet{
+  position:fixed;inset:0;z-index:58;background:color-mix(in srgb,var(--ground) 96%,transparent);
+  backdrop-filter:blur(8px);padding:clamp(1.2rem,5vw,3rem);overflow-y:auto;display:none;
+}
+#sheet.open{display:block;}
+#sheet ol{list-style:none;margin:2.5rem 0 0;padding:0;max-width:34rem;}
+#sheet li{border-bottom:1px solid var(--rule-soft);}
+#sheet a{display:flex;gap:var(--s3);align-items:baseline;padding:.85rem .2rem;
+  text-decoration:none;color:var(--ink);font-family:var(--display);font-size:1.15rem;}
+#sheet a .n{font-family:var(--mono);font-size:.7rem;color:var(--water);}
+#sheet a:hover{color:var(--water);}
+
+/* desktop: fixed rail */
+#rail{display:none;}
+@media (min-width:1100px){
+  #topbar{display:none;}
+  #rail{
+    display:flex;flex-direction:column;gap:var(--s3);
+    position:fixed;top:0;left:0;bottom:0;width:var(--rail);z-index:55;
+    padding:var(--s5) var(--s3) var(--s4) clamp(1rem,2vw,1.6rem);
+    border-right:1px solid var(--rule);background:var(--ground);overflow-y:auto;
+  }
+  #rail .brand{font-family:var(--display);font-size:1.02rem;line-height:1.25;color:var(--ink);}
+  #rail .brand span{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-top:.4rem;}
+  #rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;flex:1;}
+  #rail a{
+    display:flex;gap:.6rem;align-items:baseline;padding:.4rem 0 .4rem .7rem;
+    text-decoration:none;color:var(--ink-soft);font-size:.86rem;line-height:1.3;
+    border-left:2px solid transparent;transition:color .18s,border-color .18s;
+  }
+  #rail a .n{font-family:var(--mono);font-size:.62rem;color:var(--muted);}
+  #rail a:hover{color:var(--water);}
+  #rail a.active{color:var(--water);border-left-color:var(--water);font-weight:600;}
+  #rail a.active .n{color:var(--water);}
+  body{padding-left:var(--rail);}
+}
+
+/* ═══════════════════════════════ LAYOUT ═══ */
+.wrap{max-width:1140px;margin-inline:auto;padding-inline:clamp(1.1rem,4vw,3rem);}
+.col{max-width:var(--measure);}
+.stack>*+*{margin-top:var(--s3);}
+section.band{padding-block:var(--s7);border-top:1px solid var(--rule);scroll-margin-top:4.5rem;}
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.14;margin:0;}
+h1{font-size:clamp(2.3rem,5.4vw,3.8rem);letter-spacing:-.02em;}
+h2{font-size:clamp(1.75rem,3.4vw,2.5rem);letter-spacing:-.015em;}
+h3{font-size:clamp(1.2rem,2.1vw,1.5rem);letter-spacing:-.01em;}
+h4{font-size:1.05rem;}
+p{margin:0;}
+a{color:var(--water);text-underline-offset:3px;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--water);outline-offset:3px;border-radius:2px;}
+svg a:focus-visible{outline:2px solid var(--water);outline-offset:2px;}
+
+.eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 var(--s3);display:flex;align-items:center;gap:var(--s2);}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);}
+.lede{font-size:1.14rem;color:var(--ink-soft);}
+.small{font-size:.93rem;color:var(--ink-soft);}
+.tiny{font-size:.81rem;color:var(--muted);}
+.cite{font-family:var(--mono);font-size:.67rem;letter-spacing:.05em;color:var(--muted);}
+.cite b{font-weight:500;color:var(--water);white-space:nowrap;}
+
+/* ═══════════════════════════════ FIGURES ═══ */
+figure.fig{margin:0;border:1px solid var(--rule);background:var(--panel);}
+figure.fig .canvas{padding:var(--s4) var(--s3);overflow-x:auto;}
+figure.fig svg{display:block;width:100%;height:auto;min-width:520px;}
+figure.fig figcaption{padding:var(--s3) var(--s4);border-top:1px solid var(--rule-soft);
+  background:var(--ground-2);font-size:.88rem;color:var(--ink-soft);}
+figure.fig figcaption b{color:var(--ink);}
+.fig-note{font-family:var(--mono);font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin-top:var(--s2);display:block;}
+
+.legend{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-top:var(--s3);}
+.legend span{display:flex;align-items:center;gap:.45rem;font-size:.82rem;color:var(--ink-soft);}
+.swatch{width:20px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block;}
+
+/* SVG text roles */
+.sv-lab{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;fill:var(--muted);}
+.sv-tick{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;fill:var(--muted);}
+.sv-name{font-family:var(--body);font-size:11.5px;fill:var(--ink-soft);}
+.sv-key{font-family:var(--display);font-size:13px;font-style:italic;fill:var(--ink);}
+.sv-hi{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;fill:var(--water);}
+.station{cursor:pointer;}
+.station .hit{fill:transparent;}
+.station:hover .dot-body{r:6.5;}
+.station:hover .sv-name{fill:var(--water);}
+
+/* ═══════════════════════════════ FAST SUMMARY ═══ */
+.fast{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+@media(min-width:640px){.fast{grid-template-columns:1fr 1fr;}}
+@media(min-width:980px){.fast{grid-template-columns:repeat(4,1fr);}}
+.fast > div{background:var(--panel);padding:var(--s4);display:flex;flex-direction:column;gap:var(--s2);}
+.fast .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--water);}
+.fast .v{font-family:var(--display);font-size:1.22rem;line-height:1.28;}
+.fast p{font-size:.87rem;color:var(--muted);}
+
+/* ═══════════════════════════════ CARDS / GRIDS ═══ */
+.grid{display:grid;gap:var(--s3);}
+.g2{grid-template-columns:1fr;} .g3{grid-template-columns:1fr;} .g4{grid-template-columns:1fr 1fr;}
+@media(min-width:700px){.g2{grid-template-columns:1fr 1fr;}.g3{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:940px){.g4{grid-template-columns:repeat(4,1fr);}}
+.card{background:var(--panel);border:1px solid var(--rule);padding:var(--s4);
+  display:flex;flex-direction:column;gap:var(--s2);}
+.card p{font-size:.94rem;color:var(--ink-soft);}
+.card .num{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--water);
+  border-bottom:1px solid var(--rule-soft);padding-bottom:var(--s2);}
+.card.is-good{border-left:3px solid var(--water);}
+.card.is-warn{border-left:3px solid var(--earth);}
+.card.is-warn .num{color:var(--earth);}
+
+.rule-note{border:1px solid var(--rule);background:var(--panel);padding:var(--s4);border-left:3px solid var(--water);}
+.rule-note h4{margin-bottom:var(--s2);}
+.rule-note p{font-size:.94rem;color:var(--ink-soft);}
+.rule-note p+p{margin-top:var(--s2);}
+.note{border:1px solid var(--earth);border-left-width:3px;background:var(--earth-wash);padding:var(--s4);}
+.note h4{color:var(--earth-deep);margin-bottom:var(--s2);}
+.note p{font-size:.94rem;color:var(--ink-soft);}
+.note p+p{margin-top:var(--s2);}
+
+/* ═══════════════════════════════ DIALOGUE ═══ */
+.dialogue{border:1px solid var(--rule);background:var(--panel);}
+.dialogue-row{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--rule-soft);}
+.dialogue-row:last-child{border-bottom:0;}
+@media(min-width:780px){.dialogue-row{grid-template-columns:1fr 1.6rem 1fr;}}
+.say,.reply{padding:var(--s4);display:flex;flex-direction:column;gap:var(--s2);justify-content:center;}
+.reply{background:var(--water-wash);}
+.say .who,.reply .who{font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;}
+.say .who{color:var(--muted);} .reply .who{color:var(--water-deep);}
+.say .line{font-family:var(--display);font-size:1.1rem;line-height:1.38;}
+.reply .line{font-family:var(--display);font-size:1.1rem;line-height:1.38;color:var(--water-deep);font-style:italic;}
+.gutter{display:none;}
+@media(min-width:780px){.gutter{display:grid;place-items:center;background:var(--ground-2);
+  border-inline:1px solid var(--rule-soft);color:var(--water);font-size:.78rem;}}
+
+/* ═══════════════════════════════ WALKTHROUGH ═══ */
+.walk{position:relative;margin-top:var(--s5);}
+.walk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(to bottom,transparent,var(--water) 5%,var(--water) 95%,transparent);opacity:.45;}
+.step{position:relative;padding:0 0 var(--s5) clamp(1.4rem,4vw,2.4rem);scroll-margin-top:5.5rem;}
+.step:last-child{padding-bottom:0;}
+.step::before{content:"";position:absolute;left:-5px;top:.5rem;width:12px;height:12px;border-radius:50%;
+  background:var(--ground);border:2px solid var(--water);}
+.step.is-peak::before{background:var(--water);}
+.step-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s3);}
+.step-arabic{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--water);text-transform:uppercase;}
+.step-body{margin-top:var(--s2);display:grid;gap:var(--s3);}
+@media(min-width:840px){.step-body{grid-template-columns:1fr 1fr;}}
+.facet{border-left:2px solid var(--rule);padding-left:var(--s3);}
+.facet.inner{border-left-color:var(--water);}
+.facet .label{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);display:block;margin-bottom:var(--s1);}
+.facet p{font-size:.94rem;color:var(--ink-soft);}
+
+/* ═══════════════════════════════ MISC ═══ */
+.pull{margin-block:var(--s5);padding:var(--s4) var(--s5);border-top:2px solid var(--water);
+  border-bottom:1px solid var(--rule);background:var(--panel);}
+.pull blockquote{margin:0;font-family:var(--display);font-size:clamp(1.1rem,2.2vw,1.5rem);line-height:1.4;}
+.pull figcaption{margin-top:var(--s3);font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);}
+.pull.is-earth{border-top-color:var(--earth);}
+
+.table-scroll{overflow-x:auto;border:1px solid var(--rule);background:var(--panel);}
+table{border-collapse:collapse;width:100%;min-width:500px;font-size:.92rem;}
+th,td{text-align:left;padding:var(--s3);border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+thead th{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;background:var(--ground-2);white-space:nowrap;}
+tbody tr:last-child td{border-bottom:0;}
+td.term{font-family:var(--display);font-size:1rem;white-space:nowrap;}
+td.accent{color:var(--water);font-weight:500;}
+
+.contrast{display:grid;grid-template-columns:1fr;border:1px solid var(--rule);}
+@media(min-width:760px){.contrast{grid-template-columns:1fr 1fr;}}
+.contrast>div{padding:var(--s4);}
+.contrast .side-a{background:var(--water-wash);border-left:3px solid var(--water);}
+.contrast .side-b{background:var(--earth-wash);border-left:3px solid var(--earth);}
+.contrast h4{margin-bottom:var(--s2);}
+.contrast .side-a h4{color:var(--water-deep);} .contrast .side-b h4{color:var(--earth-deep);}
+.contrast ul{margin:0;padding-left:1.05rem;}
+.contrast li{margin-top:var(--s2);font-size:.94rem;color:var(--ink-soft);}
+
+ol.book-list{list-style:none;counter-reset:bl;margin:0;padding:0;display:grid;gap:var(--s2);}
+ol.book-list li{counter-increment:bl;position:relative;padding-left:2.3rem;font-size:.95rem;color:var(--ink-soft);}
+ol.book-list li::before{content:counter(bl,decimal-leading-zero);position:absolute;left:0;top:.1em;
+  font-family:var(--mono);font-size:.68rem;color:var(--water);border:1px solid var(--rule);padding:.08rem .28rem;border-radius:2px;}
+ol.book-list li b{color:var(--ink);}
+ul.plain{margin:0;padding-left:1.1rem;}
+ul.plain li{margin-top:var(--s2);font-size:.95rem;color:var(--ink-soft);}
+ul.plain li b{color:var(--ink);}
+
+.map{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+@media(min-width:640px){.map{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1000px){.map{grid-template-columns:repeat(4,1fr);}}
+.map-item{background:var(--panel);padding:var(--s4);display:flex;flex-direction:column;gap:var(--s2);}
+.map-item .ch{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--water);}
+.map-item h4{font-size:.98rem;} .map-item p{font-size:.86rem;color:var(--muted);}
+.map-item.is-appendix .ch{color:var(--earth);}
+
+footer{border-top:1px solid var(--rule);padding-block:var(--s6) var(--s7);}
+footer .small{max-width:var(--measure);} footer .small+.small{margin-top:var(--s3);}
+
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+}
+
+/* ═══════════════════════════════ DEPTH LAYERS ═══ */
+.depthbar{display:flex;border:1px solid var(--rule);border-radius:2px;overflow:hidden;}
+.depthbar button{flex:1;font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;
+  text-transform:uppercase;background:transparent;color:var(--muted);border:0;
+  border-right:1px solid var(--rule);padding:.45rem .25rem;cursor:pointer;white-space:nowrap;}
+.depthbar button:last-child{border-right:0;}
+.depthbar button:hover{color:var(--water);}
+.depthbar button[aria-pressed="true"]{background:var(--water-wash);color:var(--water);font-weight:700;}
+body[data-depth="glance"] .d-deep,
+body[data-depth="glance"] .d-src,
+body[data-depth="deep"]   .d-src{display:none!important;}
+.depth-hint{font-family:var(--mono);font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);display:block;line-height:1.5;}
+.take{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--water);
+  padding:var(--s3) var(--s4);margin-top:var(--s4);}
+.take .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--water);display:block;margin-bottom:.35rem;}
+.take p{font-family:var(--display);font-size:1.1rem;line-height:1.4;}
+.mis{border:1px solid var(--earth);border-left-width:3px;background:var(--earth-wash);padding:var(--s4);}
+.mis .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--earth-deep);display:block;margin-bottom:.4rem;}
+.mis p{font-size:.93rem;color:var(--ink-soft);}
+.audit{border:1px solid var(--rule);background:var(--ground-2);padding:var(--s4);}
+.audit .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--water);display:block;margin-bottom:.5rem;}
+.audit ul{margin:0;padding-left:1.05rem;}
+.audit li{margin-top:var(--s2);font-size:.93rem;color:var(--ink-soft);}
+.psrc{border-top:1px solid var(--rule);margin-top:var(--s5);padding-top:var(--s3);}
+.psrc .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);display:block;margin-bottom:var(--s2);}
+.psrc dl{margin:0;display:grid;gap:var(--s3);}
+.psrc dt{font-family:var(--display);font-size:1rem;color:var(--ink);direction:rtl;unicode-bidi:isolate;
+  text-align:right;}
+.psrc dd{margin:.2rem 0 0;font-size:.88rem;color:var(--ink-soft);}
+.psrc dd b{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--water);display:block;margin-bottom:.2rem;}
+
+@media print{
+  #rail,#topbar,#progress,#sheet,.btn{display:none!important;}
+  body{padding-left:0;} .reveal{opacity:1!important;transform:none!important;}
+}
+</style>
+</head>
+<body data-depth="deep">
+
+<div id="progress" role="presentation"></div>
+
+<!-- ══════════════ NAV: rail (desktop) ══ -->
+<nav id="rail" aria-label="Sections">
+  <div class="brand">Inner Dimensions<br>of the Prayer<span>Ibn al-Qayyim · visual summary</span></div>
+  <ol>
+    <li><a href="#start"><span class="n">01</span> In one minute</a></li>
+    <li><a href="#thesis"><span class="n">02</span> The argument</a></li>
+    <li><a href="#gift"><span class="n">03</span> A gift, not a levy</a></li>
+    <li><a href="#land"><span class="n">04</span> The heart is land</a></li>
+    <li><a href="#people"><span class="n">05</span> Three kinds of people</a></li>
+    <li><a href="#descent"><span class="n">06</span> The descent</a></li>
+    <li><a href="#walk"><span class="n">07</span> Movement by movement</a></li>
+    <li><a href="#devotion"><span class="n">08</span> Levels of devotion</a></li>
+    <li><a href="#comparison"><span class="n">09</span> Prayer vs listening</a></li>
+    <li><a href="#khushu"><span class="n">10</span> What it repairs</a></li>
+    <li><a href="#sourcing"><span class="n">11</span> Sourcing</a></li>
+  </ol>
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div class="depthbar" role="group" aria-label="Reading depth">
+      <button type="button" data-depth="glance" aria-pressed="false">Glance</button>
+      <button type="button" data-depth="deep" aria-pressed="true">Deep</button>
+      <button type="button" data-depth="sources" aria-pressed="false">Source</button>
+    </div>
+    <span class="depth-hint" id="depthHint">Full argument</span>
+    <button class="btn" id="themeToggleRail" type="button">Theme</button>
+  </div>
+</nav>
+
+<!-- ══════════════ NAV: sticky bar (mobile) ══ -->
+<div id="topbar">
+  <span class="now" id="nowSection">In one minute</span>
+  <button class="btn" id="sheetOpen" type="button" aria-expanded="false">Contents</button>
+  <button class="btn" id="themeToggleBar" type="button">Theme</button>
+</div>
+<div id="sheet" role="dialog" aria-label="Contents" aria-modal="true">
+  <button class="btn" id="sheetClose" type="button">Close</button>
+  <div class="depthbar" style="margin-top:1.2rem;max-width:20rem" role="group" aria-label="Reading depth">
+    <button type="button" data-depth="glance" aria-pressed="false">Glance</button>
+    <button type="button" data-depth="deep" aria-pressed="true">Deep</button>
+    <button type="button" data-depth="sources" aria-pressed="false">Source</button>
+  </div>
+  <ol>
+    <li><a href="#start"><span class="n">01</span> In one minute</a></li>
+    <li><a href="#thesis"><span class="n">02</span> The argument</a></li>
+    <li><a href="#gift"><span class="n">03</span> A gift, not a levy</a></li>
+    <li><a href="#land"><span class="n">04</span> The heart is land</a></li>
+    <li><a href="#people"><span class="n">05</span> Three kinds of people</a></li>
+    <li><a href="#descent"><span class="n">06</span> The descent</a></li>
+    <li><a href="#walk"><span class="n">07</span> Movement by movement</a></li>
+    <li><a href="#devotion"><span class="n">08</span> Levels of devotion</a></li>
+    <li><a href="#comparison"><span class="n">09</span> Prayer vs listening</a></li>
+    <li><a href="#khushu"><span class="n">10</span> What it repairs</a></li>
+    <li><a href="#sourcing"><span class="n">11</span> Sourcing</a></li>
+  </ol>
+</div>
+
+<main>
+
+<!-- ══════════════════════════════ 01 · START ══ -->
+<section class="band wrap" id="start" style="border-top:0;padding-top:clamp(2.5rem,7vw,4.5rem)">
+  <p class="eyebrow">Ibn Qayyim al-Jawziyyah, d. 751H · rendered from the Arabic</p>
+  <h1>Inner Dimensions of the Prayer</h1>
+  <p class="lede col" style="margin-top:var(--s3)">Ibn al-Qayyim's argument, in one line: the prayer is a
+  descent of the body that is simultaneously an <em>ascent</em> of the heart — and the delight it gives cannot
+  share a heart with the delight of song.</p>
+
+  <div class="fast" style="margin-top:var(--s5)">
+    <div><span class="k">The secret</span><span class="v">The heart's turning to Allah, with all of itself</span>
+      <p>Stated once, near the start. Everything after elaborates it.</p></div>
+    <div><span class="k">The mechanism</span><span class="v">Every limb has its own act of servitude</span>
+      <p>Bowing gathers “the submission of the heart, of the limbs, and of speech.”</p></div>
+    <div><span class="k">The peak</span><span class="v">Prostration — the nearest approach</span>
+      <p>The noblest thing you have, put on the ground.</p></div>
+    <div><span class="k">The claim</span><span class="v">Two tastes cannot coexist</span>
+      <p>“Never gathered in one heart without one driving the other out.”</p></div>
+  </div>
+
+  <div class="map" style="margin-top:var(--s5)">
+    <div class="map-item"><span class="ch">Chapter One</span><h4>The prayer, act by act</h4>
+      <p>Sections 1.1–1.39, from wuḍūʾ to the closing salām.</p></div>
+    <div class="map-item"><span class="ch">Chapter Two</span><h4>The secret is devotion</h4>
+      <p>Three levels of presence; the fruit of each act of worship.</p></div>
+    <div class="map-item"><span class="ch">Chapter Three</span><h4>The two audiences</h4>
+      <p>The shortest chapter — a direct challenge, two pages long.</p></div>
+    <div class="map-item"><span class="ch">Chapters 4–5</span><h4>Listening, weighed</h4>
+      <p>The true samāʿ of the Companions; the after-effect of music.</p></div>
+    <div class="map-item"><span class="ch">Closing sections</span><h4>What the prayer repairs</h4>
+      <p>Why the interval between prayers exists, and what each prayer gives back.</p></div>
+    <div class="map-item is-appendix"><span class="ch">Text used</span><h4>The Arabic, not a translation</h4>
+      <p>Rendered fresh from the public-domain Arabic of the treatise. See <a href="#sourcing">sourcing</a>.</p></div>
+    <div class="map-item is-appendix"><span class="ch">Front matter</span><h4>Biography</h4>
+      <p>Born 691H near Damascus; sixteen years under Ibn Taymiyyah; d. 751H.</p></div>
+    <div class="map-item is-appendix"><span class="ch">Not in this book</span><h4>The “five levels”</h4>
+      <p>Belongs to <em>al-Wābil al-Ṣayyib</em>. See <a href="#sourcing">sourcing</a>.</p></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 02 · THESIS ══ -->
+<section class="band wrap reveal" id="thesis">
+  <p class="eyebrow">02 · The shape of the argument</p>
+  <h2 class="col">Two tastes, one heart</h2>
+  <p class="lede col" style="margin-top:var(--s3);margin-bottom:var(--s5)">The book's full title names a
+  <em>comparison</em>. Ibn al-Qayyim's opening paragraph states the relationship as inverse: the stronger the
+  yearning for song, the weaker the attachment to prayer must become.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>His claim is not that song is the lesser pleasure. It is that the two tastes are mutually exclusive — whichever grows strong drives the other out of the heart.</p>
+  </div>
+
+  <figure class="fig">
+    <div class="canvas">
+      <svg viewBox="0 0 1000 300" role="img" aria-label="Two crossing curves showing that as attachment to listening rises, the taste of prayer falls, and the reverse.">
+        <defs>
+          <marker id="ar" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <path d="M0,0 L7,3.5 L0,7 Z" fill="var(--muted)"/>
+          </marker>
+        </defs>
+        <!-- axes -->
+        <line x1="70" y1="262" x2="945" y2="262" stroke="var(--rule)" stroke-width="1" marker-end="url(#ar)"/>
+        <line x1="70" y1="262" x2="70" y2="35" stroke="var(--rule)" stroke-width="1" marker-end="url(#ar)"/>
+        <text class="sv-lab" x="70" y="288">Attachment to samāʿ, increasing →</text>
+        <text class="sv-lab" x="70" y="26">Strength in the heart</text>
+
+        <!-- curves -->
+        <path d="M78,62 C320,74 470,150 930,246" fill="none" stroke="var(--water)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M78,246 C320,238 470,150 930,62" fill="none" stroke="var(--earth)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 5"/>
+
+        <!-- crossing -->
+        <circle cx="504" cy="150" r="5" fill="var(--ground)" stroke="var(--ink)" stroke-width="1.5"/>
+        <line x1="504" y1="150" x2="504" y2="262" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4"/>
+
+        <text class="sv-key" x="120" y="52">Taste of ṣalāh</text>
+        <text class="sv-key" x="770" y="52" text-anchor="end" fill="var(--earth-deep)">Taste of samāʿ</text>
+        <text class="sv-hi" x="518" y="140">the exchange</text>
+      </svg>
+    </div>
+    <figcaption>
+      <b>The inverse relation.</b> Ibn al-Qayyim states it directly in his opening paragraph: he will show “that each of the two tastes is wholly other than its rival in every respect — and that whenever one of them grows strong and takes command, the taste of the other weakens and loses its hold.”
+      <span class="fig-note">Schematic of a stated relationship — the book gives no quantities</span>
+    </figcaption>
+  </figure>
+
+  <figure class="pull">
+    <blockquote>“By Allah, the two have never gathered in one heart without one of them driving the other out.”</blockquote>
+    <figcaption>Ch. 3 — Distinction between the people of al-Samāʿ and the people of Ṣalāh</figcaption>
+  </figure>
+
+  <div class="rule-note col d-deep">
+    <h4>Why the order of the book matters</h4>
+    <p>Chapters 1 and 2 spend roughly three-quarters of the book building up the interior of the prayer in
+    minute detail. Only then do Chapters 3–5 turn and measure the rival pleasure against it. The comparison is
+    designed to be unanswerable by the time you reach it.</p>
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That this is a book about music. It is a book about the prayer — three-quarters of its length never mentions listening at all. The comparison is the frame, not the subject.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>Which of the two tastes have you actually cultivated deliberately?</li>
+          <li>If one drives the other out, which direction is the traffic currently going?</li>
+          <li>Could you describe the taste of your own prayer to someone who asked?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>فصل — في الموازنة بين ذوق السَّماع وذوق الصلاة والقرآن</dt>
+      <dd><b>Establishes</b> the stated aim: that each taste is wholly other than its rival, and that as one gains command the other loses its hold.</dd>
+      <dt>الفرق بين أهل السماع وأهل الصلاة</dt>
+      <dd><b>Establishes</b> the oath that the two have never gathered in one heart without one driving the other out.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 03 · GIFT ══ -->
+<section class="band wrap reveal" id="gift">
+  <p class="eyebrow">03 · Chapter One §1.1</p>
+  <h2 class="col">A gift, not a levy</h2>
+  <p class="lede col" style="margin-top:var(--s3)">Ibn al-Qayyim opens by refusing the frame of prayer as a tax
+  on the day. It is a gift Allah sent His Messenger ﷺ to deliver, given “not out of any need of them, but as a favour
+  from Him and a bounty upon them.”</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>The prayer is framed as a gift and a banquet, not a duty discharged. The five daily sittings are five courses, each carrying a flavour the others do not.</p>
+  </div>
+
+  <h3 style="margin:var(--s5) 0 var(--s3)">Six names, in one sentence</h3>
+  <p class="small col" style="margin-bottom:var(--s4)">The treatise opens with these, before any argument. Note that
+  the last two are not comforts at all — they are instruments for finding out what something is worth.</p>
+  <div class="grid g3 d-deep">
+    <div class="card"><span class="num">muḥibbīn</span><h4>The coolness of their eyes</h4><p>Of those who love Him — the Arabic idiom for what a person's eye rests on with relief.</p></div>
+    <div class="card"><span class="num">muwaḥḥidīn</span><h4>The delight of their spirits</h4><p>Of those who affirm His oneness.</p></div>
+    <div class="card"><span class="num">ʿābidīn</span><h4>Their garden</h4><p>Of the worshippers — the word is <em>bustān</em>, a walled and watered orchard.</p></div>
+    <div class="card"><span class="num">khāshiʿīn</span><h4>The delight of their souls</h4><p>Of those who are humbled before Him.</p></div>
+    <div class="card is-warn"><span class="num">ṣādiqīn</span><h4>The touchstone</h4><p>Of the <em>states</em> of the truthful. <em>Miḥakk</em> is the assayer's stone — you rub the metal on it to see what it really is.</p></div>
+    <div class="card is-warn"><span class="num">sālikīn</span><h4>The balance</h4><p>On which the states of those travelling the road are weighed.</p></div>
+  </div>
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="rule-note d-deep">
+      <h4>The banquet</h4>
+      <p>Because people were created with appetites and exposed to temptation, His mercy required that “He laid out for him a banquet gathering every kind of dish, every rarity, every robe of honour and every gift” — and called him to it <b>five times every day</b>. Each dish, meaning each action of the prayer, carries “a pleasure, a benefit and a dignity that is not in the others.”</p>
+      <p>Before the meal their hearts endured “hunger, drought, thirst, nakedness and sickness”; they leave “fed and watered, clothed in the robes of acceptance, and made rich.”</p>
+    </div>
+    <div class="rule-note d-deep">
+      <h4>What the prayer does</h4>
+      <ul class="plain">
+        <li>Atones for minor sins</li>
+        <li>Brings <b>light and strength</b> into the heart</li>
+        <li>Increases one's share of provision in this life</li>
+        <li>Inspires others to love the one who prays</li>
+        <li>Makes the angels — and the earth with its mountains, trees and rivers — rejoice</li>
+        <li>On the Day of Judgement, <b>turns into light</b> and transforms into reward</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That calling the prayer a “gift” is a pious flourish. He means it structurally: the banquet image is his argument for why the prayer has five sittings, varied actions and repetitions — a gift is shaped around the one receiving it.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>Do you arrive at the prayer as an invited guest or as a debtor?</li>
+          <li>Can you name what one particular action of the prayer gives you that no other does?</li>
+          <li>What did your heart carry into the prayer that it should not carry out?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>الصلاة قرة عيون المحبين وهدية الله للمؤمنين</dt>
+      <dd><b>Establishes</b> the six names of the prayer; the gift delivered by the Messenger ﷺ though Allah has no need of them; the banquet called five times daily, each dish with a benefit the others lack; and what the guest arrives with and leaves with.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 04 · LAND ══ -->
+<section class="band wrap reveal" id="land">
+  <p class="eyebrow">04 · Chapter One §1.2–1.3 and Appendix II</p>
+  <h2 class="col">The heart is a piece of land</h2>
+  <p class="lede col" style="margin-top:var(--s3);margin-bottom:var(--s5)">This is the book's controlling image,
+  introduced in the second section and returned to on its final page. Heart is earth. Mercy is rain. Heedlessness
+  is drought. And humility is <em>elevation</em> — specifically, the lack of it.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>The heart is a field. Remembrance is rain, heedlessness is drought — and the damage is proportionate, not absolute.</p>
+  </div>
+
+  <figure class="fig">
+    <div class="canvas">
+      <svg viewBox="0 0 1000 330" role="img" aria-label="A cross-section of land: a low basin on the left where water pools, and a raised mound on the right where water runs off.">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--sky)"/><stop offset="100%" stop-color="var(--ground-2)"/>
+          </linearGradient>
+          <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--rule)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="1000" height="330" fill="url(#sky)"/>
+
+        <!-- rain -->
+        <g stroke="var(--water)" stroke-width="1.6" stroke-linecap="round" opacity=".55">
+          <line x1="60" y1="18" x2="54" y2="44"/><line x1="130" y1="10" x2="124" y2="36"/>
+          <line x1="200" y1="24" x2="194" y2="50"/><line x1="270" y1="12" x2="264" y2="38"/>
+          <line x1="340" y1="26" x2="334" y2="52"/><line x1="410" y1="14" x2="404" y2="40"/>
+          <line x1="480" y1="22" x2="474" y2="48"/><line x1="550" y1="10" x2="544" y2="36"/>
+          <line x1="620" y1="24" x2="614" y2="50"/><line x1="690" y1="14" x2="684" y2="40"/>
+          <line x1="760" y1="22" x2="754" y2="48"/><line x1="830" y1="12" x2="824" y2="38"/>
+          <line x1="900" y1="26" x2="894" y2="52"/>
+        </g>
+        <text class="sv-lab" x="920" y="30" text-anchor="end">rains of mercy</text>
+
+        <!-- land mass -->
+        <path d="M0,215 C90,240 160,266 250,268 C380,271 500,200 620,132 C660,108 678,96 700,96
+                 C782,96 900,155 1000,190 L1000,330 L0,330 Z"
+              fill="url(#hatch)" stroke="var(--ink-soft)" stroke-width="1.6"/>
+
+        <!-- pooled water in the basin -->
+        <path d="M112,246 C168,264 208,268 250,268 C300,268 352,259 392,246 Z"
+              fill="var(--water)" opacity=".55"/>
+        <line x1="112" y1="246" x2="392" y2="246" stroke="var(--water)" stroke-width="2"/>
+
+        <!-- runoff arrows down the slope -->
+        <g stroke="var(--earth)" stroke-width="2" fill="none" stroke-linecap="round">
+          <path d="M742,120 l34,20"/><path d="M770,132 l8,10 l-13,1"/>
+          <path d="M800,152 l34,18"/><path d="M828,164 l8,10 l-13,1"/>
+          <path d="M666,132 l-34,22"/><path d="M638,146 l-8,10 l13,1"/>
+        </g>
+
+        <!-- callouts -->
+        <line x1="250" y1="246" x2="250" y2="168" stroke="var(--water)" stroke-width="1" stroke-dasharray="3 4"/>
+        <text class="sv-key" x="250" y="156" text-anchor="middle">the heart in remembrance</text>
+        <text class="sv-name" x="250" y="176" text-anchor="middle">rain falls on it in steady succession</text>
+
+        <line x1="700" y1="96" x2="700" y2="60" stroke="var(--earth)" stroke-width="1" stroke-dasharray="3 4"/>
+        <text class="sv-key" x="700" y="50" text-anchor="middle" fill="var(--earth-deep)">the heart in heedlessness</text>
+        <text class="sv-name" x="700" y="70" text-anchor="middle">drought, in proportion to the heedlessness</text>
+
+        <text class="sv-lab" x="16" y="310">drought = ghaflah</text>
+        <text class="sv-lab" x="984" y="310" text-anchor="end">the tree cut for firewood</text>
+      </svg>
+    </div>
+    <figcaption>
+      <b>Two states of one field.</b> The image is Ibn al-Qayyim's own and he holds it for pages. So long as you are in remembrance, “the rain of mercy falls on him in steady succession.” Heedlessness is the drought —
+      and the loss is measured: it reaches him <em>“in proportion to his heedlessness, little or much.”</em> Left long
+      enough the field goes dead, the branches stiffen, and “the judgement of the garden's keeper calls for that tree
+      to be cut down and made into firewood.”
+    </figcaption>
+  </figure>
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="rule-note d-deep">
+      <h4>Why the invitation repeats — and why it pauses</h4>
+      <p>Hearts endure recurring sterility, so the call is renewed five times daily. But mercy also required
+      <b>a gap between each call</b> — so the one invited keeps asking for rain “the One in whose hand is the rain of hearts,” rather than assuming it.</p>
+      <p>“The drought that falls on the heart is heedlessness. Heedlessness is the drought of hearts and their barrenness.” The moment a servant becomes heedless, drought
+      strikes — and <b>the damage is proportionate to the degree of heedlessness</b>.</p>
+    </div>
+    <div class="note d-deep">
+      <h4>When the land dies</h4>
+      <p>A parched heart yields nothing; “the burning of appetites works through it from every side like a scorching wind.” The limbs — the
+      branches — grow rigid and brittle, useless even as branches.</p>
+      <p>At which point “the judgement of the garden's keeper calls for that tree to be cut down and made into firewood.”</p>
+    </div>
+  </div>
+
+  <h3 style="margin:var(--s5) 0 var(--s3)">Five absences that dry the heart</h3>
+  <ol class="book-list col">
+    <li><b>The oneness of Allah — tawḥīd</b></li>
+    <li><b>Love of Him</b></li>
+    <li><b>Knowledge of Him</b></li>
+    <li><b>Remembrance of Him — dhikr</b></li>
+    <li><b>Calling upon Him — duʿāʾ</b></li>
+  </ol>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That drought is a permanent verdict on a person. It is explicitly proportionate — “in proportion to his heedlessness, little or much” — and the whole image turns on the rain returning.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>Is your present dryness drought, or is it the season between rains?</li>
+          <li>Which of the five — oneness, love, knowledge, remembrance, calling on Him — has actually gone quiet?</li>
+          <li>When you last pulled at a branch, did it come, or did it snap?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>تشبيه القلب بالأرض</dt>
+      <dd><b>Establishes</b> the heart as land; the renewed invitation; heedlessness as the drought of hearts; damage proportional to heedlessness; the dried tree cut for firewood.</dd>
+      <dt>القلب ييبس إذا خلا من توحيد الله</dt>
+      <dd><b>Establishes</b> the five absences that dry the heart — listed in the Arabic beginning with tawḥīd — and the limbs as branches that stiffen or yield.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 05 · PEOPLE ══ -->
+<section class="band wrap reveal" id="people">
+  <p class="eyebrow">05 · Chapter One §1.4–1.6</p>
+  <h2 class="col">Three kinds of people, and a surprising ranking</h2>
+  <p class="lede col" style="margin-top:var(--s3);margin-bottom:var(--s4)">Sorted by what they do with their
+  limbs. The order is counter-intuitive: the idle are placed <em>below</em> the actively disobedient.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>Sorted by what they do with their limbs, the idle rank <em>below</em> the actively disobedient. A person is made for work; shutting down both worlds is the greater loss.</p>
+  </div>
+
+  <div class="grid g3 d-deep">
+    <div class="card is-good"><span class="num">One · the mindful</span><h4>Limbs in the service of their Lord</h4>
+      <p>Those who have “traded with Allah in the most profitable trade” who made obedience their trade. In prayer the whole body follows the lead of the
+      heart, each limb practising its own act of worship.</p>
+      <p class="tiny"><b>Parable:</b> a man given land, tools, seed and water. He plants, fences it, hires guards,
+      keeps watch, replaces dead plants, pulls weeds, reinvests the profit.</p></div>
+    <div class="card is-warn"><span class="num">Two · the treacherous</span><h4>Limbs turned to disobedience</h4>
+      <p>They use their limbs for what they were not created for. Their trade fails; they earn punishment and are
+      cut off from reward.</p>
+      <p class="tiny"><b>Parable:</b> a man who made the same land a den for wild beasts, a dump for corpses, a
+      hideout for thieves — and handed his tools to those living there.</p></div>
+    <div class="card is-warn"><span class="num">Three · the heedless</span><h4>Limbs suspended entirely</h4>
+      <p><b>“A greater loss than the one before him.”</b> They serve neither the purpose of their creation nor even
+      worldly good. “The most hateful of creatures to Allah is the idle servant — neither at work for this world nor striving for the next.”</p>
+      <p class="tiny"><b>Parable:</b> a man who neglected the land, wasted the water in the desert, and was left
+      regretful.</p></div>
+  </div>
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s4)">
+    <div class="rule-note d-deep">
+      <h4>The reasoning behind the ranking</h4>
+      <p>“If a man who strives for this world and not the next is already blameworthy and abandoned, what then of one who has shut down both?”
+      Mankind was created for worship — <em>not for incapacity</em>.</p>
+    </div>
+    <div class="note d-deep">
+      <h4>The man at the king's door · §1.6</h4>
+      <p>A man goes to the King to apologise and to beg rain for his heart. At the very doorstep he <b>turns away</b>
+      and busies himself with what the King most dislikes — yet still sends his servants, the limbs, to stand in
+      “to make his excuses and deputise for him.”</p>
+      <p>Mercy still grants him something. But “there is a difference between dividing the spoils among those who hold a rightful share, and the token handed to one who has no share at all.”</p>
+    </div>
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That the third group are merely lazy. The charge is heavier: they have shut down both this world and the next, which is exactly why he ranks them below the disobedient.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>Which of the three describes how you used your body this week?</li>
+          <li>If obedience is a trade, what has it actually returned lately?</li>
+          <li>Are your limbs guarded, spent, or simply idle?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>الناس ثلاثة أقسام في استعمال جوارحهم</dt>
+      <dd><b>Establishes</b> the three classes; the most profitable trade; and the ruling that the idle servant is the most hateful — neither at work for this world nor striving for the next.</dd>
+      <dt>تمثيل لهذه الأصناف الثلاثة</dt>
+      <dd><b>Establishes</b> the three parables of the granted land.</dd>
+      <dt>ما هو سرّ الصلاة</dt>
+      <dd><b>Establishes</b> the secret of the prayer as the heart's turning; the man who reaches the king's door and turns away; and the distinction between a rightful share of the spoils and a token given to one with no share.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 06 · DESCENT ══ -->
+<section class="band wrap reveal" id="descent">
+  <p class="eyebrow">06 · The central mechanism</p>
+  <h2 class="col">The descent that is an ascent</h2>
+  <p class="lede col" style="margin-top:var(--s3);margin-bottom:var(--s5)">Ibn al-Qayyim's structural insight
+  about the prayer is that its two axes run opposite to each other. As the body goes down, nearness goes up —
+  and the lowest physical point is the highest spiritual one. <b>Click any station to jump to it.</b></p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>The prayer's two axes run opposite. The body descends while nearness rises, and the lowest physical point is the highest spiritual one.</p>
+  </div>
+
+  <figure class="fig">
+    <div class="canvas">
+      <svg viewBox="0 0 1000 380" role="img" aria-label="A mirrored chart of one unit of prayer. Above the centre line, nearness to Allah rises to its peak at each prostration. Below the centre line, the body descends furthest at exactly those same moments.">
+        <!-- bands -->
+        <path d="M70,136 L196,112 L321,88 L447,88 L573,40 L699,72 L824,40 L950,64 L950,160 L70,160 Z"
+              fill="var(--water)" opacity=".15"/>
+        <path d="M70,160 L196,160 L321,215 L447,160 L573,278 L699,236 L824,278 L950,236 L950,160 L70,160 Z"
+              fill="var(--earth)" opacity=".15"/>
+
+        <!-- centre line = standing -->
+        <line x1="70" y1="160" x2="950" y2="160" stroke="var(--ink-soft)" stroke-width="1.25"/>
+
+        <!-- outlines -->
+        <polyline points="70,136 196,112 321,88 447,88 573,40 699,72 824,40 950,64"
+          fill="none" stroke="var(--water)" stroke-width="2.75" stroke-linejoin="round" stroke-linecap="round"/>
+        <polyline points="70,160 196,160 321,215 447,160 573,278 699,236 824,278 950,236"
+          fill="none" stroke="var(--earth)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+        <!-- peak halos at the two prostrations -->
+        <circle cx="573" cy="40" r="10" fill="var(--water)" opacity=".22"/>
+        <circle cx="824" cy="40" r="10" fill="var(--water)" opacity=".22"/>
+        <g stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4">
+          <line x1="573" y1="40" x2="573" y2="278"/>
+          <line x1="824" y1="40" x2="824" y2="278"/>
+        </g>
+
+        <!-- stations -->
+        <g>
+          <a href="#s-takbir" class="station"><rect class="hit" x="20" y="20" width="100" height="300"/>
+            <circle cx="70" cy="136" r="4" fill="var(--water)"/>
+            <circle class="dot-body" cx="70" cy="160" r="3.5" fill="var(--earth)"/>
+            <text class="sv-name" x="70" y="310" text-anchor="middle">Takbīr</text></a>
+          <a href="#s-fatihah" class="station"><rect class="hit" x="146" y="20" width="100" height="300"/>
+            <circle cx="196" cy="112" r="4" fill="var(--water)"/>
+            <circle class="dot-body" cx="196" cy="160" r="3.5" fill="var(--earth)"/>
+            <text class="sv-name" x="196" y="310" text-anchor="middle">Fātiḥah</text></a>
+          <a href="#s-ruku" class="station"><rect class="hit" x="271" y="20" width="100" height="300"/>
+            <circle cx="321" cy="88" r="4" fill="var(--water)"/>
+            <circle class="dot-body" cx="321" cy="215" r="3.5" fill="var(--earth)"/>
+            <text class="sv-name" x="321" y="310" text-anchor="middle">Rukūʿ</text></a>
+          <a href="#s-qiyam" class="station"><rect class="hit" x="397" y="20" width="100" height="300"/>
+            <circle cx="447" cy="88" r="4" fill="var(--water)"/>
+            <circle class="dot-body" cx="447" cy="160" r="3.5" fill="var(--earth)"/>
+            <text class="sv-name" x="447" y="310" text-anchor="middle">Rise</text></a>
+          <a href="#s-sujud" class="station"><rect class="hit" x="523" y="20" width="100" height="300"/>
+            <circle cx="573" cy="40" r="5.5" fill="var(--water)"/>
+            <circle class="dot-body" cx="573" cy="278" r="4.5" fill="var(--earth)"/>
+            <text class="sv-name" x="573" y="310" text-anchor="middle">Sujūd</text></a>
+          <a href="#s-jalsah" class="station"><rect class="hit" x="649" y="20" width="100" height="300"/>
+            <circle cx="699" cy="72" r="4" fill="var(--water)"/>
+            <circle class="dot-body" cx="699" cy="236" r="3.5" fill="var(--earth)"/>
+            <text class="sv-name" x="699" y="310" text-anchor="middle">Sitting</text></a>
+          <a href="#s-sujud2" class="station"><rect class="hit" x="774" y="20" width="100" height="300"/>
+            <circle cx="824" cy="40" r="5.5" fill="var(--water)"/>
+            <circle class="dot-body" cx="824" cy="278" r="4.5" fill="var(--earth)"/>
+            <text class="sv-name" x="824" y="310" text-anchor="middle">Sujūd</text></a>
+          <a href="#s-tashahhud" class="station"><rect class="hit" x="900" y="20" width="98" height="300"/>
+            <circle cx="950" cy="64" r="4" fill="var(--water)"/>
+            <circle class="dot-body" cx="950" cy="236" r="3.5" fill="var(--earth)"/>
+            <text class="sv-name" x="950" y="310" text-anchor="middle">Tashahhud</text></a>
+        </g>
+
+        <text class="sv-hi" x="573" y="26" text-anchor="middle">closest to his Lord</text>
+        <text class="sv-lab" x="70" y="22">Nearness ↑</text>
+        <text class="sv-lab" x="70" y="340">Descent of the body ↓</text>
+        <text class="sv-tick" x="946" y="152" text-anchor="end">standing height</text>
+        <text class="sv-lab" x="950" y="340" text-anchor="end">one rakʿah, left to right</text>
+      </svg>
+    </div>
+    <figcaption>
+      <b>Body and nearness run opposite.</b> The prostration puts the face — “the most honourable part of his
+      body” — into the dust, and arranges the posture so the lower body ends up <em>higher</em> than the face. That
+      is the point at which, per the ḥadīth Ibn al-Qayyim cites, “The closest a servant is to his Lord is while he is prostrating.” Bowing comes first and prostration is done twice — it is the summit the rest of the unit leads up to.
+      <span class="fig-note">Schematic of the rank ordering the text states — the book gives no quantities</span>
+    </figcaption>
+  </figure>
+  <div class="legend d-deep">
+    <span><i class="swatch" style="border-top-color:var(--water)"></i> Nearness, per the text — plotted upward</span>
+    <span><i class="swatch" style="border-top-color:var(--earth)"></i> Descent of the body from standing — plotted downward</span>
+  </div>
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="rule-note d-deep">
+      <h4>The unit has the shape of the first revelation</h4>
+      <p>The first chapter revealed, <em>al-ʿAlaq</em>, opens with “Recite in the name of your Lord who created”
+      and closes with “But prostrate and draw near.”</p>
+      <p>“It opened with recitation and closed with prostration — and the rakʿah was laid out on that pattern: its beginning recitation, its end prostration.”</p>
+    </div>
+    <div class="rule-note d-deep">
+      <h4>Five pillars — each one names the whole prayer</h4>
+      <p>Ibn al-Qayyim's proof that no pillar is decorative: the Qur'an calls the prayer itself by the name of
+      each pillar in turn.</p>
+      <ul class="plain">
+        <li><b>Recitation</b> · 17:78, 73:20 &nbsp;·&nbsp; <b>Standing</b> · 73:2, 2:238</li>
+        <li><b>Bowing</b> · 2:43, 77:48 &nbsp;·&nbsp; <b>Prostration</b> · 15:98, 96:19</li>
+        <li><b>Remembrance</b> · 62:9, 63:9</li>
+      </ul>
+      <p class="tiny">Most honourable action: prostration. Most honourable remembrance: recitation of the Qur'an.</p>
+    </div>
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That prostration is simply the humblest posture, and therefore the low point of the prayer. In his account it is the summit — the position of nearest approach — which is why it alone is done twice.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>In your last prostration, were you aware it was the closest point?</li>
+          <li>Does your bowing feel like a transition or like a pillar?</li>
+          <li>Which station do you habitually rush?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>الصلاة مبناها على خمسة أركان</dt>
+      <dd><b>Establishes</b> the five pillars, each of which the Qur'an uses as a name for the whole prayer; prostration as the noblest action and recitation as the noblest remembrance; and the rakʿah patterned on Sūrat al-ʿAlaq — opening with recitation, closing with prostration.</dd>
+      <dt>عبودية السجود</dt>
+      <dd><b>Establishes</b> the face brought to the ground; each limb given its own share with no part carrying another; the heart prostrating with the body; and the ḥadīth that the servant is nearest his Lord in prostration.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 07 · WALK ══ -->
+<section class="band wrap reveal" id="walk">
+  <p class="eyebrow">07 · Chapter One §1.8–1.39</p>
+  <h2 class="col">Movement by movement</h2>
+  <p class="lede col" style="margin-top:var(--s3)">For each outward act, the inward transaction it encodes.
+  Left column: what the body does. Right column: what is actually happening.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>Every outward act encodes an inward transaction. The method is to name, for each movement, exactly what the heart is doing there.</p>
+  </div>
+
+  <div class="walk d-deep">
+
+    <div class="step" id="s-wudu">
+      <div class="step-head"><h3>Wuḍūʾ</h3><span class="step-arabic">Purification</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Dirt is cleansed from the body, and from the very limbs the prayer will use.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>“Subtle” — purification of the heart from sin through repentance. The two are joined in 2:222, which pairs those who repent with those who purify.</p></div>
+      </div>
+      <figure class="fig" style="margin-top:var(--s3)">
+        <div class="canvas">
+          <svg viewBox="0 0 1000 260" role="img" aria-label="Three concentric rings showing three layers of purification: water removes visible filth, repentance removes sin, the testimony of faith removes disbelief.">
+            <g transform="translate(150,130)">
+              <circle r="108" fill="var(--water)" opacity=".07"/>
+              <circle r="108" fill="none" stroke="var(--water)" stroke-width="1.25" opacity=".45"/>
+              <circle r="72" fill="var(--water)" opacity=".1"/>
+              <circle r="72" fill="none" stroke="var(--water)" stroke-width="1.25" opacity=".6"/>
+              <circle r="36" fill="var(--water)" opacity=".9"/>
+              <text class="sv-tick" x="0" y="4" text-anchor="middle" fill="var(--ground)">heart</text>
+              <!-- numbered badges sit on each ring at 12 o'clock -->
+              <g>
+                <circle cx="0" cy="-108" r="11" fill="var(--panel)" stroke="var(--water)" stroke-width="1.5"/>
+                <text class="sv-tick" x="0" y="-104" text-anchor="middle" fill="var(--water)">1</text>
+                <circle cx="0" cy="-72" r="11" fill="var(--panel)" stroke="var(--water)" stroke-width="1.5"/>
+                <text class="sv-tick" x="0" y="-68" text-anchor="middle" fill="var(--water)">2</text>
+                <circle cx="0" cy="-36" r="11" fill="var(--panel)" stroke="var(--water)" stroke-width="1.5"/>
+                <text class="sv-tick" x="0" y="-32" text-anchor="middle" fill="var(--water)">3</text>
+              </g>
+            </g>
+            <!-- key -->
+            <g>
+              <circle cx="352" cy="26" r="11" fill="var(--panel)" stroke="var(--water)" stroke-width="1.5"/>
+              <text class="sv-tick" x="352" y="30" text-anchor="middle" fill="var(--water)">1</text>
+              <text class="sv-key" x="376" y="24">Water</text>
+              <text class="sv-name" x="376" y="44">removes visible filth — the outermost layer</text>
+
+              <circle cx="352" cy="106" r="11" fill="var(--panel)" stroke="var(--water)" stroke-width="1.5"/>
+              <text class="sv-tick" x="352" y="110" text-anchor="middle" fill="var(--water)">2</text>
+              <text class="sv-key" x="376" y="104">Repentance</text>
+              <text class="sv-name" x="376" y="124">removes sins — the inward effect of wuḍūʾ</text>
+
+              <circle cx="352" cy="186" r="11" fill="var(--panel)" stroke="var(--water)" stroke-width="1.5"/>
+              <text class="sv-tick" x="352" y="190" text-anchor="middle" fill="var(--water)">3</text>
+              <text class="sv-key" x="376" y="184">The testimony of faith</text>
+              <text class="sv-name" x="376" y="204">removes disbelief and polytheism — the deepest impurity</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Three layers of purity, three kinds of filth.</b> Ibn al-Qayyim: Allah “completed for His believing servant the degrees and layers of purity and servanthood, outwardly and inwardly, at every level.”</figcaption>
+      </figure>
+    </div>
+
+    <div class="step" id="s-masjid">
+      <div class="step-head"><h3>Coming to the masjid</h3><span class="step-arabic">Entering His house</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Attending the congregation — which some scholars hold obligatory, others strongly recommended.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>Permission to stand before Him is granted only after purity outwardly and inwardly signifying one is not a rebellious servant. The heedless man is a runaway slave: the moment he returns, his disobedience is nullified.</p></div>
+      </div>
+    </div>
+
+    <div class="step" id="s-takbir">
+      <div class="step-head"><h3>The opening takbīr</h3><span class="step-arabic">Takbīrat al-Iḥrām</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Standing toward the qiblah, hands at the sides, head lowered, declaring Allah is greatest.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>The claim is precise: <b>Allah is greater than whatever is in the heart</b> — and it is made true by dismissing that thing. If something still occupies you, Ibn al-Qayyim says, “that shows that thing is greater in his estimation than Allah,” and the words were “on his tongue and not in his heart.”</p></div>
+      </div>
+      <p class="small" style="margin-top:var(--s3);color:var(--muted)">It also “takes him out of wearing the cloak of pride, which contradicts servanthood.”</p>
+    </div>
+
+    <div class="step" id="s-istiadhah">
+      <div class="step-head"><h3>Opening supplication, then refuge</h3><span class="step-arabic">Istiftāḥ · Istiʿādhah</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p><em>Subḥānaka Allāhumma wa biḥamdika…</em> — glorification, repeated. Then seeking refuge from Satan before reciting.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>Praise breaks the turning-away and heedlessness he had been in Satan's aim is graded: first to prevent the prayer, and failing that, <b>to ensure the heart gains nothing from it</b> — which is why refuge is sought precisely at the point of recitation.</p></div>
+      </div>
+      <figure class="pull" style="margin-block:var(--s4) 0">
+        <blockquote>“If the sheepdog rushes at you, do not busy yourself fighting it off and driving it back. Go to the shepherd and
+        call on him — he will turn it away from you and deal with it for you.”</blockquote>
+        <figcaption>Ibn Taymiyyah, to Ibn al-Qayyim · Ch. 1 §1.14</figcaption>
+      </figure>
+      <p class="small" style="margin-top:var(--s3)">His gloss on why refuge is commanded: it is as though it were said to him — <em>you have no power against this enemy;
+      take refuge in Me and I will shelter you from him, and I will suffice you against him and shield you from him.</em> He adds a warning — to address Allah with the heart
+      elsewhere is to be like a man granted audience with a king who then turns his back while speaking.</p>
+    </div>
+
+    <div class="step is-peak" id="s-fatihah">
+      <div class="step-head"><h3>al-Fātiḥah</h3><span class="step-arabic">The prayer answers back</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Reciting the opening chapter, verse by verse.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>The practical instruction: <b>pause a little at the end of each verse and wait for the reply.</b> Prayer is structured as dialogue — he cites the ḥadīth qudsī in which Allah divides the chapter between Himself and His servant.</p></div>
+      </div>
+
+      <div class="dialogue" style="margin-top:var(--s4)">
+        <div class="dialogue-row">
+          <div class="say"><span class="who">The servant recites</span><span class="line">“All praise belongs to Allah, Lord of the worlds.”</span></div>
+          <div class="gutter" aria-hidden="true">→</div>
+          <div class="reply"><span class="who">Allah says</span><span class="line">“My servant has praised Me.”</span></div>
+        </div>
+        <div class="dialogue-row">
+          <div class="say"><span class="who">The servant recites</span><span class="line">“The Most Compassionate, the Most Merciful.”</span></div>
+          <div class="gutter" aria-hidden="true">→</div>
+          <div class="reply"><span class="who">Allah says</span><span class="line">“My servant has extolled Me.”</span></div>
+        </div>
+        <div class="dialogue-row">
+          <div class="say"><span class="who">The servant recites</span><span class="line">“Master of the Day of Recompense.”</span></div>
+          <div class="gutter" aria-hidden="true">→</div>
+          <div class="reply"><span class="who">Allah says</span><span class="line">“My servant has glorified Me.”</span></div>
+        </div>
+        <div class="dialogue-row">
+          <div class="say"><span class="who">The servant recites</span><span class="line">“You alone we worship, and You alone we ask for help.”</span></div>
+          <div class="gutter" aria-hidden="true">→</div>
+          <div class="reply"><span class="who">Allah says</span><span class="line">“This is between Me and My servant — and My servant shall have what he asked for.”</span></div>
+        </div>
+        <div class="dialogue-row">
+          <div class="say"><span class="who">The servant recites</span><span class="line">“Guide us to the Straight Path…”</span></div>
+          <div class="gutter" aria-hidden="true">→</div>
+          <div class="reply"><span class="who">Allah says</span><span class="line">“This is for My servant — and My servant shall have what he asked for.”</span></div>
+        </div>
+      </div>
+      <p class="cite" style="margin-top:var(--s3)"><b>Ch. 1 §1.15</b>, citing Muslim #775 on the authority of Abū Hurayrah</p>
+
+      <div class="grid g2 d-deep" style="margin-top:var(--s4)">
+        <div class="rule-note d-deep"><h4>Why nothing can be substituted</h4>
+          <p>Each act and word of the prayer carries its own distinct effect on the heart, which is why no substitution is
+          possible: the takbīr and al-Fātiḥah cannot be exchanged for other words, any more than standing, bowing and
+          prostrating could be exchanged for other movements.</p></div>
+        <div class="rule-note d-deep"><h4>On <em>al-ḥamd</em></h4>
+          <p>“No leaf falls except by His praise, and no atom moves in the universe except by His praise.” And because
+          praise is itself a favour, praising Him <b>obliges praising Him again</b>. Al-Awzāʿī heard: “To You belongs praise — whether for a blessing given, or for an affliction turned away.”</p></div>
+      </div>
+    </div>
+
+    <div class="step" id="s-guidance">
+      <div class="step-head"><h3>“Guide us to the Straight Path”</h3><span class="step-arabic">The greatest request</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">What the verse asks for</span>
+          <ol class="book-list d-deep">
+            <li>Knowing the truth</li><li>The way to it</li><li>Acting upon it</li>
+            <li>Holding fast to it</li><li>Calling others to it — and bearing the harm they cause you</li>
+          </ol></div>
+        <div class="facet inner"><span class="label">Why five times daily</span>
+          <p>“His need to ask for guidance was the greatest of all needs, and his want of it the most severe of all wants.” It sits in the five obligatory prayers, when a person is
+          “in the best of his states,” precisely because the need never lapses.</p></div>
+      </div>
+
+      <h4 style="margin:var(--s4) 0 var(--s3)">Ten kinds of guidance the servant needs</h4>
+      <p class="small" style="margin-bottom:var(--s3);max-width:58ch">Note how few concern a disbeliever becoming a
+      believer. Almost all describe a <em>guided</em> person still needing guidance — which is why the request is set
+      in the five daily prayers, “in the best of his states.”</p>
+      <ol class="book-list d-deep">
+        <li>Things done <b>outside guidance</b> in knowledge, act or intent — he needs to repent of them, and the repentance is itself guidance</li>
+        <li>Things he was guided to <b>in principle but not in detail</b></li>
+        <li>Things he was guided to <b>in one respect and not another</b> — he needs completion, and to be “increased in guidance upon his guidance”</li>
+        <li>Guidance <b>in what is still to come</b>, as he was given it in what has passed</li>
+        <li>Matters in which he <b>holds no belief at all</b></li>
+        <li>Matters in which he believes <b>the opposite of the truth</b> — he needs a guidance that erases the false belief and sets its contrary in its place</li>
+        <li>Things he is <b>able</b> to do but has <b>no will</b> for — he needs a will created in him</li>
+        <li>Things he <b>wills</b> but is <b>unable</b> to do — he needs to be given the power</li>
+        <li>Things he <b>neither wills nor is able</b> to do — he needs both created</li>
+        <li>Things he already <b>holds rightly</b> — he needs to be kept steady in them and to continue</li>
+      </ol>
+
+      <div class="grid g3 d-deep" style="margin-top:var(--s4)">
+        <div class="card is-good"><span class="num">Favoured</span><h4>Guided and preserved</h4><p>Though each share differs according to how much guidance was received.</p></div>
+        <div class="card is-warn"><span class="num">Astray</span><h4>Never received it</h4><p>Neither guided nor prepared for it; in seeking, they became lost and bewildered.</p></div>
+        <div class="card is-warn"><span class="num">Anger</span><h4>Knew it and refused it</h4><p>“He knew it, and was not granted success in acting on it” — never benefiting from their own knowledge.</p></div>
+      </div>
+    </div>
+
+    <div class="step" id="s-ruku">
+      <div class="step-head"><h3>Bowing</h3><span class="step-arabic">al-Rukūʿ</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Back bent, head lowered, tongue saying <em>Subḥāna Rabbiya'l-ʿAẓīm</em> — “Glory to my Lord, the Magnificent.” The hands are raised beforehand: deference to the command, servitude of the hands themselves, following the Prophet ﷺ, and part of what beautifies the prayer.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>He “makes himself small and slight before his Lord” and empties the heart of any glorification of anyone besides Allah. When the heart fills with His glorification, glorification of self is crowded out.</p></div>
+      </div>
+      <div class="rule-note d-deep" style="margin-top:var(--s3)">
+        <p><b>The line that reframes the whole prayer:</b> bowing gathers “the submission of the heart, the submission of the limbs and the submission of speech, in their fullest state.” And: “submission is the attribute of the servant, and greatness is the attribute of the Lord.”</p>
+      </div>
+    </div>
+
+    <div class="step" id="s-qiyam">
+      <div class="step-head"><h3>Rising from bowing</h3><span class="step-arabic">al-Qiyām</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Standing upright again, praising and exalting.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>Attention turns “to the praise of his Lord, to extolling and glorifying Him, and to His being alone in <b>giving and withholding</b>.”</p></div>
+      </div>
+      <p class="small" style="margin-top:var(--s3)">A full pillar, not a transition — which is why the Prophet ﷺ
+      prolonged it as he prolonged bowing and prostration, repeating “To my Lord be all praise” in the night prayer
+      until the standing was as long as the bowing.</p>
+    </div>
+
+    <div class="step is-peak" id="s-sujud">
+      <div class="step-head"><h3>Prostration</h3><span class="step-arabic">al-Sujūd — the closest point</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>The forehead set on the ground; the face — “the noblest thing he has” — brought down into the dust, the nose humbled with it. No limb rests on another: thighs off the shins, belly off the thighs, upper arms off the sides.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>Every limb is separated so <b>each takes its own share of submission</b> rather than being carried by another. When the heart's state matches the body's, “the heart prostrated to the Lord as the body prostrated — and with it prostrated his nose, his face, his hands, his knees and his feet.”</p></div>
+      </div>
+      <figure class="pull" style="margin-block:var(--s4) 0">
+        <blockquote>“Does the heart prostrate?” — “Yes, by Allah — a prostration from which it does not raise its head until it meets Allah, Mighty and Majestic.”</blockquote>
+        <figcaption>A saying of the Salaf, attributed by Ibn Taymiyyah to Sahl ibn ʿAbdullāh al-Tustarī · §1.28</figcaption>
+      </figure>
+    </div>
+
+    <div class="step" id="s-jalsah">
+      <div class="step-head"><h3>Sitting between the two prostrations</h3><span class="step-arabic">The five requests</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Sitting until the limbs come to rest. The Prophet ﷺ spent <b>about as long here as in prostration</b>, repeating “My Lord, forgive me” three times.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>Kneeling before Him, “making his excuses for what he has done,” and seeking His help <em>against his own self</em> — the soul that commands to evil.</p></div>
+      </div>
+      <div class="table-scroll d-deep" style="margin-top:var(--s3)">
+        <table>
+          <thead><tr><th>The request</th><th>What it secures, in his own accounting</th></tr></thead>
+          <tbody>
+            <tr><td class="term">Mercy · raḥma</td><td>“Gathers all of that” — the whole of what the other four secure</td></tr>
+            <tr><td class="term">Forgiveness · maghfira</td><td>Repels from him the harms of <em>both</em> this world and the next</td></tr>
+            <tr><td class="term">Guidance · hidāya</td><td>Brings the goods of his hereafter — and “covers the details of all his affairs”</td></tr>
+            <tr><td class="term">Provision · rizq</td><td>Brings the goods of this world and the next, gathering the provision of body, heart and spirit</td></tr>
+            <tr><td class="term">Wellbeing · ʿāfiya</td><td>Repels the harms of this world</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cite" style="margin-top:var(--s2)"><b>Ch. 1 §1.32</b> — “these five words have gathered the whole good of this world and the next.” Order follows the Arabic.</p>
+      <div class="rule-note d-deep" style="margin-top:var(--s3)">
+        <h4>The heart and the <em>nafs</em> are partners</h4>
+        <p>“The heart is a partner of the <em>nafs</em> in good and evil, in reward and punishment, in praise and
+        blame.” The <em>nafs</em> by nature “runs from the yoke of servanthood.” The mechanism is reciprocal and
+        settled by strength: <b>if the <em>nafs</em> is the stronger, the heart becomes its partner and its captive —
+        and if the heart is the stronger, the <em>nafs</em> becomes its partner and its captive.</b></p>
+      </div>
+    </div>
+
+    <div class="step is-peak" id="s-sujud2">
+      <div class="step-head"><h3>The second prostration</h3><span class="step-arabic">Why twice, when bowing is once</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">The reason</span><p>Because of its honour, and because it is the point of nearest approach. Prostration is “more renowned in servanthood and more deeply rooted in it” than the other pillars, so it is <b>made the seal of the rakʿah</b> and what precedes it is preamble. Bowing is placed before it, he says, as “a gradual passage from a thing to what is higher than it.”</p></div>
+        <div class="facet inner"><span class="label">Why anything repeats</span><p>The acts are “the food of the heart and the spirit, which have no standing without them.” One mouthful does not satisfy hunger — “it might well open the door of hunger wider than before.” The second is “put in the place of thanks for the first,” and the repetition scours the heart “like washing a garment time after time.”</p></div>
+      </div>
+      <figure class="pull" style="margin-block:var(--s4) 0">
+        <blockquote>“One who prays without stillness in his prayer is like a hungry man brought food, who takes a mouthful or two — what will that avail him?”</blockquote>
+        <figcaption>One of the Salaf · Ch. 1 §1.32</figcaption>
+      </figure>
+      <div class="rule-note d-deep" style="margin-top:var(--s3)">
+        <p>He compares prostration's place in the prayer to the <em>ṭawāf of visitation</em> in the pilgrimage — as the
+        servant is nearest his Lord in prostration, so the pilgrim is nearest in circling. Ibn ʿUmar, asked for his
+        daughter's hand while circling, gave no answer; when he had finished he said: <b>“Do you mention a matter of
+        this world, while we are presenting ourselves before Allah in our ṭawāf?”</b></p>
+      </div>
+    </div>
+
+    <div class="step" id="s-tashahhud">
+      <div class="step-head"><h3>Tashahhud, salutations, closing</h3><span class="step-arabic">al-Taḥiyyāt · al-Taslīm</span></div>
+      <div class="step-body">
+        <div class="facet"><span class="label">Outward</span><p>Sitting to greet; then peace upon the Prophet ﷺ, upon oneself, and upon the righteous; the two testimonies; prayers upon the Prophet ﷺ; then free supplication; then the salām.</p></div>
+        <div class="facet inner"><span class="label">Inward</span><p>The definite article on <em>al-Taḥiyyāt</em> gathers <b>every kind of greeting ever offered to a king</b> and assigns the whole class to Allah alone. The word derives from <em>ḥayāh</em>, life — affirming the perpetuity of the One greeted.</p></div>
+      </div>
+      <div class="grid g2 d-deep" style="margin-top:var(--s3)">
+        <div class="rule-note d-deep"><h4>Protocol</h4>
+          <p>Greeting the created <b>never precedes</b> greeting the Creator — matching 27:59. Within it, rank orders
+          the recipients: the Messenger ﷺ first, “whose nation received every form of good only through him,” then
+          the worshipper himself, then the rest.</p></div>
+        <div class="rule-note d-deep"><h4>The order of asking</h4>
+          <p>Praise, then prayers upon the Prophet ﷺ, then request — per Fuḍālah ibn ʿUbayd. Only then “the servant
+          has the choice and freedom to ask Allah for what he wants.” The same five-part shape governs the response
+          to the <em>adhān</em>.</p></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That these inward meanings are optional depth for the especially devout. He treats them as the content of the act itself — the movement is its outward form, not its substance.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>Did your tongue and heart agree at the takbīr?</li>
+          <li>Did you pause anywhere in al-Fātiḥah and wait?</li>
+          <li>Between the two prostrations, did you ask for anything by name?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>عبودية التكبير</dt>
+      <dd><b>Establishes</b> that the takbīr claims Allah is greater than whatever is in the heart, and is verified by dismissing it; otherwise the words are on the tongue and not in the heart.</dd>
+      <dt>نصيحة ابن تيمية لابن القيم</dt>
+      <dd><b>Establishes</b> the sheepdog and the shepherd — do not fight the dog, call the one who owns it.</dd>
+      <dt>حال العبد في الفاتحة</dt>
+      <dd><b>Establishes</b> pausing at each verse to await the reply, with the ḥadīth qudsī dividing the chapter between the Lord and His servant.</dd>
+      <dt>أنواع الهدايات التي يفتقر لها العبد</dt>
+      <dd><b>Establishes</b> the ten kinds of guidance, and the three classes of people with respect to it.</dd>
+      <dt>عبودية الركوع</dt>
+      <dd><b>Establishes</b> the gathering of the submission of heart, limbs and speech; submission as the servant's attribute and greatness as the Lord's.</dd>
+      <dt>حال العبد بين السجدتين</dt>
+      <dd><b>Establishes</b> the Prophet ﷺ prolonging this sitting to the length of the prostration, and the five things asked in it.</dd>
+      <dt>لم يكرر السجود مرتين</dt>
+      <dd><b>Establishes</b> repetition as the food of the heart; the single mouthful that widens hunger; and the garment washed time after time.</dd>
+    </dl>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 08 · DEVOTION ══ -->
+<section class="band wrap reveal" id="devotion">
+  <p class="eyebrow">08 · Chapter Two</p>
+  <h2 class="col">Two qiblahs</h2>
+  <p class="lede col" style="margin-top:var(--s3)">He is “commanded to face the Sacred House with his face, and to face Allah with his heart.” Just as the face may not turn from the qiblah, the heart may
+  not turn to anything but Him.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>Turning toward Allah has three levels, told apart by what attention rests on: your own heart, then Him, then the meanings of His speech.</p>
+  </div>
+
+  <figure class="pull">
+    <blockquote>“By completing these three levels he has truly established the prayer — and Allah’s turning toward the one praying is in proportion to it.”</blockquote>
+    <figcaption>Ch. 2, opening</figcaption>
+  </figure>
+
+  <h3 style="margin:var(--s5) 0 var(--s3)">Three levels of devotion</h3>
+  <p class="small col" style="margin-bottom:var(--s4)">Each level names a <em>different object of attention</em>. “By completing these three levels he has truly established the prayer — and Allah's turning toward the one praying is in proportion to that.”</p>
+  <div class="grid g3 d-deep">
+    <div class="card is-good"><span class="num">Level one</span><h4>Turning toward your own heart</h4>
+      <p>Guarding it and setting it right — from the diseases of the appetites, from whisperings, and from the passing
+      thoughts “that void the reward of his prayer, or diminish it.” Maintenance work, and it never stops being needed.</p></div>
+    <div class="card is-good"><span class="num">Level two</span><h4>Turning toward Allah</h4>
+      <p>By <em>murāqaba</em> — watchfulness in the prayer — “until he worships Him as though he sees Him.”</p></div>
+    <div class="card is-good"><span class="num">Level three</span><h4>Turning toward the meanings</h4>
+      <p>Toward the meanings of Allah's speech and its details, and toward the servanthood of the prayer itself, “so as
+      to give it its due of humility and stillness.”</p></div>
+  </div>
+
+  <h3 style="margin:var(--s6) 0 var(--s3)">Every act of worship has its fruit</h3>
+  <div class="table-scroll d-deep">
+    <table>
+      <thead><tr><th>Act of worship</th><th>Its fruit</th></tr></thead>
+      <tbody>
+        <tr><td class="term">Fasting</td><td>Purification of the soul</td></tr>
+        <tr><td class="term">Zakāh</td><td>Purification of wealth</td></tr>
+        <tr><td class="term">Ḥajj</td><td>Forgiveness becoming due</td></tr>
+        <tr><td class="term">Jihād</td><td>Surrender of the self to Him — the self He purchased from His servants, and made Paradise its price</td></tr>
+        <tr><td class="term" style="color:var(--water)">Ṣalāh</td><td class="accent">Turning toward Allah — and Allah's turning toward the servant</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small col" style="margin-top:var(--s3)">“And in turning toward Allah in the prayer there is <b>everything that has been named of the fruits of the other deeds</b> — for all the fruits of the deeds are contained in turning toward Him in it.”</p>
+
+  <div class="rule-note col d-deep" style="margin-top:var(--s4)">
+    <h4>A point of grammar with weight</h4>
+    <p>The Prophet ﷺ never said the delight of his eye lay in fasting, ḥajj or ʿumrah — he said <b>“the delight of my eye has been placed <em>in</em> the prayer.”</b> Ibn al-Qayyim presses the preposition: he did not say <em>by</em> the prayer. The delight is not had except by entering into it, “as the eye of the lover is delighted by being joined to the one he loves” — never from outside it. Hence: “Bilāl, give us rest by the prayer.”</p>
+    <p>He notes a second omission: the Prophet ﷺ did <b>not</b> say “give us rest <em>from</em> it” — which is exactly the posture of those who pray to discharge an obligation.</p>
+  </div>
+
+  <h3 style="margin:var(--s6) 0 var(--s3)">Two people performing the same prayer</h3>
+  <div class="contrast d-deep">
+    <div class="side-a">
+      <h4>Comfort found <em>in</em> the prayer</h4>
+      <ul>
+        <li>Finds it “a delight to his heart” — tranquility, calmness, pleasure</li>
+        <li>The prayer is <b>“a garden”</b></li>
+        <li>Receives not only reward but “a particular nearness and closeness, and a high standing with Allah”</li>
+        <li>At the final sitting, “would that it joined up with the Day of Meeting”</li>
+      </ul>
+      <p class="tiny" style="margin-top:var(--s3)"><b>Parable:</b> a man admitted to the king with the screen removed —
+      delighting in looking at him, brought near, unable to bear leaving.</p>
+    </div>
+    <div class="side-b">
+      <h4>Comfort found <em>outside</em> the prayer</h4>
+      <ul>
+        <li>Prays “in a rush,” compelled only by knowing it is obligatory</li>
+        <li>The tongue says what the heart does not — he says “with the tongue of his heart: let us pray so that we may be rested <em>from</em> the prayer, not <em>by</em> it”</li>
+        <li>Experiences it as “a heavy shackle on his limbs, and a narrow, cramped prison for his heart”</li>
+        <li>May still have sins forgiven — “and he may be punished for what he left deficient in it”</li>
+      </ul>
+      <p class="tiny" style="margin-top:var(--s3)"><b>Parable:</b> a man who enters the king's abode but cannot reach
+      him, a screen between them — the screen being his own desires.</p>
+    </div>
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That the three levels are a ladder you climb once and leave behind. They are three <em>objects of attention</em>, and the first — turning to your own heart to guard and repair it — never stops being required.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>Which of the three levels is actually within reach for you today?</li>
+          <li>Does your comfort arrive when the prayer begins, or when it ends?</li>
+          <li>At the final sitting, are you reluctant to leave?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>للإقبال على الله في الصلاة ثلاث منازل</dt>
+      <dd><b>Establishes</b> the three levels, and that Allah's turning toward the one praying is in proportion to them.</dd>
+      <dt>كيف يكون الإقبال في كل جزء من أجزاء الصلاة</dt>
+      <dd><b>Establishes</b> what attention rests on at each movement, and the final sitting likened to the pilgrim's farewell circuit — “would that it joined up with the Day of Meeting.”</dd>
+      <dt>لكل شيء ثمرة وثمرة الصلاة الإقبال على الله</dt>
+      <dd><b>Establishes</b> the fruit of each act of worship; that the prayer's fruit contains them all; and the preposition — delight placed <em>in</em> the prayer, not <em>by</em> it.</dd>
+      <dt>الراحة بالصلاة</dt>
+      <dd><b>Establishes</b> “give us rest by the prayer,” not “from it”; the four-part contrast between the two worshippers; and the two men at the king's house, one screened and one admitted.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 09 · COMPARISON ══ -->
+<section class="band wrap reveal" id="comparison">
+  <p class="eyebrow">09 · Chapters Three to Five</p>
+  <h2 class="col">Prayer weighed against listening</h2>
+  <p class="lede col" style="margin-top:var(--s3);margin-bottom:var(--s5)">Chapter Five is the most
+  psychologically interesting part of the book. Rather than arguing from rulings, Ibn al-Qayyim argues from what
+  a person feels <em>afterwards</em>.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>The case against listening is not that it gives no pleasure. It is that the pleasure comes in a filthy vessel — and the reckoning arrives after you put it down.</p>
+  </div>
+
+  <figure class="fig">
+    <div class="canvas">
+      <svg viewBox="0 0 1000 280" role="img" aria-label="Two timelines. Listening rises to rapture then drops below the baseline into desolation. Prayer rises steadily and stays raised.">
+        <line x1="70" y1="150" x2="950" y2="150" stroke="var(--rule)" stroke-width="1"/>
+        <text class="sv-lab" x="70" y="272">during</text>
+        <text class="sv-lab" x="500" y="272" text-anchor="middle">the moment it ends</text>
+        <text class="sv-lab" x="950" y="272" text-anchor="end">after</text>
+        <line x1="500" y1="40" x2="500" y2="240" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 4"/>
+
+        <!-- samaa: rises to rapture, collapses below baseline -->
+        <path d="M78,150 C200,150 300,72 500,66 C560,64 580,150 640,196 C720,222 840,224 940,220"
+              fill="none" stroke="var(--earth)" stroke-width="2.5" stroke-dasharray="7 5" stroke-linecap="round"/>
+        <circle cx="500" cy="66" r="4.5" fill="var(--earth)"/>
+        <text class="sv-key" x="500" y="52" text-anchor="middle" fill="var(--earth-deep)">rapture</text>
+        <text class="sv-name" x="940" y="242" text-anchor="end" fill="var(--earth-deep)">desolation and darkness</text>
+
+        <!-- salah: rises and stays -->
+        <path d="M78,150 C220,142 340,110 500,96 C660,84 800,86 940,84"
+              fill="none" stroke="var(--water)" stroke-width="2.5" stroke-linecap="round"/>
+        <text class="sv-name" x="940" y="74" text-anchor="end" fill="var(--water-deep)">tranquility that persists</text>
+
+        <text class="sv-lab" x="78" y="168">baseline</text>
+      </svg>
+    </div>
+    <figcaption>
+      <b>The argument from the after-effect.</b> On leaving the gathering a person finds “a contraction upon his heart, a
+      kind of estrangement — and he senses distance, severance and darkness.” Only a heart with some life in it registers
+      the drop: <b>“a wound gives no pain to the dead.”</b> And the sharper the sincerity, the sharper the reading —
+      “the more truthful he is and the more complete in his seeking, the more fully and plainly he finds this.”
+      <span class="fig-note">Schematic of a described sequence — the book gives no quantities</span>
+    </figcaption>
+  </figure>
+
+  <div class="grid g3 d-deep" style="margin-top:var(--s5)">
+    <div class="card is-warn"><span class="num">The mechanism</span><h4>Anaesthesia, not absence</h4>
+      <p>If a man's heart is wholly taken up “with the sight of a beloved, or the sight of something feared, or a pleasure that has seized his senses and his heart,” and in that state he is struck or stung, “he scarcely feels it.” When the state lifts he finds the pain <b>“as though it had struck him at that very moment.”</b></p></div>
+    <div class="card is-warn"><span class="num">The mixture</span><h4>Clear water in turbid</h4>
+      <p>At its highest, he says, such listening is “mixed of truth and falsehood, compounded of appetite and doubt.”
+      So in the valley of the heart <b>“the small clear water mixes with the large turbid water, and the foul overcomes
+      the good”</b> — what comes from the Most Merciful running alongside what comes from Satan.</p></div>
+    <div class="card is-warn"><span class="num">The response</span><h4>Renewing repentance</h4>
+      <p>Some of the truthful “hurried, on leaving it, to renew repentance and seek forgiveness, and to take up the
+      remedies by which the causes of that contraction and estrangement are driven off.”</p></div>
+  </div>
+
+  <figure class="pull is-earth">
+    <blockquote>“Truthful souls, whose aspiration is high, raise themselves above drinking from that vessel in disgust at it… they will not drink that drink except from a vessel that suits it; and if they find none, they keep the drink back and wait for one worthy of it.”</blockquote>
+    <figcaption>Ch. 5 — the image the chapter turns on</figcaption>
+  </figure>
+
+  <h3 style="margin:var(--s5) 0 var(--s3)">Three cups, three drinks, three hearts</h3>
+  <p class="small col" style="margin-bottom:var(--s4)">The cup image resolves into the book's final
+  classification. <em>Cup</em> = the means; <em>drink</em> = what is received.</p>
+  <div class="grid g3 d-deep">
+    <div class="card is-good"><span class="num">Heart one</span><h4>Healthy</h4><p>“sound and whole — its drink the pure drink, in the clean vessel.”</p></div>
+    <div class="card is-warn"><span class="num">Heart two</span><h4>Sick</h4><p>“ailing and diseased — its drink the foul drink, in the filthy vessel.”</p></div>
+    <div class="card is-warn"><span class="num">Heart three</span><h4>Mixed</h4><p>“a heart in which there are two substances: faith and hypocrisy — and its drink is in a vessel answering to the two.”</p></div>
+  </div>
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="rule-note d-deep">
+      <h4>The listening he does approve</h4>
+      <p>The section <span dir="rtl">سماع أهل الحق</span> — “the listening of the people of truth” — gives the counter-model. When the Companions wanted their hearts stirred they would ask
+      one of their number to recite the Qur'an while the rest listened — their hearts would find the taste of faith.</p>
+      <p>ʿUmar would say to Abū Mūsā al-Ashʿarī: <b>“O Abū Mūsā, remind us of our Lord.”</b> ʿUthmān said: <b>“If our
+      hearts were pure, we would never have enough of the words of Allah.”</b></p>
+    </div>
+    <div class="note d-deep">
+      <h4>Where he lands</h4>
+      <p>Whoever grasps the objectives of the law — “the purposes of the law in blocking the means that lead to the forbidden” — “has settled the matter that this listening is forbidden.” Things
+      are prohibited on two grounds: for the corruption in them intrinsically, or because they are a means to it.</p>
+      <p class="tiny" style="margin-top:var(--s3)">Reported here as the book's position. Ibn al-Qayyim's ruling is
+      one view within a longer scholarly discussion the treatise itself does not survey.</p>
+    </div>
+  </div>
+
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+    <div class="mis d-deep">
+      <span class="k">Commonly misread</span>
+      <p>That he denies listening any good whatsoever. He explicitly grants the truthful listener “a sound taste of faith.” The objection is to the vessel it arrives in — and to what is left once you put it down.</p>
+    </div>
+    <div class="audit d-deep">
+      <span class="k">Check yourself</span>
+      <ul>
+          <li>What do you reach for when you want your heart moved?</li>
+          <li>What is the state of your heart twenty minutes after the thing ends?</li>
+          <li>Would you accept the same drink from a different vessel?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>الفرق بين أهل السماع وأهل الصلاة</dt>
+      <dd><b>Establishes</b> the direct challenge; the taste of āyāt against the taste of abyāt; standing before the Lord of the worlds against standing before singers.</dd>
+      <dt>أهل الصدق إذا دخلوا في السماع الباطل</dt>
+      <dd><b>Establishes</b> honey in a filthy vessel; the sweetness hiding the stench at the time and the desolation arriving after; the souls of high aspiration who wait for a worthy vessel; and the three vessels and three drinks.</dd>
+      <dt>القلوب ثلاثة</dt>
+      <dd><b>Establishes</b> the three hearts — sound, diseased, and the heart holding two substances — and the closing appeal to blocking the means.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 10 · REPAIR ══ -->
+<section class="band wrap reveal" id="khushu">
+  <p class="eyebrow">10 · What the prayer repairs</p>
+  <h2 class="col">The gap between the prayers</h2>
+  <p class="lede col" style="margin-top:var(--s3)">Having set out the taste of the prayer, Ibn al-Qayyim turns to
+  why it has to keep happening. His answer is that the prayer is not only an ascent — it is a <em>repair</em>, and the
+  interval between prayers is deliberate.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>The prayer restores what the days between prayers take away — and the interval exists so there is something
+    to restore.</p>
+  </div>
+
+  <div class="d-deep">
+    <div class="grid g2 d-deep" style="margin-top:var(--s5)">
+      <div class="rule-note d-deep">
+        <h4>What erodes it</h4>
+        <p>He names four things that “require of him the loss of his share, or its diminishing”: <b>the soul that commands to evil</b>, <b>the desire that demands what it wants</b>, <b>the dispositions that press their claims</b>, and <b>the Satan who misleads</b>.</p>
+        <p>Against these the prayer is prescribed as something that <b>“makes good what was lost to him, gives back
+        what went from him, and renews for him what has worn away of his resolve and his faith.”</b></p>
+      </div>
+      <div class="rule-note d-deep">
+        <h4>Why there is a gap at all</h4>
+        <p>The interval is not an oversight. He calls it <em>a barzakh of time</em> between every two prayers, placed
+        there “out of wisdom and mercy” — so the servant may gather himself again, and so that the next prayer has
+        something to wipe away.</p>
+        <p>The same logic runs through the whole book: the invitation repeats <em>because</em> the need repeats.</p>
+      </div>
+    </div>
+
+    <div class="grid g2 d-deep" style="margin-top:var(--s3)">
+      <div class="rule-note d-deep">
+        <h4>The form matches the content</h4>
+        <p>He notes that the prayer's outward shape was “made to be the shape of its own meaning” — humility,
+        submission, compliance and surrender — and that every limb was given “its share of servanthood.”</p>
+        <p>Its fruit and its spirit, though, remain one thing: <b>“his turning toward his Lord in it, with the whole
+        of himself.”</b></p>
+      </div>
+      <div class="rule-note d-deep">
+        <h4>Dressing for an audience</h4>
+        <p>The last image of the passage is the sharpest. The reward and the place of the prayer is “entering upon
+        Him” — and you are told to adorn yourself before doing so.</p>
+        <p>Ibn al-Qayyim says why: it is <b>“a reminder of the Greater Presentation before Him on the Day of
+        Resurrection.”</b> Every prayer is a rehearsal for being shown.</p>
+      </div>
+    </div>
+
+    <div class="grid g2 d-deep" style="margin-top:var(--s3)">
+      <div class="mis d-deep">
+        <span class="k">Commonly misread</span>
+        <p>That the prayer's purpose is to <em>accumulate</em> reward. In this passage it is closer to maintenance:
+        it gives back, renews, and wipes away. A person who prays five times and notices no erosion in between has
+        misunderstood what the five are for.</p>
+      </div>
+      <div class="audit d-deep">
+        <span class="k">Check yourself</span>
+        <ul>
+          <li>Can you name what the interval since your last prayer actually cost you?</li>
+          <li>Do you arrive at the prayer with something to hand over, or only with the obligation?</li>
+          <li>If the next prayer is a presentation, would you be content to be seen as you currently are?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note col d-deep" style="margin-top:var(--s4)">
+      <h4>A note on the khushūʿ appendices</h4>
+      <p>The Dar as-Sunnah English edition appends two essays on <em>khushūʿ</em> drawn from other works of Ibn
+      al-Qayyim — <em>Madārij al-Sālikīn</em> and <em>al-Rūḥ</em> — including the well-known image of the humble heart as
+      low-lying land where water settles.</p>
+      <p>Those essays are <b>not part of this treatise</b>, and this page is built only from the Arabic of
+      <em>Asrār al-Ṣalāh</em>. They are not reproduced here.</p>
+    </div>
+  </div>
+
+  <div class="psrc d-src">
+    <span class="k">Passages behind this section</span>
+    <dl>
+      <dt>الشروع في بيان ثمرات الخشوع</dt>
+      <dd><b>Establishes</b> the four things that erode the servant's share; the prayer as restoration of what was
+      lost; the <em>barzakh</em> of time between prayers as wisdom and mercy; the prayer's form matching humility and
+      surrender; each limb's share; and the adornment before entering as a reminder of the Greater Presentation.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ 11 · SOURCING ══ -->
+<section class="band wrap reveal" id="sourcing">
+  <p class="eyebrow">11 · Provenance</p>
+  <h2 class="col">Where this comes from</h2>
+  <p class="lede col" style="margin-top:var(--s3)">This page is rendered from the <b>public-domain Arabic</b> of
+  Ibn al-Qayyim's treatise. The English is an original rendering, checked against the Arabic passage by passage —
+  it is not a translation of any published edition, and not a substitute for one.</p>
+
+  <div class="take">
+    <span class="k">In one line</span>
+    <p>Every English phrasing here is my own rendering of the fourteenth-century Arabic; no modern translation is
+    reproduced.</p>
+  </div>
+
+  <div class="grid g3 d-deep" style="margin-top:var(--s5)">
+    <div class="rule-note d-deep">
+      <h4>The text used</h4>
+      <p><em>Asrār al-Ṣalāh wa'l-Farq wa'l-Muwāzanah bayna Dhawq al-Ṣalāh wa'l-Samāʿ</em> — a standalone treatise,
+      not an extract from his other works. Ibn al-Qayyim died 751H, so the Arabic is long out of copyright.</p>
+      <p>Working text: the full Arabic at <a href="https://ar.wikisource.org/wiki/%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1_%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9">Arabic Wikisource</a>
+      — 59 headed sections, about 9,300 words. Section headings quoted throughout this page are that text's own.</p>
+    </div>
+    <div class="rule-note d-deep">
+      <h4>Why it was re-rendered</h4>
+      <p>An earlier version of this page quoted the 2013 Dar as-Sunnah English translation by Ayman ibn Khalid
+      throughout. That translation is a living publisher's copyright even though the underlying Arabic is not.</p>
+      <p>Every passage has since been re-rendered from the Arabic. The Dar as-Sunnah edition remains worth owning
+      and is the fuller scholarly presentation; nothing here replaces it.</p>
+    </div>
+    <div class="rule-note d-deep">
+      <h4>What is deliberately absent</h4>
+      <p>The Dar as-Sunnah edition appends two essays on <em>khushūʿ</em> from <em>Madārij al-Sālikīn</em> and
+      <em>al-Rūḥ</em>. They are not part of this treatise and are not reproduced here.</p>
+      <p>Two narrations beginning “O son of Adam,” which that edition footnotes as untraceable in the ḥadīth
+      collections, are likewise left out.</p>
+    </div>
+  </div>
+
+  <div class="grid g2 d-deep" style="margin-top:var(--s3)">
+    <div class="note d-deep">
+      <h4>The “five levels of prayer” is not in this book</h4>
+      <p>The passage ranking worshippers into five levels — punished, called to account, expiated, rewarded, brought
+      near — belongs to <em>al-Wābil al-Ṣayyib</em>. It appears nowhere in the Arabic of this treatise, which works in
+      <b>threes</b>: three classes of people, three levels of turning, three classes regarding guidance, three hearts.</p>
+      <p>It is the most common thing wrongly attributed to this book, so it is excluded on purpose.</p>
+    </div>
+    <div class="note d-deep">
+      <h4>Two places the Arabic corrects the received English</h4>
+      <p><b>Ten kinds of guidance, not nine.</b> The Arabic under <span dir="rtl">أنواع الهدايات</span> lists ten
+      distinct cases. The English edition merges two, dropping the case of a person who <em>wills</em> an act but is
+      <em>unable</em> to perform it and needs to be given the power.</p>
+      <p><b>Tawḥīd is listed first, not last.</b> The Arabic reads “oneness of Allah, love of Him, knowledge of Him,
+      remembrance of Him, and calling upon Him.” It is not singled out as the most important of the five; it simply
+      heads the list.</p>
+    </div>
+  </div>
+
+  <div class="rule-note col d-deep" style="margin-top:var(--s3)">
+    <h4>Reading this page</h4>
+    <p>Inline references such as <span class="cite"><b>§1.15</b></span> follow the section
+    numbering of the printed English edition, kept as a convenience for anyone cross-checking a copy. The
+    <b>Source</b> layer instead names the Arabic headings, which is what this page was actually built from.</p>
+    <p>Three depths, switchable in the sidebar. <b>Glance</b> gives the thesis of each section and the figures.
+    <b>Deep</b> adds the full argument, what is commonly misread, and questions to put to yourself.
+    <b>Source</b> adds the Arabic section headings behind each claim, with a note on what each passage establishes.</p>
+    <p>The two schematic charts encode <em>orderings the text states</em> — that prostration is the point of nearest
+    approach, that the taste of listening is followed by contraction. The book gives no quantities and none are
+    implied; each figure is labelled as a schematic.</p>
+  </div>
+
+  <div class="psrc d-src" style="margin-top:var(--s5)">
+    <span class="k">The treatise's own division</span>
+    <dl>
+      <dt>فصل — في الموازنة بين ذوق السَّماع وذوق الصلاة والقرآن</dt>
+      <dd><b>Establishes</b> the aim of the whole work, stated before anything else.</dd>
+      <dt>الصلاة قرة عيون المحبين … سنن الآذان الخمس</dt>
+      <dd><b>Establishes</b> the long first movement: what the prayer is, and every act within it from wuḍūʾ to the
+      salām. This is roughly three-quarters of the treatise.</dd>
+      <dt>سرّ الصلاة الإقبال على الله … الراحة بالصلاة</dt>
+      <dd><b>Establishes</b> the second movement: turning toward Allah, its three levels, its presence in each part,
+      the fruits of the acts of worship, and rest found in the prayer.</dd>
+      <dt>الفرق بين أهل السماع وأهل الصلاة … المحرمات في الشريعة</dt>
+      <dd><b>Establishes</b> the closing movement: the comparison with listening, the true samāʿ of the Companions,
+      the vessels and the drinks, the three hearts, and the closing appeal to blocking the means.</dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p class="small"><b>Source text.</b> Imam Ibn Qayyim al-Jawziyyah (d. 751H),
+  <em>Asrār al-Ṣalāh wa'l-Farq wa'l-Muwāzanah bayna Dhawq al-Ṣalāh wa'l-Samāʿ</em>. Read in the public-domain Arabic
+  at <a href="https://ar.wikisource.org/wiki/%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1_%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9">Arabic Wikisource</a>;
+  a critical Arabic edition was published by Dār Ibn Ḥazm, edited by ʿIyāḍ al-Qaysī, from three manuscripts.</p>
+  <p class="small"><b>The English here is mine.</b> Every quoted phrase is my own rendering of the Arabic, made for
+  this page. It is not a translation of any published edition and does not reproduce one. Readers wanting a full,
+  annotated English text should buy one.</p>
+  <p class="small">A summary and study aid. It paraphrases and renders selectively; it is not a substitute for the
+  treatise, which is short enough to read in a sitting.</p>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  // ── theme ──────────────────────────────────────────────
+  var stored = null;
+  try { stored = localStorage.getItem('idp-theme'); } catch (e) {}
+  if (stored === 'dark' || stored === 'light') root.setAttribute('data-theme', stored);
+
+  function flip() {
+    var cur = root.getAttribute('data-theme');
+    if (!cur) cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('idp-theme', next); } catch (e) {}
+  }
+  ['themeToggleRail', 'themeToggleBar'].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) b.addEventListener('click', flip);
+  });
+
+  // ── contents sheet (mobile) ────────────────────────────
+  var sheet = document.getElementById('sheet');
+  var openBtn = document.getElementById('sheetOpen');
+  function setSheet(on) {
+    sheet.classList.toggle('open', on);
+    openBtn.setAttribute('aria-expanded', String(on));
+    document.body.style.overflow = on ? 'hidden' : '';
+  }
+  openBtn.addEventListener('click', function () { setSheet(!sheet.classList.contains('open')); });
+  document.getElementById('sheetClose').addEventListener('click', function () { setSheet(false); });
+  sheet.addEventListener('click', function (e) { if (e.target.closest('a')) setSheet(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && sheet.classList.contains('open')) setSheet(false);
+  });
+
+  // ── reading progress ───────────────────────────────────
+  var bar = document.getElementById('progress');
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      bar.style.width = pct + '%';
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ── scroll spy ─────────────────────────────────────────
+  var sections = [].slice.call(document.querySelectorAll('section.band[id]'));
+  var railLinks = [].slice.call(document.querySelectorAll('#rail a[href^="#"]'));
+  var now = document.getElementById('nowSection');
+
+  function activate(id) {
+    railLinks.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('active', on);
+      if (on) {
+        a.setAttribute('aria-current', 'true');
+        if (now) now.textContent = a.textContent.replace(/^\s*\d+\s*/, '').trim();
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var visible = {};
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0; });
+      var best = null, bestVal = 0;
+      sections.forEach(function (s) {
+        var v = visible[s.id] || 0;
+        if (v > bestVal) { bestVal = v; best = s.id; }
+      });
+      if (best) activate(best);
+    }, { rootMargin: '-15% 0px -55% 0px', threshold: [0, .05, .2, .5, 1] });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+
+  // ── depth layers ───────────────────────────────────────
+  var HINTS={glance:'Thesis and figures only',deep:'Full argument',sources:'With the Arabic passages'};
+  function setDepth(d){
+    document.body.setAttribute('data-depth',d);
+    document.querySelectorAll('.depthbar button').forEach(function(b){
+      b.setAttribute('aria-pressed',String(b.dataset.depth===d));
+    });
+    var h=document.getElementById('depthHint'); if(h) h.textContent=HINTS[d]||'';
+    try{localStorage.setItem('idp-depth',d);}catch(e){}
+  }
+  document.querySelectorAll('.depthbar button').forEach(function(b){
+    b.addEventListener('click',function(){setDepth(b.dataset.depth);});
+  });
+  var sd=null; try{sd=localStorage.getItem('idp-depth');}catch(e){}
+  setDepth(sd==='glance'||sd==='sources'?sd:'deep');
+
+  // ── reveal ─────────────────────────────────────────────
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.03 });
+    items.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
