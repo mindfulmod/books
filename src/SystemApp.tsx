@@ -23,7 +23,7 @@ import {
   Target,
   X,
 } from "@phosphor-icons/react";
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useId, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { DeepReadingSections } from "./reading/DeepReadingSections";
 import { ReadingDisclosure } from "./reading/ReadingDisclosure";
 import { getDeepExperience, getExplorationSections } from "./reading/deepExperiences";
@@ -247,56 +247,32 @@ function glyphFor(kind: Glyph) {
 }
 
 function ConceptModel({ model, compact = false }: { model: VisualModel; compact?: boolean }) {
-  // Every model is a sequence. Opening in the middle made the visual argument look incomplete
-  // and hid how many earlier steps existed.
   const [activeIndex, setActiveIndex] = useState(0);
+  const panelId = useId();
+  const titleId = useId();
   const activeItem = model.items[activeIndex] ?? model.items[0];
-
+  if (!activeItem) return null;
+  const sequence = model.kind === "chain";
+  const noun = sequence ? "Step" : model.kind === "pair" ? "Side" : "View";
   return (
-    <section className={`concept-model concept-model-${model.kind}${compact ? " concept-model-compact" : ""}`}>
-      <header>
-        <span>Visual logic</span>
-        <h4>{model.title}</h4>
-      </header>
-      <div
-        className="concept-model-track"
-        role="tablist"
-        aria-label={model.title}
-        style={{
-          "--model-count": model.items.length,
-          "--model-edge": `${50 / model.items.length}%`,
-        } as CSSProperties}
-      >
-        {model.items.map((item, index) => (
-          <button
-            className={`${item.role ?? "support"}${index === activeIndex ? " active" : ""}`}
-            key={`${item.label}:${index}`}
-            onClick={() => setActiveIndex(index)}
-            role="tab"
-            aria-selected={index === activeIndex}
-          >
-            <i aria-hidden="true"><span /></i>
-            <strong>{item.label}</strong>
-          </button>
-        ))}
+    <section className={`concept-model concept-model-${model.kind}${compact ? " concept-model-compact" : ""}`} aria-labelledby={titleId}>
+      <header><span>{sequence ? "Follow the sequence" : model.kind === "pair" ? "Compare the meanings" : "Explore the distinctions"}</span><h4 id={titleId}>{model.title}</h4></header>
+      <p className="concept-model-instruction">{sequence ? "Read in order. Select any step to revisit its explanation." : "Select each label to compare its explanation. These are not steps to complete."}</p>
+      <div className="concept-model-track" role="group" aria-label={model.title}>
+        {model.items.map((item,index)=><button key={`${item.label}:${index}`} className={`${item.role ?? "support"}${index===activeIndex ? " active" : ""}`} onClick={()=>setActiveIndex(index)} aria-pressed={index===activeIndex} aria-controls={panelId}>
+          <span className="model-choice-marker" aria-hidden="true">{sequence ? String(index+1).padStart(2,"0") : index===activeIndex ? "●" : "○"}</span><strong>{item.label}</strong>
+        </button>)}
       </div>
-      <div className={`concept-model-reading ${activeItem.role ?? "support"}`} role="tabpanel">
-        <span>Step {activeIndex + 1} of {model.items.length}</span>
-        <p>{activeItem.body}</p>
-        <div className="concept-model-pager" aria-label="Move through visual logic">
-          <button
-            onClick={() => setActiveIndex((current) => Math.max(0, current - 1))}
-            disabled={activeIndex === 0}
-            aria-label="Previous step"
-          ><ArrowLeft size={15} weight="bold" /></button>
-          <button
-            onClick={() => setActiveIndex((current) => Math.min(model.items.length - 1, current + 1))}
-            disabled={activeIndex === model.items.length - 1}
-            aria-label="Next step"
-          ><ArrowRight size={15} weight="bold" /></button>
-        </div>
+      <div id={panelId} className={`concept-model-reading ${activeItem.role ?? "support"}`} aria-live="polite" aria-atomic="true">
+        <span>{noun} {activeIndex+1} of {model.items.length}</span>
+        <h5>{activeItem.label}</h5><p>{activeItem.body}</p>
       </div>
-      {!compact && <p className="concept-model-caption">{model.caption}</p>}
+      <div className="concept-model-pager" role="group" aria-label={`Move through ${model.title}`}>
+        <button onClick={()=>setActiveIndex(current=>Math.max(0,current-1))} disabled={activeIndex===0} aria-label={`Previous ${noun.toLowerCase()}`}><ArrowLeft size={17}/><span>Previous</span></button>
+        <span>{activeIndex+1} / {model.items.length}</span>
+        <button onClick={()=>setActiveIndex(current=>Math.min(model.items.length-1,current+1))} disabled={activeIndex===model.items.length-1} aria-label={`Next ${noun.toLowerCase()}`}><span>Next</span><ArrowRight size={17}/></button>
+      </div>
+      <p className="concept-model-caption">{model.caption}</p>
     </section>
   );
 }

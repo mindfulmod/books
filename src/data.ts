@@ -25,7 +25,7 @@ export type DeepReading = {
 };
 
 export type VisualModel = {
-  kind: "spectrum" | "chain" | "pair";
+  kind: "spectrum" | "chain" | "pair" | "set";
   title: string;
   items: Array<{
     label: string;

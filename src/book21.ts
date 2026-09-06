@@ -51,8 +51,8 @@ const pair = (title: string, caption: string, items: Array<[string, string, "sup
   kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
 });
 
-const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({
-  kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
+const set = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({
+  kind: "set", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })),
 });
 
 export const book21Chapters: Chapter[] = [
@@ -100,7 +100,7 @@ export const book21Chapters: Chapter[] = [
     reflection: "Take one ordinary action you performed today and name which of the three classes started it, which carried it, and which informed it.",
     audit: ["What is my body currently being used to carry?", "Which of my faculties am I treating as the point rather than the mount?", "What provision am I actually gathering?", "Where do my senses report, and who reads the reports?"],
     nodes: ["appetite", "anger", "senses", "action"],
-    model: chain("Three classes of the heart's armies", "Ghazali reduces a long inventory to a working structure.", [["The urging", "Appetite draws the suitable and anger repels the harmful; this is will.", "balance"], ["The moving", "Faculties spread through the limbs carry out the aim; this is power.", "balance"], ["The perceiving", "The senses gather and report like spies; this is knowledge.", "support"]]),
+    model: set("Three classes of the heart's armies", "Ghazali reduces a long inventory to a working structure.", [["The urging", "Appetite draws the suitable and anger repels the harmful; this is will.", "balance"], ["The moving", "Faculties spread through the limbs carry out the aim; this is power.", "balance"], ["The perceiving", "The senses gather and report like spies; this is knowledge.", "support"]]),
   }),
   makeChapter({
     id: 3, shortTitle: "The city within", formalTitle: "Three analogies for the heart and its inward forces",
@@ -124,7 +124,7 @@ export const book21Chapters: Chapter[] = [
     reflection: "Ask which of the three pictures fits your last difficult day, and who was giving the orders in it.",
     audit: ["Which faculty is currently directing which?", "Where has my reasoning been recruited to serve a want?", "What is my anger being used against?", "Is my counsellor being consulted at all?"],
     nodes: ["heart", "intellect", "appetite", "anger"],
-    model: chain("The realm analogy", "Each part has a role, and misrule has a specific shape.", [["The ruler", "The governing self, for whose journey the realm exists.", "support"], ["The vizier", "Reflective intellect, whose counsel is to be preferred.", "support"], ["The police chief", "Anger, useful when set under the counsellor's direction.", "balance"], ["The scheming servant", "Appetite, which fetches supplies and disguises harm as advice.", "warning"]]),
+    model: set("The realm analogy", "Each part has a role, and misrule has a specific shape.", [["The ruler", "The governing self, for whose journey the realm exists.", "support"], ["The vizier", "Reflective intellect, whose counsel is to be preferred.", "support"], ["The police chief", "Anger, useful when set under the counsellor's direction.", "balance"], ["The scheming servant", "Appetite, which fetches supplies and disguises harm as advice.", "warning"]]),
   }),
   makeChapter({
     id: 4, shortTitle: "Knowledge and will", formalTitle: "What distinguishes the human heart",
@@ -171,7 +171,7 @@ export const book21Chapters: Chapter[] = [
     reflection: "Take the list of traits produced by obeying appetite and the list produced by governing it, and find yourself honestly on both.",
     audit: ["Which of the four gave the orders today?", "What have I served without noticing that I served it?", "Which trait on the governed list is genuinely mine?", "What has been accumulating on the glass?"],
     nodes: ["appetite", "anger", "intellect"],
-    model: chain("Four in one skin", "The middle two are driven, the last is charged with governing them.", [["The pig", "Appetite, blamed for greed rather than for its form.", "warning"], ["The dog", "Anger, ferocious in savagery rather than in shape.", "warning"], ["The devil", "Inflames both and sets each upon the other.", "warning"], ["The sage", "The intellect, charged with exposing the deception and governing the rest.", "support"]]),
+    model: set("Four in one skin", "The middle two are driven, the last is charged with governing them.", [["The pig", "Appetite, blamed for greed rather than for its form.", "warning"], ["The dog", "Anger, ferocious in savagery rather than in shape.", "warning"], ["The devil", "Inflames both and sets each upon the other.", "warning"], ["The sage", "The intellect, charged with exposing the deception and governing the rest.", "support"]]),
   }),
   makeChapter({
     id: 6, shortTitle: "Knowing and the mirror", formalTitle: "The heart as a mirror in relation to knowledge",
@@ -192,7 +192,7 @@ export const book21Chapters: Chapter[] = [
     reflection: "Take one thing you have long wanted to understand and ask which of the five is actually in the way.",
     audit: ["Is the glass clouded, or aimed elsewhere?", "What did I accept before I could examine it?", "Am I looking where the answer would be?", "Which two things do I already know that would have to be joined?"],
     nodes: ["mirror", "knowledge"],
-    model: chain("Five reasons a mirror shows nothing", "Ghazali's list is exhaustive by his own claim.", [["Unformed", "The substance is not yet finished, as in a child's heart.", "warning"], ["Rusted", "Sins and appetites cloud the surface.", "warning"], ["Turned away", "Sound and clear, but aimed at something else.", "warning"], ["Veiled", "An inherited conviction hangs between the glass and the truth.", "warning"], ["Misdirected", "The bearer does not know where the object lies.", "warning"]]),
+    model: set("Five reasons a mirror shows nothing", "Ghazali's list is exhaustive by his own claim.", [["Unformed", "The substance is not yet finished, as in a child's heart.", "warning"], ["Rusted", "Sins and appetites cloud the surface.", "warning"], ["Turned away", "Sound and clear, but aimed at something else.", "warning"], ["Veiled", "An inherited conviction hangs between the glass and the truth.", "warning"], ["Misdirected", "The bearer does not know where the object lies.", "warning"]]),
   }),
   makeChapter({
     id: 7, shortTitle: "Kinds of knowledge", formalTitle: "Intellectual, religious, worldly, and otherworldly knowledge",
@@ -238,7 +238,7 @@ export const book21Chapters: Chapter[] = [
     reflection: "Recall something you understood suddenly, and ask what had been cleared away beforehand for it to land.",
     audit: ["What have I understood without working for it?", "What did I clear away before that happened?", "Am I treating my own notions as given to me?", "Which obstruction is mine to work at?"],
     nodes: ["knowledge", "mirror"],
-    model: chain("One knowledge, two routes", "The difference Ghazali specifies is narrow and exact.", [["The realities", "Inscribed on the Preserved Tablet, the same in either case.", "support"], ["The veil", "Hangs between the two mirrors and is the only thing at issue.", "balance"], ["Lifted by effort", "Study and inference work at the obstruction from this side.", "balance"], ["Lifted otherwise", "The winds of kindness move it, which is not the servant's choice.", "support"]]),
+    model: set("One knowledge, two routes", "The difference Ghazali specifies is narrow and exact.", [["The realities", "Inscribed on the Preserved Tablet, the same in either case.", "support"], ["The veil", "Hangs between the two mirrors and is the only thing at issue.", "balance"], ["Lifted by effort", "Study and inference work at the obstruction from this side.", "balance"], ["Lifted otherwise", "The winds of kindness move it, which is not the servant's choice.", "support"]]),
   }),
   makeChapter({
     id: 9, shortTitle: "Reservoir and polished wall", formalTitle: "Two tangible examples for ways of knowing",
@@ -375,7 +375,7 @@ export const book21Chapters: Chapter[] = [
     reflection: "Notice what you have assumed remembrance is supposed to feel like, and where that expectation came from.",
     audit: ["What do I expect remembrance to remove?", "Have I judged myself against one account of it?", "Which class of suggestion am I actually dealing with?", "Does its persistence prove anything about my state?"],
     nodes: ["remember", "guard"],
-    model: spectrum("Five reports, five classes", "Ghazali's verdict is that the range is describing different things.", [["Cessation", "One account holds that suggestion ceases during remembrance.", "support"], ["Root remains, no effect", "The heart is screened while wholly occupied.", "balance"], ["Dominance falls only", "It whispers from a distance and weakly.", "balance"], ["Rapid alternation", "Each vanishes by turns too quickly to separate.", "balance"], ["Both run together", "Two channels at once, as with two eyes.", "balance"]]),
+    model: set("Five accounts of remembrance", "Ghazali's verdict is that the range is describing different things.", [["Cessation", "One account holds that suggestion ceases during remembrance.", "support"], ["Root remains, no effect", "The heart is screened while wholly occupied.", "balance"], ["Dominance falls only", "It whispers from a distance and weakly.", "balance"], ["Rapid alternation", "Each vanishes by turns too quickly to separate.", "balance"], ["Both run together", "Two channels at once, as with two eyes.", "balance"]]),
   }),
   makeChapter({
     id: 15, shortTitle: "Change and steadiness", formalTitle: "The heart's rapid change and three broad conditions",

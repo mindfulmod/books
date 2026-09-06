@@ -1,55 +1,76 @@
+@import "./reading/paint-tokens.css";
 /* The bookshelf uses document scrolling; desktop reader panes keep their own scroll. */
 body.system-page.reading-home-page { overflow:auto; background:var(--home-paper); }
 html[data-reading-theme] { background:var(--home-paper); color-scheme:light; }
-html[data-reading-theme=dark] { color-scheme:dark; --home-paper:#0d1524; --home-ink:#f1e8d5; --home-rule:#475064; --home-muted:#b8bfd0; --home-accent:#ddc18a; --home-button:#29456b; --home-panel:#18243a; --home-selected:#293c59; }
+html[data-reading-theme=dark] { color-scheme:dark; --home-paper:#14161D; --home-ink:#F4EBDD; --home-rule:#4A4235; --home-muted:#AEA494; --home-accent:#D6B779; --home-button:#393124; --home-panel:#20222C; --home-selected:#393124; }
 .home-header-actions { display:flex; gap:18px; align-items:center; }
 .reading-theme-toggle { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; padding:8px 10px; font-family:inherit; font-size:13px; line-height:1.4; border:1px solid var(--home-rule); border-radius:6px; background:var(--home-panel); color:var(--home-accent); cursor:pointer; }
 .book-identity .reading-theme-toggle span { display:none; }
 @media(max-width:600px) { .home-header-actions { gap:4px; } .home-header-actions .reading-theme-toggle span { display:none; } .home-masthead { gap:10px; } .home-header-actions>button:last-child { font-size:11px; max-width:92px; } }
 html[data-reading-theme=dark] body.system-page { background:var(--home-paper); }
-html[data-reading-theme=dark] .system-app { --system-bg:#0d1524; --system-paper:#121e31; --system-panel:#18243a; --system-ink:#f1e8d5; --system-muted:#b8bfd0; --system-line:#475064; --system-soft-line:#303e55; --reading-paper:#0d1524; --reading-ink:#f1e8d5; --reading-muted:#b8bfd0; --reading-rule:#475064; --reading-accent:#ddc18a; background:#0d1524; color:#f1e8d5; }
-html[data-reading-theme=dark] .system-app :is(.system-topbar,.question-panel,.map-panel,.sequence-rail,.mobile-reader-bar,.mobile-depth-sheet,.library,.search-panel,.mobile-book-home,.mobile-sections,.deep-reader-header,.deep-reader-summary,.deep-reader,.deep-reader-body) { background:#121e31; color:#f1e8d5; border-color:#475064; box-shadow:none; }
-html[data-reading-theme=dark] .system-app :is(h1,h2,h3,h4,h5,p,strong,small,summary,label,.deep-eyebrow,.mobile-section-group>span,.mobile-section-group>strong) { color:var(--system-ink); }
-html[data-reading-theme=dark] .system-app :is(button,a) { color:#ddc18a; }
-html[data-reading-theme=dark] .system-app :is(.reading-disclosure,.deep-reasoning,.deep-distinction,.deep-misreading,.deep-observe,.mobile-book-overview,.mobile-stepper,.study-choices button,.meaning-index button,.receiver-duties button,.passage-leaf,.purpose-limit,.feedback-window,.four-meanings,.context-practice) { background:#18243a; border-color:#475064; color:#f1e8d5; box-shadow:none; }
-html[data-reading-theme=dark] .system-app button { border-color:#536079; }
-html[data-reading-theme=dark] .system-app button:not(.mobile-depth-dismiss):not(.library-backdrop):not(.mobile-reader-back):not(.reading-theme-toggle) { background-color:#18243a; }
-html[data-reading-theme=dark] .system-app button:is([aria-pressed=true],[aria-selected=true],.active),html[data-reading-theme=dark] .system-app .study-choices button[aria-pressed=true] { background:#304a70; color:#f5f0df; }
-html[data-reading-theme=dark] .passage-study { --study-green:#ddc18a; }
-html[data-reading-theme=dark] .system-app :is(.study-boundary,.study-reading,.study-caption,.study-prompt,.study-source a,.reading-disclosure-content,.deep-reader-article li) { color:#c9ccda; }
-html[data-reading-theme=dark] .system-app :is(.library-book,.library-header,.library-footer,.library-quarter-head,.search-results,.search-input) { background:#121e31; border-color:#475064; color:#f1e8d5; }
-html[data-reading-theme=dark] .shelf-cover-ihya { background:#213b60; }
-html[data-reading-theme=dark] .shelf-cover { box-shadow:3px 4px 0 #070d18; }
-html[data-reading-theme=dark] .system-skip:focus-visible { background:#f1e8d5; color:#0d1524; }
+html[data-reading-theme=dark] .system-app { --system-bg:#14161D; --system-paper:#1C1E27; --system-panel:#20222C; --system-ink:#F4EBDD; --system-muted:#AEA494; --system-line:#4A4235; --system-soft-line:#34333A; --reading-paper:#14161D; --reading-ink:#F4EBDD; --reading-muted:#AEA494; --reading-rule:#4A4235; --reading-accent:#D6B779; background:#14161D; color:#F4EBDD; }
+html[data-reading-theme=dark] .system-app :is(.system-topbar,.question-panel,.map-panel,.sequence-rail,.mobile-reader-bar,.mobile-depth-sheet,.library,.search-panel,.mobile-book-home,.mobile-sections,.deep-reader-header,.deep-reader-summary,.deep-reader,.deep-reader-body) { background:#1C1E27; color:#F4EBDD; border-color:#4A4235; box-shadow:none; }
+html[data-reading-theme=dark] .system-app :is(.reading-disclosure,.deep-reasoning,.deep-distinction,.deep-misreading,.deep-observe,.mobile-book-overview,.mobile-stepper,.study-choices button,.meaning-index button,.receiver-duties button,.passage-leaf,.purpose-limit,.feedback-window,.four-meanings,.context-practice) { background:#20222C; border-color:#4A4235; color:#F4EBDD; box-shadow:none; }
+html[data-reading-theme=dark] .system-app button { border-color:#7B6744; }
+html[data-reading-theme=dark] .system-app button:is([aria-pressed=true],[aria-selected=true],.active),html[data-reading-theme=dark] .system-app .study-choices button[aria-pressed=true] { background:#393124; color:#f5f0df; }
+html[data-reading-theme=dark] .passage-study { --study-green:#D6B779; }
+html[data-reading-theme=dark] .system-app :is(.study-boundary,.study-reading,.study-caption,.study-prompt,.study-source a,.reading-disclosure-content,.deep-reader-article li) { color:#CEC6BA; }
+html[data-reading-theme=dark] .system-app :is(.library-book,.library-header,.library-footer,.library-quarter-head,.search-results,.search-input) { background:#1C1E27; border-color:#4A4235; color:#F4EBDD; }
+html[data-reading-theme=dark] .shelf-cover-ihya { background:#393124; }
+html[data-reading-theme=dark] .shelf-cover { box-shadow:3px 4px 0 #101116; }
+html[data-reading-theme=dark] .system-skip:focus-visible { background:#F4EBDD; color:#14161D; }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-html[data-reading-theme=dark] .system-app :is(.meaning-specific,.meaning-comparison,.city-pause,.city-source blockquote,.prayer-leaf,.speech-scene,.study-mirror-scene,.thought-track,.repentance-sequence,.deep-distinction-card,.visual-model,.visual-model-detail) { background:#1d2d46; border-color:#536079; }
-html[data-reading-theme=dark] .system-app :is(.meaning-heading em,.meaning-branch,.meaning-convergence span,.meaning-number,.study-intro>span,.study-kicker,.study-reading>span) { color:#d7c49b; }
-html[data-reading-theme=dark] .system-app .meaning-shared { background:#213f5b; }
-html[data-reading-theme=dark] .system-app .meaning-medallion { background:#2a3b55; box-shadow:none; }
+html[data-reading-theme=dark] .system-app :is(.meaning-specific,.meaning-comparison,.city-pause,.city-source blockquote,.prayer-leaf,.speech-scene,.study-mirror-scene,.thought-track,.repentance-sequence,.deep-distinction-card,.visual-model,.visual-model-detail) { background:#20222C; border-color:#7B6744; }
+html[data-reading-theme=dark] .system-app :is(.meaning-heading em,.meaning-branch,.meaning-convergence span,.meaning-number,.study-intro>span,.study-kicker,.study-reading>span) { color:#D6B779; }
+html[data-reading-theme=dark] .system-app .meaning-shared { background:#393124; }
+html[data-reading-theme=dark] .system-app .meaning-medallion { background:#302A21; box-shadow:none; }
 html[data-reading-theme=dark] .system-app :is(.study-mirror-object,.study-mirror-image) { color:#e0c38e; }
 
 /* Illuminated night palette: match the complete surface, not only its text. */
 html[data-reading-theme=dark] .system-app .city-study { --city-ink:#d8bd86; --city-accent:#d8bd86; }
 html[data-reading-theme=dark] .system-app .city-study.city-appetite { --city-ink:#efbb88; }
 html[data-reading-theme=dark] .system-app .city-study.city-anger { --city-ink:#eea7a2; }
-html[data-reading-theme=dark] .system-app .city-instrument { background:radial-gradient(ellipse at 50% 40%,#243957,#121e31 75%); border-color:#86714e; box-shadow:inset 0 1px 0 #d8bd8626; }
-html[data-reading-theme=dark] .system-app .city-scenes { background:#0d1524; }
-html[data-reading-theme=dark] .system-app button.city-faculty { background:linear-gradient(#263a57,#18263e); color:#ead6ac; border-color:#897957; box-shadow:inset 0 0 0 3px #18263e; }
-html[data-reading-theme=dark] .system-app button.city-faculty.is-selected { background:#354e70; border-color:#e6c891; box-shadow:0 0 0 4px #d8bd8620; }
-html[data-reading-theme=dark] .system-app .city-faculty small { color:#c8cfe0; }
-html[data-reading-theme=dark] .city-pool { fill:#253e59; stroke:#7488a0; }
+html[data-reading-theme=dark] .system-app .city-instrument { background:radial-gradient(ellipse at 50% 40%,#302A21,#1C1E27 75%); border-color:#86714e; box-shadow:inset 0 1px 0 #d8bd8626; }
+html[data-reading-theme=dark] .system-app .city-scenes { background:#14161D; }
+html[data-reading-theme=dark] .system-app button.city-faculty { background:linear-gradient(#302A21,#20222C); color:#ead6ac; border-color:#897957; box-shadow:inset 0 0 0 3px #20222C; }
+html[data-reading-theme=dark] .system-app button.city-faculty.is-selected { background:#393124; border-color:#e6c891; box-shadow:0 0 0 4px #d8bd8620; }
+html[data-reading-theme=dark] .system-app .city-faculty small { color:#CEC6BA; }
+html[data-reading-theme=dark] .city-pool { fill:#302A21; stroke:#7B6744; }
 html[data-reading-theme=dark] .city-court-border { stroke:#9b8357; }
-html[data-reading-theme=dark] .city-inactive-lines { stroke:#8392aa; }
-html[data-reading-theme=dark] .system-app .city-faculty-reading { background:#1d304d; border:1px solid #86714e; }
+html[data-reading-theme=dark] .city-inactive-lines { stroke:#AEA494; }
+html[data-reading-theme=dark] .system-app .city-faculty-reading { background:#20222C; border:1px solid #86714e; }
 html[data-reading-theme=dark] .system-app :is(.city-instrument-head,.city-eyebrow,.city-diagram-note,.city-reading-bridge dt,.city-reading-bridge dd,.city-intro h3 em) { color:#d8c598; }
-html[data-reading-theme=dark] .system-app :is(.sequence-current,.sequence-brand,.taxonomy-rail,.process-rail,.depth-switch,.mobile-book-tabs,.meaning-comparison>div) { background:#18243a; border-color:#475064; }
+html[data-reading-theme=dark] .system-app :is(.sequence-current,.sequence-brand,.taxonomy-rail,.process-rail,.depth-switch,.mobile-book-tabs,.meaning-comparison>div) { background:#20222C; border-color:#4A4235; }
 html[data-reading-theme=dark] .system-app .sequence-current :is(span,small,strong) { color:#e3c58e; }
 html[data-reading-theme=dark] .system-app .distinction-pair span { color:#e3c58e; }
 html[data-reading-theme=dark] .system-app .distinction-pair>div::before { background:#cfad72; }
-html[data-reading-theme=dark] .system-app .distinction-pair>div:last-child::before { background:#93b9df; }
-html[data-reading-theme=dark] .reading-home { background:radial-gradient(ellipse at 75% 0%,#1d2d4655,transparent 650px),var(--home-paper); }
+html[data-reading-theme=dark] .system-app .distinction-pair>div:last-child::before { background:#AEA494; }
+html[data-reading-theme=dark] .reading-home { background:radial-gradient(ellipse at 75% 0%,#20222C55,transparent 650px),var(--home-paper); }
 html[data-reading-theme=dark] .home-masthead { border-bottom-color:#89714b; }
 html[data-reading-theme=dark] .shelf-cover-companion { background:#644d37; }
-html[data-reading-theme=dark] .system-app :is(.method-note,.depth-tabs,.depth-panel,.depth-content,.depth-heading) { background:#18243a; border-color:#475064; box-shadow:none; }
+html[data-reading-theme=dark] .system-app :is(.method-note,.depth-tabs,.depth-panel,.depth-content,.depth-heading) { background:#20222C; border-color:#4A4235; box-shadow:none; }
 html[data-reading-theme=dark] .system-app :is(.method-note,.panel-eyebrow,.map-eyebrow,.deep-reader-top>span,.question-panel>header span) { color:#c7bdab; }
-html[data-reading-theme=dark] .system-app .depth-tabs button[aria-selected=true] { background:#304a70; box-shadow:inset 0 -2px 0 #ddc18a; }
+html[data-reading-theme=dark] .system-app .depth-tabs button[aria-selected=true] { background:#393124; box-shadow:inset 0 -2px 0 #D6B779; }
+/* Match Inner Dimensions: charcoal paper, warm ivory, and old gold. */
+html[data-reading-theme=dark] .system-app .mechanism-map { background:radial-gradient(#D6B77912 1px,transparent 1px),#1C1E27; background-size:18px 18px; border:1px solid #7B6744; box-shadow:inset 0 0 0 1px #D6B77914; }
+html[data-reading-theme=dark] .system-app .mechanism-map::before { background:none; }
+html[data-reading-theme=dark] .system-app .mechanism-map::after { opacity:.25; }
+html[data-reading-theme=dark] .system-app .mechanism-map .map-node { background:transparent; border-color:transparent; }
+html[data-reading-theme=dark] .system-app .mechanism-map .map-node.active { background:#393124; border-color:#7B6744; border-radius:10px; }
+html[data-reading-theme=dark] .system-app .mechanism-map .node-orb { background:radial-gradient(circle at 35% 25%,#393124,#20222C); border-color:#7B6744; box-shadow:inset 0 0 0 4px #20222C; color:#D6B779; }
+html[data-reading-theme=dark] .system-app .mechanism-map .map-node.active .node-orb { background:#D6B779; color:#14161D; border-color:#EDD29C; box-shadow:0 0 0 5px #D6B77922,inset 0 0 0 3px #B99B61; }
+html[data-reading-theme=dark] .system-app :is(.map-caption,.node-step,.concept-dock>span) { color:#D6B779; }
+html[data-reading-theme=dark] .system-app .map-node small { color:#CEC6BA; }
+html[data-reading-theme=dark] .system-app .concept-dock { background:#20222C; border-color:#7B6744; box-shadow:none; }
+html[data-reading-theme=dark] .system-app .concept-dock button { background:#302A21; border-color:#7B6744; color:#F4EBDD; }
+html[data-reading-theme=dark] .system-app .mechanism-map .visited-check { background:#393124; color:#EDD29C; border-color:#D6B779; }
+html[data-reading-theme=dark] .system-app .mechanism-map .route-main { stroke:#D6B779; }
+html[data-reading-theme=dark] .system-app .mechanism-map .route-shadow { stroke:#34333A; }
+/* Forward is a filled action, with a dark arrow, in both color schemes. */
+.system-app.mobile-shell .mobile-stepper>button:last-child:not(:disabled) { background:#D6B779; color:#14161D; border-left:1px solid #B99B61; }
+html[data-reading-theme=dark] .system-app.mobile-shell .mobile-stepper>button:last-child:not(:disabled) { background:#D6B779; color:#14161D; border-left-color:#B99B61; }
+html[data-reading-theme=dark] .system-app .concept-model .concept-model-pager>button:last-child:not(:disabled) { background:#D6B779; color:#14161D; border-color:#D6B779; }
+html[data-reading-theme=dark] .system-app .concept-model .concept-model-pager>button:last-child:not(:disabled) span { color:#14161D; }
+/* Filled accents and counters require their own foreground pairing. */
+html[data-reading-theme=dark] .system-app .question-number { background:var(--reader-inset); color:var(--reader-ink); }
+html[data-reading-theme=dark] .system-app .mechanism-map .map-node.active .node-step { color:var(--reader-on-accent); }
