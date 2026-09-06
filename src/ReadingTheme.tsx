@@ -8,7 +8,7 @@ export function useReadingTheme() {
   });
   useEffect(()=>{
     document.documentElement.dataset.readingTheme=theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#191d1a':'#faf8f1');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#0d1524':'#faf8f1');
   },[theme]);
   const toggle=()=>setTheme(current=>{const next=current==='dark'?'light':'dark';try{localStorage.setItem('reading-theme',next);}catch{/* Keep the choice for this session. */}return next;});
   return {theme,toggle};

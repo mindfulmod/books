@@ -22,8 +22,8 @@
 .system-app .close-reading-grid h5 { max-width:none; font:600 18px/1.4 var(--reading-serif); color:var(--reading-ink); }
 .system-app .close-reading-grid p { font:17px/1.8 var(--reading-serif); color:#514e43; }
 .system-app .distinction-pair { gap:0; border-block:1px solid var(--reading-rule); margin-top:22px; }
-.system-app .distinction-pair > div { border:0; border-radius:0; box-shadow:none; background:none; padding:18px 20px 20px 0; }
-.system-app .distinction-pair > div + div { border-left:1px solid var(--reading-rule); padding-left:20px; }
+.system-app .distinction-pair > div { border:0; border-radius:0; box-shadow:none; background:none; padding:22px 24px 24px; }
+.system-app .distinction-pair > div + div { border-left:1px solid var(--reading-rule); padding-left:24px; }
 .system-app .distinction-pair p { font:17px/1.75 var(--reading-serif); }
 .system-app .deep-practice-grid { gap:24px; }
 .system-app .misreading-note, .system-app .observation-note { border:0; border-radius:0; box-shadow:none; background:none; padding:8px 0; }
@@ -76,7 +76,7 @@
  .system-app .reasoning-move { grid-template-columns:20px minmax(0,1fr); gap:10px; }
  .system-app .reasoning-move p { font-size:18px; line-height:1.75; }
  .system-app .distinction-pair { grid-template-columns:1fr; }
- .system-app .distinction-pair > div + div { border-left:0; border-top:1px solid var(--reading-rule); padding-left:0; }
+ .system-app .distinction-pair > div + div { border-left:0; border-top:1px solid var(--reading-rule); padding-left:24px; }
  .system-app .mobile-reader-bar { box-shadow:none; background:var(--reading-paper); border-bottom:1px solid var(--reading-rule); backdrop-filter:none; }
  .system-app .mobile-stepper { box-shadow:0 4px 15px #37332614; border-radius:10px; }
 }
