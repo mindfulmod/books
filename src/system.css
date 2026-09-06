@@ -52,19 +52,24 @@ body.system-page {
 
 .system-skip {
   position: fixed;
-  z-index: 200;
-  top: 10px;
+  top: calc(env(safe-area-inset-top, 0px) + 10px);
   left: 12px;
-  padding: 10px 14px;
-  border-radius: 9px;
-  color: white;
-  background: var(--system-ink);
-  transform: translateY(-160%);
-  transition: transform 180ms ease;
+  z-index: 200;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
-
-.system-skip:focus {
-  transform: translateY(0);
+.system-skip:focus-visible {
+  width: auto;
+  height: auto;
+  padding: 10px 14px;
+  clip-path: none;
+  color: var(--system-paper);
+  background: var(--system-ink);
+  border-radius: 6px;
 }
 
 .system-topbar {

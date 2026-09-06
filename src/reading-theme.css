@@ -1,0 +1,29 @@
+/* The bookshelf uses document scrolling; desktop reader panes keep their own scroll. */
+body.system-page.reading-home-page { overflow:auto; background:var(--home-paper); }
+html[data-reading-theme] { background:var(--home-paper); color-scheme:light; }
+html[data-reading-theme=dark] { color-scheme:dark; --home-paper:#191d1a; --home-ink:#ede9dd; --home-rule:#42493f; --home-muted:#b8b9aa; --home-accent:#adceba; --home-button:#365b48; --home-panel:#252c25; --home-selected:#364436; }
+.home-header-actions { display:flex; gap:18px; align-items:center; }
+.reading-theme-toggle { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; padding:8px 10px; font-family:inherit; font-size:13px; line-height:1.4; border:1px solid var(--home-rule); border-radius:6px; background:var(--home-panel); color:var(--home-accent); cursor:pointer; }
+.book-identity .reading-theme-toggle span { display:none; }
+@media(max-width:600px) { .home-header-actions { gap:4px; } .home-header-actions .reading-theme-toggle span { display:none; } .home-masthead { gap:10px; } .home-header-actions>button:last-child { font-size:11px; max-width:92px; } }
+html[data-reading-theme=dark] body.system-page { background:var(--home-paper); }
+html[data-reading-theme=dark] .system-app { --system-bg:#191d1a; --system-paper:#202620; --system-panel:#252c25; --system-ink:#ede9dd; --system-muted:#b8b9aa; --system-line:#42493f; --system-soft-line:#363d34; --reading-paper:#191d1a; --reading-ink:#ede9dd; --reading-muted:#b8b9aa; --reading-rule:#42493f; --reading-accent:#adceba; background:#191d1a; color:#ede9dd; }
+html[data-reading-theme=dark] .system-app :is(.system-topbar,.question-panel,.map-panel,.sequence-rail,.mobile-reader-bar,.mobile-depth-sheet,.library,.search-panel,.mobile-book-home,.mobile-sections,.deep-reader-header,.deep-reader-summary,.deep-reader,.deep-reader-body) { background:#202620; color:#ede9dd; border-color:#42493f; box-shadow:none; }
+html[data-reading-theme=dark] .system-app :is(h1,h2,h3,h4,h5,p,strong,small,summary,label,.deep-eyebrow,.mobile-section-group>span,.mobile-section-group>strong) { color:var(--system-ink); }
+html[data-reading-theme=dark] .system-app :is(button,a) { color:#adceba; }
+html[data-reading-theme=dark] .system-app :is(.reading-disclosure,.deep-reasoning,.deep-distinction,.deep-misreading,.deep-observe,.mobile-book-overview,.mobile-stepper,.study-choices button,.meaning-index button,.receiver-duties button,.passage-leaf,.purpose-limit,.feedback-window,.four-meanings,.context-practice) { background:#252c25; border-color:#42493f; color:#ede9dd; box-shadow:none; }
+html[data-reading-theme=dark] .system-app button { border-color:#505849; }
+html[data-reading-theme=dark] .system-app button:not(.mobile-depth-dismiss):not(.library-backdrop):not(.mobile-reader-back):not(.reading-theme-toggle) { background-color:#252c25; }
+html[data-reading-theme=dark] .system-app button:is([aria-pressed=true],[aria-selected=true],.active),html[data-reading-theme=dark] .system-app .study-choices button[aria-pressed=true] { background:#3a5642; color:#f5f0df; }
+html[data-reading-theme=dark] .passage-study { --study-green:#adceba; }
+html[data-reading-theme=dark] .system-app :is(.study-boundary,.study-reading,.study-caption,.study-prompt,.study-source a,.reading-disclosure-content,.deep-reader-article li) { color:#c9cbbc; }
+html[data-reading-theme=dark] .system-app :is(.library-book,.library-header,.library-footer,.library-quarter-head,.search-results,.search-input) { background:#202620; border-color:#42493f; color:#ede9dd; }
+html[data-reading-theme=dark] .shelf-cover-ihya { background:#365243; }
+html[data-reading-theme=dark] .shelf-cover { box-shadow:3px 4px 0 #101610; }
+html[data-reading-theme=dark] .system-skip:focus-visible { background:#ede9dd; color:#191d1a; }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+html[data-reading-theme=dark] .system-app :is(.meaning-specific,.meaning-comparison,.city-pause,.city-source blockquote,.prayer-leaf,.speech-scene,.study-mirror-scene,.thought-track,.repentance-sequence,.deep-distinction-card,.visual-model,.visual-model-detail) { background:#293229; border-color:#505849; }
+html[data-reading-theme=dark] .system-app :is(.meaning-heading em,.meaning-branch,.meaning-convergence span,.meaning-number,.study-intro>span,.study-kicker,.study-reading>span) { color:#c4c8b4; }
+html[data-reading-theme=dark] .system-app .meaning-shared { background:#294d46; }
+html[data-reading-theme=dark] .system-app .meaning-medallion { background:#313d33; box-shadow:none; }
+html[data-reading-theme=dark] .system-app :is(.study-mirror-object,.study-mirror-image) { color:#d1b584; }

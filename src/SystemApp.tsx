@@ -1,3 +1,5 @@
+import { ThemeButton, useReadingTheme } from "./ReadingTheme";
+import "./reading-theme.css";
 import { ReadingHome } from "./ReadingHome";
 import {
   ArrowLeft,
@@ -1810,6 +1812,7 @@ function initialState(): SavedState {
 }
 
 function SystemApp() {
+  const {theme,toggle} = useReadingTheme();
   const [saved, setSaved] = useState<SavedState>(initialState);
   const [activeConcept, setActiveConcept] = useState<string | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
@@ -1850,6 +1853,11 @@ function SystemApp() {
   const displayedChapters = activeSectionGroup
     ? book.chapters.filter((item) => activeSectionGroup.chapterIds.includes(item.id))
     : book.chapters;
+
+  useEffect(() => {
+    document.body.classList.toggle("reading-home-page", homeOpen);
+    return () => document.body.classList.remove("reading-home-page");
+  }, [homeOpen]);
 
   useEffect(() => {
     document.body.classList.add("system-page");
@@ -2225,7 +2233,7 @@ function SystemApp() {
   }, [isMobile, mobileSurface, depthMenuOpen, book.id, chapter.id, saved.depth]);
 
 if (homeOpen) return <>
-    <ReadingHome books={books} resume={saved.visited.length ? {title:book.title,section:chapter.shortTitle} : undefined}
+    <ReadingHome theme={theme} onToggleTheme={toggle} books={books} resume={saved.visited.length ? {title:book.title,section:chapter.shortTitle} : undefined}
       onSelect={(id, depth)=>{selectBook(id, depth); if(depth && isMobile) setMobileSurface("reader");}} onSearch={()=>setSearchOpen(true)} onResume={()=>{setHomeOpen(false); if(isMobile) setMobileSurface("reader"); window.scrollTo(0,0);}} />
     {searchOpen && <SearchOverlay all={books} onOpen={openFromSearch} onClose={()=>setSearchOpen(false)} />}
   </>;
@@ -2235,7 +2243,7 @@ return (
       className={`system-app system-warm book-${book.id}${isMobile ? ` mobile-shell mobile-${mobileSurface} tab-${activeMobileTab}${readerChromeVisible ? "" : " reader-chrome-hidden"}` : ""}`}
       style={{ "--journey": journey.color } as CSSProperties}
     >
-      <a className="system-skip" href="#system-main">Skip to concept map</a>
+      <a className="system-skip" href="#system-main">Skip to reading</a>
 
       <header className="system-topbar">
         <button className="system-brand" aria-label="Ihya home" onClick={()=>{setHomeOpen(true);window.scrollTo(0,0);}}>
@@ -2252,6 +2260,7 @@ return (
         </button>
 
         <div className="book-identity">
+          <ThemeButton theme={theme} onToggle={toggle}/>
           <button
             className="library-trigger"
             onClick={() => setLibraryOpen(true)}
@@ -2367,6 +2376,7 @@ return (
                   <div><span>Reading depth</span><strong>How much detail do you want?</strong></div>
                   <button onClick={() => setDepthMenuOpen(false)} aria-label="Close depth menu"><X size={18} weight="bold" /></button>
                 </header>
+                <ThemeButton theme={theme} onToggle={toggle}/>
                 <div>
                   {depthOptions.map((option, index) => (
                     <button
@@ -2390,7 +2400,7 @@ return (
         </>
       )}
 
-      <main className="system-workspace" id="system-main">
+      <main className="system-workspace" id="system-main" tabIndex={-1}>
         <aside className="question-panel" aria-label="Learning journeys">
           <div className="panel-kicker">
             <Compass size={17} weight="duotone" />

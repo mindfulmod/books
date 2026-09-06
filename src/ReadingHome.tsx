@@ -1,3 +1,4 @@
+import { ThemeButton, type ReadingTheme } from './ReadingTheme';
 import { useRef, useState } from 'react';
 import { ReadingOrientation } from './ReadingOrientation';
 import { companionBooks } from './bookshelf';
@@ -8,6 +9,8 @@ import type { SystemBook } from './systemTypes';
 import './reading-home.css';
 
 type Props = {
+  theme: ReadingTheme;
+  onToggleTheme: () => void;
   books: SystemBook[];
   resume?: { title: string; section: string };
   onResume: () => void;
@@ -15,12 +18,12 @@ type Props = {
   onSearch: () => void;
 };
 
-export function ReadingHome({ books, resume, onResume, onSelect, onSearch }: Props) {
+export function ReadingHome({ books, resume, onResume, onSelect, onSearch, theme, onToggleTheme }: Props) {
   const [showGuide, setShowGuide] = useState(() => { try { return localStorage.getItem('reading-orientation-v1') !== 'seen'; } catch { return true; } });
   const guideTrigger = useRef<HTMLButtonElement>(null);
   const closeGuide = () => { try { localStorage.setItem('reading-orientation-v1', 'seen'); } catch { /* This session still works without storage. */ } setShowGuide(false); requestAnimationFrame(()=>guideTrigger.current?.focus()); };
   return <div className="reading-home">
-    <header className="home-masthead"><span>The reading room <small>A bookshelf for inward life</small></span><button onClick={onSearch}><MagnifyingGlass size={18}/> Search the Ihya</button></header>
+    <header className="home-masthead"><span>The reading room <small>A bookshelf for inward life</small></span><div className="home-header-actions"><ThemeButton theme={theme} onToggle={onToggleTheme}/><button onClick={onSearch}><MagnifyingGlass size={18}/> Search the Ihya</button></div></header>
     <main id="home-main">
       <section className="home-introduction">
         <span className="home-eyebrow">Your bookshelf</span>
