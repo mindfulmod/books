@@ -500,10 +500,10 @@ const book24Base: Chapter[] = [
     moves: [
       { title: "Do not accept automatically", body: "The carrier's report is not treated as self-authenticating. Immediate belief would let the speaker install judgment in the receiver." },
       { title: "Stop and advise", body: "The receiver should discourage the conduct rather than reward access with fascination, gratitude, or requests for more detail." },
-      { title: "Refuse secondary corruption", body: "Do not convert the report into hatred, suspicion of the absent person, or a private investigation." },
+      { title: "Refuse secondary corruption", body: "Do not convert the report into suspicion of the absent person or a private investigation. Ghazali also separately requires religious disapproval of the tale-bearer, rather than rewarding the conduct as friendship." },
       { title: "End the chain", body: "Do not repeat the report, even in the form of announcing that someone else carried it. Repetition would reproduce the same act." },
-      { title: "Note the first duty of the receiver", body: "The instructions are all addressed to the person receiving the report, which is the useful choice — the carrier is unlikely to be reading. And the first is not to believe it. A report accepted on arrival lets the carrier install a judgement in somebody else's head at no cost, which is the whole point of carrying it. Withholding belief removes the payoff before anything else is decided." },
-      { title: "Follow the four duties in order", body: "And the four run in sequence: do not believe, discourage the conduct rather than rewarding it with interest, refuse to convert the report into suspicion or a private investigation, and do not repeat it. The last has a clause worth catching — not even in the form of telling somebody that so-and-so is carrying tales, since that repeats the content while appearing to condemn the carrying." },
+      { title: "Note the first duty of the receiver", body: "The instructions address the receiver, who can interrupt the transmission. And the first is not to believe it. A report accepted on arrival lets the carrier install a judgement in somebody else's head at no cost, which is the whole point of carrying it. Withholding belief removes the payoff before anything else is decided." },
+      { title: "Keep all six duties in view", body: "The six duties are to withhold belief, discourage and advise, disapprove of the tale-bearer for God’s sake, avoid suspicion of the absent person, avoid spying, and avoid repetition. The last has a clause worth catching — not even in the form of telling somebody that so-and-so is carrying tales, since that repeats the content while appearing to condemn the carrying." },
     ],
     distinction: { title: "Verification is not appetite-driven investigation", firstLabel: "Responsible discernment", first: "The receiver withholds judgment, protects people from rash harm, and uses fitting processes when a real duty requires action.", secondLabel: "Chain reaction", second: "The report triggers automatic belief, suspicion, spying, confrontation, and repetition before responsibility is clear." },
     misreading: "Do not treat this as a command to ignore credible reports of abuse or danger. Safeguarding may require responsible escalation through appropriate channels without gossip or amateur investigation.",
@@ -511,9 +511,11 @@ const book24Base: Chapter[] = [
     model: { kind: "chain", title: "Six gates at the point of reception", items: [
       { label: "Withhold belief", body: "Do not let the carrier's confidence become your certainty.", role: "balance" },
       { label: "Stop and advise", body: "Refuse to reward the transmission and discourage the conduct.", role: "balance" },
-      { label: "Reject hatred and suspicion", body: "Do not let one report redesign your heart toward either person.", role: "support" },
-      { label: "No spying, no repeating", body: "Do not investigate from appetite or carry the report into a new audience.", role: "warning" },
-    ], caption: "Ghazali lists six duties. The paired labels compress them into four interactive stations while preserving all six actions." },
+      { label: "Disapprove of tale-bearing", body: "The third duty calls for religious disapproval of the carrier, rather than allegiance through gossip.", role: "warning" },
+      { label: "Avoid suspicion", body: "Do not assume evil of the absent person because of the report.", role: "support" },
+      { label: "No spying", body: "Do not let the report provoke appetite-driven investigation.", role: "warning" },
+      { label: "No repeating", body: "Do not carry the same report into a new audience.", role: "warning" },
+    ], caption: "The six stations preserve the six duties separately. The third is the source’s religious disapproval; it is not permission to mistreat or retaliate against someone." },
   }),
   chapter({
     id: 19,

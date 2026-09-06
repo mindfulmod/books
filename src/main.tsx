@@ -4,6 +4,7 @@ import App from "./App";
 import SystemApp from "./SystemApp";
 import "./styles.css";
 import "./system.css";
+import "./reading/editorial.css";
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 const currentPath = window.location.pathname;

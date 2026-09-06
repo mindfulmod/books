@@ -191,7 +191,7 @@ export const book21Journeys: Journey[] = [
         micro: "The proposal is welcomed",
         summary:
           "Assent marks a deeper adoption than merely noticing a thought: judgment has begun to receive the proposal as one to follow.",
-        guardrail: "A thought can be noticed and refused without being endorsed.",
+        guardrail: "Ghazali distinguishes voluntary from involuntary judgment; they are not treated alike.",
         chapterId: 13,
         glyph: "assent",
       },

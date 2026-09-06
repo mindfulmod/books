@@ -1,0 +1,12 @@
+import { useState } from 'react';
+import { Choices, Reading, Study } from './Study';
+const stages=[['Effort','Start with a fitting act','The learner does what the desired quality would produce, before it comes readily.'],['Repetition','Let action shape disposition','Sustained practice leaves an inward effect. Ghazali compares it with learning to write by writing.'],['Disposition','The formed quality supports action','What once required effort can become easier and welcome. Influence now returns from the heart to the limbs.']];
+export function CharacterStudy() {
+ const [stage,setStage]=useState(0); const [quality,setQuality]=useState(0);
+ return <Study eyebrow="Character · how practice travels inward" title="Begin before it feels natural." intro="The passage describes a two-way relation: character gives rise to action, and repeated action can form character." sources={[["Acquiring a quality through practice · III, 58",804],["The heart–limbs relation and writing analogy · III, 59",805]]} note="Generosity, humility, sustained practice, and the comparison with writing come from this passage. The three views explain a process; they are not stages completed by tapping." question="Does the effort in an early act prove the practice is false?" answer="No. The writing analogy begins with deliberate imitation. Ease is something practice can develop, not a condition that has to exist before beginning.">
+  <div className="formation-loop" role="img" aria-label={stage===2?'Disposition supports fitting action':'Fitting action influences inward disposition'}><span className={stage<2?'is-lit':''}>Fitting<br/>action</span><div><b aria-hidden="true">{stage===2?'←':'→'}</b><small>{stage===2?'supports':'forms'}</small></div><span className={stage===2?'is-lit':''}>Inward<br/>disposition</span></div>
+  <Choices label="Explore the formation of character" items={stages.map(s=>s[0])} value={stage} onChange={setStage}/>
+  <Reading label={`View ${stage+1} of 3`} title={stages[stage][1]}><p>{stages[stage][2]}</p></Reading>
+  <div className="formation-example"><span className="study-kicker">Two examples in the passage</span><Choices label="Choose a quality" items={['Generosity','Humility']} value={quality} onChange={setQuality}/><p aria-live="polite">{quality===0?'Giving is practised before giving comes easily. The aim is a settled generosity.':'Acts of humility are practised while pride still resists. The aim is a settled humility.'}</p><small>Duration is left open. This diagram promises no fixed number of repetitions.</small></div>
+ </Study>;
+}
