@@ -1,3 +1,4 @@
+import { ReadingHome } from "./ReadingHome";
 import {
   ArrowLeft,
   ArrowRight,
@@ -1764,14 +1765,14 @@ function AudienceChamber({
 }
 
 function initialState(): SavedState {
-  const fallbackJourney = book30.journeys.find((item) => item.id === book30.defaultJourneyId) ?? book30.journeys[0];
+  const fallbackJourney = book01.journeys.find((item) => item.nodes.some(node => node.chapterId === book01.chapters[0].id)) ?? book01.journeys[0];
   const fallbackNode = fallbackJourney.nodes[0];
   const fallback: SavedState = {
-    bookId: book30.id,
+    bookId: book01.id,
     journeyId: fallbackJourney.id,
     nodeId: fallbackNode.id,
     depth: "glance",
-    visited: [ideaKey(book30.id, fallbackJourney.id, fallbackNode.id)],
+    visited: [],
     bookmarks: [],
   };
 
@@ -1780,7 +1781,7 @@ function initialState(): SavedState {
     const raw = current ?? window.localStorage.getItem(LEGACY_STORAGE_KEY);
     if (!raw) return fallback;
     const parsed = JSON.parse(raw) as Partial<SavedState>;
-    const book = books.find((item) => item.id === parsed.bookId) ?? book30;
+    const book = books.find((item) => item.id === parsed.bookId) ?? book01;
     const journey = book.journeys.find((item) => item.id === parsed.journeyId)
       ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
       ?? book.journeys[0];
@@ -1792,7 +1793,7 @@ function initialState(): SavedState {
             item.split(":").length === 2 ? `21:${item}` : item)
         : [];
     const normalizedVisited = normalizeKeys(parsed.visited);
-    const currentKey = ideaKey(book.id, journey.id, resolvedNode.id);
+
     return {
       chapterId: parsed.chapterId,
       readingMode: parsed.readingMode === "journey" ? "journey" : "sections",
@@ -1800,7 +1801,7 @@ function initialState(): SavedState {
       journeyId: journey.id,
       nodeId: resolvedNode.id,
       depth: current && depthOptions.some((item) => item.id === parsed.depth) ? parsed.depth! : "glance",
-      visited: normalizedVisited.includes(currentKey) ? normalizedVisited : [...normalizedVisited, currentKey],
+      visited: normalizedVisited,
       bookmarks: normalizeKeys(parsed.bookmarks),
     };
   } catch {
@@ -1812,6 +1813,7 @@ function SystemApp() {
   const [saved, setSaved] = useState<SavedState>(initialState);
   const [activeConcept, setActiveConcept] = useState<string | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
+  const [homeOpen, setHomeOpen] = useState(true);
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeTaxonomy, setActiveTaxonomy] = useState("all");
   const [activeProcess, setActiveProcess] = useState("all");
@@ -1820,7 +1822,7 @@ function SystemApp() {
   const [mobileTab, setMobileTab] = useState<MobileTab>("sections");
   const [depthMenuOpen, setDepthMenuOpen] = useState(false);
   const [readerChromeVisible, setReaderChromeVisible] = useState(true);
-  const book = books.find((item) => item.id === saved.bookId) ?? book30;
+  const book = books.find((item) => item.id === saved.bookId) ?? book01;
   const journey = book.journeys.find((item) => item.id === saved.journeyId)
     ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
     ?? book.journeys[0];
@@ -1855,10 +1857,11 @@ function SystemApp() {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch { /* Reading remains available when browser storage is disabled. */ }
   }, [saved]);
 
   const openFromSearch = (bookId: number, chapterId: number) => {
+    setHomeOpen(false);
     setSearchOpen(false);
     const nextBook = books.find((item) => item.id === bookId);
     if (!nextBook) return;
@@ -1889,6 +1892,8 @@ function SystemApp() {
   };
 
   const selectBook = (bookId: number) => {
+    setHomeOpen(false);
+    window.scrollTo(0, 0);
     setLibraryOpen(false);
     const nextBook = books.find((item) => item.id === bookId);
     if (!nextBook) return;
@@ -2219,6 +2224,12 @@ function SystemApp() {
     };
   }, [isMobile, mobileSurface, depthMenuOpen, book.id, chapter.id, saved.depth]);
 
+if (homeOpen) return <>
+    <ReadingHome books={books} resume={saved.visited.length ? {title:book.title,section:chapter.shortTitle} : undefined}
+      onSelect={selectBook} onSearch={()=>setSearchOpen(true)} onResume={()=>{setHomeOpen(false); if(isMobile) setMobileSurface("reader"); window.scrollTo(0,0);}} />
+    {searchOpen && <SearchOverlay all={books} onOpen={openFromSearch} onClose={()=>setSearchOpen(false)} />}
+  </>;
+
 return (
     <div
       className={`system-app system-warm book-${book.id}${isMobile ? ` mobile-shell mobile-${mobileSurface} tab-${activeMobileTab}${readerChromeVisible ? "" : " reader-chrome-hidden"}` : ""}`}
@@ -2227,7 +2238,7 @@ return (
       <a className="system-skip" href="#system-main">Skip to concept map</a>
 
       <header className="system-topbar">
-        <div className="system-brand" aria-label="Ihya concept edition">
+        <button className="system-brand" aria-label="Ihya home" onClick={()=>{setHomeOpen(true);window.scrollTo(0,0);}}>
           <span className="brand-glyph" aria-hidden="true">
             <i />
             <i />
@@ -2238,7 +2249,7 @@ return (
             <strong>Ihya</strong>
             <small>Concept edition</small>
           </span>
-        </div>
+        </button>
 
         <div className="book-identity">
           <button
