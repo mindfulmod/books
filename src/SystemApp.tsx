@@ -1891,7 +1891,7 @@ function SystemApp() {
     }));
   };
 
-  const selectBook = (bookId: number) => {
+  const selectBook = (bookId: number, startingDepth: Depth = "glance") => {
     setHomeOpen(false);
     window.scrollTo(0, 0);
     setLibraryOpen(false);
@@ -1922,7 +1922,7 @@ function SystemApp() {
       journeyId: nextJourney.id,
       nodeId: nextNode.id,
       chapterId: firstNode ? undefined : firstChapter.id,
-      depth: "glance",
+      depth: startingDepth,
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
   };
@@ -2226,7 +2226,7 @@ function SystemApp() {
 
 if (homeOpen) return <>
     <ReadingHome books={books} resume={saved.visited.length ? {title:book.title,section:chapter.shortTitle} : undefined}
-      onSelect={selectBook} onSearch={()=>setSearchOpen(true)} onResume={()=>{setHomeOpen(false); if(isMobile) setMobileSurface("reader"); window.scrollTo(0,0);}} />
+      onSelect={(id, depth)=>{selectBook(id, depth); if(depth && isMobile) setMobileSurface("reader");}} onSearch={()=>setSearchOpen(true)} onResume={()=>{setHomeOpen(false); if(isMobile) setMobileSurface("reader"); window.scrollTo(0,0);}} />
     {searchOpen && <SearchOverlay all={books} onOpen={openFromSearch} onClose={()=>setSearchOpen(false)} />}
   </>;
 
