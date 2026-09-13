@@ -535,7 +535,7 @@ export const book31Journeys: Journey[] = [
   },
   {
     id: "how-bad-really", number: "03", question: "How bad is this, really?", title: "Weigh a sin without a scoring system",
-    description: "Sort sins by the faculty that produced them, see why minor and major will not hold still, refuse the calculus the reckoning does not supply, and learn the five causes that enlarge a small sin.",
+    description: "Sort sins by the faculty that produced them, see why minor and major will not hold still, refuse the calculus the reckoning does not supply, and learn the six causes that enlarge a small sin.",
     payoff: "You gain a way to weigh your own case that does not let you settle it.",
     image: assetUrl("assets/system/book31-drops-on-stone.jpg"), imageAlt: "A sunlit stone basin where slow water drops have worn a channel in the rim beside a full vessel poured out and leaving no mark.", minutes: 16, color: "#c25f50",
     nodes: [
@@ -543,7 +543,7 @@ export const book31Journeys: Journey[] = [
       node("separate-two-rights", "Separate the two rights", "God's and a person's", "A wrong may face both directions, and only one of them is discharged by the return.", "The second direction is treated at length in the third pillar.", 7, "balance"),
       node("unfix-the-categories", "Unfix the categories", "A scale, not two boxes", "Minor and major are real and move with persistence, knowledge, and circumstance.", "The distinction is kept, not dissolved.", 8, "know"),
       node("refuse-the-calculus", "Refuse the calculus", "Direction, not arithmetic", "Ghazali follows what is disclosed and marks the rest as supposition.", "Wanting a verdict is the thing to notice here.", 9, "guard"),
-      node("run-five-magnifiers", "Run the five magnifiers", "What enlarges a small sin", "Persistence, deeming it small, delight, open display, and being followed.", "Each removed is a real reduction.", 10, "diagnose"),
+      node("run-six-magnifiers", "Run the six magnifiers", "What enlarges a small sin", "Persistence, deeming it small, delight, taking God's covering lightly, open display, and being followed.", "Each removed is a real reduction.", 10, "diagnose"),
     ],
   },
   {
