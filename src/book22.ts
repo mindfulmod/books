@@ -7,49 +7,30 @@ const book22Base: Chapter[] = [
     id: 1,
     shortTitle: "Why character matters",
     formalTitle: "The excellence of good character and the blame of bad character",
-    overview:
-      "Ghazali begins by establishing the religious importance of character through Qur'anic passages, reports, and sayings. Character is not treated as decorative etiquette. It concerns the inward condition from which a person's conduct repeatedly emerges.",
-    reflection:
-      "A polished moment can be useful without yet proving a settled character. Notice what appears when patience, generosity, or restraint becomes costly.",
+    overview: "Ghazali opens with verses, sayings of the Prophet and sayings of early Muslims about good and bad character. The point is that character isn't just polite manners. It is the inner state that your actions keep coming from.",
+    reflection: "A single good moment is worth having, but it doesn't prove much yet. Notice what comes out of you when patience, generosity or self-control start to cost something.",
     relatedNodes: ["character", "health", "justice"],
     deep: {
-      thesis:
-        "Character matters because repeated conduct reveals an inward formation that can either assist or obstruct the person's religious journey.",
-      context:
-        "The book opens with testimony rather than technique. Ghazali first establishes why inward formation deserves sustained attention, then proceeds to explain what character is and how it may be changed.",
+      thesis: "Good character sits near the centre of religion, not at its edges — and bad character is a sickness of the heart that has to be treated.",
+      context: "Before explaining what character is or how to change it, Ghazali makes the case that it deserves serious work. He calls bad character a poison and a disease of the heart. That picture — sickness, diagnosis, medicine — runs through the whole book.",
       moves: [
-        {
-          title: "Establish its rank",
-          body:
-            "The section gathers religious testimony praising good character. Its cumulative purpose is to place character near the center of lived religion, rather than at the edge as optional refinement.",
-        },
-        {
-          title: "Connect the inward and outward",
-          body:
-            "Conduct is visible, but the book is interested in the settled source from which conduct becomes easy and recurrent. This prepares the definition developed in the next section.",
-        },
-        {
-          title: "Name the danger",
-          body:
-            "Bad character is presented as an illness of the heart. Once it is put that way, everything that follows — the symptoms, the causes, the dose, the treatment — belongs to one continuous argument.",
-        },
-      { title: "Set up what must follow", body: "Quoting sources can establish that character matters; it cannot tell you what character is. So he closes the case for its importance and turns straight to defining it, because everything that follows — whether it can change, how it is treated, how you read its signs — depends on knowing what is being changed." },
-      { title: "Note where character is being placed", body: "The point of gathering all this testimony is positional rather than decorative. Character usually sits at the edge of religion — the polish on somebody who has the important things right, admirable but not load-bearing. The reports place it near the middle: a man is asked what religion is and told it is good character; the heaviest thing on the scales is named as good character. Which means a person cannot be doing well at religion and badly at this." },
-      { title: "See what calling it an illness commits him to", body: "And the way bad character is described settles the shape of the next ten sections. It is called a disease of the heart, and once that word is used the rest follows without further argument: a disease has symptoms, so there will be signs to read; it has causes, so there will be a diagnosis; it has a remedy, so there will be a treatment, and the treatment will have a dose. Every section in the book is one of those, and the medical frame is what holds them together." },
+        { title: "Hear how the Prophet is described", body: "The Quran says to the Prophet, “You are of a great character.” When his wife Aisha was asked about his character, she said, “His character was the Quran.” The Prophet also said, “I was sent to perfect good character.” So good character isn't an extra on top of religion. It is part of what the Prophet came to do." },
+        { title: "See what good character actually means", body: "A man asked the Prophet what good character is. He recited a verse — “Take what is easily given, urge what is right, and turn away from the ignorant” — and then explained it: “Keep in touch with someone who cuts you off. Give to someone who refuses you. Forgive someone who wrongs you.” Notice that every part of it is about how you treat people who treat you badly." },
+        { title: "Ask “what is religion?” four times", body: "A man came to the Prophet from the front and asked, “What is religion?” He said, “Good character.” The man came from the right and asked again, and got the same answer. He came from the left, and got it again. Then he came from behind and asked a fourth time. The Prophet turned and said, “Don't you understand? It is that you don't get angry.”" },
+        { title: "Weigh it on the scales", body: "The Prophet said the heaviest thing placed on the scales on the Day of Judgement is fear of God and good character. Asked which believer has the best faith, he said, “The one with the best character.” And a saying Ghazali passes on warns that bad character spoils good deeds the way vinegar spoils honey." },
+        { title: "Notice even the Prophet's gentleness", body: "Once some women of Quraysh were talking loudly around the Prophet. When Umar asked to come in, they rushed to cover themselves. Umar said to them, “You are more in awe of me than of the Prophet?” They replied, “Yes — you are harsher and rougher than he is.” The Prophet, far above Umar, was the easier one to be around." },
+        { title: "Hear the early Muslims", body: "The early Muslims said the same in their own words. Anas said a person can reach the highest level of Paradise through good character without doing much extra worship — and fall to the lowest level of Hell through bad character while worshipping a great deal. Al-Fudayl said he would rather travel with a sinner who has good character than a worshipper who has bad character. Al-Hasan said, “Whoever has bad character punishes himself.”" },
+        { title: "Take the sickness seriously", body: "Ghazali calls bad character a sickness of the heart. A sickness of the body can only take away this life. A sickness of the heart can cost you the life that never ends. So if doctors study the body's diseases carefully, the heart's diseases deserve even more care. And since no heart is completely free of them, Ghazali says this kind of medicine is something every sensible person needs to learn." },
       ],
       distinction: {
-        title: "The opening claim is larger than good manners",
-        firstLabel: "A polished act",
-        first:
-          "One courteous or generous performance may be chosen with effort, for mixed motives, or only under favorable conditions.",
+        title: "The opening claim is bigger than good manners",
+        firstLabel: "A polite moment",
+        first: "One kind or generous act can be forced, done for mixed reasons, or only happen when things are easy.",
         secondLabel: "A formed character",
-        second:
-          "A stable inward quality makes a pattern of fitting actions arise with increasing ease across changing conditions.",
+        second: "A settled inner quality that keeps producing the right actions, more and more easily, even when things get hard.",
       },
-      misreading:
-        "Do not use the praise and blame here to grade other people's personalities. Ghazali is building urgency for working on yourself, and the diagnosis starts there.",
-      observation:
-        "Choose one quality you value. Compare how easily it appears when you are comfortable with how easily it appears when it costs time, status, or appetite.",
+      misreading: "Don't use this praise and blame to grade other people's personalities. Ghazali is building up the urgency to work on yourself, and the check-up starts with you.",
+      observation: "Pick one quality you care about. Compare how easily it shows up when you're comfortable with how easily it shows up when it costs you time, pride or something you want.",
       sourceAnchor: "Book 22, section 1, the excellence of good character and blame of bad character.",
     },
   },
@@ -57,66 +38,30 @@ const book22Base: Chapter[] = [
     id: 2,
     shortTitle: "What character is",
     formalTitle: "The true nature of good and bad character",
-    overview:
-      "Character is defined as a stable disposition of the soul from which actions proceed readily without needing fresh deliberation each time. Ghazali then relates sound character to the balanced operation of knowledge, anger, appetite, and justice.",
-    reflection:
-      "Ask not only what you did, but what kind of inward arrangement made that response feel natural, difficult, attractive, or repellent.",
+    overview: "Ghazali defines character as a settled inner state that actions come from easily, without having to think them through each time. Then he shows how good character depends on four inner powers being in balance.",
+    reflection: "Don't only ask what you did. Ask what kind of inner setup made that response feel natural, hard, attractive or off-putting.",
     relatedNodes: ["character", "knowledge", "anger", "appetite", "justice"],
     deep: {
-      thesis:
-        "Character is a durable inward form: the organized condition that makes certain actions flow easily and repeatedly.",
-      context:
-        "He separates the shape a person has on the outside from the shape they have on the inside. The visible one has parts; the inner one has powers, and whether it is sound depends on what those powers are like and how they stand to each other.",
+      thesis: "Character is the settled shape of the inner self: four powers — understanding, anger, desire and the justice that orders them — each in its right measure.",
+      context: "Ghazali says many people have described good character, but they described its fruits, not what it actually is. So he gives a definition. In Arabic, the word for your body's shape (khalq) and the word for character (khuluq) come from the same root. One is the shape people see with their eyes. The other is the shape of the soul.",
       moves: [
-        {
-          title: "Move beneath the isolated act",
-          body:
-            "An action performed once, especially under strain, does not by itself establish a character. The definition points to a settled disposition from which actions arise without renewed calculation at every occurrence.",
-        },
-        {
-          title: "Identify four capacities",
-          body:
-            "The power of knowledge discerns; anger repels and defends; appetite seeks; justice regulates these powers so that each operates in its fitting measure and place.",
-        },
-        {
-          title: "Read virtue as proportion",
-          body:
-            "Wisdom is the sound condition of knowing, courage the sound condition of anger, temperance the sound condition of appetite, and justice the ordering power that holds the whole together.",
-        },
-        {
-          title: "Locate vice on both sides",
-          body:
-            "A power can miss the fitting mean through excess or deficiency. Moral repair therefore cannot be reduced to simply having more force or less desire.",
-        },
-        {
-          title: "Note why a single act proves nothing",
-          body:
-            "The definition starts by refusing to read character off an action, and the reason is practical rather than technical. A man can do a generous thing once, under pressure, having thought hard about it — and nothing follows about what he is. What the word names is the settled place an act comes from, so that it arrives without the calculation being run again. Which is why the whole book is about changing a source rather than about changing behaviour.",
-        },
-        {
-          title: "Follow the four capacities",
-          body:
-            "Four powers, and the fourth is not like the other three. Knowledge discerns, anger repels, appetite seeks — three functions, each with a job. Justice does not have a job of its own; it is the ordering of the other three so that each works in the right measure and the right place. Which means it cannot be strengthened directly. It is a relation among the others, and it is what fails first when any of them grows out of proportion.",
-        },
-        {
-          title: "See why vice runs in both directions",
-          body:
-            "And placing vice on both sides of each power is what stops the book from becoming a manual for suppression. A power misses the mark by too much or by too little — so cowardice and recklessness are both failures of anger, and gluttony and a dead appetite are both failures of desire. A person who reads his own problem as having too much of something, and applies more force, may be moving away from the mean rather than toward it.",
-        },
+        { title: "Notice the fruits people named", body: "Early Muslims gave many descriptions. Al-Hasan said good character is a cheerful face, giving freely, and not hurting anyone. Ali said it is avoiding what is forbidden, seeking what is lawful, and being generous with your family. Others said it is having no concern except God. Ghazali says all of these are true — but each person named whatever fruit came to mind. None of them said what the tree is." },
+        { title: "Give the definition", body: "Character, Ghazali says, is a settled state of the soul that actions come from easily, without needing to stop and think. If the actions are good, it is good character. If they are bad, it is bad character. Someone who gives money once, for a special reason, doesn't have “generosity” as a character. And someone who forces themselves to give, or to stay calm, with a big effort, doesn't have it yet either." },
+        { title: "Separate four things", body: "There are four things here: the action, the ability to do it, knowing whether it is good or bad, and the inner state that tilts you one way. Character is only the fourth. A generous person may not give because they have no money. A stingy person may give to show off. Everyone has the ability to give or hold back. And knowing what is good doesn't make you do it." },
+        { title: "Meet the four powers", body: "A beautiful face needs good eyes, nose, mouth and cheeks — not just one of them. Good character also needs four parts to be right. Understanding tells true from false, right from wrong. Anger pushes away harm. Desire goes after what you want. And justice keeps anger and desire under the direction of understanding and God's law." },
+        { title: "Picture the hunt", body: "Ghazali gives a picture. Understanding is like a wise adviser. Justice is the power that carries out the adviser's orders. Anger is like a hunting dog: it has to be trained so it runs and stops when it is told to, not whenever it gets excited. Desire is like the horse you ride on the hunt: sometimes well trained, sometimes wild and bolting." },
+        { title: "Find the good middle", body: "When each power is balanced, it has a name. Balanced understanding is wisdom. Balanced anger is courage. Balanced desire is self-control. Too much or too little is a fault. Anger overdone is recklessness; too weak, it is cowardice. Desire overdone is greed; too weak, it is a dead lack of wanting. Understanding misused becomes cunning; too weak, it is foolishness. Only justice has one opposite instead of two: injustice." },
+        { title: "See the branches", body: "All the other good qualities grow from these four. From wisdom come good planning and sharp judgement. From courage come bravery, patience, steadiness, holding in your anger, and calm dignity. From self-control come generosity, modesty, patience, being satisfied with enough, and carefulness about what is doubtful. Ghazali adds that only the Prophet had all four in perfect balance. Everyone else is nearer to him or further away." },
       ],
       distinction: {
-        title: "Ease is part of the definition, but not a shortcut",
-        firstLabel: "Action under strain",
-        first:
-          "A person may force a generous or patient act while the contrary inclination remains dominant. The act can be valuable training without yet proving a stable disposition.",
-        secondLabel: "Settled disposition",
-        second:
-          "Through formation, the fitting action becomes increasingly ready and coherent. Character names this inward readiness, not a label attached after one event.",
+        title: "Doing something easily is part of the definition — but it isn't a shortcut",
+        firstLabel: "An act you force",
+        first: "You push yourself to be generous or patient while the opposite pull is still stronger. It is good training, but it isn't a settled character yet.",
+        secondLabel: "A settled character",
+        second: "With practice, the right action becomes ready and natural. Character is that readiness, not a label you earn after one good day.",
       },
-      misreading:
-        "The mean is not a bland average between every pair of impulses. It is the fitting measure determined by sound knowledge and right order in the concrete situation.",
-      observation:
-        "When the same choice returns, notice whether you must renegotiate it from the beginning or whether a trained readiness now helps carry it.",
+      misreading: "The “middle” isn't a boring average between every two feelings. It is the right amount, in the right place, decided by sound understanding in that actual situation.",
+      observation: "When the same choice comes up again, notice whether you have to argue with yourself from scratch, or whether practice is starting to carry you.",
       sourceAnchor: "Book 22, section 2, the true nature of character and its four foundations.",
     },
   },
@@ -124,117 +69,61 @@ const book22Base: Chapter[] = [
     id: 3,
     shortTitle: "Character can change",
     formalTitle: "The receptivity of character to change through discipline",
-    overview:
-      "Ghazali rejects the claim that character cannot change. Training does not erase the roots of anger and appetite; it brings them under sound measure. People differ in native disposition, accumulated habit, conviction, and therefore in how readily they change.",
-    reflection:
-      "Replace the question ‘Is this simply who I am?’ with the more exact question ‘What has this power been trained to do?’",
+    overview: "Some people claim character can't change. Ghazali answers them. Training doesn't pull out anger and desire by the roots. It brings them back into balance. People differ in how quickly they change, and he explains why.",
+    reflection: "Swap the question “Is this just who I am?” for a sharper one: “What has this part of me been trained to do?”",
     relatedNodes: ["character", "anger", "appetite", "habit", "justice"],
     deep: {
-      thesis:
-        "The drives stay where they are. What discipline changes is where they point, how strong they get, and whether they do as they are told.",
-      context:
-        "This section answers the objection that people simply are how they are. He points at what training visibly does, and at how differently people take to it, to argue that character really can be formed — without pretending it is easy.",
+      thesis: "Anger and desire can't be pulled out, but they can be trained — and how hard that is depends on how long a habit has run and whether you believe it is good.",
+      context: "Ghazali says the claim “people can't change” usually comes from someone who finds the work of changing too heavy. They argue their way out of it. He gives their two arguments, answers both, and then explains honestly why change is quick for some people and very slow for others.",
       moves: [
-        {
-          title: "Reject immutability",
-          body:
-            "If character admitted no change, counsel, education, and self-discipline would lose their purpose. The practical traditions of training already assume that repeated direction can reshape conduct.",
-        },
-        {
-          title: "Preserve the useful power",
-          body:
-            "Anger and appetite have necessary functions. Discipline aims to make them responsive to sound judgment, not to remove every capacity to defend, seek nourishment, or pursue a fitting good.",
-        },
-        {
-          title: "Account for unequal difficulty",
-          body:
-            "People begin from different temperaments and histories. A tendency strengthened by repeated action and defended by belief is harder to redirect than one that has not yet become entrenched.",
-        },
-      { title: "Keep the claim modest", body: "The argument establishes that character is receptive to discipline, not that any disposition can be remade at will or at speed. Ghazali's own conclusion is bounded: the roots remain, the measure changes, and the rate differs by temperament, habit, and conviction." },
-      { title: "Take the argument against fixity", body: "The argument that character can change is put practically rather than metaphysically. If it could not, then advice, teaching and self-discipline would all be pointless activities — and everybody, including the people who say character is fixed, behaves as though they were not. We train children, correct servants, and expect improvement. The practice is the evidence, and a theory that makes the practice absurd is the thing that has to give." },
-      { title: "Note what is not being claimed", body: "And the claim is fenced carefully at both ends, which is what keeps it honest. The roots stay — anger and appetite are not removed and are not meant to be, because a person who could not defend himself or want anything would be worse off, not better. What changes is the measure. And the rate differs by temperament, by how long the habit has run, and by whether the person has a belief propping it up — which is why the same treatment works quickly on one man and slowly on another." },
-      { title: "See why belief makes a habit harder", body: "The hardest case named is the tendency that has a conviction defending it, and that is worth pausing on. An appetite indulged out of weakness is only a habit. An appetite indulged by somebody who has worked out a reason why it is fine has recruited the discerning power to its own side — which is the satanic combination the book on the heart described, and it means the faculty that was supposed to do the correcting is now the thing arguing against it." },
+        { title: "Hear the two objections", body: "The first objection: your inner shape is like your outer shape. A short person can't make themselves tall, so a bad-tempered person can't make themselves calm. The second objection: “We've tried. We struggled for years, and desire and anger never went away. So it's a waste of time.”" },
+        { title: "Answer the first: look at animals", body: "If character couldn't change, all advice, teaching and training would be pointless, and the Prophet wouldn't have said, “Make your character good.” Besides, we change the character of animals all the time. A wild falcon is trained to be tame. A greedy dog is trained to hold back and bring the catch to its master. A wild horse is trained to be calm and obey. Why would a person be harder than a dog?" },
+        { title: "See the date stone", body: "Some things are finished and can't be changed by us, like the sky or the shape of your body. Other things are made unfinished, with the ability to become more. A date stone isn't an apple or a palm tree. But it is made so that, if you look after it, it becomes a palm. It will never become an apple. Anger and desire are like that. You can't remove them. You can train them." },
+        { title: "Answer the second: the aim was wrong", body: "The second objection comes from a mistake. Those people thought the goal was to wipe out desire and anger completely. That was never the goal. Without desire for food, you would die. Without desire for marriage, no children would be born. Without any anger, you couldn't defend yourself from harm. The goal is balance, not removal." },
+        { title: "Remember the Prophet got angry", body: "How could the goal be to remove anger, when the Prophet himself said, “I am only human. I get angry as people get angry”? When something displeased him, his face would redden — but he only ever said what was true. His anger never pushed him away from what was right. And he said, “The best of things is the middle.”" },
+        { title: "Know why some change slowly", body: "People change at different speeds for two reasons. First, how strong a drive is and how long it has been there. Desire is the hardest to change, because it came first: a baby has desire from birth, anger may come around seven, and good judgement later. Second, how much a habit has been strengthened — by doing it again and again, and by believing it is good." },
+        { title: "Find yourself in four levels", body: "So people are at four levels. First, someone who simply doesn't know yet, whose habits haven't set. They change fastest. Second, someone who knows a thing is wrong but has got used to doing it. Their job is double: pull out the old habit, then plant a new one. Third, someone who believes the bad habit is actually good. They are very hard to change. Fourth, someone who is proud of doing harm and thinks it makes them important. That is the hardest of all. As an old saying goes, “Training the old is exhausting; taming a wolf is torture.”" },
       ],
       distinction: {
-        title: "Training changes rule, not human nature into stone",
-        firstLabel: "Eradication",
-        first:
-          "Trying to destroy anger or appetite mistakes the presence of a power for its misuse and can create a different disorder.",
-        secondLabel: "Discipline",
-        second:
-          "Training preserves the power while changing what it follows, when it acts, and how strongly it responds.",
+        title: "Training changes how a power behaves, not what a human is",
+        firstLabel: "Trying to remove it",
+        first: "Trying to destroy anger or desire mistakes having a power for misusing it — and can create a new problem.",
+        secondLabel: "Training it",
+        second: "Keeping the power, but changing what it listens to, when it acts, and how strongly.",
       },
-      misreading:
-        "That it is possible does not mean it happens at the same rate for everyone. His argument leaves room for differences in temperament, in habit, in what you know, and in how deep a fault has its hooks in.",
-      observation:
-        "Find one reaction that now comes more easily than it did a year ago. Identify the repeated conditions that trained it, whether for better or worse.",
+      misreading: "“Possible” doesn't mean “equally fast for everyone.” Ghazali leaves room for differences in how strong a drive is, how long a habit has run, and whether you have convinced yourself it's fine.",
+      observation: "Find one reaction that comes more easily now than it did a year ago. What repeated situations trained it — for better or for worse?",
       sourceAnchor: "Book 22, section 3, character's receptivity to change through discipline.",
     },
   },
   {
     id: 4,
-    shortTitle: "How a quality is acquired",
+    shortTitle: "How a quality is gained",
     formalTitle: "The general means by which good character is acquired",
-    overview:
-      "Good character may be aided by natural disposition, but it is also acquired by repeatedly performing fitting actions and by keeping company with people of sound character. Outward action and inward disposition influence one another until effort can become stable ease.",
-    reflection:
-      "Look for the small act whose repetition would teach the inward quality you want, rather than waiting to feel fully formed before acting.",
+    overview: "Some people are born with good qualities. Everyone else gains them by doing the actions of that quality again and again, and by spending time with people who have it. Actions shape the heart, and the heart then makes the actions easier.",
+    reflection: "Look for the small act which, repeated, would teach you the quality you want. Don't wait until you feel ready.",
     relatedNodes: ["character", "habit", "company", "justice"],
     deep: {
-      thesis:
-        "Behaviour and character run in a loop: doing the right thing repeatedly trains the inner state, and once that state has formed it makes the right thing easier to do.",
-      context:
-        "After defending the possibility of change, Ghazali explains the general mechanism. Some people begin with a favorable disposition, while others acquire the same quality through practice and formative company.",
+      thesis: "You gain a good quality by doing its actions on purpose, again and again, until they become natural — and you know it has settled when doing it becomes a pleasure.",
+      context: "Having shown that character can change, Ghazali explains how. There are two routes: a gift from God at birth, or effort. Most of the section is about effort — and about a strange loop between the body and the heart.",
       moves: [
-        {
-          title: "Begin where action is possible",
-          body:
-            "You do the things a quality would produce before they come naturally. Repetition points the inner self in one direction over and over.",
-        },
-        {
-          title: "Let repetition travel inward",
-          body:
-            "Ghazali compares formation to learning a craft such as writing. Repeated performance slowly turns an awkward act into an established capacity that can operate with ease.",
-        },
-        {
-          title: "Use company as a teacher",
-          body:
-            "People acquire qualities by observing and accompanying others. Patterns of attention, response, and valuation can be learned through proximity before they are stated as rules.",
-        },
-        {
-          title: "Look for stable pleasure",
-          body:
-            "Completion is not mere outward compliance. A quality has become settled when its fitting acts are performed readily and are no longer experienced only as an alien burden.",
-        },
-        {
-          title: "Note the order the method reverses",
-          body:
-            "The method starts at the one end where a person actually has purchase, and it reverses the order everybody assumes. You do not wait until you are generous and then give; you give, repeatedly, before it comes naturally, and the giving is what turns the inside. Which sounds like play-acting until you notice that no other route is available — nobody can reach in and adjust a disposition directly, and the limbs are the only part of the system that takes instructions.",
-        },
-        {
-          title: "Take the comparison with a craft",
-          body:
-            "And the comparison to learning to write is exact rather than encouraging. Nobody writes well by understanding how; a person copies letters badly, many times, and the awkwardness gradually stops being awkward until the hand does it without being told. Character is claimed to work the same way — which also means the early stage is meant to feel forced, and feeling forced is not evidence the thing is not taking.",
-        },
-        {
-          title: "See what the test of completion is",
-          body:
-            "And completion is defined by something a person can actually notice in himself: the fitting act is done readily and has stopped feeling like something imposed from outside. That is a higher bar than doing the right thing reliably, and a lower one than never feeling the pull the other way. What has changed is not that the appetite is gone but that acting against it is no longer the hard part of the day.",
-        },
+        { title: "See the two routes", body: "Some people are born balanced, as a gift from God. They know without being taught and are well-mannered without being trained. Ghazali names Jesus and Yahya (John), and the prophets in general. A child can also simply be born truthful, generous or brave. Everyone else gets these qualities by effort." },
+        { title: "Do the act before you are the person", body: "Effort means making yourself do the actions of the quality you want. If you want to be generous, make yourself give money, and keep doing it, even when you have to push, until it becomes natural and easy. If pride has taken over and you want humility, keep doing what humble people do, for a long time, until humility becomes your nature." },
+        { title: "Learn it like handwriting", body: "Ghazali uses handwriting as the model. If you want beautiful writing, there is no shortcut. You copy good writing over and over with your hand, badly at first. Slowly it becomes a skill inside you, and one day your hand writes beautifully without effort. The action went up from the hand into the heart, then came back down from the heart into the hand. Character works the same way." },
+        { title: "Know when it has settled", body: "The goal is for the action to become a pleasure. A truly generous person enjoys giving; someone who gives while hating it isn't there yet. The Prophet said, “The coolness of my eyes is in prayer.” If you worship and avoid sins while finding it heavy and unpleasant, something is still missing. But Ghazali is clear: doing it with effort is still far better than not doing it at all." },
+        { title: "See how strange habits get", body: "Don't think it impossible that prayer could become a joy. Habit does even stranger things. A gambler can love gambling, even as it takes his money and wrecks his home. A pigeon-keeper can stand all day in the burning sun, not feeling his tired legs, delighted with his birds. If the soul can learn to love what harms it, why couldn't it learn to love what is true?" },
+        { title: "Remember the heart's real food", body: "In fact, loving harmful things goes against the heart's nature, like a sick person craving clay. The heart's natural food is wisdom, knowing God and loving Him, just as a healthy stomach wants bread and water. When a heart loves something more than God, it is sick. The only exception is loving something because it helps you love God and practise your religion." },
+        { title: "Don't skip one night — and don't expect one night to do it", body: "Someone who wants to master a subject doesn't give up hope because they skipped one night, and doesn't expect to master it after one night. Growth comes little by little, like a child growing taller. The same is true of the soul. One act of worship won't transform you, and one sin won't ruin you. But one lazy day invites another, until you have quit. Small sins pull in bigger ones in just the same way." },
       ],
       distinction: {
-        title: "Practice is formative, but performance can still be shallow",
-        firstLabel: "Repetition alone",
-        first:
-          "Going through the motions stays on the surface if it is cut off from a real purpose, from attention, and from the quality you are trying to build.",
-        secondLabel: "Formative repetition",
-        second:
-          "The act is repeated as training toward something you have actually named, backed by thinking about it and by the people around you, until the character starts to match.",
+        title: "Practice shapes you — but going through the motions can stay shallow",
+        firstLabel: "Just repeating",
+        first: "Doing the actions with no aim, no attention, and no idea of the quality you are building. It stays on the surface.",
+        secondLabel: "Repeating with a purpose",
+        second: "Doing the actions as training toward a quality you have named, with attention and good company, until your character starts to match.",
       },
-      misreading:
-        "Do not wait until it feels sincere or easy before you start. On this account, doing the right thing is one of the ways the inner quality gets built in the first place.",
-      observation:
-        "Pick one recurrent setting, such as disagreement or spending. Ask which response that setting is currently rehearsing in you each time it occurs.",
+      misreading: "Don't wait until something feels sincere or easy before you start doing it. On Ghazali's account, doing the right thing is one of the ways the inner quality gets built in the first place.",
+      observation: "Pick one situation that keeps coming back, like arguing or spending money. What response is that situation training into you each time it happens?",
       sourceAnchor: "Book 22, section 4, the general means of acquiring good character.",
     },
   },
@@ -242,133 +131,61 @@ const book22Base: Chapter[] = [
     id: 5,
     shortTitle: "Treatment must fit the person",
     formalTitle: "The detailed path to refining character",
-    overview:
-      "Ghazali compares the guide of souls to a physician. The fault must be diagnosed, its direction understood, and a contrary practice prescribed in a measure the person can bear. One identical regimen for everyone may fail or even harm.",
-    reflection:
-      "Before choosing a remedy, name whether the present fault is an excess, a deficiency, or the wrong power taking command.",
+    overview: "Ghazali compares a spiritual guide to a doctor. First find out what is wrong. Then treat it with its opposite, in a dose the person can take. One treatment for everyone would do more harm than good.",
+    reflection: "Before picking a remedy, name the problem exactly: is it too much of something, too little, or the wrong part of you in charge?",
     relatedNodes: ["diagnosis", "health", "justice", "habit"],
     deep: {
-      thesis:
-        "Moral treatment is precise and proportionate: diagnose the ruling disorder, apply its fitting contrary, and adjust the dose until balance becomes possible.",
-      context:
-        "The physician analogy organizes this section. Bodies differ, illnesses differ, and medicines differ; the same is true of inward conditions. Treatment therefore requires knowledge of both the quality and the person.",
+      thesis: "The heart is treated like the body: diagnose the sickness, treat it with its opposite, measure the dose to the person, and move in steps when the full cure is too much at once.",
+      context: "Balance is health and imbalance is sickness — for the body and for the soul. So Ghazali takes the body's medicine as his model, point by point. Then he shows what a wise guide actually does with a real student.",
       moves: [
-        {
-          title: "Diagnose before prescribing",
-          body:
-            "The guide first studies the person's present character, circumstances, age, habits, and dominant tendencies. A generic exercise chosen without diagnosis can miss the actual disorder.",
-        },
-        {
-          title: "Treat by the fitting contrary",
-          body:
-            "A tendency hardened in one direction is corrected by repeated action in the other direction. Miserliness, for example, is not cured by further withholding, but the correction still seeks a just measure rather than reckless excess.",
-        },
-        {
-          title: "Match the dose",
-          body:
-            "The intensity and duration of an exercise must suit the condition. What is medicinal for one person may be needless, unbearable, or destabilizing for another.",
-        },
-        {
-          title: "Move by stages",
-          body:
-            "When the full contrary cannot yet be sustained, Ghazali allows gradual transition. A nearer, less harmful state can become a bridge toward the final balanced condition.",
-        },
-        {
-          title: "Note that diagnosis comes first",
-          body:
-            "The chapter's whole method turns on one instruction: find out what is actually wrong before prescribing anything. The guide is told to look at this person's character, his circumstances, his age, his habits and what dominates him — and the reason is that a generic exercise chosen without that will treat a disorder the man does not have. Which makes most general spiritual advice useless in exactly the way a general prescription is useless.",
-        },
-        {
-          title: "Follow the rule of the contrary, and its limit",
-          body:
-            "And the rule is to treat by the opposite: a tendency hardened one way is corrected by repeated action the other way. A miser is not cured by withholding more. But the limit is stated in the same breath — the correction is still aiming at a just measure, not at the far extreme. A miser driven into reckless spending has changed which side of the mean he is failing on, and the book's own definition of vice makes that a failure too.",
-        },
-        {
-          title: "Take the two concessions seriously",
-          body:
-            "And the two adjustments are what make the treatment usable on real people. The dose has to fit the case: what is medicine for one man is unnecessary for another and destabilising for a third. And where the full opposite cannot be sustained yet, a nearer and less damaging state is allowed as a bridge. Neither concession lowers the target. Both concede that a remedy nobody can take is not a remedy.",
-        },
+        { title: "Born healthy", body: "Most bodies are born healthy, and get sick from bad food, bad air and hard conditions. In the same way, Ghazali says, every child is born balanced and sound. The Prophet said every child is born on the natural way, and it is the parents who turn it. Bad qualities are picked up by habit and teaching. So treatment is a return to health, not building something new." },
+        { title: "Keep health, or restore it", body: "A body isn't born complete; it grows strong through food and care. The soul is born incomplete too, able to grow, and it grows through upbringing, good character and the food of knowledge. A doctor does two jobs: keeping a healthy body healthy, and bringing a sick body back to health. So if your soul is in good shape, work to protect it and strengthen it. If it isn't, work to bring it back." },
+        { title: "Treat with the opposite", body: "An illness caused by heat is treated with something cooling. One caused by cold is treated with warmth. A sickness of the heart is treated with its opposite too. Ignorance is treated by learning. Stinginess is treated by giving. Pride is treated by humility. Greed for food is treated by holding back, even when it takes effort." },
+        { title: "Measure the dose", body: "A cooling medicine only helps in the right amount. Too little does nothing; too much causes a new illness. A doctor first finds out whether the illness is weak or strong, then looks at the patient's body, age, work and the season. The opposite habits used to treat character need a measure too. And just as the bitterness of medicine has to be put up with, so does the bitterness of the effort." },
+        { title: "Don't give everyone the same medicine", body: "A doctor who treated every patient with the same medicine would kill most of them. A guide who gave every student the same training would ruin them too. So a guide looks at the student's sickness, situation, age, temperament, and how much they can bear. If the student is a beginner who doesn't know the basics of religion, the guide first teaches them how to purify themselves and pray. If they are living on money gained unlawfully, or doing a clear sin, they must stop that first." },
+        { title: "Then look deeper", body: "Only when the outer life is in order does the guide look at the heart. If the student has much more money than they need, the guide has them give it away to good causes, so their heart stops clinging to it. If pride rules them, the guide gives them humbling work. If they are vain about how clean and fine their clothes are, the guide may put them to work cleaning washrooms and helping in the smoky kitchen, until the vanity loosens. Ghazali says caring about clothes beyond being lawful and clean is just being busy with yourself." },
+        { title: "Step down gently", body: "Sometimes a student can't drop a bad habit all at once. Then the guide moves them to a lighter fault first — like washing blood off with urine when water alone won't shift it, and then washing the urine off with clean water. A boy is got to school by the fun of games. Later he is drawn on by fine clothes, then by wanting to be respected, and finally by the next life. Someone who can't give up status at once can be moved to a smaller kind of status first." },
       ],
       distinction: {
-        title: "A contrary practice is medicine, not a new permanent extreme",
-        firstLabel: "Corrective pressure",
-        first:
-          "A temporary exercise leans against an entrenched vice so that the person can move away from it.",
-        secondLabel: "The intended health",
-        second:
-          "The destination is the fitting mean under wise judgment, not permanent occupation of the opposite excess.",
+        title: "A treatment is medicine, not a new extreme to live in",
+        firstLabel: "Pushing against a fault",
+        first: "A temporary exercise leans hard the other way, so a stuck habit can start to move.",
+        secondLabel: "The health you are aiming for",
+        second: "The balanced middle, guided by good judgement — not living forever at the opposite extreme.",
       },
-      misreading:
-        "The section includes hard exercises from the ascetic world Ghazali was writing in. They describe a programme people followed under supervision — not instructions to copy regardless of your judgement, your capacity, or your circumstances.",
-      observation:
-        "When a correction fails, ask whether the diagnosis was wrong, the dose was too large, or the exercise trained a new excess instead of restoring balance.",
+      misreading: "The section describes hard exercises from the world Ghazali lived in. They were done under a guide who knew the student well. They aren't instructions to copy on your own, regardless of your age, strength or situation.",
+      observation: "When a fix doesn't work, ask whether the problem was named wrongly, the dose was too big, or the exercise created a new extreme instead of bringing balance.",
       sourceAnchor: "Book 22, section 5, the detailed path for refining character.",
     },
   },
   {
     id: 6,
-    shortTitle: "Signs of illness and health",
+    shortTitle: "Signs of sickness and health",
     formalTitle: "The signs of diseases of the heart and its return to health",
-    overview:
-      "An organ is sick when it cannot perform its proper function. Ghazali applies this pattern to the heart and asks what its love, knowledge, choices, and pleasures reveal. Recovery appears when fitting action becomes ordered and increasingly welcome.",
-    reflection:
-      "Do not ask only whether an action feels easy now. Ask what that ease has been trained to love and what function it helps the heart fulfill.",
+    overview: "A part of the body is sick when it can't do its job. Ghazali applies this to the heart and asks what its job is. Then he gives a simple test for spotting whether a bad quality still rules you — and for knowing when the treatment has gone far enough.",
+    reflection: "Don't just ask whether something feels easy now. Ask what that ease has been trained to love.",
     relatedNodes: ["health", "diagnosis", "habit", "justice"],
     deep: {
-      thesis:
-        "Health is measured by restored function and ordered desire, not by comfort alone.",
-      context:
-        "Ghazali extends the medical model from treatment to verification. The reader needs signs that distinguish the pain of medicine, the pleasure of illness, and the more stable ease that comes with health.",
+      thesis: "The heart is sick when it can't do what it was made for — knowing and loving God above everything — and it is healing when it stops leaning to either extreme.",
+      context: "Having described treatment, Ghazali needs a way to check it. How do you know you are sick, when this sickness doesn't hurt? And how do you know you are getting better, when too much medicine is a sickness too?",
       moves: [
-        {
-          title: "Begin from proper function",
-          body:
-            "The sickness of an eye, hand, or stomach is known through disruption of what that organ is for. The heart is likewise assessed by whether it fulfills its proper work of knowing, loving, choosing, and worshipping well.",
-        },
-        {
-          title: "Question immediate pleasure",
-          body:
-            "An unhealthy condition can make its own fuel attractive, while medicine can initially feel unpleasant. Present ease therefore cannot serve as the only test of moral health.",
-        },
-        {
-          title: "Watch what becomes welcome",
-          body:
-            "As formation deepens, fitting actions become less foreign and burdensome. Their growing ease is evidence when it accompanies sound function and balance.",
-        },
-        {
-          title: "Stop at restoration",
-          body:
-            "Corrective effort must be monitored. Once the balanced condition is reached, continuing the same pressure may drive the person into the opposite disorder.",
-        },
-        {
-          title: "Note how the heart is assessed",
-          body:
-            "The test is borrowed from the body and it is the same test throughout: an organ is judged sick when it stops doing what it is for. An eye that does not see, a stomach that does not digest. So the heart is assessed by whether it is doing its own work — knowing, loving, choosing and worshipping well — rather than by how it feels. Which is what allows a person to be diagnosed while feeling perfectly comfortable.",
-        },
-        {
-          title: "Follow why pleasure is not the test",
-          body:
-            "And the warning about pleasure is the sharpest thing in the section, because it removes the instrument everybody actually uses. A sick condition makes the thing that feeds it attractive, and the medicine unpleasant — so ease is evidence of nothing on its own. A man who finds his habits congenial and finds correction burdensome has described a symptom, not a diagnosis, and he will read it the wrong way round every time unless he is told.",
-        },
-        {
-          title: "Take the instruction to stop",
-          body:
-            "And the last instruction is the one that is almost always missed: once the balance is reached, the same pressure applied further pushes the person into the opposite disorder. Treatment has an endpoint. Which follows directly from vice being possible on both sides — a remedy is a corrective force, and a corrective force that keeps running after the correction is made becomes the cause of the next thing needing correcting.",
-        },
+        { title: "Judge each part by its job", body: "Every part of the body was made for a job. A hand is sick when it can't grip. An eye is sick when it can't see. The heart is sick when it can't do its own job: knowing, wisdom, loving God, worshipping Him, enjoying remembering Him, and preferring that to every other desire. The Quran says, “I did not create jinn and humans except to worship Me.”" },
+        { title: "See what makes humans different", body: "People aren't different from animals because they eat, have children or see. Animals do all that. Humans are different because they can know things as they really are. And behind everything is God, who made it all. So if someone knew everything except God, it would be as if they knew nothing." },
+        { title: "Use love as the test", body: "The sign that you know God is that you love Him. The sign that you love Him is that you don't prefer anything over Him. The Quran warns people whose parents, children, spouses, wealth, trade or homes are dearer to them than God and His Messenger. So a heart that holds anything dearer than God is sick — just as a stomach is sick when it wants clay more than bread, or has lost its appetite for bread and water altogether." },
+        { title: "Understand why the sickness spreads", body: "By this measure, Ghazali says, nearly all hearts are sick. Three things keep them that way. Most people don't know they are sick. If they do know, the medicine is bitter, because it means going against their desires. And if they can bear that, they can't find a skilled doctor — because the doctors are the scholars, and the scholars have caught the sickness too. A sick doctor rarely treats anyone." },
+        { title: "Use the easy-or-hard test", body: "How do you find out which quality rules you? Look at which action is easier and more pleasant for you. If keeping and saving money is easier and more pleasant than giving it to someone who deserves it, stinginess rules you. So give more. But if giving to people who don't deserve it becomes more pleasant than holding on for good reasons, now wastefulness rules you. So go back to holding on." },
+        { title: "Know when to stop", body: "Treatment has an end. Someone cured of stinginess can give so much that they become wasteful, which is a sickness too — like curing a chill with so much heat that you get a fever. Keep watching yourself this way until money means nothing special to you. Then it is like water: you hold on to it when someone needs it held, and you give it when someone needs it given. A heart like that is healthy, at least in this one area." },
+        { title: "Walk the thin line", body: "The true middle is very hard to find. Ghazali says it is finer than a hair and sharper than a sword. That is why it is linked to the Bridge over Hell on the Day of Judgement: whoever stays on the straight path in this life will cross that straight path in the next. It is also why every Muslim asks God seventeen times a day, in the obligatory prayers, “Guide us to the straight path.”" },
       ],
       distinction: {
-        title: "Feeling good and being well are not identical",
-        firstLabel: "Immediate preference",
-        first:
-          "A trained appetite may prefer the very pattern that keeps it disordered, while a new discipline may initially feel difficult.",
-        secondLabel: "Recovered function",
-        second:
-          "Health shows itself in the heart's ability to know and choose fittingly, with desire gradually coming into agreement.",
+        title: "Feeling fine and being healthy aren't the same",
+        firstLabel: "What you prefer right now",
+        first: "A trained habit can make you like the very thing that keeps you sick, while the cure feels hard at first.",
+        secondLabel: "Getting your function back",
+        second: "Health shows in the heart doing its job — knowing and choosing well — with your wants slowly coming into line.",
       },
-      misreading:
-        "Difficulty does not automatically prove virtue, and ease does not automatically prove vice. Both must be interpreted in relation to sound function, right measure, and the direction being formed.",
-      observation:
-        "For one habit, separate three questions: What feels pleasant now? What function does it serve? What has become easier through repeated practice?",
+      misreading: "Finding something hard doesn't prove it is good, and finding something easy doesn't prove it is bad. Both have to be read against what the heart is for, the right amount, and the direction you are heading.",
+      observation: "For one habit, ask three questions: What feels good about it now? What job does it do for me? What has it made easier through repetition?",
       sourceAnchor: "Book 22, section 6, signs of the heart's diseases and return to health.",
     },
   },
@@ -376,117 +193,61 @@ const book22Base: Chapter[] = [
     id: 7,
     shortTitle: "Four mirrors for hidden faults",
     formalTitle: "The ways a person comes to know the faults of the self",
-    overview:
-      "Because self-love can hide defects, Ghazali gives four routes to self-knowledge: a discerning guide, a truthful and perceptive friend, criticism from an enemy, and observing in oneself what one dislikes in other people.",
-    reflection:
-      "Treat feedback as evidence to investigate, not as a verdict to obey or a discomfort to dismiss.",
+    overview: "We are good at hiding our own faults from ourselves. So Ghazali gives four ways to see them: a wise guide, an honest friend, the words of people who dislike you, and noticing in yourself what you dislike in others.",
+    reflection: "Treat criticism as evidence to check, not as a verdict to obey or a sting to brush off.",
     relatedNodes: ["diagnosis", "company", "character", "health"],
     deep: {
-      thesis:
-        "Self-knowledge needs external mirrors because the same inward bias that requires treatment can also conceal the need for treatment.",
-      context:
-        "The physician model creates a practical problem: the patient may not see the illness. Ghazali answers with four channels of disclosure, each of which interrupts the closed loop of self-assessment.",
+      thesis: "You need mirrors outside yourself, because the same faults that need fixing also stop you seeing them.",
+      context: "The doctor model has a problem: the patient often can't see the illness. Ghazali says that when God wants good for someone, He shows them their own faults. Most people don't see theirs. As the saying goes, a person sees the speck in their brother's eye and not the log in their own. So he offers four routes around that blindness.",
       moves: [
-        {
-          title: "Seek discerning guidance",
-          body:
-            "The strongest route is a perceptive guide who understands diseases of character and can direct treatment. The learner's task is to receive diagnosis without evasion.",
-        },
-        {
-          title: "Commission truthful friendship",
-          body:
-            "A trusted, intelligent, religious friend is asked to watch conduct and report faults. This turns friendship from mutual reassurance into a disciplined source of sight.",
-        },
-        {
-          title: "Extract evidence from hostility",
-          body:
-            "An enemy may exaggerate or intend harm, yet resentment can expose what flattering companions omit. The useful response is examination, not automatic belief or automatic dismissal.",
-        },
-        {
-          title: "Use other people as mirrors",
-          body:
-            "What appears ugly in another person can prompt a search for the same seed in oneself. The method redirects moral scrutiny inward instead of ending in blame.",
-        },
-        {
-          title: "Note the problem the four routes address",
-          body:
-            "All four routes exist because of one difficulty: the faculty a person would use to inspect himself is the faculty that has been compromised. He cannot see his own character straight, and the harder the fault the better it is hidden. So every method here works by getting the information from somewhere outside — a guide, a friend, an enemy, or other people generally — and none of them relies on introspection.",
-        },
-        {
-          title: "Take the commissioned friend seriously",
-          body:
-            "And the second route is more demanding than it sounds. It is not having honest friends; it is asking a trusted, intelligent, religious friend to watch you and report what he finds. That is a request most friendships cannot survive, and it converts the relationship from mutual reassurance into something with a job. Which is why the qualifications are stated — the wrong person given that commission does damage rather than good.",
-        },
-        {
-          title: "Follow the use made of an enemy",
-          body:
-            "And the third is the cleverest. An enemy exaggerates and means harm, so nothing he says can be taken at face value. But resentment says the things flattery leaves out, and the useful response is neither belief nor dismissal but examination — go and look, and see whether there is anything there. It is a way of extracting information from a source with every reason to distort it, and it costs nothing but the willingness to check.",
-        },
+        { title: "Mirror one: a wise guide", body: "The best route is to sit with a guide who can see the faults of the soul and knows its hidden dangers. You let them judge you and follow their advice, like a student with a teacher. They show you both the fault and the way to treat it. But Ghazali admits such people are rare in his time." },
+        { title: "Mirror two: an honest friend", body: "The second route is to find a friend who is truthful, wise and religious, and ask them to watch you and tell you whatever they don't like in your behaviour or character. This is what the wisest leaders of the religion used to do. It is more than having honest friends. It is giving a friend a job." },
+        { title: "See how Umar did it", body: "Umar used to say, “May God have mercy on someone who gives me my faults as a gift.” He kept asking Salman what faults he had heard about. Salman tried to avoid answering, but Umar insisted. Salman said, “I heard you have two kinds of food at one meal, and two sets of clothes, one for the day and one for the night.” Umar asked if there was anything else. Salman said no. Umar said, “Those two, I've dealt with.”" },
+        { title: "Know why friends often fail", body: "Umar also asked Hudhayfa — who knew who the hypocrites were — whether he saw any sign of hypocrisy in him. Ghazali notes that the wiser and more important a person is, the less they admire themselves and the more they suspect themselves. But honest friends are rare too. Some are jealous and exaggerate. Some have their own agenda and see faults that aren't there. And some flatter you and hide your faults." },
+        { title: "Mirror three: people who dislike you", body: "The third route is to learn your faults from your enemies. As an Arabic line of poetry says, the eye of dislike shows up the flaws. You may get more from an enemy who names your faults than from a flattering friend who hides them. Of course, we naturally assume an enemy is lying out of envy. But a wise person still checks, because real faults do tend to spread on enemies' tongues." },
+        { title: "Mirror four: other people", body: "The fourth route is to mix with people, and whenever you see something bad in someone, ask whether it is in you too. The Prophet said a believer is a mirror to a believer. People's natures are similar in following their desires. So if one person has a fault, you probably have it too — or its root, or something worse. If everyone simply dropped what they dislike in others, Ghazali says, nobody would need a teacher." },
+        { title: "Learn like Jesus", body: "Someone asked Jesus who had taught him good manners. He said, “No one taught me. I saw that the ignorance of the ignorant was ugly, and I stayed away from it.” That is the fourth mirror used perfectly: noticing a fault in someone else and turning the lesson on yourself, not on them." },
       ],
       distinction: {
-        title: "Feedback is a mirror, not a sovereign judge",
-        firstLabel: "Receiving evidence",
-        first:
-          "A report points attention toward a possible pattern and invites comparison with repeated conduct across situations.",
-        secondLabel: "Surrendering judgment",
-        second:
-          "Treating every accusation as fact ignores motive, exaggeration, context, and the need for sound discernment.",
+        title: "Feedback is a mirror, not a judge",
+        firstLabel: "Taking it as evidence",
+        first: "A comment points you to a possible pattern, which you then check against how you actually behave in different situations.",
+        secondLabel: "Handing over your judgement",
+        second: "Treating every accusation as true, ignoring motive, exaggeration and context.",
       },
-      misreading:
-        "This is not permission to monitor everyone else's faults. The fourth route works only when the disliked quality becomes a prompt for self-examination.",
-      observation:
-        "Recall feedback that produced immediate defensiveness. Before accepting or rejecting it, name one repeated event that would count as evidence for or against it.",
+      misreading: "This isn't permission to keep a list of everyone else's faults. The fourth mirror only works when what you dislike in someone else sends you to look at yourself.",
+      observation: "Remember a piece of criticism that made you defensive straight away. Before deciding if it was right, name one thing that has happened more than once that would count for it or against it.",
       sourceAnchor: "Book 22, section 7, four routes by which a person knows the faults of the self.",
     },
   },
   {
     id: 8,
-    shortTitle: "Opposing ruling desire",
+    shortTitle: "Saying no to desire",
     formalTitle: "Religious testimony that treatment involves opposing desire",
-    overview:
-      "Ghazali gathers Qur'anic passages, reports, and sayings to place resistance to ruling desire inside his religious account of discipline. Read beside the earlier sections, opposition means refusing desire's command so that it can return to fitting service.",
-    reflection:
-      "When desire speaks strongly, separate the existence of the desire from the claim that it deserves command.",
+    overview: "Ghazali gathers verses, sayings and stories showing that the cure for the heart is going against desire. Read with the earlier sections, this doesn't mean destroying desire. It means refusing to let desire be in charge.",
+    reflection: "When a desire speaks loudly, separate two things: the fact that you want it, and the claim that it should get to decide.",
     relatedNodes: ["appetite", "justice", "knowledge", "habit"],
     deep: {
-      thesis:
-        "The decisive struggle is not against having desire, but against allowing desire to become the unquestioned ruler of judgment and action.",
-      context:
-        "This section supplies religious witness for the therapeutic method described earlier. Its meaning is controlled by the book's prior insistence that appetite and anger have functions and require balance rather than annihilation.",
+      thesis: "The heart's sicknesses are fed by following desires, so the cure is going against them — and the secret of the training is not getting attached to anything you can't take into the grave.",
+      context: "Ghazali says if you have followed his reasoning, you can see for yourself why going against desire heals the heart. But if you can't, you can still accept it on trust, from those who have walked the road. Faith comes first, and understanding grows after it. Both are good.",
       moves: [
-        {
-          title: "Place discipline in a religious frame",
-          body:
-            "Ghazali assembles scripture, reports, and sayings that commend striving against caprice. The section is theological and ascetic testimony within his own program, not a detached modern psychology chapter.",
-        },
-        {
-          title: "Identify the issue of rule",
-          body:
-            "A desire can be present without being obeyed. Treatment becomes necessary when appetite recruits judgment, supplies excuses, and repeatedly determines the person's direction.",
-        },
-        {
-          title: "Connect resistance to reordering",
-          body:
-            "Opposition creates room for knowledge and justice to resume their roles. The aim is an appetite that serves fitting ends in fitting measure.",
-        },
-      { title: "Note what opposition is not", body: "Refusing desire's command is not the destruction of desire, which the third section already ruled out. The testimony is gathered to support a change of rule rather than a change of nature — the appetite that returns to fitting service is the same appetite." },
-      { title: "Note where the real problem is located", body: "The section makes a distinction that changes what is being treated. A desire can be present and not obeyed — that is the ordinary condition and it is not a disease. The problem arises when appetite starts recruiting the judgement: supplying reasons, producing excuses, and settling which way the person goes while looking like his own considered view. What is wrong is not the strength of the wanting but who is in charge." },
-      { title: "See why resistance is prescribed", body: "And that explains why opposing desire is the treatment rather than merely a discipline. Refusing a desire's command does not weaken the desire much and is not meant to. It makes room for knowledge and justice to resume their functions — it breaks the chain by which appetite reaches the limbs, so the other faculties get a turn. The aim is an appetite that serves fitting ends in fitting measure, which is what it was created for." },
-      { title: "Note what the testimony is not saying", body: "And the testimony gathered here is easy to misread as calling for the destruction of desire, which the third section already ruled out. The appetite that comes back into fitting service is the same appetite that was giving the orders. Nothing has been removed. What has changed is the order of authority, and that is what the whole body of religious testimony on striving against caprice is being brought to support." },
+        { title: "Hear the Quran and the Prophet", body: "The Quran promises Paradise to whoever “held the soul back from its desires.” The Prophet said the believer is between five hardships, and one of them is “a self that fights him.” When his Companions came back from battle, a saying reports him calling it the lesser struggle, and saying the greater struggle is struggling against yourself." },
+        { title: "Hear the early Muslims", body: "Sufyan al-Thawri said, “Nothing I have dealt with was harder than my own self: sometimes it was on my side, sometimes against me.” Al-Hasan said a wild horse doesn't need a strong bridle more than your self does. Yahya ibn Mu'adh said a person has three enemies: the world, the devil and the self. Guard against the world by not wanting too much of it, against the devil by disobeying him, and against the self by giving up desires." },
+        { title: "Train with four tools", body: "Yahya ibn Mu'adh named four ways to train yourself: eat only what you need, sleep only what you need, speak only when needed, and put up with harm from people. From less food, cravings die down. From less sleep, your intentions become clearer. From less talk, you stay safe from trouble. And from bearing harm, you reach your goals. Nothing is harder, he said, than staying calm when someone is rude to you." },
+        { title: "Kings and slaves", body: "Ghazali passes on a story. Years after Yusuf became a powerful minister in Egypt, the wife of his old master waited by the road to see his procession. She said, “Glory be to God, who makes kings into slaves when they disobey Him, and slaves into kings when they obey Him.” Greed and desire had brought her low. Patience and fear of God had raised him." },
+        { title: "Answer the obvious question", body: "Someone might say: “Enjoying lawful things is lawful. How can it keep me away from God?” Ghazali says that is a weak thought. Enjoying lawful things beyond what you need still ties your heart to this world. And the desire that wants the lawful thing is the very same desire that wants the forbidden thing. If you never train it to stop at enough, it will not stop at the line either." },
+        { title: "Find the secret of the training", body: "The secret, Ghazali says, is this: don't let yourself enjoy anything that won't be with you in the grave, beyond what you actually need. Food, clothes, home, marriage — take what you need. If you get deeply attached to something, you will want to come back for it after you die. The one thing that does come with you into the grave is remembering God, so let your heart get attached to that." },
+        { title: "See four kinds of people", body: "Ghazali describes four kinds of people. One whose heart is filled with remembering God, and who turns to the world only for what they need — reached only after long training. One whose heart is filled with the world, and who mentions God only with the tongue — lost. One busy with both, but religion wins in their heart. And one busy with both, but the world wins. Ghazali says those last two will pass through the Fire but come out of it — the third kind quickly, the fourth only after a long time." },
       ],
       distinction: {
-        title: "Desire may be resisted without being declared evil in itself",
-        firstLabel: "Presence of desire",
-        first:
-          "Human appetite seeks food, rest, intimacy, possession, and other objects. Its existence is part of the created human constitution described in the book.",
-        secondLabel: "Rule of desire",
-        second:
-          "Disorder occurs when appetite determines the good for itself and sound judgment becomes its servant.",
+        title: "Desire can be resisted without being called evil in itself",
+        firstLabel: "Having a desire",
+        first: "People want food, rest, closeness and belongings. That wanting is part of how God made us, as the book has already said.",
+        secondLabel: "Desire being in charge",
+        second: "The problem starts when desire decides what is good, and your judgement becomes its servant.",
       },
-      misreading:
-        "Do not detach this section from Ghazali's doctrine of balance. The language of opposition targets domination and excess, not the destruction of every bodily need or lawful pleasure.",
-      observation:
-        "Notice one moment when a desire becomes an argument. Write the reason it offers, then ask whether judgment is examining the desire or merely defending it.",
+      misreading: "Don't cut this section off from Ghazali's teaching on balance. Going against desire targets desire taking over and going too far — not every need of the body, and not every lawful pleasure.",
+      observation: "Catch one moment when a desire turns into an argument. Write down the reason it gives you. Then ask: is my judgement checking this desire, or just defending it?",
       sourceAnchor: "Book 22, section 8, religious witness for treating character by opposing desire.",
     },
   },
@@ -494,117 +255,61 @@ const book22Base: Chapter[] = [
     id: 9,
     shortTitle: "How good character is tested",
     formalTitle: "The signs of good character",
-    overview:
-      "Good character is known through a constellation of qualities described in scripture and through conduct under pressure. A few easy improvements do not settle the matter; patience, truthfulness, humility, and restraint must be tested when the self is crossed.",
-    reflection:
-      "Judge a quality across conditions. The revealing moment is often not the calm intention but the response when another person obstructs it.",
+    overview: "Someone who has given up the obvious sins may think their character is now fine. Ghazali gives a checklist from the Quran and the Prophet's sayings — and says the real test is how you handle being hurt.",
+    reflection: "Judge a quality across different situations. The telling moment is often not your good intention, but how you respond when someone gets in your way.",
     relatedNodes: ["character", "health", "anger", "justice"],
     deep: {
-      thesis:
-        "Good character is recognized by a coherent pattern of qualities that remains visible when comfort, praise, and agreement disappear.",
-      context:
-        "After explaining diagnosis and treatment, Ghazali asks how health can be recognized in lived conduct. He draws signs from scriptural portraits and from the tests created by ordinary human friction.",
+      thesis: "Good character is measured against the descriptions of believers in the Quran and the Prophet's sayings, not against your own impression — and its clearest test is patience when people hurt you.",
+      context: "Every person is blind to their own faults, Ghazali says. After a little effort, someone may drop the worst sins and decide they are done. So he needs a measure that doesn't depend on how you feel about yourself. He says good character is faith, and bad character is hypocrisy — and God has described both.",
       moves: [
-        {
-          title: "Look for a constellation",
-          body:
-            "Good character is not just being cheerful, or being soft, or having one habit people admire. The section gathers humility, truthfulness, patience, restraint and generosity together, because they hold each other up.",
-        },
-        {
-          title: "Test beyond favorable conditions",
-          body:
-            "A person may appear patient when nothing opposes the will. Injury, provocation, disagreement, and loss reveal whether anger and appetite remain under sound rule.",
-        },
-        {
-          title: "Avoid premature certification",
-          body:
-            "One or two changes can be real without completing the work. Character is a stable inward form, so its signs must be read across time and situations.",
-        },
-      { title: "Say what the signs are for", body: "The signs are diagnostic rather than certifying. They tell a person where the work still is, which is why the section is placed among the treatments and not at the end of the book as a conclusion." },
-      { title: "Note why the signs come as a set", body: "Good character is not one quality and the section refuses to let it be. Humility, truthfulness, patience, restraint, generosity — listed together because each of them props up the others and any one of them alone is unreliable. A man can be gentle and dishonest, or generous and vain. What is being described is a whole condition, and a single admirable trait is as likely to be a temperament as an achievement." },
-      { title: "Take the test seriously", body: "And the test is what separates this from a description of a pleasant person. Anybody looks patient when nothing is crossing him; the reading has to be taken under injury, provocation, contradiction and loss, because those are the conditions under which anger and appetite make their bid. Which means the signs cannot be checked at will — a person has to wait for the occasions, and the occasions are unwelcome." },
-      { title: "See why the signs are placed here", body: "And they are diagnostic rather than certifying, which is why the section sits among the treatments rather than at the end of the book. Their function is to tell a person where the work still is. A reader looking for confirmation that he has arrived is using them for the one purpose they were not built for, and the warning against premature certification is aimed exactly at him." },
+        { title: "Hold up the Quran's descriptions", body: "The Quran describes believers in several places. They are humble in their prayer and turn away from idle talk. They repent, worship and praise. Their hearts tremble when God is mentioned. And they are “the servants of the Most Merciful, who walk gently on the earth, and when the ignorant speak to them, they say, ‘Peace.’” Ghazali says anyone unsure about their state should compare themselves to these verses." },
+        { title: "Read the result honestly", body: "Having all of these qualities is the sign of good character. Having none is the sign of bad character. Having some means you have some. So the instruction is: work on what is missing, and protect what is there. A mixed result is the normal case, not a failure." },
+        { title: "Hear the Prophet's checklist", body: "The Prophet described the believer many ways. A believer wants for their brother what they want for themselves. Whoever believes in God and the Last Day should honour their guest, honour their neighbour, and say something good or stay silent. A believer is pleased by their good deeds and upset by their bad ones. And it isn't allowed to frighten a Muslim, or even give them a look that hurts." },
+        { title: "See a longer list", body: "One early Muslim gathered the signs into a list: very modest, rarely hurtful, truthful, quiet, doing much and slipping little, kind to family, calm, patient, grateful, gentle, caring. Not someone who curses, insults, spreads gossip or backbites. Not hasty, not holding grudges, not stingy, not envious. Cheerful. Loving and disliking for God's sake." },
+        { title: "Find the hardest test", body: "The best test of good character, Ghazali says, is patience when people hurt you and are rude to you. And whoever complains about other people's bad character is showing their own, because good character means bearing harm. Once a Bedouin grabbed the Prophet's cloak so hard that its rough edge left a mark on his neck, and demanded, “Give me some of God's wealth that you have!” The Prophet turned, laughed, and ordered that he be given something." },
+        { title: "Meet Ibrahim ibn Adham", body: "A soldier in the countryside asked Ibrahim ibn Adham, “Are you a slave?” He said yes. The soldier asked, “Where is the town?” Ibrahim pointed to the graveyard. Angry, the soldier hit him on the head with a whip, drawing blood. When he found out who Ibrahim was, he begged forgiveness. Ibrahim explained: “I'm a slave of God. And when he hit me, I asked God to give him Paradise. I knew I'd be rewarded for what he did to me, and I didn't want my share from him to be good while his share from me was bad.”" },
+        { title: "Meet Abu Uthman", body: "A man invited Abu Uthman al-Hiri to a meal to test him. When they reached the door, he said, “Sorry, I can't have you.” Abu Uthman left. The man called him back, then turned him away again — over and over. Abu Uthman never changed. Finally the man fell at his feet and said, “I was only testing you. What good character you have!” Abu Uthman said, “What you saw is a dog's character. A dog comes when called and goes when told.”" },
       ],
       distinction: {
-        title: "A gentle presentation and a sound inward order can diverge",
-        firstLabel: "Favorable presentation",
-        first:
-          "Charm, calm speech, or selective generosity may appear where there is little cost and disappear when status or desire is threatened.",
+        title: "A pleasant surface and a balanced heart can come apart",
+        firstLabel: "Looking good",
+        first: "Charm, a calm voice, or generosity that shows up when it costs little — and disappears when pride or wants are threatened.",
         secondLabel: "Tested character",
-        second:
-          "The powers remain ordered when circumstances create real pressure, and the connected virtues support one another rather than appearing in isolation.",
+        second: "The powers stay in order under real pressure, and the good qualities support each other instead of appearing one at a time.",
       },
-      misreading:
-        "Testing character does not mean engineering harm or becoming suspicious of every good act. It means refusing to make a final judgment from the easiest sample.",
-      observation:
-        "Compare the same quality in two settings: one where you feel respected and one where you feel overlooked. What changes in speed, tone, and justification?",
+      misreading: "Testing character doesn't mean setting traps for people, or doubting every good deed. It means not making a final judgement from the easiest example.",
+      observation: "Compare the same quality in two places: one where you feel respected, and one where you feel ignored. What changes in how fast you react, your tone, and the excuses you make?",
       sourceAnchor: "Book 22, section 9, the signs by which good character is recognized.",
     },
   },
   {
     id: 10,
-    shortTitle: "Formation begins early",
+    shortTitle: "Character starts early",
     formalTitle: "Disciplining children in early growth and improving their character",
-    overview:
-      "Ghazali describes the child as an impressionable trust whose early habits, teachers, companions, rewards, and surroundings shape later character. The section belongs to a medieval pedagogical setting and should be read as a historical account, not copied as a universal modern parenting manual.",
-    reflection:
-      "Whether considering a child or an adult learner, ask what the surrounding environment praises, rehearses, and makes easy each day.",
+    overview: "Ghazali describes a child as a trust given to the parents, open to whatever is carved into them. Early habits, teachers, friends, praise and surroundings shape who they become. The section comes from a medieval setting and is read here for its argument, not as a modern parenting guide.",
+    reflection: "Whether you think about a child or about yourself, ask what your surroundings praise, practise and make easy every day.",
     relatedNodes: ["habit", "company", "character", "cultivation"],
     deep: {
-      thesis:
-        "Character begins forming before abstract explanation can carry the work, through repeated action, admired examples, companions, and the moral shape of the environment.",
-      context:
-        "Ghazali applies the book's theory of habituation to early education. The child is described as receptive to impressions, which gives parents and teachers responsibility for the patterns that become familiar and pleasurable.",
+      thesis: "A child's heart is like a clean, uncarved jewel: what is carved into it early — by habit, example and company — is what it grows up with.",
+      context: "Ghazali applies the book's idea of habit to childhood. Everything he has said about forming character is most obviously true of children. So this section is the same argument, seen from the easier end.",
       moves: [
-        {
-          title: "Recognize early receptivity",
-          body:
-            "The child's inward life is presented as open to formation. Habits laid down early can become easier to sustain than habits addressed only after they harden.",
-        },
-        {
-          title: "Teach through a whole environment",
-          body:
-            "Food, dress, praise, restraint, study, play, example, and daily rhythm all participate in formation. Education is therefore larger than verbal instruction.",
-        },
-        {
-          title: "Choose company carefully",
-          body:
-            "Companions transmit what is admired and normal. This continues the earlier claim that character can pass through observation and association without a formal lesson.",
-        },
-        {
-          title: "Guide habits toward inward love",
-          body:
-            "The goal is not permanent external control. Repeated fitting action should help the learner come to recognize and prefer what is good.",
-        },
-        {
-          title: "Note why the child gets a section",
-          body:
-            "Placing a section on children inside a book about treating one's own character is not a digression — it is the same argument from the easier end. Everything the book has claimed about formation is most obviously true of a child: habits laid down early become easy, and correcting them later is harder in proportion to how long they have run. The child's case is the proof of the adult's method, observed where nobody disputes it.",
-        },
-        {
-          title: "See how wide the account of teaching is",
-          body:
-            "And the list of what forms a child is deliberately broad: food, clothing, praise, restraint, study, play, the example in front of him, the shape of his day. None of that is instruction, and all of it teaches. Which follows from the book's own claim that character is caught by proximity before it is stated as a rule — the same reason the choice of companions is treated as a matter of formation rather than of company.",
-        },
-        {
-          title: "Take the aim seriously",
-          body:
-            "And the aim named at the end is what keeps this from being a programme of control. The point is not a child who behaves because he is being watched; it is one who comes to recognise and prefer what is good, so the external management can end. Which is exactly the completion the book described for adults — the fitting act performed readily and no longer felt as an imposition — arrived at from the other direction.",
-        },
+        { title: "A trust and a jewel", body: "A child, Ghazali says, is a trust in the care of the parents. The child's pure heart is a precious jewel, plain and uncarved, ready to take whatever is carved into it and to lean whichever way it is leaned. If it is taught good and used to it, the child grows up on it and is happy in both lives — and the parents and every teacher share the reward. If it is neglected like an animal, the harm is on whoever was responsible." },
+        { title: "Protect from the greater fire", body: "The Quran says, “Believers, protect yourselves and your families from a Fire.” Ghazali reasons that parents already protect their child from fire in this world. Protecting them from the Fire of the next world matters even more. And that protection means teaching good character and keeping them away from bad company. The root of raising children well, he says, is guarding them from bad friends." },
+        { title: "Notice the first sign of reason", body: "The first good sign in a child is shyness — a sense of shame. When a child starts to feel embarrassed and holds back from some things, it means the light of reason is dawning. They are starting to see that some things are ugly. Ghazali calls this a gift from God and good news about the child's future. A child with this sense of shame shouldn't be ignored. Use it to help them learn." },
+        { title: "Teach stories of good people", body: "At school, the child should learn the Quran, the Prophet's sayings, and stories of good people, so that love of the righteous is planted in them. Ghazali warns against poetry that glamorises romantic obsession, and against people who say that sort of thing is sophisticated. It plants seeds of trouble in young hearts." },
+        { title: "Praise in public, correct in private", body: "When a child does something good, they should be honoured for it, rewarded with something that makes them happy, and praised in front of people. If they slip once, it is better to overlook it and not embarrass them, especially if they are trying to hide it. Exposing it may just make them bolder. If it happens again, have a word in private." },
+        { title: "Don't nag", body: "Don't scold a child all the time, Ghazali says. If you do, blame becomes easy to hear and bad behaviour becomes easy to do, and your words stop landing in their heart. A parent should keep their words weighty by using them rarely." },
+        { title: "Let them play", body: "After school, the child should be allowed to play in a good way, to rest from the effort of learning. Ghazali is firm here. Stopping a child from playing and pushing them to study all the time kills their heart and dulls their intelligence. It makes life so miserable that they look for any way to escape learning altogether." },
       ],
       distinction: {
-        title: "An enduring formation principle sits inside a historical pedagogy",
-        firstLabel: "Enduring claim",
-        first:
-          "Early habits, examples, companions, and environments exert strong formative power before a person can fully articulate their influence.",
-        secondLabel: "Period-specific detail",
-        second:
-          "Particular corrective practices reflect Ghazali's medieval context and require ethical, legal, developmental, and scholarly judgment before any modern application.",
+        title: "A lasting idea inside a medieval way of raising children",
+        firstLabel: "The lasting claim",
+        first: "Early habits, examples, friends and surroundings shape a person strongly, long before they can explain how.",
+        secondLabel: "Details from its time",
+        second: "Ghazali's specific methods — including on discipline, food and hardship — belong to his medieval world and need careful judgement before anyone applies them today.",
       },
-      misreading:
-        "This describes how children were taught in Ghazali's time; do not take it as parenting advice. Keep the argument about when character forms, and read the specific methods as belonging to their period.",
-      observation:
-        "Study one repeated environment rather than one isolated lesson. What does it reward, what does it normalize, and what kind of response does it make easy?",
+      misreading: "This describes how children were raised in Ghazali's time. Don't take it as parenting advice. Keep the argument about when character forms, and read the specific methods as belonging to their period.",
+      observation: "Look at one surrounding you spend a lot of time in, not one lesson. What does it reward? What does it make normal? What kind of response does it make easy?",
       sourceAnchor: "Book 22, section 10, early education and the formation of children's character.",
     },
   },
@@ -612,66 +317,30 @@ const book22Base: Chapter[] = [
     id: 11,
     shortTitle: "How the path begins",
     formalTitle: "The conditions of aspiration and the gradual path of discipline",
-    overview:
-      "The closing section turns from general theory to the beginning of a seeker's path. Resolve must be grounded in certainty, obstacles must be addressed, duties and guidance must structure the effort, and training proceeds gradually rather than through unmeasured intensity.",
-    reflection:
-      "A dramatic beginning can feel powerful while remaining unstructured. Ask what will still guide the effort when intensity falls.",
+    overview: "The last section turns to someone who wants to set out on the path. Their drive has to rest on real conviction. Four barriers must be cleared, a guide must be found, and training moves forward in stages — with dangers along the way.",
+    reflection: "A dramatic start can feel powerful but have no structure. Ask what will still guide your effort once the excitement fades.",
     relatedNodes: ["cultivation", "company", "habit", "knowledge"],
     deep: {
-      thesis:
-        "A serious path begins when clear aspiration is given structure: obstacles are removed, obligations are secured, guidance is accepted, and effort advances by stages.",
-      context:
-        "The final section gathers the book's mechanisms into a beginning regimen for the seeker. Ghazali is not offering a burst of inspiration, but conditions under which intention can survive contact with habit and daily life.",
+      thesis: "Real drive comes from seeing clearly what the next life is worth; then a beginner clears four barriers, holds on to a guide, protects the effort, and crosses the obstacles one at a time.",
+      context: "Ghazali gathers everything in the book into a plan for a beginner. He isn't offering a burst of inspiration. He is setting out the conditions that let a good intention survive real habits and daily life — and warning about what can go wrong.",
       moves: [
-        {
-          title: "Anchor the aim",
-          body:
-            "Aspiration grows from certainty about the worth of the destination. Without a governing aim, discipline is easily redirected by the next attractive object or uncomfortable demand.",
-        },
-        {
-          title: "Address the barriers",
-          body:
-            "Attachments, unresolved obligations, and disordered routines can consume the attention needed for training. The path begins partly by identifying what repeatedly blocks it.",
-        },
-        {
-          title: "Accept structure and guidance",
-          body:
-            "Established duties, sound companionship, and a discerning guide keep effort connected to knowledge. They also counter the learner's limited view of hidden faults.",
-        },
-        {
-          title: "Advance by stages",
-          body:
-            "Training reveals the next obstacle as capacity grows. Gradual progression allows the remedy to fit the actual condition rather than an imagined version of the self.",
-        },
-        {
-          title: "Note what aspiration rests on",
-          body:
-            "Aspiration is treated as a consequence rather than a virtue, and the consequence of something specific: being certain the destination is worth it. Which explains a failure everybody has watched. A person with no settled aim does not lack willpower; he has nothing for the willpower to serve, so the next attractive thing or the next uncomfortable demand redirects him, and each redirection feels reasonable at the time.",
-        },
-        {
-          title: "Follow why the barriers come first",
-          body:
-            "And the path is described as beginning with clearing rather than with effort — attachments, unfinished obligations, a disordered routine. These are not moral failings and they are what consumes the attention training requires. Which is the same principle as the reservoir in the book on the heart: the work is often not adding something but removing what is standing in the room.",
-        },
-        {
-          title: "See why the stages cannot be planned in advance",
-          body:
-            "And the last point is the one that governs the whole quarter. Training reveals the next obstacle as capacity grows — you cannot see what is wrong at the fourth stage from where you stand at the first, because the fault at the fourth is currently hidden behind the fault at the first. Which is why the remedy has to be fitted to the actual condition rather than to a person's picture of himself, and why a guide is worth more than a plan.",
-        },
+        { title: "The bead and the jewel", body: "Someone who has seen the next life with real certainty will want it without being pushed. If you hold a glass bead and then see a precious jewel, you lose interest in the bead and want to trade it. But Ghazali says faith here doesn't mean just saying the words of faith. That is like someone who agrees the jewel is better than the bead, but only knows the word “jewel”. Used to the bead, they may well keep it." },
+        { title: "Trace the chain back", body: "Why don't people reach the goal? Because they don't travel. They don't travel because they don't really want to. They don't want to because their faith is weak. And their faith is weak because there are too few guides reminding them of what matters. Worse, Ghazali says, when someone does wake up and asks the scholars for the way, they often find the scholars following their own desires." },
+        { title: "Clear four barriers", body: "A beginner first has to clear four barriers between themselves and God: money, status, blind loyalty, and sin. Money: keep only what you need, because as long as one coin pulls at your heart, you are tied. Status: stay away from the spotlight and choose to be unknown. Blind loyalty: stop being a fan of your own group's views for their own sake, and seek understanding through effort rather than arguing." },
+        { title: "Repent before you seek secrets", body: "The fourth barrier is sin, and only repentance clears it: regret, a firm decision not to return, and making things right with anyone you wronged. Someone who wants the deep secrets of religion without first fixing their obvious sins, Ghazali says, is like someone who wants the deep meanings of the Quran before learning Arabic. The basics come first, and they stay necessary to the end." },
+        { title: "Find a guide", body: "Clearing the barriers is like doing wudu before prayer. Now you need someone to lead the prayer: a guide. The road of religion is hard to see, and the devil's roads are many and obvious. Someone who crosses a deadly desert without a protector risks their life. And a person who tries to grow on their own is like a tree that sprouts by itself: it soon dries up, or grows leaves but no fruit." },
+        { title: "Build the fort", body: "The beginner then needs a fort to protect them: time alone, silence, hunger, and staying up at night. Ghazali pictures the heart as a pool that dirty streams keep flowing into from the senses. The training is emptying the pool so clean water can rise from its spring. But you can't empty a pool while the streams are still pouring in. So the senses have to be guarded, apart from what is needed." },
+        { title: "Remember until only the meaning is left", body: "Then come the obstacles, which are the heart's attachments to the world — easiest first. Once they are cleared, the guide gives the student one phrase of remembering God, such as “Allah, Allah.” At first the tongue says it. Then it runs on the tongue without effort. Then only its form is left in the heart. Finally even the words fade, and only the meaning stays, filling the heart. Doubts and strange thoughts will come; they should be taken to the guide." },
       ],
       distinction: {
-        title: "Intensity can begin an effort, but structure carries it",
-        firstLabel: "Sudden resolve",
-        first:
-          "A strong moment can expose what matters and create movement, yet it may fade before habits, duties, and obstacles have been reorganized.",
-        secondLabel: "Governed aspiration",
-        second:
-          "A clear aim is translated into obligations, guidance, companionship, and gradual practices that can continue when emotion changes.",
+        title: "A burst of energy can start the effort, but structure carries it",
+        firstLabel: "A sudden decision",
+        first: "A strong moment shows you what matters and gets you moving, but it can fade before habits, duties and obstacles have changed.",
+        secondLabel: "A drive with a plan",
+        second: "A clear aim turned into duties, guidance, good company and gradual steps that keep going when feelings change.",
       },
-      misreading:
-        "The path is not a license to invent severe private exercises. The section assumes religious duties, knowledge, guidance, and a measured progression fitted to the person.",
-      observation:
-        "Name the point where a worthy intention most often loses force: unclear aim, an unaddressed barrier, lack of structure, unsuitable pace, or isolation from honest guidance.",
+      misreading: "This section isn't permission to invent harsh exercises for yourself. Ghazali assumes a qualified guide, basic religious duties in place, and a pace fitted to the person — and he sends many people back to simple good deeds.",
+      observation: "Name the point where a good intention of yours usually loses steam: an unclear aim, a barrier you haven't cleared, no structure, the wrong pace, or no honest guidance.",
       sourceAnchor: "Book 22, section 11, the conditions of aspiration and gradual progress in discipline.",
     },
   },
@@ -1145,90 +814,90 @@ const book22Extras: Record<number, Extra> = {
   1: {
     model: pair("Two ways to read a good moment", "The section's whole purpose is to make the second question askable.", [["A settled disposition", "The conduct issues easily and repeatedly, because it comes from a formed state.", "support"], ["A polished occasion", "The conduct appeared once, under favourable conditions, and proves nothing yet.", "warning"]]),
     closer: [
-      { title: "Why testimony comes before technique", body: "Ghazali opens with reports rather than method because the reader has to be persuaded that inward formation is worth sustained attention before any of the diagnosis or treatment that follows will be taken seriously." },
-      { title: "The register he chooses", body: "Bad character is presented as an illness rather than a social inconvenience, which sets up the medical frame he uses for the rest of the book: balance is health, deviation is sickness, and treatment is by opposites." },
+      { title: "The friend who kept his character", body: "Ibn al-Mubarak once travelled with a bad-tempered man. He put up with him the whole way and kept the peace. When they parted, Ibn al-Mubarak cried. Asked why, he said, “I felt sorry for him. I left him — but his character didn't leave him.” Bad character is the one companion you can't walk away from." },
+      { title: "The map of the whole book", body: "Ghazali lays out his plan at the start: why character matters, what it is, whether it can change, how it is gained, how it is treated, the signs of sickness, how to find your faults, why the cure is resisting desire, the signs of good character, raising children, and how a beginner starts. The eleven reading sections follow that order." },
     ],
-    audit: ["Which of my good qualities has only ever been tested cheaply?", "What appears in me when patience becomes expensive?", "Do I treat character as decoration or as condition?", "Whose account of my character am I relying on?"],
+    audit: ["Which of my good qualities has only been tested when it was easy?", "What comes out of me when patience gets expensive?", "Whom do I find hard to forgive, give to, or stay in touch with?", "Would the people closest to me call me easy or hard to be around?"],
   },
   2: {
     model: chain("The four pillars", "Beauty of the inward form requires all four, as beauty of a face requires every feature.", [["Knowledge", "Discerning truth from falsehood in belief and right from wrong in action; its virtue is wisdom.", "support"], ["Anger", "Its contraction and expansion held to what wisdom requires; its virtue is courage.", "balance"], ["Appetite", "Disciplined under the direction of intellect and Law; its virtue is continence.", "balance"], ["Justice", "The power that holds the other two to wisdom's direction; its opposite is not excess but injustice.", "support"]]),
     closer: [
-      { title: "The four things character is not", body: "Ghazali separates the act, the power, the knowledge, and the state of the soul, and identifies character as only the fourth. A generous man may not give, for want of money; a miser may give, for a motive or for show. Power stands equally toward giving and withholding, and knowledge stands equally toward the beautiful and the ugly." },
-      { title: "Why justice has only one opposite", body: "Every other virtue is a mean with a vice on each side: anger's excess is recklessness and its defect cowardice, appetite's excess is greed and its defect frigidity, wisdom's excess is cunning and its defect stupidity. Justice alone has no two extremes; when it is lost there is one thing opposite it, and that is injustice." },
+      { title: "The fool and the madman", body: "Ghazali makes a sharp distinction. A foolish person wants the right thing but picks the wrong way to get there. A mad person wants the wrong thing in the first place. Weak understanding shows up in both — but the first can be taught the road, while the second has the wrong destination." },
+      { title: "Firm in one place, gentle in another", body: "The Quran describes the Companions as “firm against the disbelievers, merciful among themselves.” Ghazali reads this as a lesson in balance. Firmness has its place and mercy has its place. Being perfect doesn't mean always being tough, or always being soft. It means each at the right time." },
     ],
-    audit: ["Which of the four pillars is weakest in me?", "Am I judging my character by acts or by what produces them?", "Where do I lean to excess, and where to defect?", "What would it cost me to do this easily rather than with effort?"],
+    audit: ["Which of the four powers is weakest in me?", "Am I judging myself by single acts, or by what produces them?", "Where do I go too far, and where do I fall short?", "Am I firm and gentle in the right places?"],
   },
   3: {
     model: chain("Four ranks of difficulty", "Ghazali grades them by how much has to be undone before anything can be built.", [["Ignorant", "Distinguishes nothing yet and has not settled into appetite; needs only a teacher and a motive.", "support"], ["Ignorant and astray", "Knows the ugliness and is habituated to it; must uproot one habit and plant another.", "balance"], ["And corrupt", "Believes the ugly traits are obligatory and beautiful, and was raised on them.", "warning"], ["And evil", "Sees excellence in doing much harm and boasts of it; the hardest rank of all.", "warning"]]),
     closer: [
-      { title: "The date-stone", body: "His answer to the claim that people cannot change. A date stone is neither an apple nor a palm tree — but it was made so that it becomes a palm if you tend it, and it will never become an apple however hard you try. Anger and appetite cannot be pulled out. They can be made manageable." },
-      { title: "Why appetite is the hardest", body: "Two things make dispositions differ: the strength of the innate drive together with how long it has existed, and reinforcement by repetition and by believing the trait good. Appetite is oldest, created in the child at the beginning; anger comes around seven; discernment later. The oldest is the most disobedient to change." },
+      { title: "Why the teacher still says “no anger at all”", body: "Ghazali adds a careful point. A spiritual guide should tell a beginner that anger and holding on to money are bad, full stop, without allowing any. Why? If the guide allows even a little, the student will use that as an excuse to keep all their anger, telling themselves it is the allowed amount. Aiming hard at the root is what brings the student back to the middle." },
+      { title: "Lukewarm water", body: "Ghazali explains why the middle is the goal. A heart at its best is not caught up in money at all — neither greedy to keep it nor eager to spend it. In this life that is hard, so we look for the next best thing: the middle. Lukewarm water is neither hot nor cold, so it is as if it is free of both. Generosity sits the same way between wasting and stinginess." },
     ],
-    audit: ["Which rank am I actually in?", "What am I calling my nature that is really my habit?", "Have I mistaken governing a drive for uprooting it?", "How long has this been in me, and does that change the method?"],
+    audit: ["Which of the four levels am I at for my worst habit?", "What do I call my nature that is really just my habit?", "Have I convinced myself a bad habit is actually good?", "Am I trying to remove a drive instead of training it?"],
   },
   4: {
     model: chain("How a trait is acquired", "The route runs through effort and ends in ease, which is the test that it worked.", [["Choose the trait", "Name the disposition wanted rather than the single act.", "support"], ["Force the act", "Do what the generous person does, deliberately and against resistance.", "balance"], ["Persist", "Continue long enough that the resistance stops being the main fact.", "balance"], ["It becomes pleasant", "The generous person is the one who takes pleasure in giving, not the one who gives with dislike.", "support"]]),
     closer: [
-      { title: "The two routes in", body: "Some are given the balance at the outset by divine generosity and completeness of nature, so that they know without being taught and are disciplined without discipline. Everyone else acquires it by struggle, which means carrying the soul to the acts the wanted disposition requires." },
-      { title: "Where the method ends", body: "The stated goal is that the act issuing from a person becomes pleasurable to him. This is the same test Ghazali applies at the end of Book 29: an act still heavy while being done shows a person forcing himself, not yet a person formed." },
+      { title: "Three ways, and what happens when they combine", body: "Good qualities come by nature, by habit, and by spending time with good people — because, Ghazali says, “one nature steals from another, the bad and the good alike.” Someone who has all three is at the top. Someone born with bad qualities, who falls in with bad friends and gets used to wrongdoing, is furthest from God. Most people sit somewhere in between." },
+      { title: "A white dot and a black dot", body: "A saying Ghazali quotes: faith starts in the heart as a white dot. As faith grows, the whiteness spreads, until the whole heart is white. Hypocrisy starts as a black dot, and spreads the same way. Every small act adds a little. That is why no good deed is too small to bother with, and no sin too small to worry about." },
     ],
-    audit: ["Which act am I performing that has not yet become easy?", "Have I persisted long enough for the question to be fair?", "Do I take pleasure in this, or only credit for it?", "What am I waiting to be given that I could be acquiring?"],
+    audit: ["Which good act am I doing that hasn't become easy yet?", "Have I kept at it long enough to judge fairly?", "Do I enjoy this good thing, or only the credit for it?", "Who are the people whose nature is rubbing off on mine?"],
   },
   5: {
     model: pair("Two conditions, two tasks", "Ghazali takes the physician's division and applies it directly.", [["A sound soul", "The work is to lay down the regimen that preserves it and adds to its clarity.", "support"], ["A sick soul", "The work is to bring health to it, which means removing what is deviating and installing its opposite.", "balance"]]),
     closer: [
-      { title: "Born balanced", body: "As the stomach is sound by nature and takes harm from what befalls it, every child is born balanced and sound in disposition, and the vices are acquired by habituation and teaching. This is why the treatment is described as a return rather than a construction." },
-      { title: "Deficient and capable", body: "The body is not created complete but is perfected by growth and nourishment; the soul is created deficient and capable of perfection, and is perfected by upbringing, refinement of character, and nourishment by knowledge. The parallel governs the whole treatment section." },
+      { title: "Stories of training", body: "Ghazali passes on reports of how people trained themselves. One man, to cure his quick temper, paid someone to insult him in public, and made himself stay calm, until his patience became famous. Another felt cowardly, so he sailed out in winter when the waves were wild. Someone greedy for food might fast, then cook delicious meals and serve them to others without eating. Ghazali's point is the principle behind them, not the stunts." },
+      { title: "Keep your word to yourself", body: "The key to all this effort, Ghazali says, is keeping your resolutions. If you decide to give up a desire and then the chance to indulge it appears, that is a test from God — so hold firm. If you get used to breaking your own resolutions, your soul learns that, and it goes bad. The whole method fits into one verse: “As for whoever feared standing before their Lord and held the soul back from its desires, Paradise will be their home.”" },
     ],
-    audit: ["Am I preserving or repairing right now?", "What dose does this particular fault need?", "Which of my remedies is fitted to someone else's illness?", "Where have I applied a general rule to a specific case?"],
+    audit: ["Right now, am I protecting my health or trying to recover it?", "What is the exact opposite of my worst fault?", "Am I using a remedy meant for someone else's problem?", "Which of my own resolutions have I got used to breaking?"],
   },
   6: {
     model: chain("Diagnosis by function", "Ghazali derives the heart's illness from what the heart was made to do.", [["Every organ has an act", "It was created for a specific function.", "support"], ["Illness is failure of that act", "The hand's illness is that it cannot grasp; the eye's, that it cannot see.", "balance"], ["The heart's act", "Knowledge, wisdom, love of God, and delight in remembrance preferred above every appetite.", "support"], ["So the heart's illness", "Something else has become dearer, or the appetite for its own food has fallen away.", "warning"]]),
     closer: [
-      { title: "The stomach that prefers clay", body: "The sign of knowing God is love, and the sign of love is that nothing is preferred to Him. Whoever has something dearer to him than God has a sick heart, as any stomach to which clay has become dearer than bread and water, or whose appetite for bread and water has fallen away, is sick." },
-      { title: "Why the disease became chronic", body: "Ghazali gives a chain of failures. Most do not know the heart's illness; if they know it, the bitterness of the remedy is hard, since the remedy is opposing appetites; and if they can bear that, they find no skilled physician, because the physicians are the scholars and the illness has taken them too. A sick physician rarely attends to his own cure." },
+      { title: "“Hud made me grey”", body: "The Prophet once said the chapter of Hud had turned his hair grey. Someone later saw him in a dream and asked why. He answered: because of the verse “Stay on the straight path, as you have been commanded.” Staying exactly on the middle is that hard. But Ghazali says if you can't reach it perfectly, you should still try to get as close to it as you can." },
+      { title: "One by one", body: "Good deeds only come from good character. So Ghazali's practical advice is simple: look carefully at your qualities, make a list, and then work on them one at a time, in order." },
     ],
-    audit: ["What is currently dearer to me than what I say is dearest?", "Has my appetite for the heart's own food fallen away?", "Do I know this illness, or only know of it?", "Whom am I taking treatment from, and are they well?"],
+    audit: ["What is dearer to me, in practice, than what I say is dearest?", "Which is easier for me: keeping or giving?", "Have I overcorrected a fault into its opposite?", "Which quality on my list should I work on first?"],
   },
   7: {
     model: chain("Four routes to a hidden fault", "Ghazali lists them in descending order of reliability and ascending order of availability.", [["A discerning teacher", "One who sees the soul's faults and is given authority over you; rare in this age.", "support"], ["A truthful friend", "Set as a watcher over your states, who tells you what he dislikes.", "balance"], ["Your enemies", "An angry eye brings out the ugly, so the hostile tongue reports what affection conceals.", "balance"], ["People generally", "Attribute to yourself whatever you find blameworthy among them, since natures are alike.", "support"]]),
     closer: [
-      { title: "How the second route actually looked", body: "Umar used to say: God have mercy on a man who brings me my faults as a gift. He pressed Salman until he answered that he had joined two dishes at one table and kept two garments, one for day and one for night; and he asked Hudhayfa, who knew the hypocrites, whether he saw any mark of hypocrisy on him. Ghazali's comment is that the more complete a person's intellect and the higher his station, the less he admired himself and the more he suspected himself." },
-      { title: "Why the routes are hard to keep open", body: "Friends are rarely usable: some envy, some have an interest and see as a fault what is not, and some flatter and conceal. Dawud al-Ta'i withdrew from people, asking what he should do with those who hide his faults from him. Ghazali adds that matters have reached the point where the most hateful person to us is the one who counsels us and names our faults, and that this almost declares a weakness of faith." },
+      { title: "The scorpion under your shirt", body: "Ghazali says we have reached a point where the person we dislike most is the one who points out our faults. Imagine someone warned you a scorpion was under your shirt. You would thank them and rush to kill it. Yet a scorpion's sting lasts a day, while bad character stings the heart and may last forever. And still, when someone warns us, we answer, “Well, you do such-and-such too!” He says that shows weak faith." },
+      { title: "Three routes for people without a guide", body: "Ghazali is clear that routes two to four are for when you can't find a real guide. He means someone wise, who sees the faults of the soul, cares about you, has already worked on themselves, and gives good advice. Whoever finds such a person has found the doctor, and should stay close to them." },
     ],
-    audit: ["Which of the four is actually open to me?", "When someone last named a fault of mine, what did I feel?", "What have my enemies said that was true?", "What do I dislike in others that is mine?"],
+    audit: ["Which of the four mirrors can I actually use?", "When someone last named a fault of mine, did I answer with one of theirs?", "What have people who dislike me said that was true?", "What do I dislike in others that I also do?"],
   },
   8: {
     model: pair("What the testimony establishes", "The point of the gathered reports is a method, not an atmosphere.", [["Treatment by opposition", "The remedy for a deviation is deliberate movement toward its contrary, carried until the mean is reached.", "support"], ["Treatment by resolve", "A wish to be better, held without any specific opposition being practised.", "warning"]]),
     closer: [
-      { title: "Why this section is testimony rather than argument", body: "The method of opposing appetite has already been argued. What this section adds is that those who took the route reported the same thing independently, which is offered as evidence of a road rather than as a further proof." },
-      { title: "The bitterness is the point", body: "Ghazali has already said the remedy of the heart is opposing appetites, and that this is the reason most people who recognise the illness still go untreated. The testimony gathered here is meant to make that cost look survivable." },
+      { title: "The pomegranate and the wasps", body: "Ibrahim al-Khawwas once picked a pomegranate on a mountain because he wanted it, found it sour, and left it. Further on he met a man lying on the ground, covered in wasps. Ibrahim said, “You seem close to God — why not ask Him to protect you from these wasps?” The man replied, “You seem close to God too — why not ask Him to protect you from wanting pomegranates? A pomegranate's sting is felt in the next life. A wasp's sting is only felt in this one.”" },
+      { title: "Train it like a falcon", body: "Ghazali says a soul is trained the way a falcon is. At first it is kept away from what it is used to, so it forgets its wild habits. Then it is fed gently until it trusts its trainer and comes when called. A baby being weaned cries and refuses new food, but after a while it wouldn't go back to milk even if you offered it. Hard at the start, sweet at the end. And the training lasts a whole life — Ghazali says this struggle only ends at death." },
     ],
-    audit: ["Which appetite is currently ruling this trait?", "What is its exact contrary, in an act I could do this week?", "Am I opposing it, or resolving to?", "What have I stopped doing because it was bitter?"],
+    audit: ["What do I enjoy that won't come with me into the grave?", "What lawful thing am I most attached to?", "Which of the four kinds of people am I closest to?", "When did I last keep a resolution against a desire?"],
   },
   9: {
     model: chain("How the sign is read", "Ghazali makes the test external so that it cannot be settled by feeling.", [["The premature verdict", "A little struggle leaves gross sins, and the person concludes he is refined.", "warning"], ["The stated equivalence", "Good character is faith and bad character is hypocrisy.", "support"], ["The described traits", "The Book describes the believers and the hypocrites, and those descriptions are the fruits of each.", "balance"], ["Present yourself", "Find all of them, none, or some, and work at what is missing while keeping what is there.", "support"]]),
     closer: [
-      { title: "Why the test had to be written down", body: "The section exists because a person who has left obvious sins will suppose he has finished. Ghazali answers by giving a list that is not his own and against which the reader can be measured without consulting his own impression." },
-      { title: "Partial results are expected", body: "The presence of all the traits is the sign of good character and the absence of all is the sign of its opposite; the presence of some indicates some. The instruction is to acquire what is missing and preserve what is present, which assumes a mixed result as the normal case." },
+      { title: "The tailor and the fake coins", body: "A tailor named Abu Abd Allah had a customer who paid him with fake coins for a whole year. He took them every time and said nothing. One day the tailor was out, and his apprentice spotted the fake coin and handed it back. When the tailor returned, he said, “That was wrong of you. I've put up with him for a year. I take his coins and throw them down a well, so he can't cheat any other Muslim with them.”" },
+      { title: "Where good character ends up", body: "Ghazali says these are souls trained until their character became balanced and their hearts were cleaned of grudges and deceit. The fruit is being content with whatever God decides — the peak of good character. Someone who resents what God does has the worst character of all. If you don't find these signs in yourself, don't fool yourself. Keep working." },
     ],
-    audit: ["Which of the described traits do I actually have?", "Which did I assume I had?", "What did I conclude after leaving my most obvious fault?", "Am I measuring myself against a description or a feeling?"],
+    audit: ["Which of the Quran's descriptions do I actually match?", "Which did I just assume I match?", "Whose bad character do I complain about most?", "How did I respond the last time someone hurt me?"],
   },
   10: {
     model: chain("Why the early years carry so much", "Ghazali treats the child's heart as the most consequential thing entrusted to anyone.", [["A pure substance", "The child's heart is a precious jewel, empty of engraving and receptive to everything.", "support"], ["It inclines where it is bent", "Habituation and company decide which of the two directions become easy.", "balance"], ["The trust", "The child is a trust with those who raise him, and what is planted early is the hardest to change later.", "warning"], ["Gradual formation", "Instruction, company, and habit are applied by degrees rather than imposed at once.", "support"]]),
     closer: [
-      { title: "Where this section sits in the argument", body: "It follows directly from the account of why dispositions differ. If a trait is reinforced by repetition and by believing it good, then the period in which repetition begins and beliefs are formed is the period in which the most is decided." },
-      { title: "Why it is placed so late", body: "Ghazali gives the definition, the possibility of change, the method, and the diagnosis first. Only after the reader knows what character is and how it moves does the account of upbringing become instructions rather than sentiment." },
+      { title: "Carving in stone, dust on a wall", body: "When a child nears adulthood, they can start to understand the reasons behind what they were taught: that food is for giving you strength to obey God, and that this world is a passing stop, not a home. If the upbringing was good, those words stick in the heart like carving in stone. If not, they bounce off like dry dust thrown at a wall." },
+      { title: "Sahl at three years old", body: "Sahl al-Tustari said that at three he used to watch his uncle pray at night. His uncle taught him to say in his heart, without moving his tongue, “God is with me. God sees me. God is my witness” — three times a night, then seven, then eleven. Sahl felt its sweetness. Then his uncle said, “If God is with someone, sees them and witnesses them, would they disobey Him?” The lesson took root because it grew one small step at a time." },
     ],
-    audit: ["What am I habituating in someone who is watching me?", "What was habituated in me before I could examine it?", "Which of my beliefs about what is good was inherited whole?", "What am I imposing at once that should be given by degrees?"],
+    audit: ["What might someone younger be learning from watching me?", "What was carved into me before I could think about it?", "Which of my ideas of good did I just inherit?", "Who are the friends shaping me most right now?"],
   },
   11: {
     model: chain("Why arrival fails", "Ghazali runs the failure backwards to its root.", [["No arrival", "The destination is not reached.", "warning"], ["Because no travelling", "The road is not actually being walked.", "warning"], ["Because no will", "Nothing in the person is pulling toward it.", "warning"], ["Because no faith", "Not the tongue's movement, but a seeing that makes the trade obvious.", "warning"]]),
     closer: [
-      { title: "The bead and the jewel", body: "Whoever has a glass bead and sees a precious jewel loses his desire for the bead, and his will to trade it strengthens. Ghazali's point is that will is not summoned but follows sight, which is why he treats weak will as a symptom rather than a fault to be scolded." },
-      { title: "What he means by faith here", body: "Not the speech of the soul and the tongue's movement with the two testimonies without truthfulness. That resembles a man who affirms the jewel is better than the bead while knowing only the word for the jewel, and such a man, being used to the bead, may well not let it go." },
+      { title: "Not everyone should take this road", body: "Ghazali warns that many students set out, got stuck on a wrong idea, and gave up religion altogether. So a guide must judge each student. If one isn't suited to this deep path, the guide sends them back to ordinary good deeds and regular worship — what a saying Ghazali quotes calls “the faith of the old women”: simple, sincere, and safe. Someone who can't fight can still carry water to the fighters and share their reward." },
+      { title: "The last trap", body: "Even near the goal there are traps: pride, showing off, and getting excited about early spiritual experiences. The biggest, Ghazali says, is wanting to preach what you have found, because it gives a pleasure like no other. The devil tells you that you are reviving dead hearts. The test comes when someone else appears who speaks better and draws bigger crowds. If envy stings you then, you know what was really driving you." },
     ],
-    audit: ["Do I want this, or want to want it?", "What have I affirmed without having seen?", "Which bead am I used to?", "Who was supposed to show me the road, and did they?"],
+    audit: ["Do I want this, or just want to want it?", "Which of the four barriers is thickest for me?", "Which bead have I got used to?", "Would I be glad or jealous if someone did my good work better?"],
   },
 };
 
@@ -1367,5 +1036,5 @@ export const book22: SystemBook = {
     note: "Ghazali gives four routes by which a person comes to know his own faults, and notes that the first two have become rare. Work out which are actually open to you. The routes report faults; they do not treat them, and the treatment is the subject of the sections around this one.",
     items: book22FaultMirrors,
   },
-  editorialNote: "The five journeys, eleven reading sections, visual models, and four mirrors are editorial learning aids. The eleven sections preserve the expositions Ghazali gives in his own order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one; the Islamic Texts Society publishes a complete English translation of this book together with Book 23, and a reader wanting the text itself should go there. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration. Two scope notes. The section on disciplining children reflects eleventh-century household practice, including counsel on correction and on the shaping of a child's appetites that would cause harm if taken as parenting advice today; it is presented for its argument about when character is most receptive to formation, and none of its specific counsel is reproduced. And the book's central claim — that character is receptive to change — is offered by Ghazali as a theological and ethical position against those who held temperament fixed, not as a clinical claim about any particular difficulty. The four mirrors report where a fault might be seen; they cannot pronounce on whether a fault is present, and they are not a substitute for treatment. Complex personal cases require the complete Arabic, a reliable full edition, and qualified scholarly guidance.",
+  editorialNote: "The five journeys, eleven reading sections, visual models, and four mirrors are editorial learning aids. The eleven sections preserve the expositions Ghazali gives in his own order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one; the Islamic Texts Society publishes a complete English translation of this book together with Book 23, and a reader wanting the text itself should go there. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration. Two scope notes. The section on disciplining children reflects eleventh-century household practice, including counsel on correction and on the shaping of a child's appetites that would cause harm if taken as parenting advice today; it is presented for its argument about when character is most open to formation. A few of its general observations are summarised (praise in public, correct in private, do not nag, let children play), but its counsel on correction, diet and hardship is not reproduced. And the book's central claim — that character is receptive to change — is offered by Ghazali as a theological and ethical position against those who held temperament fixed, not as a clinical claim about any particular difficulty. The four mirrors report where a fault might be seen; they cannot pronounce on whether a fault is present, and they are not a substitute for treatment. Complex personal cases require the complete Arabic, a reliable full edition, and qualified scholarly guidance.",
 };
