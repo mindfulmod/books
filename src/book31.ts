@@ -543,7 +543,7 @@ export const book31Journeys: Journey[] = [
       node("separate-two-rights", "Separate the two rights", "God's and a person's", "A wrong may face both directions, and only one of them is discharged by the return.", "The second direction is treated at length in the third pillar.", 7, "balance"),
       node("unfix-the-categories", "Unfix the categories", "A scale, not two boxes", "Minor and major are real and move with persistence, knowledge, and circumstance.", "The distinction is kept, not dissolved.", 8, "know"),
       node("refuse-the-calculus", "Refuse the calculus", "Direction, not arithmetic", "Ghazali follows what is disclosed and marks the rest as supposition.", "Wanting a verdict is the thing to notice here.", 9, "guard"),
-      node("run-six-magnifiers", "Run the six magnifiers", "What enlarges a small sin", "Persistence, deeming it small, delight, taking God's covering lightly, open display, and being followed.", "Each removed is a real reduction.", 10, "diagnose"),
+      node("run-five-magnifiers", "Run the six magnifiers", "What enlarges a small sin", "Persistence, deeming it small, delight, taking God's covering lightly, open display, and being followed.", "Each removed is a real reduction.", 10, "diagnose"),
     ],
   },
   {
