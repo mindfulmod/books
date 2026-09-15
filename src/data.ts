@@ -302,7 +302,7 @@ export const conceptNodes: ConceptNode[] = [
     label: "The heart",
     kicker: "Governor",
     description:
-      "The subtle faculty that knows, chooses, is addressed, and directs the body. Ghazali distinguishes it from the physical organ without denying their special relation.",
+      "The part of you that knows, chooses, is spoken to by God and directs the body. Ghazali separates it from the organ in your chest, while saying the two are closely linked.",
     position: "node-heart",
   },
   {
@@ -310,7 +310,7 @@ export const conceptNodes: ConceptNode[] = [
     label: "Intellect",
     kicker: "Wise adviser",
     description:
-      "The capacity for knowledge, foresight, and sound counsel. It restores order when it guides appetite and anger rather than inventing excuses for them.",
+      "Your ability to know, look ahead and give good advice. Things go right when it guides desire and anger instead of making excuses for them.",
     position: "node-intellect",
   },
   {
@@ -318,7 +318,7 @@ export const conceptNodes: ConceptNode[] = [
     label: "Appetite",
     kicker: "Provisioner",
     description:
-      "The force that draws nourishment and other desired things. It is necessary in its proper service and destructive when it becomes the ruler.",
+      "The force that pulls in food and other things you want. It is needed when it serves, and destructive when it takes charge.",
     position: "node-appetite",
   },
   {
@@ -326,7 +326,7 @@ export const conceptNodes: ConceptNode[] = [
     label: "Anger",
     kicker: "Protective force",
     description:
-      "The force that repels harm and supports defense. Courage can arise from its discipline, while aggression arises from its excess and rule.",
+      "The force that pushes away harm and defends you. Trained, it becomes courage. Out of control, it becomes aggression.",
     position: "node-anger",
   },
   {
@@ -334,7 +334,7 @@ export const conceptNodes: ConceptNode[] = [
     label: "Perception",
     kicker: "Messengers",
     description:
-      "Outer senses receive the world. Inward faculties retain, imagine, combine, and recall what they bring, like messengers and keepers serving a city.",
+      "The outer senses take in the world. Inner powers store, imagine, combine and remember what they bring, like messengers and record-keepers serving a city.",
     position: "node-senses",
   },
   {
@@ -342,7 +342,7 @@ export const conceptNodes: ConceptNode[] = [
     label: "Action",
     kicker: "Workers",
     description:
-      "Limbs and organs carry an inward decision into the visible world. The moral quality appearing outside follows the order established within.",
+      "Hands, feet and body carry an inner decision out into the world. What you see on the outside follows the order set up inside.",
     position: "node-action",
   },
 ];
@@ -409,7 +409,7 @@ export const quarters: Quarter[] = [
       { id: 33, title: "Fear and Hope" },
       { id: 34, title: "Poverty and Abstinence" },
       { id: 35, title: "Unity and Trust" },
-      { id: 36, title: "Love, Longing, Intimacy, and Contentment" },
+      { id: 36, title: "Love, Longing, Closeness and Contentment" },
       { id: 37, title: "Intention, Sincerity, and Truthfulness" },
       { id: 38, title: "Vigilance and Accounting" },
       { id: 39, title: "Contemplation" },

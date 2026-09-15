@@ -57,7 +57,7 @@ const set = (title: string, caption: string, items: Array<[string, string, "supp
 
 export const book21Chapters: Chapter[] = [
   makeChapter({
-    id: 1, shortTitle: "Four words, five meanings", formalTitle: "The meanings of soul, spirit, heart, and intellect",
+    id: 1, shortTitle: "Four words, five meanings", formalTitle: "What “soul”, “spirit”, “heart” and “mind” mean",
     overview: "Ghazali opens this book by clearing up a confusion he says causes most mistakes about the inner life: four common words each have more than one meaning, and few people keep them straight.",
     thesis: "Heart, spirit, self and mind are four words with five meanings between them, and most errors in this subject come from mixing them up.",
     moves: [
@@ -78,10 +78,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Next time someone says “heart”, “spirit”, “self” or “mind”, ask which of the five meanings they actually mean.",
     audit: ["Which meaning did I just assume?", "Have I argued with someone who meant a different thing by the same word?", "When I say I'm fighting myself, which “self” do I mean?", "Does my conscience still blame me when I do wrong?"],
     nodes: ["heart", "intellect"],
-    model: pair("One word, two senses", "Ghazali's first protection is a definition, not an exhortation.", [["The bodily meaning", "Present in animals and in the dead; the physician's subject.", "balance"], ["The inward meaning", "Perceives, knows, is addressed and held responsible; this book's subject.", "support"]]),
+    model: pair("One word, two senses", "Ghazali starts by defining his words, before asking anything of you.", [["The bodily meaning", "The organ in your chest. Animals and dead bodies have one. It is a doctor's subject.", "balance"], ["The inner meaning", "The part of you that notices, knows, is spoken to by God and is held responsible. This is what the book is about.", "support"]]),
   }),
   makeChapter({
-    id: 2, shortTitle: "The heart's armies", formalTitle: "The visible and inward forces that serve the heart",
+    id: 2, shortTitle: "The heart's armies", formalTitle: "The forces you can see and the forces inside that serve the heart",
     overview: "The heart rules the body through “armies”. Ghazali sorts them into the ones you can see and the ones you can only notice inside, and explains why the heart needs them at all: it was made for a journey.",
     thesis: "The heart needs its armies because it was made for a journey to God, and every journey needs something to ride and supplies to carry.",
     moves: [
@@ -101,10 +101,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Take one ordinary thing you did today and name which of the three — will, power or knowledge — started it, carried it out, and informed it.",
     audit: ["What is my body mostly being used for?", "Am I treating the ride as if it were the destination?", "What supplies for the journey am I actually gathering?", "Which of my senses most needs guarding?"],
     nodes: ["appetite", "anger", "senses", "action"],
-    model: set("Three classes of the heart's armies", "Ghazali reduces a long inventory to a working structure.", [["The urging", "Appetite draws the suitable and anger repels the harmful; this is will.", "balance"], ["The moving", "Faculties spread through the limbs carry out the aim; this is power.", "balance"], ["The perceiving", "The senses gather and report like spies; this is knowledge.", "support"]]),
+    model: set("Three classes of the heart's armies", "Ghazali turns a long list into three groups.", [["What pushes", "Desire pulls toward what suits you, and anger pushes away what harms you. Together they are the will.", "balance"], ["What moves", "Strength spread through the hands, feet and body carries out what you aim for. This is power.", "balance"], ["What notices", "The senses gather news and report it, like scouts. This is knowledge.", "support"]]),
   }),
   makeChapter({
-    id: 3, shortTitle: "A kingdom, a fort, and a hunt", formalTitle: "Three analogies for the heart and its inward forces",
+    id: 3, shortTitle: "A kingdom, a fort, and a hunt", formalTitle: "Three pictures of the heart and the forces inside it",
     overview: "Desire and anger can serve the heart completely, or they can rebel until they take over. Ghazali gives three pictures of the same situation, and each one shows something the others don't.",
     thesis: "Three pictures — a kingdom, a border fort and a hunt — show how desire and anger can either serve the heart or rule it.",
     moves: [
@@ -125,10 +125,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Ask which of the three pictures fits your last hard day, and who was giving the orders.",
     audit: ["Who is in charge of my kingdom right now?", "When did desire last give me “good advice”?", "What is my anger being used against?", "Is my horse trained, or does it bolt?"],
     nodes: ["heart", "intellect", "appetite", "anger"],
-    model: set("The realm analogy", "Each part has a role, and misrule has a specific shape.", [["The ruler", "The governing self, for whose journey the realm exists.", "support"], ["The vizier", "Reflective intellect, whose counsel is to be preferred.", "support"], ["The police chief", "Anger, useful when set under the counsellor's direction.", "balance"], ["The scheming servant", "Appetite, which fetches supplies and disguises harm as advice.", "warning"]]),
+    model: set("The kingdom picture", "Each part has a job, and things go wrong in a particular way.", [["The ruler", "The real you, in charge. The whole kingdom exists for your journey.", "support"], ["The chief minister", "Your thinking mind. Its advice should come first.", "support"], ["The police chief", "Anger. Useful when it takes orders from the minister.", "balance"], ["The sneaky servant", "Desire. It fetches supplies, but dresses up harmful ideas as good advice.", "warning"]]),
   }),
   makeChapter({
-    id: 4, shortTitle: "What only humans have", formalTitle: "What distinguishes the human heart",
+    id: 4, shortTitle: "What only humans have", formalTitle: "What makes the human heart different",
     overview: "Animals have desire, anger and senses too — a sheep sees a wolf and knows to run. So what belongs to the human heart alone? Ghazali's answer is two things.",
     thesis: "What sets the human heart apart is knowledge that goes beyond the senses, and a will that can choose what is good even when it hurts.",
     moves: [
@@ -149,10 +149,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Find one thing you did this week that desire didn't want, and one thing desire chose that your mind had already judged against.",
     audit: ["What did I choose this week against my own comfort?", "When did knowing the outcome fail to move me?", "Which animal in Ghazali's list have I acted like?", "Am I putting myself in the path of the breezes?"],
     nodes: ["intellect", "action"],
-    model: pair("The two properties", "Neither alone would be enough.", [["Knowledge", "The intellect grasps outcomes and universals beyond the reach of sense.", "support"], ["Will", "A drive arises on that judgment and moves the limbs, without which the judgment is wasted.", "support"]]),
+    model: pair("Two things only humans have", "One without the other isn't enough.", [["Knowledge", "The mind can see where things lead and understand ideas the senses can't reach.", "support"], ["Will", "A drive rises to act on what the mind has judged and moves the body. Without it, the judgment goes nowhere.", "support"]]),
   }),
   makeChapter({
-    id: 5, shortTitle: "A pig, a dog, a devil, and a sage", formalTitle: "The gathered qualities and images of the heart",
+    id: 5, shortTitle: "A pig, a dog, a devil, and a sage", formalTitle: "The heart's qualities, gathered into four pictures",
     overview: "Ghazali gathers all the heart's qualities under four sources inside every person, and then gives the picture this book is famous for: four creatures living inside one skin.",
     thesis: "Every person carries four sources of behaviour — like a pig, a dog, a devil and a wise sage in one skin — and the sage's job is to keep the others in order.",
     moves: [
@@ -173,10 +173,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Read the two lists — what grows from obeying and what grows from ruling — and honestly find yourself on both.",
     audit: ["Which of the four gave the orders today?", "What have I served without noticing?", "Which good trait on the second list is truly mine?", "Is my heart's mirror getting cleaner or darker?"],
     nodes: ["appetite", "anger", "intellect"],
-    model: set("Four in one skin", "The middle two are driven, the last is charged with governing them.", [["The pig", "Appetite, blamed for greed rather than for its form.", "warning"], ["The dog", "Anger, ferocious in savagery rather than in shape.", "warning"], ["The devil", "Inflames both and sets each upon the other.", "warning"], ["The sage", "The intellect, charged with exposing the deception and governing the rest.", "support"]]),
+    model: set("Four in one skin", "Desire and anger are driven. The wise one's job is to keep them in order.", [["The pig", "Desire. It is blamed for greed, not for how it looks.", "warning"], ["The dog", "Anger. It is savage in what it does, not in its shape.", "warning"], ["The devil", "Stirs up both of them and sets them against each other.", "warning"], ["The wise one", "The mind. Its job is to expose the devil's tricks and keep the others in order.", "support"]]),
   }),
   makeChapter({
-    id: 6, shortTitle: "The heart as a mirror", formalTitle: "The heart as a mirror in relation to knowledge",
+    id: 6, shortTitle: "The heart as a mirror", formalTitle: "The heart as a mirror for knowledge",
     overview: "Ghazali explains what knowing actually is, then gives five reasons a mirror can fail to show something — and applies each one to the heart. This is the centre of the book.",
     thesis: "Knowledge is like an image appearing in a mirror, and a heart fails to know things for the same five reasons a mirror fails to show them.",
     moves: [
@@ -197,10 +197,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Think of something you have long wanted to understand, and ask which of the five reasons is actually in the way.",
     audit: ["Is my mirror dirty, or just pointed the wrong way?", "What did I accept as a child without ever examining it?", "Am I looking where the answer would be?", "Which of Ghazali's three levels is my faith at?"],
     nodes: ["mirror", "knowledge"],
-    model: set("Five reasons a mirror shows nothing", "Ghazali's list is exhaustive by his own claim.", [["Unformed", "The substance is not yet finished, as in a child's heart.", "warning"], ["Rusted", "Sins and appetites cloud the surface.", "warning"], ["Turned away", "Sound and clear, but aimed at something else.", "warning"], ["Veiled", "An inherited conviction hangs between the glass and the truth.", "warning"], ["Misdirected", "The bearer does not know where the object lies.", "warning"]]),
+    model: set("Five reasons a mirror shows nothing", "Ghazali says these five are the only reasons.", [["Unformed", "The mirror isn't finished yet, like a child's heart.", "warning"], ["Rusted", "Sins and desires fog up the surface.", "warning"], ["Turned away", "Clean and clear, but pointed at something else.", "warning"], ["Veiled", "A belief you picked up without checking hangs like a curtain between the mirror and the truth.", "warning"], ["Misdirected", "The person doesn't know which way to turn the mirror to find what they want to see.", "warning"]]),
   }),
   makeChapter({
-    id: 7, shortTitle: "Reason and revelation together", formalTitle: "Intellectual, religious, worldly, and otherworldly knowledge",
+    id: 7, shortTitle: "Reason and revelation together", formalTitle: "Knowledge from reason, from religion, about this world and about the next",
     overview: "Ghazali sorts the knowledge a heart can hold into what comes from reason and what comes from religion — and refuses both of the extreme positions people usually take.",
     thesis: "Reason and revelation need each other, like food and medicine, and whoever throws out either one goes wrong.",
     moves: [
@@ -221,10 +221,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Ask which of the two you lean on more — reason or revelation — and what you have asked it to do alone.",
     audit: ["Which of the two am I short of?", "Have I blamed religion for something I simply couldn't see?", "Where has my attention gone, and what did that cost?", "Do I take my medicine, or only my food?"],
     nodes: ["knowledge", "intellect"],
-    model: pair("Foods and medicines", "The comparison sets the relation, not a ranking.", [["Rational knowledge", "Like food: necessary, nourishing, and not sufficient for a sick heart.", "balance"], ["Revealed knowledge", "Like medicine: what actually treats the diseases the heart has.", "support"]]),
+    model: pair("Food and medicine", "The picture shows how the two work together, not which one wins.", [["Knowledge from reason", "Like food: you need it and it feeds you, but it can't cure a sick heart on its own.", "balance"], ["Knowledge from revelation", "Like medicine: it is what actually treats the heart's illnesses.", "support"]]),
   }),
   makeChapter({
-    id: 8, shortTitle: "Learning and inspiration", formalTitle: "Different ways knowledge comes to the heart",
+    id: 8, shortTitle: "Learning and inspiration", formalTitle: "The different ways knowledge comes into the heart",
     overview: "Some knowledge is worked for, and some seems to arrive on its own. Ghazali explains both, describes the Sufi path of waiting for inspiration — and reports the scholars' serious warning about it.",
     thesis: "Inspired knowledge is the same knowledge as learned knowledge; the only difference is how the curtain was removed — and the scholars warn that study should come first.",
     moves: [
@@ -245,10 +245,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Remember something you suddenly understood, and ask what had been cleared out of the way beforehand for it to land.",
     audit: ["What have I understood without working for it?", "What did I clear away before that happened?", "Am I treating my own ideas as if they were given to me?", "What am I skipping that I should study first?"],
     nodes: ["knowledge", "mirror"],
-    model: set("One knowledge, two routes", "The difference Ghazali specifies is narrow and exact.", [["The realities", "Inscribed on the Preserved Tablet, the same in either case.", "support"], ["The veil", "Hangs between the two mirrors and is the only thing at issue.", "balance"], ["Lifted by effort", "Study and inference work at the obstruction from this side.", "balance"], ["Lifted otherwise", "The winds of kindness move it, which is not the servant's choice.", "support"]]),
+    model: set("One knowledge, two routes", "Ghazali says the difference is small and exact.", [["The truths themselves", "Written on the Preserved Tablet. They are the same, whichever way they reach you.", "support"], ["The curtain", "It hangs between the heart's mirror and the Tablet. The only question is how it gets lifted.", "balance"], ["Lifted by effort", "Study and reasoning work at the curtain from our side.", "balance"], ["Lifted by God", "Winds of God's kindness move it. That isn't something a person can choose.", "support"]]),
   }),
   makeChapter({
-    id: 9, shortTitle: "The pool and the painted wall", formalTitle: "Two tangible examples for ways of knowing",
+    id: 9, shortTitle: "The pool and the painted wall", formalTitle: "Two pictures that show the two ways of knowing",
     overview: "Ghazali gives two pictures to make the last section concrete: a pool that can fill from outside or from below, and a painting contest where one team never touched paint.",
     thesis: "Knowledge can pour into the heart through the senses or rise up from within once the heart is cleaned — and both are shown by a pool and by a painting contest.",
     moves: [
@@ -269,10 +269,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Ask which kind of work your week was made of — bringing things in, or clearing things out — and whether anything at all was cleared.",
     audit: ["Am I filling channels, or clearing the floor?", "What have I taken in that I haven't made room for?", "Which images from my screens stand where the light would fall?", "When did I last stop taking anything in?"],
     nodes: ["mirror", "knowledge"],
-    model: pair("Two labours", "The images separate where the work is done, not which work is real.", [["Painting the wall", "Knowledge is acquired and brought to the heart from outside.", "balance"], ["Polishing the wall", "Nothing is added; the obstruction is removed and the same thing appears.", "balance"]]),
+    model: pair("Two kinds of work", "The pictures show where the work happens, not which kind is real.", [["Painting the wall", "Knowledge is gathered and brought into the heart from outside.", "balance"], ["Polishing the wall", "Nothing is added. What was in the way is cleared, and the same picture shines out.", "balance"]]),
   }),
   makeChapter({
-    id: 10, shortTitle: "The evidence for inner insight", formalTitle: "Religious testimony for knowledge beyond ordinary instruction",
+    id: 10, shortTitle: "The evidence for inner insight", formalTitle: "The evidence from religion for knowledge that doesn't come from teaching",
     overview: "Having described knowledge that doesn't come through study, Ghazali answers the question a careful reader will ask: what is the evidence? He gathers it from the Quran, the Prophet, the Companions, and two proofs anyone can check.",
     thesis: "The Quran, the Prophet's words, the lives of the Companions, true dreams and prophecy all show that the heart has a way of knowing beyond ordinary study.",
     moves: [
@@ -293,10 +293,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Think of something you say you are certain of, and ask which door of Ghazali's order your certainty actually came through.",
     audit: ["What is my certainty resting on?", "Have I met the first condition?", "What is filling my jug?", "Could I tell the difference between insight and what I simply want to be true?"],
     nodes: ["knowledge", "mirror"],
-    model: chain("The stated order", "Ghazali makes each stage conditional on the one before.", [["Purity", "Turning from appetite and holding to obedience.", "support"], ["Remembrance", "The heart becomes occupied with God rather than with what filled it.", "balance"], ["Unveiling", "What was always there becomes visible as the obstruction lifts.", "balance"], ["The triumph", "The meeting toward which the whole sequence was ordered.", "support"]]),
+    model: chain("The order Ghazali gives", "Each step depends on the one before.", [["Purity", "Turning away from desire and holding on to obedience.", "support"], ["Remembrance", "The heart gets busy with God instead of what used to fill it.", "balance"], ["Unveiling", "What was always there becomes visible as the curtain lifts.", "balance"], ["The prize", "Meeting God, which the whole path was leading to.", "support"]]),
   }),
   makeChapter({
-    id: 11, shortTitle: "Where thoughts come from", formalTitle: "How destructive suggestions gain influence over the heart",
+    id: 11, shortTitle: "Where thoughts come from", formalTitle: "How harmful whispers get a grip on the heart",
     overview: "Ghazali moves from knowing to the stream of thoughts running through the heart. He traces the chain that turns a passing thought into an action, and explains where good and bad thoughts come from.",
     thesis: "Every action starts as a passing thought, and thoughts that call to good and thoughts that call to evil point to two different sources: an angel and a devil.",
     moves: [
@@ -317,10 +317,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Watch one passing thought today all the way along the chain, and notice where you could still have stopped it.",
     audit: ["Where along the chain do I usually notice?", "What is my desire feeding?", "Has a bad idea ever come to me dressed as a good one?", "Which of the two touches did I feel most today?"],
     nodes: ["thought", "resolve", "action"],
-    model: chain("From prompting to limb", "Ghazali's chain runs one way and can be interrupted at any link.", [["Prompting", "A thought occurs after the heart had been heedless of it.", "balance"], ["Desire", "The thought moves inclination in the nature.", "warning"], ["Resolve", "Inclination hardens into a settled aim.", "warning"], ["Intention", "The aim becomes a determination to act.", "warning"], ["The limbs", "The body carries out what the heart has settled.", "warning"]]),
+    model: chain("From a thought to an action", "The chain runs one way, and you can break it at any link.", [["Prompting", "A thought pops into a heart that wasn't thinking about it.", "balance"], ["Desire", "The thought stirs a pull toward it.", "warning"], ["Resolve", "The pull hardens into a clear aim.", "warning"], ["Intention", "The aim becomes a decision to act.", "warning"], ["The body", "The body does what the heart has decided.", "warning"]]),
   }),
   makeChapter({
-    id: 12, shortTitle: "The gates of the heart", formalTitle: "The principal ways destructive suggestions enter",
+    id: 12, shortTitle: "The gates of the heart", formalTitle: "The main doors harmful whispers come through",
     overview: "Ghazali pictures the heart as a fort and turns the picture into a duty: guarding your heart is required, you can't guard gates you don't know, so knowing the gates is required too. Then he names the widest ones.",
     thesis: "The devil gets into the heart through your own traits, so knowing those traits — anger, greed, envy, love of money and the rest — is part of guarding your heart.",
     moves: [
@@ -343,10 +343,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Name your own widest gate — not the one you'd prefer to have — and watch it for a day.",
     audit: ["Which gate is widest in me?", "What does the devil usually bring through it?", "When did I last notice I was angry while it was happening?", "Whom do I flatter because I want something from them?"],
     nodes: ["guard", "anger", "appetite"],
-    model: chain("Why knowing the gates is obligatory", "Ghazali builds the duty as an argument rather than an exhortation.", [["Guard the heart", "Protecting it from suggestion is required of every responsible person.", "support"], ["Guard the gates", "A fort is kept only by holding its entrances.", "balance"], ["Know the gates", "Gates that are not known cannot be held.", "balance"], ["So knowing is required", "What the duty cannot be discharged without is itself a duty.", "support"]]),
+    model: chain("Why you must know the doors", "Ghazali proves this duty step by step.", [["Guard the heart", "Every responsible person must protect their heart from harmful whispers.", "support"], ["Guard the gates", "A fort is only safe if its entrances are held.", "balance"], ["Know the gates", "You can't guard doors you don't know about.", "balance"], ["So knowing is required", "Anything you need in order to do a duty becomes a duty too.", "support"]]),
   }),
   makeChapter({
-    id: 13, shortTitle: "Are you blamed for your thoughts?", formalTitle: "Passing thoughts, inclination, resolve, and moral responsibility",
+    id: 13, shortTitle: "Are you blamed for your thoughts?", formalTitle: "Passing thoughts, the pull toward them, decisions, and blame",
     overview: "Will you be held responsible for bad thoughts? Ghazali says the question can't be answered until you lay out the heart's steps in order, from a thought first appearing to the body acting. Then he answers, step by step.",
     thesis: "A passing thought and a pull of desire aren't held against you; a firm decision is — and a bad decision you drop for God's sake becomes a good deed.",
     moves: [
@@ -367,10 +367,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Take one thought you felt ashamed of, and honestly find which of the four steps you actually reached.",
     audit: ["Did I stop at the thought, or reach a decision?", "What held me back last time — shame, fear, or God?", "How long did I listen before it became a decision?", "Am I blaming myself for something I never chose?"],
     nodes: ["thought", "resolve"],
-    model: chain("Four states before a limb moves", "Accountability is answered separately at each.", [["Prompting", "A form occurs; outside choice, and pardoned.", "support"], ["Inclination", "Appetite stirs in the nature; also outside choice.", "support"], ["Conviction", "The heart judges that it should be done; Ghazali distinguishes voluntary and involuntary judgment.", "warning"], ["Resolve", "The aim settles into a decided will; this is not the speech of the soul.", "warning"]]),
+    model: chain("Four steps before the body moves", "Ghazali answers the question of blame for each one separately.", [["Prompting", "An idea appears. You didn't choose it, and you are forgiven for it.", "support"], ["Inclination", "Desire stirs. You didn't choose this either.", "support"], ["Conviction", "The heart judges that it should be done. Ghazali separates a judgment you choose from one that just happens.", "warning"], ["Resolve", "The aim settles into a firm decision. This is more than just talking to yourself.", "warning"]]),
   }),
   makeChapter({
-    id: 14, shortTitle: "Can the whispering ever stop?", formalTitle: "Whether destructive suggestions can cease entirely",
+    id: 14, shortTitle: "Can the whispering ever stop?", formalTitle: "Can harmful whispers stop completely?",
     overview: "Does remembering God make the devil's whispering stop completely? Ghazali reports five different answers — and then says all five are right, because the whispering comes in different kinds.",
     thesis: "Whispering comes in three kinds, and remembering God affects each one differently — which is why five competing answers were each right about something.",
     moves: [
@@ -391,10 +391,10 @@ export const book21Chapters: Chapter[] = [
     reflection: "Notice what you expected remembering God to feel like, and where that expectation came from.",
     audit: ["Which kind of whisper am I dealing with?", "Have I judged myself by one description of remembrance?", "What am I holding on to that the devil can whisper about?", "Which step of the staircase am I standing on?"],
     nodes: ["remember", "guard"],
-    model: set("Five accounts of remembrance", "Ghazali's verdict is that the range is describing different things.", [["Cessation", "One account holds that suggestion ceases during remembrance.", "support"], ["Root remains, no effect", "The heart is screened while wholly occupied.", "balance"], ["Dominance falls only", "It whispers from a distance and weakly.", "balance"], ["Rapid alternation", "Each vanishes by turns too quickly to separate.", "balance"], ["Both run together", "Two channels at once, as with two eyes.", "balance"]]),
+    model: set("Five views on remembering God", "Ghazali says the views are describing different kinds of whispering.", [["Cessation", "One view says the whispering stops while you remember God.", "support"], ["It stays, but does nothing", "The heart is shielded while it is fully busy with God.", "balance"], ["It only loses its hold", "It still whispers, but weakly and from far away.", "balance"], ["They take turns", "Each one disappears and returns so fast you can't tell them apart.", "balance"], ["Both at once", "Two things happening together, the way two eyes see at once.", "balance"]]),
   }),
   makeChapter({
-    id: 15, shortTitle: "Three kinds of heart", formalTitle: "The heart's rapid change and three broad conditions",
+    id: 15, shortTitle: "Three kinds of heart", formalTitle: "How fast the heart changes, and three kinds of heart",
     overview: "The book ends on movement. The heart, Ghazali says, is always turning. He sorts hearts into three kinds by where the turning settles — and describes the inner argument that decides the middle kind.",
     thesis: "The heart is always turning, and hearts are sorted by whether that turning has settled toward good, settled toward evil, or is still being fought over.",
     moves: [
@@ -415,42 +415,42 @@ export const book21Chapters: Chapter[] = [
     reflection: "Ask which of the three hearts describes you today — not in general — and notice that the question has to be asked that way.",
     audit: ["Which way is my heart turning today?", "What does my mind usually get asked to do?", "Where do I lose control, even though I'm careful elsewhere?", "Which voice won my last inner argument?"],
     nodes: ["heart", "guard", "steady"],
-    model: chain("What happens to one prompting", "The same arrival is processed differently by the two hearts.", [["A prompting strikes", "Good or caprice occurs to the heart.", "balance"], ["The intellect is consulted", "The heart turns to it for a ruling on what occurred.", "balance"], ["Its habit decides", "It either examines and clarifies, or supplies means for what was wanted.", "warning"], ["Reinforcement follows", "Good draws on good, or the gates open wider the other way.", "warning"]]),
+    model: chain("What happens to one thought", "Two different hearts deal with the same thought differently.", [["A thought arrives", "A good idea, or a selfish one, comes to the heart.", "balance"], ["The heart asks the mind", "It turns to the mind for a verdict on the thought.", "balance"], ["Habit decides", "The mind either looks at it honestly, or finds ways to get what was wanted.", "warning"], ["It gets stronger", "Good leads to more good, or the doors open wider the other way.", "warning"]]),
   }),
 ];
 
 export const book21MirrorSubjects: MirrorSubject[] = [
   {
     id: "religious-truth", label: "A religious truth", subject: "Something in religion you have never been able to see clearly",
-    note: "Ghazali applies the third and fourth obstructions to the obedient and to the learned specifically, so a good record elsewhere is not evidence against them here.",
+    note: "Ghazali applies the third and fourth blocks especially to people who worship a lot and people who have studied a lot, so a good record elsewhere doesn't rule them out here.",
     obstructions: [
-      { id: "unformed", label: "Unformed", mirrorImage: "Iron before it is shaped and burnished", question: "Is the difficulty simply that you have not yet been formed enough to hold this, as knowledge does not show in a child's heart?", present: "The glass is not finished. This is not a fault to repent of but a stage to pass through, and the treatment is time under instruction rather than more effort now.", absent: "You have the formation this would require, so the obstruction lies further down the list.", remedy: "Take the matter that is one step below this one and secure it properly, rather than pressing on the thing that will not yet hold.", chapterId: 6 },
-      { id: "tarnished", label: "Tarnished", mirrorImage: "A finished mirror clouded with rust", question: "Is the surface clouded by what you have been doing, so that nothing shows clearly in it at present?", present: "Ghazali ties this directly to sins and the accumulation of appetites, and says the resulting clouding prevents the heart's clarity so that the truth cannot appear in it.", absent: "The clouding is not what is standing here, though he notes that a heart is never wholly free of it.", remedy: "Turn from what is clouding it before returning to the question. On his account obedience and the refusal of appetite are what burnish the glass.", chapterId: 6 },
-      { id: "turned-away", label: "Turned away", mirrorImage: "A clear mirror facing elsewhere", question: "Is the glass sound, but aimed at something else entirely, including at good things?", present: "This is the obstruction Ghazali assigns to the obedient. A pure heart wholly taken up with the details of bodily obedience or the arrangements of livelihood is not facing the thing it wants to see.", absent: "Your attention is genuinely on this, so what stands between you is not the direction you are facing.", remedy: "Give the matter its own undivided attention rather than expecting it to appear beside everything else you are attending to.", chapterId: 6 },
-      { id: "veiled", label: "Veiled", mirrorImage: "A curtain hung between the glass and the object", question: "Is there a conviction you took on before you could examine it, which now stands between you and this?", present: "Ghazali presses this one hardest. He says it veils most of the theologians and partisans of schools, and even the pious who reflect, because convictions accepted in childhood by good opinion have hardened and become the barrier.", absent: "You can identify where your conviction on this came from and when you examined it, so the curtain is not what is hanging here.", remedy: "Name the conviction, say plainly where you got it, and ask whether you have ever tested it or only defended it.", chapterId: 6 },
-      { id: "misdirected", label: "Misdirected", mirrorImage: "Not knowing where the object stands", question: "Do you know which two things you already know would have to be joined for this to become clear?", present: "No sought knowledge is caught except by the net of knowledge already held, and each arises from two prior ones coupling in a particular way. Not knowing which two is a distinct obstruction from not having them.", absent: "You can name the route, so what remains is the work of travelling it.", remedy: "Stop pressing on the conclusion and go looking for the two things it would have to be built from.", chapterId: 6 },
+      { id: "unformed", label: "Unformed", mirrorImage: "Iron before it is shaped and polished", question: "Is the problem simply that you haven't grown enough yet to hold this, the way knowledge doesn't show in a child's heart?", present: "The mirror isn't finished. That isn't a sin to repent of but a stage to grow through. The fix is time and teaching, not more effort right now.", absent: "You have grown enough for this, so the block is further down the list.", remedy: "Take the idea one step below this one and get it properly clear, instead of pushing on the one that won't settle yet.", chapterId: 6 },
+      { id: "tarnished", label: "Tarnished", mirrorImage: "A finished mirror clouded with rust", question: "Is the surface fogged up by things you have been doing, so nothing shows clearly right now?", present: "Ghazali links this directly to sins and piled-up desires. He says the fog stops the heart being clear, so the truth can't show in it.", absent: "Fog isn't the main problem here — though he says no heart is ever completely free of it.", remedy: "Turn away from whatever is fogging it before coming back to the question. Ghazali says obeying God and refusing desires are what polish the mirror.", chapterId: 6 },
+      { id: "turned-away", label: "Turned away", mirrorImage: "A clear mirror facing elsewhere", question: "Is the mirror clean, but pointed at something else — even at good things?", present: "This is the block Ghazali gives to people who worship a lot. A pure heart completely taken up with the details of worship or with earning a living isn't facing what it wants to see.", absent: "Your attention really is on this, so the direction you face isn't the problem.", remedy: "Give this its own full attention, instead of expecting it to show up alongside everything else you are busy with.", chapterId: 6 },
+      { id: "veiled", label: "Veiled", mirrorImage: "A curtain hung between the glass and the object", question: "Is there a belief you took on before you could check it, which now stands between you and this?", present: "Ghazali pushes hardest on this one. He says it blocks most scholars of theology and people loyal to a group, and even good people who think deeply, because beliefs they trustingly took in as children have hardened into a wall.", absent: "You know where your belief came from and when you checked it, so the curtain isn't what's in the way.", remedy: "Name the belief, say plainly where you got it, and ask whether you have ever tested it or only defended it.", chapterId: 6 },
+      { id: "misdirected", label: "Misdirected", mirrorImage: "Not knowing where to look", question: "Do you know which two things you already know need to be put together for this to become clear?", present: "You only catch new knowledge with the net of what you already know. Each new thing comes from joining two things you know in the right way. Not knowing which two is a different problem from not having them.", absent: "You can name the route, so what is left is the work of following it.", remedy: "Stop pushing on the answer, and go and look for the two things it has to be built from.", chapterId: 6 },
     ],
   },
   {
-    id: "own-fault", label: "A fault of your own", subject: "Something about yourself you suspect but cannot bring into focus",
-    note: "The five apply to self-knowledge as readily as to anything else, and Book 22 will treat the routes by which a person's faults are shown to him.",
+    id: "own-fault", label: "A fault of your own", subject: "Something about yourself you suspect but can't quite see",
+    note: "The five work for knowing yourself just as well as anything else. Book 22 looks at the ways a person's faults can be shown to them.",
     obstructions: [
-      { id: "unformed", label: "Unformed", mirrorImage: "Iron before it is shaped and burnished", question: "Have you yet developed the discernment this particular fault would require in order to be seen?", present: "Some faults are invisible until a person has been formed enough to recognise them, which is why Ghazali treats the child's heart as a case of the same obstruction.", absent: "You are capable of seeing this kind of thing in others, so you are capable of seeing it here.", remedy: "Learn the fault's shape from where it is easier to see, in a description or in someone who has named it in himself.", chapterId: 6 },
-      { id: "tarnished", label: "Tarnished", mirrorImage: "A finished mirror clouded with rust", question: "Is the very habit you are trying to see also the thing clouding the glass you would see it with?", present: "This is the hardest form of the second obstruction, because the fault is both the object and the obstruction, and each round of it makes the next round less visible.", absent: "The clouding is general rather than caused by this particular thing.", remedy: "Break the habit once before trying to assess it, since Ghazali holds that the clearing precedes the seeing rather than following it.", chapterId: 6 },
-      { id: "turned-away", label: "Turned away", mirrorImage: "A clear mirror facing elsewhere", question: "Is your attention fixed on your record of good actions rather than on this?", present: "Ghazali's own example is a heart occupied with the details of obedience. Attention spent on what is going well is attention not aimed at what is not.", absent: "You are looking at this rather than around it.", remedy: "Set the good record aside for the length of the examination. It is not evidence either way about the thing you are trying to see.", chapterId: 6 },
-      { id: "veiled", label: "Veiled", mirrorImage: "A curtain hung between the glass and the object", question: "Is there a settled belief about the kind of person you are that this fault would have to pass through?", present: "A conviction about one's own character functions exactly as the fourth obstruction does: it was formed early, was never examined, and now decides in advance what can be seen.", absent: "Your account of yourself is loose enough to admit this.", remedy: "State the belief about yourself out loud, and ask what evidence would be allowed to count against it.", chapterId: 6 },
-      { id: "misdirected", label: "Misdirected", mirrorImage: "Not knowing where the object stands", question: "Are you looking for the fault in your actions when it lives in your motives, or the reverse?", present: "Ghazali's image for the fifth is a person trying to see the back of his own head, who needs two mirrors in a particular relation. Looking in the wrong plane is a real obstruction and not a lack of effort.", absent: "You are looking in the right register.", remedy: "Use the arrangement he describes: get a second surface, which in practice means another person who can see the side you cannot.", chapterId: 6 },
+      { id: "unformed", label: "Unformed", mirrorImage: "Iron before it is shaped and polished", question: "Have you grown enough yet to be able to see this particular fault?", present: "Some faults are invisible until a person has grown enough to recognise them. That is why Ghazali treats a child's heart as an example of the same block.", absent: "You can see this kind of thing in other people, so you can see it here.", remedy: "Learn what the fault looks like where it is easier to see — in a description, or in someone who has admitted it in themselves.", chapterId: 6 },
+      { id: "tarnished", label: "Tarnished", mirrorImage: "A finished mirror clouded with rust", question: "Is the habit you are trying to see also the thing fogging the mirror you would see it with?", present: "This is the hardest form of the second block, because the fault is both what you are looking at and what's in the way. Each time you do it, the next time gets harder to see.", absent: "The fog is general, not caused by this one thing.", remedy: "Break the habit once before trying to judge it. Ghazali says the clearing comes before the seeing, not after.", chapterId: 6 },
+      { id: "turned-away", label: "Turned away", mirrorImage: "A clear mirror facing elsewhere", question: "Is your attention fixed on the good things you do instead of on this?", present: "Ghazali's own example is a heart busy with the details of worship. Attention spent on what's going well isn't aimed at what isn't.", absent: "You are looking right at this, not around it.", remedy: "Put your good record to one side while you look. It proves nothing either way about the thing you are trying to see.", chapterId: 6 },
+      { id: "veiled", label: "Veiled", mirrorImage: "A curtain hung between the glass and the object", question: "Is there a fixed idea about what kind of person you are that this fault would have to get past?", present: "A belief about your own character works exactly like the fourth block. It formed early, was never checked, and now decides in advance what you are allowed to see.", absent: "Your picture of yourself is open enough to let this in.", remedy: "Say the belief about yourself out loud, and ask what evidence you would accept against it.", chapterId: 6 },
+      { id: "misdirected", label: "Misdirected", mirrorImage: "Not knowing where to look", question: "Are you looking for the fault in what you do when it's really in why you do it — or the other way round?", present: "Ghazali's picture for the fifth block is someone trying to see the back of their own head, who needs two mirrors set up just right. Looking in the wrong place is a real block, not laziness.", absent: "You are looking in the right place.", remedy: "Use the set-up he describes: get a second mirror — in real life, another person who can see the side you can't.", chapterId: 6 },
     ],
   },
   {
     id: "decision", label: "A decision", subject: "A choice you keep turning over without it resolving",
-    note: "This subject is not one Ghazali names, but the five obstructions are stated as exhaustive for anything a heart is trying to see, so the transfer is his rather than an addition.",
+    note: "Ghazali doesn't name this subject, but he says the five blocks cover anything a heart is trying to see, so using them here is his idea, not ours.",
     obstructions: [
-      { id: "unformed", label: "Unformed", mirrorImage: "Iron before it is shaped and burnished", question: "Is this a decision you are not yet in a position to make, whatever you do with it now?", present: "Some matters do not resolve because the person facing them has not yet become the person who could.", absent: "The capacity is there.", remedy: "Name what would have to be true of you for this to be decidable, and work on that instead of on the decision.", chapterId: 6 },
-      { id: "tarnished", label: "Tarnished", mirrorImage: "A finished mirror clouded with rust", question: "Is an appetite attached to one of the outcomes?", present: "Where an appetite is attached, Book 30's account applies directly: the reasoning will find its way to the answer that agrees with the want, and will feel like reasoning throughout.", absent: "No outcome here is one you are hungry for.", remedy: "Decide it as if the appealing option were unavailable, and see what the reasoning says then.", chapterId: 6 },
-      { id: "turned-away", label: "Turned away", mirrorImage: "A clear mirror facing elsewhere", question: "Are you actually considering this, or considering how it will look?", present: "The glass is sound and pointed at the wrong object. What is being examined is the reception of the decision rather than the decision.", absent: "You are looking at the matter itself.", remedy: "Settle the question with the audience removed entirely, which is the test Book 29 makes its instrument.", chapterId: 6 },
-      { id: "veiled", label: "Veiled", mirrorImage: "A curtain hung between the glass and the object", question: "Did you inherit a rule about this kind of choice that you have never examined?", present: "An unexamined rule about what people like you do is the fourth obstruction in its ordinary form, and it decides before the deliberation begins.", absent: "You can say where your rule came from.", remedy: "Separate the rule from the case, state it as a claim, and ask whether you would defend it if someone else applied it to you.", chapterId: 6 },
-      { id: "misdirected", label: "Misdirected", mirrorImage: "Not knowing where the object stands", question: "Are you missing a piece of information that no amount of further thinking will supply?", present: "The fifth obstruction is not a failure of effort. Some things do not become clear by more reflection because reflection is not where they are found.", absent: "You have what you need and the difficulty is elsewhere.", remedy: "Stop deliberating and go and find the missing thing, or accept that it cannot be had and decide under that condition.", chapterId: 6 },
+      { id: "unformed", label: "Unformed", mirrorImage: "Iron before it is shaped and polished", question: "Is this a decision you aren't ready to make yet, whatever you do with it now?", present: "Some things don't get settled because the person facing them hasn't yet become someone who could settle them.", absent: "You are able to decide this.", remedy: "Name what would need to be true about you for this to be decidable, and work on that instead of the decision.", chapterId: 6 },
+      { id: "tarnished", label: "Tarnished", mirrorImage: "A finished mirror clouded with rust", question: "Is a desire attached to one of the outcomes?", present: "When a desire is attached, Book 30 applies directly: your reasoning will find its way to the answer your desire wants, and it will feel like reasoning the whole time.", absent: "None of the outcomes is one you are hungry for.", remedy: "Decide it as if the tempting option weren't available, and see what your reasoning says then.", chapterId: 6 },
+      { id: "turned-away", label: "Turned away", mirrorImage: "A clear mirror facing elsewhere", question: "Are you really thinking about this, or about how it will look?", present: "The mirror is clean but pointed at the wrong thing. You are looking at how the decision will go down with people, not at the decision.", absent: "You are looking at the matter itself.", remedy: "Settle the question as if nobody would ever know, which is the test Book 29 is built around.", chapterId: 6 },
+      { id: "veiled", label: "Veiled", mirrorImage: "A curtain hung between the glass and the object", question: "Did you pick up a rule about this kind of choice that you have never checked?", present: "An unchecked rule about what people like you do is the fourth block in its everyday form. It decides before the thinking even starts.", absent: "You can say where your rule came from.", remedy: "Separate the rule from this case, say it as a claim, and ask whether you'd accept it if someone else used it on you.", chapterId: 6 },
+      { id: "misdirected", label: "Misdirected", mirrorImage: "Not knowing where to look", question: "Are you missing a piece of information that no amount of thinking will give you?", present: "The fifth block isn't a lack of effort. Some things don't become clear by thinking harder, because thinking isn't where they are found.", absent: "You have what you need, so the problem is somewhere else.", remedy: "Stop going round in circles and go and find the missing piece, or accept you can't have it and decide without it.", chapterId: 6 },
     ],
   },
 ];
@@ -460,83 +460,83 @@ export const book21MirrorSubjects: MirrorSubject[] = [
 // seven further concepts; they are defined here rather than in data.ts so the frozen
 // /isfahan and /world routes keep the vocabulary they were built with.
 const book21ExtraNodes: ConceptNode[] = [
-  ["mirror", "The mirror", "The governing image", "The heart likened to a mirror, in which knowledge is the appearing of a form. Five failures of a mirror give the five reasons a heart lacks what it lacks."],
-  ["knowledge", "Knowledge", "The form appearing", "Defined precisely before the book relies on it, then sorted into rational and religious, and each of those divided again."],
-  ["thought", "The passing thought", "What arrives unbidden", "The first link in the chain that ends at a moving limb. It is not chosen, which is why it is not what a person is answerable for."],
-  ["resolve", "Resolve", "Where answerability begins", "Inclination hardened into settled intent. Ghazali sets the heart's acts in order to locate accountability link by link."],
-  ["guard", "Guarding the gates", "A derived obligation", "Guarding the heart is required; it cannot be done without knowing the entrances; so knowing the entrances is itself required."],
-  ["remember", "Remembrance", "The occupying practice", "What the five reported positions disagree about, and which Ghazali accepts them all concerning, each describing a different strength of prompting."],
-  ["steady", "Turning and settling", "Why it is called the heart", "The heart is named for its turning. Hearts are sorted by whether that turning has settled in a direction."],
+  ["mirror", "The mirror", "The book's main picture", "The heart is like a mirror, and knowing something is its picture appearing there. Five ways a mirror can fail give the five reasons a heart doesn't know what it doesn't know."],
+  ["knowledge", "Knowledge", "The picture appearing", "Ghazali defines it carefully, then sorts it into knowledge from reason and from religion, and divides each again."],
+  ["thought", "The passing thought", "What arrives without being invited", "The first link in the chain that ends with the body acting. You don't choose it, so you aren't blamed for it."],
+  ["resolve", "Resolve", "Where blame begins", "A pull that has hardened into a firm intention. Ghazali lays out the heart's steps in order to show where blame begins."],
+  ["guard", "Guarding the gates", "A duty that follows from another", "You must guard your heart. You can't do that without knowing its doors. So knowing the doors is a duty too."],
+  ["remember", "Remembrance", "Keeping the heart busy", "The five views disagree about what remembering God does to whispering. Ghazali accepts all five, because each describes a different strength of whisper."],
+  ["steady", "Turning and settling", "Why it is called the heart", "In Arabic, “heart” comes from a word for turning over. Hearts are sorted by whether their turning has settled in one direction."],
 ].map(([id, label, kicker, description]) => ({ id, label, kicker, description, position: `node-${id}` }));
 
 export const book21Movements: TaxonomyGroup[] = [
-  { id: "forces", label: "The heart and its forces", description: "The four words and their meanings, the armies of the heart, the city image, and the recurring dispositions.", color: "#b45f4c", chapterIds: [1, 2, 3, 4, 5] },
-  { id: "knowing", label: "The heart and knowing", description: "The mirror as the governing image, the kinds of knowledge, how knowledge arrives, and the testimony for a knowing that does not proceed by instruction.", color: "#2c78b8", chapterIds: [6, 7, 8, 9, 10] },
-  { id: "thoughts", label: "The traffic of thoughts", description: "How suggestions gain influence, the gates and the duty to know them, where answerability begins, and why the heart is named for its turning.", color: "#3a9b88", chapterIds: [11, 12, 13, 14, 15] },
+  { id: "forces", label: "The heart and its forces", description: "The four words and their meanings, the heart's armies, the picture of the city, and the character patterns that keep coming back.", color: "#b45f4c", chapterIds: [1, 2, 3, 4, 5] },
+  { id: "knowing", label: "The heart and knowing", description: "The mirror, the kinds of knowledge, how knowledge arrives, and the evidence for knowing that doesn't come from teaching.", color: "#2c78b8", chapterIds: [6, 7, 8, 9, 10] },
+  { id: "thoughts", label: "The flow of thoughts", description: "How whispers get a grip, the doors and the duty to know them, where blame begins, and why the heart is named for turning.", color: "#3a9b88", chapterIds: [11, 12, 13, 14, 15] },
 ];
 
 export const book21ConceptNodes: ConceptNode[] = [...conceptNodes, ...book21ExtraNodes];
 
 const book21ConceptLab: ConceptLab = {
   kind: "courtyard",
-  title: "Who governs the inner city?",
-  note: "Hold every faculty in view while changing only the chain of command. The parts do not become good or bad by disappearing; their order changes what the whole person becomes.",
-  prompt: "Compare the same inner city under three governments",
+  title: "Who is running the city inside you?",
+  note: "Keep every part in view and change only who is in charge. The parts don't become good or bad by disappearing. Their order changes what the whole person becomes.",
+  prompt: "Compare the same inner city under three different rulers",
   architecture: {
     form: "Four-iwan courtyard",
     reference: "Masjed-e Jāme’ of Isfahan",
-    note: "The four-iwan plan is borrowed as a spatial memory aid. The diagram is editorial and is not an analogy found in Ghazali's text.",
+    note: "The four-iwan plan is borrowed as a picture to help you remember. The diagram is our own, not a comparison Ghazali makes.",
     url: "https://whc.unesco.org/en/list/1397",
   },
   scenes: [
     {
-      id: "ordered", label: "Ordered city", chapterId: 3,
-      setup: "The heart governs, reflective intellect advises, and appetite and anger perform the limited work for which they were given.",
-      takeaway: "Discipline is not the destruction of appetite or anger. It is the restoration of a proper government in which both remain useful and neither rules.",
+      id: "ordered", label: "A well-run city", chapterId: 3,
+      setup: "The heart leads, the thinking mind advises, and desire and anger do the limited jobs they were made for.",
+      takeaway: "Discipline doesn't mean destroying desire or anger. It means putting things back in order, so both stay useful and neither is in charge.",
       steps: [
-        { id: "heart", label: "Heart", micro: "The governor", body: "The knowing, responsible self receives counsel and directs the other forces toward the journey for which the person was made.", role: "support", position: "center" },
-        { id: "intellect", label: "Intellect", micro: "The wise adviser", body: "Reflective intellect sees outcomes and advises the heart. Good order begins when this counsel is preferred over appetite's disguised advice.", role: "support", position: "north" },
-        { id: "appetite", label: "Appetite", micro: "Draws what benefits", body: "Appetite draws provision toward the body. It is needed, but its claim about what is beneficial must be judged rather than simply obeyed.", role: "balance", position: "east" },
-        { id: "anger", label: "Anger", micro: "Repels what harms", body: "Anger guards and repels harm. In a sound order it is directed by judgment and can be used to restrain appetite rather than enforce it.", role: "balance", position: "west" },
-        { id: "limbs", label: "Senses and limbs", micro: "Report and carry out", body: "The senses bring reports inward like scouts, and the limbs carry decisions outward. They serve the direction established above them.", role: "support", position: "south" },
+        { id: "heart", label: "Heart", micro: "The leader", body: "The part of you that knows and is responsible listens to advice and steers the other forces toward the journey you were made for.", role: "support", position: "center" },
+        { id: "intellect", label: "Intellect", micro: "The wise adviser", body: "The thinking mind sees where things lead and advises the heart. Things go well when its advice beats desire's disguised advice.", role: "support", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Draws what benefits", body: "Desire pulls in what the body needs. You need it, but when it says something is good for you, that has to be checked, not just obeyed.", role: "balance", position: "east" },
+        { id: "anger", label: "Anger", micro: "Repels what harms", body: "Anger guards you and pushes harm away. When things are in order, judgment steers it, and it can even hold desire back instead of helping it.", role: "balance", position: "west" },
+        { id: "limbs", label: "Senses and body", micro: "Report and carry out", body: "The senses bring news in like scouts, and the body carries decisions out. They serve the direction set above them.", role: "support", position: "south" },
       ],
     },
     {
-      id: "appetite-rules", label: "Appetite rules", chapterId: 5,
-      setup: "The visible person may remain capable and intelligent, but intellect is recruited to devise better ways of satisfying a want.",
-      takeaway: "Intelligence does not prove good government. A highly capable intellect can become appetite's strategist, making an inverted order more effective.",
+      id: "appetite-rules", label: "Desire in charge", chapterId: 5,
+      setup: "The person may still look capable and clever, but their mind has been put to work finding better ways to get what they want.",
+      takeaway: "Being clever doesn't mean you are well run. A very sharp mind can become desire's planner and make the upside-down order work even better.",
       steps: [
-        { id: "heart", label: "Heart", micro: "A ruler in name", body: "The heart retains responsibility but has yielded practical command. It approves what appetite wants after the reasons have been supplied.", role: "warning", position: "center" },
-        { id: "intellect", label: "Intellect", micro: "Recruited strategist", body: "Reasoning is not absent. It is busy devising means, justifications, and routes to the object appetite already selected.", role: "warning", position: "north" },
-        { id: "appetite", label: "Appetite", micro: "Sets the destination", body: "What should have fetched provision now decides what the whole city is for. Its wants arrive in the form of advice rather than announcing themselves as appetite.", role: "warning", position: "east" },
-        { id: "anger", label: "Anger", micro: "Enforces the want", body: "The guarding force is turned against whatever blocks satisfaction, so resistance feels like an injury that must be overcome.", role: "warning", position: "west" },
-        { id: "limbs", label: "Senses and limbs", micro: "Search and serve", body: "Attention searches for opportunities and the limbs carry out the plan. The machinery works; the government is what has failed.", role: "balance", position: "south" },
+        { id: "heart", label: "Heart", micro: "A leader in name only", body: "The heart is still responsible but has handed over control. It signs off on what desire wants once the excuses have been supplied.", role: "warning", position: "center" },
+        { id: "intellect", label: "Intellect", micro: "Hired planner", body: "Thinking hasn't stopped. It is busy finding ways, excuses and routes to whatever desire already picked.", role: "warning", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Picks where to go", body: "The part meant to fetch supplies now decides what the whole city is for. Its wants show up looking like advice instead of admitting they are desires.", role: "warning", position: "east" },
+        { id: "anger", label: "Anger", micro: "Enforces what it wants", body: "The guarding force gets turned on anything that blocks what you want, so being told no feels like an injury you have to fight.", role: "warning", position: "west" },
+        { id: "limbs", label: "Senses and body", micro: "Look and deliver", body: "Attention hunts for chances and the body carries out the plan. Everything works — it's the leadership that has failed.", role: "balance", position: "south" },
       ],
     },
     {
-      id: "anger-rules", label: "Anger rules", chapterId: 5,
-      setup: "The guard becomes the ruler. Perception scans for offence, reasoning proves the need to prevail, and action follows before judgment can recover its place.",
-      takeaway: "Anger is not condemned merely for being forceful. The danger is a guarding power becoming the source of judgment and making every faculty serve retaliation.",
+      id: "anger-rules", label: "Anger in charge", chapterId: 5,
+      setup: "The guard becomes the ruler. The senses look for insults, thinking proves you must win, and you act before judgment can get its place back.",
+      takeaway: "Anger isn't blamed just for being strong. The danger is when the guard starts making the decisions and every part of you serves getting even.",
       steps: [
-        { id: "heart", label: "Heart", micro: "Carried by the guard", body: "The responsible self is moved by the force that was meant to serve it, so urgency is mistaken for authority.", role: "warning", position: "center" },
-        { id: "intellect", label: "Intellect", micro: "Builds the case", body: "Reasoning collects evidence for injury and victory. Its skill remains, but its conclusion has effectively been chosen before inquiry begins.", role: "warning", position: "north" },
-        { id: "appetite", label: "Appetite", micro: "Supplies the reward", body: "Appetite can support anger with the imagined satisfaction of winning, status, or relief after retaliation.", role: "balance", position: "east" },
-        { id: "anger", label: "Anger", micro: "Commands the city", body: "The power made to repel harm now defines what counts as harm and orders the response. Guard and governor have exchanged places.", role: "warning", position: "west" },
-        { id: "limbs", label: "Senses and limbs", micro: "Scan and strike", body: "The senses notice confirming signs of offence and the limbs enact the answer, often before a wider account can enter.", role: "warning", position: "south" },
+        { id: "heart", label: "Heart", micro: "Swept along by the guard", body: "The responsible self is pushed around by the force that was meant to serve it, so feeling urgent gets mistaken for being right.", role: "warning", position: "center" },
+        { id: "intellect", label: "Intellect", micro: "Makes the case", body: "Thinking collects proof that you were hurt and should win. It is still skilful, but the answer was chosen before it started looking.", role: "warning", position: "north" },
+        { id: "appetite", label: "Appetite", micro: "Adds the reward", body: "Desire can back anger up with the imagined pleasure of winning, looking strong, or the relief of getting even.", role: "balance", position: "east" },
+        { id: "anger", label: "Anger", micro: "Runs the city", body: "The force made to push harm away now decides what counts as harm and orders the response. The guard and the leader have swapped places.", role: "warning", position: "west" },
+        { id: "limbs", label: "Senses and body", micro: "Look and hit back", body: "The senses notice anything that looks like an insult, and the body answers, often before a bigger picture can get in.", role: "warning", position: "south" },
       ],
     },
   ],
 };
 
 const book21Sources: SourceLink[] = [
-  { label: "Primary Arabic text", note: "The complete public Arabic of Book 21 was read and used to establish the four senses of heart, spirit, soul and intellect, the armies that serve the heart, the mirror and its five obstructions, the chain from passing thought to act, and the three conditions of the heart.", url: "https://shamela.ws/book/9472/748" },
-  { label: "The armies of the heart", note: "The passage deriving the inward and outward forces from what the heart's journey requires, and reducing them to will, power, and knowledge.", url: "https://shamela.ws/book/9472/751" },
-  { label: "Three analogies", note: "The passage giving the realm with its ministers, the frontier post, and the rider with horse and hound, in which appetite and anger are equipment rather than enemies.", url: "https://shamela.ws/book/9472/753" },
-  { label: "The mirror and its obstructions", note: "The passage comparing the heart to a mirror and naming the five reasons a heart lacks what it lacks, including the clear mirror turned the wrong way.", url: "https://shamela.ws/book/9472/759" },
-  { label: "The reservoir and the two walls", note: "The passage giving the two tangible examples: channels dug from outside against springs opened from within, and the painters set against the polishers.", url: "https://shamela.ws/book/9472/766" },
-  { label: "How suggestions gain influence", note: "The passage on the promptings of the heart, the argument from smoke and light that unlike effects indicate unlike causes, and the naming of angel and devil.", url: "https://shamela.ws/book/9472/772" },
-  { label: "The chain and what is held against a person", note: "The passage running from passing thought to desire, resolve, intention and act, and settling which links a person answers for.", url: "https://shamela.ws/book/9472/787" },
-  { label: "The three conditions of the heart", note: "The passage on the heart's rapid change and its three broad states, which the book's closing section presents.", url: "https://shamela.ws/book/9472/791" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 21 was read and used for the four meanings of heart, spirit, soul and mind, the armies that serve the heart, the mirror and the five things that block it, the chain from a passing thought to an act, and the three kinds of heart.", url: "https://shamela.ws/book/9472/748" },
+  { label: "The armies of the heart", note: "The passage that works out the inner and outer forces from what the heart's journey needs, and sorts them into will, power and knowledge.", url: "https://shamela.ws/book/9472/751" },
+  { label: "Three analogies", note: "The passage with the kingdom and its ministers, the border fort, and the rider with his horse and hunting dog, where desire and anger are equipment rather than enemies.", url: "https://shamela.ws/book/9472/753" },
+  { label: "The mirror and its obstructions", note: "The passage comparing the heart to a mirror and naming the five reasons a heart doesn't know what it doesn't know, including the clear mirror facing the wrong way.", url: "https://shamela.ws/book/9472/759" },
+  { label: "The reservoir and the two walls", note: "The passage with the two pictures: channels dug from outside compared with springs opened from within, and the painters compared with the polishers.", url: "https://shamela.ws/book/9472/766" },
+  { label: "How suggestions gain influence", note: "The passage on the thoughts that come to the heart, the argument from smoke and light that different effects have different causes, and the naming of angel and devil.", url: "https://shamela.ws/book/9472/772" },
+  { label: "The chain and what is held against a person", note: "The passage going from a passing thought to desire, decision, intention and act, and settling which of these a person is answerable for.", url: "https://shamela.ws/book/9472/787" },
+  { label: "The three conditions of the heart", note: "The passage on how fast the heart changes and its three kinds, presented in the book's last section.", url: "https://shamela.ws/book/9472/791" },
   { label: "Published Book 21 edition", note: "Walter James Skellie translation, edited by T. J. Winter. Used for title and chapter cross-checking, not copied as page text.", url: "https://fonsvitae.com/product/al-ghazali-the-marvels-of-the-heart-science-of-the-spirit-book-xxi-of-the-revival-of-the-religious-sciences/" },
   { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
@@ -552,14 +552,14 @@ export const book21: SystemBook = {
   sources: book21Sources,
   taxonomy: {
     title: "The book's three movements",
-    note: "Ghazali announces no numbered contents for this book, so these follow the turn of his own argument: the heart and its forces, the heart and knowing, and the traffic of thoughts.",
+    note: "Ghazali gives no numbered contents list for this book, so these groups follow the turns of his argument: the heart and its forces, the heart and knowing, and the flow of thoughts.",
     groups: book21Movements,
   },
   conceptLab: book21ConceptLab,
   mirrorObstructions: {
-    title: "The five obstructions",
-    note: "Ghazali gives five reasons a mirror fails to show a form and states that hearts lack the knowledge they lack for these reasons and no others. Choose something you are trying to see clearly and work the five in order. This locates an obstruction so that the fitting treatment can begin; it settles nothing about the matter you were trying to see.",
+    title: "The five blocks",
+    note: "Ghazali gives five reasons a mirror fails to show a picture, and says these are the only reasons a heart doesn't know what it doesn't know. Pick something you are trying to see clearly and go through the five in order. This helps you find what is in the way so the right fix can start. It doesn't decide anything about the matter itself.",
     items: book21MirrorSubjects,
   },
-  editorialNote: "The journeys, fifteen reading sections, visual models, and five obstructions are editorial learning aids. The fifteen sections preserve the fifteen expositions Ghazali gives in his own order; he announces no numbered contents list for this book, so the sequence follows his headings. The English is an original synthesis made from a complete reading of the public Arabic text, not a translation and not a substitute for one. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration. Ghazali declines to explain the connection between the knowing subtlety and the bodily heart, and declines to discuss the reality of the spirit; where he stops, this synthesis stops. The five obstructions cannot pronounce on what is true in the matter examined. Complex personal cases require the complete Arabic, a reliable full edition, and qualified scholarly guidance.",
+  editorialNote: "The journeys, fifteen reading sections, diagrams and five blocks are learning aids made for this edition. The fifteen sections follow the fifteen parts Ghazali gives, in his order; he gives no numbered contents list for this book, so the order follows his headings. The English explains the ideas of the public Arabic text in plain words; it is not a translation. Reports and stories are given as Ghazali passed them on; this edition does not grade every one. Ghazali chooses not to explain how the knowing self is linked to the physical heart, or what the spirit really is, and where he stops, this edition stops.",
 };
