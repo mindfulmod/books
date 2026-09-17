@@ -120,6 +120,27 @@ const mapPositions = {
   ],
 } as const;
 
+// The hand-placed layouts above cover the common journey lengths. Longer journeys — Book 40
+// walks the whole sequence after the trumpet — are laid out as a serpentine of rows of four,
+// so a journey never has to be cut short to fit the map.
+const serpentinePositions = (count: number): Array<readonly [number, number]> => {
+  const rows = Math.max(1, Math.ceil(count / 4));
+  return Array.from({ length: count }, (_, index) => {
+    const row = Math.floor(index / 4);
+    const inRow = index % 4;
+    const rowCount = Math.min(4, count - row * 4);
+    const across = rowCount === 1 ? 0.5 : inRow / (rowCount - 1);
+    const x = 12 + (row % 2 === 0 ? across : 1 - across) * 73;
+    const y = rows === 1 ? 50 : 20 + (row / (rows - 1)) * 60;
+    return [x, y] as const;
+  });
+};
+
+// The hand-drawn route below matches the hand-placed layouts. For a serpentine one the line has
+// to be drawn from the same points the stages sit on, or it runs through empty space.
+const routeThrough = (points: ReadonlyArray<readonly [number, number]>) =>
+  points.map(([x, y], index) => `${index === 0 ? "M" : "L"}${(x * 10).toFixed(0)} ${(y * 5).toFixed(0)}`).join(" ");
+
 const STORAGE_KEY = "ihya-system-state-v2";
 const LEGACY_STORAGE_KEY = "ihya-system-state-v1";
 
@@ -1813,7 +1834,10 @@ function SystemApp() {
   const deepExperience = getDeepExperience(book, chapter.id);
   const nodeKey = overrideChapter ? chapterKey(book.id, overrideChapter.id) : ideaKey(book.id, journey.id, node.id);
   const isBookmarked = saved.bookmarks.includes(nodeKey);
-  const positions = mapPositions[journey.nodes.length as 4 | 5 | 6];
+  const positions = mapPositions[journey.nodes.length as 4 | 5 | 6] ?? serpentinePositions(journey.nodes.length);
+  const routePath = mapPositions[journey.nodes.length as 4 | 5 | 6]
+    ? "M110 125 C230 125 250 125 350 125 S535 125 610 125 S805 125 850 235 S780 382 645 385 S440 385 330 385"
+    : routeThrough(positions);
   const relatedConcepts = useMemo(
     () => book.conceptNodes.filter((concept) => chapter.relatedNodes.includes(concept.id)),
     [book, chapter],
@@ -2444,12 +2468,12 @@ return (
                   <path d="M 0 0 L 10 5 L 0 10 z" />
                 </marker>
               </defs>
-              <path className="route-shadow" d="M110 125 C230 125 250 125 350 125 S535 125 610 125 S805 125 850 235 S780 382 645 385 S440 385 330 385" />
-              <path className="route-main" markerEnd="url(#route-arrow)" d="M110 125 C230 125 250 125 350 125 S535 125 610 125 S805 125 850 235 S780 382 645 385 S440 385 330 385" />
+              <path className="route-shadow" d={routePath} />
+              <path className="route-main" markerEnd="url(#route-arrow)" d={routePath} />
             </svg>
 
             {journey.nodes.map((item, index) => {
-              const [x, y] = positions[index];
+              const [x, y] = positions[index] ?? [50, 50];
               const isActive = item.id === node.id;
               const wasVisited = saved.visited.includes(ideaKey(book.id, journey.id, item.id));
               return (
