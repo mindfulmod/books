@@ -1,1197 +1,409 @@
 import { assetUrl } from "./assetUrl";
-import type { Chapter, ConceptNode } from "./data";
+import type { Chapter, ConceptNode, VisualModel } from "./data";
 import type { FoodMeasure, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-const book23Base: Chapter[] = [
-  {
-    id: 1,
-    shortTitle: "Why hunger enters the argument",
-    formalTitle: "The merit of hunger and the condemnation of satiety",
-    overview:
-      "Ghazali opens with a causal diagnosis. He treats appetite for food as an early root from which other desires can gain force, then gathers religious reports and sayings to create urgency around restraining satiety. This section states the problem and its religious register before the book explains method and measure.",
-    reflection:
-      "When one desire is repeatedly indulged, notice whether it remains isolated or begins recruiting attention, spending, comparison, and the wish to be seen.",
-    relatedNodes: ["appetite", "hunger", "satiety", "desire"],
-    visualModel: {
-      kind: "chain",
-      title: "Ghazali's proposed root sequence",
-      items: [
-        {
-          label: "Stomach appetite",
-          body: "The prologue treats the appetite for food as an early root because repeated indulgence strengthens the self's demand to be satisfied.",
-          role: "warning",
-        },
-        {
-          label: "Sexual desire",
-          body: "Ghazali places sexual desire next in the sequence and later gives it a separate treatment rather than reducing it to food alone.",
-          role: "warning",
-        },
-        {
-          label: "Wealth and status",
-          body: "The search for resources and standing can then become a means of securing and extending desired pleasures.",
-          role: "warning",
-        },
-        {
-          label: "Rivalry and display",
-          body: "Competition, envy, ostentation, and pride appear as later social forms of a self organized around acquisition and recognition.",
-          role: "warning",
-        },
-      ],
-      caption:
-        "This is Ghazali's moral and causal diagnosis in the prologue, not a claim that modern psychology has established one fixed sequence for every person.",
-    },
-    deep: {
-      thesis:
-        "Ghazali begins with the stomach because he sees ungoverned satisfaction as a training ground from which other appetites learn to rule.",
-      context:
-        "The prologue names food and sexual desire as the book's two subjects. It presents the stomach as a fountain of other appetites, then traces a path toward wealth, status, rivalry, envy, ostentation, and pride. Section one supports that diagnosis by assembling religious testimony about hunger and satiety.",
-      moves: [
-        {
-          title: "Choose a strategic root",
-          body:
-            "Rather than catalogue every vice separately, Ghazali begins with a desire that recurs daily and can train the self to expect immediate satisfaction. The stomach becomes strategic because its discipline may weaken several connected demands.",
-        },
-        {
-          title: "Trace reinforcement outward",
-          body:
-            "His sequence moves from bodily appetite to the resources and recognition that can support it. Wealth and status are not condemned in isolation here; the concern is the way they can become servants of expanding desire.",
-        },
-        {
-          title: "Gather religious witness",
-          body:
-            "Section one accumulates scriptural reports and sayings that praise hunger or criticize satiety. Their role is exhortative: they give the coming discipline a religious seriousness before its benefits and methods are analyzed.",
-        },
-        {
-          title: "Keep need distinct from rule",
-          body:
-            "Later sections make it clear that food is still necessary and that what suits one person will not suit another. The harshness at the start is aimed at appetite running the show, not at pretending people do not need to eat.",
-        },
-        {
-          title: "Note why the stomach comes first",
-          body:
-            "Of all the appetites available, the book starts with the one that recurs every few hours and can never be finally settled. That is what makes it strategic rather than merely important. A desire that returns three times a day, and is satisfied each time, is training the self continuously in one lesson — that wanting is followed by getting — and it is running that lesson more often than any other appetite in a person's life.",
-        },
-        {
-          title: "Follow the outward trace",
-          body:
-            "And the sequence he follows outward is worth noticing: from the stomach to wealth, and from wealth to standing. Neither of the last two is condemned here on its own account. They appear because they are what an expanding appetite recruits — money to supply it and reputation to protect the supply — which is why the two books that follow this one in the quarter are about exactly those, and why this one has to come first.",
-        },
-        {
-          title: "Take the qualification seriously",
-          body:
-            "And the qualification at the end is not a softening added out of politeness. The later sections state plainly that food is necessary, that the target is a balanced nature rather than maximum weakness, and that what suits one person will not suit another. The harshness at the opening is aimed at appetite doing the governing, and a reader who takes the first section as the book's position will build a discipline the fourth section explicitly forbids.",
-        },
-      ],
-      distinction: {
-        title: "Reporting Ghazali's witness is not authenticating every report",
-        firstLabel: "What the section does",
-        first:
-          "It records the Qur'anic references, reports, and sayings through which Ghazali frames restraint as spiritually important.",
-        secondLabel: "What this synthesis does not do",
-        second:
-          "It does not assign a modern hadith grade to each narration or present every transmitted wording as independently verified.",
-      },
-      misreading:
-        "Do not turn the opening praise of hunger into the claim that bodily weakness is good in itself. Ghazali later identifies a balanced condition in which neither fullness nor hunger distracts from worship and thought.",
-      observation:
-        "Follow one ordinary appetite beyond the moment of consumption. What planning, comparison, spending, concealment, or self-presentation gathers around it?",
-      sourceAnchor: "Book 23, prologue and section 1, the merit of hunger and condemnation of satiety.",
-    },
-  },
-  {
-    id: 2,
-    shortTitle: "What hunger is meant to do",
-    formalTitle: "The benefits of hunger and the evils of satiety",
-    overview:
-      "Ghazali lists ten benefits of hunger within his ascetic framework. He compares hunger to medicine: its value is not the unpleasant sensation itself, but the functions it may serve, including clearer attention, a softened heart, humility, compassion, reduced secondary impulses, less sleep, freer time, lighter material demands, and greater capacity to give.",
-    reflection:
-      "Evaluate a discipline by the function it restores. Does it actually free attention, soften conduct, or release resources, or has discomfort itself become the measure of success?",
-    relatedNodes: ["hunger", "attention", "compassion", "measure"],
-    visualModel: {
-      kind: "chain",
-      title: "From restraint to redirected capacity",
-      items: [
-        {
-          label: "Reduced satiety",
-          body: "The starting intervention is less indulgent fullness, not the pursuit of pain as an independent good.",
-          role: "support",
-        },
-        {
-          label: "Lighter demands",
-          body: "Ghazali connects restraint with less sleep, less time spent obtaining and preparing food, and weaker secondary impulses.",
-          role: "support",
-        },
-        {
-          label: "Freer attention",
-          body: "The released capacity is meant to support remembrance, reflection, worship, humility, and awareness of people who lack food.",
-          role: "balance",
-        },
-        {
-          label: "Resources redirected",
-          body: "Lower personal consumption can leave food or money available for poor people, orphans, and other forms of giving.",
-          role: "support",
-        },
-      ],
-      caption:
-        "The sequence shows the function Ghazali wants restraint to serve. It does not guarantee that every form of hunger produces these outcomes.",
-    },
-    deep: {
-      thesis:
-        "Going hungry is only worth anything to the extent that it actually shifts something — what you can attend to, how humble you are, what you reach for, how your time goes, what you give away.",
-      context:
-        "Ghazali explicitly refuses to make bitterness the measure of medicine. He organizes this section as a list of ten benefits, but many of them work together: reduced satiety affects sleep and impulse, which affects time and attention, which can affect worship and giving.",
-      moves: [
-        {
-          title: "Separate instrument from end",
-          body:
-            "The medicine analogy prevents a crude equation between suffering and virtue. Just as medicine is taken for an effect rather than for its taste, hunger is evaluated by what it helps the person recover or resist.",
-        },
-        {
-          title: "Clear and soften attention",
-          body:
-            "Ghazali associates restraint with quickened understanding, receptivity to remembrance, humility, and the breaking of pride. These are inward effects in his spiritual account, not merely changes in diet.",
-        },
-        {
-          title: "Interrupt connected appetites",
-          body:
-            "He argues that satiety can energize sexual desire, excessive speech, sleep, and other impulses. Hunger is therefore used as an intervention against a cluster of tendencies rather than one isolated behavior.",
-        },
-        {
-          title: "Release time and material means",
-          body:
-            "Less concern with food can reduce the labor and expense surrounding it. Ghazali then gives that saving an ethical direction: surplus can be shared with people in need rather than becoming another private accumulation.",
-        },
-        {
-          title: "Keep historical claims in context",
-          body:
-            "The section also makes claims about bodily health within medieval medicine. They help explain Ghazali's complete list, but they should not be converted into present-day clinical guidance.",
-        },
-        {
-          title: "Note what the medicine analogy prevents",
-          body:
-            "The analogy is doing protective work rather than illustrative. Medicine is taken for what it does, not for how it tastes — so nobody concludes that the worse it tastes the better it works. Applied to hunger, that blocks the inference the whole subject invites: that discomfort is itself the good, and more of it is more of the good. Hunger is assessed by what it recovers or resists, which means a quantity of it that recovers nothing is not a lesser virtue but no virtue.",
-        },
-        {
-          title: "See why the appetites are treated as a cluster",
-          body:
-            "And the claim that satiety energises sexual desire, excessive talk and sleep is what makes this one intervention rather than a diet. The appetites are treated as connected, so pressure applied at the point of supply reaches several of them at once. Which explains why a book on breaking two desires spends most of its length on the first: the second is partly reached through it, and the book says so rather than treating them as parallel problems.",
-        },
-        {
-          title: "Note where the surplus is directed",
-          body:
-            "And the saving is given a direction, which is the detail most easily skipped. Less concern with food frees labour and money — and Ghazali does not leave that as a benefit to the person. The surplus goes to people who need it, or it has simply become another private accumulation, which is the thing the next book in the quarter is about. Discipline that enriches the disciplined has produced the fault it was meant to treat.",
-        },
-      ],
-      distinction: {
-        title: "The bitter sensation is not the claimed benefit",
-        firstLabel: "Deprivation as achievement",
-        first:
-          "Pain, weakness, or a severe regimen becomes a badge of success even when it produces no clearer attention, humility, worship, or generosity.",
-        secondLabel: "Discipline as instrument",
-        second:
-          "A measured restraint is judged by the fitting function it serves and abandoned or adjusted when it defeats that function.",
-      },
-      misreading:
-        "Do not treat a medieval list of bodily benefits as a personalized nutrition plan. The book itself later insists that people differ and that the useful measure is tied to actual condition.",
-      observation:
-        "When you reduce a comfort, name the capacity you expect to recover. Afterward, look for that capacity rather than counting discomfort as proof.",
-      sourceAnchor: "Book 23, section 2, the ten benefits of hunger and evils of satiety.",
-    },
-  },
-  {
-    id: 3,
-    shortTitle: "Four measures of food discipline",
-    formalTitle: "The method by which discipline breaks the greed of the stomach",
-    overview:
-      "Ghazali organizes food discipline around four matters: lawful provision, quantity, timing, and type. He explicitly recommends gradual reduction for a person accustomed to eating much and describes a range of historical ascetic regimens. The governing concern is to retrain greed without confusing severity with the final aim.",
-    reflection:
-      "Before intensifying a practice, ask which variable you are changing, why that variable matters, and what evidence would show that the dose is too large.",
-    relatedNodes: ["lawful", "measure", "gradualism", "discipline"],
-    visualModel: {
-      kind: "chain",
-      title: "Four questions before severity",
-      items: [
-        {
-          label: "Source",
-          body: "Is the provision lawful? Ghazali places this first, so less food cannot compensate for food obtained wrongly.",
-          role: "balance",
-        },
-        {
-          label: "Amount",
-          body: "How much is taken? The text recommends gradual reduction when appetite has been trained by a larger habitual amount.",
-          role: "support",
-        },
-        {
-          label: "Timing",
-          body: "How long is the interval? Ghazali records varied fasting practices, while later insisting that conditions and capacities differ.",
-          role: "support",
-        },
-        {
-          label: "Type",
-          body: "How desired or refined is the food? Simplification is another lever, distinct from amount and timing.",
-          role: "support",
-        },
-      ],
-      caption:
-        "The four-part method is descriptive of Ghazali's training system. It is not a self-directed severe fasting protocol.",
-    },
-    deep: {
-      thesis:
-        "Food discipline becomes intelligible when source, amount, timing, and type are treated as separate levers and adjusted with gradual judgment.",
-      context:
-        "This section moves from the benefits of restraint to technique. It contains demanding examples from medieval ascetic practice, but its organizing contribution is more precise: one can change what is eaten, how much, how often, and under what lawful conditions without collapsing all discipline into a single scale of harshness.",
-      moves: [
-        {
-          title: "Begin with lawful provision",
-          body:
-            "Ghazali makes lawful acquisition the first duty. A reduced meal does not become spiritually sound if the means by which it was obtained are corrupt.",
-        },
-        {
-          title: "Reduce quantity by stages",
-          body:
-            "For someone accustomed to eating much, he advises gradual reduction. Sudden change can produce weakness and make the discipline unsustainable, so the established habit is unwound step by step.",
-        },
-        {
-          title: "Distinguish interval from amount",
-          body:
-            "Eating less at one sitting and lengthening the interval between meals are different interventions. Ghazali records varied practices rather than presenting one interval as the sole form of restraint.",
-        },
-        {
-          title: "Simplify the desired type",
-          body:
-            "The pull of good food is a different thing from how much you eat, and can be worked on separately — which lets you ask a sharper question: is it being full you are attached to, eating often, or eating well?",
-        },
-        {
-          title: "Stop worshipping the regimen",
-          body:
-            "The examples are means toward governing appetite. The next section makes the limiting principle explicit: the intended state is balanced freedom for worship and thought, not maximal weakness.",
-        },
-        {
-          title: "Note why lawfulness comes first",
-          body:
-            "Making lawful acquisition the first duty of a chapter on eating less is a considered ordering. A reduced meal obtained by corrupt means has not become spiritually sound by being small — the reduction addresses appetite while leaving the wrong untouched, and it produces a man who is austere and still eating what he should not. The whole apparatus of the book on the lawful and the unlawful is presupposed here in a single sentence.",
-        },
-        {
-          title: "Separate the three variables",
-          body:
-            "And the section's most useful move is pulling apart three things people run together. How much you eat at a sitting. How long you go between sittings. And how good the food is. These are separate interventions with separate effects, and a person can be strict about one while the attachment lives entirely in another. Which yields a sharper question than eat less: is it fullness you are attached to, frequency, or quality.",
-        },
-        {
-          title: "Take the warning about the regimen",
-          body:
-            "And the section ends by refusing to let the method become the point. The intervals, the amounts, the plainness of the food are means of governing appetite, and the state being aimed at is freedom for worship and thought. A person who has made the regimen itself the object has acquired a new attachment with a devotional name on it, which is harder to see and harder to give up than the one he started with.",
-        },
-      ],
-      distinction: {
-        title: "A training lever is not a universal command",
-        firstLabel: "Historical regimen",
-        first:
-          "The text records severe quantities, intervals, and ascetic examples within a particular religious culture of discipline.",
-        secondLabel: "Transferable structure",
-        second:
-          "The durable insight is to distinguish source, amount, timing, and type, then fit any correction to the person's real condition.",
-      },
-      misreading:
-        "Do not reproduce the harshest historical examples as a personal challenge. This synthesis intentionally does not provide an actionable severe fasting schedule.",
-      observation:
-        "When desire feels vague, identify its exact object. Is it more, sooner, finer, or simply familiar? Precision changes what a proportionate correction would mean.",
-      sourceAnchor: "Book 23, section 3, the four duties governing food discipline.",
-    },
-  },
-  {
-    id: 4,
-    shortTitle: "The measure changes with the person",
-    formalTitle: "The variance in the rule and merit of hunger according to circumstances",
-    overview:
-      "Ghazali states that the ultimate aim in character and action is the middle. The best condition for a balanced person is neither heaviness from fullness nor pain that makes hunger itself the center of attention. Corrective pressure may lean harder against an unruly appetite, but people and states differ, and the pressure is not the destination.",
-    reflection:
-      "Ask whether the current correction still restores freedom or whether it has become a new source of fixation. The same practice can change meaning as the condition changes.",
-    relatedNodes: ["moderation", "measure", "discipline", "attention"],
-    visualModel: {
-      kind: "spectrum",
-      title: "The middle is freedom from both distractions",
-      items: [
-        {
-          label: "Painful hunger",
-          body: "If hunger itself overwhelms attention and weakens the person's fitting duties, the corrective pressure has passed the intended state.",
-          role: "warning",
-        },
-        {
-          label: "Governed middle",
-          body: "Ghazali's balanced person is occupied by neither the heaviness of satiety nor the pain of hunger and can turn toward worship and thought.",
-          role: "balance",
-        },
-        {
-          label: "Heavy satiety",
-          body: "Fullness can burden attention and strengthen connected appetites, so it is the ordinary extreme against which the text applies pressure.",
-          role: "warning",
-        },
-      ],
-      caption:
-        "Corrective discipline may temporarily lean away from the dominant extreme, but Ghazali names the fitting middle as the intended health.",
-    },
-    deep: {
-      thesis:
-        "The right measure is the one that releases the person from domination by both satiety and hunger, and that measure changes with condition.",
-      context:
-        "This section qualifies the severe material that precedes it. Ghazali says that the ultimate aim in matters and character is the middle. He compares it to the center of a heated ring, the point farthest from the surrounding fire, while recognizing that a person pulled toward one side may need corrective pressure from the other.",
-      moves: [
-        {
-          title: "Name the destination",
-          body:
-            "The destination is a balanced nature that is not made heavy by fullness and not distracted by painful hunger. Freedom for worship and thought, rather than intensity itself, identifies the desired condition.",
-        },
-        {
-          title: "Explain severe counter-language",
-          body:
-            "Human appetite ordinarily inclines toward satiety. Ghazali therefore understands strong praise of hunger partly as a counterweight that pulls the learner away from an already dominant side.",
-        },
-        {
-          title: "Use correction temporarily",
-          body:
-            "When appetite remains unruly, discipline can lean beyond the final mean to loosen the established pull. Once the power becomes governable, continuing the same pressure can create a different disorder.",
-        },
-        {
-          title: "Let conditions differ",
-          body:
-            "People vary in body, habit, work, weakness, and strength of appetite. Ghazali therefore refuses to make a fixed quantity or interval the aim in itself.",
-        },
-        {
-          title: "Note how the destination is defined",
-          body:
-            "The destination is stated in terms of what it makes possible rather than what it costs: a nature not weighed down by fullness and not distracted by the pain of hunger. Both halves are limits. Which means the condition is identified by freedom for worship and thought — and a person too hungry to attend to anything has missed it in the same way as one too full, though only one of those failures looks like failure.",
-        },
-        {
-          title: "Follow the explanation of the harsh language",
-          body:
-            "And the account of why the praise of hunger is pitched so strongly is the most useful thing in the book for reading the rest of it. Human appetite already leans hard toward satiety. Language that merely recommended balance would be read from inside that lean and heard as permission. The severity is a counterweight applied against a known bias — which means it is calibrated for the reader's starting position, not a statement of where he should end up.",
-        },
-        {
-          title: "Note when overcorrection is licensed and when it stops",
-          body:
-            "And the same reasoning licenses leaning past the mean deliberately: while appetite is still unruly, pressure beyond the final target is what loosens the established pull. But the licence expires. Once the power has become governable, the same pressure produces a different disorder — which is the rule from the book on character applied here, and the reason no fixed quantity or interval can be the aim.",
-        },
-      ],
-      distinction: {
-        title: "Corrective asymmetry serves a balanced end",
-        firstLabel: "Temporary counter-pressure",
-        first:
-          "A person strongly pulled toward satiety may need a firmer reduction than a person whose appetite is already governable.",
-        secondLabel: "Stable intended condition",
-        second:
-          "The final measure allows bodily need to be met without either fullness or hunger taking over attention and purpose.",
-      },
-      misreading:
-        "Moderation does not mean choosing the same amount for everyone, and corrective severity does not mean that the farthest extreme is the holiest permanent state.",
-      observation:
-        "A practice that once restored freedom may later become an identity or fixation. Reassess the function, not only the history, of the practice.",
-      sourceAnchor: "Book 23, section 4, variation by person and the fitting middle.",
-    },
-  },
-  {
-    id: 5,
-    shortTitle: "When restraint feeds reputation",
-    formalTitle: "Ostentation in renouncing desirable foods and eating frugally",
-    overview:
-      "Ghazali warns that restraint can be captured by the desire to appear restrained. One person hides continued indulgence while performing austerity in public. Another truly abstains but delights in being known for it, exchanging appetite for food for the more dangerous appetite for status.",
-    reflection:
-      "If no one could know about a restraint, would its meaning, intensity, or attractiveness change? The answer can reveal which appetite is being fed.",
-    relatedNodes: ["intention", "reputation", "discipline", "truthfulness"],
-    visualModel: {
-      kind: "chain",
-      title: "How appetite changes its object",
-      items: [
-        {
-          label: "Food is desired",
-          body: "The first appetite seeks a desirable food or the pleasure of fullness.",
-          role: "support",
-        },
-        {
-          label: "Restraint becomes visible",
-          body: "The person discovers that eating little can itself become a public sign of discipline or spiritual rank.",
-          role: "warning",
-        },
-        {
-          label: "Recognition rewards",
-          body: "Attention and admiration now provide a different pleasure, even if the original food is genuinely renounced.",
-          role: "warning",
-        },
-        {
-          label: "Status takes command",
-          body: "The appetite has not disappeared. It has moved from the bowl to the audience and may now be harder to recognize.",
-          role: "warning",
-        },
-      ],
-      caption:
-        "Ghazali's point is not that visible restraint is always false. It is that a real outward act can be governed by a hidden appetite for standing.",
-    },
-    deep: {
-      thesis:
-        "Restraint fails when it suppresses one appetite only to give a more hidden appetite for reputation the throne.",
-      context:
-        "Ghazali describes two failures. In the first, the person privately continues what is publicly renounced. In the second, the food is truly renounced but the reputation for renunciation becomes the new pleasure. His image is stark: escaping a scorpion only to land upon a snake.",
-      moves: [
-        {
-          title: "Expose the divided performance",
-          body:
-            "A person may be unable to leave a desired food, conceal that desire, and cultivate an appearance of austerity before others. The fault is not merely eating; it is the split between the known state and the displayed rank.",
-        },
-        {
-          title: "Find the subtler exchange",
-          body:
-            "A second person may honestly abstain from the food yet enjoy being recognized for abstinence. Outward discipline succeeds while the governing desire moves from consumption to esteem.",
-        },
-        {
-          title: "Compare the two dangers",
-          body:
-            "Ghazali treats the appetite for status as more concealed and therefore more dangerous. The scorpion and snake analogy makes the exchange visible without suggesting that the original appetite was harmless.",
-        },
-        {
-          title: "Return to truthfulness",
-          body:
-            "The safer direction is making the two match: neither advertising what you have managed nor putting on a show of going without. What the restraint is for has to stay more important to you than what it says about you.",
-        },
-        {
-          title: "Note the two cases and what separates them",
-          body:
-            "The two cases look similar and are structurally different. The first man cannot leave the food, hides that, and puts on austerity — so the outward and the inward disagree, and the fault is the pretence. The second genuinely abstains and enjoys being known for it — nothing is hidden and nothing is false. The appetite has simply changed its object, from the food to the standing that abstaining confers.",
-        },
-        {
-          title: "Take the comparison of the two dangers",
-          body:
-            "And the judgement that the second is the more dangerous is what makes the section worth having. Appetite for food is obvious, admits of a plain remedy, and the person knows he has it. Appetite for standing is concealed, is fed by the very discipline meant to treat the first, and produces no symptom the person can catch. The scorpion and the snake are not offered to excuse the first; they are a ranking of two things that are both bad.",
-        },
-        {
-          title: "See where the remedy lands",
-          body:
-            "And the remedy is truthfulness rather than further austerity, which is the right answer and an uncomfortable one. Neither advertise what you manage nor perform what you go without — let the inside and the outside say the same thing. Which requires the person to care more about what the restraint is for than about what it says about him, and there is no exercise that produces that. It is a matter of what he actually wants.",
-        },
-      ],
-      distinction: {
-        title: "The same restraint can serve two different rulers",
-        firstLabel: "Appetite governed",
-        first:
-          "The person eats less to restore proportion, attention, gratitude, and freedom from domination, whether or not anyone notices.",
-        secondLabel: "Image cultivated",
-        second:
-          "The person needs the restraint to be legible to an audience because recognition has become part of the reward.",
-      },
-      misreading:
-        "Do not conclude that every practice known to others is ostentation. Ghazali's diagnosis concerns the governing intention and the pleasure taken in spiritual status, not visibility alone.",
-      observation:
-        "Notice what happens when a good practice receives no recognition, or when another person receives the recognition instead. The emotional change can reveal the hidden reward.",
-      sourceAnchor: "Book 23, section 5, the two forms of ostentation surrounding frugal eating.",
-    },
-  },
-  {
-    id: 6,
-    shortTitle: "How sexual desire is governed",
-    formalTitle: "The discourse on sexual desire",
-    overview:
-      "Ghazali gives sexual desire a proper place and a limit. He identifies pleasure as an analogy for promised delight and desire as a means for continuation of progeny. The praised condition is neither excess nor absence, but a power moderated under reason and religious law. He emphasizes intervention at the early stages of gaze and thought before attachment becomes established.",
-    reflection:
-      "Map the earliest point at which attention becomes voluntary reinforcement. Earlier recognition usually leaves more room for a calm and proportionate choice.",
-    relatedNodes: ["desire", "moderation", "gaze", "attention"],
-    visualModel: {
-      kind: "spectrum",
-      title: "A power with two ways to miss its measure",
-      items: [
-        {
-          label: "Deficiency",
-          body: "Ghazali does not praise the mere absence or failure of the faculty. A deficient condition can also fall short of its proper human function.",
-          role: "warning",
-        },
-        {
-          label: "Governed desire",
-          body: "The praised state preserves the faculty while making it obedient to sound reason and religious law.",
-          role: "balance",
-        },
-        {
-          label: "Excess",
-          body: "When desire overpowers judgment and directs attention and action, a useful power has taken command of the person it should serve.",
-          role: "warning",
-        },
-      ],
-      caption:
-        "Moderation here means right rule and proportion, not emotional numbness and not an identical level of desire in every person.",
-    },
-    deep: {
-      thesis:
-        "Sexual desire is sound when its proper functions are preserved and its movement remains governed by reason and religious law.",
-      context:
-        "Ghazali first names two benefits: pleasure offers an analogical taste of promised delight, and desire supports continuation of progeny. He then turns to disorder, arguing that excess can overpower judgment while deficiency also misses the praised mean.",
-      moves: [
-        {
-          title: "Acknowledge proper function",
-          body:
-            "The argument does not begin by treating desire as a foreign evil. Ghazali places it within created human life and gives reasons for its presence before describing how it can become disordered.",
-        },
-        {
-          title: "Locate both departures",
-          body:
-            "Excess is not the only way to miss the fitting condition. The praised state lies in a faculty that is present and effective but does not overthrow the judgment meant to direct it.",
-        },
-        {
-          title: "Intervene near the beginning",
-          body:
-            "Ghazali focuses on the gaze and the thought that follows it. His mount and gate image argues that direction is easier to change before attachment passes the threshold and gathers momentum.",
-        },
-        {
-          title: "Match support to condition",
-          body:
-            "On his account fasting and marriage can each prop a person up, in different situations. Neither is a trick that works on its own, apart from what you meant, what you can manage, and what you owe.",
-        },
-        {
-          title: "Note where the treatment is aimed",
-          body:
-            "The intervention is placed at the gaze and the thought that follows it, and the reason is mechanical rather than moral. Attachment gathers momentum: what is easy to redirect at the look is hard at the thought, and harder still once the thought has settled into wanting. The mount and the gate image is about where a thing can still be turned — and the answer is much earlier than where people usually try.",
-        },
-        {
-          title: "Follow why both departures are named",
-          body:
-            "And the praised state is defined by what it does not do rather than by how little of it there is. The faculty is present and working, and it does not overthrow the judgement meant to direct it. Which places the fault at the point of rule, exactly as the book on character did — and means that a person in whom the desire has been extinguished has not reached the target, he has lost a created function.",
-        },
-        {
-          title: "See how the two supports are handled",
-          body:
-            "And neither fasting nor marriage is offered as a device that works by itself. Each props a person up in a different situation, and which one applies depends on what he meant by it, what he can sustain, and what he owes to other people. That last clause is doing real work: it means the choice is not settled by what will most efficiently manage his desire, because one of the two options creates obligations to somebody else.",
-        },
-      ],
-      distinction: {
-        title: "Presence of desire is not rule by desire",
-        firstLabel: "A human faculty",
-        first:
-          "Desire has a place in human life and can move within lawful, responsible, and proportionate bounds.",
-        secondLabel: "A ruling appetite",
-        second:
-          "Desire recruits attention and action against judgment until the person serves the impulse rather than directing it.",
-      },
-      misreading:
-        "Do not convert Ghazali's historical discussion into contempt for the body or into gendered suspicion. The central analytic question is whether a human power serves or rules.",
-      observation:
-        "Without dramatizing a passing impression, notice the point where attention begins to feed it through a second look, repeated thought, or deliberate return.",
-      sourceAnchor: "Book 23, section 6, the functions, dangers, and moderation of sexual desire.",
-    },
-  },
-  {
-    id: 7,
-    shortTitle: "Marriage and the aspirant's condition",
-    formalTitle: "What the aspirant must observe in renouncing or undertaking marriage",
-    overview:
-      "The final section addresses the murid, an aspirant within a classical ascetic path. Ghazali weighs whether marriage would distract a beginning aspirant or protect a person who cannot guard gaze and thought. The decision turns on actual condition, and marriage brings duties of intention, good conduct, and fulfillment of rights.",
-    reflection:
-      "A remedy that involves another person's life must be judged not only by what it solves for the self, but also by the rights and responsibilities it creates.",
-    relatedNodes: ["aspirant", "gaze", "marriage", "rights"],
-    visualModel: {
-      kind: "chain",
-      title: "A conditional path, not one rule for everyone",
-      items: [
-        {
-          label: "Name the context",
-          body: "The subject is a beginning aspirant trying to protect concentrated spiritual work within Ghazali's ascetic program.",
-          role: "support",
-        },
-        {
-          label: "Test self-command",
-          body: "Can gaze and thought be guarded, or does desire repeatedly break the person's intended discipline?",
-          role: "balance",
-        },
-        {
-          label: "Use fitting supports",
-          body: "Ghazali names hunger, lowering the gaze, and an absorbing occupation as initial supports in this specific context.",
-          role: "support",
-        },
-        {
-          label: "Consider marriage",
-          body: "If those supports fail and desire remains ungovernable, marriage may be preferable to continued exposure to wrongdoing.",
-          role: "support",
-        },
-        {
-          label: "Fulfill rights",
-          body: "Marriage must carry sound intention, good conduct, and the rights of the spouse. It cannot be reduced to a private remedy.",
-          role: "balance",
-        },
-      ],
-      caption:
-        "This diagram describes Ghazali's counsel to the murid. It is not a fatwa, a medical algorithm, or a universal modern marriage decision tree.",
-    },
-    deep: {
-      thesis:
-        "For the aspirant Ghazali addresses, the marriage decision is conditional: choose the path closest to guarded conduct, then honor every right that path creates.",
-      context:
-        "The final section is easy to flatten into a slogan for or against marriage. Ghazali instead begins with an ascetic concern about distraction, recognizes that ungoverned desire can make celibacy the more dangerous condition, and then evaluates the aspirant's actual ability to guard attention and conduct.",
-      moves: [
-        {
-          title: "Identify the intended reader",
-          body:
-            "The murid is a person entering a concentrated path of discipline, not a label for every Muslim in every circumstance. The counsel belongs to that stated problem and audience.",
-        },
-        {
-          title: "Test the real condition",
-          body:
-            "If the aspirant can guard gaze and thought, remaining unmarried may protect focus in the beginning. If desire repeatedly defeats that guard, the same choice can become spiritually destabilizing.",
-        },
-        {
-          title: "Try the named supports",
-          body:
-            "Ghazali lists hunger, lowering the gaze, and an occupation that absorbs attention. These belong to his ascetic framework and are described before marriage is considered as the stronger response.",
-        },
-        {
-          title: "Let marriage answer the actual risk",
-          body:
-            "When the earlier supports do not contain the desire, marriage may be preferable. The judgment changes because the person's condition changes, not because marriage itself has changed value.",
-        },
-        {
-          title: "Restore the other person's rights",
-          body:
-            "Marriage is not finished business once it has solved your problem. What you meant by it, how you behave, whether you keep up what you owe, and what your wife is entitled to are all still part of the reckoning.",
-        },
-        {
-          title: "Note who is being addressed",
-          body:
-            "The counsel is aimed at the aspirant — somebody who has entered a concentrated course of discipline — and not at every Muslim in every circumstance. That restriction matters because the advice inverts under it. Deferring marriage to protect a beginner's concentration is sound counsel for a man in that situation and poor counsel for almost anyone else, and the book on marriage had already worked the general case at length with an entirely different set of scales.",
-        },
-        {
-          title: "Follow the test that decides it",
-          body:
-            "And what decides the case is a factual question the man can answer about himself: can he actually guard the gaze and the thought. If he can, remaining unmarried protects his focus at the beginning. If desire keeps defeating the guard, the same choice becomes destabilising rather than protective — and the supports are tried first, in order, before marriage is considered as the stronger answer. Nothing here is a judgement about marriage; the value that changes is the man's condition.",
-        },
-        {
-          title: "Take the last requirement seriously",
-          body:
-            "And the section closes by refusing the reading it has been inviting. Marriage is not finished business once it has solved the aspirant's problem. What he intended by it, how he conducts himself, whether he keeps up what is owed, and what his wife is entitled to all remain part of the reckoning — which is the correction to a chapter that has, up to that point, been discussing another person entirely as an instrument of somebody's discipline.",
-        },
-      ],
-      distinction: {
-        title: "Ascetic counsel is not a universal marriage ruling",
-        firstLabel: "The section's question",
-        first:
-          "Which condition best protects this aspirant's worship and conduct, given the person's actual ability to govern desire?",
-        secondLabel: "A question it does not settle",
-        second:
-          "What every Muslim in every social, legal, emotional, and bodily circumstance must do about marriage.",
-      },
-      misreading:
-        "This synthesis is not a fatwa and should not be used to override the rights, safety, consent, or well-being of another person. It explains the logic of Ghazali's historical ascetic counsel.",
-      observation:
-        "When a proposed remedy involves another person, list the new duties it creates. If the analysis contains only the self's relief, it is morally incomplete.",
-      sourceAnchor: "Book 23, section 7, conditional counsel on renouncing or undertaking marriage.",
-    },
-  },
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+const bab = (id: number) => (id <= 3 ? "the sections on the merit and benefits of hunger" : id <= 7 ? "the sections on training, the middle, and the hidden fault" : "the sections on the second desire");
+const makeChapter = (seed: Seed): Chapter => ({
+  id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
+  reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+    distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
+    misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
+    sourceAnchor: `Book 23, ${bab(seed.id)}, ${seed.formalTitle}.` },
+});
+const chain = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "chain", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const pair = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "pair", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const set = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "set", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+const spectrum = (title: string, caption: string, items: Array<[string, string, "support" | "balance" | "warning"]>): VisualModel => ({ kind: "spectrum", title, caption, items: items.map(([label, body, role]) => ({ label, body, role })) });
+
+export const book23Chapters: Chapter[] = [
+  makeChapter({
+    id: 1, shortTitle: "Why the stomach comes first", formalTitle: "The opening: the stomach as the spring of the desires",
+    overview: "Ghazali starts the book on breaking the two desires by explaining why he begins with food. Adam was put out of the Garden over something eaten. From the belly comes the desire for sex, and from both comes the hunger for money and standing — and from those, rivalry, envy, showing off and every kind of wrong.",
+    thesis: "The greatest destroyer of a human being is the appetite of the stomach: it is the spring of the desires and the seedbed of the diseases, and every other appetite is fed from it.",
+    moves: [
+      { title: "Adam's mouthful", body: "The greatest destroyer of the son of Adam is the appetite of the stomach. By it Adam and Eve were put out of the house of settled peace into the house of humiliation and need: they were forbidden the tree, and their appetite overcame them until they ate from it, and their nakedness showed to them." },
+      { title: "The chain", body: "In truth the belly is the spring of the desires and the seedbed of the diseases and the ills. After it follows the desire for sex, and the fierce urge toward women. Then after the desire for food and sex follows the strong wish for standing and money, which are the means to spreading out in what is married and what is eaten. Then, after piling up money and standing, come the kinds of vanity and the sorts of rivalry and envy. Then between them grows the fault of showing off and the ruin of boasting and outdoing and pride. Then that drags a person into wrongdoing and indecency and what is forbidden." },
+      { title: "If he tamed it", body: "All of that is the fruit of neglecting the stomach and what is born of the swagger of being full. If a servant broke himself in with hunger and narrowed Satan's channels with it, his soul would submit to obeying God and would not take the road of swagger and rebellion. He would not be dragged into sinking into this world and preferring what is at hand over what comes after, and would not fight over the world the way people fight over it." },
+      { title: "What the book will do", body: "Since the harm of this appetite is as great as that, its dangers must be set out as a warning, and the way of struggling against it must be made clear and its merit pointed out, to encourage it. And the desire of the sexual organ must be explained too, since it follows from the first. Ghazali arranges the book in sections: the merit of hunger; its benefits; the way of training in breaking the stomach's appetite by eating less and later; how the ruling on hunger and its merit differ with people's states; the training in leaving the appetites; then the desire of the sexual organ; then what is on the seeker in leaving or making a marriage; then the merit of whoever goes against the desire of the stomach, the organ and the eye." },
+    ],
+    closer: [
+      { title: "Why not start with pride?", body: "Ghazali picks the stomach on purpose. It is the desire that returns every day, the one everybody has, and — on his account — the one that teaches the self to expect satisfaction. Train it, and the desires that feed on it lose their supply." },
+      { title: "One mouthful", body: "Beginning with Adam is not decoration. The first loss of the house of peace came through something eaten, in a place where everything else was permitted." },
+    ],
+    distinction: ["Two ways to treat the stomach", "Neglected", "The spring that feeds desire, money-hunger, rivalry and display.", "Broken in", "Satan's channels narrowed; the soul submits."],
+    misreading: "Do not read the chain from food to wrongdoing as a claim that every hungry person is righteous and every well-fed one is corrupt. Ghazali's next sections set limits, and a later one says plainly that the aim is the middle, not the extreme.",
+    reflection: "Which of your appetites gets fed first each day — and what does it ask for next?",
+    audit: ["What does my day serve first?", "Does one satisfied desire quiet down, or recruit others?", "Where does my wanting begin?", "Have I ever tested it?"],
+    nodes: ["shahwa", "batn", "silsila"],
+    model: chain("Ghazali's chain", "Where the stomach leads.", [["The stomach", "The spring of the desires.", "warning"], ["Sexual desire", "Follows from it.", "warning"], ["Money and standing", "The means of spreading out in both.", "warning"], ["Rivalry and display", "Envy, boasting, pride — and then wrongdoing.", "warning"]]),
+  }),
+  makeChapter({
+    id: 2, shortTitle: "The merit of hunger", formalTitle: "The excellence of hunger and the condemnation of being full",
+    overview: "Ghazali gathers the reports on hunger: it is a struggle with the reward of fighting in God's way, the Prophet was hungry by choice, and God boasts of the servant who leaves a mouthful. Then Aisha on the Prophet's hunger, and what the early Muslims said about it.",
+    thesis: "Struggle against yourselves with hunger and thirst, for the reward in that is like the reward of one who fights in God's way — and no deed is dearer to God than hunger and thirst.",
+    moves: [
+      { title: "The reports", body: "The messenger of God said: struggle against yourselves with hunger and thirst, for the reward in it is like the reward of one who fights in God's way, and no deed is dearer to God than hunger and thirst. Ibn Abbas reported: whoever fills his belly does not enter the kingdom of heaven. He was asked: which people are best? He said: whoever eats least, laughs least, and is content with what covers his nakedness. And: the chief of deeds is hunger, and the humbling of the self is wearing wool. Abu Sa'id al-Khudri reported: dress, eat and drink at half the belly, for it is a part of prophethood. Al-Hasan reported: thought is half of worship, and eating little is worship itself. And: the highest of you in rank with God on the Day of Resurrection are those longest in hunger and in thinking about God; and the most hateful of you to God on that Day is every one who sleeps much, eats much and drinks much." },
+      { title: "Hungry by choice", body: "In the report: the Prophet used to go hungry when there was no lack — that is, by choice. And he said: God boasts to the angels of whoever eats and drinks little in this world. God says: look at My servant; I tried him with food and drink in this world, and he was patient and left them. Bear witness, My angels: there is no mouthful he leaves but I give him ranks in the Garden for it. And: do not kill the hearts with too much food and drink, for the heart is like a crop: it dies when too much water is put on it. And: no son of Adam fills a vessel worse than his belly. A few mouthfuls are enough to keep his back straight; and if he must, then a third for his food, a third for his drink and a third for his breath." },
+      { title: "What Usama was told", body: "In the long report of Usama ibn Zayd and of Abu Hurayra the merit of hunger is mentioned: the nearest of people to God on the Day of Resurrection are those whose hunger and thirst and sorrow were long in this world — the modest, God-fearing ones, who, when present, are not known, and when absent, are not missed. The patches of the earth know them, and the angels of heaven crowd about them. People took ease from this world, and they took ease in obeying God. People spread soft bedding, and they spread their foreheads and their knees. People lost the way of the prophets and their character, and they kept it. The earth weeps when it loses them, and the Almighty is angry with every town in which there is none of them. They did not fall on this world as dogs fall on a carcass. They ate scraps and wore rags. Dusty and unkempt, people look at them and think they are ill — and they are not ill; and it is said, they have lost their minds — and they have not lost their minds. But the people looked with their hearts at the affair of God, which took this world away from them, so that among the people of this world they walk as if without minds. They had minds when other people's minds went. They have the honour in the next life." },
+      { title: "'If you can'", body: "Usama, if you see them in a town, know they are a safety for its people, and God does not punish a people among whom they are. The earth is glad of them and the Almighty is pleased with them. Take them for yourself as brothers; perhaps you will be saved by them. And if you can — that death should come to you while your belly is hungry and your liver is thirsty — do it. By that you reach the noblest stations, and stay with the prophets, and the angels rejoice at the coming of your spirit, and the Almighty sends blessings upon you." },
+      { title: "'So your hearts may see God'", body: "Abu Hurayra reported: wear wool, roll up your sleeves and eat at half the belly — you will enter the kingdom of heaven. Jesus said: company of disciples, make your livers hungry and your bodies bare; perhaps your hearts will see God. It is reported from our Prophet too. It is said it is written in the Torah that God hates the fat scholar, since fatness points to heedlessness and much eating, which is ugly, especially in a scholar. That is why Ibn Mas'ud said: God hates the fat reciter. And in a report: Satan runs in the son of Adam as the blood runs, so narrow his channels with hunger and thirst." },
+      { title: "One gut, seven guts", body: "It is said in the report that eating on top of fullness brings on disease. And he said: the believer eats in one gut, and the hypocrite eats in seven — meaning he eats seven times what the believer eats, or his appetite is seven times his. The gut is mentioned as a stand-in for appetite, since it is appetite that takes the food in, as the gut does; not that the hypocrite's guts are more in number." },
+      { title: "Knocking at the gate", body: "Aisha reported that the messenger of God said: keep knocking at the gate of the Garden and it will be opened to you. She said: how shall we keep knocking? He said: with hunger and thirst. Abu Juhayfa belched in the Prophet's gathering, and he said: hold back your belching, for the longest of people in hunger on the Day of Resurrection are those who ate most in this world." },
+      { title: "Aisha's account", body: "Aisha used to say: the messenger of God never filled himself. Sometimes I wept from pity at the hunger I saw in him, and I would rub his belly with my hand and say: may my soul be your ransom, if only you took from this world enough to give you strength and keep off hunger. He would say: Aisha, my brothers among the messengers of firm resolve were patient with harder than this, and went on in that state and came to their Lord, and He honoured their return and made their reward great. And I find myself ashamed that if I live softly in my life I should fall short of them tomorrow. To be patient for a few days is dearer to me than that my share should be less tomorrow in the next life. Nothing is dearer to me than joining my companions and my brothers. Aisha said: by God, he did not complete a week after that before God took him." },
+      { title: "Fatima's crust", body: "Anas said Fatima brought a piece of bread to the messenger of God. He said: what is this piece? She said: a loaf I baked, and my heart was not at rest until I brought you this piece of it. He said: this is the first food to enter your father's mouth for three days. Abu Hurayra said: the Prophet never fed his family their fill of wheat bread three days running until he left this world. And he said: the people of hunger in this world are the people of fullness in the next; the most hateful of people to God are those stuffed and filled; and no servant leaves a mouthful he wants without having a rank in the Garden for it." },
+      { title: "What the early Muslims said", body: "Umar said: beware of filling the belly; it is a weight in life and a stench in death. Shaqiq al-Balkhi said: worship is a trade, its shop is solitude and its tool is hunger. Luqman said to his son: my son, when the stomach is full the thinking sleeps, wisdom goes dumb, and the limbs sit back from worship. Al-Fudayl ibn Iyad used to say to himself: what are you afraid of? Are you afraid of going hungry? Do not be afraid of that; you are too slight with God for that. Only Muhammad and his Companions go hungry. Kahmas used to say: my God, You made me hungry and made me bare, and seated me in the darkness of the nights with no lamp — by what merit did You bring me to what You brought me to?" },
+      { title: "The rest of them", body: "Fath al-Mawsili, when his illness and hunger grew hard, would say: my God, You have tried me with sickness and hunger, and so You do with Your friends; by what deed shall I pay the thanks of what You have favoured me with? Malik ibn Dinar said: I said to Muhammad ibn Wasi: blessed is the one who has a little plot to feed him and free him from people. He said to me: blessed is the one who comes to evening and to morning hungry, and is content with God. Yahya ibn Mu'adh said: the hunger of those who want is a stirring; the hunger of those who repent is a trial; the hunger of the strivers is an honour; the hunger of the patient is a discipline; the hunger of those who renounce is wisdom. In the Torah: fear God, and when you are full, remember the hungry. Abu Sulayman said: that I should leave a mouthful of my supper is dearer to me than standing in prayer until morning. And he said: hunger is with God in His storehouses; He gives it only to whoever He loves." },
+      { title: "Sahl al-Tustari", body: "Sahl ibn Abdullah al-Tustari used to go twenty days and more without eating, and a silver coin was enough for his food for a year. He made much of hunger and went far in it, and said: no deed of goodness will come on the Day of Resurrection better than leaving surplus food, following the Prophet in his eating. And: the clever have seen nothing more useful than hunger for religion and for this world. And: I know nothing more harmful to those seeking the next life than eating. And: wisdom and knowledge were put in hunger; disobedience and ignorance were put in fullness. And: God has not been worshipped with anything better than going against one's own whim in leaving what is lawful. And he said the substitutes only became substitutes by empty bellies, wakefulness, silence and solitude. And: the head of every good that comes down from heaven to earth is hunger, and the head of every wickedness between them is fullness." },
+      { title: "A cure that is not a cure", body: "Abu Talib al-Makki said: the belly is like a lute — the hollow instrument with strings — whose sound is only fine because it is light and thin and hollow, not full. So the inside, when it is empty, makes recitation sweeter, standing in prayer longer, and sleep less. Abu Bakr ibn Abdullah al-Muzani said: three whom God loves — a man who sleeps little, eats little and rests little. And it is reported that Jesus stayed sixty mornings speaking with his Lord without eating. Bread came to his mind, and the speaking was cut off, and there was a loaf set before him. He sat weeping for the loss of the speaking, and an old man came and shaded him. Jesus said: God bless you, friend of God; pray to God for me, for I was in a state, and bread came to my mind, and it was cut off from me. The old man said: O God, if You know that bread has come into my mind since I knew You, then do not forgive me — rather, when something was there, I ate it without thought or notion. And it is reported that when God brought Moses near to speak with him, he had left off eating for forty days: thirty, then ten, as the Quran says, because he kept one day's fast without intending it in advance, and ten were added for that." },
+    ],
+    closer: [
+      { title: "Rubbing his belly", body: "Aisha's memory is the centre of the chapter: she wept at how thin he was, and offered to have him eat a little more; he answered that he was ashamed to live softly when the messengers before him had been patient with worse. She adds that he died within the week." },
+      { title: "Knock at the gate", body: "'Keep knocking at the gate of the Garden' — she asked how, and he said: with hunger and thirst. Ghazali's whole case for hunger is in that exchange: it is not punishment of the body but a way of asking." },
+    ],
+    distinction: ["Two kinds of hunger", "From lack", "Nothing to eat.", "By choice", "'He used to go hungry when there was no lack.'"],
+    misreading: "Do not read this section by itself. Ghazali later says outright that the aim in everything is the middle, that the Law praises the extreme only because nature pulls the other way, and that whoever goes too far will find the Law rebuking him too.",
+    reflection: "When did you last leave a mouthful you wanted, on purpose?",
+    audit: ["Do I eat past what I need?", "Could I leave one mouthful today?", "Do I sleep and eat more than I pray?", "What would I be ashamed to be fed while others fast?"],
+    nodes: ["ju", "shiba", "mujahada"],
+    model: set("What is promised for hunger", "In the reports Ghazali gathers.", [["A fighter's reward", "'Struggle with hunger and thirst.'", "support"], ["Ranks in the Garden", "For every mouthful left.", "support"], ["A living heart", "Too much water kills the crop.", "warning"], ["Nearness", "'The nearest of people on that Day.'", "support"]]),
+  }),
+  makeChapter({
+    id: 3, shortTitle: "Ten benefits of hunger", formalTitle: "The benefits of hunger and the harms of being full",
+    overview: "Why should being hungry help anyone? Ghazali answers with a medical comparison — a bitter medicine works by its property, not by its bitterness — and then lists ten benefits: a clear heart, a soft heart, humility, remembering the afflicted, breaking every desire, less sleep, time freed for worship, health, fewer costs, and something left to give away.",
+    thesis: "Hunger does not work because it hurts, as bitter medicine does not work because it is bitter; it works by what it does — clearing the heart, breaking the desires, and freeing both the hours and the money that eating consumes.",
+    moves: [
+      { title: "Not because it hurts", body: "You might say: where does this great merit of hunger come from? There is nothing in it but pain in the stomach and bearing hardship. If that is it, then the reward should be great in everything a person is hurt by — beating himself, cutting his own flesh, taking what he dislikes. Know that this is like someone who drank a medicine and was helped by it, and thought its use lay in its being disliked and bitter, and so began to take everything of bad taste. That is a mistake. Its use is in a property in the medicine, not in its bitterness, and only doctors know that property. So too, only the brokers among the scholars know the reason hunger works. Whoever makes himself hungry, trusting what the Law says in praise of hunger, is helped by it even if he does not know why — as one who drinks a medicine is helped even if he does not know how it works. But Ghazali will explain it, for whoever wants to rise from the rank of faith to the rank of knowledge." },
+      { title: "First: a clear heart", body: "The first benefit: a clear heart, a kindled mind and a penetrating insight. Fullness brings dullness, blinds the heart, and increases the vapour in the brain like drunkenness, until it takes over the mines of thought, so that the heart grows heavy with it and cannot run about in thinking or grasp things quickly. Even a child, if he eats much, loses his memory and spoils his mind and becomes slow to understand. Abu Sulayman al-Darani said: keep to hunger, for it humbles the self, softens the heart, and brings the knowledge of heaven. The Prophet said: bring your hearts to life with little laughter and little fullness, and purify them with hunger — they will grow clear and soft. Ibn Abbas reported: whoever is full and sleeps, his heart hardens; and then he said: everything has its alms, and the body's alms is hunger. Al-Shibli said: I never went hungry for God for a day without seeing in my heart a door of wisdom and lesson opened that I had never seen. And it is plain that the aim of acts of worship is the thinking that leads to knowing God and seeing the truths clearly — fullness blocks it and hunger opens its door. So keeping to hunger is knocking at the gate of the Garden." },
+      { title: "Second and third", body: "Abu Yazid al-Bistami said: hunger is a cloud; when a servant goes hungry, the heart rains wisdom. And the Prophet said: the light of wisdom is hunger, and distance from God is fullness, and nearness to God is loving the poor and being close to them. Do not fill yourselves, or you will put out the light of wisdom from your hearts; and whoever passes the night light of food, the maidens of the Garden are around him until morning. So the belly and the organ are a gate of the Fire, whose root is fullness; and lowliness and being broken are a gate of the Garden, whose root is hunger. Whoever shuts one gate of the Fire has necessarily opened a gate of the Garden, since they are opposite as east and west, and nearness to one is distance from the other." },
+      { title: "Fourth: you remember the afflicted", body: "The fourth is that he does not forget God's trial and punishment, and does not forget the people in trouble. The one who is full forgets the hungry and forgets hunger. The clever servant does not see someone else's suffering without remembering the suffering of the next life: from his own thirst he remembers the thirst of people on the plain of the Resurrection, and from his own hunger the hunger of the people of the Fire, who go hungry and are fed the bitter tree and the tree of Zaqqum, and given foul water and molten liquid to drink. The punishment of the next life should not be absent from the servant, since that is what stirs fear. Whoever is never in lowliness, illness, scarcity or trial forgets the punishment of the next life, and it is not pictured in him and does not take hold of his heart. So a servant should be either bearing trouble or watching it, and the best trouble to bear is hunger. That is one of the reasons why trial belongs especially to the prophets and the friends of God, and then the next best and the next. That is why Joseph was asked: why do you go hungry, when the storehouses of the land are in your hands? He said: I fear that if I am full I will forget the hungry. Remembering the hungry and the needy is one of hunger's benefits, since it calls to mercy and to feeding others and pity for God's creatures — and the one who is full is heedless of the hungry man's pain." },
+      { title: "Fifth: it breaks every desire", body: "The fifth, and among the greatest: breaking the desires of all the sins and getting the upper hand over the self that commands to evil. The source of all sins is the desires and the strength for them, and the material of that strength is food; so lessening food weakens every desire and every strength. All happiness is in a person owning his self, and all misery is in his self owning him. As you cannot control a bolting animal except by the weakness of hunger — feed it and it grows strong and bolts and runs — so it is with the self. Someone was asked why, in his old age, he did not look after his body, which had broken down. He said: because it is quick to friskiness and terribly wanton, and I fear it will bolt with me and throw me into ruin. That I should drive it into hardship is dearer to me than that it should drive me into indecency. Dhu al-Nun said: I was never full without sinning, or meaning to sin. Aisha said: the first innovation after the messenger of God was being full; when the people's bellies grew full, their selves bolted with them into this world." },
+      { title: "What it silences", body: "This is not one benefit but a treasury of them, and so it is said: hunger is a storehouse from God's storehouses. The least that hunger pushes back is the desire of the organ and the desire of speech. A hungry man has no appetite stirring in him for surplus talk, so he escapes the faults of the tongue — backbiting, foulness, lying, tale-bearing and the rest. When a person is full he needs something sweet after, and inevitably makes his sweet of people's honour — and nothing throws people into the Fire on their faces but the harvest of their tongues. As for the desire of the organ, its danger is not hidden, and hunger takes care of it. When a man is full he does not own his organ; and if God-consciousness holds him back from that, he does not own his eye — and the eye commits adultery as the organ does. If he masters his eye by lowering his gaze, he does not master his thinking, and there come to him bad thoughts and inner talk about the causes of desire, which trouble his conversation with God, and may come to him in the middle of the prayer." },
+      { title: "Sixth: less sleep", body: "The sixth: pushing back sleep and staying awake. Whoever is full drinks much, and whoever drinks much sleeps much. That is why one of the shaykhs used to say when food was brought: seekers, do not eat much, or you will drink much, and then sleep much, and then lose much. Seventy truthful men agreed that much sleep comes from much drinking. In much sleep is the wasting of a life, the missing of the night prayer, dullness of nature and hardness of heart. Life is the most precious jewel and the servant's capital, which he trades with; sleep is a death, so increasing it shortens the life. Then the merit of the night prayer is not hidden, and sleep loses it. And whoever sleeps full, unmarried, has a wet dream, which also keeps him from the night prayer and forces him to wash — in cold water, which hurts, or at the bathhouse, which he may not find at night. Abu Sulayman al-Darani said: a wet dream is a punishment — because it keeps a person from many acts of worship. So sleep is a spring of troubles, fullness brings it, and hunger cuts it off." },
+      { title: "Seventh: time", body: "The seventh: it makes keeping to worship easier. Eating keeps a person from much worship, since it needs time to eat in, and perhaps time to buy and cook, then to wash the hands and use a toothpick, then much going back and forth to the privy because of all he drinks. If the hours spent on this were turned to remembrance and conversation with God and the rest of the acts of worship, his profit would be great. Al-Sari said: I saw with Ali al-Jurjani a parched meal he was swallowing dry, and I said: what made you do this? He said: I reckoned between chewing and swallowing seventy glorifications of God — and I have not chewed bread for forty years. See how he spared his time and did not waste it in chewing. Every breath of a life is a precious jewel beyond price, and it should be turned into a lasting treasury in the next life. Among the things made hard by much eating are staying in a state of purity and staying in the mosque, since one must keep going out. And fasting, which is easy for whoever is used to hunger. Abu Sulayman al-Darani pointed to six harms in fullness: losing the sweetness of speaking with God, difficulty in keeping wisdom, being denied pity for people — since when he is full he thinks everybody is full — heaviness in worship, more desires, and that while the rest of the believers circle the mosques, the full circle the rubbish heaps." },
+      { title: "Eighth: health", body: "The eighth: from eating little he gains health of body and keeps off illness, whose cause is much eating and the gathering of surplus humours in the stomach and the veins. Illness keeps him from worship, troubles the heart, keeps him from remembrance and thought, embitters life, and makes him need bleeding, cupping, medicine and a doctor — all of which need money and costs, and after the trouble a person is not free of kinds of sin and of rushing into desires. In hunger is what keeps all that away. It is told that al-Rashid gathered four doctors — an Indian, a Greek, an Iraqi and one from the Sawad — and said: let each of you describe the medicine that has no illness in it. The Indian said: the black myrobalan. The Iraqi said: white cress seed. The Greek said: hot water. The man of the Sawad, who was the most learned of them, said: myrobalan binds the stomach, and that is an illness; cress seed loosens it, and that is an illness; hot water slackens it, and that is an illness. They said: what do you say? He said: the medicine with no illness in it is that you do not eat food until you want it, and that you lift your hand from it while you still want it. They said: you have spoken the truth." },
+      { title: "Ninth: it costs little", body: "The ninth: it is light in cost. Whoever is used to eating little, a small amount of money is enough for him. Whoever is used to being full, his belly becomes a creditor who dogs him and takes him by the throat every day, saying: what will you eat today? So he must enter doors and earn from the forbidden and sin, or from the lawful and be humiliated; and he may have to stretch his eyes in greed toward people, which is the depth of lowliness. The believer is light in cost. One of the wise said: I settle most of my needs by giving them up, and that is more restful for my heart. Another said: when I want to borrow from someone else for a desire or an extra, I borrow from myself and leave the desire; it is the best creditor I have. Ibrahim ibn Adham used to ask his companions about the prices of food, and when they said they were dear, he said: make them cheap by leaving them." },
+      { title: "Tenth: something left to give", body: "The tenth: he is able to prefer others and give away what is left of his food to orphans and the poor, so that on the Day of Resurrection he is in the shade of his charity, as the report says. What he eats — its storehouse is the privy; what he gives in charity — its storehouse is God's bounty. A servant has of his money only what he gave in charity and so kept, or ate and so finished, or wore and so wore out. Giving away surplus food is better than an overloaded stomach. The Prophet looked at a man with a fat belly and pointed at it with his finger and said: if this were in something other than this, it would be better for you — that is, if you had sent it ahead for your next life and preferred someone else with it. Al-Hasan said: by God, I knew people among whom a man would come to evening with food enough for him, and if he wished he could eat it, and he would say: by God, I will not make all of this for my belly; I will make some of it for God." },
+    ],
+    closer: [
+      { title: "Why it works", body: "The medicine comparison at the top is the key to the chapter. Nothing is gained by hurting yourself for its own sake. Hunger has a property — it clears the head, quiets the tongue and the eye, shortens sleep, frees hours and money — and the merit is in those effects." },
+      { title: "Two storehouses", body: "The last benefit gives the book's sharpest line about money and food: what you eat is stored in the privy; what you give away is stored with God. It turns eating less into something that can be given, not merely something forgone." },
+    ],
+    distinction: ["Two reasons a hard thing helps", "Because it hurts", "The mistake: then any self-harm would count.", "Because of what it does", "The property in the medicine — clearing, quieting, freeing."],
+    misreading: "Do not read the benefits as claims about medicine or the body that must hold today. They are Ghazali's reasons, given in the science of his time, and his own argument is that the merit lies in effects that can be tested in a life, not in the pain.",
+    reflection: "Which of the ten would you most notice if you ate a third less?",
+    audit: ["Is my head clear or dull after meals?", "How much of my day goes on eating and its trail?", "What do I spend on food that could be given?", "Do I remember the hungry when I am full?"],
+    nodes: ["ju", "qalb-j", "waqt"],
+    model: set("Ten benefits, grouped", "What hunger actually does.", [["The heart", "Clear, soft, humble, remembering the afflicted.", "support"], ["The desires", "Tongue, eye, organ — all weakened at the source.", "support"], ["The hours", "Less sleep, more worship, easier fasting.", "support"], ["The purse", "Health, low cost, and something left to give.", "support"]]),
+  }),
+  makeChapter({
+    id: 4, shortTitle: "How much, how often, and what", formalTitle: "The way of training in breaking the stomach's appetite",
+    overview: "Four duties on anyone training himself: eat only what is lawful, then measure the amount, the timing and the kind. Ghazali gives four degrees for each, a way to cut down by a crumb a day, and the signs that tell true hunger from false.",
+    thesis: "Reduce by degrees, not at a stroke: take a twenty-eighth less each day and in a month you will have halved your food without feeling it — and stop at the amount that does not weaken you for the worship you are doing.",
+    moves: [
+      { title: "The first duty", body: "Know that a seeker has four duties in his belly and his food. The first is to eat only what is lawful, since worship with unlawful food is like building on the waves of the sea; the degrees of care in that were given in the Book of the Lawful and the Forbidden. Three duties remain, particular to eating: measuring the amount of food, little or much; measuring its time, later or sooner; and choosing the kind, taking or leaving what one has a taste for." },
+      { title: "A crumb a day", body: "As for eating less, the way of training is by degrees. Whoever is used to eating much and moves at one stroke to little will not bear it in his constitution; he will weaken and his hardship will be great. So let him come down to it little by little, taking away a little each day from what he usually eats. If he eats two loaves, say, and wants to bring himself back to one, let him take away each day a twenty-eighth of a loaf — or a thirtieth — and he will come back to one loaf in a month without harm and without its showing. If he likes he can do it by weight, and if he likes by eye: leaving each day about a mouthful less than he ate the day before." },
+      { title: "Four degrees of amount", body: "There are four degrees in this. The highest is to bring himself back to the amount that keeps him alive, which is the way of the truthful and the choice of Sahl al-Tustari, who said: God made His creatures servants by three things — life, mind and strength. If a servant fears for two of them, life and mind, let him eat, and break his fast if he is fasting, and take the trouble to seek food if he is poor. If he does not fear for those two but for his strength, he said: he should not mind, even if he grows so weak that he prays sitting; and I hold that his prayer sitting with the weakness of hunger is better than his prayer standing with much eating. Sahl was asked about his own beginnings and what he lived on. He said: my food each year cost three silver coins. I would take date-syrup for one, rice flour for one and clarified butter for one, mix them, and make three hundred and sixty balls, taking one each night to break my fast. He was asked: and how do you eat now? He said: without limit and without a set time. It is told of monks that they bring themselves down to about a coin's weight of food." },
+      { title: "The other three", body: "The second degree is to bring himself by training to half a measure a day and night — a loaf and a little. That seems to be about a third of the belly for most people, as the Prophet said, and it is more than 'a few mouthfuls', since that word is used for a small number, under ten. That was Umar's habit; he used to eat seven or nine mouthfuls. The third degree is to bring himself to a full measure, about two and a half loaves, which is more than a third of the belly for most people and comes near two thirds, leaving a third for drink and nothing for breath. The fourth is to go beyond that up to a pound; and beyond a pound seems to be extravagance and against 'do not be wasteful' — for most people, since the amount of food needed differs with age, person and work." },
+      { title: "A fifth way, and its trap", body: "There is a fifth way with no measuring in it, but it is a place of error: to eat when hunger is true and to hold back the hand while still truly wanting more. But mostly, whoever has not set himself a loaf or two cannot tell where true hunger is, and it gets confused with false appetite." },
+      { title: "The signs of true hunger", body: "Signs of true hunger have been given. One is that the self does not ask for a relish, but eats bread alone with appetite, whatever bread it is. Whenever his self asks for a particular bread or for a relish, that is not true hunger. It is said another sign is that he spits and flies do not settle on it — no oiliness or fat is left in it, which shows the stomach is empty. Knowing this is subtle, so the right course for a seeker is to set for himself the amount that does not weaken him for the worship he is engaged in; when he reaches it, he stops, even if his appetite remains. In sum, measuring food cannot be fixed, since it differs with states and persons." },
+      { title: "What they lived on", body: "Still, the food of a number of the Companions was a measure of wheat a week; when they ate dates they lived on a measure and a half. A measure of wheat is four portions, so each day is near half a portion — which, as said, is a third of the belly; and with dates more was needed because of the stones. Abu Dharr used to say: my food every week is a measure of barley, as in the time of the messenger of God, and by God I will not add to it until I meet him, for I heard him say: the nearest of you to me in seat on the Day of Resurrection, and the dearest of you to me, is whoever dies on what he is on today. He used to say, objecting to some of the Companions: you have changed. Barley is sifted for you, and it was not sifted; you bake fine bread, you put two relishes together, you are brought different kinds of food, and one of you goes out in one garment and comes back in another — they were not like that in the time of the messenger of God. The food of the people of the Bench was a measure of dates between two of them each day — a measure being a pound and a third, with the stones removed." },
+      { title: "Four degrees of timing", body: "The second duty is the time of eating and how long it is put off, and there are four degrees here too. The highest is to fold three days or more. Among seekers there are those who returned the training to the folding rather than the amount, until some reached thirty and forty days; and a number of the scholars reached it, whom Ghazali names. Abu Bakr used to fold six days; Abdullah ibn al-Zubayr seven; Abu al-Jawza, the companion of Ibn Abbas, seven; and al-Thawri and Ibrahim ibn Adham folded three days at a time. All of them sought help by hunger on the road of the next life. Some scholars said: whoever folds forty days for God, a power from the unseen kingdom shows itself to him, or he is shown something of the divine secrets." },
+      { title: "The monk and the sixty days", body: "It is told that one of this people passed a monk and spoke with him about his state, hoping he would become Muslim and leave his delusion, and talked with him at length, until the monk said: the Messiah used to fold forty days, and that is a miracle that belongs only to a prophet or one of the truthful. The Sufi said: if I fold fifty days, will you leave what you are on and enter Islam and know that it is the truth and you are on falsehood? He said yes. So he sat where the monk could see him until he had folded fifty days, then said: and I will add more — and folded to the full sixty. The monk was amazed and said: I did not think anyone could pass the Messiah — and that was the cause of his becoming Muslim. That is a great degree, which few reach except one to whom something is unveiled, occupied with witnessing something that has cut him off from his nature and habit and filled him with its delight and made him forget his hunger and his need." },
+      { title: "Two days, or one meal", body: "The second degree is to fold two or three days, which is not outside the ordinary and can be reached by effort. The third, and the least, is to keep to one meal in a day and a night. That is the least; anything beyond it is extravagance and a keeping-up of fullness, so that he has no state of hunger — and that is the way of people of soft living and far from the practice. Abu Sa'id al-Khudri reported that the Prophet, when he ate the midday meal, did not eat in the evening, and when he ate in the evening, did not eat at midday. The early Muslims ate one meal a day. The Prophet said to Aisha: beware of extravagance; two meals in a day is extravagance, and one meal every two days is stinting, and one meal a day is a balance between the two — and that is what is praised in God's Book." },
+      { title: "When to take it", body: "Whoever keeps to one meal a day, it is recommended that he take it before dawn, so that his eating is after the night prayer and before the dawn prayer. Then he gets the day's hunger for fasting and the night's hunger for standing, and an empty heart for an empty stomach, fine thinking, a gathered mind, and a self at rest because it knows when it will eat and does not fight him before the time. If a fasting person's heart turns toward food after sunset, and that keeps his heart from being present in the night prayer, it is better to split his food in two: if it is two loaves, one at breaking the fast and one before dawn, so that his self settles and his body is light at the night prayer and his hunger is not too fierce in the day because of the pre-dawn meal. He helps himself with the first loaf for the night prayer and with the second for the fast. Whoever fasts one day and eats the next may eat on his eating-day at noon and on his fasting-day before dawn." },
+      { title: "The third duty: what kind", body: "The third duty is the kind of food and leaving relishes. The highest food is the heart of the wheat; if it is sifted, that is the height of soft living. The middle is sifted barley and the lowest unsifted barley. The highest relish is meat and sweets, the lowest salt and vinegar, and the middle is vegetables cooked with oils without meat. The habit of those travelling the road of the next life is to keep from relishes always, and rather to keep from what they have a taste for. Everything delicious that a person wants and eats brings swagger into the self, hardness into the heart, and closeness with the pleasures of this world, until he grows used to them and hates death and meeting God, and this world becomes a garden for him and death a prison. When he holds his self back from its desires, narrows it and denies it its pleasures, this world becomes a prison and a narrow place for it, and his self longs to escape from it, and death becomes its release. That is what Yahya ibn Mu'adh meant: company of the truthful, starve yourselves for the banquet of Paradise — for appetite for food is in proportion to how much you have starved the self." },
+      { title: "'The worst of my community'", body: "So the reward is great in leaving the desires of what is permitted, and the danger great in taking them, until the Prophet said: the worst of my community are those who eat the heart of the wheat. That is not a prohibition; it is permitted, in the sense that whoever eats it once or twice does not sin, and whoever keeps to it does not sin by the eating itself — but his self is brought up in ease, so it grows close to this world and used to its pleasures and works to get them, and that drags him to sins. So they are the worst of the community, because the heart of the wheat leads them to plunge into matters that are themselves sins. And he said: the worst of my community are those who were fed with ease, whose bodies grew on it; their whole concern is kinds of food and sorts of clothes, and they talk affectedly. God revealed to Moses: remember that you dwell in the grave, for that will keep you from many desires." },
+    ],
+    closer: [
+      { title: "A crumb a day", body: "The most practical page in the book is the arithmetic: cut a twenty-eighth each day and you will have halved your food in a month without noticing. Ghazali's whole method is that the self is broken in by degrees, not by a heroic stroke." },
+      { title: "Where to stop", body: "Since true hunger is hard to recognise, he gives a rule anyone can use: eat the amount that does not weaken you for the worship you are actually doing, and stop there — even if you still want more." },
+    ],
+    distinction: ["Two ways to cut down", "At a stroke", "The body will not bear it; the hardship is great.", "By degrees", "A mouthful less each day, until it is not felt."],
+    misreading: "Do not read the folding of thirty or forty days as a target. Ghazali calls it a degree few reach, ties it to people carried by something they have been shown, and sets the ordinary floor at one meal a day.",
+    reflection: "What would a twenty-eighth less look like on your plate tonight?",
+    audit: ["Do I know what amount does not weaken me?", "Do I eat at a set time, or all day?", "Could I tell true hunger from wanting?", "Which relish would I miss most — and why?"],
+    nodes: ["riyada", "miqdar", "tadrij"],
+    model: chain("Three measures to set", "After the food is lawful.", [["How much", "Four degrees; cut by a mouthful a day.", "support"], ["How often", "From folding days down to one meal a day.", "balance"], ["What kind", "Plainer, and without relishes.", "balance"], ["Where to stop", "At what does not weaken your worship.", "support"]]),
+  }),
+  makeChapter({
+    id: 5, shortTitle: "Stories of leaving what you want", formalTitle: "The training in leaving the desires: what the early Muslims did",
+    overview: "Ghazali gathers the stories of people who wanted something ordinary and would not take it: Ibn Umar and the fish, Ibrahim ibn Adham and the stew he had wanted for thirty years, Abu Sulayman and the warm loaf with salt, Uthba and the meat after seven years. Then Umar's rule for his son: bread and meat one day, bread and salt the next.",
+    thesis: "No worship is greater than going against the self in its desires — and the measure of a person's renunciation is how much of his own belly he owns.",
+    moves: [
+      { title: "Ibn Umar's fish", body: "Nafi reported that Ibn Umar was ill and wanted a fresh fish. It was looked for in Medina and not found, then found after a time and bought for a coin and a half, and grilled and brought to him on a loaf. A beggar stood at the door, and he said to the servant: wrap it in its loaf and give it to him. The servant said: God set you right — you have wanted this for so long, and we did not find it, and when we found it we bought it for a coin and a half. We will give him its price. He said: wrap it and give it to him. The servant said to the beggar: will you take a coin and leave it? He said yes, and he gave him a coin and took it and brought it back and set it before him. He said: I gave him a coin and took it from him. He said: wrap it and give it to him, and do not take the coin from him — for I heard the messenger of God say: whatever man wants something and turns his want away and prefers someone else over himself with it, God forgives him." },
+      { title: "Bread and water", body: "And the Prophet said: when you have blocked the dog of hunger with a loaf and a jug of plain water, then ruin take this world and its people — pointing to the aim being to push back the pain of hunger and thirst and their harm, not to take pleasure in this world. It reached Umar that Yazid ibn Abi Sufyan was eating many kinds of food, and Umar told a servant: when you know his supper is ready, tell me. He was told, and he came in as supper was brought — bread soaked in broth with meat — and Umar ate with him. Then roast meat was brought, and Yazid put out his hand, and Umar held back his and said: God, God, Yazid ibn Abi Sufyan — food after food? By the one who holds Umar's soul, if you go against their way, you will be taken off their road. Yasar ibn Umayr said: I never sifted flour for Umar without being a sinner to him." },
+      { title: "Uthba's bread", body: "Uthba the Youth used to knead his flour and dry it in the sun and eat it, saying: a crust and salt until the roast meat and good food are ready in the next life. He would take a jug and scoop from a cistern that had stood in the sun all day, and a freedwoman of his would say: Uthba, if you gave me your flour I would bake it for you and cool the water for you. He would say: mother of so-and-so, I have driven the dog of hunger away from me." },
+      { title: "Ibrahim and the stew", body: "Shaqiq ibn Ibrahim said: I met Ibrahim ibn Adham at Mecca, in the night market by the birthplace of the Prophet, weeping, sitting at the side of the road. I turned to him and sat by him and said: what is this weeping, Abu Ishaq? He said: nothing. I asked again, twice and three times, and he said: Shaqiq, keep my secret. I said: brother, say what you wish. He said: for thirty years my self has wanted a meat stew, and I have kept it from it as hard as I could. Last night I was sitting and drowsiness had overcome me, and there was a young man with a green bowl in his hand, steam and the smell of stew rising from it. He said: Ibrahim, eat. I said: I do not eat; I left it for God. He said: God has fed you — eat. I had no answer but weeping. He said: eat, God have mercy on you. I said: we have been ordered to put nothing in our vessel except from where we know. He said: eat, God keep you well; it was I who was given it, and I was told: Khidr, take this and feed it to the self of Ibrahim ibn Adham, for God has had mercy on it for its long patience with what it was denied. Know, Ibrahim, that I heard the angels saying: whoever gives and does not take, asks and is not given. I said: if that is so, here I am before you, for the covenant with God's sake. Then I looked, and there was another young man who handed him something, and he said: Khidr, feed him yourself. And he kept feeding me until I dozed, and I woke with its sweetness in my mouth. Shaqiq said: I said, show me your hand — and I took it and kissed it." },
+      { title: "Milk, dates and salt", body: "Malik ibn Dinar stayed forty years wanting milk and did not drink it. Fresh dates were given to him one day and he said to his companions: eat; I have not tasted it for forty years. Ahmad ibn Abi al-Hawari said: Abu Sulayman al-Darani wanted a warm loaf with salt, and I brought it to him. He took one bite of it, then threw it down and began to weep and said: I hurried to my desire after long striving — what misery. I have resolved to repent; forgive me. Ahmad said: I never saw him eat salt again until he met God. Malik ibn Dinar stayed in Basra fifty years and never ate a fresh or half-ripe date of theirs, and said: people of Basra, I have lived among you fifty years and not eaten one of your dates; what you have has not increased and what I have has not decreased. Al-Sari al-Saqati said: for thirty years my self has been demanding that I dip a carrot in date-syrup, and I have not fed it." },
+      { title: "Abu Hazim in the market", body: "Dawud al-Ta'i was heard through a closed door saying to himself: my self, you wanted carrots and I fed you carrots; then you wanted dates — I have sworn you will never eat them. Abu Hazim passed through the market one day, saw fruit and wanted it, and said to his son: buy us some of this fruit that is cut off and forbidden, so that perhaps we may go to the fruit that is neither cut off nor forbidden. When it was bought and brought, he said to his self: you tricked me until I looked and wanted, and overcame me until I bought — by God, you will not taste it — and sent it to poor orphans." },
+      { title: "Uthba's meat, and the wind", body: "Uthba the Youth wanted meat for seven years, and afterwards said: I was ashamed before my own self to keep putting it off year after year, so I bought a piece of meat on bread and grilled it and left it on a loaf. Then I met a boy and said: are you not the son of so-and-so, whose father has died? He said yes — and I handed it to him. They said he went on weeping and reciting: and they feed food, for love of it, to the poor, the orphan and the captive. And he did not taste it after that. He wanted dates for years, and one day bought dates for a small coin and kept them to break his fast on at night. A strong wind blew until the world went dark, and people were afraid, and Uthba turned on his self and said: this is for my boldness with you and my buying the dates. Then he said to his self: I think people have only been seized because of your sin — on condition that you never taste it." },
+      { title: "Daud, al-Junayd, and the figs", body: "Dawud al-Ta'i bought vegetables for half a small coin and vinegar for one, and spent the whole night saying to himself: woe to you, Dawud — how long your reckoning will be on the Day of Resurrection. And he never ate anything after that but plain food. Uthba said one day to Abd al-Wahid ibn Zayd: so-and-so describes a state in himself that I do not know in myself. He said: because you eat dates with your bread, and he adds nothing to bread. He said: if I leave off dates, will I know that state? He said: yes, and more. And he wept. Someone said: may God not make your eyes weep — do you weep over dates? Abd al-Wahid said: leave him; his self has come to know how truly he means to leave it, and when he leaves a thing he does not go back to it. Ja'far ibn Nasr said: al-Junayd told me to buy him Wazir figs. When I bought them, he took one at the breaking of the fast and put it in his mouth, then threw it out and began to weep, and said: take it away. I asked him about it, and he said: a voice called to me: are you not ashamed? You left it for My sake and then went back to it." },
+      { title: "Ata and the drink", body: "Salih al-Murri said: I said to Ata al-Sulami: I am preparing something for you, so do not turn back my kindness. He said: do as you like. I sent him with my son a drink of parched meal mixed with butter and honey and said: do not leave until he drinks it. The next day I made him the like of it, and he sent it back and did not drink it. I reproached him and said: glory be to God — you have turned back my kindness. When he saw how it grieved me he said: do not be hurt. I drank it the first time, and the second time I tried to make myself drink it and could not; every time I meant to, I remembered God's words: he gulps it and can hardly swallow it. Salih said: I wept, and said to myself: I am in one valley and you are in another." },
+      { title: "Ten days for a desire", body: "Abu Bakr al-Jalla said: I know a man whose self says to him: I will be patient for you through ten days of folding, and then feed me a desire I want. And he says: I do not want you to fold ten days; but leave this desire." },
+      { title: "The loaf, and 360 makers", body: "A worshipper invited one of his brothers and set loaves before him, and the man began turning the loaves over to pick the best. The worshipper said: stop — what are you doing? Do you not know that in the loaf you turned away from there is such-and-such wisdom, and that so many makers worked in it, until it came round from the cloud that carries the water, and the water that waters the earth, and the winds, and the earth, and the animals, and the children of Adam, until it came to you — and after that you turn it over and are not pleased with it? In the report: a loaf does not come round and is not set before you until three hundred and sixty makers have worked in it, the first of them Michael, who measures the water from the storehouses of mercy; then the angels who drive the clouds, and the sun and the moon and the spheres, and the angels of the air, and the animals of the earth — and the last of them the baker. If you counted God's blessings you could not number them." },
+      { title: "How much of your belly you own", body: "Someone said: I came to Qasim al-Jur'i and asked about renunciation — what is it? He said: what have you heard about it? I listed sayings, and he was silent. I said: what do you say? He said: know that the belly is the servant's world; by as much of his belly as he owns, he owns renunciation; and by as much of him as his belly owns, this world owns him." },
+      { title: "Bishr and the doctor", body: "Bishr ibn al-Harith fell ill once, and Abd al-Rahman the doctor came to ask him about something that would suit him to eat. He said: you ask me? If I describe it for you, you will not accept it from me. He said: describe it and let me hear. He said: you drink oxymel, and suck a quince, and after that eat white stew. Bishr said: do you know anything less than oxymel that would do instead? He said no. He said: I do. He said: what? He said: endive with vinegar. Then he said: do you know anything less than quince that would do? He said no. He said: I do — Syrian carob. He said: do you know anything less than the white stew? He said no. He said: I do — chickpea water with cow's butter, in its meaning. Abd al-Rahman said to him: you know medicine better than I; why did you ask me?" },
+      { title: "Salt is a desire", body: "From this you know that these people kept from desires and from being full of the ordinary foods, for the benefits described, and sometimes because the lawful was not clear to them, so they allowed themselves only the amount of necessity — and desires are not necessities. Abu Sulayman even said: salt is a desire, since it is an addition to bread, and whatever is beyond bread is a desire. That is the far end. Whoever cannot reach it should not be heedless of himself or plunge into desires: it is enough extravagance in a man that he eats everything he wants and does everything he desires. So he should not keep always to meat. Ali said: whoever leaves meat forty days, his character goes bad; and whoever keeps to it forty days, his heart grows hard. It is said that keeping to meat has a craving like the craving for wine." },
+      { title: "Two desires at once", body: "Whenever he is hungry and his self longs for intercourse, he should not eat and then have intercourse, giving his self two desires at once, so that they grow strong against him; and perhaps the self asks for food only to be lively for intercourse. It is recommended not to sleep on a full stomach, joining two heedlessnesses, so that dullness comes back and the heart is hardened; rather let him pray or sit and remember God, which is nearer to thankfulness. In the report: melt your food with remembrance and prayer, and do not sleep on it, or your hearts will harden. The least is to pray four units, or to glorify God a hundred times, or to read a portion of the Quran after eating. Sufyan al-Thawri, if he was full one night, would spend it in prayer; and if he was full by day, he would join it to prayer and remembrance, and used to say: feed the slave and work him. And: feed the donkey and work him." },
+      { title: "Make it food, not a treat", body: "Whenever he wants some food or good fruit, he should leave the bread and eat that instead, so that it is his food and not a treat, and he does not join a habit and a desire for the self. Sahl looked at Ibn Salim with bread and dates in his hand and said: begin with the dates; if they are enough for you, well, and if not, take of the bread after them as much as you need. And whenever he finds a fine food and a coarse one, let him take the fine one first, since he will not want the coarse one after it; if he took the coarse one first he would eat the fine one too, for its fineness. One of them used to say to his companions: do not eat the desires; if you eat them, do not seek them; if you seek them, do not love them. Asking for a particular bread is a desire. Abdullah ibn Umar said: no fruit comes to us from Iraq dearer to us than bread — he counted that bread as a fruit." },
+      { title: "What is sent ahead", body: "In sum, there is no way to leave the self alone in the permitted desires and follow it in every state. By as much as a servant takes of his desire, he should fear being told on the Day of Resurrection: you used up your good things in your life of this world and took your pleasure in them. And by as much as he struggles with his self and leaves his desire, he is given pleasure in the next abode with his desires. One of the people of Basra said: my self fought me for rice bread and fish, and I kept it from it, and its demand grew strong, and my struggle with it lasted twenty years. When he died, someone saw him in a dream and said: what did God do with you? He said: I cannot describe the favours and honours my Lord met me with. The first thing He met me with was rice bread and fish, and He said: eat today your desire, welcome, without reckoning. God said: eat and drink with pleasure for what you sent ahead in the days gone by — and they had sent ahead the leaving of desires. That is why Abu Sulayman said: leaving one desire of the desires is more useful to the heart than fasting and standing in prayer for a year." },
+    ],
+    closer: [
+      { title: "Thirty years for a bowl of stew", body: "Ibrahim ibn Adham weeping in the night market is the story Ghazali chooses to carry the chapter. Thirty years of refusing a stew, and the point of the dream is not the stew but the sentence about those who give and do not take." },
+      { title: "The loaf and its makers", body: "The man turning over loaves to pick the best gets the chapter's best rebuke: three hundred and sixty makers, from the angel who measures the rain to the baker, and you are not pleased with it." },
+    ],
+    distinction: ["Two ways to meet a craving", "Feed it", "It returns stronger, and brings its friends.", "Trade it", "Give it away, or put it off — and it is sent ahead of you."],
+    misreading: "Do not take these stories as a rule that every pleasure must be refused. Ghazali sets them beside Umar's own instruction to his son — bread and meat one day, bread and milk the next, plain bread another — and calls that the balance, with constant meat as excess and total avoidance as stinting.",
+    reflection: "What small thing have you wanted for a long time? What would it be worth to give it away instead?",
+    audit: ["Do I feed two desires at once?", "Do I sleep on a full stomach?", "Have I ever given away something I was looking forward to?", "How much of my belly do I own?"],
+    nodes: ["shahwa", "ithar", "riyada"],
+    model: chain("How they handled a craving", "Four moves from the stories.", [["Notice it", "'My self has wanted this for thirty years.'", "balance"], ["Refuse it", "Quietly, and without display.", "support"], ["Give it away", "Ibn Umar's fish; Abu Hazim's fruit.", "support"], ["Send it ahead", "'Eat today your desire, without reckoning.'", "support"]]),
+  }),
+  makeChapter({
+    id: 6, shortTitle: "The ant in the ring of fire", formalTitle: "How the ruling on hunger differs with people's states",
+    overview: "After pages praising hunger, Ghazali turns the argument round: the aim in everything is the middle. The Law praises the far end only because nature pulls the other way, and the two pulls meet in the middle. He explains it with an ant dropped inside a ring of hot iron.",
+    thesis: "The best of things is the middle: eat so that you feel neither the weight of a full stomach nor the pain of hunger — but a self still bolting needs the whip of hunger until it comes level.",
+    moves: [
+      { title: "The middle is the aim", body: "Know that what is finally sought in all matters and all character is the middle, since the best of things are their middles, and both ends of anything aimed at are blamed. What has been said about the merits of hunger may suggest that going to the far end of it is what is wanted. Far from it. But it is among the secrets of the Law's wisdom that whenever nature seeks the far end of something and there is corruption in it, the Law comes with strong words forbidding it, in a way that suggests to the ignorant that what is wanted is to oppose nature as far as possible. The learned man sees that the aim is the middle: since nature seeks the far end of being full, the Law must praise the far end of hunger, so that nature pushes and the Law holds back, and the two stand against each other and balance comes about. Nobody can put nature down entirely, so he knows he will not reach the far end. And if someone does go too far in opposing nature, there is in the Law what shows he has done wrong — as the Law praised standing at night and fasting by day at length, and then, when the Prophet knew that one of them fasted every day and stood every night, he forbade it." },
+      { title: "What the balance looks like", body: "Once you know that, know that the best thing, for a balanced nature, is that he eat so as not to feel the weight of the stomach and not to feel the pain of hunger — but to forget his belly, so that hunger has no effect on him at all. The purpose of eating is to keep life going and to have strength for worship. The weight of the stomach keeps a person from worship, and the pain of hunger also occupies the heart and keeps him from it. What is wanted is that he eat in a way that leaves no trace of what he ate, so that he is like the angels, who are free of the weight of food and the pain of hunger. A human being's aim is to imitate them. And since he cannot escape fullness and hunger altogether, the state furthest from both ends is the middle." },
+      { title: "The ant and the ring", body: "The picture of a human being seeking to be far from these opposite ends by coming back to the middle is like an ant dropped in the middle of a ring of iron, heated on a fire and laid on the ground. The ant flees the heat of the ring, which surrounds it, and it cannot get out, so it keeps fleeing until it settles at the centre, which is the middle. If it died, it would die at the middle, because the middle is the furthest place from the heat in the surrounding ring. So too the desires surround a human being as that ring surrounds the ant. The angels are outside the ring, and a human being cannot hope to get out; he wants to be like the angels in escaping. So the state most like theirs is distance, and the furthest place from the ends is the middle. That is why the middle is sought in all these opposed states, and why the Prophet said: the best of matters are their middles; and why God said: eat and drink and do not be wasteful." },
+      { title: "But a bolting self", body: "Whenever a person feels neither hunger nor fullness, worship and thought come easily to him, he is light in himself and strong for work while staying light. But this is after the nature has come level. At the start, when the self is bolting, longing for the desires and leaning toward excess, the middle does not help it; it must be made to suffer by hunger, as an untrained animal must be made to suffer by hunger and beating until it comes level. When it has been broken in and evened out and come back to the middle, tormenting and hurting it is stopped. For this hidden reason a shaykh orders his seeker what he does not do himself: he orders him hunger and does not go hungry; he keeps him from fruit and desires and may not keep from them himself — because he has finished disciplining his own self and no longer needs to punish it." },
+      { title: "Two who stop going hungry", body: "Since the usual state of the self is greed, desire, bolting and refusing worship, what is best for it is the hunger whose pain it feels in most states, so that the self is broken. The aim is that it be broken so that it comes level; then food too is brought back to the middle. Among those travelling the road of the next life, only two kinds stop keeping to hunger: either a truthful one, or a deluded fool. The truthful and upright one, because his self stands on the straight road and does not need to be driven to the truth with the whip of hunger. The deluded one, because he supposes himself to be the truthful one who has no need to discipline his self, thinking well of it — and that is a great delusion, and the more common of the two, since the self is seldom fully disciplined and often deceives. He looks at the truthful man and his ease with his own self and gives himself the same licence, like a sick man who looks at one who has recovered and takes what he takes, thinking himself well — and destroys himself." },
+      { title: "The Prophet had no fixed measure", body: "What shows that setting a small amount at a set time of a set kind is not the aim in itself, but a struggle against a self that is far from the truth and has not reached completeness, is that the messenger of God had no measure and no set time for his food. Aisha said: he used to fast until we said he would not break his fast, and break his fast until we said he would not fast. He used to come in to his family and say: have you anything? If they said yes, he ate; if they said no, he said: then I am fasting. He went out once saying he was fasting, and Aisha said: messenger of God, we have been given a sweet dish — and he said: I had meant to fast, but bring it near. Sahl was asked how he was at the beginning, and told of kinds of training: living on the leaves of the lote tree for a time, and on fig crumbs for three years, and on three silver coins for three years. He was asked: and how are you now? He said: I eat with no limit and no set time — not meaning that he eats much, but that he does not fix one measure for what he eats." },
+      { title: "Ma'ruf, and Ibrahim's table", body: "Ma'ruf al-Karkhi used to be given good food and would eat it. He was told: your brother Bishr does not eat the like of this. He said: my brother Bishr was drawn in by scruple, and I was opened out by knowing God. Then he said: I am only a guest in my Master's house; when He feeds me I eat, and when He makes me hungry I bear it. What have I to do with objecting and sorting? Ibrahim ibn Adham gave one of his brothers some coins and said: buy us butter and honey and fine white bread. He was asked: Abu Ishaq, all of this? He said: woe to you — when we find, we eat as men eat; and when we lack, we bear it as men bear it. One day he made a great deal of food and invited a few people, among them al-Awza'i and al-Thawri. Al-Thawri said: Abu Ishaq, do you not fear this is extravagance? He said: there is no extravagance in food; extravagance is in clothes and furnishings." },
+      { title: "Two listeners", body: "So someone who takes his knowledge by hearing and handing down, and sees this from Ibrahim ibn Adham, and hears of Malik ibn Dinar that salt did not enter his house for twenty years, and of al-Sari al-Saqati that for forty years he has wanted to dip a carrot in syrup and has not done it, sees a contradiction and is confused, or decides that one of them is wrong. One who sees into the secrets of the matter knows that all of it is true, but in relation to different states. Then these different states are heard by one of two people: a careful, quick-witted man, or a dull, deluded one. The careful one says: I am not one of the knowers, that I should give my self licence; my self is no more obedient than the self of al-Sari al-Saqati or Malik ibn Dinar, and they kept from desires, so I follow them. The deluded one says: my self is no more disobedient to me than the self of Ma'ruf al-Karkhi or Ibrahim ibn Adham, so I follow them and lift the measuring from my food — I too am a guest in my Master's house, so what have I to do with objecting? And then, if anyone falls short in respecting him, or in his money or his standing, by one step, he raises the roof and busies himself with objecting. This is a wide field for Satan among fools." },
+      { title: "Umar's cup of honey", body: "In fact, lifting the measure in food and fasting and eating the desires is not sound except for someone who looks from the lamp-niche of friendship with God and prophethood, so that there is between him and God a sign in his letting go and his holding back; and that only comes after the self has left obedience to whim and habit entirely, so that his eating is by intention as his refraining is by intention, and he is working for God in both his eating and his breaking of the fast. A person should learn firmness from Umar. He used to see the messenger of God love honey and eat it, and did not measure himself by him: when a cold drink mixed with honey was offered to him, he turned the vessel in his hand and said: I drink it, and its sweetness goes and its reckoning stays — take its reckoning away from me — and left it." },
+      { title: "What a shaykh may not say", body: "These secrets, Ghazali says, a shaykh may not disclose to his seeker. He should keep to praising hunger only, and not call him to the middle, since the seeker will inevitably fall short of what he is called to; so he should be called to the far end of hunger, so that the middle becomes possible for him. And he should not be told that the complete knower has no need of the training, for Satan would find a handhold in his heart and whisper to him at every hour: you are a complete knower — what have you missed of knowledge and completeness? It was Ibrahim al-Khawwas's habit to go into every discipline he ordered a seeker, so that it would not occur to him that the shaykh was ordering what he did not do himself, which would turn him from his training. A strong man, when he takes on training and setting others right, must come down to the level of the weak, in likeness to them and gentleness in leading them to happiness — and that is a great trial for the prophets and the friends of God." },
+      { title: "Umar's week", body: "And since the middle is hidden in each person's case, firmness and caution should not be left in any state. That is why Umar disciplined his son Abdullah: he came in and found him eating meat with butter, and struck him with the whip and said: you have no mother — eat one day bread and meat, one day bread and milk, one day bread and butter, one day bread and oil, one day bread and salt, and one day plain bread. That is the middle. Keeping always to meat and desires is excess and waste; cutting meat off altogether is stinting; and this is the balance between the two." },
+    ],
+    closer: [
+      { title: "The ant's answer", body: "The ant fleeing the hot ring cannot get out, so it goes to the centre — the furthest point from every part of the fire. That is Ghazali's picture of the middle: not a compromise between good and bad, but the only place a body surrounded by desire can rest." },
+      { title: "Why he will not say it aloud", body: "The most candid page in the book is where he tells shaykhs not to teach this to seekers. Tell a beginner that the complete knower needs no discipline, and Satan will whisper that he is one. Aim him at the far end so that he lands in the middle." },
+    ],
+    distinction: ["Two who eat without measuring", "The truthful one", "His self is already level; he eats and refrains by intention.", "The deluded one", "Gives himself the same licence — and rages if anyone slights him."],
+    misreading: "Do not read the earlier praise of hunger and this section as a contradiction. Ghazali says plainly that both are true 'in relation to different states', and gives a test: if a slight to your money or standing raises the roof, your self is not yet where you think it is.",
+    reflection: "Which of the two listeners are you — the one who says 'I am not there yet', or the one who says 'I am already free'?",
+    audit: ["Do I take licences meant for someone further on?", "How do I react to being slighted?", "Is my eating by intention, or by habit?", "Where is the middle for me this week?"],
+    nodes: ["wasat", "riyada", "ghurur-j"],
+    model: spectrum("Where to aim", "The Law pulls one way because nature pulls the other.", [["Fullness", "What nature seeks — and the Law rebukes.", "warning"], ["The middle", "Neither the weight of the stomach nor the pain of hunger.", "support"], ["The far end", "Praised so that the pull comes out level — and rebuked if reached by excess.", "balance"]]),
+  }),
+  makeChapter({
+    id: 7, shortTitle: "Eating alone what you would not eat in company", formalTitle: "The showing-off that creeps into leaving the desires",
+    overview: "Two dangers face the person who has given up his desires, and Ghazali says both are worse than eating the desires. The first is hiding an appetite you cannot beat. The second is beating it and enjoying the reputation. His remedy is startling: eat it in front of people.",
+    thesis: "Whoever escapes the desire of food and falls into the desire of being seen has fled from a scorpion to a snake — and the cure is to show your appetite rather than hide it.",
+    moves: [
+      { title: "Two dangers", body: "Know that two great dangers come upon someone who leaves the desires, and both are greater than eating the desires. The first is that the self cannot leave some desire, so he wants it, but does not want to be known to want it. So he hides the appetite and eats in private what he does not eat in company — and that is the hidden idol-worship. One of the scholars was asked about a certain renouncer and was silent; he was asked: do you know something wrong with him? He said: he eats in private what he does not eat with people." },
+      { title: "Show it", body: "That is a great fault. The right of a servant, when he is tried with desires and with loving them, is to show them, since that is truthfulness about his state, and it stands in place of the striving he has missed in deeds. Hiding a lack and showing its opposite as a completeness is two lacks at once, and lying along with hiding is two lies, so he deserves two hatreds and is not accepted except by two truthful repentances. That is why the matter of the hypocrites is made so severe: God said the hypocrites are in the lowest depth of the Fire. The unbeliever disbelieved and showed it; this one disbelieved and covered it, so his covering of his unbelief was another unbelief, since he made light of God's looking into his heart and made much of created beings' looking, and wiped the unbelief off his outside." },
+      { title: "Knowers are tried with desires, not with pretence", body: "Those who know God are tried with desires, and even with sins, but they are not tried with showing off, cheating and hiding. The completeness of the knower is that he leaves the desires for God and shows appetite from himself, so as to drop his own standing from people's hearts. One of them used to buy the desires and hang them up in the house, being among the most renouncing in them, meaning only to disguise his state, so that the hearts of the heedless would turn away from him and not trouble his state. The end of renunciation is renouncing renunciation, by showing its opposite. That is the work of the truthful: he has joined two truths, as the first man joined two lies. And he has loaded his self with two weights and made it drink the cup of patience twice — once in buying the thing and once in throwing it away. Those are given their reward twice over for their patience. It is like the way of someone who gives openly and then takes and returns it in secret, so as to break his self by lowliness in the open and by poverty in secret." },
+      { title: "'But others will copy me'", body: "Whoever misses that should at least not miss showing his appetite and his shortfall and being truthful about it. He should not be deceived by Satan's words: if you show it, others will copy you, so hide it for their sake. If he really meant to set others right, setting his own self right would matter more to him than others. This man means pure showing-off, and Satan passes it off on him in the dress of setting others right. That is why it weighs on him for this to be seen in him. And know that whoever sees it does not copy the act, and is not stopped by his believing that the man leaves the desires." },
+      { title: "The second danger", body: "The second danger is that he is able to leave the desires, but is glad to be known for it, so that he becomes famous for abstaining from appetites. He has gone against a weak desire — the desire for food — and obeyed a desire worse than it, the desire for standing, which is the hidden appetite. Whenever he feels that in himself, breaking this desire is more pressing than breaking the desire for food — so let him eat, and that is better for him." },
+      { title: "Abu Sulayman's advice", body: "Abu Sulayman said: when a desire is put before you and you have been leaving it, take a little of it and do not give your self its wish. Then you have dropped the appetite from your self and also spoiled it for it, since you did not give it what it wanted. Muhammad ibn Ja'far al-Sadiq said: when a desire is set before me, I look at my self. If it shows its appetite, I feed it some of it, and that is better than keeping it from it. If it hides its appetite and shows indifference, I punish it by leaving it and give it nothing of it. That is a way of punishing the self for this hidden appetite." },
+      { title: "Scorpion and snake", body: "In sum, whoever leaves the desire of food and falls into the desire of showing off is like someone who fled from a scorpion and took refuge with a snake — because the desire to be seen is far more harmful than the desire for food." },
+    ],
+    closer: [
+      { title: "The cure runs the other way", body: "Everywhere else the book says: leave your desire. Here it says: if leaving it is feeding your reputation, then eat it. The target was never the food; it was the self, and the self has moved." },
+      { title: "Two lies, two truths", body: "Ghazali's arithmetic is exact. Hiding a fault and displaying its opposite is two faults; showing your real appetite while refusing it for God is two truths — and, he says, those are given their reward twice over." },
+    ],
+    distinction: ["Two people who refuse a dish", "One who has beaten the desire", "And would say so plainly if asked.", "One who has moved it", "Refuses in company, eats alone, or enjoys being seen refusing."],
+    misreading: "Do not read 'then let him eat' as cancelling the discipline. It is a treatment for a particular disease — an appetite that has migrated into wanting to be admired — and Ghazali's own examples show it done quietly, not as licence.",
+    reflection: "Is there something you do differently when someone is watching? Which direction does the difference go?",
+    audit: ["Do I eat alone what I would not eat in company?", "Am I pleased when my self-denial is noticed?", "Would I admit an appetite I could not beat?", "Which desire am I actually feeding?"],
+    nodes: ["riya-j", "sidq-j", "jah-j"],
+    model: pair("Two dangers after the desires", "Both worse than eating them.", [["Hiding the appetite", "Eating alone what you refuse in company — two lies.", "warning"], ["Enjoying the fame", "Beating the food and feeding the standing — a scorpion for a snake.", "warning"]]),
+  }),
+  makeChapter({
+    id: 8, shortTitle: "The second desire", formalTitle: "On the desire of the sexual organ",
+    overview: "Ghazali gives two purposes for this desire: that its pleasure should let a person guess at the pleasures of the next life, and that the line should continue. Then he treats its excess — including the man who stirs it up on purpose, and the one who falls into obsessive love — and its remedy.",
+    thesis: "This desire was given for a pleasure that lets us reason about the next life and for the line to continue; its excess overpowers the mind and drags a person into indecency, and its cure is hunger, lowered eyes and, at the last, marriage.",
+    moves: [
+      { title: "Two purposes", body: "Know that the desire for intercourse was set over a human being for two uses. One is that he should feel its pleasure and by it reason about the pleasures of the next life: if the pleasure of intercourse lasted, it would be the strongest of the body's pleasures, as fire and its pains are the greatest of the body's pains. Encouragement and warning drive people to their happiness, and that is only by a felt pain and a felt, tasted pleasure — for what is not tasted is not greatly longed for. The second use is that the line should continue and existence go on." },
+      { title: "What it can do", body: "Those are its uses. But in it are harms that destroy religion and the world if it is not held in and put down and brought back to the middle. It is said in explaining 'our Lord, do not load us with what we have no strength for' that it means the fierceness of lust. Ibn Abbas said of 'from the evil of darkness when it gathers' that it is the rising of the organ. And it is said: when a man's organ rises, two thirds of his mind go. The Prophet used to say in his prayer: O God, I take refuge with You from the evil of my hearing, my sight, my heart and my organ. And he said: women are Satan's snares — and were it not for this desire, women would have no rule over men." },
+      { title: "Satan's advice to Moses", body: "It is told that Moses was sitting in one of his gatherings when Satan came, wearing a hooded cloak of shifting colours. When he came near he took it off and put it down, and came and said: peace be upon you, Moses. Moses said: who are you? He said: I am Satan. He said: may God not give you life — what brings you? He said: I came to greet you for your rank with God. He said: what was that I saw on you? He said: a cloak with which I snatch people's hearts. He said: what is it that, when a person does it, you get the better of him? He said: when he is pleased with himself, thinks much of his own deeds and forgets his sins. And I warn you of three. Do not be alone with a woman not lawful to you: no man is ever alone with such a woman without my being his companion, apart from my helpers, until I tempt him with her and her with him. Do not promise God anything without keeping it. And do not take out a charity without carrying it through: no man takes out a charity and does not carry it through without my being his companion, apart from my helpers, until I come between him and fulfilling it. Then he turned away, saying: alas — Moses has learned what to warn the children of Adam about." },
+      { title: "'Nothing frightens me more'", body: "Sa'id ibn al-Musayyab said: God never sent a prophet in the past without Satan hoping to destroy him through women; and nothing frightens me more than they do. There is no house in Medina I go into but my own house and my daughter's, where I wash on Friday and then go out. One of them said that Satan says to woman: you are half my army; you are my arrow that I shoot and do not miss; you are the place of my secret; you are my messenger for my need. Half his army is desire and half is anger, and the greatest of desires is the desire for women." },
+      { title: "Excess, and stirring it up", body: "This desire too has an excess, a falling short and a middle. Its excess is what overcomes the mind, so that a man's whole concern is taken up with enjoying women and slave girls, and he is kept from the road of the next life; or it overcomes religion, so that it drags him into indecency. Its excess reaches, in some, two ugly things. One is that they take things to strengthen their desire so as to do it more — as some people take medicines to strengthen the stomach so that appetite grows. That is like a man beset by savage beasts and biting snakes that sometimes sleep, and who contrives to rouse and stir them, and then busies himself with quieting and treating them. Desire for food and for intercourse are in truth pains that a person wants to be rid of, and the pleasure he feels comes from the release." },
+      { title: "The Prophet's case", body: "If you say: it is reported in the rare reports that the messenger of God said, I complained to Gabriel of weakness in intercourse and he ordered me to eat the wheat dish — know that he had nine wives and it was a duty on him to keep them chaste by giving them their due, and marrying them was forbidden to anyone else, even if he divorced them. So his seeking strength was for that, not for enjoyment." },
+      { title: "Obsessive love", body: "The second is that this desire, in some who go astray, ends in obsessive love — which is the height of ignorance about what intercourse was made for, and goes beyond the animals in animality. The one obsessed is not content to pour out the desire, which is the ugliest of desires and the one most fit to be ashamed of; he has come to believe that the desire can be discharged only from one particular place. An animal satisfies its desire wherever it happens and is content with that; this man is content with nothing but one named person, until he adds lowliness to lowliness and servitude to servitude, and puts his mind to serving his desire — when the mind was made to be obeyed, not to be a servant of desire and a contriver for its sake. Obsessive love is nothing but the width of excess in desire, and it is a disease of an empty heart with no concern." },
+      { title: "Turn the horse at the gate", body: "One must guard against its beginnings by leaving off looking again and thinking about it; once it takes hold it is hard to push off. So too the obsession with money, standing, property and children, and even the love of playing with birds, dice and chess — these can take hold of some people so that religion and the world are embittered for them and they cannot bear to be without them at all. The one who stops the surge of this love at its first stirring is like a man who turns the reins of an animal as it heads for a door to go in; how easy it is to stop it by turning the reins. The one who treats it after it has taken hold is like a man who leaves the animal until it has gone in and past the door, then takes it by the tail and pulls it back — and how great is the difference between the two in ease and hardship. So caution belongs at the beginnings of things; at their ends they do not accept treatment except by a hard struggle that nearly costs a person his life." },
+      { title: "The cure", body: "So the excess of this desire is that it overcomes the mind to that degree, and it is blamed greatly. Its falling short is impotence, or weakness in giving a wife her due, and that is blamed too. What is praised is that it be balanced and obedient to the mind and the Law in its holding back and its spreading out. Whenever it goes too far, break it with hunger and with marriage. The Prophet said: young men, keep to marriage; whoever cannot, let him fast, for fasting is a restraint for him." },
+    ],
+    closer: [
+      { title: "Why the desire exists at all", body: "Ghazali does not begin with the danger. He begins with two uses, and the first is remarkable: the pleasure exists so that people can reason from it to what they cannot yet feel. Warning and encouragement need something tasted." },
+      { title: "Turn the reins early", body: "The picture of the animal at the gate is his practical advice for every attachment, not only this one. Turning the reins before it enters is nothing; dragging it out by the tail afterwards is almost impossible." },
+    ],
+    distinction: ["Two ways to meet a rising attachment", "At the gate", "A turn of the reins, and it is over.", "Once inside", "Pulling it back by the tail — a struggle that nearly costs a life."],
+    misreading: "Do not read the condemnation of excess as a condemnation of the desire. Ghazali names its two purposes first, calls impotence and failing a wife blameworthy too, and says the aim is that it be balanced and under the mind's command.",
+    reflection: "What attachment of yours is still at the gate, and what would turning the reins look like?",
+    audit: ["Do I stir up what I then have to fight?", "What do I look at twice?", "Is my mind serving my desire or governing it?", "Where am I at the tail-end of something I should have stopped early?"],
+    nodes: ["shahwa-farj", "ishq", "nazar"],
+    model: set("What the desire is for, and where it goes wrong", "Both, as Ghazali gives them.", [["To reason from", "A tasted pleasure that points to the next life.", "support"], ["To continue the line", "Existence going on.", "support"], ["Excess", "Overcoming the mind; stirring it up on purpose.", "warning"], ["Falling short", "Failing a wife her due.", "warning"]]),
+  }),
+  makeChapter({
+    id: 9, shortTitle: "Should a seeker marry?", formalTitle: "What is on the seeker in leaving or making a marriage",
+    overview: "For someone at the start of the road, Ghazali says marriage is a distraction — and warns against citing the Prophet's marriages as a precedent. But if hunger and lowered eyes do not settle the desire, marriage is the cure; and then it must be done with good character. He ends with Rabi'a's reply to a man with eighty thousand a day.",
+    thesis: "A seeker at the beginning should stay unmarried until he is strong in knowing God — but if he cannot guard his eye and his thought, marriage is what cuts the matter at the root, and then his character in it is the test of his sincerity.",
+    moves: [
+      { title: "Not at the beginning", body: "Know that a seeker at the start of his affair should not busy himself with marrying, for it is an occupation that keeps him from travelling and draws him into closeness with a wife — and whoever grows close to anything other than God is kept from God." },
+      { title: "Do not cite the Prophet", body: "And let the many marriages of the messenger of God not deceive him, for nothing in the whole world kept his heart from God. Angels are not to be compared with blacksmiths. That is why Abu Sulayman al-Darani said: whoever marries has leaned toward this world. And: I have never seen a seeker marry and stay in his first state. He was once told: how much you need a woman to be close to. He said: may God not make me close to one — meaning that closeness with her keeps a person from closeness with God. And he said: everything that keeps you from God, of family, money or child, is an ill omen for you." },
+      { title: "Why the comparison fails", body: "How can anyone but the messenger of God be measured against him, when his being taken up with the love of God was such that he felt a burning in it, so that at times it was feared it would pass into his body and destroy it? That is why he would sometimes strike his hand on Aisha's thigh and say: speak to me, Aisha — so that her words would busy him away from the greatness of what he was in, since his body could not bear it. His nature was closeness with God, and his closeness with people was something incidental, out of kindness to his body. And he could not bear patience with people when he sat with them: when his chest grew tight he said, give us rest with it, Bilal — until he returned to what was the coolness of his eye. So a weak man who looks at his states in such matters is deceived, since understandings fall short of reaching the secrets of his acts." },
+      { title: "If desire overcomes him", body: "So the seeker's condition is to stay unmarried at the beginning, until he grows strong in knowing God — this if desire does not overcome him. If desire overcomes him, let him break it with long hunger and constant fasting. If the desire is not put down by that, and he is such that he cannot guard his eye, even if he can guard his organ, then success is better for him by marrying, so that the desire settles. Otherwise, whenever he does not guard his eye, his thinking is not guarded, and his mind is scattered, and he may fall into a trial he cannot bear. The eye's adultery is among the great small sins, and it leads to nearness to the great indecency, which is the organ's adultery — and whoever cannot lower his gaze cannot guard his organ." },
+      { title: "On looking", body: "Jesus said: beware the glance, for it plants desire in the heart, and that is trial enough. Sa'id ibn Jubayr said: the trial came to David from the glance. That is why David said to his son: my son, walk behind a lion and a black snake, and do not walk behind a woman. John was asked: what is the beginning of adultery? He said: looking and wishing. Al-Fudayl said Satan says: it is my old bow and my arrow that does not miss — meaning the glance. The Prophet said: the glance is a poisoned arrow of Satan's arrows; whoever leaves it out of fear of God, God gives him a faith whose sweetness he finds in his heart. And: I have left behind me no trial more harmful to men than women. And: beware the trial of this world and the trial of women, for the first trial of the Children of Israel was through women. God said: tell the believing men to lower their gaze." },
+      { title: "Every limb's share", body: "The Prophet said: every son of Adam has his share of adultery. The two eyes commit adultery, and their adultery is the look. The two hands commit adultery, and their adultery is the grasp. The two feet commit adultery, and their adultery is the walking. The mouth commits adultery, and its adultery is the kiss. And the heart wishes and desires, and the organ confirms it or denies it. Umm Salama said: Ibn Umm Maktum, who was blind, asked permission to come in to the messenger of God while Maymuna and I were sitting there. He said: veil yourselves. We said: is he not blind — he cannot see? He said: and are you two blind? Do you not see him? Ghazali says this shows that women may not sit with blind men as custom allows at funerals and feasts: it is forbidden for a blind man to be alone with women, and forbidden for a woman to sit with a blind man and fix her eyes on him without need. Speaking with men and looking at them is allowed to women only because the need is general." },
+      { title: "Looking at boys", body: "If a man can guard his eye from women but not from boys, marriage is better for him, since the harm in boys is greater: if his heart leaned to a woman, he could reach her lawfully by marrying. Looking at a beardless boy's face with desire is forbidden. Indeed, anyone whose heart is affected by the beauty of a beardless youth's form, so that he feels the difference between him and a bearded man, may not look at him. If you say every sensing person tells the beautiful from the ugly, and boys' faces have always been uncovered — Ghazali answers: I do not mean the eye's discrimination only. His telling them apart should be like his telling a green tree from a dry one, clear water from cloudy, a tree in blossom from one whose leaves have fallen. He leans to one of them with his eye and his nature, but a leaning with no desire in it; that is why he does not want to touch or kiss the blossoms, or kiss clear water. So too a fine grey head: the eye may lean to it and tell it from an ugly face, but with no desire in it. That is known by the self leaning to nearness and touch. Whenever he finds that leaning in his heart, and feels a difference between a beautiful face and fine plants and patterned cloths and gilded ceilings, then his look is a look of desire, and it is forbidden. This is something people make light of, and it drags them to ruin without their knowing." },
+      { title: "The warnings", body: "One of the generation after the Companions said: I am not more afraid for a young worshipper of a savage beast than of a beardless boy sitting with him. Sufyan said: if a man played with a boy between two toes of his foot, wanting desire, it would be an act of the people of Lot. One of the early Muslims said: there will be in this community three kinds of people of Lot — a kind who look, a kind who shake hands, and a kind who do the act. So the harm of looking at youths is great. Whenever the seeker is unable to lower his gaze and hold his thinking, the right course for him is to break his desire with marriage — for there are selves whose longing is not quieted by hunger." },
+      { title: "The three dreams", body: "One of them said: my desire overcame me at the start of my wanting, beyond what I could bear, and I cried out much to God. I saw a figure in a dream who said: what is wrong with you? I complained to him, and he said: come near me. I came near, and he put his hand on my chest, and I found its coolness in my heart and my whole body; and I woke and what was in me had gone, and I stayed well for a year. Then it came back, and I called for help much, and a figure came to me in a dream and said: would you like what you find to go, and your neck to be struck? I said yes. He said: stretch out your neck. I stretched it, and he drew a sword of light and struck my neck with it; and I woke and what was in me had gone, and I stayed well for a year. Then it came back, or worse, and I saw as though a figure between my side and my chest was speaking to me, saying: woe to you — how long will you ask God for what He does not like to be lifted? So I married, and it stopped, and a child was born to me." },
+      { title: "If he marries", body: "Whenever a seeker needs to marry, he must not leave the condition of his seeking at the start of the marriage or during it: at the start, by a good intention, and during it, by good character, a sound way of living and fulfilling the rights owed — as set out in the Book of the Manners of Marriage. A sign of the truth of his wanting is that he marries a poor, religious woman and does not seek a rich one. One of them said: whoever marries a rich woman gets five things from her — a high dowry, a delayed wedding, the loss of her service, much expense, and that if he wants to divorce her he cannot, for fear of losing her money. A poor woman is the opposite. One of them said: a woman should be below the man in four things, or she will look down on him — in age, height, wealth and family — and above him in four: beauty, manners, scruple and character." },
+      { title: "Three who married", body: "A sign of true wanting while the marriage lasts is character. One seeker married a woman and kept serving her until she was ashamed and complained to her father and said: I am at a loss with this man; I have been in his house for years, and I have never gone to the privy without his carrying the water there before me. Another married a woman of beauty, and as the wedding neared she was struck by smallpox. Her family grieved, fearing he would find her ugly. So the man showed them that he had an eye complaint, then that his sight had gone, until she was brought to him; and their grief left them. She stayed with him twenty years and then died — and then he opened his eyes. He was asked about it and said: I did it deliberately for her family's sake, so that they would not grieve. He was told: you have gone ahead of your brothers with this character. And one of the Sufis married a woman of bad character and bore with her. He was asked: why do you not divorce her? He said: I fear someone will marry her who cannot bear her, and will be hurt by her." },
+      { title: "Rabi'a's letter", body: "If a seeker marries, that is how he should be; and if he can leave it, that is better for him — if he cannot join the merit of marriage with travelling the road, and knows it will keep him from his state. It is told that Muhammad ibn Sulayman the Hashimite owned eighty thousand silver coins of income every day, and wrote to the people and scholars of Basra about a woman to marry. They all agreed on Rabi'a al-Adawiyya, and he wrote to her: God has given me of the income of this world eighty thousand a day, and days and nights will not pass before I complete a hundred thousand; and I will settle the like of it, and the like of it again, on you — so answer me. She wrote back: renouncing this world is rest for the heart and the body, and desiring it brings worry and sorrow. When this letter of mine reaches you, prepare your provision and send ahead for your return, and be the executor of your own self; do not make men your executors, so that they divide your inheritance. Fast always, and let your breaking of the fast be death. As for me, if God gave me the like of what He has given you and more, it would not please me to be busied away from God for the blink of an eye." },
+    ],
+    closer: [
+      { title: "'Angels are not compared with blacksmiths'", body: "Ghazali's sharpest line in the chapter blocks the most common excuse. Citing the Prophet's marriages as licence forgets that nothing in the world took his heart away from God — which is exactly what is in question for the person citing it." },
+      { title: "The man who feigned blindness", body: "Of the three marriage stories, the one that stays is the man who pretended to lose his sight for twenty years so that his wife's family would not grieve over her scarred face. Ghazali offers it as the sign of a seeker's truthfulness inside a marriage." },
+    ],
+    distinction: ["Two reasons to marry", "Because desire will not settle", "When hunger and lowered eyes have failed — then it is the cure.", "Because it is easier", "Which the seeker at the start is warned away from."],
+    misreading: "Do not read this as a general argument against marriage. Ghazali wrote a whole book weighing it, says plainly that where desire cannot be settled marriage is better, and here judges a seeker's sincerity by how he behaves inside one.",
+    reflection: "What in your life is at the stage of 'turning the reins', and what is already inside the gate?",
+    audit: ["Am I using someone else's licence?", "Do I lower my gaze?", "If I married, would my character be the proof?", "What am I too busy for?"],
+    nodes: ["nikah-j", "nazar", "ikhlas-j"],
+    model: chain("The order of remedies", "For a seeker whose desire is strong.", [["Hunger", "Long, and with constant fasting.", "support"], ["Lowered eyes", "Which guards the thinking too.", "support"], ["Occupation", "A work that takes over the heart.", "balance"], ["Marriage", "What cuts the matter at the root.", "support"]]),
+  }),
+  makeChapter({
+    id: 10, shortTitle: "Those who could, and did not", formalTitle: "The merit of whoever goes against the desire of the organ and the eye",
+    overview: "The reward is not in being unable, Ghazali says, but in refusing when you could. He gathers the cases: Joseph, the man in the cave, Sulayman ibn Yasar and the woman at al-Abwa, the butcher whose repentance brought a cloud, and the young man of Kufa who answered a woman with a letter.",
+    thesis: "Most people's abstaining is from weakness, fear, shame or care for their health, and there is no reward in that; the great reward is in leaving it out of fear of God when you are able and nothing stands in the way.",
+    moves: [
+      { title: "Where the reward is", body: "Know that this desire is the strongest of the desires over a human being, and the most disobedient to the mind when it stirs — except that what it calls for is shameful and people are ashamed of it and fear to rush into it. Most people's abstaining from it is either from inability, or fear, or shame, or care for their body, and there is no reward in any of that, since it is preferring one share of the self over another. True, it is a protection that a person is unable, and there is a benefit in those obstacles: they push away the sin. Whoever leaves adultery, its sin is pushed away from him, whatever the reason. But the merit and the great reward are in leaving it out of fear of God, with the power to do it and with the obstacles gone and the means easy — especially when the desire is real. That is the rank of the truthful." },
+      { title: "Shade on that Day", body: "That is why the Prophet said: whoever loves and stays chaste and hides it and dies, dies a martyr. And: seven whom God will shade on the Day of Resurrection in the shade of His Throne, on a day when there is no shade but His — among them a man whom a woman of beauty and standing calls to herself, and he says: I fear God, the Lord of the worlds. And the story of Joseph and his refusal of the wife of the governor, with the power and with her wanting him, is well known; God praised him for it in His Book, and he is the leader for everyone given success in struggling against Satan in this great desire." },
+      { title: "'You are the Sulayman who did not'", body: "It is reported that Sulayman ibn Yasar was among the most beautiful of people in face. A woman came in to him and asked him for himself, and he refused her and went out fleeing from his house and left her in it. Sulayman said: that night I saw Joseph in a dream, and it was as though I said to him: are you Joseph? He said: yes, I am the Joseph who intended, and you are the Sulayman who did not intend — pointing to God's words: she desired him, and he would have desired her had he not seen the proof of his Lord." },
+      { title: "The woman at al-Abwa", body: "And of him there is something stranger. He went out from Medina for the pilgrimage with a companion, and they camped at al-Abwa. His companion took the food-bag and went to the market to buy something, and Sulayman sat in the tent — and he was among the most beautiful of people in face and the most careful in religion. A bedouin woman saw him from the hill and came down until she stood before him, wearing a face-veil and gloves, and uncovered a face like a piece of the moon, and said: give me what I want. He thought she wanted food and got up to give her what was left of the provisions. She said: I do not want this; I want what a man gives his wife. He said: Satan has sent you. Then he put his head between his knees and began to sob, and wept until she saw that, and drew the veil over her face and turned back until she reached her people." },
+      { title: "His companion's tears", body: "His companion came and saw that his eyes were swollen with weeping and his throat was choked, and said: what makes you weep? He said: nothing; I remembered my little children. He said: no, by God — you have a story; it is only three days or so since you saw your children. He kept at him until he told him about the bedouin woman. His companion set down the food-bag and wept hard. Sulayman said: and what makes you weep? He said: I have more right to weep than you, for I fear that if I had been in your place I would not have held back from her. And the two of them went on weeping. When Sulayman reached Mecca and made the running and the circling, he came to the stone and wrapped himself in his cloak, and sleep took him. And there was a man, handsome and tall, of fine bearing and sweet scent. Sulayman said: God have mercy on you — who are you? He said: I am Joseph. He said: Joseph the truthful? He said: yes. He said: in your affair and the affair of the governor's wife there is something to wonder at. Joseph said to him: your affair and the affair of the woman of al-Abwa is more wonderful." },
+      { title: "The three in the cave", body: "Abdullah ibn Umar reported that the messenger of God said: three men of those before you set out until night brought them to a cave, and they went in, and a rock rolled down from the mountain and blocked the cave on them. They said: nothing will save you from this rock but that you call on God by the best of your deeds. One of them said: O God, You know I had two aged parents, and I never gave anyone of my household or my property to drink before them. One day looking for pasture took me far, and I did not come back to them until they had slept. I milked their evening drink and found them asleep, and I hated to give anyone of my household or property to drink before them. So I stayed with the cup in my hand, waiting for them to wake, until dawn broke, while the children cried at my feet. Then they woke and drank their drink. O God, if I did that seeking Your face, relieve us of what we are in from this rock. And it opened a little, not enough for them to get out." },
+      { title: "The second man", body: "The second said: O God, You know I had a cousin who was among the dearest of people to me. I wanted her for myself and she refused me, until a year of famine struck her and she came to me. I gave her a hundred and twenty gold coins on condition that she give herself to me, and she did — until, when I had power over her, she said: fear God, and do not break the seal except by its right. So I drew back from her, when she was among the dearest of people to me, and left her the gold I had given her. O God, if I did that seeking Your face, relieve us of what we are in. And the rock opened further, but they could not get out." },
+      { title: "The third, and the opening", body: "The third said: O God, I hired workers and gave them their wages, except one man who left the wage that was his and went away. I made his wage grow until it became great property. He came to me after a time and said: servant of God, give me my wage. I said: all that you see of your wage — the camels, cattle, sheep and servants. He said: servant of God, do not mock me. I said: I am not mocking you — take it. So he drove it all away and took every bit of it and left nothing. O God, if I did that seeking Your face, relieve us of what we are in. And the rock opened, and they went out walking." },
+      { title: "Guarding the eye", body: "That is the merit of one who was able to satisfy this desire and stayed chaste. Near to it is one who was able to satisfy the eye's desire, for the eye is the beginning of adultery; guarding it matters and is hard, since it is made light of and not greatly feared, while all the harms grow from it. The first look, if not intended, is not held against a person; going back to it is. The Prophet said: the first is yours and the second is against you. Al-Ala ibn Ziyad said: do not follow a woman's cloak with your eye, for looking plants desire in the heart. Rarely is a person's eye not falling on women and boys as he goes about. Whenever beauty appears to him, his nature demands another look — and there he should settle in himself that going back is the very thing ignorance is. For if he looks hard and finds it beautiful, desire stirs and he cannot reach it, and nothing comes of it but regret; and if he finds it ugly, he takes no pleasure and is pained, since he meant pleasure and did what pained him. So in either case he is not free of a sin, a pain and a regret. Whenever he guards his eye this way, many harms are pushed back from his heart." },
+      { title: "The butcher and the cloud", body: "Abu Bakr ibn Abdullah al-Muzani reported: a butcher was taken with a girl of one of his neighbours. Her people sent her on an errand to another village, and he followed her and asked her for herself. She said: do not do it. I love you more than you love me, but I fear God. He said: you fear Him, and I do not fear Him? — and went back repenting. Thirst struck him until he was near dying, and there came a messenger of one of the prophets of the Children of Israel, who asked him: what is wrong with you? He said: thirst. He said: come, let us pray to God to shade us with a cloud until we get into the village. He said: I have no good deed to pray by; you pray. He said: I will pray and you say amen to my prayer. The messenger prayed and the man said amen, and a cloud shaded them until they came to the village. The butcher went off toward his place, and the cloud went with him. The messenger said: you claimed you had no good deed, and I prayed and you said amen, and a cloud shaded us — and then it followed you. Tell me your affair. He told him, and the messenger said: the repentant has a place with God that nobody else has." },
+      { title: "The young man of Kufa", body: "Ahmad ibn Sa'id the worshipper reported from his father: there was among us in Kufa a young worshipper who kept to the main mosque and hardly left it, and he was of fine face, fine build and fine bearing. A woman of beauty and sense looked at him and fell in love with him, and it went on for a long time. One day she stood in his way as he was going to the mosque and said: young man, hear a few words from me, then do what you like. He went on and did not speak to her. Then she stood in his way again as he went home, and said: young man, hear a few words from me. He lowered his head a while and said: this is a place of suspicion, and I hate to be a place of suspicion. She said: by God, I did not stand here out of ignorance of your state; God forbid that worshippers should be spoken of in such a way because of me. What made me meet you myself in this matter is my knowledge that a little of this is much in people's eyes — and you worshippers are like glass: the slightest thing flaws it. The sum of what I say to you is that all my limbs are busy with you: God, God, in my affair and yours." },
+      { title: "The letter", body: "The young man went home and meant to pray and could not understand how to pray. He took a sheet and wrote a letter, then went out — and there she was, standing where she had stood. He threw the letter to her and went back. In it was: in the name of God, the Merciful, the Compassionate. Know, woman, that when a servant disobeys God, God is forbearing; and when he goes back to disobeying a second time, God covers him; and when he puts on the clothes of that disobedience, God grows angry for Himself with an anger that the heavens and the earth and the mountains and the trees and the animals are too narrow for — and who can bear His anger? If what you said is false, then I remind you of a day when the sky will be like molten metal and the mountains like carded wool, and the nations will kneel before the attack of the Mighty One. And I, by God, have grown too weak to set my own self right; how then to set someone else right? And if what you said is true, then I point you to a doctor of guidance who treats the sickening wounds and the burning pains: that is God, the Lord of the worlds. Go to Him with a truthful asking. For I am busy away from you with His words: and warn them of the day of the approaching event, when hearts are at the throats, choking; the wrongdoers have no friend and no intercessor who is obeyed. He knows the treachery of the eyes and what the breasts conceal. Where is the escape from this verse?" },
+      { title: "How it ended", body: "Some days later she stood in his way. When he saw her from far off he wanted to go back home so as not to see her. She said: young man, do not go back; there will be no meeting after this day except tomorrow before God. Then she wept hard and said: I ask God, who holds the keys of your heart, to make easy what has grown hard in your affair. Then she followed him and said: do me the favour of one counsel that I may carry from you, and give me an instruction to act on. He said: I counsel you to guard yourself from your own self, and I remind you of God's words: it is He who takes you at night and knows what you have done by day. She bowed her head and wept harder than before. Then she came to herself and kept to her house and took to worship, and stayed so until she died of grief. The young man used to remember her after her death and weep. He was asked: why do you weep, when you made her despair of you? He said: I slaughtered her hope at the start of her affair, and I made cutting her off a treasure stored for me with God — and I am ashamed before Him to take back a treasure I stored with Him." },
+    ],
+    closer: [
+      { title: "Two men weeping at al-Abwa", body: "The story turns on the companion's tears: he weeps not for what happened but for what he fears he would have done in the same tent. Ghazali keeps the honest man and the honest self-doubt in the same scene." },
+      { title: "A treasure he would not take back", body: "The last line of the book is the young man of Kufa explaining why he still weeps for the woman who died: refusing her was something he stored with God, and he is ashamed to take a stored thing back." },
+    ],
+    distinction: ["Two reasons for not doing it", "Inability, fear, shame", "The sin is pushed away — but there is no reward in it.", "Fear of God, when able", "The rank of the truthful, and shade on the Day."],
+    misreading: "Do not read the praise of refusal as contempt for desire. The book has already given the desire two purposes, and these are all cases where the desire was real and the refusal cost something — which is exactly why Ghazali counts them.",
+    reflection: "What have you refused that nobody knows you refused?",
+    audit: ["Do I abstain from fear of people or fear of God?", "Is my first look my last?", "Would I be honest about what I might have done?", "What have I stored with God that I am tempted to take back?"],
+    nodes: ["iffa", "nazar", "sidq-j"],
+    model: chain("Where the reward lies", "Ghazali's test.", [["Unable", "The sin is pushed away — no reward.", "balance"], ["Afraid of people", "One share of the self over another.", "balance"], ["Able, and afraid of God", "The rank of the truthful.", "support"], ["Stored with God", "'I am ashamed to take it back.'", "support"]]),
+  }),
 ];
 
 export const book23ConceptNodes: ConceptNode[] = [
-  {
-    id: "appetite",
-    label: "Appetite",
-    kicker: "A seeking power",
-    description:
-      "A power that seeks nourishment and pleasure. The book studies what happens when a useful capacity becomes a ruling demand.",
-    position: "node-appetite",
-  },
-  {
-    id: "hunger",
-    label: "Hunger",
-    kicker: "A disciplinary instrument",
-    description:
-      "A state Ghazali uses to weaken satiety and connected impulses. Its value lies in a fitting effect, not pain by itself.",
-    position: "node-hunger",
-  },
-  {
-    id: "satiety",
-    label: "Satiety",
-    kicker: "Fullness with moral effects",
-    description:
-      "More than having eaten enough in Ghazali's usage here: the concern is indulged fullness that burdens attention and strengthens appetite.",
-    position: "node-satiety",
-  },
-  {
-    id: "desire",
-    label: "Desire",
-    kicker: "A power that can serve or rule",
-    description:
-      "Desire is not condemned merely for existing. Disorder appears when it overpowers judgment, law, purpose, or the rights of others.",
-    position: "node-desire",
-  },
-  {
-    id: "attention",
-    label: "Attention",
-    kicker: "A contested resource",
-    description:
-      "Appetite can capture thought before action. The book repeatedly asks what frees attention for remembrance, worship, and sound judgment.",
-    position: "node-attention",
-  },
-  {
-    id: "compassion",
-    label: "Compassion",
-    kicker: "Remembering another's hunger",
-    description:
-      "Ghazali includes awareness of hungry people and the ability to redirect surplus toward them among the fruits of restraint.",
-    position: "node-compassion",
-  },
-  {
-    id: "measure",
-    label: "Measure",
-    kicker: "A dose fitted to condition",
-    description:
-      "Amount, timing, type, strength, habit, and purpose all affect what a proportionate discipline would mean for a person.",
-    position: "node-measure",
-  },
-  {
-    id: "lawful",
-    label: "Lawful source",
-    kicker: "The first condition",
-    description:
-      "Ghazali places lawful provision before quantity, timing, or type. Austerity cannot repair wrongful acquisition.",
-    position: "node-lawful",
-  },
-  {
-    id: "gradualism",
-    label: "Gradualism",
-    kicker: "Habit unwound by stages",
-    description:
-      "A person accustomed to much food should not be overburdened by an abrupt reduction. The entrenched pattern is changed progressively.",
-    position: "node-gradualism",
-  },
-  {
-    id: "discipline",
-    label: "Discipline",
-    kicker: "Correction toward freedom",
-    description:
-      "A deliberate practice that weakens an appetite's rule. It is judged by whether it restores proportion, not by severity alone.",
-    position: "node-discipline",
-  },
-  {
-    id: "moderation",
-    label: "Moderation",
-    kicker: "The fitting middle",
-    description:
-      "A condition in which neither fullness nor hunger dominates attention and desire remains under sound direction.",
-    position: "node-moderation",
-  },
-  {
-    id: "intention",
-    label: "Intention",
-    kicker: "The inward direction",
-    description:
-      "The purpose that gives restraint its moral direction. An outwardly sound act may still serve the appetite for recognition.",
-    position: "node-intention",
-  },
-  {
-    id: "reputation",
-    label: "Reputation",
-    kicker: "The hidden reward",
-    description:
-      "Being known for discipline can become a subtler pleasure, allowing appetite to survive under the appearance of restraint.",
-    position: "node-reputation",
-  },
-  {
-    id: "truthfulness",
-    label: "Truthfulness",
-    kicker: "Actual state and appearance aligned",
-    description:
-      "Refusing to perform a spiritual rank one does not possess, and refusing to make public recognition the reward for restraint.",
-    position: "node-truthfulness",
-  },
-  {
-    id: "gaze",
-    label: "Gaze",
-    kicker: "An early threshold",
-    description:
-      "Ghazali treats the gaze and the thought that follows as early points where attention can still be redirected before attachment grows.",
-    position: "node-gaze",
-  },
-  {
-    id: "aspirant",
-    label: "Aspirant",
-    kicker: "A specific ascetic audience",
-    description:
-      "The murid entering a concentrated path of discipline. Counsel addressed to this person should not automatically be universalized.",
-    position: "node-aspirant",
-  },
-  {
-    id: "marriage",
-    label: "Marriage",
-    kicker: "A covenant, not a technique",
-    description:
-      "Considered conditionally in the final section and inseparable from intention, conduct, obligations, and another person's rights.",
-    position: "node-marriage",
-  },
-  {
-    id: "rights",
-    label: "Rights",
-    kicker: "The other person remains central",
-    description:
-      "Duties created by marriage prevent it from being reduced to a private remedy for the aspirant's desire.",
-    position: "node-rights",
-  },
-];
+  ["batn", "The stomach", "The spring", "From it the other desires are fed."],
+  ["shahwa", "Desire", "A chain, not a list", "Food, sex, money, standing, rivalry, display."],
+  ["silsila", "The sequence", "How it grows", "Each satisfied appetite recruits the next."],
+  ["ju", "Hunger", "A struggle", "With the reward of one who fights in God's way."],
+  ["shiba", "Being full", "The first innovation", "'When their bellies grew full, their selves bolted.'"],
+  ["mujahada", "Striving", "Knocking at the gate", "'With hunger and thirst.'"],
+  ["qalb-j", "The heart", "Cleared by it", "Too much water kills the crop."],
+  ["waqt", "Time", "What eating costs", "The hours around a meal, counted."],
+  ["riyada", "Training", "By degrees", "A mouthful less each day."],
+  ["miqdar", "The measure", "Four degrees", "From keeping alive to a pound a day."],
+  ["tadrij", "Going gradually", "A twenty-eighth a day", "Halved in a month, and not felt."],
+  ["ithar", "Preferring others", "The tenth benefit", "What you eat is stored in the privy."],
+  ["wasat", "The middle", "The ant in the ring", "The furthest point from every fire."],
+  ["ghurur-j", "Self-deception", "The deluded man", "Takes the licence of one further on."],
+  ["riya-j", "Showing off", "The worse desire", "A scorpion traded for a snake."],
+  ["sidq-j", "Truthfulness", "Show the appetite", "Two truths, where hiding is two lies."],
+  ["jah-j", "Standing", "The hidden appetite", "Fed by visible restraint."],
+  ["shahwa-farj", "The second desire", "Two purposes", "A pleasure to reason from; the line continuing."],
+  ["ishq", "Obsessive love", "Excess run wide", "A disease of an empty heart."],
+  ["nazar", "The glance", "Where it starts", "'The first is yours; the second is against you.'"],
+  ["nikah-j", "Marriage", "The last remedy", "When hunger and lowered eyes have failed."],
+  ["ikhlas-j", "Sincerity", "Tested inside", "Character in a marriage, not before it."],
+  ["iffa", "Chastity", "Where the reward is", "Refusing when you could, for God."],
+].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
+
+const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });
 
 export const book23Journeys: Journey[] = [
   {
-    id: "root",
-    number: "01",
-    question: "Why begin with appetite?",
-    title: "Trace desire from its root",
-    description:
-      "Follow Ghazali's causal diagnosis, then separate the pain of hunger from the inward, practical, and social functions he wants restraint to serve.",
-    payoff: "You leave with a map of why food discipline matters inside the wider moral system.",
-    image: assetUrl("assets/system/book23-appetite-root.jpg"),
-    imageAlt: "A bright garden fountain sends four colored channels toward vessels symbolizing appetite, attention, resources, and public display.",
-    minutes: 8,
-    color: "#b6682f",
+    id: "root", number: "01", question: "Why start with the stomach?", title: "The spring of the desires",
+    description: "Take Ghazali's chain from a mouthful in the Garden to rivalry and display, the reports on hunger, and his ten benefits — which work by what hunger does, not by what it costs.",
+    payoff: "You see why he treats food as the strategic desire, and what exactly is gained by eating less.",
+    image: assetUrl("assets/system/book23-appetite-root.jpg"), imageAlt: "A bright garden fountain sends four coloured channels toward vessels standing for appetite, attention, resources, and display.", minutes: 14, color: "#bf7a35",
     nodes: [
-      {
-        id: "find-the-root",
-        label: "Find the proposed root",
-        micro: "A daily appetite trains command",
-        summary:
-          "Ghazali begins with the stomach because habitual satisfaction can train the self to expect that desire should be obeyed.",
-        guardrail: "This is Ghazali's causal diagnosis, not a universal law of modern psychology.",
-        chapterId: 1,
-        glyph: "diagnose",
-      },
-      {
-        id: "follow-the-branches",
-        label: "Follow the branches",
-        micro: "Pleasure recruits means and status",
-        summary:
-          "The prologue traces appetite toward sexual desire, wealth, status, rivalry, envy, ostentation, and pride.",
-        guardrail: "The concern is their service to expanding desire, not the mere existence of resources or standing.",
-        chapterId: 1,
-        glyph: "leverage",
-      },
-      {
-        id: "read-the-witness",
-        label: "Read the religious witness",
-        micro: "Exhortation before technique",
-        summary:
-          "Ghazali gathers reports and sayings that praise hunger and condemn satiety to establish the spiritual urgency of restraint.",
-        guardrail: "Reporting his evidence does not independently authenticate every narration.",
-        chapterId: 1,
-        glyph: "witness",
-      },
-      {
-        id: "separate-pain-benefit",
-        label: "Separate pain from benefit",
-        micro: "Medicine is judged by function",
-        summary:
-          "Like unpleasant medicine, hunger is not valuable merely because it hurts; its claimed value lies in what it helps restore or weaken.",
-        guardrail: "Discomfort is not proof of spiritual gain.",
-        chapterId: 2,
-        glyph: "know",
-      },
-      {
-        id: "free-attention",
-        label: "Free attention",
-        micro: "Lighter demands, clearer purpose",
-        summary:
-          "Ghazali connects restraint with clearer thought, a softened heart, humility, reduced sleep, and weaker secondary impulses.",
-        guardrail: "These are claims within his ascetic account, not guaranteed effects of every fast.",
-        chapterId: 2,
-        glyph: "attend",
-      },
-      {
-        id: "redirect-resources",
-        label: "Redirect resources",
-        micro: "Less for the self can become more for others",
-        summary:
-          "Reduced material demand can leave time, food, and money available for worship and for people who are hungry or in need.",
-        guardrail: "Restraint is incomplete if savings simply become another private accumulation.",
-        chapterId: 2,
-        glyph: "act",
-      },
+      node("the-chain", "Take the chain", "From the belly outward", "Food, then sex, then money and standing, then rivalry and display.", "Adam was put out over something eaten.", 1, "know"),
+      node("aisha", "Hear Aisha", "Rubbing his belly", "She wept at his hunger; he said he was ashamed to live softly.", "He died within the week.", 2, "witness"),
+      node("knock", "Knock at the gate", "'With hunger and thirst'", "Her question, and his answer.", "Asking, not punishing.", 2, "receive"),
+      node("medicine", "Take the medicine", "Not because it is bitter", "A remedy works by its property, not by its taste.", "So hurting yourself proves nothing.", 3, "clear"),
+      node("ten", "Count the ten", "What it actually does", "Clear heart, quiet tongue, less sleep, freed hours and money.", "Each one can be checked.", 3, "order"),
+      node("two-stores", "Weigh two storehouses", "Privy, or God", "What you eat, and what you give away.", "The tenth benefit.", 3, "resolve"),
     ],
   },
   {
-    id: "measure",
-    number: "02",
-    question: "How is eating disciplined?",
-    title: "Calibrate four measures",
-    description:
-      "Separate lawful source, amount, timing, and type, then see why gradual change and the person's actual condition matter more than an impressive regimen.",
-    payoff: "You gain a precise model for correction without mistaking severity for the goal.",
-    image: assetUrl("assets/system/book23-four-measures.jpg"),
-    imageAlt: "Four luminous brass instruments measure a lawful seal, a bowl, a clock-like dial, and a simple grain beneath a white and gold canopy.",
-    minutes: 9,
-    color: "#2c8580",
+    id: "measure", number: "02", question: "How much, how often, and what?", title: "The four measures",
+    description: "Work through the duties: lawful food first, then the amount, the timing and the kind — with the arithmetic for cutting down and the signs of true hunger.",
+    payoff: "You get a method you can actually set, and a rule for where to stop.",
+    image: assetUrl("assets/system/book23-four-measures.jpg"), imageAlt: "Four brass instruments measure a sealed permit, a bowl, a dial and a grain beneath a pale canopy.", minutes: 15, color: "#278d91",
     nodes: [
-      {
-        id: "begin-lawful",
-        label: "Begin with lawful provision",
-        micro: "Source before quantity",
-        summary:
-          "Ghazali places lawful acquisition first, before every question about how little, how late, or how plain a meal should be.",
-        guardrail: "Austerity cannot repair wrongful acquisition.",
-        chapterId: 3,
-        glyph: "guard",
-      },
-      {
-        id: "reduce-gradually",
-        label: "Change amount gradually",
-        micro: "Unwind an established habit",
-        summary:
-          "A person accustomed to eating much is advised to reduce by stages so that the correction does not overwhelm the body or the practice.",
-        guardrail: "Sudden severity is not presented as superior discipline.",
-        chapterId: 3,
-        glyph: "cultivate",
-      },
-      {
-        id: "examine-timing",
-        label: "Examine timing",
-        micro: "Interval is a separate lever",
-        summary:
-          "Ghazali distinguishes the amount eaten from the time between meals and records different ascetic intervals.",
-        guardrail: "The historical intervals are not a universal schedule to imitate.",
-        chapterId: 3,
-        glyph: "attend",
-      },
-      {
-        id: "simplify-type",
-        label: "Simplify the desired type",
-        micro: "Variety has its own pull",
-        summary:
-          "The desire for refined or especially attractive food can be trained independently from the desire for sheer quantity.",
-        guardrail: "Less variety is another lever, not proof of a higher rank.",
-        chapterId: 3,
-        glyph: "practice",
-      },
-      {
-        id: "fit-the-person",
-        label: "Fit the person's condition",
-        micro: "Bodies, habits, and duties differ",
-        summary:
-          "The useful measure changes with strength, habit, appetite, work, and the effect the discipline has on attention and duty.",
-        guardrail: "Fixed numbers are not the final aim.",
-        chapterId: 4,
-        glyph: "diagnose",
-      },
-      {
-        id: "restore-middle",
-        label: "Restore the middle",
-        micro: "Neither fullness nor hunger rules",
-        summary:
-          "The intended state leaves the person unburdened by satiety and unpreoccupied by painful hunger, free for worship and thought.",
-        guardrail: "Corrective pressure should not become a permanent opposite extreme.",
-        chapterId: 4,
-        glyph: "balance",
-      },
+      node("lawful-first", "Settle the lawful", "Before anything else", "Worship with unlawful food is building on waves.", "The other measures come after.", 4, "guard"),
+      node("crumb", "Do the arithmetic", "A twenty-eighth a day", "Two loaves become one in a month, unnoticed.", "Degrees, not a stroke.", 4, "order"),
+      node("stop", "Find where to stop", "The worship test", "Eat what does not weaken you for what you are doing.", "Even if appetite remains.", 4, "diagnose"),
+      node("timing", "Set the timing", "One meal, before dawn", "Hunger for the day's fast, hunger for the night's prayer.", "Or split it in two.", 4, "practice"),
+      node("kind", "Simplify the kind", "Bread before relish", "And the fine dish before the coarse, so it is food and not a treat.", "Do not feed two desires at once.", 5, "balance"),
+      node("give-it", "Give it away", "Ibn Umar's fish", "Wanted for months, handed to a beggar with its loaf.", "Sent ahead, not lost.", 5, "arrive"),
     ],
   },
   {
-    id: "hidden-desire",
-    number: "03",
-    question: "Can restraint feed the ego?",
-    title: "Watch desire change its object",
-    description:
-      "See how a person can leave the food yet begin consuming reputation, and why truthfulness matters more than performing visible austerity.",
-    payoff: "You learn to distinguish disciplined appetite from appetite disguised as spiritual rank.",
-    image: assetUrl("assets/system/book23-hidden-desire.jpg"),
-    imageAlt: "A simple ivory bowl stands between two ornate mirrors, while a gold ribbon of desire turns from the bowl toward an elevated empty pedestal.",
-    minutes: 7,
-    color: "#865b9d",
+    id: "hidden-desire", number: "03", question: "Can self-denial go wrong?", title: "Eating alone what you refuse in company",
+    description: "Take the two dangers that come after the desires are left, Ghazali's surprising cure, and the ant in the ring of fire that explains where the whole thing is aimed.",
+    payoff: "You leave with a test for your own discipline that is harder to pass than the discipline was.",
+    image: assetUrl("assets/system/book23-hidden-desire.jpg"), imageAlt: "A plain ivory bowl between two ornate mirrors, a gold ribbon turning from the bowl toward an empty pedestal.", minutes: 13, color: "#c25f50",
     nodes: [
-      {
-        id: "make-restraint-visible",
-        label: "See restraint become visible",
-        micro: "A practice acquires an audience",
-        summary:
-          "Eating little can become a social sign of discipline, creating a second reward beyond the practice's original purpose.",
-        guardrail: "Visibility alone does not prove ostentation.",
-        chapterId: 5,
-        glyph: "attend",
-      },
-      {
-        id: "find-private-divergence",
-        label: "Find private divergence",
-        micro: "Actual state and public image split",
-        summary:
-          "One failure conceals continued indulgence while displaying austerity before others.",
-        guardrail: "The fault includes the false rank being performed, not food alone.",
-        chapterId: 5,
-        glyph: "mirror",
-      },
-      {
-        id: "detect-new-reward",
-        label: "Detect the new reward",
-        micro: "Recognition can taste sweet",
-        summary:
-          "A person may genuinely abstain yet delight in being known for abstinence, making reputation the hidden pleasure.",
-        guardrail: "A sound outward act can still serve a disordered inward aim.",
-        chapterId: 5,
-        glyph: "diagnose",
-      },
-      {
-        id: "compare-the-danger",
-        label: "Compare the danger",
-        micro: "Scorpion exchanged for snake",
-        summary:
-          "Ghazali treats the move from food desire to status desire as an escape from one danger into a subtler one.",
-        guardrail: "The analogy ranks hidden danger without making the first appetite harmless.",
-        chapterId: 5,
-        glyph: "know",
-      },
-      {
-        id: "restore-truth",
-        label: "Restore truthfulness",
-        micro: "Let the practice survive without applause",
-        summary:
-          "The corrective is congruence between actual state, intention, and appearance rather than the performance of an unattained rank.",
-        guardrail: "The aim is not to advertise private faults, but to stop feeding a false image.",
-        chapterId: 5,
-        glyph: "guard",
-      },
+      node("the-ant", "Take the ant", "In the ring of fire", "It cannot get out, so it goes to the centre.", "The middle is the aim.", 6, "pattern"),
+      node("why-praise", "See why hunger is praised", "Nature pulls one way", "So the Law pulls the other, and the two come level.", "The far end is not the target.", 6, "clear"),
+      node("two-listeners", "Pick your listener", "Careful, or deluded", "'My self is no more obedient than theirs' — or 'no more disobedient'.", "One of them is you.", 6, "mirror"),
+      node("in-private", "Check the private table", "What you eat alone", "Hiding an appetite is two lies.", "Show it instead.", 7, "diagnose"),
+      node("scorpion", "Watch the swap", "Scorpion for snake", "Beating the food and feeding the reputation.", "Then eat, and break the worse one.", 7, "guard"),
+      node("umar-cup", "Take Umar's cup", "Honey, refused", "'Its sweetness goes and its reckoning stays.'", "He would not measure himself by the Prophet.", 6, "steady"),
     ],
   },
   {
-    id: "governed-desire",
-    number: "04",
-    question: "How is sexual desire governed?",
-    title: "Guide the power before the gate",
-    description:
-      "Preserve the faculty's proper place, locate excess and deficiency, intervene early in attention, and read Ghazali's marriage counsel in its specific ascetic context.",
-    payoff: "You leave with a dignified model of governance, early attention, condition, and rights.",
-    image: assetUrl("assets/system/book23-governed-desire.jpg"),
-    imageAlt: "A flowering vine approaches a luminous garden gate, with a gentle brass guide turning one tendril early while a balanced lantern marks the center path.",
-    minutes: 9,
-    color: "#2f6f9e",
+    id: "governed-desire", number: "04", question: "And the second desire?", title: "Governed, not destroyed",
+    description: "Take the two purposes of sexual desire, what its excess does, the order of remedies for a seeker, and the cases where people refused when they could.",
+    payoff: "You see the desire treated as something to govern rather than to hate, and where Ghazali says the reward actually lies.",
+    image: assetUrl("assets/system/book23-governed-desire.jpg"), imageAlt: "A bridled horse standing quietly at an open gate, the reins slack in a hand.", minutes: 14, color: "#586fa8",
     nodes: [
-      {
-        id: "recognize-function",
-        label: "Recognize proper function",
-        micro: "A power is not evil by existence",
-        summary:
-          "Ghazali names pleasure as an analogy for promised delight and desire as a means for continuation of progeny.",
-        guardrail: "Acknowledging function does not deny the possibility of disorder.",
-        chapterId: 6,
-        glyph: "know",
-      },
-      {
-        id: "locate-extremes",
-        label: "Locate both extremes",
-        micro: "Deficiency and excess can miss",
-        summary:
-          "The praised condition is a present faculty in fitting proportion, not domination by desire and not deficiency of the power.",
-        guardrail: "Moderation is right rule, not one identical intensity for everyone.",
-        chapterId: 6,
-        glyph: "balance",
-      },
-      {
-        id: "intervene-early",
-        label: "Intervene before the gate",
-        micro: "Direction is easier near the beginning",
-        summary:
-          "Ghazali emphasizes gaze and thought because established attachment is harder to reverse than an initial movement of attention.",
-        guardrail: "Early awareness need not turn a passing impression into panic or obsession.",
-        chapterId: 6,
-        glyph: "attend",
-      },
-      {
-        id: "identify-aspirant",
-        label: "Identify the aspirant",
-        micro: "The counsel has a specific audience",
-        summary:
-          "The final section addresses a murid entering concentrated ascetic discipline, not every person facing a marriage decision.",
-        guardrail: "Specific counsel should not be universalized into a general ruling.",
-        chapterId: 7,
-        glyph: "name",
-      },
-      {
-        id: "test-condition",
-        label: "Test actual condition",
-        micro: "Can gaze and thought be guarded?",
-        summary:
-          "If restraint repeatedly fails, marriage may be preferable; if the aspirant can remain guarded, celibacy may protect early focus in Ghazali's program.",
-        guardrail: "The recommendation changes with the person's condition.",
-        chapterId: 7,
-        glyph: "diagnose",
-      },
-      {
-        id: "honor-rights",
-        label: "Honor the rights created",
-        micro: "Another person is not a remedy",
-        summary:
-          "Marriage carries intention, good conduct, obligations, and the spouse's rights, so it cannot be reduced to self-management.",
-        guardrail: "This synthesis explains the argument; it is not a fatwa or personal marriage advice.",
-        chapterId: 7,
-        glyph: "guard",
-      },
+      node("two-uses", "Take the two uses", "Before the dangers", "A tasted pleasure to reason from, and the line continuing.", "Falling short is blamed too.", 8, "know"),
+      node("the-gate", "Turn the reins", "At the gate", "Easy before it enters; almost impossible after.", "True of every attachment.", 8, "order"),
+      node("remedies", "Take the order", "Hunger, eyes, work, marriage", "Each tried before the next.", "Marriage cuts it at the root.", 9, "practice"),
+      node("blacksmiths", "Refuse the excuse", "'Angels and blacksmiths'", "Citing his marriages as licence.", "Nothing took his heart from God.", 9, "clear"),
+      node("blind", "Take the marriage test", "Twenty years of feigned blindness", "So that her family would not grieve.", "Character is the sign of sincerity.", 9, "witness"),
+      node("able", "Locate the reward", "Able, and refusing", "Not inability, fear or shame — fear of God.", "'I am ashamed to take back what I stored.'", 10, "arrive"),
     ],
   },
 ];
+
+export const book23Movements: TaxonomyGroup[] = [
+  ["ju", "1. Hunger: its merit and its benefits", "Why the stomach comes first, the reports, and the ten benefits.", [1, 2, 3]],
+  ["riyada", "2. The training, and where it is aimed", "Amount, timing and kind; the stories of leaving desires; the middle; and the fault that follows.", [4, 5, 6, 7]],
+  ["farj", "3. The second desire", "Its purposes and its excess, the seeker and marriage, and those who refused when they could.", [8, 9, 10]],
+].map(([id, label, description, chapterIds], index) => ({ id, label, description, chapterIds, color: ["#bf7a35", "#278d91", "#586fa8"][index % 3] })) as TaxonomyGroup[];
 
 export const book23Sources: SourceLink[] = [
-  { label: "Primary Arabic text", note: "The complete public Arabic of Book 23 was read and used to establish the benefits of hunger, the three variables of the discipline, the balanced destination rather than maximum weakness, and the treatment of ostentation in abstaining.", url: "https://shamela.ws/book/9472/825" },
-  { label: "The merit of hunger", note: "The opening passage gathering the testimony on hunger and satiety, before the benefits and the method are analysed.", url: "https://shamela.ws/book/9472/826" },
-  { label: "The benefits of hunger", note: "The passage giving the medicine analogy, the effects on attention and pride, and the argument that satiety energises a cluster of connected appetites.", url: "https://shamela.ws/book/9472/830" },
-  { label: "The method of the discipline", note: "The passage requiring lawful provision first, then separating quantity, interval, and quality as three distinct interventions.", url: "https://shamela.ws/book/9472/835" },
-  { label: "The variance of the rule", note: "The passage naming the balanced destination, explaining the severity of the praise as a counterweight, and refusing any fixed quantity.", url: "https://shamela.ws/book/9472/842" },
-  { label: "Ostentation in abstaining", note: "The passage on the two cases: concealed appetite dressed as austerity, and honest abstinence enjoyed for the standing it confers.", url: "https://shamela.ws/book/9472/844" },
-  { label: "What the aspirant must observe", note: "The passage on the aspirant and marriage, in which the judgement changes with his condition rather than with the value of marriage.", url: "https://shamela.ws/book/9472/847" },
-  { label: "Published English edition", note: "T. J. Winter's translation of Books 22 and 23. Used to cross-check the established English title and section sequence.", url: "https://its.org.uk/catalogue/al-ghazali-on-disciplining-the-soul-and-on-breaking-the-two-desires-paperback/" },
-  { label: "Official edition sample", note: "Publisher sample containing the English contents and bibliographic context for the combined Books 22 and 23 volume.", url: "https://its.org.uk/wp-content/uploads/2012/09/Al-Ghazali-on-Disciplining-the-Soul-Breaking-the-Two-Desires.pdf" },
+  { label: "Primary Arabic text", note: "The complete public Arabic of Book 23 was read and rendered in full.", url: "https://shamela.ws/book/9472/825" },
+  { label: "The merit of hunger", note: "The reports on hunger and the condemnation of being full, with Aisha's account of the Prophet's hunger.", url: "https://shamela.ws/book/9472/826" },
+  { label: "The benefits of hunger", note: "The ten benefits, with the comparison of a bitter medicine that works by its property.", url: "https://shamela.ws/book/9472/830" },
+  { label: "The training", note: "The four duties, the four degrees of amount, timing and kind, and the arithmetic of reducing by a mouthful a day.", url: "https://shamela.ws/book/9472/835" },
+  { label: "The differing states", note: "The middle as the aim, the ant in the ring of fire, and why a shaykh does not disclose it to a beginner.", url: "https://shamela.ws/book/9472/842" },
+  { label: "The hidden fault", note: "Eating in private what is refused in company, and the desire for standing that replaces the desire for food.", url: "https://shamela.ws/book/9472/844" },
+  { label: "The second desire", note: "Its two purposes, its excess, obsessive love, and the remedies.", url: "https://shamela.ws/book/9472/845" },
+  { label: "The seeker and marriage", note: "What is on the seeker in leaving or making a marriage, and the cases of those who refused when able.", url: "https://shamela.ws/book/9472/847" },
   { label: "Forty-book structure", note: "Ghazali.org's listing confirms the book's title and its place among the forty.", url: "https://www.ghazali.org/listing-the-forty-books/" },
 ];
-
-type Extra23 = { closer: Array<{ title: string; body: string }>; audit: string[] };
-
-const book23Extras: Record<number, Extra23> = {
-  1: {
-    closer: [
-      { title: "Why the book begins here", body: "Ghazali places appetite for food first because he treats it as the earliest root. It is created in the child before anger and long before discernment, which in Book 22 he gives as the reason it is the most disobedient of the drives to change." },
-      { title: "The register of the opening", body: "This section gathers reports rather than method, and its work is to create urgency about satiety before the measures arrive. The argument for how much and when comes two sections later." },
-    ],
-    audit: ["When did I last feel hunger without treating it as an emergency?", "What does a full stomach make easy in me?", "Which other appetite gets stronger when this one is fed?", "Have I ever tested this, or only read about it?"],
-  },
-  2: {
-    closer: [
-      { title: "The benefits are stated as effects, not as merits", body: "Ghazali's list works by consequence: what clearing the stomach does to the clarity of the heart, the lightness of the body, the quieting of the other appetites, and the capacity to stand at night. The argument is mechanical rather than devotional." },
-      { title: "Why satiety is treated as a cause", body: "The harms of fullness are not presented as a separate vice but as the condition in which the other faults become available. This is what earns appetite its position at the head of the quarter's practical books." },
-    ],
-    audit: ["What does fullness cost me that I have never counted?", "Which of the stated benefits could I check this week?", "Do I eat to remove hunger or to reach pleasure?", "What happens to my thinking when I am heavy?"],
-  },
-  3: {
-    closer: [
-      { title: "The gradual method", body: "Ghazali is specific about how the amount is reduced. One who eats two loaves and wants one should subtract a twenty-eighth or a thirtieth of a loaf each day, reaching a single loaf within a month without harm and without the change showing. A sudden move is refused because the temperament will not bear it." },
-      { title: "Why the kind matters as well as the amount", body: "Everything delicious a person craves and eats produces exultation in the soul, hardness in the heart, and familiarity with the world's pleasures, until he loves them and hates death, so that the world becomes his garden and death his prison. Denying the soul reverses the arrangement." },
-    ],
-    audit: ["Which of the four measures have I never applied at all?", "Am I trying to move suddenly where he prescribes degrees?", "What would a thirtieth of a loaf a day look like in my case?", "Is my food lawful, before any of the rest is worth calibrating?"],
-  },
-  4: {
-    closer: [
-      { title: "Why the rule varies", body: "Ghazali refuses a single figure. The measure of need differs by age, by person, and by occupation, so what counts as sufficiency for one is stinting for another and extravagance for a third. The four degrees are positions on a scale, not a prescription." },
-      { title: "The condition that limits it", body: "Sahl's rule is quoted as the boundary: God has bound His servants by life, intellect, and strength. If a person fears for the first two he eats, and breaks his fast if fasting, and seeks provision if poor. Only the third may be allowed to weaken." },
-    ],
-    audit: ["Which degree is honestly mine, and which am I comparing myself to?", "Am I in a state of health, work, or need that changes the rule?", "Have I taken someone else's measure as my own?", "What am I risking that the rule does not permit me to risk?"],
-  },
-  5: {
-    closer: [
-      { title: "Why this section exists at all", body: "Having supplied a method for eating less, Ghazali immediately supplies the way it goes wrong. The whole apparatus of measured food is unusually visible, and a visible discipline is available as a claim on other people." },
-      { title: "How the fault is detected", body: "The test he uses throughout the quarter applies exactly here: what happens to the discipline when no one can see it, and what happens to the person when someone else's abstinence is praised instead of his own." },
-    ],
-    audit: ["Would I keep this measure on a day nobody could observe?", "Do I mention what I do not eat?", "How do I feel when another person's restraint is noticed?", "Is the discipline serving the heart or the reputation?"],
-  },
-  6: {
-    closer: [
-      { title: "Why the two desires are treated together", body: "Ghazali's structure links them causally rather than thematically. The stomach is the earlier root, and the second desire draws its force from the first, which is why the book treats food at length before arriving here." },
-      { title: "The governed middle", body: "As with anger in Book 22, the treatment is not eradication but return to the mean. Deficiency and excess are both named as faults, and the aim is a drive that submits to the direction of intellect and Law." },
-    ],
-    audit: ["Where does this drive draw its strength from in my day?", "Which is my failure, excess or deficiency?", "What have I left ungoverned because I called it natural?", "What would the mean look like here, concretely?"],
-  },
-  7: {
-    closer: [
-      { title: "Why it is decided case by case", body: "Ghazali does not answer whether the aspirant should marry. He gives the considerations on both sides and makes the answer depend on the person's condition, which is the same refusal of a single figure he made about the measure of food." },
-      { title: "What tips the decision", body: "The governing question is which choice leaves the heart freer for what it was aiming at. Marriage may remove a preoccupation or install one, and the same is true of abstaining, so the reasoning has to be done about the actual person rather than in general." },
-    ],
-    audit: ["Which choice would leave my attention freer, honestly?", "Am I generalising from someone else's case?", "What am I avoiding rather than deciding?", "Have I described my own condition accurately to anyone?"],
-  },
-};
-
-export const book23Chapters: Chapter[] = book23Base.map((chapter) => {
-  const extra = book23Extras[chapter.id];
-  if (!extra) return chapter;
-  return { ...chapter, deep: chapter.deep ? { ...chapter.deep, closeReading: extra.closer, selfAudit: extra.audit } : chapter.deep };
-});
 
 export const book23FoodMeasures: FoodMeasure[] = [
   {
@@ -1243,12 +455,6 @@ export const book23FoodMeasures: FoodMeasure[] = [
   },
 ];
 
-export const book23Movements: TaxonomyGroup[] = [
-  { id: "hunger", label: "Hunger and satiety", description: "The merit of hunger and the condemnation of satiety, and the benefits and evils Ghazali attributes to each.", color: "#b45f4c", chapterIds: [1, 2] },
-  { id: "stomach", label: "Disciplining the stomach", description: "The method that breaks its greed, the variation of the rule by circumstance, and display disguised as frugality.", color: "#2c78b8", chapterIds: [3, 4, 5] },
-  { id: "second", label: "The second desire", description: "The discourse on sexual desire, and what the aspirant must weigh in renouncing or undertaking marriage.", color: "#3a9b88", chapterIds: [6, 7] },
-];
-
 export const book23: SystemBook = {
   id: 23,
   title: "Breaking the Two Desires",
@@ -1260,14 +466,14 @@ export const book23: SystemBook = {
   sources: book23Sources,
   taxonomy: {
     title: "Three movements",
-    note: "Ghazali's own order. The book announces two desires; the first takes five sections and the second two.",
+    note: "Ghazali's own order. The book announces two desires; the first takes the greater part of it and the second follows, because he holds that the second draws its strength from the first.",
     groups: book23Movements,
   },
   foodMeasures: {
     title: "The four measures",
-    note: "Ghazali gives the aspirant four duties regarding the stomach: lawfulness first, then amount, timing, and kind. Set where you actually are on each. The degrees are positions on a scale rather than a prescription, and he is explicit that the measure of need differs by age, person, and occupation.",
+    note: "Ghazali gives four duties about the stomach: lawful food first, then the amount, the timing and the kind. Set where you actually are on each. The degrees are his, and he says plainly that the measure differs with age, person and work.",
     items: book23FoodMeasures,
   },
   editorialNote:
-    "The four journeys, seven reading sections, visual models, and four measures are editorial learning aids. The seven sections preserve the expositions Ghazali gives in his own order. The English is an original synthesis made from a reading of the public Arabic text, not a translation and not a substitute for one; the Islamic Texts Society publishes a complete English translation of this book together with Book 22. Reports and inherited anecdotes are presented as material Ghazali transmitted; this edition does not independently grade every narration. This book needs a plain scope note. Its first half gathers the merits of hunger and the evils of satiety and reports historical ascetic practice, including severe and prolonged restriction of food. That material is presented as Ghazali's argument and as the practice of the people he describes. It is not health guidance, it is not adapted to any modern reader, and it should not be acted on: restricting food in the ways this book records can be dangerous, and is particularly so for anyone with a history of disordered eating. Ghazali himself insists that the measure of need differs by age, person, and occupation, and that the rule and merit of hunger vary by circumstance — that qualification is part of his argument, not a softening added here. The second half concerns sexual desire and the aspirant's decision about marriage, and addresses an eleventh-century social world directly; its structure and its reasoning about appetite are presented, and its specific counsel is not reproduced. The four measures set out positions on a scale Ghazali describes; they are not a prescription and cannot pronounce on what any person should eat. Complex personal cases require the complete Arabic, a reliable full edition, and qualified scholarly guidance — and questions about eating or health require a doctor rather than a reading edition.",
+    "The four journeys, ten reading sections, visual models and four measures are editorial learning aids. The sections follow Ghazali's own order. The English is an original rendering made from the public Arabic text in plain modern English, not a published translation and not a substitute for one. The whole book is rendered, including the reports and the stories of the early Muslims leaving what they wanted, the sections on the second desire, and the case Ghazali makes about looking. Two of his own qualifications are central and are given here as he gives them: that the aim in all of it is the middle, and that the far end is praised only because nature pulls the other way; and that the ruling differs with a person's state, so that what is discipline for one is delusion in another. Reports and stories are presented as material he transmitted; this edition does not grade any narration. The medicine, physiology and dietary reasoning are those of his time. Nothing here is medical advice: anyone with a condition affecting eating, or a history of disordered eating, should read this as a religious argument about appetite and not as a regimen, and take advice from a qualified person.",
 };
