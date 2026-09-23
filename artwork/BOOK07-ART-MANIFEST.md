@@ -42,3 +42,9 @@ Alt text is already written into `src/book07.ts` and is what each plate has to d
 - **Accent colour** `#586fa8`
 - **Must depict** A worn circular path in a stone floor around a plain square block, seen from directly above.
 - **Argument it carries** Do not suppose the aim is the circling of your body around the House; the aim is the circuit of the heart. The block must be *unmistakably generic* — a plain square of undressed stone, no covering, no door, no ornament — since depicting the Kaaba is exactly what this plate must not do. The wear in the path is what shows a circuit has been made; nobody is on it.
+
+### 5. `book07-ten-groupings.jpg` + `book07-ten-groupings-thumb.jpg`
+- **Journey** 05 — How is the pilgrimage actually done?
+- **Accent colour** `#bf7a35`
+- **Must depict** A plain wooden tally stick with ten notches cut along one edge, lying across a folded undyed cloth beside a pair of worn leather sandals.
+- **Argument it carries** Ghazali orders the whole journey into ten groupings, and the first of them is not devotional at all — it is settling debts, returning deposits and keeping one's dependants. The tally stick is a debt-counter as much as a step-counter, and that double reading is the point: ten notches, cleanly cut, evenly spaced. The cloth is the consecration still folded; the sandals are the road. Same set note as above — no holy site, no crowds, nothing that looks like the destination.

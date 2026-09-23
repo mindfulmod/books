@@ -504,6 +504,9 @@ export const book01ConceptNodes: ConceptNode[] = [
   ["amal", "Acting on it", "The test that sorts", "No one is a scholar until they act on what they know."],
   ["ulama-akhira", "Two kinds of scholar", "Sorted by aim", "One can be completely correct and still be a scholar of this world."],
   ["aql", "The mind", "One word, four meanings", "The argument disappears once the meanings are pulled apart."],
+  ["muta", "Humility before the teacher", "Handing over the reins", "The student treats his teacher as a patient treats a physician, and does not argue his way out of the treatment."],
+  ["tartib", "Order in study", "Step by step", "Take the sciences in their order, and do not move on until the one before is settled."],
+  ["niyya", "The aim of study", "What it is for", "To adorn the inner self and draw near to God — not leadership, wealth, or winning arguments."],
 ].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
 
 const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });

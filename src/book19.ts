@@ -702,7 +702,7 @@ export const book19Journeys: Journey[] = [
     id: "before-power", number: "04", question: "What can I say to someone powerful?", title: "Two rungs, and the people who used them",
     description: "Take the limits with rulers, then the voices: Abu Bakr in front of the Prophet, al-Hasan before al-Hajjaj, al-Awza'i's counsel, the man at the Kaaba, Sufyan's letter, and al-Nuri breaking the wine.",
     payoff: "You see what plain speech to power costs, what it sometimes achieves, and why Ghazali closes force to individuals.",
-    image: assetUrl("assets/system/book19-axis.jpg"), imageAlt: "A single iron pivot pin standing upright in a worn stone socket, the stone polished around it.", minutes: 18, color: "#586fa8",
+    image: assetUrl("assets/system/book19-before-power.jpg"), imageAlt: "A heavy iron-studded wooden door, shut, with a single folded letter pushed halfway underneath it.", minutes: 18, color: "#586fa8",
     nodes: [
       node("two-rungs", "Take the limits", "Telling and preaching", "Force is closed; harsh words only if you alone pay.", "The best fighting is a word of truth.", 18, "order"),
       node("umar-weeps", "Watch Umar", "'You are more right than he is'", "A man summoned from Basra, and the caliph asks his forgiveness.", "That is why they dared speak.", 19, "witness"),

@@ -362,6 +362,9 @@ export const book08ConceptNodes: ConceptNode[] = [
   ["fahm", "Understanding", "Permitted to all", "Each may draw out according to the measure of his understanding."],
   ["batin", "The inward sense", "On their own sources", "Argued from Ali, Ibn Mas'ud, and Abu al-Darda', whom the exegetes accept."],
   ["hawa", "Whim", "The first aspect", "A reading produced by what was already held, in three varieties."],
+  ["tilawa", "Recitation", "A practice with manners", "Posture, amount, division and pace are all given, because how you recite shapes what reaches you."],
+  ["tartil", "Measured reading", "Slow on purpose", "Distinct, unhurried recitation, preferred because it helps reflection and reverence."],
+  ["riya", "Reciting to be heard", "The risk in a good voice", "Recite aloud when it wakes the heart and harms no one; quietly when display is the danger."],
 ].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
 
 const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });

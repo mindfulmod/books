@@ -43,6 +43,20 @@ rung is the single most important detail in this manifest.
 
 Colour anchor: `#bf7a35`.
 
+## 4. `assets/system/book19-before-power.jpg` (+ `-thumb.jpg`)
+
+**Journey 04 — "Two rungs, and the people who used them"**
+A heavy wooden door studded with iron, shut, filling most of the frame, with a
+**single folded letter pushed halfway underneath it** — half on the near side,
+half already through.
+
+Carries: plain speech taken to power. With rulers the upper rungs are closed —
+force belongs to no individual — and what remains is the word: al-Hasan before
+al-Hajjaj, al-Awza'i refusing the money, Sufyan's letter. The door is not
+broken or forced; the letter is the only thing that crosses it.
+
+Colour anchor: `#586fa8`.
+
 ## Constraints
 - No human figures, no hands, no faces.
 - No weapons, no implements of punishment, no restraints.

@@ -290,6 +290,9 @@ export const book10ConceptNodes: ConceptNode[] = [
   ["asbab", "The causes", "Not resolve", "Food, daytime effort, and daytime sleep, treated as conditions of a practice."],
   ["qiyam", "Rising at night", "An outcome", "Made easy by its causes, which is how the chapter is titled."],
   ["qisma", "Division", "What makes it survivable", "The same reason the day was divided into seven."],
+  ["waqt", "The hours", "Each with its own work", "The day is divided into portions, and each portion is assigned what suits it."],
+  ["tartib", "The arrangement", "An order, not a list", "The portions run in sequence, so nothing is left to whatever happens to come up."],
+  ["ghafla", "Heedlessness", "What the rounds guard against", "Unassigned time slides into forgetting; the arrangement is the protection."],
 ].map(([id, label, kicker, description], index) => ({ id, label, kicker, description, position: ["left", "right", "top", "bottom"][index % 4] }));
 
 const node = (id: string, label: string, micro: string, summary: string, guardrail: string, chapterId: number, glyph: Journey["nodes"][number]["glyph"]): Journey["nodes"][number] => ({ id, label, micro, summary, guardrail, chapterId, glyph });

@@ -658,7 +658,7 @@ export const book07Journeys: Journey[] = [
     id: "walk-the-rites", number: "05", question: "How is the pilgrimage actually done?", title: "Walk the ten groupings",
     description: "Follow Ghazali's own ordering of the journey — debts and a companion before the road, the two white cloths, the circling corner by corner, the standing at Arafa, the crowded end, and the ten manners that judge the whole thing.",
     payoff: "You can hold the whole sequence, and you meet the three places where Ghazali stops describing and starts arguing.",
-    image: assetUrl("assets/system/book07-two-circuits.jpg"), imageAlt: "A worn circular track pressed into pale stone, crossed by a single straight path running out of the frame.", minutes: 18, color: "#bf7a35",
+    image: assetUrl("assets/system/book07-ten-groupings.jpg"), imageAlt: "A plain wooden tally stick with ten notches cut along one edge, lying across a folded undyed cloth beside a pair of worn leather sandals.", minutes: 18, color: "#bf7a35",
     nodes: [
       node("able", "Take the definition", "What being able means", "Debts settled, dependants kept, the fare both ways, a safe road.", "Generous enough to tell you when you are not obliged.", 2, "know"),
       node("five-and-six", "Separate the two rings", "Pillars and obligations", "Five that nothing replaces, six that a sacrifice mends.", "Which tells you whether you lost a journey or owe an animal.", 3, "order"),

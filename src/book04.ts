@@ -905,7 +905,7 @@ export const book04Journeys: Journey[] = [
     id: "inside-the-prayer", number: "06", question: "What is actually supposed to be happening in me?", title: "Walk the prayer from the inside",
     description: "Ghazali's account of why attention cannot be forced, what understanding is for, and what belongs in the heart at the moments you are already performing anyway.",
     payoff: "One exercise you can run tomorrow, and a test for whether your opening words are true.",
-    image: assetUrl("assets/system/book04-empty-room.jpg"), imageAlt: "A plain prayer mat laid square on a stone floor, empty, lit from one side.", minutes: 14, color: "#a97837",
+    image: assetUrl("assets/system/book04-presence.jpg"), imageAlt: "A plain prayer mat laid square on a stone floor, empty, lit from one side.", minutes: 14, color: "#a97837",
     nodes: [
       node("why-it-stops-you", "Take the mechanism", "Prayer teaches, then stops you", "Meanings surface mid-prayer that had not occurred to you before it.", "The prevention runs through understanding, not through the act.", 9, "know"),
       node("heart-follows", "Take the rule", "Your heart follows what you care about", "It will not be present except in what matters to you.", "So effort inside the prayer has nothing to work with.", 11, "diagnose"),
