@@ -1,6 +1,6 @@
 # Book 1 art manifest
 
-Five journey plates for *Knowledge* — the first book of the Ihya. The app references these paths already; dropping the files in makes them appear with no code change.
+Eight journey plates for *Knowledge* — the first book of the Ihya: the original five, the journey 06 plate added 2026-08-22, and two added with the full render (journeys 07 and 08). The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -17,7 +17,7 @@ Five journey plates for *Knowledge* — the first book of the Ihya. The app refe
 
 Alt text is already written into `src/book01.ts` and is what each plate has to depict. It is reproduced here as the brief.
 
-**Set note.** This book is a critique of scholars, and its images should stay cool and slightly wry rather than reverent. Four of the five are about things being empty, narrowed, or used up.
+**Set note.** This book is a critique of scholars, and its images should stay cool and slightly wry rather than reverent. Four of the original five are about things being empty, narrowed, or used up; the two new plates are quieter, about what stays when the display is gone.
 
 ### 1. `book01-twenty-parties.jpg` + `book01-twenty-parties-thumb.jpg`
 - **Journey** 01 — What am I actually obliged to know?
@@ -65,3 +65,19 @@ as preparation, not as work in progress. If anything is open it reads as
 studying and the point is lost.
 
 Colour anchor: `#7a6ca8`.
+
+---
+
+## ADDED 2026-09-24 — journey 07 and 08 plates (not yet generated)
+
+### 7. `book01-twelve-signs.jpg` + `book01-twelve-signs-thumb.jpg`
+- **Journey** 07 — How do I tell a scholar of the next life?
+- **Accent colour** `#3f7d5a`
+- **Must depict** A plain wooden bench outside a closed door, a pair of worn sandals set neatly beside it and a small water jug on the ground.
+- **Argument it carries** The twelve signs describe a scholar known by what he leaves out: no palace, no visits to rulers, no rush to speak. The door stays closed and no figure appears; the worn sandals and the jug are the whole portrait. Keep it modest and swept clean, never poor or ruined — this is chosen simplicity, not neglect. Avoid any lettering, book or lamp, so it does not repeat the wick plate.
+
+### 8. `book01-the-well.jpg` + `book01-the-well-thumb.jpg`
+- **Journey** 08 — Why does the Ihya start with knowledge?
+- **Accent colour** `#4f7fa0`
+- **Must depict** A stone well in open ground, its rope and bucket drawn up and resting on the rim, the bucket full of clear water.
+- **Argument it carries** Ghazali ends the book by saying the truths are already in the soul, like water under the ground; teaching is digging, not pouring in. The water must be visibly clear and the bucket full — the digging worked. Open, even daylight; the ground around the well dry, so the water reads as drawn up from below rather than rained in.
