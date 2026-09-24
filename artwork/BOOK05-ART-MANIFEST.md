@@ -1,6 +1,6 @@
 # Book 5 art manifest
 
-Four journey plates for *The Mysteries of Almsgiving*. The app references these paths already; dropping the files in makes them appear with no code change.
+Five journey plates for *The Mysteries of Almsgiving*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -15,7 +15,7 @@ Four journey plates for *The Mysteries of Almsgiving*. The app references these 
 
 ## Files
 
-Alt text is already written into `src/book05.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has four journeys rather than five.
+Alt text is already written into `src/book05.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has five journeys. Plates 1–4 carry over from the earlier edition; plate 5 is new, for the journey through the legal chapter.
 
 **Set note.** No hands, no figures, and no transaction shown in progress. Half this book is about the person receiving, and any image of one person handing something to another puts the viewer on the giver's side — which is exactly the asymmetry the third section exists to correct.
 
@@ -42,3 +42,9 @@ Alt text is already written into `src/book05.ts` and is what each plate has to d
 - **Accent colour** `#586fa8`
 - **Must depict** A granary door standing open with sacks stacked inside and a single filled basket set outside on the step.
 - **Argument it carries** The toil of gathering and guarding falls on the rich while the benefit flows past them to the poor. The stacked sacks are the labour and the basket on the step is the yield, and the door standing *open* and unattended is what makes the direction read. Nobody in the frame; the arrangement carries the whole argument.
+
+### 5. `book05-the-tally.jpg` + `book05-the-tally-thumb.jpg`
+- **Journey** 05 — What exactly do I owe?
+- **Accent colour** `#8a6d3b`
+- **Must depict** A row of small cloth bags of different sizes laid out on a wooden counter, each tied and set beside a single tally stick notched with marks.
+- **Argument it carries** The first chapter is a reckoning: each kind of wealth has its own threshold, rate and year, and each share is paid from its own kind. The bags must differ in size — livestock, crops, money, treasure are not measured alike — and each must sit beside the one stick that counts it. Nothing is being poured, weighed or handed over; the plate shows the accounts already sorted, which is the worship Ghazali finds in following the details. No coins spilling, no hands, no figures.
