@@ -1,6 +1,6 @@
 # Book 18 — Listening and Ecstasy: art manifest
 
-Two plates, matching the established treatment: still objects, no figures, no faces,
+Three plates, matching the established treatment: still objects, no figures, no faces,
 no musical instruments depicted in use, no gathering scenes. Restraint matters more
 here than in any other book in the quarter — the subject is contested, and the art
 must not read as endorsement or as ridicule.
@@ -28,6 +28,19 @@ Carries: one sound, four listeners, four different acts. The unequal light acros
 identical doorways carries the ranking without illustrating any of the states.
 
 Colour anchor: `#bf7a35`.
+
+## 3. `assets/system/book18-the-patches.jpg` (+ `-thumb.jpg`)
+
+**Journey 03 — "The manners of the gathering"**
+A length of plain undyed cloth cut into neat squares, the squares stacked in small
+even piles on a bare wooden floor. The cut edges are clean. Soft, level light; nothing
+torn, frayed or scattered.
+
+Carries: Ghazali's ruling on tearing clothes. Ruining cloth by choice is waste; a robe
+cut into squares useful as patches, and shared out, is allowed. The neatness of the
+cuts is the whole point: the plate shows the permitted form, not the ecstatic one.
+
+Colour anchor: `#c25f50`.
 
 ## Constraints
 - No human figures, no hands, no faces.
