@@ -1,6 +1,6 @@
 # Book 10 art manifest
 
-Three journey plates for *The Arrangement of Litanies* — the book that completes the Quarter of Worship. The app references these paths already; dropping the files in makes them appear with no code change.
+Four journey plates for *The Arrangement of Litanies* — the book that completes the Quarter of Worship. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -15,7 +15,7 @@ Three journey plates for *The Arrangement of Litanies* — the book that complet
 
 ## Files
 
-Alt text is already written into `src/book10.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has three journeys.
+Alt text is already written into `src/book10.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has four journeys.
 
 **Set note.** This book's argument is that a soul wearies of one pattern and must be treated with kindness rather than force. Nothing in this set should look austere, monastic, or effortful — these are plates about time being well arranged, not about discipline being endured.
 
@@ -36,3 +36,9 @@ Alt text is already written into `src/book10.ts` and is what each plate has to d
 - **Accent colour** `#c25f50`
 - **Must depict** A dark room with a single lamp lit on a low table and a folded blanket set aside, the bed still made.
 - **Argument it carries** A night divided into portions can be kept in part; a night faced as one block is kept entirely or missed entirely. The bed *still made* is the whole plate — this is a portion taken before sleep, not a vigil endured after waking. The room should be warm and comfortable; the lamp is small and sufficient.
+
+### 4. `book10-many-paths.jpg` + `book10-many-paths-thumb.jpg`
+- **Journey** 04 — Whose timetable is this?
+- **Accent colour** `#6f7fa8`
+- **Must depict** A hillside at first light with several footpaths of different widths climbing towards the same ridge.
+- **Argument it carries** Ghazali gives six kinds of seeker six different litanies — worshipper, scholar, student, worker, ruler, and the one absorbed in God — and says all of them are roads to God that differ in degree, not in direction. The paths must be *visibly different* (a broad worn track, a narrow trail, a switchback) yet all plainly lead to one ridge line. Early, clear light; no figures needed; nothing competitive or race-like.
