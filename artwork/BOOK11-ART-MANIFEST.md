@@ -1,6 +1,6 @@
 # Book 11 art manifest
 
-Three journey plates for *The Etiquette of Eating* — the book that opens the Quarter of Customs. The app references these paths already; dropping the files in makes them appear with no code change.
+Four journey plates for *The Etiquette of Eating* — the book that opens the Quarter of Customs. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -15,9 +15,9 @@ Three journey plates for *The Etiquette of Eating* — the book that opens the Q
 
 ## Files
 
-Alt text is already written into `src/book11.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has three journeys.
+Alt text is already written into `src/book11.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has four journeys.
 
-**Set note.** No people and no hands anywhere in this set — the three plates are three table arrangements, and the number of settings is what carries the argument each time. Keep the food plain and unidentifiable; nothing here should look like a recipe or a feast.
+**Set note.** No people and no hands anywhere in this set — the four plates are four table arrangements, and the number of settings is what carries the argument each time. Keep the food plain and unidentifiable; nothing here should look like a recipe or a feast.
 
 ### 1. `book11-one-place.jpg` + `book11-one-place-thumb.jpg`
 - **Journey** 01 — Is there an etiquette of eating alone?
@@ -36,3 +36,9 @@ Alt text is already written into `src/book11.ts` and is what each plate has to d
 - **Accent colour** `#c25f50`
 - **Must depict** A table laid far more elaborately than its single guest's place requires, with more dishes than the setting can reach.
 - **Argument it carries** Do not burden yourselves for the guest, so that you come to dislike him. The excess must read as *effort*, not as wealth — many dishes, carefully arranged, plainly costly in labour. The single place setting against all of it is what makes the plate uncomfortable. Nothing is spoiled or wasted; it is simply far too much.
+
+### 4. `book11-on-the-ground.jpg` + `book11-on-the-ground-thumb.jpg`
+- **Journey** 04 — How did the Prophet eat?
+- **Accent colour** `#586fa8`
+- **Must depict** A plain leather cloth spread on bare earth, with a single shallow wooden bowl and a few dates on it, and nothing raised above the ground.
+- **Argument it carries** The Prophet set his food on the ground, never ate at a raised table, and said he ate as a servant eats. The plate should show the *lowness* and plainness of the setting: the cloth lies flat on bare earth, the bowl is simple, the food is modest, and nothing stands on legs or a stand. It must read as humble and deliberate, not poor or neglected, and should carry no hint of a particular person. No people and no hands, as with the rest of the set.
