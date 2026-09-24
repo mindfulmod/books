@@ -1,6 +1,6 @@
 # Book 13 art manifest
 
-Three journey plates for *The Etiquette of Earning*. The app references these paths already; dropping the files in makes them appear with no code change.
+Four journey plates for *The Etiquette of Earning*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -15,7 +15,7 @@ Three journey plates for *The Etiquette of Earning*. The app references these pa
 
 ## Files
 
-Alt text is already written into `src/book13.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has three journeys.
+Alt text is already written into `src/book13.ts` and is what each plate has to depict. It is reproduced here as the brief. This book has four journeys.
 
 **Set note.** No people and no transactions in progress — the argument is that a completed and valid deal can still be a wrong, so every plate shows an aftermath or an instrument rather than an exchange. Keep the commercial setting plain and prosperous: nothing here is a critique of trade, which the first chapter places among the blessings.
 
@@ -36,3 +36,9 @@ Alt text is already written into `src/book13.ts` and is what each plate has to d
 - **Accent colour** `#c25f50`
 - **Must depict** A shuttered market stall at midday with the street beyond it empty, and an open doorway further down the same street.
 - **Argument it carries** The market of this world must not prevent a man from the market of the hereafter — and the markets of the hereafter are the mosques. Both must be on *one street*, in the same light, neither idealised: the stall shuttered and orderly, the far doorway simply open. The distance between them is the whole plate.
+
+### 4. `book13-even-scales.jpg` + `book13-even-scales-thumb.jpg`
+- **Journey** 04 — What must I know before I trade?
+- **Accent colour** `#586fa8`
+- **Must depict** A money-changer's balance at rest on a cloth, a few whole coins in one pan and broken pieces in the other, the beam level.
+- **Argument it carries** The second chapter's law is an outline every earner must know, and its sharpest rule is that like for like must be equal and hand to hand: broken gold for whole gold only at equal weight. The beam must read as *exactly* level and at rest — nothing being weighed out, no hand on it — so the plate shows a rule kept, not a deal in progress. No legible stamps or inscriptions on the coins.
