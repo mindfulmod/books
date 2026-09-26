@@ -1,6 +1,6 @@
 # Book 30 art manifest
 
-Five journey plates for *The Censure of Delusion*. The app references these paths already; dropping the files in makes them appear with no code change.
+Six journey plates for *The Censure of Delusion*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -54,3 +54,9 @@ Alt text is already written into `src/book30.ts` and is what each plate has to d
 - [ ] 480 × 270 `-thumb.jpg` saved alongside each
 - [ ] Filenames match exactly, including the `book30-` prefix
 - [ ] Generation record appended to `artwork/GENERATION.md`
+
+### 6. `book30-the-star.jpg` + `book30-the-star-thumb.jpg`
+- **Journey** 06 — How far does delusion follow you?
+- **Accent colour** `#7d6a4f`
+- **Must depict** A single bright star reflected in a still basin of water at night, the real star faint in the dark sky above it.
+- **Argument it carries** From the Sufis' section: the Christians looked at the Messiah "like someone who sees a star in a mirror or in water, and thinks the star is in the water, and stretches out his hand to take it"; and Abraham's star, the first of the veils of light that look like arrival. The reflection must be brighter and more inviting than the true star, which should be visible but easy to miss. No hand, no figure — the viewer is the one tempted to reach.
