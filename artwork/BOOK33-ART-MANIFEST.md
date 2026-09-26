@@ -1,6 +1,6 @@
 # Book 33 art manifest
 
-Five journey plates for *Fear and Hope*. The app references these paths already; dropping the files in makes them appear with no code change.
+Six journey plates for *Fear and Hope*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -46,3 +46,9 @@ Alt text is already written into `src/book33.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** A quiet lamplit chamber at dusk where a single vessel stands filled to the brim, its contents unnamed and steady.
 - **Argument it carries** The fear of the knowers converges on the ending rather than on any particular punishment. The vessel must be full and perfectly still, and what fills it must be genuinely unreadable — not water, not oil, not identifiable. The restraint is the point; naming the contents would name the fear.
+
+### 6. `book33-the-fearful.jpg` + `book33-the-fearful-thumb.jpg`
+- **Journey** 06 — Why did the best of people fear most?
+- **Accent colour** `#6b8f5e`
+- **Must depict** A quiet prayer niche at dawn with a single worn prayer mat, its centre darkened by years of tears, and pale light falling across it.
+- **Argument it carries** The prophets, Companions and early Muslims feared most because they knew God best, not because they sinned most. The plate shows the trace of that fear, not the people: an empty niche, a mat worn at the place of prostration, the first light coming in. No figures, no drama — only the mark left by long nights of weeping, and the dawn that follows them.
