@@ -46,3 +46,9 @@ Alt text is already written into `src/book35.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** An apothecary shelf where two sealed jars stand apart, one marked with a clear band and one with none, under even light.
 - **Argument it carries** The permission to leave a remedy reaches only remedies whose effect is not established; Ghazali devotes a whole following section to refusing its generalisation. The band is the entire argument and must be unmistakable. The two jars must be otherwise identical, so the distinction lives in the marking and nowhere else.
+
+### 6. `book35-the-pen.jpg` + `book35-the-pen-thumb.jpg`
+- **Journey** 06 — Who is really moving things?
+- **Accent colour** `#5f7d8c`
+- **Must depict** A sheet of paper on a plain desk with a single line of fresh ink, a reed pen laid beside it, and a shaft of light falling from a high window.
+- **Argument it carries** Ghazali's traveller asks the blackened page why its face is dark, and is sent from ink to pen to hand to power to will, each saying it did not move by itself. The plate must show the near links plainly — paper, ink, pen — and let the source lie outside the frame: the light comes from above, from a window we do not see through. No hand, no writer in the picture; the absence of the mover is the point.
