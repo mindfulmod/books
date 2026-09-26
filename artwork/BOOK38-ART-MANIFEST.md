@@ -1,6 +1,6 @@
 # Book 38 art manifest
 
-Five journey plates for *Vigilance and Self-Examination*. The app references these paths already; dropping the files in makes them appear with no code change.
+Six journey plates for *Vigilance and Self-Examination*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -48,3 +48,9 @@ Plates 1 and 4 are a deliberate pair — the same counter at dawn and at dusk. T
 - **Accent colour** `#a97837`
 - **Must depict** One lamp carried along a corridor, shown at three points on its path, the far end open and lit.
 - **Argument it carries** The commanding soul, the reproachful soul, and the tranquil soul are three states of one soul, not three kinds of person, and reproach is the passage between them. It must be visibly the same lamp in all three positions, and the corridor must open at the far end — the destination is the tranquil soul, so nothing here should read as punishment or descent.
+
+### 6. `book38-the-gate.jpg` + `book38-the-gate-thumb.jpg`
+- **Journey** 06 — What will the reckoning find?
+- **Accent colour** `#6b7f5e`
+- **Must depict** A plain stone town gate at dusk, its doors open onto an empty road, with long shadows falling inward from a low sun.
+- **Argument it carries** From the sixth stage: the army of the dead waits at the town gate, sworn not to leave without you, and would buy one day of your life with the whole world. The plate must carry that nearness without showing anyone — no figures, no skulls, no graves. The open doors and the low sun do the work: the day is ending, the road is open, and the gate is close.
