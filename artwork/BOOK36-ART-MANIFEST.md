@@ -46,3 +46,9 @@ Alt text is already written into `src/book36.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** A worn stone threshold where two paths of inlaid tile meet, one pale and one dark, joining at a single door.
 - **Argument it carries** Contentment is reached either by absorption, where the pain is not perceived, or by acceptance, where it is felt in full and the state stands alongside it. Both paths must arrive equally at the door and be equally worn; the dark path is not the lesser one. Ghazali gives the second route precisely so that feeling your affliction is not a disqualification.
+
+### 6. `book36-the-lovers.jpg` + `book36-the-lovers-thumb.jpg`
+- **Journey** 06 — What did loving God look like in a life?
+- **Accent colour** `#8a5a9e`
+- **Must depict** A plain rooftop at night under a wide field of stars, a single prayer mat laid out and an oil lamp burning low beside it.
+- **Argument it carries** The lovers in Ghazali's accounts are marked by the night: “when every lover is alone with their beloved, they stand on their feet.” The plate shows the place of that meeting, not the person — an empty mat, a low lamp, and a sky wide enough to feel the nearness and the distance at once. No figure, no halo; quiet, private and unshowy, as the lovers hid their love.
