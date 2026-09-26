@@ -1,6 +1,6 @@
 # Book 37 art manifest
 
-Five journey plates for *Intention, Sincerity, and Truthfulness*. The app references these paths already; dropping the files in makes them appear with no code change.
+Six journey plates for *Intention, Sincerity, and Truthfulness*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -46,3 +46,9 @@ Alt text is already written into `src/book37.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** Six shallow niches cut into one plastered wall, each holding a plain unmarked token, lit evenly from the left.
 - **Argument it carries** Truthfulness is used in six meanings, and one is called truthful relative to whichever of them he has a share in. The six niches must be one continuous wall rather than six separate frames, and the tokens must be unmarked — naming them would rank them, and Ghazali explicitly keeps partial truthfulness real.
+
+### 6. `book37-the-scales.jpg` + `book37-the-scales-thumb.jpg`
+- **Journey** 06 — What will my deeds weigh on the Day?
+- **Accent colour** `#7a5c8e`
+- **Must depict** A great pair of scales standing in an empty courtyard at dawn, one pan holding a single pomegranate seed and sinking, the other holding a heap of gold coins and rising.
+- **Argument it carries** From the dream in the sincerity chapter: everything done for God is found again, even a pomegranate seed picked up from the road, while large deeds done for praise weigh nothing. The seed must be tiny and clearly outweighing the heap; the reversal is the whole point. No figures, no inscriptions, and no suggestion of a courtroom — the courtyard is empty because the weighing is between the person and God.
