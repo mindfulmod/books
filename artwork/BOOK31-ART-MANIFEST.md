@@ -1,6 +1,6 @@
 # Book 31 art manifest
 
-Five journey plates for *Repentance*, the first book of the Quarter of Deliverance. The app references these paths already; dropping the files in makes them appear with no code change.
+Six journey plates for *Repentance*, the first book of the Quarter of Deliverance. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -58,3 +58,9 @@ Alt text is already written into `src/book31.ts` and is what each plate has to d
 - [ ] 480 × 270 `-thumb.jpg` saved alongside each
 - [ ] Filenames match exactly, including the `book31-` prefix
 - [ ] Generation record appended to `artwork/GENERATION.md`
+
+### 6. `book31-four-ranks.jpg` + `book31-four-ranks-thumb.jpg`
+- **Journey** 06 — What waits after death?
+- **Accent colour** `#6b8f5e`
+- **Must depict** A bright terraced garden rising in four levels from a dim lower court to a sunlit height, a single open gate at the top.
+- **Argument it carries** Ghazali sorts people in the next world into four: the destroyed, the punished, the saved and the winners, as a just king treats a conquered land. The four terraces must read as one continuous ascent, darkest at the bottom and brightest at the top, with the open gate at the summit standing for the vision of God that those who know seek above the Garden itself. No figures, no flames, no torment — the plate carries the order of the levels, not their punishments.
