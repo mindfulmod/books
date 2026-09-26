@@ -1,6 +1,6 @@
 # Book 34 art manifest
 
-Five journey plates for *Poverty and Abstinence*. The app references these paths already; dropping the files in makes them appear with no code change.
+Six journey plates for *Poverty and Abstinence*. The app references these paths already; dropping the files in makes them appear with no code change.
 
 ## Specs
 
@@ -46,3 +46,9 @@ Alt text is already written into `src/book34.ts` and is what each plate has to d
 - **Accent colour** `#a97837`
 - **Must depict** A bright pantry sill holding six graduated vessels, each filled to a different marked line, with a plain cloth folded beside them.
 - **Argument it carries** Where a thing cannot be left, the exchange moves to its measure: food, clothing, dwelling, and furnishing are each held to a line rather than surrendered. The marks must be visible and the fills must genuinely differ. The folded cloth carries the same argument in the register of plainness rather than absence.
+
+### 6. `book34-the-rope-bed.jpg` + `book34-the-rope-bed-thumb.jpg`
+- **Journey** 06 — What did the Prophet choose?
+- **Accent colour** `#6f8f5a`
+- **Must depict** A low bed woven of palm-fibre rope in a bare mud-brick room, a leather pillow at its head and morning light falling across the woven pattern.
+- **Argument it carries** From the furnishings section: Umar wept to see the rope marks on the Prophet's side and thought of Chosroes and Caesar, and was told, "the world is theirs and the next life is ours." The bed must read as chosen, not as deprivation — clean, orderly, lit warmly — and nothing else in the room. No figure, no marks of a body; the plainness and the light carry it.
