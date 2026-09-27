@@ -679,7 +679,7 @@ export const book19Journeys: Journey[] = [
       node("teach-gently", "Start at the bottom", "Telling, without shaming", "Most wrongs are ignorance; teaching them is uncovering something.", "Do not wash blood with blood.", 11, "receive"),
       node("break-no-more", "Change by hand", "Only the wrong itself", "Unpick the seams; do not tear. Pour out; do not smash.", "Removal, not punishment.", 11, "order"),
       node("threat", "Threaten honestly", "Only what you may do", "'I will loot your house' is meant and forbidden, or unmeant and a lie.", "Exaggeration to check him is allowed.", 12, "balance"),
-      node("aim-low", "If you must strike", "Aim at the leg", "Step by step; stop when the wrong stops.", "The top rungs are rarities.", 12, "warning"),
+      node("aim-low", "If you must strike", "Aim at the leg", "Step by step; stop when the wrong stops.", "The top rungs are rarities.", 12, "guard"),
       node("buried-disease", "Check your motive", "The buried disease", "Not the whip or the sword — self-admiration.", "Would you be glad if another did it?", 13, "diagnose"),
       node("the-cat", "Cut your expectations", "Put the cat out first", "Then correct the butcher.", "Whoever hopes for something cannot correct.", 13, "clear"),
     ],

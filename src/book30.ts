@@ -990,7 +990,7 @@ export const book30Journeys: Journey[] = [
       node("copying-fee", "A copying fee", "The recording angels", "If the angels charged to copy his chatter, he would watch every word.", "He counts his prayer beads and not his backbiting.", 8, "witness"),
       node("prescription", "The prescription", "Copied a thousand times", "He learned the cure, taught it to a thousand, and never drank it.", "Successful is the one who purifies it, not the one who learned how.", 9, "diagnose"),
       node("uriah", "Uriah in the rock", "Name what you did", "Forgiveness given without knowing what was done does not count.", "God’s court sees the whipped heart.", 20, "guard"),
-      node("old-woman", "The old woman in armour", "Stripped at the review", "She learned the heroes’ songs and strut, and was thrown to the elephant.", "The greatest Judge looks at the heart, not the robe.", 25, "warning"),
+      node("old-woman", "The old woman in armour", "Stripped at the review", "She learned the heroes’ songs and strut, and was thrown to the elephant.", "The greatest Judge looks at the heart, not the robe.", 25, "guard"),
       node("abraham-star", "Abraham’s star", "Seventy veils of light", "Each light on the road looks like arrival, until he turned his face to their Creator.", "The first veil is one’s own heart.", 27, "know"),
       node("one-dinar", "One dinar, no name", "Names in the brickwork", "Would you give one dinar with nothing to show it was you?", "Bishr’s pilgrim: the journey was stronger in his heart.", 28, "clear"),
       node("birds-from-the-sky", "Birds from the sky", "If the wish were true", "People bring fish up from the deep for the world; the heart is one job.", "Reason, knowing four things, and knowing the road.", 30, "steady"),

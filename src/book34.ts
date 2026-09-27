@@ -1172,7 +1172,7 @@ export const book34Journeys: Journey[] = [
       node("kings-dog", "A crust for the dog", "Satan at the door", "Leaving the world for God is throwing a crust to the king’s dog.", "Would you think you did the king a favour?", 28, "clear"),
       node("sparrow", "The boy and the sparrow", "The lovers", "Seeking the Garden’s pleasures over God is a boy preferring a sparrow to a kingdom.", "Not scorn for the Garden; a measure of the vision.", 29, "know"),
       node("rope-bed", "The rope bed", "Umar weeps", "The world is theirs and the next life is ours.", "Chosroes and Caesar on one side, the Prophet on the other.", 35, "receive"),
-      node("silkworm", "The silkworm", "Sawn in two", "The world-gatherer spins his own prison, and at death is pulled both ways.", "Love whom you will, for you will part from him.", 37, "warning"),
+      node("silkworm", "The silkworm", "Sawn in two", "The world-gatherer spins his own prison, and at death is pulled both ways.", "Love whom you will, for you will part from him.", 37, "guard"),
       node("water-air", "Water and air", "The last sign", "Two loves cannot fill one heart; when one comes in, the other goes out.", "Closeness with God is the sign.", 38, "steady"),
     ],
   },

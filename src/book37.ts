@@ -982,7 +982,7 @@ export const book37Journeys: Journey[] = [
     nodes: [
       node("thrown-away", "Throw away this page", "Sealed pages", "God throws out pages full of deeds, and writes deeds never done because they were intended.", "He looks at hearts, where intention lives.", 1, "witness"),
       node("medina", "They were with us", "Kept home by an excuse", "Their hearts went out with the army, so they shared its reward.", "The body’s going out only strengthens what the heart already has.", 5, "receive"),
-      node("first-three", "The first three", "“And it has been said”", "A scholar, a rich man and a martyr, each praised in the world, are the first the Fire is lit with.", "Muawiya wept until he nearly died.", 15, "warning"),
+      node("first-three", "The first three", "“And it has been said”", "A scholar, a rich man and a martyr, each praised in the world, are the first the Fire is lit with.", "Muawiya wept until he nearly died.", 15, "guard"),
       node("the-tree", "The worshipper and the tree", "Two gold coins a night", "Angry for God, he beat Iblis twice; angry for the coins, he was thrown down like a sparrow.", "The act was the same both times.", 16, "diagnose"),
       node("the-cat", "The cat and the donkey", "The dream of the scales", "A pomegranate seed and a cat were found; a cursed donkey and admired charity were not.", "A single word at a loss decided it.", 17, "witness"),
       node("the-nosebag", "Written as a merchant", "Except that", "The angels wrote the fighters by their aims, and added a note to the man with a nosebag.", "Not thrown out, but written with an exception.", 18, "order"),

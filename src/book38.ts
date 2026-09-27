@@ -879,7 +879,7 @@ export const book38Journeys: Journey[] = [
       node("walking-garden", "Walking in the Garden", "Ibrahim ibn Adham", "He lay still all night and did not renew his ablution: he had been in the Garden and the Fire.", "Between them, how can anyone sleep?", 19, "know"),
       node("seventh-of-a-day", "A seventh of a day", "Kurz ibn Wabra", "The world’s whole life against one Day of fifty thousand years.", "And no one gets the world’s whole life.", 20, "balance"),
       node("habiba", "When the kings lock their doors", "Habiba on the roof", "She stood before God when every lover was alone with his beloved.", "If You drove me from Your door, I would not leave it.", 21, "steady"),
-      node("army", "The army at the gate", "Sworn to take you", "The dead wait at the town gate and would buy one day of your life with the world.", "You are living their wish.", 26, "warning"),
+      node("army", "The army at the gate", "Sworn to take you", "The dead wait at the town gate and would buy one day of your life with the world.", "You are living their wish.", 26, "guard"),
       node("one-tear", "One tear", "Flee to Him", "If a tear of mercy for yourself will come, there is still room for hope.", "Despair is a great sin; there is no way to it.", 27, "receive"),
     ],
   },
