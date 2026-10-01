@@ -98,14 +98,14 @@ const choices = [
   { value: 'device', title: 'Device', description: 'Follow your device’s light or dark setting.', Icon: DeviceMobile },
 ] as const;
 
-export function AppearanceControl({ large, onLarge }: { large?: boolean; onLarge?: () => void }) {
+export function AppearanceControl({ large, onLarge, iconOnly = false }: { large?: boolean; onLarge?: () => void; iconOnly?: boolean }) {
   const { appearance, preference, pending, message, choose, pictures, pictureMessage, choosePictures } = useAppearance();
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const titleId = useId();
   const Icon = appearance === 'starlight' ? MoonStars : Sun;
-  return <div className="seed-appearance">
-    <button ref={trigger} className="appearance-trigger" aria-label={onLarge ? 'Reading settings' : `Appearance: ${appearance === 'starlight' ? 'Starlight' : 'Day'}`} aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}><Icon size={18}/><span>{onLarge ? 'Reading settings' : 'Appearance'}</span></button>
+  return <div className={`seed-appearance${iconOnly ? ' is-icon-only' : ''}`}>
+    <button ref={trigger} className="appearance-trigger" aria-label={onLarge ? 'Reading settings' : `Appearance: ${appearance === 'starlight' ? 'Starlight' : 'Day'}`} aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}><Icon size={iconOnly ? 20 : 18}/><span className={iconOnly ? 'seed-sr-only' : undefined}>{onLarge ? 'Reading settings' : 'Appearance'}</span></button>
     <dialog ref={dialog} className="appearance-dialog" aria-labelledby={titleId} onClose={() => trigger.current?.focus({ preventScroll: true })} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
       <div className="appearance-heading"><h2 id={titleId}>{onLarge ? 'Reading settings' : 'Your light, your pace.'}</h2><button className="seed-icon-button" aria-label="Close appearance" onClick={() => dialog.current?.close()}><X size={20}/></button></div>
       <p>A different light. The same peaceful place.</p>

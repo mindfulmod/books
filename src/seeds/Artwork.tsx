@@ -63,7 +63,7 @@ export function SeedIllustration({ seedId, leading = false }: { seedId: number; 
       <IllustrationImage frame={art} eager={leading}/>
       <span><ArrowsOutSimple size={17}/><span className={leading ? 'seed-sr-only' : undefined}>Take a closer look</span></span>
     </button> : <button className="seed-art-show" onClick={() => choosePictures(true)}>Show seed pictures</button>}
-    <figcaption><span className="reader-section-label">Visual reminder · Added for this app</span><p aria-live={frames.length > 1 ? 'polite' : undefined}>{art.caption}</p></figcaption>
+    <figcaption><p aria-live={frames.length > 1 ? 'polite' : undefined}>{art.caption}</p></figcaption>
     <dialog ref={dialog} className="seed-art-dialog" aria-label={`Illustration for seed ${seedId}`} onClose={() => { setEnlarged(false); trigger.current?.focus({ preventScroll: true }); }} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
       {enlarged && <div><button autoFocus className="seed-icon-button" aria-label="Close illustration" onClick={() => dialog.current?.close()}><X size={23}/></button><IllustrationImage frame={art} enlarged/><p>{art.caption}</p></div>}
     </dialog>

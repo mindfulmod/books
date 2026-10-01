@@ -1,6 +1,8 @@
 export const STORAGE_KEY = 'mindfulmod-timeless-seeds-v1';
-export type Garden = { saved: number[]; read: number[]; notes: Record<string, string>; intentions: Record<string, string>; last: number | null; large: boolean };
-export const emptyGarden = (): Garden => ({ saved: [], read: [], notes: {}, intentions: {}, last: null, large: false });
+export type FollowUp = 'done' | 'later';
+// planned: the local day ("YYYY-MM-DD") a small action was last written, so a later visit can ask how it went.
+export type Garden = { saved: number[]; read: number[]; notes: Record<string, string>; intentions: Record<string, string>; planned: Record<string, string>; followUps: Record<string, FollowUp>; last: number | null; large: boolean };
+export const emptyGarden = (): Garden => ({ saved: [], read: [], notes: {}, intentions: {}, planned: {}, followUps: {}, last: null, large: false });
 export type GardenTab = 'saved' | 'notes' | 'read';
 export function gardenTabFor(garden: Garden, requested?: string | null): GardenTab {
   if (requested === 'saved' || requested === 'notes' || requested === 'read') return requested;
@@ -15,7 +17,9 @@ export function validateGarden(value: unknown): Garden {
   const ids = (value: unknown) => Array.isArray(value) ? [...new Set(value.filter(validId))] : [];
   const entries = (value: unknown): Record<string, string> => value && typeof value === 'object' && !Array.isArray(value)
     ? Object.fromEntries(Object.entries(value).filter(([key, v]) => validId(Number(key)) && typeof v === 'string').map(([k, v]) => [k, (v as string).slice(0, 20000)])) : {};
-  return { saved: ids(source.saved), read: ids(source.read), notes: entries(source.notes), intentions: entries(source.intentions), last: validId(source.last) ? source.last : null, large: source.large === true };
+  const planned = Object.fromEntries(Object.entries(entries(source.planned)).filter(([, day]) => /^\d{4}-\d{2}-\d{2}$/.test(day)));
+  const followUps = Object.fromEntries(Object.entries(entries(source.followUps)).filter(([, value]) => value === 'done' || value === 'later')) as Record<string, FollowUp>;
+  return { saved: ids(source.saved), read: ids(source.read), notes: entries(source.notes), intentions: entries(source.intentions), planned, followUps, last: validId(source.last) ? source.last : null, large: source.large === true };
 }
 export function loadGarden(): { garden: Garden; error: boolean } {
   try {
@@ -54,6 +58,20 @@ export function resumeFor(garden: Garden, routes: { id: string; route: number[] 
   return { id: last, kind: 'done' };
 }
 
+export const localDay = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+const daysBetween = (from: string, to: string) => Math.round((Date.parse(`${to}T12:00:00Z`) - Date.parse(`${from}T12:00:00Z`)) / 86400000);
+
+// The most recent small action written on an earlier day (within two weeks) that
+// the reader hasn't told us about yet.
+export function followUpFor(garden: Garden, date = new Date()): { id: number; daysAgo: number } | null {
+  const today = localDay(date);
+  const waiting = Object.entries(garden.planned)
+    .map(([id, day]) => ({ id: Number(id), day, daysAgo: daysBetween(day, today) }))
+    .filter(item => garden.intentions[item.id]?.trim() && !garden.followUps[item.id] && item.daysAgo >= 1 && item.daysAgo <= 14)
+    .sort((a, b) => a.daysAgo - b.daysAgo || b.id - a.id);
+  return waiting[0] ? { id: waiting[0].id, daysAgo: waiting[0].daysAgo } : null;
+}
+
 export function dailySeedId(date = new Date()) {
   // Local calendar date, stable through the day and independent of daylight saving.
   return Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000) % 111 + 1;
@@ -67,6 +85,6 @@ export function formatGarden(garden: Garden, readings: { id: number; title: stri
       `Book reference: PDF ${s.page === s.lastPage ? 'page' : 'pages'} ${s.page}${s.page !== s.lastPage ? `–${s.lastPage}` : ''}`,
       `Saved: ${garden.saved.includes(s.id) ? 'yes' : 'no'} · Read: ${garden.read.includes(s.id) ? 'yes' : 'no'}`,
       ...(garden.notes[s.id]?.trim() ? [`Reflection: ${garden.notes[s.id]}`] : []),
-      ...(garden.intentions[s.id]?.trim() ? [`One small action: ${garden.intentions[s.id]}`] : []), '',
+      ...(garden.intentions[s.id]?.trim() ? [`One small action: ${garden.intentions[s.id]}${garden.followUps[s.id] === 'done' ? ' (done)' : ''}`] : []), '',
     ])].join('\n');
 }

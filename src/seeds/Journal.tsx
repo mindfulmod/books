@@ -20,7 +20,7 @@ export default function Journal({ seed, garden, savedGarden, storageError, onNot
   const status = storageError ? 'Browser saving unavailable' : !saved ? 'Saving…' : note || intention ? 'Saved in this browser' : 'Saved as you write';
 
   return <section className="reader-reflection" id="seed-reflection" tabIndex={-1} aria-labelledby="journal-heading">
-    <span className="reader-section-label">Optional reflection · Added for this app</span>
+    <span className="reader-section-label">A question to sit with</span>
     <h2 id="journal-heading">{seed.prompt}</h2>
     <p className="reflection-invitation">You can think about this without writing anything.</p>
     <details className="reader-disclosure" id="seed-writing" open={writingOpen} onToggle={event => setWritingOpen(event.currentTarget.open)}>

@@ -3,6 +3,7 @@
     "id": 1,
     "theme": "presence",
     "title": "Ask Allah for protection",
+    "takeaway": "You don’t have to fight every temptation alone. Ask Allah to hold it back.",
     "reading": "Ask Allah for protection when Satan tries to lead you toward harm. You do not have to depend only on your own strength. Seeking refuge means asking for safety and protection.\n\nImagine a shepherd’s dog about to attack you. Instead of struggling with the dog, you ask the shepherd to hold it back. In Ibn Taymiyyah’s comparison, the dog’s attack stands for Satan’s attempts to harm you. Turn to Allah for the protection you need.",
     "prompt": "When could you pause and ask Allah for protection today?"
   },
@@ -10,6 +11,7 @@
     "id": 2,
     "theme": "return",
     "title": "A heart that takes Allah seriously",
+    "takeaway": "Doing a lot of good is a reason for humility, not for coasting.",
     "reading": "Take your relationship with Allah seriously, even when you have done a lot of good. Good deeds are not a reason to become proud or stop checking your actions. Let your fear of displeasing Allah move you toward what is right.\n\nAbu Bakr was a close companion of the Prophet Muhammad ﷺ, yet he remained deeply humble. His wish to be only a hair on another believer shows how little importance he gave himself. Humility leaves room to keep learning and improving.",
     "prompt": "What is one choice you could make more carefully out of respect for Allah?"
   },
@@ -17,6 +19,7 @@
     "id": 3,
     "theme": "trust",
     "title": "Keep asking Allah for help",
+    "takeaway": "A late answer is not a closed door. Keep asking.",
     "reading": "Keep asking Allah for help, even when the answer takes longer than you hoped. He understands your situation completely. Be mindful of Him, make an effort to obey Him, and trust Him with what you cannot see ahead.\n\nDua means calling on Allah and asking Him for help. Look honestly at your repentance and put right what you can. A delay may hold good you cannot yet see, or what you receive may be better for you than what you first wanted.",
     "prompt": "What would you like to ask Allah for, even if the answer takes time?"
   },
@@ -24,6 +27,7 @@
     "id": 4,
     "theme": "hope",
     "title": "Allah knows every part of your life",
+    "takeaway": "The worry you can’t explain to anyone is already fully known to Allah.",
     "reading": "Allah knows every part of your life, including the worries you cannot explain to anyone else. You do not have to make Him aware of your situation. He already knows.\n\nEven a falling leaf or a grain hidden deep in the earth is known to Him. The Unseen means what people cannot see or know by themselves. Let the care in these tiny details remind you that your own life is not hidden from Allah.",
     "prompt": "What worry could you bring to Allah, knowing that He already understands it?"
   },
@@ -31,6 +35,7 @@
     "id": 5,
     "theme": "return",
     "title": "Keep learning, even after doing good",
+    "takeaway": "Yesterday’s good doesn’t finish today’s growth. Stay teachable.",
     "reading": "Keep learning and working on your faith. Doing good yesterday does not mean there is nothing left to improve today. Admit your mistakes, ask for forgiveness, and stay willing to be taught.\n\nIbn Taymiyyah was a scholar who still spoke about renewing his Islam. Being knowledgeable did not make him think his work was finished. Remember how small you are beside the earth and the mountains. You do not need to act greater than other people.",
     "prompt": "What is one thing you could improve instead of relying on what you have already done well?"
   },
@@ -38,6 +43,7 @@
     "id": 6,
     "theme": "trust",
     "title": "Patience takes practice",
+    "takeaway": "Patience is built in small daily choices, and you can grieve and still be patient.",
     "reading": "Practice patience in the choices you make each day. Ramadan, the month of fasting, shows how much habits can change through steady effort. Waiting for the evening call to prayer is easier when you remember that the fast will end.\n\nYou can feel grief and still be patient. Tears do not stop you from choosing words that please Allah. When hardship comes, care for your response: keep doing what is right, and do not let your pain turn into anger against Him.",
     "prompt": "What could help you speak carefully when you feel upset?"
   },
@@ -45,6 +51,7 @@
     "id": 7,
     "theme": "gratitude",
     "title": "Remember where the journey ends",
+    "takeaway": "Gather for where you’re going, not just for the journey.",
     "reading": "Remember where your life is heading. Use the time you have to prepare for meeting Allah, instead of being so busy collecting things that you forget the Hereafter.\n\nPicture a ship approaching its final shore while its passengers keep gathering goods inside. The ship stands for your lifetime, and the shore for death. Reckoning means being called to account. Today you can choose your actions; the Hereafter is when you will answer for them.",
     "prompt": "What good action matters enough that you should not keep putting it off?"
   },
@@ -52,6 +59,7 @@
     "id": 8,
     "theme": "gratitude",
     "title": "Use the time you have",
+    "takeaway": "Use today’s health and time. Tomorrow isn’t promised.",
     "reading": "Use your health and your time while you have them. Do not keep postponing good deeds as though another day is guaranteed. Remember the Hereafter while making your choices today.\n\nA traveler knows that the place they are passing through is not their final home. Treat this life with that same awareness. A burial shroud is the cloth used to wrap someone after death. Its mention is a reminder that the end of your journey may be nearer than you expect.",
     "prompt": "What worthwhile thing could you do today while you have the chance?"
   },
@@ -59,6 +67,7 @@
     "id": 9,
     "theme": "hope",
     "title": "Draw closer through worship",
+    "takeaway": "Expect good from Allah, and keep turning toward Him in private and in public.",
     "reading": "Expect good from Allah and keep turning toward Him. Remember Him when you are alone and when you are with others. Trust grows when you have hope in the One you rely on.\n\nBegin with the duties Allah has required, then add voluntary deeds: extra acts of worship beyond those duties. Keep asking for His help and protection. An assembly is a gathering of people. A cubit and a fathom are measures of length used in the original report’s description of drawing near.",
     "prompt": "Which duty or extra good deed could you give more care to today?"
   },
@@ -66,6 +75,7 @@
     "id": 10,
     "theme": "return",
     "title": "Return after a mistake",
+    "takeaway": "You haven’t gone too far to come back. Start with the step in front of you.",
     "reading": "Turn back to Allah, even if you have made the same mistake before. You do not have to wait until you feel worthy or imagine that you have gone too far to return. Begin with the step you can take now.\n\nIman means faith, and it can rise and fall. Repentance means leaving a sin, returning to Allah, and asking His forgiveness. Keep the Hereafter in view as you make that return. Your present mistakes do not have to become your chosen direction.",
     "prompt": "What is one step you can take to turn back to Allah today?"
   },
@@ -73,6 +83,7 @@
     "id": 11,
     "theme": "hope",
     "title": "Hope during hardship",
+    "takeaway": "A painful season can become the place where you grow closest to Allah.",
     "reading": "Bring your sadness and your needs to Allah. A painful trial can become a time of patience, humility, and renewed closeness to Him. Keep looking for His mercy while you face what is hard.\n\nBreaking and mending are pictures of being hurt and then healing. The bitterness of hardship can come before relief, just as tiredness comes before rest. An affliction is a painful difficulty. A supplication is a prayer asking Allah for help. You can turn to Him with the pain you are carrying.",
     "prompt": "What would you like to tell Allah about a difficulty you are facing?"
   },
@@ -80,6 +91,7 @@
     "id": 12,
     "theme": "kindness",
     "title": "Help someone with a real need",
+    "takeaway": "Being truly useful to someone today is one of the most beloved things you can do.",
     "reading": "Help someone with a real need. Feed a hungry person, ease a worry, or stay beside someone until their problem is resolved. If you forgive a debt, you give up money that the person owes you.\n\nPractice self-control alongside kindness. Hold back your anger even when you have the power to act on it. Care for people through useful actions, and do not let your own temper become another burden they have to carry.",
     "prompt": "Who needs help with something you could do today?"
   },
@@ -87,6 +99,7 @@
     "id": 13,
     "theme": "hope",
     "title": "Expect good from Allah",
+    "takeaway": "Feeling alone doesn’t mean you’ve been forgotten.",
     "reading": "Keep expecting good from Allah through loneliness and loss. Continue obeying Him and asking for His help, even when you feel alone among the people around you. Do not assume that He has forgotten you.\n\nWhat you lose is not beyond Allah’s power to replace with something better. Vain means empty or unable to give lasting value. Passing things cannot give you the lasting help and meaning you seek from Him.",
     "prompt": "What would trusting Allah look like in a lonely or difficult moment?"
   },
@@ -94,6 +107,7 @@
     "id": 14,
     "theme": "trust",
     "title": "Make an effort and seek Allah’s help",
+    "takeaway": "Work hard, ask for help, and trust the result to Allah. They belong together.",
     "reading": "Make a serious effort, ask Allah for help, and keep seeking forgiveness. Be willing to give something up for what is right. Patient work and trust in Allah belong together.\n\nTo exert yourself means to work hard. To seek aid means to ask for help. An unstinting reward is one given generously, without holding back. Keep doing good with hope in Allah’s generosity, including good you have not yet imagined.",
     "prompt": "Where could you make a better effort while also asking Allah to help you?"
   },
@@ -101,6 +115,7 @@
     "id": 15,
     "theme": "hope",
     "title": "Faith does not remove every sadness",
+    "takeaway": "Feeling sad doesn’t mean your faith has failed.",
     "reading": "Feeling sad does not mean you lack faith. Prophets and righteous people also experienced deep sadness. Turn to the Quran for guidance through it, and remember that effort and Allah’s help both matter. Baraka means blessing; it may come in a result you did not expect.\n\nAsk Allah for a soft heart, good company, humility, and the ability to accept advice. Treat other Muslims with sincere care. Measure success by faith and good actions, not wealth: Pharaoh’s riches did not make him successful before Allah.",
     "prompt": "What matters in a successful life besides money and comfort?"
   },
@@ -108,6 +123,7 @@
     "id": 16,
     "theme": "return",
     "title": "Return to forgiveness and the Quran",
+    "takeaway": "If a good habit has slipped, today is a fine day to pick it back up.",
     "reading": "Make room again for asking forgiveness and reading the Quran. If you have let these habits slip, return to them now. You can begin with an honest prayer and a little reading you think about carefully.\n\nIstighfar means asking Allah to forgive you. Repentance means turning away from a wrong action and back to Him. Contemplation means careful thought. Let your reading and repentance lead to changes in how you live.",
     "prompt": "What time today could you set aside for asking forgiveness or reading the Quran?"
   },
@@ -115,6 +131,7 @@
     "id": 17,
     "theme": "trust",
     "title": "Trust Allah when you need help",
+    "takeaway": "Help can arrive from places you would never think to look.",
     "reading": "When you are ill, worried, or under stress, keep turning to Allah. You may not know where help will come from. The people you already know are not the only people through whom help can reach you.\n\nTawakkul means trusting and relying on Allah. Hold on to that trust when the way ahead is unclear. Ask for the help you need, with hope that Allah can open a way you have not expected.",
     "prompt": "What need would you like to bring to Allah in dua?"
   },
@@ -122,6 +139,7 @@
     "id": 18,
     "theme": "return",
     "title": "Take the Hereafter seriously",
+    "takeaway": "Remembering where life ends changes what feels urgent today.",
     "reading": "Take the Hereafter seriously. Your life will end, and you will answer to Allah for how you lived. Let that awareness move you toward worship and away from carelessness.\n\nAngels worship Allah throughout heaven. Beseeching Allah means asking Him earnestly for mercy and help. Remembering death can change what feels urgent today: use the time you have to seek forgiveness and do good.",
     "prompt": "What part of your life would change if you remembered the Hereafter more often?"
   },
@@ -129,6 +147,7 @@
     "id": 19,
     "theme": "presence",
     "title": "Read the Quran with attention",
+    "takeaway": "Read the Qur’an slowly, as guidance meant for your own life.",
     "reading": "Read the Quran with care, as guidance that matters to your own life. Slow down enough to think about its meaning, then consider how it should change your actions.\n\nEarlier believers cared for the Quran as they would for personal letters from their Lord. They thought about it at night and longed for it during the day. To ponder means to stop and think deeply. Bring that attention into your own reading.",
     "prompt": "What could help you think about a Quran passage instead of rushing past it?"
   },
@@ -136,6 +155,7 @@
     "id": 20,
     "theme": "hope",
     "title": "Remember who protects you",
+    "takeaway": "When your strength feels small, remember the One whose strength isn’t.",
     "reading": "Remember Allah’s help when your own strength feels small. The One you turn to has power over all creation. Bring your worries to Him and place your trust in His protection.\n\nThe Lord of the worlds means Allah, the Lord of everything that exists. Your difficulty is not outside His knowledge or power. Let remembering Him give you courage to face what is in front of you.",
     "prompt": "What could you ask Allah to help you face today?"
   },
@@ -143,6 +163,7 @@
     "id": 21,
     "theme": "presence",
     "title": "Give prayer its place",
+    "takeaway": "Don’t let busier plans keep pushing your prayer aside.",
     "reading": "Give prayer a real place in your day. Each salah, or daily prayer, is a chance to renew your worship and turn your attention to Allah. Do not let other plans keep pushing that meeting aside.\n\nIf you often rush through prayer to reach another appointment, look again at your schedule. Priorities are the things you treat as most important. Arrange your time so that your actions reflect the importance you give to prayer.",
     "prompt": "What could you change in your schedule to give one prayer more care?"
   },
@@ -150,6 +171,7 @@
     "id": 22,
     "theme": "return",
     "title": "Ask sincerely for forgiveness",
+    "takeaway": "Ask for forgiveness and mean it. Shame isn’t a reason to stay away.",
     "reading": "Ask Allah sincerely to forgive you. Do not treat the words as an empty habit. Turn to Him with a real wish to leave your sins and be forgiven.\n\nSincerely means honestly, from the heart. Seeking forgiveness is a reason for hope: the sin that brings punishment can be wiped away. Keep returning to Allah instead of allowing shame to stop you from asking.",
     "prompt": "What would you like to ask Allah to forgive, with an honest wish to change?"
   },
@@ -157,6 +179,7 @@
     "id": 23,
     "theme": "gratitude",
     "title": "Keep going when worship feels hard",
+    "takeaway": "What feels hard at first can, with practice, become a joy.",
     "reading": "Keep working on your worship even when your heart feels unwilling. What feels difficult at first can become something you approach with willingness and joy. Do not give up at the first struggle.\n\nAbu Yazid pictures his soul first crying on the way to Allah, then coming willingly and smiling. This describes a change in the heart. Thank Allah for the help that makes change possible. Even being able to thank Him is a gift.",
     "prompt": "What good practice could you keep working on even when it feels difficult?"
   },
@@ -164,6 +187,7 @@
     "id": 24,
     "theme": "presence",
     "title": "Remember Allah to soften the heart",
+    "takeaway": "Don’t wait for a soft heart before you start remembering. Remembering softens it.",
     "reading": "Remember Allah regularly, especially when your heart feels hard. A hard heart means being less open to faith, mercy, or good advice. Do not wait for it to soften before you begin.\n\nDhikr means remembering Allah. Make it something you practice, alongside good actions. Righteous deeds are actions that are good and pleasing to Him. Care for your heart through what you remember and what you do.",
     "prompt": "When could you pause today to remember Allah with attention?"
   },
@@ -171,6 +195,7 @@
     "id": 25,
     "theme": "presence",
     "title": "Tell Allah what is on your heart",
+    "takeaway": "Allah already knows what’s on your heart, and you can still tell Him.",
     "reading": "Allah already knows what is on your heart, and you can still tell Him. You do not need to stay silent because He knows your worries. Dua means calling on Allah and asking Him for help.\n\nMusa, also known as Moses, was asked about the staff in his hand. He spoke about leaning on it and using it with his sheep, even though Allah already knew. Bring your own needs to Allah just as openly.",
     "prompt": "What would you like to put into words in your dua?"
   },
@@ -178,6 +203,7 @@
     "id": 26,
     "theme": "return",
     "title": "Do not keep putting off repentance",
+    "takeaway": "Small wrongs grow when they’re ignored. Turn back while you can.",
     "reading": "Act while you still have a chance. Do not keep delaying repentance or assume that you will always have more time. Repentance means turning away from sin and back to Allah.\n\nDo not treat a small wrong as harmless. A tiny spark can start a large fire; in the same way, a wrong action can grow when you ignore it and keep repeating it. Belittling a sin means treating it as too small to matter. Take the first step to leave it.",
     "prompt": "What wrong action could you stop excusing and begin changing today?"
   },
@@ -185,6 +211,7 @@
     "id": 27,
     "theme": "presence",
     "title": "Give your heart what it needs",
+    "takeaway": "Your heart needs remembering Allah the way a fish needs water.",
     "reading": "Give your heart regular time to remember Allah. Dhikr means remembering Him, and the heart needs it as deeply as a fish needs water. Care for this need as you care for the needs of your body.\n\nA fish cannot stay well when it is taken out of water. That comparison helps you picture a heart cut off from remembrance. Keep making room for your relationship with Allah instead of expecting passing things to meet every need inside you.",
     "prompt": "Where could a regular moment of remembrance fit into your day?"
   },
@@ -192,6 +219,7 @@
     "id": 28,
     "theme": "return",
     "title": "Allah’s commands are for your good",
+    "takeaway": "Every good command is for your benefit, not His.",
     "reading": "Obeying Allah benefits you. He does not gain something from your good deeds, and your sins do not harm Him. You are the one helped by obedience and harmed by wrongdoing.\n\nThink carefully about your own life. This is what it means to contemplate your situation. Look at where your choices are taking you, and receive Allah’s commands as guidance for your good.",
     "prompt": "What command could you think about more carefully as guidance for your own good?"
   },
@@ -199,6 +227,7 @@
     "id": 29,
     "theme": "gratitude",
     "title": "Choose what lasts",
+    "takeaway": "Don’t trade what lasts for something you can’t keep.",
     "reading": "Choose what lasts when a passing desire pulls you away from the Hereafter. Do not give up your faith for something you cannot keep. The reward with Allah is greater than the wealth of this world.\n\nDin means religion, and a dowry is a marriage gift. Malik ibn Dinar pictures the world as demanding a person’s whole religion before it will be satisfied. This warns you how much chasing worldly gain can cost when you let it take first place.",
     "prompt": "What short-term desire could you put aside for something that matters to your faith?"
   },
@@ -206,6 +235,7 @@
     "id": 30,
     "theme": "gratitude",
     "title": "Grow the richness of the heart",
+    "takeaway": "A content heart is a richer thing than a full house.",
     "reading": "Grow the richness of your heart through worshipping Allah and following the Sunna, the Prophet’s example. Having more possessions is not the same as having a content and faithful heart.\n\nPicture a tree with firm roots and branches that keep bearing fruit. The roots help explain belief in Allah alone, held firmly in the heart. The branches and fruit help explain the good deeds that grow from it. Let your faith become a source of goodness in how you live.",
     "prompt": "What good action could grow from your faith today?"
   },
@@ -213,6 +243,7 @@
     "id": 31,
     "theme": "kindness",
     "title": "Put what you learn into practice",
+    "takeaway": "Knowing what’s right is only the start. Living it is the point.",
     "reading": "Put what you learn into practice. Knowledge brings responsibility, so do not stop at knowing what is right. Do good, check your intentions, and keep examining your own actions.\n\nSincerity means honestly trying to please Allah. Knowledge and good deeds can become ways to impress people if you stop watching your purpose. Being awake or asleep is a comparison here: live with attention to your purpose instead of passing through life without acting on what you know.",
     "prompt": "What is one thing you already know that you need to put into practice?"
   },
@@ -220,6 +251,7 @@
     "id": 32,
     "theme": "presence",
     "title": "Bring your attention into prayer",
+    "takeaway": "Bring your attention to prayer, not just your body.",
     "reading": "Give prayer the place it deserves in your day. If you keep delaying it, work on praying on time. Bring your attention as well as your body to the prayer.\n\nThe qibla is the direction of the Kaaba in Makkah. Your face can be turned that way while your thoughts are somewhere else. Gently return your attention to Allah. Mahr means a marriage gift; it is used as a comparison about what you bring when seeking Paradise and Allah’s love.",
     "prompt": "What usually takes your attention away during prayer, and how could you prepare for it?"
   },
@@ -227,6 +259,7 @@
     "id": 33,
     "theme": "trust",
     "title": "Know your part and trust Allah",
+    "takeaway": "Do your part, and let go of trying to grip what isn’t yours to hold.",
     "reading": "Do your part, and trust Allah with what is beyond your control. Trying to control everything is like trying to grip the water of a flowing river. It keeps moving through your fingers.\n\nRemember four things: Allah provides your sustenance, no one can do your worship for you, Allah sees your actions, and you will meet Him after death. Sustenance means what you receive to live on. Let these reminders lead to contentment, effort, honesty, and preparation.",
     "prompt": "Which of those four reminders would most change how you spend today?"
   },
@@ -234,6 +267,7 @@
     "id": 34,
     "theme": "trust",
     "title": "Ask for mercy and guidance",
+    "takeaway": "The One who feeds the ant in the dark hasn’t forgotten you.",
     "reading": "Ask Allah for mercy and guidance when you do not know what to do. He provides for creatures hidden from human sight, including ants in dark holes and fish deep in the sea. You are not forgotten.\n\nThe young men known as the people of the cave sought shelter and turned to Allah for help. Their rescue went far beyond anything they could have planned. Conviction means firm belief. Bring that trust into your own prayers.",
     "prompt": "What situation would you like Allah to guide you through?"
   },
@@ -241,6 +275,7 @@
     "id": 35,
     "theme": "hope",
     "title": "Do not give up on dua",
+    "takeaway": "Being moved to ask is itself a sign of hope. Keep asking.",
     "reading": "Keep making dua. Calling on Allah and asking for His help is valuable, even while you are waiting for an answer. Being guided to ask Him is itself a reason for hope.\n\nTo supplicate means to ask earnestly. Do not let the thought that your prayer has no value silence you. Turn toward Allah with trust in His response and keep your willingness to ask alive.",
     "prompt": "What dua have you been putting off that you could make today?"
   },
@@ -248,6 +283,7 @@
     "id": 36,
     "theme": "presence",
     "title": "Care for the life of your heart",
+    "takeaway": "A living heart is fed by small daily habits.",
     "reading": "Care for the life of your heart. A living heart is awake to Allah and willing to obey Him. Give it attention through your reading, your worship, and your everyday choices.\n\nRead the Quran and think about its meaning. Be humble before Allah in private, when no one else is watching. Leave sins. These habits work together: what you understand should shape what you do.",
     "prompt": "Which of these three practices needs more care in your life?"
   },
@@ -255,6 +291,7 @@
     "id": 37,
     "theme": "gratitude",
     "title": "Notice the gifts you already have",
+    "takeaway": "Notice the gifts you’ve stopped noticing.",
     "reading": "Notice the gifts you already have. Whatever good you receive comes from Allah. Gratitude begins when you stop treating familiar blessings as things you are automatically owed.\n\nIf you can see, close your eyes for a moment and notice how much sight helps you each day. Familiar gifts can be easy to overlook. Magnitude means size or greatness. Give thanks for the value of what you have, even when you are also hoping for more.",
     "prompt": "What everyday gift have you been using without stopping to thank Allah for it?"
   },
@@ -262,6 +299,7 @@
     "id": 38,
     "theme": "gratitude",
     "title": "Value health, safety, and food",
+    "takeaway": "Health, safety and today’s meal are not small things.",
     "reading": "Notice the value of health, safety, and enough food for today. These gifts can seem ordinary when you are looking at everything you still want. Yet they support so much of your life.\n\nBefore measuring your day only by what is missing, give thanks for what is sustaining you. A meal matters. Waking without fear matters. You do not need to own everything before you can recognize something precious in what you already have.",
     "prompt": "Which of these blessings can you thank Allah for today?"
   },
@@ -269,6 +307,7 @@
     "id": 39,
     "theme": "return",
     "title": "Work on pleasing Allah",
+    "takeaway": "Spend less time counting your good deeds and more time growing.",
     "reading": "Work on pleasing Allah instead of congratulating yourself. Notice where you need forgiveness and growth, rather than being busy listing your own good deeds.\n\nMeet good times with gratitude and difficult times with patience. Ask Allah to be pleased with you, and trust His care when life does not follow your plans. A decree is what Allah has decided. Keep working on your response to Him in each situation.",
     "prompt": "What would change if pleasing Allah became your main concern in one task today?"
   },
@@ -276,6 +315,7 @@
     "id": 40,
     "theme": "gratitude",
     "title": "Gratitude in ease, patience in hardship",
+    "takeaway": "Good times and hard times both give you a way to respond well.",
     "reading": "Thank Allah when something good happens, and practice patience when something painful happens. Both situations give you a way to worship Him. Your circumstances can change without taking away your chance to respond well.\n\nSabr means patience and endurance. It includes staying faithful through difficulty. Keep Allah at the center of your concerns, so that ease leads you to gratitude and hardship leads you to patient trust.",
     "prompt": "Does your situation today call for more gratitude, more patience, or both?"
   },
@@ -283,6 +323,7 @@
     "id": 41,
     "theme": "trust",
     "title": "Keep praying through a long difficulty",
+    "takeaway": "When relief is slow, keep praying. The waiting counts too.",
     "reading": "Keep praying through a long difficulty. Do not give up on Allah’s mercy because relief is taking longer than you hoped. Your patience and your prayers are acts of worship during the wait.\n\nSupplication means asking Allah for help. Keep seeking forgiveness too. The desire to turn back to Him is something to value, even while the problem you face has not yet been resolved.",
     "prompt": "What could help you continue a sincere dua through a long wait?"
   },
@@ -290,6 +331,7 @@
     "id": 42,
     "theme": "kindness",
     "title": "Learn from Luqman’s advice",
+    "takeaway": "Be grateful, be good to your parents, and be patient with what comes.",
     "reading": "Use your chances to do good. Thank Allah, worship Him alone, and care for your parents. If they ask you to worship something besides Him, do not obey that request, but continue treating them kindly.\n\nKeep up your prayers, encourage what is right, and be patient through difficulty. Even a tiny deed is known to Allah. Be humble in everyday life: do not look down on people, boast, or use your voice arrogantly. Let faith shape your manners as well as your worship.",
     "prompt": "Which part of Luqman’s advice could you practice in an ordinary moment today?"
   },
@@ -297,6 +339,7 @@
     "id": 43,
     "theme": "gratitude",
     "title": "Remember that this world is a journey",
+    "takeaway": "Live like a traveller: care for the road, but remember it isn’t home.",
     "reading": "Live with the Hereafter in view. A traveler cares for the journey while remembering that the place they are passing through is not their final home. Remembering death helps you keep that wider view.\n\nChasing worldly gain can be like chasing a shadow: it stays ahead of you, however far you run. Do not make having more the whole purpose of your life. Give your time and attention to what will matter beyond this journey.",
     "prompt": "What are you chasing that may be distracting you from preparing for the Hereafter?"
   },
@@ -304,6 +347,7 @@
     "id": 44,
     "theme": "presence",
     "title": "Do not take closeness to Allah for granted",
+    "takeaway": "Most losses can be replaced. Your connection with Allah can’t.",
     "reading": "Do not take your relationship with Allah for granted. Other losses may have replacements, but nothing can take His place in your life. Keep returning to Him and leaving what draws you away.\n\nMusa, also known as Moses, traveled with Khidr and questioned his actions three times before their journey together ended. That parting is used as a warning against becoming careless about repeated disobedience. Take your actions seriously instead of assuming they do not matter.",
     "prompt": "What repeated action could you change to care for your relationship with Allah?"
   },
@@ -311,6 +355,7 @@
     "id": 45,
     "theme": "hope",
     "title": "Faith is tested by difficulty",
+    "takeaway": "Faith doesn’t remove hard days. It helps you walk through them.",
     "reading": "Hold on to Allah through sadness and difficulty. Faith does not mean that problems disappear. It can give you strength to keep going through them.\n\nThe prophets faced severe trials despite their closeness to Allah. A hard life is not proof that He has rejected you. Keep worshipping, seek His help, and meet your trials with patience rather than letting them pull you away from Him.",
     "prompt": "What could help you keep turning to Allah during a difficult time?"
   },
@@ -318,6 +363,7 @@
     "id": 46,
     "theme": "trust",
     "title": "The birds go out to seek food",
+    "takeaway": "Trust like the birds do: go out each morning and make the effort.",
     "reading": "Make an effort while trusting Allah to provide. Tawakkul means relying on Him. It does not mean staying still and refusing to do your part.\n\nBirds leave their nests hungry in the morning and go out to find food. They return fed. Their movement helps explain the place of effort within trust: seek what you need, and remember that your provision comes from Allah.",
     "prompt": "What useful step could you take while relying on Allah for the result?"
   },
@@ -325,6 +371,7 @@
     "id": 47,
     "theme": "hope",
     "title": "Faith helps you face life’s storms",
+    "takeaway": "Stay connected through the storm instead of waiting for it to pass.",
     "reading": "Stay close to Allah through the storms of life. Pray and speak to Him regularly. Faith does not remove every difficulty, but it can help you face what is happening without giving up your connection with Him.\n\nSadness often looks back at what has happened; fear looks ahead at what might happen. Yaqub grieved for his son, and Musa’s mother feared for her child. Strong feelings are part of a believer’s life too. Rabb means Lord: turn to Allah for care, strength, and guidance through them.",
     "prompt": "Are you carrying sadness about the past or fear about the future, and what would you like to tell Allah about it?"
   },
@@ -332,6 +379,7 @@
     "id": 48,
     "theme": "trust",
     "title": "Be gentle like a bee and steady like a plant",
+    "takeaway": "Be like a bee: take what’s good, give what’s good, and harm nothing.",
     "reading": "Seek what is good, give what is good, and be gentle with others. Picture a bee taking nectar, making honey, and landing on a flower without damaging it. Let your presence bring benefit instead of harm.\n\nWhen a trial shakes you, picture a fresh green plant bending in the wind and standing upright again when it calms. Calamities means serious troubles. Being affected by hardship does not mean you cannot regain steadiness. Keep your roots in faith while you face the wind.",
     "prompt": "What is one way you could bring good without causing harm today?"
   },
@@ -339,6 +387,7 @@
     "id": 49,
     "theme": "trust",
     "title": "Keep holding to patience",
+    "takeaway": "Keep holding on to patience, even when it feels tiring.",
     "reading": "Keep holding to patience, even when it feels tiring. Continue obeying Allah through difficulty, with hope in His support, love, and reward. Pious means mindful of Him and careful about your actions.\n\nJibril is the angel Gabriel. Allah’s love for a servant is made known to him and to the angels in heaven. Seek that love above passing rewards, and let hope in it strengthen your patient effort.",
     "prompt": "Where do you need to keep being patient rather than give up?"
   },
@@ -346,6 +395,7 @@
     "id": 50,
     "theme": "hope",
     "title": "Hope in Allah’s forgiveness",
+    "takeaway": "No pile of mistakes is too high for mercy. Turn back.",
     "reading": "Do not decide that your sins are too great for you to return to Allah. Call on Him, hope in His mercy, and ask for forgiveness. Even a life weighed down by wrongdoing is a reason to turn back.\n\nWorship Allah alone. Not associating anything with Him means giving no partner a share in His worship. The pictures of sins reaching the sky or filling the earth show how great the hope of forgiveness is. Seek it instead of giving up.",
     "prompt": "What is keeping you from sincerely asking Allah for forgiveness?"
   },
@@ -353,6 +403,7 @@
     "id": 51,
     "theme": "trust",
     "title": "Remember Allah when you ask for help",
+    "takeaway": "No one can help or harm you beyond what Allah allows.",
     "reading": "Be mindful of Allah and ask Him for help. No person, and no group of people, has power greater than His will. Place your deepest trust in Him when you hope for good or fear harm.\n\nIbn Abbas received this advice from the Prophet ﷺ when he was a boy. The lifted pens and dried pages refer to Allah’s decree: what He has already decided. You do not have to treat other people’s power as though it controls everything.",
     "prompt": "How could remembering Allah’s power change the way you face other people’s pressure?"
   },
@@ -360,6 +411,7 @@
     "id": 52,
     "theme": "return",
     "title": "Keep going toward your purpose",
+    "takeaway": "Keep walking toward your purpose, even when the road is long.",
     "reading": "Keep working toward your purpose, even when the effort feels tiring. Do not abandon self-discipline because the journey is long. Make room for worship instead of letting your days pass without attention.\n\nMusa’s journey toward the meeting point of two bodies of water is a picture of continuing toward a goal. The traveling group that has already left and the approaching sun of old age remind you that time keeps moving. Wearisome means tiring. Use the time you have now.",
     "prompt": "What good habit needs more effort from you before more time passes?"
   },
@@ -367,6 +419,7 @@
     "id": 53,
     "theme": "presence",
     "title": "Build good habits before a trial",
+    "takeaway": "Build your habits in calm days, and they’ll hold you in hard ones.",
     "reading": "Build a habit of worship before a crisis comes. Keep faith and good deeds part of your ordinary days, rather than turning to Allah only when you are in trouble.\n\nYunus, also known as Jonah, was swallowed by a great sea creature. His earlier worship is connected with his release from its belly. Glorifying Allah means praising His greatness and perfection. Make that remembrance a regular part of your life.",
     "prompt": "What act of worship could you make a steady part of your life now?"
   },
@@ -374,6 +427,7 @@
     "id": 54,
     "theme": "kindness",
     "title": "Know Allah and let it shape your life",
+    "takeaway": "The more you know Allah, the more your life takes shape around Him.",
     "reading": "Learn about Allah and let that knowledge shape your life. Think about His promises, words, actions, and attributes. Attributes means qualities. Bring what you learn into your worship, trust, and hope.\n\nPicture an almond tree answering a question about God by blossoming. Its beauty draws attention to its Creator. Your own behavior can also help people think about Allah: live with the goodness you hope they will come to know.",
     "prompt": "What could someone learn about your faith from the way you treat them?"
   },
@@ -381,6 +435,7 @@
     "id": 55,
     "theme": "trust",
     "title": "Take useful action instead of staying in regret",
+    "takeaway": "Don’t get stuck replaying the past. Do the next useful thing.",
     "reading": "Do what is useful, ask Allah for help, and keep making an effort. When something goes wrong, do not become trapped in an imagined past that you cannot change.\n\nPreordained means decided by Allah beforehand. Accept what has happened under His decree, rather than feeding regret with endless thoughts about how everything might have been different. Turn your attention toward the good you can still do.",
     "prompt": "What useful action is available now, even though you cannot change the past?"
   },
@@ -388,6 +443,7 @@
     "id": 56,
     "theme": "hope",
     "title": "Remember the promise of ease",
+    "takeaway": "Bitterness often comes before sweetness. Relief is on its way.",
     "reading": "Hold on to hope during hardship. Pain can come before healing, just as bitterness can come before sweetness. Keep turning toward Allah when you cannot yet see the relief ahead.\n\nIhsan here means Allah’s goodness and generosity. Breaking and mending are pictures of hardship and healing. The Quran’s repeated promise of ease gives you something to hold to while life feels difficult.",
     "prompt": "What reminder could you return to when a difficulty feels overwhelming?"
   },
@@ -395,6 +451,7 @@
     "id": 57,
     "theme": "kindness",
     "title": "Treat others with mercy",
+    "takeaway": "Treat people with the mercy you hope to receive.",
     "reading": "Treat people with the mercy, forgiveness, and kindness you hope to receive from Allah. Let your hopes for the Day of Judgment change how you speak and act today.\n\nCare about being close to Allah, as well as being safe from punishment. Love for Him gives you a reason to live well beyond fear alone. Bring that care into the way you meet another person’s faults and needs.",
     "prompt": "How could you show someone the kind of mercy you hope to receive?"
   },
@@ -402,6 +459,7 @@
     "id": 58,
     "theme": "kindness",
     "title": "Look at why you are acting",
+    "takeaway": "Check why you’re doing it. The reason matters as much as the act.",
     "reading": "Look honestly at why you are acting. Sincerity means trying to please Allah from the heart. Your effort matters even when you cannot control how everything turns out.\n\nAn intention is the reason or purpose behind what you do. Two people can do the same outward action while wanting very different things. Before you act, check whether you are seeking Allah’s pleasure or mainly hoping to impress someone.",
     "prompt": "Why are you doing one important thing today, and is that the reason you want to guide you?"
   },
@@ -409,6 +467,7 @@
     "id": 59,
     "theme": "gratitude",
     "title": "Thank Allah and keep talking to Him",
+    "takeaway": "Thank Allah, keep talking to Him, and trust His timing.",
     "reading": "Thank Allah, praise Him, and keep talking to Him through dua. He knows you completely. Trust His knowledge of what is best for you and when it is best.\n\nContentment with Allah’s decrees means accepting what He has decided. The picture of a quiet teacher during a test describes continuing through uncertainty when the answer is not yet clear. Keep your prayer and gratitude alive during the wait.",
     "prompt": "What could you thank Allah for while you wait for something you have asked for?"
   },
@@ -416,6 +475,7 @@
     "id": 60,
     "theme": "gratitude",
     "title": "Remember who gives the gift",
+    "takeaway": "A gift can be precious because of who gave it, even if you wouldn’t have chosen it.",
     "reading": "Remember the Giver when life brings something you would not have chosen for yourself. A gift from someone you love can become precious because of who chose it, even if its color or style was not your first choice.\n\nBring that trust and love into your relationship with Allah. Do not let the passing world take up your whole life with sadness. Look beyond the first disappointment and keep your heart connected to Him.",
     "prompt": "How could remembering Allah change the way you think about something you have been given?"
   },
@@ -423,6 +483,7 @@
     "id": 61,
     "theme": "return",
     "title": "Stay steady in obedience",
+    "takeaway": "Don’t only do what’s right when it’s easy. Stay consistent.",
     "reading": "Stay consistent in doing what is right. Keep returning to your good habits when you are tempted to leave them. Do not make obedience something you choose only when it feels easy.\n\nShaytan means Satan. His promises can make harmful choices look attractive. An illusion is something that seems real but deceives you. Trust Allah, worship Him sincerely, and stay alert to the small steps that lead you away from what is right.",
     "prompt": "What good practice could you protect from being dropped whenever it becomes difficult?"
   },
@@ -430,6 +491,7 @@
     "id": 62,
     "theme": "kindness",
     "title": "Pay attention to your conduct",
+    "takeaway": "Watch your own conduct before keeping score of others’.",
     "reading": "Pay attention to yourself in each setting. Bring your heart into prayer, be careful about how you eat, respect another person’s privacy in their home, and watch your speech around others.\n\nRemember Allah and remember that you will die. Do not keep a running list of favors you have done or wrongs people have done to you. Let good manners shape both your outward behavior and what you keep returning to in your thoughts.",
     "prompt": "Which part of this advice could help you in a situation you expect today?"
   },
@@ -437,6 +499,7 @@
     "id": 63,
     "theme": "presence",
     "title": "Strengthen the heart through worship",
+    "takeaway": "A heart kept clear by worship leaves less room for temptation.",
     "reading": "Strengthen your heart through worship and obedience. Keep remembering Allah and choosing what is right, so that harmful temptations have less room to take hold.\n\nA clear, shining mirror is a picture of a heart made strong through worship. A wolf fleeing from a lion is another picture, this time of Satan losing his hold. Give your heart the remembrance it needs instead of leaving it to struggle alone.",
     "prompt": "What act of worship helps you keep your attention on Allah?"
   },
@@ -444,6 +507,7 @@
     "id": 64,
     "theme": "hope",
     "title": "Raise your hands and ask",
+    "takeaway": "Raise your hands and ask, even before you know the answer.",
     "reading": "Raise your hands and ask Allah with hope. Do not become so worried about the answer that you stop making dua. Being able to turn to Him is itself something to value.\n\nDua, or supplication, means calling on Allah and asking for His help. Approach Him with trust in His generosity. Keep your attention on praying sincerely, instead of trying to control the answer or its timing.",
     "prompt": "What would you like to ask Allah for with hope in His generosity?"
   },
@@ -451,6 +515,7 @@
     "id": 65,
     "theme": "hope",
     "title": "Think about what a trial can teach",
+    "takeaway": "A hard time can show you what needs to change.",
     "reading": "Let hardship turn you back toward Allah. Use it as a chance to strengthen your faith, notice where you have gone wrong, and make changes that protect you from further harm.\n\nA trial can lead you to guidance, reveal the state of your faith, protect you from a wrong path, correct your actions, and help you grow. You may not see every part of that growth while the difficulty is happening. Keep taking the good steps you can.",
     "prompt": "What could you learn or change in response to a difficulty you face?"
   },
@@ -458,6 +523,7 @@
     "id": 66,
     "theme": "kindness",
     "title": "Look at what fills your days",
+    "takeaway": "What fills your days matters more than the image you present.",
     "reading": "Look at what keeps you busy. Give your time to actions that please Allah, and leave what He has forbidden. The choices filling your day matter more than the image you present to others.\n\nWhen you are able to do good, thank Allah for guiding you toward it. Gratitude helps you recognize that opportunity as a gift. Your good actions can bring calm and benefit to the people around you as well as to your own heart.",
     "prompt": "What are your usual activities helping you become?"
   },
@@ -465,6 +531,7 @@
     "id": 67,
     "theme": "gratitude",
     "title": "Do not measure your life against someone else’s",
+    "takeaway": "Your timing isn’t someone else’s timing. Your light still matters.",
     "reading": "Do not measure your life by someone else’s timing. The sun and the moon shine at different times. Another person’s moment does not make your own life worthless.\n\nWorldly possessions and status are small beside what matters to Allah. The comparison with a mosquito’s wing makes that difference vivid. Do not use wealth alone to judge your worth or another person’s standing before Him.",
     "prompt": "What comparison could you stop feeding so you can focus on your own responsibilities?"
   },
@@ -472,6 +539,7 @@
     "id": 68,
     "theme": "hope",
     "title": "Ask Allah for help with worry",
+    "takeaway": "Don’t let yesterday take over today. Notice the good and do a little good.",
     "reading": "Ask Allah for protection from worry and sadness, and do not let yesterday take over all of today. Notice the good He has given you and keep doing good for others, even in small ways.\n\nA smile, a meal, or help with a difficult moment may matter more than you realize. Mischief and dishonesty can spoil good things; so can constantly expecting the worst. Miserliness means being unwilling to give. Bring these struggles into your prayers and keep seeking Allah’s help.",
     "prompt": "Which burden named in the dua would you most like Allah to help you with?"
   },
@@ -479,6 +547,7 @@
     "id": 69,
     "theme": "presence",
     "title": "Remember whom you stand before in prayer",
+    "takeaway": "Remember whom you’re standing before, and the rest grows quieter.",
     "reading": "Give prayer your attention because of whom you are standing before. Allahu akbar means Allah is greater. Remember His greatness when other thoughts crowd into your prayer.\n\nSalah means the daily prayers. Each of the five prayers is an opportunity to turn toward Allah. Approach it as an honor and a gift, instead of only a task to finish quickly. Make room in your day and in your attention for that meeting.",
     "prompt": "What could help you remember Allah’s greatness at the start of your next prayer?"
   },
@@ -486,6 +555,7 @@
     "id": 70,
     "theme": "return",
     "title": "Look back on your day and repent",
+    "takeaway": "Before sleep, look back on your day, then ask to do better tomorrow.",
     "reading": "Take time before sleep to look honestly at your day. Notice the good you did and where you went wrong. Ask Allah for forgiveness and renew your intention to do better.\n\nGiving an account of yourself is like checking what you gained and lost, but the focus is your actions. Repentance means turning away from sin and back to Allah. Remember that your choices are known to Him, even when other people do not see them.",
     "prompt": "What would you thank Allah for and ask Him to forgive when you review today?"
   },
@@ -493,6 +563,7 @@
     "id": 71,
     "theme": "trust",
     "title": "Meet a trial with patience",
+    "takeaway": "A hard test is not a sign of rejection.",
     "reading": "Do not assume that a difficult trial means Allah has rejected you. Hardship can be a means of forgiveness and a path to greater reward. Keep turning to Him through what you face.\n\nMeet the test with patience and seek to be content with Allah’s decree, which means what He has decided. Your response matters. Pain does not have to lead you away from faith or into anger against Him.",
     "prompt": "What could help you respond to a trial with patience toward Allah’s decree?"
   },
@@ -500,6 +571,7 @@
     "id": 72,
     "theme": "return",
     "title": "Do not wait until you are older",
+    "takeaway": "Don’t wait until you’re older. Begin today.",
     "reading": "Do not wait until you are old to worship Allah. You cannot know how much time remains. Begin giving your faith the care it needs today.\n\nIman means faith. Care about keeping it through your whole life, including at the time of death. Remembering that life can end at any age gives urgency to the good you can do now.",
     "prompt": "What act of worship have you been postponing to a later stage of life?"
   },
@@ -507,6 +579,7 @@
     "id": 73,
     "theme": "return",
     "title": "Be humble about praise and listen to regret",
+    "takeaway": "People’s praise doesn’t see everything. Stay humble.",
     "reading": "Stay humble when people praise you. They do not see every mistake you have made. Their admiration is not a reason to stop seeking forgiveness or examining yourself.\n\nFeeling troubled after a sin can show that your conscience is still awake. Light and darkness are pictures of recognizing the difference between right and wrong. Let that discomfort move you toward repentance, instead of believing that you are beyond repair.",
     "prompt": "What is a feeling of regret asking you to put right?"
   },
@@ -514,6 +587,7 @@
     "id": 74,
     "theme": "return",
     "title": "Let regret lead you back to Allah",
+    "takeaway": "Let regret lead you back, not keep you away.",
     "reading": "Return to Allah with honest regret. Repentance can lift you and bring you closer to Him. Do not let the shame of a mistake become a reason to stay away.\n\nA dry heart becoming alive through rain is a picture of what repentance can do within you. The clouds, drops, and tears describe regret and forgiveness. Let your sorrow for a wrong action lead to seeking forgiveness and choosing a better direction.",
     "prompt": "What could turn your regret into a real step of repentance?"
   },
@@ -521,6 +595,7 @@
     "id": 75,
     "theme": "trust",
     "title": "Place your deepest trust in Allah",
+    "takeaway": "Use what you have, but rest your deepest trust in Allah.",
     "reading": "Place your deepest trust in Allah. The things and people you depend on cannot take His place. Use what is available to you while remembering where your final reliance belongs.\n\nThe cliff and flying are pictures of facing an uncertain future with trust. They describe hope when you cannot yet see the way forward. Hold on to Allah instead of allowing uncertainty to decide the limits of your hope.",
     "prompt": "What are you depending on so strongly that you need to remember your reliance on Allah?"
   },
@@ -528,6 +603,7 @@
     "id": 76,
     "theme": "gratitude",
     "title": "Stay thankful as life changes",
+    "takeaway": "Every season changes. A content heart carries you through them all.",
     "reading": "Remember that sadness, happiness, poverty, and comfort do not stay the same forever. A content heart can give you richness that possessions alone cannot provide. Felicity means happiness.\n\nBe thankful in good times and ask Allah for help in hard times. If the answer takes time, remain patient and accept His decree. Keep faith steady through changing circumstances instead of making it depend on whether you receive what you want.",
     "prompt": "How could you practice thankfulness or patience in the circumstances you have today?"
   },
@@ -535,6 +611,7 @@
     "id": 77,
     "theme": "kindness",
     "title": "Think before you speak",
+    "takeaway": "Let your heart go first and your words follow.",
     "reading": "Pause before you speak. Think about whether your words should be said or whether silence would be better. Give your judgment time to guide your tongue.\n\nA tongue placed behind the heart is a picture of thinking first. A tongue in front of the heart is a picture of speaking before thinking. Let your respect for Allah shape the words you choose and the way you treat people.",
     "prompt": "What could you ask yourself before your next difficult reply?"
   },
@@ -542,6 +619,7 @@
     "id": 78,
     "theme": "return",
     "title": "Keep returning for forgiveness",
+    "takeaway": "Fallen again? Return again. The door is still open.",
     "reading": "Keep seeking forgiveness when you fall into sin. Do not allow yesterday’s wrongs to stop you from returning today. Turn to Allah in the day and in the night.\n\nRepentance means turning away from sin and back to Him. The sun rising from the west refers to a sign connected with the end of the world, not an ordinary sunrise. Use the opportunity to repent while it remains open.",
     "prompt": "What would a sincere return to Allah look like for you today?"
   },
@@ -549,6 +627,7 @@
     "id": 79,
     "theme": "presence",
     "title": "Let the Quran give life to your heart",
+    "takeaway": "Like rain on dry earth, the Qur’an can bring a heart back to life.",
     "reading": "Stay close to the Quran and the Sunna, the Prophet’s example, through hardship as well as ease. A painful experience is not the end of what Allah may give you. Keep hope in His help and reward.\n\nRain brings dry earth to life. In the same way, the Quran can bring life to your heart. A bitter drink becoming honey is a picture of suffering followed by something that makes its bitterness easier to bear.",
     "prompt": "How could you make time for the Quran when your heart feels dry or distant?"
   },
@@ -556,6 +635,7 @@
     "id": 80,
     "theme": "return",
     "title": "Do not let every desire lead you",
+    "takeaway": "You don’t have to follow every desire you feel.",
     "reading": "Do not let every desire decide your actions. Build a firm boundary between what you feel like doing and what you know is right. Worship needs that self-discipline.\n\nA barrier of steel is a picture of a strong refusal to follow harmful desires. Your own soul may sometimes help you and sometimes pull you the other way. Keep training it, because giving every wish control can weaken your judgment.",
     "prompt": "What desire needs a firm boundary so it does not decide your actions for you?"
   },
@@ -563,6 +643,7 @@
     "id": 81,
     "theme": "trust",
     "title": "Trust Allah with what happened and what passed you by",
+    "takeaway": "You can’t rewrite what happened. Trust Allah with it.",
     "reading": "You cannot undo what has already happened by replaying it endlessly. What reached you was within Allah’s decree, and what passed you by was not outside His knowledge or control.\n\nA decree is what Allah has decided. Let trust in Him ease the struggle to rewrite the past. Face what is in front of you without believing that every missed possibility was something you should still be able to recover.",
     "prompt": "What past event or missed opportunity do you need to place before Allah with trust?"
   },
@@ -570,6 +651,7 @@
     "id": 82,
     "theme": "return",
     "title": "Notice how sin affects the heart",
+    "takeaway": "Sin harms your own heart first. Notice it, and turn back.",
     "reading": "Do not keep choosing actions that harm your own heart. Sin can leave you feeling distant from Allah, from other people, and even from yourself. Recognize that harm and turn back.\n\nAn enemy harms you from outside, but your own choices can also work against you. Do not become careless about that damage. Seek forgiveness and begin leaving the actions that are pulling you away from the life of faith you want.",
     "prompt": "What wrong action is damaging a connection you want to protect?"
   },
@@ -577,6 +659,7 @@
     "id": 83,
     "theme": "presence",
     "title": "Return to prayer",
+    "takeaway": "When life feels unsettled, make room for prayer.",
     "reading": "Make room for prayer when life feels unsettled. Turn toward Allah instead of letting passing pleasures keep you distant from Him. Care for that connection before more time slips away.\n\nThe prayer mat is a picture of prayer itself. Calling it a vehicle describes how worship draws you toward Allah, not travel from one physical place to another. Bring your attention and your needs into that time of worship.",
     "prompt": "What could help you give prayer a more serious place in your day?"
   },
@@ -584,6 +667,7 @@
     "id": 84,
     "theme": "gratitude",
     "title": "Put the world’s value in perspective",
+    "takeaway": "Give the passing world only the weight it deserves.",
     "reading": "Do not give the passing world more importance than it deserves. Its possessions are not yours forever, and having them does not make them the greatest thing to seek.\n\nLook at how much space wealth and status take up in your heart. Remember that the world belongs to Allah. Let that awareness help you place your hopes in what lasts, instead of treating temporary ownership as your whole purpose.",
     "prompt": "What worldly concern has become larger in your mind than it deserves to be?"
   },
@@ -591,6 +675,7 @@
     "id": 85,
     "theme": "hope",
     "title": "Ask Allah to help your heart heal",
+    "takeaway": "Pain can soften a heart and become part of its healing.",
     "reading": "Turn to Allah when your heart is hurting. Pain can soften a heart and become part of its healing. Seek His help instead of trying to carry everything through your own strength alone.\n\nDepending on yourself can make even a small task feel heavy. Relying on Allah changes how you approach difficulty. Keep asking for His help while you face what is hard and take the steps available to you.",
     "prompt": "What would you like to ask Allah to help you through?"
   },
@@ -598,6 +683,7 @@
     "id": 86,
     "theme": "trust",
     "title": "Stay grounded as circumstances change",
+    "takeaway": "Stay yourself through every season, rich or poor, praised or not.",
     "reading": "Stay grounded as your circumstances change. Wealth, poverty, praise, and humiliation are different seasons of life. Do not let each change pull your whole character in a new direction.\n\nRemember the gift of being guided toward Allah. Being grounded means staying steady in what you believe and how you act. Keep gratitude and faith with you in comfort and in difficulty.",
     "prompt": "What good quality do you want to keep whether your circumstances improve or become harder?"
   },
@@ -605,6 +691,7 @@
     "id": 87,
     "theme": "kindness",
     "title": "Choose friends who help your faith",
+    "takeaway": "Choose friends who help you remember what matters.",
     "reading": "Choose friends who help you remember Allah and live well. The people you spend time with can shape your habits, judgment, and faith. Give that choice real care.\n\nLook for trustworthiness and respect for Allah. Be thoughtful about whom you trust with your secrets and whose advice you follow. Good company can help you grow; careless company can make harmful behavior feel normal.",
     "prompt": "Who helps you remember Allah and make better choices?"
   },
@@ -612,6 +699,7 @@
     "id": 88,
     "theme": "gratitude",
     "title": "Thank Allah for blessings and watch your response to trials",
+    "takeaway": "Enjoy your blessings without forgetting who gave them.",
     "reading": "Keep thanking Allah for your blessings. Enjoying a gift should not make you forget the One who gave it. Blight means damage or something that spoils what was good.\n\nHow you act in difficulty matters as much as how you act in ease. Patience, gratitude, and character become clearer when things are hard. Work on those qualities before you need them in a trial.",
     "prompt": "How could you show gratitude through the way you use one blessing?"
   },
@@ -619,6 +707,7 @@
     "id": 89,
     "theme": "kindness",
     "title": "Let faith guide the reason for your actions",
+    "takeaway": "Let care for Allah, not habit or desire, decide what you do.",
     "reading": "Let care for Allah begin in your heart and shape your actions. Taqwa means being mindful of Him: obeying Him with hope in His reward and leaving wrongdoing out of fear of displeasing Him.\n\nLearn what is right and act on that knowledge. Do not let habit, desire, or the wish for praise become your main reason for doing good. Ihtisab means seeking reward from Allah. Keep His pleasure at the center of your intention.",
     "prompt": "What would change in an action if your aim were Allah’s pleasure rather than people’s praise?"
   },
@@ -626,6 +715,7 @@
     "id": 90,
     "theme": "kindness",
     "title": "Be sincere even when no one praises you",
+    "takeaway": "Do what’s right even when no one is clapping.",
     "reading": "Hold to the truth sincerely, even when it does not improve your standing with other people. Do not turn worship into a performance for their approval.\n\nFaith and guidance are compared with water for a fish: they are essential to the life of the heart. Care more about being truthful before Allah than appearing impressive before others. Let that purpose guide both your private choices and your public actions.",
     "prompt": "What good action would you still want to do if no one knew about it?"
   },
@@ -633,6 +723,7 @@
     "id": 91,
     "theme": "hope",
     "title": "Turn toward the One who welcomes you",
+    "takeaway": "Some doors close, but the door to Allah stays open.",
     "reading": "Turn toward Allah instead of spending all your energy seeking attention from powerful people. A ruler may shut the door to you, but the invitation to draw close to Allah is before you.\n\nThe comparison with a governor’s door shows the difference between chasing human approval and seeking your Lord. Do not overlook the relationship that matters most while waiting for someone important to notice you.",
     "prompt": "Whose approval are you chasing, and how could you turn more of that attention toward Allah?"
   },
@@ -640,6 +731,7 @@
     "id": 92,
     "theme": "trust",
     "title": "Be patient with Allah’s choice",
+    "takeaway": "A delay or a different answer can still be good for you.",
     "reading": "Trust Allah’s wisdom when an answer takes time or differs from your plan. Keep asking, remain patient, and work on leaving sins. You do not have to understand every delay before you can rely on Him.\n\nBeing given what you want is not the only way good can reach you. What is withheld may also hold good you cannot yet see. Keep your response sincere in both situations.",
     "prompt": "How could you keep doing good while waiting for something you hope for?"
   },
@@ -647,6 +739,7 @@
     "id": 93,
     "theme": "kindness",
     "title": "Look at what you are seeking",
+    "takeaway": "What you keep reaching for shapes who you become.",
     "reading": "Give your ambitions a worthy direction. Seek Allah’s pleasure instead of making worldly success your highest goal. What you keep reaching for shapes the person you become.\n\nTawhid means worshipping Allah alone. Fire, gold, and jewels are comparisons about what your deepest attachments do to you. Gold being purified pictures growth; a priceless jewel pictures the value of seeking Allah. Let your hopes reach beyond possessions and status.",
     "prompt": "What do your daily choices show that you are trying hardest to reach?"
   },
@@ -654,6 +747,7 @@
     "id": 94,
     "theme": "presence",
     "title": "Discover joy in remembering Allah",
+    "takeaway": "There is a joy in remembering Allah that money can’t buy.",
     "reading": "Make room for the joy of remembering Allah and feeling close to Him. There is a kind of richness in worship that power and wealth cannot simply buy.\n\nA heart dancing is a picture of great happiness. Rapturously means with intense joy. When something makes you sad, consider its true value instead of letting every loss carry the same weight. Keep space for the good that remains in your relationship with Allah.",
     "prompt": "What gives your heart joy in worship or remembrance?"
   },
@@ -661,6 +755,7 @@
     "id": 95,
     "theme": "hope",
     "title": "Keep worship steady and balanced",
+    "takeaway": "Keep your worship steady and balanced, not overwhelming.",
     "reading": "Keep doing good while relying on Allah’s mercy. Your deeds are not a reason to feel that you no longer need Him. Be steady, balanced, and hopeful in your worship.\n\nDo not make religion so hard on yourself that you become overwhelmed. Give worship a regular place in your day and night. Moderation means avoiding extremes. Build a way of worshipping that you can keep returning to.",
     "prompt": "What would make your worship more steady and balanced?"
   },
@@ -668,6 +763,7 @@
     "id": 96,
     "theme": "trust",
     "title": "Respond to difficulty with trust and patience",
+    "takeaway": "Ask yourself what losing patience would actually fix.",
     "reading": "Trust Allah and accept that you cannot undo what He has decreed. Meet difficulty with patience, and ask what losing patience would actually help you accomplish.\n\nForbearance means staying calm and restrained under pressure. Do not add to your own harm through the way you respond. Circumstances can change, sometimes more quickly than you expect. Keep room for that possibility while you face the present difficulty.",
     "prompt": "Which of these six reminders would help you respond better to a current difficulty?"
   },
@@ -675,6 +771,7 @@
     "id": 97,
     "theme": "kindness",
     "title": "Build a life through good actions",
+    "takeaway": "Measure your life by the good you do.",
     "reading": "Measure your life by the good you do. Knowledge, character, worship, and generosity matter more than appearances. Put determination and effort behind what you hope to achieve.\n\nYour choices become part of the life you leave behind. Prepare for what matters, act sincerely, and remember how quickly time passes. Do not use up more of it in unnecessary quarrels, wrongdoing, or worries that prevent you from doing good.",
     "prompt": "What action would you like to become part of the story your life leaves behind?"
   },
@@ -682,6 +779,7 @@
     "id": 98,
     "theme": "trust",
     "title": "Keep your deepest reliance on Allah",
+    "takeaway": "Don’t give anything else the place in your heart that belongs to Allah.",
     "reading": "Place your deepest hope and trust in Allah. Do not give a person, possession, or false god the place that belongs to Him. What seems powerful now may be unable to help when you most need it.\n\nShaytan can make a wrong path look right. Keep checking where you are placing your trust and what is guiding your choices. Stay close to Allah’s guidance instead of assuming that feeling certain always means you are going the right way.",
     "prompt": "What do you rely on most when you feel afraid or uncertain?"
   },
@@ -689,6 +787,7 @@
     "id": 99,
     "theme": "presence",
     "title": "Stay close to the Quran and follow the truth",
+    "takeaway": "Stay close to the Qur’an, and follow the truth when you see it.",
     "reading": "Spend time with the Quran and with people who help you listen to it. Make room for it in your life and encourage the people you care about to do the same.\n\nBe willing to follow the truth when you recognize it. Evidence cannot help you if you keep rejecting it because it goes against what you want. Let loyalty to Allah’s guidance be stronger than loyalty to your own preferences.",
     "prompt": "Where do you need to be more willing to accept correction or evidence?"
   },
@@ -696,6 +795,7 @@
     "id": 100,
     "theme": "return",
     "title": "Examine your actions without losing hope",
+    "takeaway": "Look at your actions honestly, without losing hope.",
     "reading": "Examine your actions before you are called to account for them. Notice what needs changing and begin doing good now. Preparing for the Day of Judgment starts with the choices you make today.\n\nFaith does not erase sadness or make you only the sum of your past mistakes. Yaqub grieved for Yusuf, Musa’s life continued beyond a grave mistake, and Maryam’s honor before Allah was not removed by people’s insults. Think about these lives when you judge your own.",
     "prompt": "What action needs honest review, and what example here helps you keep hope?"
   },
@@ -703,6 +803,7 @@
     "id": 101,
     "theme": "return",
     "title": "Ask yourself what you meant",
+    "takeaway": "Ask yourself what you really meant.",
     "reading": "Question your own intentions. Think about why you spoke, why you acted, and what you were seeking. Do not go through life assuming that your own choices never need correction.\n\nA self-reproaching soul is one that notices its wrongs and calls itself to account. Take responsibility while remembering that Allah can raise you after death. Use honest self-examination to change your actions, not simply to repeat blame without doing anything.",
     "prompt": "What did you mean by something you said or did today?"
   },
@@ -710,6 +811,7 @@
     "id": 102,
     "theme": "hope",
     "title": "Keep hope alive when you make dua",
+    "takeaway": "Keep asking for healing, even when you can’t control the answer.",
     "reading": "Keep making dua and ask Allah for healing. Do not lose your willingness to pray because you cannot control the answer. Being guided to ask Him is itself a reason for hope.\n\nA painful trial may hold good that you cannot yet see. Trust Allah’s care while you face it, and keep turning to Him with your needs. You do not have to see the whole way forward before you can ask for help.",
     "prompt": "What would you like to ask Allah for during the trial you are facing?"
   },
@@ -717,6 +819,7 @@
     "id": 103,
     "theme": "hope",
     "title": "Bring your sadness to Allah with hope",
+    "takeaway": "Your tears don’t make you a failed believer.",
     "reading": "Your pain and sadness are real. Having faith does not mean you must never cry. The prophets grieved too. Bring your sorrow to Allah with hope, rather than believing that your feelings make you a failed believer.\n\nTadarru means turning to Allah with humility and a deep awareness of your need. Healing may take time, just as a child falls while learning to walk. Keep making dua without deciding that Allah’s help is limited to what seems possible to you. His mercy is greater than the limits you can see.",
     "prompt": "What could you bring honestly to Allah without hiding your sadness or giving up hope?"
   },
@@ -724,6 +827,7 @@
     "id": 104,
     "theme": "gratitude",
     "title": "Remember that possessions do not last",
+    "takeaway": "Enjoy beautiful things, but don’t make them your whole purpose.",
     "reading": "Hold possessions with the knowledge that you cannot keep them forever. The things around you, and your own life in this world, will pass. Give your greatest attention to what matters to Allah.\n\nBeautiful things can be enjoyed without becoming your whole purpose. They are also part of the test of how you live. Do good with what you have, instead of treating every loss of a possession as the loss of everything.",
     "prompt": "What possession could you hold less tightly while still using it well?"
   },
@@ -731,6 +835,7 @@
     "id": 105,
     "theme": "gratitude",
     "title": "Stay kind through changing days",
+    "takeaway": "Neither sadness nor comfort lasts forever. Stay kind through both.",
     "reading": "Stay steady through changing days. Meet difficulty with strength, kindness, and honesty. Neither sadness nor comfort lasts forever, and rushing cannot force every result to arrive sooner.\n\nMiserly means unwilling to give. Calamities are serious troubles. Decree means what Allah has decided. Keep these meanings in mind as you read the poem. A content heart can bring richness even when you own little, and remembering death helps you keep passing things in their proper place.",
     "prompt": "What kind of person do you want to remain when the day does not go your way?"
   },
@@ -738,6 +843,7 @@
     "id": 106,
     "theme": "kindness",
     "title": "Take responsibility and seek Allah’s pleasure",
+    "takeaway": "Take the steps that are yours to take, and stop letting every opinion decide your worth.",
     "reading": "Look after yourself and take responsibility for the steps you can take. People who love you cannot live your struggle in your place. Do not give every hurtful opinion the power to decide your worth.\n\nMake pleasing Allah your main concern. Bring your worries to Him through prayer and sincere dua. Keep doing good even when people do not return it, and remember the value of easing someone’s pain or bringing them joy. Sajda means prostration in prayer.",
     "prompt": "What good could you do for Allah’s sake without waiting for someone to repay it?"
   },
@@ -745,6 +851,7 @@
     "id": 107,
     "theme": "trust",
     "title": "Care about your response to a test",
+    "takeaway": "A hard test is not proof that you are unloved.",
     "reading": "Meet trials with patient trust in Allah. A hard test is not proof that you are unloved. Great difficulty can be accompanied by great reward.\n\nSeek to be content with Allah’s decree: what He has decided. Keep your response rooted in faith instead of allowing the trial to become a reason for anger against Him. Turn toward Him for help while you face it.",
     "prompt": "What would a more patient response to your present test look like?"
   },
@@ -752,6 +859,7 @@
     "id": 108,
     "theme": "presence",
     "title": "Ten ways to seek Allah’s love",
+    "takeaway": "Love for Allah grows through small, everyday actions.",
     "reading": "Give love for Allah a place in your daily actions. Read the Quran with understanding, fulfill your duties, and add voluntary worship. Voluntary deeds are extra good actions beyond what is required.\n\nRemember Allah, choose what He loves over harmful desires, and reflect on His names and gifts. Make room for a soft heart, private worship, repentance, and sincere company. Leave what puts barriers between your heart and Him. Begin practicing these habits one step at a time.",
     "prompt": "Which practice needs more attention in your life, and what would that involve?"
   },
@@ -759,6 +867,7 @@
     "id": 109,
     "theme": "hope",
     "title": "Do not let a loss fill your whole life",
+    "takeaway": "Don’t let what you lost take the life still in front of you.",
     "reading": "Do not let what you have lost take away every chance to live the time still before you. The loss cannot be undone by replaying it. Turn toward useful activity, what remains, and any good Allah brings in its place.\n\nGrief can be real without becoming your only focus. Hawa means the ego’s desires or pulls. When your thoughts keep returning to what you cannot recover, gently work toward what may ease the burden now. Keep hope in relief and in reward for patience.",
     "prompt": "What useful activity could help you turn some attention away from a loss today?"
   },
@@ -766,6 +875,7 @@
     "id": 110,
     "theme": "trust",
     "title": "Understand grief, worry, and attachment",
+    "takeaway": "Let regret and worry move you to action, not hold you still.",
     "reading": "Give your attention to what you can still change. Regret for a sin can lead you to repent, and concern about a good deed can lead you to do it. Let those feelings move you toward useful action.\n\nGhamm means grief about what has happened; hamm means worry about what may happen. People and possessions do not stay with us forever. Keep love balanced with that awareness. When loss comes, remember what remains as well as what has gone, and give yourself time to find some ease.",
     "prompt": "Are you focused on a past loss or a feared future one, and what still remains for you to care for?"
   },
@@ -773,6 +883,7 @@
     "id": 111,
     "theme": "return",
     "title": "Resist desires that lead to disobedience",
+    "takeaway": "What tempts you now can weigh on your heart later.",
     "reading": "Resist desires that lead you away from Allah. What feels attractive in the moment can leave your heart burdened afterward. Strength grows through choosing obedience even when your wishes pull another way.\n\nWhims are passing urges or desires. Riding a fine mount is a picture of outward wealth and status; those things cannot remove the effects of wrongdoing. Seek honor through faith and your actions, instead of relying on how impressive your life looks.",
     "prompt": "What desire could you resist in order to obey Allah more faithfully?"
   }

@@ -10,11 +10,12 @@ const directory = await mkdtemp(join(tmpdir(), 'timeless-seeds-check-'));
 try {
   await build({ entryPoints: ['src/seeds/content.ts', 'src/seeds/state.ts'], outdir: directory, bundle: true, platform: 'node', format: 'esm', outExtension: { '.js': '.mjs' } });
   const { seeds, themes, sourceEntries, sourceNotes, sourcePlainText } = await import(pathToFileURL(join(directory, 'content.mjs')));
-  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, resumeFor, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
+  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, resumeFor, followUpFor, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
   assert.deepEqual(seeds.map(s => s.id), Array.from({ length: 111 }, (_, i) => i + 1));
   assert.equal(new Set(seeds.map(s => s.title)).size, 111, 'Every entry needs a distinct title.');
   for (const seed of seeds) {
     assert(seed.title && seed.reading.length > 140 && seed.prompt.endsWith('?'), `Incomplete entry ${seed.id}`);
+    assert(seed.takeaway && seed.takeaway.length <= 100, `Every seed needs a short takeaway line: ${seed.id}`);
     assert(seed.page >= 7 && seed.page <= seed.lastPage && seed.lastPage <= 135, `Invalid source range ${seed.id}`);
     assert(themes.some(t => t.id === seed.theme), `Unknown theme ${seed.id}`);
     assert.equal(seed.credit.id, seed.id, `Source credit mismatch ${seed.id}`);
@@ -110,6 +111,16 @@ try {
   assert.deepEqual(recovered.notes, { 1: 'A note' });
   assert.equal(recovered.last, null);
   assert.equal(recovered.large, false);
+  const dated = validateGarden({ intentions: { 12: 'Visit', 30: 'Give' }, planned: { 12: '2026-09-29', 30: 'soon', 999: '2026-09-29' }, followUps: { 12: 'done', 30: 'maybe' } });
+  assert.deepEqual(dated.planned, { 12: '2026-09-29' });
+  assert.deepEqual(dated.followUps, { 12: 'done' });
+  // Ask about a small action on a later day, most recent first, never twice.
+  const planner = { ...emptyGarden(), intentions: { 12: 'Visit my aunt', 30: 'Give something', 40: 'Thank someone', 50: '  ' }, planned: { 12: '2026-09-29', 30: '2026-09-30', 40: '2026-10-01', 50: '2026-09-30' } };
+  const oct1 = new Date(2026, 9, 1, 9);
+  assert.deepEqual(followUpFor(planner, oct1), { id: 30, daysAgo: 1 });
+  assert.deepEqual(followUpFor({ ...planner, followUps: { 30: 'later' } }, oct1), { id: 12, daysAgo: 2 });
+  assert.equal(followUpFor({ ...planner, followUps: { 30: 'done', 12: 'done' } }, oct1), null);
+  assert.equal(followUpFor(planner, new Date(2026, 9, 20)), null, 'Old plans are not asked about.');
   for (let day = 1; day < 365; day++) {
     const am = new Date(2026, 0, day, 1);
     const pm = new Date(2026, 0, day, 23);
