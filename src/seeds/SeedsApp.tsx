@@ -64,6 +64,7 @@ function Reader({ seed, garden, savedGarden, setGarden, path, initialPart, stora
   const pathTheme = path ? getTheme(path) : undefined;
   const sequence = pathTheme?.route.includes(seed.id) ? pathTheme.route : seeds.map(s => s.id);
   const index = sequence.indexOf(seed.id);
+  const nextId = index < sequence.length - 1 ? sequence[index + 1] : null;
   const isSaved = garden.saved.includes(seed.id);
   const isRead = garden.read.includes(seed.id);
   const labId = `practice-${seed.id}`;
@@ -72,8 +73,44 @@ function Reader({ seed, garden, savedGarden, setGarden, path, initialPart, stora
     requestAnimationFrame(() => scrollToReadingPart(id));
   };
   const save = () => { setGarden(old => ({ ...old, saved: toggle(old.saved, seed.id) })); setStatus(isSaved ? 'Removed from your saved seeds.' : 'Saved to your garden.'); };
-  const setNote = (value: string) => setGarden(old => ({ ...old, notes: { ...old.notes, [seed.id]: value } }));
-  const setIntention = (value: string) => setGarden(old => ({ ...old, intentions: { ...old.intentions, [seed.id]: value } }));
+  // Reaching the end of a seed, or keeping a reflection, counts as reading it.
+  // "Mark unread" stops this for the rest of the visit so it doesn't undo the reader's choice.
+  const completion = useRef<HTMLDivElement>(null);
+  const keptUnread = useRef(false);
+  const readNow = useRef(isRead);
+  readNow.current = isRead;
+  const markRead = (old: Garden) => keptUnread.current || old.read.includes(seed.id) ? old : { ...old, read: [...old.read, seed.id] };
+  const setNote = (value: string) => setGarden(old => { const next = { ...old, notes: { ...old.notes, [seed.id]: value } }; return value.trim() ? markRead(next) : next; });
+  const setIntention = (value: string) => setGarden(old => { const next = { ...old, intentions: { ...old.intentions, [seed.id]: value } }; return value.trim() ? markRead(next) : next; });
+  const markUnread = () => { keptUnread.current = true; setGarden(old => ({ ...old, read: old.read.filter(id => id !== seed.id) })); setStatus('Marked unread.'); };
+  useEffect(() => {
+    const end = completion.current;
+    if (!end || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || keptUnread.current || window.scrollY < 1 || readNow.current) return;
+      setGarden(markRead);
+      setStatus('Marked as read.');
+    }, { threshold: 0.6 });
+    observer.observe(end);
+    return () => observer.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seed.id, setGarden]);
+  // Let the room drift a little as the reader moves down the page.
+  useEffect(() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const root = document.documentElement;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const room = root.scrollHeight - window.innerHeight;
+      root.style.setProperty('--reading-progress', room > 0 ? Math.min(1, window.scrollY / room).toFixed(3) : '0');
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); root.style.removeProperty('--reading-progress'); };
+  }, [seed.id]);
   useEffect(() => {
     if (!initialPart) return;
     const target = initialPart === 'journal' ? 'seed-writing' : initialPart === 'illustration' ? seedIllustrations[seed.id] ? 'seed-illustration' : 'seed-explanation' : labId;
@@ -101,8 +138,12 @@ function Reader({ seed, garden, savedGarden, setGarden, path, initialPart, stora
         <Journal seed={seed} garden={garden} savedGarden={savedGarden} storageError={storageError} onNote={setNote} onIntention={setIntention}/>
         <details className="reader-disclosure reader-activity" id={labId}><summary><Sparkle size={18}/><span>Try a reflection activity <small>Optional · Added for this app</small></span><CaretDown size={17}/></summary><div className="reader-activity-body"><PracticeLab theme={seed.theme} seedId={seed.id}/></div></details>
       </div>
-      <div className="reader-completion"><p>You can stop here. Take what helps into your day.</p><div><button className={`seed-read-button ${isRead ? 'is-read' : ''}`} aria-pressed={isRead} onClick={() => { setGarden(old => ({ ...old, read: toggle(old.read, seed.id) })); setStatus(isRead ? 'Marked unread.' : 'Reading marked complete.'); }}>{isRead ? <CheckCircle size={20} weight="fill"/> : <CheckCircle size={20}/>} {isRead ? 'Marked as read' : 'Mark as read'}</button><a className="seed-text-link" href="#today">Back home <ArrowRight size={16}/></a></div><span className="seed-sr-only" role="status">{status}</span></div>
-      <nav className="reader-pagination" aria-label="Reading navigation">{index > 0 ? <a href={seedUrl(sequence[index - 1], path)}><ArrowLeft size={18}/><span><small>Previous seed</small>{seeds[sequence[index - 1] - 1].title}</span></a> : <span/>}{index < sequence.length - 1 ? <a href={seedUrl(sequence[index + 1], path)}><span><small>Next seed</small>{seeds[sequence[index + 1] - 1].title}</span><ArrowRight size={18}/></a> : <a href={path ? '#explore' : '#garden'}><span><small>{path ? 'You’ve reached the end of this path' : 'You’ve reached the final seed'}</small>{path ? 'Explore another path' : 'Return to your garden'}</span><ArrowRight size={18}/></a>}</nav>
+      <div className="reader-completion" ref={completion}><p>You can stop here. Take what helps into your day.</p>
+        {nextId ? <a className="reader-next" href={seedUrl(nextId, path)}><span><small>{pathTheme ? `Next on this path · ${index + 2} of ${sequence.length}` : `Next seed · ${nextId} of ${seeds.length}`}</small>{seeds[nextId - 1].title}</span><ArrowRight size={20}/></a>
+          : <a className="reader-next" href={path ? '#explore' : '#garden'}><span><small>{path ? 'You’ve finished this path' : 'You’ve reached the final seed'}</small>{path ? 'Choose another path' : 'Return to your garden'}</span><ArrowRight size={20}/></a>}
+        <div className="reader-completion-meta"><span className={`reader-read-state${isRead ? ' is-read' : ''}`}>{isRead ? <><CheckCircle size={17} weight="fill"/>Marked as read</> : <><CheckCircle size={17}/>Marked as read when you reach this point</>}</span>{isRead && <button className="reader-unmark" onClick={markUnread}>Mark unread</button>}<a className="seed-text-link" href="#today">Back home <ArrowRight size={16}/></a></div>
+        <span className="seed-sr-only" role="status">{status}</span></div>
+      {index > 0 && <nav className="reader-pagination" aria-label="Previous reading"><a href={seedUrl(sequence[index - 1], path)}><ArrowLeft size={18}/><span><small>Previous seed</small>{seeds[sequence[index - 1] - 1].title}</span></a><span/></nav>}
     </article></div>
     <nav className="reader-thumbbar" aria-label="Quick reading controls">
       <img className="reader-book-surface" src={assetUrl(`assets/timeless-seeds/open-book-edge${appearance === 'starlight' ? '-starlight' : ''}.svg`)} alt="" aria-hidden="true"/>

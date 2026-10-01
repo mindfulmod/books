@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { ArrowsOutSimple, X } from '@phosphor-icons/react';
 import { assetUrl } from '../assetUrl';
 import { useAppearance } from './Appearance';
@@ -13,12 +13,22 @@ export const themeScene: Record<ThemeId, Scene> = {
 };
 
 
+// Paintings fade in over a painted placeholder instead of appearing as an empty box.
+// A failed load also counts as done so the frame never stays hidden.
+function useLoaded() {
+  const [loaded, setLoaded] = useState(false);
+  const ref = useCallback((img: HTMLImageElement | null) => { if (img?.complete && img.naturalWidth) setLoaded(true); }, []);
+  const done = () => setLoaded(true);
+  return { ref, 'data-loaded': loaded || undefined, onLoad: done, onError: done };
+}
+
 export function SceneImage({ scene, alt = '', nightAlt, sizes = '(max-width: 760px) 100vw, 50vw', eager = false, priority = false }: {
   scene: Scene; alt?: string; nightAlt?: string; sizes?: string; eager?: boolean; priority?: boolean;
 }) {
   const { appearance } = useAppearance();
   const source = (scene: Scene, width: number) => assetUrl(scenePath(scene, width, appearance));
-  return <img data-coastal-scene={scene} className="coastal-scene" src={source(scene, 960)}
+  const loading = useLoaded();
+  return <img {...loading} data-coastal-scene={scene} className="coastal-scene" src={source(scene, 960)}
     srcSet={[480, 960, 1440].map(width => `${source(scene, width)} ${width}w`).join(', ')}
     sizes={sizes} width={1440} height={scene === 'island-sky' ? 480 : 960}
     alt={appearance === 'starlight' && nightAlt ? nightAlt : alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={priority ? 'high' : 'auto'}/>;
@@ -27,7 +37,8 @@ export function SceneImage({ scene, alt = '', nightAlt, sizes = '(max-width: 760
 function IllustrationImage({ frame, enlarged = false, eager = false }: { frame: IllustrationFrame; enlarged?: boolean; eager?: boolean }) {
   const { appearance } = useAppearance();
   const prefix = appearance === 'starlight' ? frame.starlight : frame.day;
-  return <img className="coastal-scene" data-seed-art-day={frame.day} data-seed-art-starlight={frame.starlight}
+  const loading = useLoaded();
+  return <img {...loading} className="coastal-scene" data-seed-art-day={frame.day} data-seed-art-starlight={frame.starlight}
     src={assetUrl(illustrationPath(prefix, 960))}
     srcSet={[480, 960, 1440].map(width => `${assetUrl(illustrationPath(prefix, width))} ${width}w`).join(', ')}
     sizes={enlarged ? '(max-width: 960px) 95vw, 1000px' : '(max-width: 760px) 85vw, 640px'}

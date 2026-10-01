@@ -1,0 +1,78 @@
+/* The end of a seed points somewhere: the next reading leads, home stays secondary. */
+.reader-next {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 72px; padding: 14px 20px; margin: 0 0 14px;
+  border: 1px solid var(--seed-rule); border-radius: 6px 20px 6px 6px;
+  background: var(--soft); color: var(--seed-ink);
+  font: 25px/1.15 var(--seed-serif); font-weight: 400;
+  transition: border-color .16s, transform .16s;
+}
+.reader-next small { display: block; margin-bottom: 5px; font: 12px/1.5 'DM Sans', sans-serif; color: var(--seed-muted); }
+.reader-next>svg { flex-shrink: 0; color: var(--tone); }
+.reader-next:hover { border-color: var(--tone); }
+.reader-next:active { transform: translateY(1px); }
+.reader-completion-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; font-size: 12px; color: var(--seed-muted); }
+.reader-read-state { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; }
+.reader-read-state.is-read { color: var(--seed-green); }
+.reader-unmark { min-height: 44px; padding: 0; background: none; border: 0; color: var(--seed-muted); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.reader-completion-meta .seed-text-link { margin-left: auto; font-size: 12px; min-height: 44px; }
+.seeds-app .reader-pagination { margin-top: 26px; }
+
+/* The room fills every side of the page and drifts slightly as you read. */
+.seed-atmosphere img {
+  height: 100%;
+  mask-image: linear-gradient(#000 0%, #000 82%, transparent 100%);
+  transform: translate3d(calc(var(--reading-progress, 0) * -3%), calc(var(--reading-progress, 0) * -3%), 0) scale(1.08);
+  transform-origin: 30% 30%;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .seed-atmosphere img { transform: none; will-change: auto; }
+}
+
+/* The reading sheet is the top page of an open book: a few page edges show
+   at the right and bottom, and a soft shadow marks the binding. */
+:root .seeds-app .reader-article {
+  --page-1: #f7eedd; --page-2: #efe2ca; --page-edge: #dbc8aa; --binding: #7a5a3a1c;
+  box-shadow:
+    inset 9px 0 12px -10px var(--binding),
+    3px 4px 0 -1px var(--page-1), 3px 4px 0 0 var(--page-edge),
+    6px 8px 0 -2px var(--page-2), 6px 8px 0 -1px var(--page-edge),
+    var(--coastal-shadow);
+}
+html[data-seed-appearance="starlight"] .seeds-app .reader-article {
+  --page-1: #323952; --page-2: #383e58; --page-edge: #4d4f69; --binding: #0b10202e;
+}
+@media (max-width: 760px) {
+  .seeds-app .seed-reader { margin-inline: 13px 17px; }
+  :root .seeds-app .reader-article {
+    box-shadow:
+      inset 7px 0 10px -8px var(--binding),
+      2px 3px 0 -1px var(--page-1), 2px 3px 0 0 var(--page-edge),
+      4px 6px 0 -2px var(--page-2), 4px 6px 0 -1px var(--page-edge),
+      var(--coastal-shadow);
+  }
+  .reader-next { font-size: 22px; padding-inline: 16px; }
+  .reader-completion-meta .seed-text-link { margin-left: 0; }
+}
+
+/* Paintings fade in over a quiet painted placeholder rather than an empty box. */
+img.coastal-scene { transition: opacity .45s ease; }
+img.coastal-scene:not([data-loaded]) { opacity: 0; }
+.seed-illustration-open,.seed-hero-art { background: linear-gradient(160deg, #eadbbd, #f3d9cf 55%, #cfe1d8); }
+html[data-seed-appearance="starlight"] .seed-illustration-open,
+html[data-seed-appearance="starlight"] .seed-hero-art { background: linear-gradient(160deg, #34416a, #554766 55%, #2f4a5c); }
+@media (prefers-reduced-motion: reduce) {
+  img.coastal-scene { transition: none; }
+}
+
+/* Nothing a reader needs is smaller than 12px. */
+.seeds-app.is-reading .seed-explanation>.reader-section-label,
+.seeds-app.is-reading .seed-illustration-leading figcaption .reader-section-label,
+.reader-disclosure>summary small,
+.seeds-app .reader-credit-links button,
+.reader-path-progress { font-size: 12px; }
+@media (max-width: 760px) {
+  .seeds-app .seed-hero-copy>.seed-eyebrow { font-size: 12px; letter-spacing: .04em; }
+  .seed-first-steps li { font-size: 12px; }
+}
