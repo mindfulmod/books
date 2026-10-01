@@ -1,0 +1,11 @@
+{
+  "seed": 105,
+  "key": "seed-105",
+  "kind": "day",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-a23f8e1d-a3e3-4bed-bd8b-5952a454f823.png",
+  "prompt": "Use case: illustration-story. A finished 3:2 landscape seed illustration for Timeless Seeds of Advice, composed for a 320–390px phone. The supplied coastal painting is a STYLE REFERENCE ONLY, not a layout to copy. Match its warm opaque gouache, tactile brushwork, pigment and paper texture, dimensional natural forms, soft warm shadows, airy Hawaiian pink clouds, Thai-island turquoise and living greens. Cozy modest home or ordinary garden, never a luxury resort. Large clear focal subject with generous margins and quiet background. Keep the specified subject more prominent than scenery. No text, letters, numbers, calligraphy, fake Arabic, labels, arrows, frames, logos or watermarks. No people, human body parts, faces, portraits, divine figures, prophets, angels, supernatural light or imagined Hereafter. Ordinary sunlight is not a divine presence. No flat vectors, glossy 3D, photorealism, muddy grading or ominous darkness. One coherent scene, not a collage.\nSubject: A covered simple meal ready to share on a modest table, beside a window where a light rain shower is clearing over the garden. One unified scene, no time sequence or collage.\nMeaning constraints: No suggestion that contentment removes grief or practical need.\nLighting: luminous gentle daylight, unless sunset or another time is explicitly specified. Soft middle tones rather than blinding white.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-105.png",
+  "review": "approved",
+  "alt": "A simple meal and plates wait to be shared beside a window where light rain falls over the bright garden.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}

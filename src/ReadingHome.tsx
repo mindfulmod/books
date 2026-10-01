@@ -2,6 +2,7 @@ import { ThemeButton, type ReadingTheme } from './ReadingTheme';
 import { useRef, useState } from 'react';
 import { ReadingOrientation } from './ReadingOrientation';
 import { companionBooks } from './bookshelf';
+import { assetUrl } from './assetUrl';
 import type { Depth } from './systemTypes';
 import { ArrowRight, MagnifyingGlass } from '@phosphor-icons/react';
 import { quarters } from './data';
@@ -37,7 +38,7 @@ export function ReadingHome({ books, resume, onResume, onSelect, onSearch, theme
         <h2 id="bookshelf-title">On the shelf</h2>
         <div className="shelf-titles">
           <a className="shelf-book" href="#home-library-title"><span className="shelf-cover shelf-cover-ihya" aria-hidden="true"><small>Al-Ghazali</small><strong>Ihya</strong><span>Forty books<br/>Four quarters</span></span><span className="shelf-book-info"><small>Collection · 40 books</small><h3>The Revival of the Religious Sciences</h3><p>Al-Ghazali</p><span>Explore worship, daily life, and the cultivation of the heart.</span><em>Browse the collection →</em></span></a>
-          {companionBooks.map(item=><a key={item.id} className="shelf-book" href={`${import.meta.env.BASE_URL}${item.path}`}><span className="shelf-cover shelf-cover-companion" aria-hidden="true"><small>{item.author}</small><strong>{item.coverLabel}</strong><span>Inner dimensions</span></span><span className="shelf-book-info"><small>Standalone companion</small><h3>{item.title}</h3><p>{item.author}</p><span>{item.description}</span><em>Open the book →</em></span></a>)}
+          {companionBooks.map(item=><a key={item.id} className="shelf-book" href={`${import.meta.env.BASE_URL}${item.path}`}><span className={`shelf-cover shelf-cover-${item.coverStyle}`} aria-hidden="true">{item.coverImage && <img className="shelf-cover-art" src={assetUrl(theme === 'dark' && item.coverNightImage ? item.coverNightImage : item.coverImage)} alt="" width={480} height={320} loading="lazy"/>}<small>{item.author}</small><strong>{item.coverLabel}</strong><span>{item.coverSubtitle}</span></span><span className="shelf-book-info"><small>Standalone companion</small><h3>{item.title}</h3><p>{item.author}</p><span>{item.description}</span><em>Open the book →</em></span></a>)}
         </div>
       </section>
       <section className="home-start" aria-labelledby="start-title">

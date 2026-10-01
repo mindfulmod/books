@@ -1,0 +1,109 @@
+{
+  "date": "2026-09-27",
+  "mode": "built-in image_gen; no image-model override claimed",
+  "backgroundDecision": "User selected the current fade; unchanged.",
+  "batch": "First production/calibration batch: four new seeds, eight images. Existing seeds 48 and 69 retained.",
+  "darkModePolicy": "Three matched Day/Starlight lighting edits. Seed 46 retains dawn and evening in both modes: those times are part of the source lesson. No CSS darkening filter.",
+  "designRevision": "Seed 108 uses one uncluttered reading and prayer room rather than a tiny ten-object grid. All ten source practices stay in HTML.",
+  "images": [
+    {
+      "key": "seed-001",
+      "seed": 1,
+      "title": "Ask Allah for protection",
+      "prompt": "Use case: illustration-story. Asset: seed 1 visual reminder. Warm editorial gouache in the approved Timeless Seeds style: opaque tactile brushwork, visible pigment and paper texture, dimensional natural forms and warm soft shadows, living greens, sun-warmed cream and peach surfaces, turquoise water and airy Hawaiian pink clouds. Cozy, breezy, calm ordinary coastal life. Use the supplied coastal painting strictly as a STYLE reference; create the new composition specified. Main subject much larger than decorative background. One finished landscape 3:2 illustration, no border, legible at a 320px phone width. No text, letters, numbers, calligraphy, fake Arabic, logos, watermark, people, hands, faces, divine figures or symbols, prophets, angels, supernatural light, or imagined Hereafter. No glossy 3D, flat vector, luxury resort, ominous darkness or muddy colors.\nSubject: a rustic wooden garden gate in an ordinary coastal shepherd's garden, with a shepherd's curved wooden crook leaning beside the near gatepost and one alert sandy-brown dog standing on the far side of the latched gate. The dog is clearly visible through the spacious wooden rails, has natural anatomy and looks watchful rather than frightening. No shepherd appears. Main gate, dog and crook are large and centered, entirely readable with 10% crop margins. A little climbing pink bougainvillea, a calm turquoise bay glimpsed far behind, pale pink clouds in a bright blue sky. The crook and dog are ordinary objects from a story comparison, not representations of Allah or Satan. Do not add sheep, people or extra props. Warm gentle daylight.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-1df14f34-6600-4a05-826d-43129e199227.png",
+      "master": "seed-001.png",
+      "references": [
+        "artwork/timeless-seeds/coastal/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-027",
+      "seed": 27,
+      "title": "Give your heart what it needs",
+      "prompt": "Use case: illustration-story. Asset: seed 27 visual reminder. Warm editorial gouache in the approved Timeless Seeds style: opaque tactile brushwork, visible pigment and paper texture, dimensional natural forms and warm soft shadows, living greens, sun-warmed cream and peach surfaces, turquoise water and airy Hawaiian pink clouds. Cozy, breezy, calm ordinary coastal life. Use the supplied coastal painting strictly as a STYLE reference; create the new composition specified. Main subject much larger than decorative background. One finished landscape 3:2 illustration, no border, legible at a 320px phone width. No text, letters, numbers, calligraphy, fake Arabic, logos, watermark, people, hands, faces, divine figures or symbols, prophets, angels, supernatural light, or imagined Hereafter. No glossy 3D, flat vector, luxury resort, ominous darkness or muddy colors.\nSubject: one healthy small golden-orange freshwater fish swimming freely in a spacious clear turquoise garden pond. Close three-quarter view through the water, fish large and natural in the central foreground, gently curving tail and normal fins. The surrounding water is unmistakable, with a few broad lily leaves toward the sides, soft ripples and smooth pond stones. A narrow stone rim and soft garden foliage at the distant upper edge; a hint of pink sky reflected near that edge, never covering the fish. Show the fish completely underwater with ample open water around it; no bowl, container, fish outside water or suffering. Simple luminous daylight; the water and fish are the entire visual lesson. Avoid elaborate scenery, dense reeds or many tiny fish.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-b0b4f576-a615-4fc4-8cde-486c37b29bee.png",
+      "master": "seed-027.png",
+      "references": [
+        "artwork/timeless-seeds/coastal/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-046-morning",
+      "seed": 46,
+      "title": "Go out in the morning",
+      "prompt": "Use case: illustration-story. Asset: first of two separate visual reminders for seed 46. Warm editorial gouache in the approved Timeless Seeds style: opaque tactile brushwork, visible pigment and paper texture, dimensional natural forms and warm soft shadows, living greens, sun-warmed cream and peach surfaces, turquoise water and airy Hawaiian pink clouds. Cozy, breezy, calm ordinary coastal life. Use the supplied coastal painting strictly as a STYLE reference; create the new composition specified. Main subject much larger than decorative background. One finished landscape 3:2 illustration, no border, legible at a 320px phone width. No text, letters, numbers, calligraphy, fake Arabic, logos, watermark, people, hands, faces, divine figures or symbols, prophets, angels, supernatural light, or imagined Hereafter. No glossy 3D, flat vector, luxury resort, ominous darkness or muddy colors.\nSubject: two small ordinary sandy-brown songbirds leave their modest empty woven nest on a sturdy branch and fly out across an open coastal garden at early dawn. Nest and branch in the left third, two birds in different natural stages of flight heading toward the right in the spacious central sky, birds large and recognizable. No chicks. Pale rose and peach horizon, gentle periwinkle-blue above, low warm morning light. A simple leafy garden below with a small open patch of seed-bearing grasses, a quiet turquoise bay in the distance. Calm purposeful flight, everyday wildlife, no magic. Morning is essential to the lesson; retain clear dawn cues. Soft pastel middle tones, not a blazing white field, so this same image can be comfortable in Day and Starlight interfaces. One scene only, NOT a diptych or collage. Reserve the nest and bird positions clearly for a later matched evening companion.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-8ad8de22-c596-430c-9550-d87fa250cf4f.png",
+      "master": "seed-046-morning.png",
+      "references": [
+        "artwork/timeless-seeds/coastal/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-108",
+      "seed": 108,
+      "title": "Ten ways to seek Allah’s love",
+      "prompt": "Use case: illustration-story. Asset: seed 108 visual reminder. Warm editorial gouache in the approved Timeless Seeds style: opaque tactile brushwork, visible pigment and paper texture, dimensional natural forms and warm soft shadows, living greens, sun-warmed cream and peach surfaces, turquoise water and airy Hawaiian pink clouds. Cozy, breezy, calm ordinary coastal life. Use the supplied coastal painting strictly as a STYLE reference; create the new composition specified. Main subject much larger than decorative background. One finished landscape 3:2 illustration, no border, legible at a 320px phone width. No text, letters, numbers, calligraphy, fake Arabic, logos, watermark, people, hands, faces, divine figures or symbols, prophets, angels, supernatural light, or imagined Hereafter. No glossy 3D, flat vector, luxury resort, ominous darkness or muddy colors.\nSubject: a simple serene reading-and-prayer corner of a modest coastal home. A large closed plain clothbound book with no lettering rests on an open low wooden book stand in the foreground beside a softly folded sea-green prayer mat. A small unlit simple ceramic table lamp stands on a low side shelf. An open window with a gentle cream linen curtain shows a little turquoise sea and pink clouds. These few objects form one uncluttered still life: book and mat are dominant, with warm timber, peach plaster, paper and linen textures. No writing or marks on the book. Not a diagram, no ten-object grid, no numbered symbolism. This is an ordinary present-day space to put learning and worship into daily life, not a depiction of divine attributes, anyone named in the source or the unseen. Soft warm daytime light; keep the exact room geometry suitable for a matching nighttime lighting edit.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-e7cacff0-1a2a-409c-b2f1-eaa3c475b2c2.png",
+      "master": "seed-108.png",
+      "references": [
+        "artwork/timeless-seeds/coastal/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-001-starlight",
+      "seed": 1,
+      "input": "seed-001",
+      "prompt": "Use case: lighting-weather. Input 1 is the finished Day illustration and EDIT TARGET. Input 2 is a LIGHTING AND PALETTE REFERENCE ONLY; do not copy its chair, house, plants, scenery or other objects into the target. Keep the target's framing, camera, all object positions, shapes, species, count, materials, story meaning and gouache brushwork. Change ONLY the ambient light to a luminous welcoming tropical evening under a bright starry blue sky, rose-lavender clouds, teal water and soft amber highlights. Clearly night but colorful and cozy, never gloomy, black, neon, photorealistic or flattened with a dark filter. Keep the main subject clearly legible at 320px. Add no props, people, lettering, numbers, Arabic, symbols or divine imagery. Output the same 3:2 landscape composition, one image. The same gate, leaning crook and sandy dog remain exactly in place. Stars in the existing visible sky, gentle blue-rose night on the bay, warm ambient light falling from the unseen nearby house onto the wooden gate and dog; no visible new lamp. Preserve the dog's anatomy and the simple ordinary setting.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-24a488ad-0808-4be2-8f22-8dc7f52db23f.png",
+      "master": "seed-001-starlight.png",
+      "references": [
+        "artwork/timeless-seeds/seed-illustrations/seed-001.png",
+        "artwork/timeless-seeds/coastal/starlight/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-027-starlight",
+      "seed": 27,
+      "input": "seed-027",
+      "prompt": "Use case: lighting-weather. Input 1 is the finished Day illustration and EDIT TARGET. Input 2 is a LIGHTING AND PALETTE REFERENCE ONLY; do not copy its chair, house, plants, scenery or other objects into the target. Keep the target's framing, camera, all object positions, shapes, species, count, materials, story meaning and gouache brushwork. Change ONLY the ambient light to a luminous welcoming tropical evening under a bright starry blue sky, rose-lavender clouds, teal water and soft amber highlights. Clearly night but colorful and cozy, never gloomy, black, neon, photorealistic or flattened with a dark filter. Keep the main subject clearly legible at 320px. Add no props, people, lettering, numbers, Arabic, symbols or divine imagery. Output the same 3:2 landscape composition, one image. The same golden fish remains entirely submerged in the exact same clear pond; preserve anatomy and all fins. Keep its warm golden color softly visible in luminous blue-turquoise water. Sparse subtle star reflections may appear only on the distant surface; never put stars inside the fish or suggest bioluminescence. The pink cloud glimpse at the upper edge becomes rose-lavender blue-hour sky with a few stars.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-24f4c750-d32b-41d7-bbd7-a3a38d44175c.png",
+      "master": "seed-027-starlight.png",
+      "references": [
+        "artwork/timeless-seeds/seed-illustrations/seed-027.png",
+        "artwork/timeless-seeds/coastal/starlight/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-108-starlight",
+      "seed": 108,
+      "input": "seed-108",
+      "prompt": "Use case: lighting-weather. Input 1 is the finished Day illustration and EDIT TARGET. Input 2 is a LIGHTING AND PALETTE REFERENCE ONLY; do not copy its chair, house, plants, scenery or other objects into the target. Keep the target's framing, camera, all object positions, shapes, species, count, materials, story meaning and gouache brushwork. Change ONLY the ambient light to a luminous welcoming tropical evening under a bright starry blue sky, rose-lavender clouds, teal water and soft amber highlights. Clearly night but colorful and cozy, never gloomy, black, neon, photorealistic or flattened with a dark filter. Keep the main subject clearly legible at 320px. Add no props, people, lettering, numbers, Arabic, symbols or divine imagery. Output the same 3:2 landscape composition, one image. The existing small table lamp now glows warm amber. Preserve the closed plain book, wooden stand, mat, room geometry, window, curtain, shelf and every existing object. Through the same window: blue starry night, rose-lavender clouds, quiet turquoise moonlit sea. Textures on the book and prayer mat stay richly visible; no text appears.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-2973127a-2249-4f73-b194-ca930c7f22f5.png",
+      "master": "seed-108-starlight.png",
+      "references": [
+        "artwork/timeless-seeds/seed-illustrations/seed-108.png",
+        "artwork/timeless-seeds/coastal/starlight/coastal-home.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    },
+    {
+      "key": "seed-046-evening",
+      "seed": 46,
+      "input": "seed-046-morning",
+      "prompt": "Use case: illustration-story. Input 1 is the morning scene to use as the exact composition and setting reference for its EVENING companion. Preserve the same tree, branch, empty woven nest at left, coastal garden, grasses, distant bay and gouache brushwork. Change the two sandy-brown songbirds to be RETURNING toward their nest: one rests naturally on the branch beside it facing the approaching bird, the other flies leftward toward the nest with natural folded-down wing motion. Same two birds, normal anatomy, no chicks, no food held in their beaks, no swollen cartoon stomachs. Evening light: peaceful rose-peach sunset near the horizon, soft periwinkle above, warm teal bay, slight amber highlights. Still hopeful, bright and calm, no black areas. This scene accompanies the source's evening return; do not change it into midnight. No text, frames, dividers, symbols, people, religious figures or supernatural imagery. Same landscape3:2 crop; big readable birds on a phone. One scene only, not a diptych.",
+      "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-7475b910-f85e-4f82-9576-cb3bf1c5b627.png",
+      "master": "seed-046-evening.png",
+      "references": [
+        "artwork/timeless-seeds/seed-illustrations/seed-046-morning.png"
+      ],
+      "review": "Visually inspected: clear subject, no generated text or sacred figures; Day/Starlight composition retained."
+    }
+  ]
+}

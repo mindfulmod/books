@@ -1,0 +1,1361 @@
+[
+  {
+    "id": 1,
+    "names": [
+      "Ibn Taymiyyah",
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 2,
+    "names": [
+      "Abu Bakr al-Siddiq",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 3,
+    "names": [
+      "Qur’an",
+      "Ibn al-Jawzi"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 65:2–3",
+        "target": "seed-book",
+        "evidence": "65:2-3"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "names": [
+      "Qur’an"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 57:4",
+        "target": "seed-book",
+        "evidence": "57:4"
+      },
+      {
+        "label": "Qur’an 6:59",
+        "target": "seed-book",
+        "evidence": "6:59"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "names": [
+      "Qur’an",
+      "Ibn Taymiyyah"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 17:37",
+        "target": "seed-book",
+        "evidence": "17:37"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Ibn al-Qayyim",
+      "Yasmin Mogahed"
+    ],
+    "references": [
+      {
+        "label": "Sunan Abi Dawud 3126",
+        "target": "book-note-9",
+        "note": 9
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "names": [
+      "Ali Bannat",
+      "Ibn al-Jawzi",
+      "Ali ibn Abi Talib"
+    ],
+    "references": []
+  },
+  {
+    "id": 8,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Abdullah ibn Umar",
+      "Imam al-Ghazali"
+    ],
+    "references": [
+      {
+        "label": "Sahih al-Bukhari 6416",
+        "target": "book-note-12",
+        "note": 12
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "names": [
+      "Prophet Muhammad ﷺ · includes hadith qudsi",
+      "Ibn al-Qayyim"
+    ],
+    "references": [
+      {
+        "label": "Sahih al-Bukhari 7405",
+        "target": "book-note-14",
+        "note": 14
+      },
+      {
+        "label": "Sahih Muslim 2675 a",
+        "target": "book-note-14",
+        "note": 14
+      },
+      {
+        "label": "Al-Tirmidhi 3603",
+        "target": "book-note-14",
+        "note": 14
+      },
+      {
+        "label": "Ibn Maja 3822",
+        "target": "book-note-14",
+        "note": 14
+      },
+      {
+        "label": "Sahih al-Bukhari 6502",
+        "target": "book-note-16",
+        "note": 16
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "names": [
+      "Qur’an",
+      "Samihah Pargas"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 93:4",
+        "target": "seed-book",
+        "evidence": "93:4"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "names": [
+      "Qur’an",
+      "Ibn al-Qayyim"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 14:7",
+        "target": "seed-book",
+        "evidence": "14:7"
+      },
+      {
+        "label": "Qur’an 3:139",
+        "target": "seed-book",
+        "evidence": "3:139"
+      },
+      {
+        "label": "Qur’an 93:5",
+        "target": "seed-book",
+        "evidence": "93:5"
+      },
+      {
+        "label": "Qur’an 39:36",
+        "target": "seed-book",
+        "evidence": "39:36"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Al-Mujam al-Awsat 6192",
+        "target": "book-note-19",
+        "note": 19
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "names": [
+      "Qur’an",
+      "Prophet Muhammad ﷺ",
+      "Muhammad ibn al-Mukhtar al-Shanqiti"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 8:70",
+        "target": "seed-book",
+        "evidence": "8:70"
+      },
+      {
+        "label": "Sahih Muslim 2256 a",
+        "target": "book-note-20",
+        "note": 20
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "names": [
+      "Qur’an",
+      "Ibn Taymiyyah"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 39:10",
+        "target": "seed-book",
+        "evidence": "39:10"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "names": [
+      "Nouman Ali Khan"
+    ],
+    "references": []
+  },
+  {
+    "id": 16,
+    "names": [
+      "Ibn Taymiyyah"
+    ],
+    "references": []
+  },
+  {
+    "id": 17,
+    "names": [
+      "Ali Bannat"
+    ],
+    "references": []
+  },
+  {
+    "id": 18,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Uthman ibn Affan"
+    ],
+    "references": [
+      {
+        "label": "Ibn Maja 4190",
+        "target": "book-note-25",
+        "note": 25
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "names": [
+      "Al-Hasan al-Basri",
+      "Wisam Sharieff"
+    ],
+    "references": []
+  },
+  {
+    "id": 20,
+    "names": [
+      "Qur’an"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 3:150",
+        "target": "seed-book",
+        "evidence": "3:150"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "names": [
+      "Ibn al-Qayyim",
+      "Umar ibn al-Khattab",
+      "Yasir Qadhi"
+    ],
+    "references": []
+  },
+  {
+    "id": 22,
+    "names": [
+      "Qur’an",
+      "Ibn Taymiyyah"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 8:33",
+        "target": "seed-book",
+        "evidence": "8:33"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "names": [
+      "Abu Yazid",
+      "Imam al-Shafii"
+    ],
+    "references": []
+  },
+  {
+    "id": 24,
+    "names": [
+      "Qur’an",
+      "Al-Hasan al-Basri"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 13:28–29",
+        "target": "seed-book",
+        "evidence": "13:28-29"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "names": [
+      "Qur’an"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 20:17",
+        "target": "seed-book",
+        "evidence": "20:17"
+      },
+      {
+        "label": "Qur’an 20:18",
+        "target": "seed-book",
+        "evidence": "20:18"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "names": [
+      "Luqman",
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 27,
+    "names": [
+      "Ibn Taymiyyah",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 28,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 29,
+    "names": [
+      "Al-Hasan al-Basri",
+      "Malik ibn Dinar",
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sahih al-Bukhari 2793",
+        "target": "book-note-39",
+        "note": 39
+      },
+      {
+        "label": "Sahih al-Bukhari 2792",
+        "target": "book-note-40",
+        "note": 40
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "names": [
+      "Qur’an",
+      "Prophet Muhammad ﷺ",
+      "Ibn Kathir"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 14:24–25",
+        "target": "seed-book",
+        "evidence": "14:24-25"
+      },
+      {
+        "label": "Sahih Muslim 1051",
+        "target": "book-note-41",
+        "note": 41
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "names": [
+      "Imam al-Shafii",
+      "Sufyan al-Thawri’s mother"
+    ],
+    "references": []
+  },
+  {
+    "id": 32,
+    "names": [
+      "Al-Hasan al-Basri",
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 33,
+    "names": [
+      "Qur’an",
+      "Al-Hasan al-Basri"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 31:22",
+        "target": "seed-book",
+        "evidence": "31:22"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "names": [
+      "Qur’an",
+      "An unnamed wise man"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 18:10",
+        "target": "seed-book",
+        "evidence": "18:10"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "names": [
+      "Qur’an",
+      "Ibn al-Qayyim"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 40:60",
+        "target": "seed-book",
+        "evidence": "40:60"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "names": [
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 37,
+    "names": [
+      "Qur’an",
+      "Bakr ibn Abdullah al-Muzani"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 16:53",
+        "target": "seed-book",
+        "evidence": "16:53"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sunan Ibn Maja 4141",
+        "target": "book-note-45",
+        "note": 45
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "names": [
+      "Ibn al-Qayyim",
+      "Ibn Taymiyyah",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 40,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sahih Muslim 2999",
+        "target": "book-note-49",
+        "note": 49
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "names": [
+      "Ali ibn Abi Talib",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 42,
+    "names": [
+      "Qur’an",
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 31:12–19",
+        "target": "seed-book",
+        "evidence": "31:12-19"
+      },
+      {
+        "label": "Sahih al-Targhib · vol. 3, p. 424",
+        "target": "book-note-51",
+        "note": 51
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Ibn al-Qayyim"
+    ],
+    "references": [
+      {
+        "label": "Jami al-Tirmidhi 2333",
+        "target": "book-note-52",
+        "note": 52
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "names": [
+      "Ibn al-Qayyim",
+      "Al-Hasan al-Basri"
+    ],
+    "references": []
+  },
+  {
+    "id": 45,
+    "names": [
+      "Qur’an",
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 20:46",
+        "target": "seed-book",
+        "evidence": "20:46"
+      },
+      {
+        "label": "Jami al-Tirmidhi 2398",
+        "target": "book-note-55",
+        "note": 55
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "names": [
+      "Rabia al-Adawiyya",
+      "Prophet Muhammad ﷺ",
+      "Ibn Uthaymin"
+    ],
+    "references": [
+      {
+        "label": "Jami al-Tirmidhi 2344",
+        "target": "book-note-56",
+        "note": 56
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "names": [
+      "Nouman Ali Khan"
+    ],
+    "references": []
+  },
+  {
+    "id": 48,
+    "names": [
+      "Ibn al-Qayyim",
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sahih al-Bukhari 7466",
+        "target": "book-note-57",
+        "note": 57
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "names": [
+      "Qur’an",
+      "Ali ibn Abi Talib",
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 8:46",
+        "target": "seed-book",
+        "evidence": "8:46"
+      },
+      {
+        "label": "Qur’an 3:120",
+        "target": "seed-book",
+        "evidence": "3:120"
+      },
+      {
+        "label": "Qur’an 39:10",
+        "target": "seed-book",
+        "evidence": "39:10"
+      },
+      {
+        "label": "Qur’an 3:146",
+        "target": "seed-book",
+        "evidence": "3:146"
+      },
+      {
+        "label": "Sahih al-Bukhari 7485",
+        "target": "book-note-58",
+        "note": 58
+      },
+      {
+        "label": "Sahih Muslim 2637 a",
+        "target": "book-note-58",
+        "note": 58
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "names": [
+      "Prophet Muhammad ﷺ · includes hadith qudsi"
+    ],
+    "references": [
+      {
+        "label": "Jami al-Tirmidhi 3540",
+        "target": "book-note-59",
+        "note": 59
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Jami al-Tirmidhi 2516",
+        "target": "book-note-60",
+        "note": 60
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 53,
+    "names": [
+      "Qur’an",
+      "Ibn al-Jawzi"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 16:97",
+        "target": "seed-book",
+        "evidence": "16:97"
+      },
+      {
+        "label": "Qur’an 37:143–144",
+        "target": "seed-book",
+        "evidence": "37:143-144"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "names": [
+      "Ibn al-Jawzi",
+      "Nikos Kazantzakis"
+    ],
+    "references": []
+  },
+  {
+    "id": 55,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 56,
+    "names": [
+      "Qur’an",
+      "Ibn al-Qayyim"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 94:5–6",
+        "target": "seed-book",
+        "evidence": "94:5-6"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "names": [
+      "Yasmin Mogahed"
+    ],
+    "references": []
+  },
+  {
+    "id": 58,
+    "names": [
+      "Yasir Qadhi",
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sunan Abi Dawud 2201",
+        "target": "book-note-69",
+        "note": 69
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "names": [
+      "Nouman Ali Khan"
+    ],
+    "references": []
+  },
+  {
+    "id": 60,
+    "names": [
+      "Yasmin Mogahed",
+      "Yahya ibn Muadh"
+    ],
+    "references": []
+  },
+  {
+    "id": 61,
+    "names": [
+      "Qur’an",
+      "Al-Hasan al-Basri"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 4:120",
+        "target": "seed-book",
+        "evidence": "4:120"
+      },
+      {
+        "label": "Qur’an 2:208",
+        "target": "seed-book",
+        "evidence": "2:208"
+      },
+      {
+        "label": "Qur’an 17:65",
+        "target": "seed-book",
+        "evidence": "17:65"
+      },
+      {
+        "label": "Qur’an 15:40–42",
+        "target": "seed-book",
+        "evidence": "15:40-42"
+      },
+      {
+        "label": "Qur’an 16:99–100",
+        "target": "seed-book",
+        "evidence": "16:99-100"
+      },
+      {
+        "label": "Qur’an 38:82–83",
+        "target": "seed-book",
+        "evidence": "38:82-83"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "names": [
+      "Luqman"
+    ],
+    "references": []
+  },
+  {
+    "id": 63,
+    "names": [
+      "Ibn al-Qayyim",
+      "Ibn Taymiyyah"
+    ],
+    "references": []
+  },
+  {
+    "id": 64,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Umar ibn al-Khattab"
+    ],
+    "references": [
+      {
+        "label": "Sunan Abi Dawud 1488",
+        "target": "book-note-73",
+        "note": 73
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "names": [
+      "Book reflection · no speaker named"
+    ],
+    "references": []
+  },
+  {
+    "id": 66,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 67,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sunan Ibn Maja 4110",
+        "target": "book-note-75",
+        "note": 75
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Ibn al-Qayyim",
+      "Al-Sadi"
+    ],
+    "references": [
+      {
+        "label": "Sahih al-Bukhari 6369",
+        "target": "book-note-76",
+        "note": 76
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "names": [
+      "Ibn Uthaymin",
+      "Mufti Menk"
+    ],
+    "references": []
+  },
+  {
+    "id": 70,
+    "names": [
+      "Qur’an",
+      "Ibn al-Qayyim",
+      "Imam al-Shafii"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 19:64",
+        "target": "seed-book",
+        "evidence": "19:64"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Jami al-Tirmidhi 2396",
+        "target": "book-note-79",
+        "note": 79
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "names": [
+      "Abu Hafsah Abdul Malik Clare",
+      "Sufyan al-Thawri"
+    ],
+    "references": []
+  },
+  {
+    "id": 73,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 74,
+    "names": [
+      "Ibn Taymiyyah",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 75,
+    "names": [
+      "Ibn al-Jawzi",
+      "Yasmin Mogahed"
+    ],
+    "references": []
+  },
+  {
+    "id": 76,
+    "names": [
+      "Imam al-Shafii",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 77,
+    "names": [
+      "Al-Hasan al-Basri",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 78,
+    "names": [
+      "Prophet Muhammad ﷺ · includes hadith qudsi"
+    ],
+    "references": [
+      {
+        "label": "Sahih Muslim 2759 a, b",
+        "target": "book-note-87",
+        "note": 87
+      },
+      {
+        "label": "Sahih Muslim 2577 a",
+        "target": "book-note-88",
+        "note": 88
+      },
+      {
+        "label": "Sahih Muslim 2748 a",
+        "target": "book-note-89",
+        "note": 89
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "names": [
+      "Qur’an",
+      "Ibn al-Jawzi",
+      "Malik ibn Dinar"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 65:2",
+        "target": "seed-book",
+        "evidence": "65:2"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "names": [
+      "Bishr ibn Harith",
+      "Al-Mutasim, reported by Ishaq al-Mawsili",
+      "Imam al-Ghazali"
+    ],
+    "references": []
+  },
+  {
+    "id": 81,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sunan Abi Dawud 4700",
+        "target": "book-note-92",
+        "note": 92
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "names": [
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 83,
+    "names": [
+      "Mustafa Mahmud",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 84,
+    "names": [
+      "Yahya ibn Muadh"
+    ],
+    "references": []
+  },
+  {
+    "id": 85,
+    "names": [
+      "Mustafa Mahmud",
+      "Ibn Ata Allah al-Iskandari"
+    ],
+    "references": []
+  },
+  {
+    "id": 86,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 87,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Umar ibn al-Khattab"
+    ],
+    "references": [
+      {
+        "label": "Sunan Abi Dawud 4833",
+        "target": "book-note-96",
+        "note": 96
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "names": [
+      "Al-Hasan al-Basri"
+    ],
+    "references": []
+  },
+  {
+    "id": 89,
+    "names": [
+      "Prophet Muhammad ﷺ",
+      "Talq ibn Habib",
+      "Ibn al-Qayyim"
+    ],
+    "references": [
+      {
+        "label": "Sahih Muslim 2564",
+        "target": "book-note-99",
+        "note": 99
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "names": [
+      "Ibn al-Qayyim",
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 91,
+    "names": [
+      "Ibn Rajab al-Hanbali"
+    ],
+    "references": []
+  },
+  {
+    "id": 92,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 93,
+    "names": [
+      "Ibn Rajab al-Hanbali",
+      "Al-Shibli"
+    ],
+    "references": []
+  },
+  {
+    "id": 94,
+    "names": [
+      "Ibrahim ibn Adham",
+      "Ibn Taymiyyah",
+      "Aid al-Qarni"
+    ],
+    "references": []
+  },
+  {
+    "id": 95,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Sahih al-Bukhari 6463",
+        "target": "book-note-102",
+        "note": 102
+      },
+      {
+        "label": "Sahih al-Bukhari 39",
+        "target": "book-note-104",
+        "note": 104
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "names": [
+      "Aid al-Qarni"
+    ],
+    "references": []
+  },
+  {
+    "id": 97,
+    "names": [
+      "Qur’an",
+      "Aid al-Qarni",
+      "Ali ibn Abi Talib"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 49:13",
+        "target": "seed-book",
+        "evidence": "49:13"
+      },
+      {
+        "label": "Qur’an 9:46",
+        "target": "seed-book",
+        "evidence": "9:46"
+      },
+      {
+        "label": "Qur’an 22:78",
+        "target": "seed-book",
+        "evidence": "22:78"
+      },
+      {
+        "label": "Qur’an 36:12",
+        "target": "seed-book",
+        "evidence": "36:12"
+      },
+      {
+        "label": "Qur’an 79:46",
+        "target": "seed-book",
+        "evidence": "79:46"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "names": [
+      "Qur’an",
+      "Al-Dhahabi, summarized via Aid al-Qarni"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 18:52–53",
+        "target": "seed-book",
+        "evidence": "18:52-53"
+      },
+      {
+        "label": "Qur’an 43:37",
+        "target": "seed-book",
+        "evidence": "43:37"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "names": [
+      "Imam al-Shafii",
+      "Al-Albani",
+      "Nouman Ali Khan"
+    ],
+    "references": []
+  },
+  {
+    "id": 100,
+    "names": [
+      "Umar ibn al-Khattab",
+      "Nouman Ali Khan"
+    ],
+    "references": []
+  },
+  {
+    "id": 101,
+    "names": [
+      "Qur’an",
+      "Al-Hasan al-Basri"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 75:2–4",
+        "target": "seed-book",
+        "evidence": "75:2-4"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "names": [
+      "Umar ibn al-Khattab"
+    ],
+    "references": []
+  },
+  {
+    "id": 103,
+    "names": [
+      "Yasmin Mogahed"
+    ],
+    "references": []
+  },
+  {
+    "id": 104,
+    "names": [
+      "Qur’an",
+      "An unnamed poet"
+    ],
+    "references": [
+      {
+        "label": "Qur’an 28:88",
+        "target": "seed-book",
+        "evidence": "28:88"
+      },
+      {
+        "label": "Qur’an 18:7–8",
+        "target": "seed-book",
+        "evidence": "18:7-8"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "names": [
+      "Imam al-Shafii"
+    ],
+    "references": []
+  },
+  {
+    "id": 106,
+    "names": [
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 107,
+    "names": [
+      "Prophet Muhammad ﷺ"
+    ],
+    "references": [
+      {
+        "label": "Al-Tirmidhi 2396",
+        "target": "book-note-113",
+        "note": 113
+      },
+      {
+        "label": "Ibn Maja 4031",
+        "target": "book-note-113",
+        "note": 113
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "names": [
+      "Ibn al-Qayyim"
+    ],
+    "references": []
+  },
+  {
+    "id": 109,
+    "names": [
+      "Ibn al-Jawzi",
+      "Malik ibn Dinar",
+      "Ibn Amr"
+    ],
+    "references": []
+  },
+  {
+    "id": 110,
+    "names": [
+      "Ibn al-Jawzi"
+    ],
+    "references": []
+  },
+  {
+    "id": 111,
+    "names": [
+      "Qur’an",
+      "Ibn al-Qayyim",
+      "Al-Hasan (as named in the book)"
+    ],
+    "references": [
+      {
+        "label": "Qur’an · verse number not given in the book",
+        "target": "seed-book"
+      }
+    ]
+  }
+]

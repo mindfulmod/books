@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 64" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="left" x1="0" x2="1">
+      <stop stop-color="#343c54"/>
+      <stop offset=".72" stop-color="#3a425c"/>
+      <stop offset=".985" stop-color="#343c54"/>
+      <stop offset="1" stop-color="#222b40"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" x2="1">
+      <stop stop-color="#222b40"/>
+      <stop offset=".02" stop-color="#353e56"/>
+      <stop offset=".2" stop-color="#39425b"/>
+      <stop offset="1" stop-color="#303b53"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="0" x2="1">
+      <stop stop-color="#7c7185"/>
+      <stop offset=".5" stop-color="#1c263c"/>
+      <stop offset="1" stop-color="#8b829b"/>
+    </linearGradient>
+  </defs>
+  <!-- Fine page edges sit inside the control bar's existing height. -->
+  <path d="M0 8C61 3 144 3 200 11C256 3 339 3 400 8V64H0Z" fill="#847389"/>
+  <path d="M0 6C61 1 144 1 200 9C256 1 339 1 400 6V64H0Z" fill="#303b53" stroke="#82778e" stroke-width=".7"/>
+  <path d="M0 4C61 0 144 0 200 8C256 0 339 0 400 4V64H0Z" fill="#4b4e69"/>
+  <path d="M0 5C57 0 140 0 199.25 8V64H0Z" fill="url(#left)"/>
+  <path d="M200.75 8C260 0 343 0 400 5V64H200.75Z" fill="url(#right)"/>
+  <path d="M199.25 8Q200 8.6 200.75 8V64H199.25Z" fill="url(#spine)" opacity=".55"/>
+  <path d="M0 5C57 0 140 0 199 8M201 8C260 0 343 0 400 5" fill="none" stroke="#96889d" stroke-width=".7"/>
+  <path d="M0 7.5C57 2.5 140 2.5 196 10M204 10C260 2.5 343 2.5 400 7.5" fill="none" stroke="#655f7c" stroke-width=".55"/>
+  <path d="M0 8.5C57 3.5 140 3.5 195 11M205 11C260 3.5 343 3.5 400 8.5" fill="none" stroke="#aaa0b8" stroke-width=".8"/>
+</svg>

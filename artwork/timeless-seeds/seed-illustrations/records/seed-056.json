@@ -1,0 +1,11 @@
+{
+  "seed": 56,
+  "key": "seed-056",
+  "kind": "day",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-ccfcc33a-6bbe-46d0-8521-7334d0605824.png",
+  "prompt": "Use case: illustration-story. A finished 3:2 landscape seed illustration for Timeless Seeds of Advice, composed for a 320–390px phone. The supplied coastal painting is a STYLE REFERENCE ONLY, not a layout to copy. Match its warm opaque gouache, tactile brushwork, pigment and paper texture, dimensional natural forms, soft warm shadows, airy Hawaiian pink clouds, Thai-island turquoise and living greens. Cozy modest home or ordinary garden, never a luxury resort. Large clear focal subject with generous margins and quiet background. Keep the specified subject more prominent than scenery. No text, letters, numbers, calligraphy, fake Arabic, labels, arrows, frames, logos or watermarks. No people, human body parts, faces, portraits, divine figures, prophets, angels, supernatural light or imagined Hereafter. Ordinary sunlight is not a divine presence. No flat vectors, glossy 3D, photorealism, muddy grading or ominous darkness. One coherent scene, not a collage.\nSubject: A plain mended bowl holding a fresh flower, lit evenly by the morning sun.\nMeaning constraints: Pair with the original wording below; do not promise a visible reward or recovery date.\nLighting: luminous gentle daylight, unless sunset or another time is explicitly specified. Soft middle tones rather than blinding white.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-056.png",
+  "review": "approved",
+  "alt": "A carefully mended plain bowl holds clear water and a fresh white flower on a sunlit table.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}

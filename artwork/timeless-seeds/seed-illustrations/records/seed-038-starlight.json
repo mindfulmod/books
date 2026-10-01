@@ -1,0 +1,11 @@
+{
+  "seed": 38,
+  "key": "seed-038-starlight",
+  "kind": "starlight",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-cd35327a-aa1d-4c12-b271-4e82627c96df.png",
+  "prompt": "Use case: lighting-weather. Input 1 is the approved seed illustration EDIT TARGET. Input 2 is lighting/palette reference ONLY. Preserve the exact composition, objects, positions, scale, architecture, visual meaning and textured gouache brushwork of Input 1. Change only the lighting to bright welcoming tropical Starlight: luminous blue sky with gentle stars and rose-lavender clouds, turquoise water where present, warm amber light on the foreground and from the home. All main objects clearly visible, peaceful and hopeful, never gloomy. No new props from the reference, no added objects, text, people, faces, sacred figures or symbols. Same 3:2 composition, readable on a phone. Preserve this scene: A bowl of breakfast food and a cup sit on a low table, with walking shoes beside a well-kept closed front door.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-038-starlight.png",
+  "review": "approved",
+  "alt": "A simple bowl of food and a cup sit on a low table, with walking shoes beside a closed front door and stars beyond.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}

@@ -1,4 +1,4 @@
-name: Deploy the Ihya reader to GitHub Pages
+name: Deploy the MindfulMod bookshelf to GitHub Pages
 
 on:
   push:
@@ -32,6 +32,9 @@ jobs:
 
       - name: Build the site
         run: npm run build
+
+      - name: Verify Timeless Seeds source and illustrations
+        run: npm run check:seeds
 
       - name: Add the single-page fallback
         run: cp dist/index.html dist/404.html

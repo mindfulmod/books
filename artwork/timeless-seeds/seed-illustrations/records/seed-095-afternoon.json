@@ -1,0 +1,11 @@
+{
+  "seed": 95,
+  "key": "seed-095-afternoon",
+  "kind": "sequence",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-4469b2d1-fa0c-46f3-a4ef-54e2001af694.png",
+  "prompt": "Use case: lighting-weather. Edit the provided coastal path illustration. Preserve the exact path, bench, draped cloth, tree, fence, flowers and coastline. Change only illumination to warm LATE AFTERNOON near the end of the day: lower golden sunlight, longer soft shadows, peach-pink clouds in a luminous blue sky and shimmering turquoise sea. No stars, night, new objects, text or people. Same 3:2 composition and textured gouache painting.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-095-afternoon.png",
+  "review": "approved",
+  "alt": "A wooden bench and coastal walking path glow in low, golden late-afternoon sunlight.",
+  "reviewNotes": "Visually reviewed: same bench and coastal path, distinct source-relevant time of day."
+}

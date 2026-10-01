@@ -1,0 +1,11 @@
+{
+  "seed": 95,
+  "key": "seed-095-evening",
+  "kind": "sequence",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-73a2f704-5621-4b9a-a170-3aa7a926c6cb.png",
+  "prompt": "Use case: lighting-weather. Input 1 is the edit target, input 2 the lighting palette reference ONLY. Preserve the exact path, bench, draped cloth, tree, fence, flowers and coastline of input 1. Change only illumination to a peaceful clear NIGHT, with a luminous blue sky full of gentle stars, a little rose-lavender cloud, turquoise water and soft warm amber foreground light. All objects remain clearly visible and hopeful, never gloomy. No sun, extra props, lettering, people or symbols. Same 3:2 composition and textured gouache brushwork. This is the night companion to morning and late afternoon.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-095-evening.png",
+  "review": "approved",
+  "alt": "The same wooden bench and coastal walking path rest beneath a bright starry night sky, with warm light on the foreground.",
+  "reviewNotes": "Visually reviewed: same bench and coastal path, distinct source-relevant time of day."
+}

@@ -1,0 +1,11 @@
+{
+  "seed": 78,
+  "key": "seed-078",
+  "kind": "day",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-8dd448c6-bc4f-4251-8572-bc0d8e372c36.png",
+  "prompt": "Use case: illustration-story. A finished 3:2 landscape seed illustration for Timeless Seeds of Advice, composed for a 320–390px phone. The supplied coastal painting is a STYLE REFERENCE ONLY, not a layout to copy. Match its warm opaque gouache, tactile brushwork, pigment and paper texture, dimensional natural forms, soft warm shadows, airy Hawaiian pink clouds, Thai-island turquoise and living greens. Cozy modest home or ordinary garden, never a luxury resort. Large clear focal subject with generous margins and quiet background. Keep the specified subject more prominent than scenery. No text, letters, numbers, calligraphy, fake Arabic, labels, arrows, frames, logos or watermarks. No people, human body parts, faces, portraits, divine figures, prophets, angels, supernatural light or imagined Hereafter. Ordinary sunlight is not a divine presence. No flat vectors, glossy 3D, photorealism, muddy grading or ominous darkness. One coherent scene, not a collage.\nSubject: A modest coastal home window open to a peaceful sunny garden, with the same simple prayer mat and plain book stand inside. Quiet ordinary daytime; the same window and room will later be edited into night. No writing, human figures or divine imagery.\nMeaning constraints: Do not depict the sun rising from the west or apocalyptic signs.\nLighting: luminous gentle daylight, unless sunset or another time is explicitly specified. Soft middle tones rather than blinding white.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-078.png",
+  "review": "approved",
+  "alt": "A plain closed book on a stand and a prayer mat sit beside an open window overlooking a bright coastal garden.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}

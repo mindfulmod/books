@@ -1,0 +1,11 @@
+{
+  "seed": 3,
+  "key": "seed-003-starlight",
+  "kind": "starlight",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-1527ea66-da04-44f1-b6f6-830674c463c3.png",
+  "prompt": "Use case: lighting-weather. Input 1 is the approved seed illustration, the EDIT TARGET. Input 2 is a lighting/palette reference ONLY. Preserve input 1's exact composition, main objects, positions, scale, species, architecture, meaning and warm gouache texture. Change ambient light to a bright, welcoming tropical Starlight setting: luminous blue sky, gentle stars, rose-lavender clouds, turquoise water where present, warm amber light from the home where applicable. Keep main objects warmly visible, with depth and tactile materials. No ominous darkness, black silhouette, neon, digital dark filter or new props. Do not copy the reference veranda's objects into this scene. Retain the main visual lesson: A watered seed bed with one new shoot just breaking through the soil; the watering can rests nearby. Do not show sacred figures, supernatural presence, people, writing, calligraphy, labels, logos or text. Keep the same 3:2 composition and phone readability.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-003-starlight.png",
+  "review": "approved",
+  "alt": "One small green shoot grows in a freshly watered garden bed beside a metal watering can, under a luminous blue and pink night sky.",
+  "reviewNotes": "Visually checked against the approved day composition and complete source entry."
+}

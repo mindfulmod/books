@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="A hopeful reading companion to Timeless Seeds of Advice. Explore 111 seeds of wisdom, follow a gentle path, and make space for reflection." />
+    <meta name="theme-color" content="#fafbf6" />
+    <meta property="og:title" content="Timeless Seeds of Advice · MindfulMod" />
+    <meta property="og:description" content="Small seeds. Lasting hope. An interactive companion with 111 readings, six paths and space for your reflections." />
+    <script>
+      (() => {
+        let preference = 'device';
+        try { preference = localStorage.getItem('mindfulmod-seeds-appearance-v1') || 'device'; } catch {}
+        const night = preference === 'starlight' || (preference !== 'day' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.seedAppearance = night ? 'starlight' : 'day';
+        document.documentElement.style.colorScheme = night ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = night ? '#252d45' : '#fafbf6';
+      })();
+    </script>
+    <style>html[data-seed-appearance="starlight"]{background:#252d45;color-scheme:dark}html[data-seed-appearance="day"]{color-scheme:light}</style>
+    <title>Timeless Seeds of Advice · MindfulMod</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/seeds/main.tsx"></script>
+  </body>
+</html>

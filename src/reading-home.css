@@ -120,3 +120,15 @@ button.system-brand { border:0; color:inherit; text-align:left; cursor:pointer; 
  .shelf-book h3 { font-size:22px; }
  .orientation-actions { justify-content:space-between; }
 }
+
+/* The same sunlit veranda welcomes readers on the shelf and in the app. */
+.shelf-cover-seeds { position:relative; isolation:isolate; overflow:hidden; justify-content:flex-start; gap:8px; background:#fff5e3; color:#345748; border-color:#c6a582; box-shadow:1px 1px 0 #e2cba9,3px 4px 0 #f5e9d2,4px 5px 0 #cbb694,5px 8px 12px #6c573e20; }
+.shelf-cover-seeds .shelf-cover-art { position:absolute; z-index:-2; inset:0; width:100%; height:100%; object-fit:cover; object-position:46% center; }
+.shelf-cover-seeds::before { content:''; position:absolute; z-index:-1; inset:0; background:linear-gradient(#fff7e8 0%,#fff7e8f7 33%,#fff7e800 59%,#fff7e826 69%,#fff7e8ed 85%,#fff7e8 100%); }
+.shelf-cover-seeds strong { font-size:20px; line-height:1.15; letter-spacing:-.035em; }
+.shelf-cover-seeds>span { margin-top:auto; font-size:10px; line-height:1.4; color:#4f5743; }
+@media(max-width:600px) { .shelf-cover-seeds strong { font-size:17px; } }
+
+html[data-reading-theme="dark"] .shelf-cover-seeds { color:#f3eadc; background:#30334e; border-color:#7e697b; box-shadow:1px 1px 0 #64576b,3px 4px 0 #34394f,4px 5px 0 #877082,5px 8px 12px #17233940; }
+html[data-reading-theme="dark"] .shelf-cover-seeds::before { background:linear-gradient(#30334e 0%,#30334ef7 33%,#30334e00 59%,#30334e26 69%,#30334eed 85%,#30334e 100%); }
+html[data-reading-theme="dark"] .shelf-cover-seeds>span { color:#d7cbd8; }

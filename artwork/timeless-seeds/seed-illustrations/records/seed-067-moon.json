@@ -1,0 +1,11 @@
+{
+  "seed": 67,
+  "key": "seed-067-moon",
+  "kind": "sequence",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-00b0a7f1-9de2-42be-b581-2e82c464b4b9.png",
+  "prompt": "Use case: lighting-weather. Input 1 is the EDIT TARGET. Input 2 is ONLY a lighting and palette reference. Preserve the precise window, table, cup, chair, plants, coastline, mountains and composition in input 1. Create the moon companion to this sun image: replace the visible sun with one clearly visible ordinary full moon in a luminous blue starry sky with gentle pink-lavender clouds. No sun remains visible. Preserve turquoise sea with a silver moon reflection, warm amber interior illumination, visible textured gouache brushwork. Bright, hopeful, cozy tropical night. The moon is a natural celestial body, no supernatural symbolism or personification. No text, symbols, people, extra props or layout changes. Landscape 3:2.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-067-moon.png",
+  "review": "approved",
+  "alt": "The full moon shines over turquoise islands through the same open coastal window beneath a bright starry sky.",
+  "reviewNotes": "Visually reviewed: preserved scene, ordinary moon replaces sun; both moments remain available in both appearances."
+}

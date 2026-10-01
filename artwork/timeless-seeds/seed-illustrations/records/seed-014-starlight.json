@@ -1,0 +1,11 @@
+{
+  "seed": 14,
+  "key": "seed-014-starlight",
+  "kind": "starlight",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-11700d51-ba9e-487c-b751-530b8854f5fb.png",
+  "prompt": "Use case: lighting-weather. Input 1 is the approved seed illustration EDIT TARGET. Input 2 is lighting/palette reference ONLY. Preserve the exact composition, objects, positions, scale, architecture, visual meaning and textured gouache brushwork of Input 1. Change only its lighting to bright welcoming tropical Starlight: luminous blue sky with gentle stars and rose-lavender clouds, turquoise water where present, warm amber light on the foreground and from the home. Keep all main objects clearly visible, peaceful and hopeful, never gloomy. No new props from the reference, no added objects, text, people, faces, sacred figures or symbols. Same 3:2 composition, readable on a phone. Preserve this scene: A spade and watering can stand beside freshly worked soil and young plants in a coastal garden.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-014-starlight.png",
+  "review": "approved",
+  "alt": "A spade and watering can stand beside freshly worked soil and young garden plants beneath a bright starry sky.",
+  "reviewNotes": "Visually checked: approved day scene preserved, warm readable night lighting."
+}

@@ -1,0 +1,11 @@
+{
+  "seed": 109,
+  "key": "seed-109-starlight",
+  "kind": "starlight",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-37173b4c-0a28-49fc-9515-70d0a42d9724.png",
+  "prompt": "Use case: lighting-weather. Input 1 is the approved seed illustration EDIT TARGET. Input 2 is lighting/palette reference ONLY. Preserve the exact composition, objects, positions, scale, architecture, visual meaning and textured gouache brushwork of Input 1. Preserve any rain, weather, shadows and water movement that are present; they carry the lesson. Change only the lighting to bright welcoming tropical Starlight: luminous blue sky with gentle stars and rose-lavender clouds, turquoise water where present, warm amber light on the foreground and from the home. All main objects clearly visible, peaceful and hopeful, never gloomy. No new props from the reference, no added objects, text, people, faces, sacred figures or symbols. Same 3:2 composition, readable on a phone. Preserve this scene: A broken clay pot sits to one side of a table, leaving room for living plants, gardening gloves and a watering can.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-109-starlight.png",
+  "review": "approved",
+  "alt": "A broken terracotta pot sits beside healthy flowering plants, gardening gloves and a watering can on a warm table beneath the stars.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}

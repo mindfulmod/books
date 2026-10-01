@@ -1,0 +1,13 @@
+{
+  "seed": 102,
+  "key": "seed-102",
+  "kind": "day",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-008a6d71-0d64-48c3-a2d2-430d491717a5.png",
+  "prompt": "Use case: inpainting. Preserve the entire illustration exactly apart from book surfaces. Make the closed book in the lower left foreground completely plain sea-green cloth, with no gold border, pattern, lettering, symbols or marks on either cover or spine. Make the small books on the upper-left shelf plain muted green and brown cloth spines without any lettering or decorative marks. Preserve their shapes and sizes. Do not add text. Preserve prayer mat, budding branch, window, coast, daylight and textured gouache style. Landscape 3:2.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-102.png",
+  "review": "approved",
+  "previousSource": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-8939ec1f-f6f3-4760-b007-3111af8d70a8.png",
+  "previousPrompt": "Use case: illustration-story. A finished 3:2 landscape seed illustration for Timeless Seeds of Advice, composed for a 320–390px phone. The supplied coastal painting is a STYLE REFERENCE ONLY, not a layout to copy. Match its warm opaque gouache, tactile brushwork, pigment and paper texture, dimensional natural forms, soft warm shadows, airy Hawaiian pink clouds, Thai-island turquoise and living greens. Cozy modest home or ordinary garden, never a luxury resort. Large clear focal subject with generous margins and quiet background. Keep the specified subject more prominent than scenery. No text, letters, numbers, calligraphy, fake Arabic, labels, arrows, frames, logos or watermarks. No people, human body parts, faces, portraits, divine figures, prophets, angels, supernatural light or imagined Hereafter. Ordinary sunlight is not a divine presence. No flat vectors, glossy 3D, photorealism, muddy grading or ominous darkness. One coherent scene, not a collage.\nSubject: A quiet prayer space beside a window with a new bud on a branch outside.\nMeaning constraints: The bud is a companion symbol, not a guarantee that a requested outcome is arriving.\nLighting: luminous gentle daylight, unless sunset or another time is explicitly specified. Soft middle tones rather than blinding white.",
+  "alt": "A quiet prayer mat and plain closed books rest beside a window with a new flower bud outside and a bright coastal view.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}

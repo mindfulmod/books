@@ -1,0 +1,11 @@
+{
+  "seed": 4,
+  "key": "seed-004",
+  "kind": "day",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-8a2dfc5b-6970-43ba-810c-67a63d74eaea.png",
+  "prompt": "Use case: illustration-story. A finished 3:2 landscape seed illustration for Timeless Seeds of Advice, composed for a 320–390px phone. The supplied coastal painting is a STYLE REFERENCE ONLY, not a layout to copy. Match its warm opaque gouache, tactile brushwork, pigment and paper texture, dimensional natural forms, soft warm shadows, airy Hawaiian pink clouds, Thai-island turquoise and living greens. Cozy modest home or ordinary garden, never a luxury resort. Large clear focal subject with generous margins and quiet background. Keep the specified subject more prominent than scenery. No text, letters, numbers, calligraphy, fake Arabic, labels, arrows, frames, logos or watermarks. No people, human body parts, faces, portraits, divine figures, prophets, angels, supernatural light or imagined Hereafter. Ordinary sunlight is not a divine presence. No flat vectors, glossy 3D, photorealism, muddy grading or ominous darkness. One coherent scene, not a collage.\nSubject: A single falling green leaf above a small, clearly drawn cutaway of garden soil; one ordinary tan grain is visible beneath the soil surface. Keep both leaf and buried grain large enough to read on a phone. The cutaway is an educational illustration of ordinary earth, with no floating magic or glowing grain.\nMeaning constraints: No divine eye, face, hand, or beam of light.\nLighting: luminous gentle daylight, unless sunset or another time is explicitly specified. Soft middle tones rather than blinding white.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-004.png",
+  "review": "approved",
+  "alt": "A falling green leaf above a cutaway of ordinary soil, where one tan grain lies beneath the surface.",
+  "reviewNotes": "Compared with complete source entry; no sacred text or figures; focal objects readable on a phone."
+}

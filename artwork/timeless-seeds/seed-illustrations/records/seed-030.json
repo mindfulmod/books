@@ -1,0 +1,13 @@
+{
+  "seed": 30,
+  "key": "seed-030",
+  "kind": "day",
+  "source": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-cf9c37c2-c6e6-4c2e-a6ba-404520d49107.png",
+  "prompt": "Use case: inpainting. Edit the supplied painting only. Remove BOTH wooden label boards, ALL lettering (Belief and Deeds), and BOTH curved arrows completely. Reconstruct ordinary tree leaves, fruit, sky, roots and soil seamlessly behind them. Preserve the entire healthy mango tree, full soil cutaway, fruits, coastal garden, composition, tactile gouache brushwork and warm daylight exactly. Final image contains no lettering, labels, arrows or diagrams. No new objects. Same 3:2 landscape.",
+  "master": "artwork/timeless-seeds/seed-illustrations/seed-030.png",
+  "review": "approved",
+  "previousSource": "local-generated-images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-527804e3-8948-43da-9ffd-9e0c74db062f.png",
+  "previousPrompt": "Use case: illustration-story. A finished 3:2 landscape seed illustration for Timeless Seeds of Advice, composed for a 320–390px phone. The supplied coastal painting is a STYLE REFERENCE ONLY, not a layout to copy. Match its warm opaque gouache, tactile brushwork, pigment and paper texture, dimensional natural forms, soft warm shadows, airy Hawaiian pink clouds, Thai-island turquoise and living greens. Cozy modest home or ordinary garden, never a luxury resort. Large clear focal subject with generous margins and quiet background. Keep the specified subject more prominent than scenery. No text, letters, numbers, calligraphy, fake Arabic, labels, arrows, frames, logos or watermarks. No people, human body parts, faces, portraits, divine figures, prophets, angels, supernatural light or imagined Hereafter. Ordinary sunlight is not a divine presence. No flat vectors, glossy 3D, photorealism, muddy grading or ominous darkness. One coherent scene, not a collage.\nSubject: A healthy fruit tree with visible roots in a neat soil cutaway, strong branches, and ripe fruit.\nMeaning constraints: Use HTML labels for belief and deeds; make clear these are explanations of the comparison.\nLighting: luminous gentle daylight, unless sunset or another time is explicitly specified. Soft middle tones rather than blinding white.",
+  "alt": "A healthy fruit tree bears ripe mangoes above a soil cutaway showing its strong roots.",
+  "reviewNotes": "Visually checked against complete source entry and intended scene; composition and focal objects are clear."
+}
