@@ -10,7 +10,7 @@ const directory = await mkdtemp(join(tmpdir(), 'timeless-seeds-check-'));
 try {
   await build({ entryPoints: ['src/seeds/content.ts', 'src/seeds/state.ts'], outdir: directory, bundle: true, platform: 'node', format: 'esm', outExtension: { '.js': '.mjs' } });
   const { seeds, themes, sourceEntries, sourceNotes, sourcePlainText } = await import(pathToFileURL(join(directory, 'content.mjs')));
-  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
+  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, resumeFor, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
   assert.deepEqual(seeds.map(s => s.id), Array.from({ length: 111 }, (_, i) => i + 1));
   assert.equal(new Set(seeds.map(s => s.title)).size, 111, 'Every entry needs a distinct title.');
   for (const seed of seeds) {
@@ -85,6 +85,15 @@ try {
     assert.equal(runs.filter(r => typeof r !== 'string' && 'image' in r).length, page.images, `Missing honorific on PDF page ${page.page}`);
   }
   assert.deepEqual(validateGarden(null), emptyGarden());
+  // Returning readers move on from a finished reading instead of being sent back to it.
+  const kindness = themes.find(t => t.id === 'kindness');
+  assert.equal(resumeFor(emptyGarden(), themes), null);
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12 }, themes), { id: 12, kind: 'return', path: 'kindness', step: 1, total: 4 });
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12, read: [12] }, themes), { id: kindness.route[1], kind: 'continue', path: 'kindness', step: 2, total: 4 });
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: kindness.route[3], read: [...kindness.route] }, themes), { id: kindness.route[3] % 111 + 1, kind: 'next', finishedPath: 'kindness' });
+  const offPath = seeds.find(s => !themes.some(t => t.route.includes(s.id)) && s.id < 111).id;
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: offPath, read: [offPath] }, themes), { id: offPath + 1, kind: 'next' });
+  assert.equal(resumeFor({ ...emptyGarden(), last: 5, read: seeds.map(s => s.id) }, themes).kind, 'done');
   // A reflection-only visitor must not arrive at an empty Saved seeds collection.
   const reflectionOnly = { ...emptyGarden(), intentions: { 12: 'Help with a meal.' } };
   assert.equal(gardenTabFor(reflectionOnly), 'notes');

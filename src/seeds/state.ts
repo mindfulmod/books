@@ -33,6 +33,27 @@ export function saveGarden(garden: Garden, storageWasReadable: boolean): boolean
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(garden)); return true; }
   catch { return false; }
 }
+// Where "pick up where you left off" should go. A finished reading never sends
+// the reader back to itself: it moves on along that reading's path, then the book.
+export type Resume = { id: number; kind: 'return' | 'continue' | 'next' | 'done'; path?: string; step?: number; total?: number; finishedPath?: string };
+export function resumeFor(garden: Garden, routes: { id: string; route: number[] }[], count = 111): Resume | null {
+  const last = garden.last;
+  if (!last) return null;
+  const route = routes.find(r => r.route.includes(last));
+  const place = (id: number) => route ? { path: route.id, step: route.route.indexOf(id) + 1, total: route.route.length } : {};
+  if (!garden.read.includes(last)) return { id: last, kind: 'return', ...place(last) };
+  if (route) {
+    const at = route.route.indexOf(last);
+    const next = [...route.route.slice(at + 1), ...route.route.slice(0, at)].find(id => !garden.read.includes(id));
+    if (next) return { id: next, kind: 'continue', ...place(next) };
+  }
+  for (let offset = 1; offset < count; offset++) {
+    const id = (last - 1 + offset) % count + 1;
+    if (!garden.read.includes(id)) return { id, kind: 'next', ...(route ? { finishedPath: route.id } : {}) };
+  }
+  return { id: last, kind: 'done' };
+}
+
 export function dailySeedId(date = new Date()) {
   // Local calendar date, stable through the day and independent of daylight saving.
   return Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000) % 111 + 1;
