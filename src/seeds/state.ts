@@ -1,6 +1,13 @@
 export const STORAGE_KEY = 'mindfulmod-timeless-seeds-v1';
 export type Garden = { saved: number[]; read: number[]; notes: Record<string, string>; intentions: Record<string, string>; last: number | null; large: boolean };
 export const emptyGarden = (): Garden => ({ saved: [], read: [], notes: {}, intentions: {}, last: null, large: false });
+export type GardenTab = 'saved' | 'notes' | 'read';
+export function gardenTabFor(garden: Garden, requested?: string | null): GardenTab {
+  if (requested === 'saved' || requested === 'notes' || requested === 'read') return requested;
+  if (garden.saved.length) return 'saved';
+  if ([...Object.values(garden.notes), ...Object.values(garden.intentions)].some(value => value.trim())) return 'notes';
+  return garden.read.length ? 'read' : 'saved';
+}
 const validId = (value: unknown): value is number => Number.isInteger(value) && Number(value) >= 1 && Number(value) <= 111;
 export function validateGarden(value: unknown): Garden {
   if (!value || typeof value !== 'object') return emptyGarden();

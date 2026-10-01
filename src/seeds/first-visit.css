@@ -1,0 +1,125 @@
+/* A clear first reading, in the same coastal room. The scenery and fade stay intact. */
+.seed-hero-copy .seed-first-steps {
+  display: flex; flex-wrap: wrap; gap: 12px 18px; list-style: none;
+  padding: 17px 0 0; margin: 20px 0 0; border-top: 1px solid var(--seed-rule);
+  color: var(--seed-muted); font-size: 12px;
+}
+.seed-first-steps li { display: flex; align-items: center; gap: 7px; }
+.seed-first-steps svg { flex-shrink: 0; color: var(--seed-green); }
+.seeds-app .seed-hero h1 { font-size: clamp(58px, 6vw, 82px); margin: 18px 0; }
+.seeds-app .seed-hero-copy>p { font-size: 15px; line-height: 1.75; }
+.seed-collection-context { max-width: 690px; margin: 24px auto; padding: 13px 20px; border-radius: 8px; background: var(--seed-control-paper); color: var(--seed-muted); font-size: 13px; line-height: 1.8; text-align: center; }
+.seed-collection-context a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; color: var(--seed-green); text-decoration: underline; text-underline-offset: 3px; }
+.seed-path-picker { margin: 24px 0 44px; padding: 0 24px; background: var(--coastal-label-paper); border: 1px solid var(--seed-control-edge); border-top-color: var(--seed-control-paper); border-radius: 9px 24px 9px 9px; box-shadow: var(--coastal-shadow); }
+.seed-path-picker>summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; cursor: pointer; padding: 22px 0; list-style: none; color: var(--seed-ink); font: 34px/1.15 var(--seed-serif); }
+.seed-path-picker>summary small { display: block; margin-top: 8px; font: 13px/1.6 'DM Sans',sans-serif; color: var(--seed-muted); }
+.seed-path-picker>summary svg { flex-shrink: 0; }
+.seed-path-picker>summary::-webkit-details-marker,.reader-disclosure>summary::-webkit-details-marker { display: none; }
+.seed-path-picker[open]>summary>svg,.reader-disclosure[open]>summary>svg:last-child { transform: rotate(180deg); }
+.seed-path-picker .path-grid { padding-bottom: 24px; }
+html[data-seed-appearance="starlight"] .seed-path-picker { background: var(--seed-warm-paper); }
+
+/* A small, explicit way home and one place for reading preferences. */
+.reader-topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 4px 8px; color: var(--seed-ink); }
+.reader-topbar>a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; font-size: 13px; border-radius: 24px; background: var(--seed-control-paper); }
+.reader-topbar .appearance-trigger { background: var(--seed-control-paper); text-shadow: none; padding-inline: 13px; font-size: 12px; }
+.seeds-app .seed-reader { padding-top: 12px; }
+.seeds-app .reader-layout { padding-top: 0; }
+.seeds-app .reader-aside { border-radius: 8px 24px 8px 8px; padding: 25px 20px; }
+.seeds-app .reader-article { padding-top: 24px; }
+.seeds-app .reader-meta { margin: 0; min-height: 24px; }
+.seeds-app .reader-meta .reader-location { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.seeds-app .reader-path-progress { margin: 0; }
+.seeds-app .reader-article>h1 { font-size: clamp(38px,4.5vw,55px); line-height: 1.06; margin: 12px 0 8px; }
+.seeds-app .reader-credit { display: flex; flex-wrap: wrap; align-items: center; gap: 0 14px; margin: 0 0 12px; }
+.seeds-app .reader-credit>p { margin: 0; line-height: 1.6; }
+.seeds-app .reader-credit-links { gap: 0 12px; }
+.seeds-app .reader-credit-links button { font-size: 11px; padding-block: 5px; }
+
+/* Show the whole composition. Sequence controls and the caption remain visible. */
+.seeds-app.is-reading .seed-illustration-leading { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; margin: 0 0 26px; }
+.seed-illustration-leading .seed-illustration-open { max-width: 510px; margin-inline: auto; border-radius: 5px 20px 5px 5px; box-shadow: 0 2px 6px #49372020; }
+.seed-illustration-leading .seed-illustration-open img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: contain; }
+.seed-illustration-leading .seed-illustration-open>span { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; right: 8px; bottom: 8px; }
+.seeds-app.is-reading .seed-illustration-leading figcaption { padding: 10px 0 0; }
+.seeds-app.is-reading .seed-illustration-leading figcaption .reader-section-label { font-size: 9px; line-height: 1.5; letter-spacing: .025em; }
+.seeds-app.is-reading .seed-illustration-leading figcaption p { font-size: 12px; line-height: 1.65; margin-top: 4px; }
+.seed-illustration-leading .seed-art-panels { margin-bottom: 8px; }
+
+/* Continuous reading on one sheet, without another card around each section. */
+.seeds-app.is-reading .seed-explanation { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; margin: 0 0 32px; }
+.seeds-app.is-reading .seed-explanation h2,.seeds-app .book-passage h2 { font-size: 31px; margin: 0; }
+.seeds-app.is-reading .seed-explanation>.reader-section-label { display: block; color: var(--seed-muted); margin-top: 4px; font-size: 10px; letter-spacing: .02em; }
+.seeds-app.is-reading .seed-explanation .reader-prose { margin: 14px 0; }
+.seeds-app .book-passage { margin-bottom: 30px; }
+.seeds-app .book-passage-heading { gap: 6px 16px; align-items: center; flex-wrap: wrap; }
+.seeds-app .book-passage-heading .book-pdf-link { margin: 0; }
+.seeds-app .book-passage-description { margin: 4px 0 12px; }
+.seeds-app .book-original { margin-top: 0; }
+.seeds-app.is-reading .reader-reflection { margin: 30px 0 0; padding: 25px 0 0; border: 0; border-top: 1px solid var(--seed-rule); border-radius: 0; background: none; box-shadow: none; }
+.reader-reflection>h2 { font: 32px/1.25 var(--seed-serif); font-weight: 400; margin: 12px 0 10px; }
+.reflection-invitation { color: var(--seed-muted); font-size: 13px; line-height: 1.7; margin: 0 0 18px; }
+.reader-disclosure { border-block: 1px solid var(--seed-rule); scroll-margin-top: 24px; }
+.reader-disclosure>summary { display: flex; align-items: center; gap: 10px; list-style: none; min-height: 58px; padding: 12px 0; cursor: pointer; color: var(--seed-green); font-size: 13px; line-height: 1.5; }
+.reader-disclosure>summary>span { flex: 1; }
+.reader-disclosure>summary>svg { flex-shrink: 0; }
+.reader-disclosure>summary small { display: block; margin-top: 3px; color: var(--seed-muted); font-size: 11px; }
+.journal-fields { padding: 0 4px 18px; }
+.journal-fields .note-privacy a { min-height: 44px; }
+.reader-activity { margin-top: 12px; border-top: 0; }
+.reader-activity-body { padding-bottom: 16px; }
+.reader-activity .seed-lab { margin: 0; }
+.seeds-app .reader-completion { display: block; margin: 28px 0 0; }
+.reader-completion>p { font: 25px/1.35 var(--seed-serif); color: var(--seed-ink); margin: 0 0 16px; }
+.reader-completion>div { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.reader-completion .seed-text-link { font-size: 12px; }
+.seed-reader [tabindex="-1"]:focus { outline: none; }
+.seed-reader :focus-visible,.seed-path-picker>summary:focus-visible { outline: 2px solid var(--seed-focus); outline-offset: 4px; }
+
+@media(max-width:760px) {
+  .seeds-app .seed-hero { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: 0; gap: 0; }
+  .seeds-app .seed-hero-copy { width: 100%; padding: 25px 24px 22px; margin: 0; border-radius: 8px 27px 0 0; }
+  .seeds-app .seed-hero h1 { font-size: 64px; margin: 14px 0; }
+  .seeds-app .seed-hero-copy>.seed-eyebrow { font-size: 10px; letter-spacing: .045em; }
+  .seeds-app .seed-hero-copy>p { font-size: 14px; line-height: 1.7; margin: 0 0 20px; }
+  .seeds-app .hero-actions { flex-direction: column; align-items: stretch; gap: 5px; }
+  .seeds-app .hero-actions>.seed-text-link { justify-content: center; }
+  .seeds-app .seed-first-steps { margin-top: 10px; padding-top: 15px; gap: 10px; justify-content: space-between; }
+  .seed-first-steps li { flex: 1; flex-direction: column; gap: 6px; text-align: center; font-size: 10px; line-height: 1.5; }
+  .seeds-app .seed-hero-art { position: relative; order: 0; width: 100%; height: 180px; border: 4px solid var(--seed-control-paper); border-top: 0; border-radius: 0 0 7px 7px; box-shadow: var(--coastal-shadow); }
+  .seeds-app .seed-hero-art img { object-position: 50% 55%; }
+  .seed-collection-context { margin: 20px 0; padding: 14px 18px; font-size: 12px; }
+  .seed-path-picker { padding-inline: 20px; margin: 22px 0 30px; }
+  .seed-path-picker>summary { font-size: 30px; padding-block: 20px; }
+  .seed-path-picker>summary small { font-size: 12px; }
+  .seed-path-picker .path-grid { gap: 12px; }
+  .seed-path-picker .path-card { padding-inline: 14px; }
+  .seeds-app .reader-topbar { padding-bottom: 8px; }
+  .seeds-app .reader-article { padding: 20px 20px 28px; border-radius: 8px 25px 8px 8px; }
+  .seeds-app .reader-article>h1 { font-size: 40px; margin: 10px 0 8px; }
+  .seeds-app .reader-desktop-save { display: none; }
+  .seeds-app .reader-credit { gap: 0 10px; margin-bottom: 10px; }
+  .seeds-app.is-reading .seed-illustration-leading { margin-bottom: 22px; }
+  .seeds-app .book-passage-heading { flex-direction: row; justify-content: space-between; }
+  .seeds-app .reader-pagination { display: none; }
+  .reader-reflection>h2 { font-size: 29px; }
+  .reader-completion>p { font-size: 25px; }
+}
+@media(max-width:359px) {
+  .seeds-app .seed-hero-copy { padding: 23px 18px 20px; }
+  .seeds-app .seed-hero h1 { font-size: 56px; }
+  .seeds-app .seed-hero-copy>p { font-size: 13px; }
+  .seeds-app .reader-article { padding-inline: 17px; }
+  .seeds-app .reader-article>h1 { font-size: 36px; }
+  .seeds-app.is-reading .seed-explanation h2,.seeds-app .book-passage h2 { font-size: 29px; }
+  .seed-path-picker .path-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:480px) {
+  .seeds-app .seed-header nav>a[href="#today"] { display: flex; align-items: center; }
+  .seeds-app .seed-header nav>a { padding-inline: 8px; }
+}
+@media(max-width:359px) {
+  .seeds-app .seed-header { height: auto; min-height: 0; flex-wrap: wrap; gap: 10px; padding-block: 10px 14px; }
+  .seeds-app .seed-header .seed-brand { width: 100%; justify-content: center; }
+  .seeds-app .seed-header nav { width: 100%; justify-content: space-around; margin: 0; }
+}

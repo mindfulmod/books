@@ -10,7 +10,7 @@ const directory = await mkdtemp(join(tmpdir(), 'timeless-seeds-check-'));
 try {
   await build({ entryPoints: ['src/seeds/content.ts', 'src/seeds/state.ts'], outdir: directory, bundle: true, platform: 'node', format: 'esm', outExtension: { '.js': '.mjs' } });
   const { seeds, themes, sourceEntries, sourceNotes, sourcePlainText } = await import(pathToFileURL(join(directory, 'content.mjs')));
-  const { validateGarden, dailySeedId, formatGarden, emptyGarden, loadGarden, saveGarden, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
+  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
   assert.deepEqual(seeds.map(s => s.id), Array.from({ length: 111 }, (_, i) => i + 1));
   assert.equal(new Set(seeds.map(s => s.title)).size, 111, 'Every entry needs a distinct title.');
   for (const seed of seeds) {
@@ -85,6 +85,16 @@ try {
     assert.equal(runs.filter(r => typeof r !== 'string' && 'image' in r).length, page.images, `Missing honorific on PDF page ${page.page}`);
   }
   assert.deepEqual(validateGarden(null), emptyGarden());
+  // A reflection-only visitor must not arrive at an empty Saved seeds collection.
+  const reflectionOnly = { ...emptyGarden(), intentions: { 12: 'Help with a meal.' } };
+  assert.equal(gardenTabFor(reflectionOnly), 'notes');
+  assert.equal(gardenTabFor({ ...emptyGarden(), notes: { 12: 'A thought.' } }), 'notes');
+  assert.equal(gardenTabFor({ ...emptyGarden(), notes: { 12: '  ' }, read: [12] }), 'read');
+  assert.equal(gardenTabFor({ ...reflectionOnly, saved: [12] }), 'saved');
+  assert.equal(gardenTabFor({ ...reflectionOnly, saved: [12] }, 'notes'), 'notes');
+  assert.equal(gardenTabFor(reflectionOnly, 'saved'), 'saved');
+  assert.equal(gardenTabFor(reflectionOnly, 'invalid'), 'notes');
+  assert.equal(gardenTabFor(emptyGarden()), 'saved');
   const recovered = validateGarden({ saved: [1, 1, 112, '2', -3, 55], read: 'bad', notes: { 1: 'A note', 112: 'bad', 2: 42 }, intentions: { 1: 'One step' }, last: 999, large: 'true' });
   assert.deepEqual(recovered.saved, [1, 55]);
   assert.deepEqual(recovered.read, []);

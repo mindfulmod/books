@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { flushSync } from 'react-dom';
 import { Check, DeviceMobile, MoonStars, Sun, X } from '@phosphor-icons/react';
 import { assetUrl } from '../assetUrl';
@@ -98,21 +98,23 @@ const choices = [
   { value: 'device', title: 'Device', description: 'Follow your device’s light or dark setting.', Icon: DeviceMobile },
 ] as const;
 
-export function AppearanceControl() {
+export function AppearanceControl({ large, onLarge }: { large?: boolean; onLarge?: () => void }) {
   const { appearance, preference, pending, message, choose, pictures, pictureMessage, choosePictures } = useAppearance();
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
+  const titleId = useId();
   const Icon = appearance === 'starlight' ? MoonStars : Sun;
   return <div className="seed-appearance">
-    <button ref={trigger} className="appearance-trigger" aria-label={`Appearance: ${appearance === 'starlight' ? 'Starlight' : 'Day'}`} aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}><Icon size={18}/><span>{appearance === 'starlight' ? 'Starlight' : 'Day'}</span></button>
-    <dialog ref={dialog} className="appearance-dialog" aria-labelledby="appearance-title" onClose={() => trigger.current?.focus({ preventScroll: true })} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
-      <div className="appearance-heading"><h2 id="appearance-title">Your light, your pace.</h2><button className="seed-icon-button" aria-label="Close appearance" onClick={() => dialog.current?.close()}><X size={20}/></button></div>
+    <button ref={trigger} className="appearance-trigger" aria-label={onLarge ? 'Reading settings' : `Appearance: ${appearance === 'starlight' ? 'Starlight' : 'Day'}`} aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}><Icon size={18}/><span>{onLarge ? 'Reading settings' : 'Appearance'}</span></button>
+    <dialog ref={dialog} className="appearance-dialog" aria-labelledby={titleId} onClose={() => trigger.current?.focus({ preventScroll: true })} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
+      <div className="appearance-heading"><h2 id={titleId}>{onLarge ? 'Reading settings' : 'Your light, your pace.'}</h2><button className="seed-icon-button" aria-label="Close appearance" onClick={() => dialog.current?.close()}><X size={20}/></button></div>
       <p>A different light. The same peaceful place.</p>
       <fieldset><legend className="seed-sr-only">Appearance</legend>{choices.map(({ value, title, description, Icon }) => <label key={value} className="appearance-choice">
         <input type="radio" name="seed-appearance" value={value} checked={preference === value} onChange={() => choose(value)}/><Icon size={24}/><span><strong>{title}</strong><small>{description}</small></span><Check size={18} className="appearance-check"/>
       </label>)}</fieldset>
       <p className="appearance-status" role="status">{pending ? 'Preparing your scenery…' : message || (preference === 'device' ? `Your device is using ${appearance === 'starlight' ? 'Starlight' : 'Day'}.` : 'Your choice stays with you in this browser.')}</p>
       {message && <button className="seed-text-button" onClick={() => choose(preference)}>Try again</button>}
+      {onLarge && <label className="appearance-pictures"><input type="checkbox" checked={large} onChange={onLarge}/><span>Larger reading text<small>For the explanation, book entry and source notes.</small></span></label>}
       <label className="appearance-pictures"><input type="checkbox" checked={pictures} onChange={event => choosePictures(event.target.checked)}/><span>Show seed pictures<small>The captions stay when pictures are hidden.</small></span></label>
       {pictureMessage && <p className="appearance-status" role="status">{pictureMessage}</p>}
       <button className="seed-secondary appearance-done" onClick={() => dialog.current?.close()}>Done</button>
