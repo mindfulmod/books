@@ -643,10 +643,10 @@
   ],
   "77": [
     {
-      "day": "assets/timeless-seeds/illustrations/seed-077",
-      "starlight": "assets/timeless-seeds/illustrations/seed-077-starlight",
-      "alt": "An empty chair and a face-down phone sit beside a cup at a quiet table overlooking the sunny coast.",
-      "nightAlt": "An empty chair and a face-down phone sit beside a cup at a quiet, warmly lit table overlooking a starry coast.",
+      "day": "assets/timeless-seeds/illustrations/seed-077-v2",
+      "starlight": "assets/timeless-seeds/illustrations/seed-077-v2-starlight",
+      "alt": "A face-down phone rests large in the foreground beside a cup on a warm wooden table, with a breezy window opening onto pink clouds and turquoise water.",
+      "nightAlt": "The same phone and cup rest on the warmly lit table, beside an open window overlooking bright stars, pink clouds and moonlit water.",
       "caption": "Pause and think before you reply."
     }
   ],

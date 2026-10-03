@@ -87,6 +87,14 @@ try {
       for (const appearance of ['day','starlight']) await access(join('public', state.scenePath(scene,width,appearance)));
     }
   }
+  const refinement = JSON.parse(await readFile('artwork/timeless-seeds/seed-illustrations/refinements/seed-077-v2-record.json', 'utf8'));
+  assert.equal(refinement.review, 'approved');
+  assert.equal(refinement.images.length, 2);
+  for (const image of refinement.images) {
+    assert(image.prompt.length > 100);
+    await access(join('artwork/timeless-seeds/seed-illustrations/refinements', image.master));
+  }
+  assert(seedIllustrations[77][0].day.endsWith('seed-077-v2'));
   const dayBook = await readFile('public/assets/timeless-seeds/open-book-edge.svg','utf8');
   const nightBook = await readFile('public/assets/timeless-seeds/open-book-edge-starlight.svg','utf8');
   const paths = svg => [...svg.matchAll(/ d="([^"]+)"/g)].map(match=>match[1]);

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, Check, Leaf, Sun, Drop, Heart, HandHeart } from '@phosphor-icons/react';
 import type { ThemeId } from './content';
+import { pathGuidance } from './pathGuidance';
 
 const trustCards = [
   { text: 'Prepare carefully', own: true, why: 'You can choose to prepare. Give the work your time and attention.' },
@@ -13,6 +14,8 @@ export default function PracticeLab({ theme, seedId }: { theme: ThemeId; seedId:
   const [choice, setChoice] = useState(0);
   const [answer, setAnswer] = useState<boolean | null>(null);
   const [blessings, setBlessings] = useState(['', '', '']);
+  const practice = pathGuidance[seedId]?.activity;
+  if (practice) return <div className="seed-lab lab-guided"><h3>{practice.title}</h3><p>Take these steps in your mind. There is nothing you need to write.</p><div className="lab-statement-choices">{practice.steps.map((step, index) => <button key={step.label} aria-pressed={choice === index} onClick={() => setChoice(index)}><span>0{index + 1}</span>{step.label}<ArrowRight size={17}/></button>)}</div><div className="lab-response" aria-live="polite"><strong>{practice.steps[choice].label}</strong><p>{practice.steps[choice].text}</p></div></div>;
   if (seedId === 1) {
     const parts = [
       { label: 'The dog', heading: 'An attack that is hard to fight alone.', text: 'In the story, a dog threatens to attack a person. It is a picture of Satan trying to harm or mislead someone.' },

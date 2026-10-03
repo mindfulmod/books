@@ -1,6 +1,7 @@
 import explanations from './explanations.json';
 import sourceText from './source-text.json';
 import sourceCredits from './source-credits.json';
+import { pathGuidance } from './pathGuidance';
 
 export type ThemeId = 'hope' | 'trust' | 'presence' | 'return' | 'gratitude' | 'kindness';
 export const themes: { id: ThemeId; title: string; short: string; invitation: string; description: string; route: number[]; practice: string }[] = [
@@ -26,6 +27,6 @@ export const sourcePlainText = (blocks: SourceBlock[]) => blocks.map(b => b.runs
 export const seeds: Seed[] = explanations.map(row => {
   const source = sourceEntries.find(s => s.id === row.id)!;
   const credit = sourceCredits.find(c => c.id === row.id)!;
-  return { ...row, theme: row.theme as ThemeId, page: source.page, lastPage: source.lastPage, source, credit };
+  return { ...row, prompt: pathGuidance[row.id]?.question || row.prompt, theme: row.theme as ThemeId, page: source.page, lastPage: source.lastPage, source, credit };
 });
 export const getTheme = (id: ThemeId) => themes.find(t => t.id === id)!;

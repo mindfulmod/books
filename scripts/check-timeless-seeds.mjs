@@ -8,9 +8,12 @@ import { build } from 'esbuild';
 
 const directory = await mkdtemp(join(tmpdir(), 'timeless-seeds-check-'));
 try {
-  await build({ entryPoints: ['src/seeds/content.ts', 'src/seeds/state.ts'], outdir: directory, bundle: true, platform: 'node', format: 'esm', outExtension: { '.js': '.mjs' } });
+  await build({ entryPoints: ['src/seeds/content.ts', 'src/seeds/state.ts', 'src/seeds/readingPlace.ts', 'src/seeds/pathGuidance.ts', 'src/seeds/navigation.ts', 'src/seeds/paths.ts', 'src/seeds/discovery.ts', 'src/seeds/readingPreferences.ts', 'src/seeds/visualStories.ts', 'src/seeds/illustrations.ts'], outdir: directory, bundle: true, platform: 'node', format: 'esm', outExtension: { '.js': '.mjs' } });
   const { seeds, themes, sourceEntries, sourceNotes, sourcePlainText } = await import(pathToFileURL(join(directory, 'content.mjs')));
-  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, resumeFor, followUpFor, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
+  const { validateGarden, dailySeedId, formatGarden, emptyGarden, gardenTabFor, loadGarden, saveGarden, resumeFor, finishReading, followUpFor, STORAGE_KEY } = await import(pathToFileURL(join(directory, 'state.mjs')));
+  const { validatePlace, placeScrollTop, loadPlace, loadPlaceForEntry, savePlace } = await import(pathToFileURL(join(directory, 'readingPlace.mjs')));
+  const { parseSeedRoute, seedUrl, isSeedRoute } = await import(pathToFileURL(join(directory, 'navigation.mjs')));
+  const { pathGuidance, pathClosings } = await import(pathToFileURL(join(directory, 'pathGuidance.mjs')));
   assert.deepEqual(seeds.map(s => s.id), Array.from({ length: 111 }, (_, i) => i + 1));
   assert.equal(new Set(seeds.map(s => s.title)).size, 111, 'Every entry needs a distinct title.');
   for (const seed of seeds) {
@@ -68,7 +71,51 @@ try {
   assert(sourcePlainText(seeds[19].source.blocks).includes('Allah ﷺ'), 'Source honorifics must remain as printed.');
   const reader = await readFile('src/seeds/SeedsApp.tsx', 'utf8');
   assert(reader.indexOf('id="seed-explanation"') < reader.indexOf('<BookPassage seed={seed}/>'));
-  assert(reader.includes('sourcePlainText(s.source.blocks)'), 'Search must include the full book text.');
+  const { matchesSeed, excerptFor, readingMinutes } = await import(pathToFileURL(join(directory, 'discovery.mjs')));
+  const { readingPaths, situationPaths, getPath } = await import(pathToFileURL(join(directory, 'paths.mjs')));
+  const { loadReading, validateReading, defaultReading, READING_KEY } = await import(pathToFileURL(join(directory, 'readingPreferences.mjs')));
+  const { visualStories } = await import(pathToFileURL(join(directory, 'visualStories.mjs')));
+  const { seedIllustrations } = await import(pathToFileURL(join(directory, 'illustrations.mjs')));
+  // Search matches original words, not just the editable reading aid.
+  assert(matchesSeed(seeds[45], 'hungry and return'));
+  assert.equal(excerptFor(seeds[45], 'hungry and return').from, 'Original words');
+  assert(excerptFor(seeds[45], 'hungry and return').text.includes('hungry and return'));
+  assert(matchesSeed(seeds[76], '#77'));
+  assert(!matchesSeed(seeds[76], '7'), 'A seed-number search is exact.');
+  assert(matchesSeed(seeds[76], '  SPEAK  '));
+  for (const seed of seeds) assert(readingMinutes(seed) >= 1);
+  assert.equal(situationPaths.length, 4);
+  for (const path of readingPaths) {
+    assert.equal(new Set(path.route).size, path.route.length);
+    assert(path.route.every(id => seeds[id - 1]));
+    assert.equal(path.steps.length, path.route.length);
+    assert(path.closing.length > 40);
+    assert.equal(parseSeedRoute(seedUrl(path.route[0], path.id)).path, path.id);
+  }
+  const argument = getPath('after-argument');
+  const returning = validateGarden({ last: 77, lastPath: argument.id, notes: {77:'Keep this thought'} });
+  assert.equal(resumeFor(returning, readingPaths).path, argument.id);
+  assert.equal(resumeFor(finishReading(returning,77), readingPaths).id, 57);
+  assert.equal(resumeFor({...returning,read:argument.route},readingPaths).kind, 'path-complete');
+  assert.equal(returning.notes[77], 'Keep this thought');
+  assert.deepEqual(validateReading({size:99,spacing:'bad',contrast:'true'}),defaultReading);
+  const priorStorage = globalThis.localStorage;
+  try {
+    globalThis.localStorage={getItem:key=>key===READING_KEY?null:JSON.stringify({large:true,notes:{77:'keep'}})};
+    assert.equal(loadReading().size,2,'Migrate the previous larger-text choice.');
+    globalThis.localStorage={getItem:key=>key===READING_KEY?JSON.stringify({size:3,spacing:'open',contrast:true}):null};
+    assert.deepEqual(loadReading(),{size:3,spacing:'open',contrast:true});
+    globalThis.localStorage={getItem:()=>{throw new Error('blocked')}};
+    assert.deepEqual(loadReading(),defaultReading);
+  } finally { if(priorStorage===undefined) delete globalThis.localStorage; else globalThis.localStorage=priorStorage; }
+  assert.notEqual(READING_KEY,STORAGE_KEY);
+  for (const [id,moments] of Object.entries(visualStories)) {
+    assert.equal(moments.length,3);
+    for(const moment of moments) {
+      assert(seedIllustrations[id][moment.frame??0],`Missing story artwork for seed ${id}`);
+      assert(moment.text.length>40 && moment.zoom>=1 && moment.zoom<=2);
+    }
+  }
   const auditVerbatim = JSON.parse(await readFile('review/timeless-seeds/verbatim-audit.json', 'utf8'));
   assert.equal(auditVerbatim.pages.length, 245);
   assert.deepEqual(auditVerbatim.blankPages, [63]);
@@ -89,12 +136,49 @@ try {
   // Returning readers move on from a finished reading instead of being sent back to it.
   const kindness = themes.find(t => t.id === 'kindness');
   assert.equal(resumeFor(emptyGarden(), themes), null);
-  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12 }, themes), { id: 12, kind: 'return', path: 'kindness', step: 1, total: 4 });
-  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12, read: [12] }, themes), { id: kindness.route[1], kind: 'continue', path: 'kindness', step: 2, total: 4 });
-  assert.deepEqual(resumeFor({ ...emptyGarden(), last: kindness.route[3], read: [...kindness.route] }, themes), { id: kindness.route[3] % 111 + 1, kind: 'next', finishedPath: 'kindness' });
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12, lastPath: 'kindness' }, themes), { id: 12, kind: 'return', path: 'kindness', step: 1, total: 4 });
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12, lastPath: 'kindness', read: [12] }, themes), { id: kindness.route[1], kind: 'continue', path: 'kindness', step: 2, total: 4 });
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: kindness.route[3], lastPath: 'kindness', read: [...kindness.route] }, themes), { id: kindness.route[3], kind: 'path-complete', path: 'kindness', step: 4, total: 4 });
   const offPath = seeds.find(s => !themes.some(t => t.route.includes(s.id)) && s.id < 111).id;
   assert.deepEqual(resumeFor({ ...emptyGarden(), last: offPath, read: [offPath] }, themes), { id: offPath + 1, kind: 'next' });
   assert.equal(resumeFor({ ...emptyGarden(), last: 5, read: seeds.map(s => s.id) }, themes).kind, 'done');
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12, read: [12] }, themes), { id: 13, kind: 'next' }, 'Reading in book order must not opt someone into a path.');
+  assert.deepEqual(resumeFor({ ...emptyGarden(), last: 12, lastPath: 'hope' }, themes), { id: 12, kind: 'return' }, 'An invalid path/seed pairing is ignored.');
+  const written = { ...emptyGarden(), last: 15, lastPath: 'hope', notes: { 15: 'A thought' }, intentions: { 15: 'Ask for help' } };
+  assert.equal(resumeFor(written, themes).id, 15, 'Writing does not finish the reading.');
+  const finished = finishReading(written, 15);
+  assert.deepEqual(finished.read, [15]);
+  assert.deepEqual(finishReading(finished, 15).read, [15], 'Finishing twice is idempotent.');
+  assert.deepEqual(finishReading(finished, 15, false), written, 'Undo preserves all writing and path context.');
+  assert.equal(resumeFor(finished, themes).id, 50);
+  assert.deepEqual(validateGarden({ last: 15 }).lastPath, null, 'Older saved gardens remain readable without guessing a path.');
+  assert.equal(gardenTabFor(emptyGarden(), 'actions'), 'actions');
+  assert.deepEqual(Object.keys(pathGuidance).map(Number).sort((a,b) => a-b), themes.flatMap(t => t.route).sort((a,b) => a-b));
+  for (const theme of themes) {
+    assert(pathClosings[theme.id]);
+    theme.route.forEach((id, index) => {
+      const guide = pathGuidance[id];
+      assert(guide.question.endsWith('?') && guide.captions.length > 0);
+      if (index < 3) assert(guide.onward, `Missing transition for ${id}`);
+      assert(guide.activity?.steps.length === 3 || [48, 108].includes(id), `Missing specific practice for ${id}`);
+    });
+  }
+  assert.equal(validatePlace({ anchor: '<invalid>', fraction: 0 }), null);
+  assert.equal(validatePlace({ anchor: 'reading-3', fraction: NaN }), null);
+  assert.deepEqual(validatePlace({ anchor: 'reading-3', fraction: 2, open: ['book-note-2', null, 'bad value'] }), { anchor: 'reading-3', fraction: 1, open: ['book-note-2'] });
+  assert.equal(placeScrollTop(800, 200, .5), 800);
+  assert.equal(placeScrollTop(800, 400, .5), 900, 'A larger font keeps the same relative point in the paragraph.');
+  assert.equal(placeScrollTop(0, 20, 0), 0);
+  const nextRoute = parseSeedRoute(seedUrl(50, 'hope'));
+  assert.equal(nextRoute.id, 50);
+  assert.equal(nextRoute.path, 'hope');
+  assert.equal(nextRoute.entry, 'start', 'An ordinary seed link starts at the top.');
+  assert.equal(parseSeedRoute(seedUrl(50, 'hope'), 'resume').entry, 'resume');
+  assert.equal(parseSeedRoute(seedUrl(50, 'hope', 'journal')).part, 'journal', 'Explicit section links survive routing.');
+  assert.equal(parseSeedRoute('#seed-50?path=invalid&part=invalid').part, undefined);
+  assert.equal(parseSeedRoute('#seed-50?path=invalid').path, undefined);
+  for (const route of ['#today', '#explore?theme=hope', '#garden?tab=actions', '#seed-50?path=hope']) assert(isSeedRoute(route));
+  for (const route of ['#book-note-22', '#seeds-main', '/books/assets/timeless-seeds/source.pdf', '#today-extra']) assert(!isSeedRoute(route), `Do not hijack unrelated links: ${route}`);
   // A reflection-only visitor must not arrive at an empty Saved seeds collection.
   const reflectionOnly = { ...emptyGarden(), intentions: { 12: 'Help with a meal.' } };
   assert.equal(gardenTabFor(reflectionOnly), 'notes');
@@ -143,6 +227,15 @@ try {
       assert.equal(saveGarden(garden, !initial.error), false);
       assert.equal(stored, corrupt, 'Never replace unreadable saved writing with an empty garden or a new draft.');
     }
+    const positions = new Map();
+    globalThis.localStorage = { getItem: key => positions.get(key) ?? null, setItem: (key, value) => positions.set(key, value) };
+    const place = { anchor: 'reading-9', fraction: .35, open: ['book-note-3'] };
+    savePlace(15, place);
+    assert.deepEqual(loadPlace(15), place);
+    assert.equal(loadPlaceForEntry(15, 'start'), null, 'Regression: Next must ignore a previously saved bottom-of-seed position.');
+    assert.deepEqual(loadPlaceForEntry(15, 'resume'), place, 'Resume, reload and browser history still recover the saved place.');
+    assert.deepEqual(loadPlace(15), place, 'Starting a seed must not erase a saved place during route resolution.');
+    assert.equal(loadPlace(50), null, 'Reading positions stay separate per seed.');
     let stored = null;
     globalThis.localStorage = { getItem: () => stored, setItem: (_, value) => { stored = value; } };
     const initial = loadGarden();
@@ -157,7 +250,7 @@ try {
   const source = await readFile('public/assets/timeless-seeds/source.pdf');
   const audit = JSON.parse(await readFile('review/timeless-seeds/source-audit.json', 'utf8'));
   assert.equal(createHash('sha256').update(source).digest('hex'), audit.sha256, 'The source PDF must stay unchanged.');
-  console.log('PASS: 111 original entries and separate explanations; all 117 notes reachable; original list, quote and typo preservation; explanation-first reader; full-text search; six paths; local state, safe recovery and export; unchanged PDF.');
+  console.log('PASS: 111 original entries and separate explanations; all 117 notes reachable; original list, quote and typo preservation; explanation-first reader; full-text search and excerpts; six feeling paths and four situation paths; reading preference migration; visual stories; local state, safe recovery and export; unchanged PDF.');
 } finally {
   await rm(directory, { recursive: true, force: true });
 }

@@ -1,11 +1,12 @@
+import { isPathId } from './paths';
 export const STORAGE_KEY = 'mindfulmod-timeless-seeds-v1';
 export type FollowUp = 'done' | 'later';
 // planned: the local day ("YYYY-MM-DD") a small action was last written, so a later visit can ask how it went.
-export type Garden = { saved: number[]; read: number[]; notes: Record<string, string>; intentions: Record<string, string>; planned: Record<string, string>; followUps: Record<string, FollowUp>; last: number | null; large: boolean };
-export const emptyGarden = (): Garden => ({ saved: [], read: [], notes: {}, intentions: {}, planned: {}, followUps: {}, last: null, large: false });
-export type GardenTab = 'saved' | 'notes' | 'read';
+export type Garden = { saved: number[]; read: number[]; notes: Record<string, string>; intentions: Record<string, string>; planned: Record<string, string>; followUps: Record<string, FollowUp>; last: number | null; lastPath: string | null; large: boolean };
+export const emptyGarden = (): Garden => ({ saved: [], read: [], notes: {}, intentions: {}, planned: {}, followUps: {}, last: null, lastPath: null, large: false });
+export type GardenTab = 'saved' | 'notes' | 'actions' | 'read';
 export function gardenTabFor(garden: Garden, requested?: string | null): GardenTab {
-  if (requested === 'saved' || requested === 'notes' || requested === 'read') return requested;
+  if (requested === 'saved' || requested === 'notes' || requested === 'actions' || requested === 'read') return requested;
   if (garden.saved.length) return 'saved';
   if ([...Object.values(garden.notes), ...Object.values(garden.intentions)].some(value => value.trim())) return 'notes';
   return garden.read.length ? 'read' : 'saved';
@@ -19,7 +20,8 @@ export function validateGarden(value: unknown): Garden {
     ? Object.fromEntries(Object.entries(value).filter(([key, v]) => validId(Number(key)) && typeof v === 'string').map(([k, v]) => [k, (v as string).slice(0, 20000)])) : {};
   const planned = Object.fromEntries(Object.entries(entries(source.planned)).filter(([, day]) => /^\d{4}-\d{2}-\d{2}$/.test(day)));
   const followUps = Object.fromEntries(Object.entries(entries(source.followUps)).filter(([, value]) => value === 'done' || value === 'later')) as Record<string, FollowUp>;
-  return { saved: ids(source.saved), read: ids(source.read), notes: entries(source.notes), intentions: entries(source.intentions), planned, followUps, last: validId(source.last) ? source.last : null, large: source.large === true };
+  const lastPath = typeof source.lastPath === 'string' && isPathId(source.lastPath) ? source.lastPath : null;
+  return { saved: ids(source.saved), read: ids(source.read), notes: entries(source.notes), intentions: entries(source.intentions), planned, followUps, last: validId(source.last) ? source.last : null, lastPath, large: source.large === true };
 }
 export function loadGarden(): { garden: Garden; error: boolean } {
   try {
@@ -37,23 +39,28 @@ export function saveGarden(garden: Garden, storageWasReadable: boolean): boolean
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(garden)); return true; }
   catch { return false; }
 }
-// Where "pick up where you left off" should go. A finished reading never sends
-// the reader back to itself: it moves on along that reading's path, then the book.
-export type Resume = { id: number; kind: 'return' | 'continue' | 'next' | 'done'; path?: string; step?: number; total?: number; finishedPath?: string };
+// Only the explicit finish control changes read markers. Visiting, scrolling,
+// bookmarking and writing are independent of completing a reading.
+export function finishReading(garden: Garden, id: number, finished = true): Garden {
+  if (!validId(id)) return garden;
+  return { ...garden, read: finished ? [...new Set([...garden.read, id])] : garden.read.filter(value => value !== id) };
+}
+export type Resume = { id: number; kind: 'return' | 'continue' | 'next' | 'path-complete' | 'done'; path?: string; step?: number; total?: number };
 export function resumeFor(garden: Garden, routes: { id: string; route: number[] }[], count = 111): Resume | null {
   const last = garden.last;
   if (!last) return null;
-  const route = routes.find(r => r.route.includes(last));
+  const route = routes.find(r => r.id === garden.lastPath && r.route.includes(last));
   const place = (id: number) => route ? { path: route.id, step: route.route.indexOf(id) + 1, total: route.route.length } : {};
   if (!garden.read.includes(last)) return { id: last, kind: 'return', ...place(last) };
   if (route) {
     const at = route.route.indexOf(last);
     const next = [...route.route.slice(at + 1), ...route.route.slice(0, at)].find(id => !garden.read.includes(id));
     if (next) return { id: next, kind: 'continue', ...place(next) };
+    return { id: last, kind: 'path-complete', ...place(last) };
   }
   for (let offset = 1; offset < count; offset++) {
     const id = (last - 1 + offset) % count + 1;
-    if (!garden.read.includes(id)) return { id, kind: 'next', ...(route ? { finishedPath: route.id } : {}) };
+    if (!garden.read.includes(id)) return { id, kind: 'next' };
   }
   return { id: last, kind: 'done' };
 }

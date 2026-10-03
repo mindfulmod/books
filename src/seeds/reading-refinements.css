@@ -176,12 +176,11 @@ a.growth-plot:hover { border-color: var(--seed-ink); }
   .growth-compact-copy { flex: 1; }
 }
 
-/* The one line to carry away, right under the title. */
-.reader-takeaway { margin: 4px 0 14px; padding-left: 14px; border-left: 2px solid var(--tone); font: italic 22px/1.35 var(--seed-serif); color: var(--seed-ink); }
 .reader-meta-actions { display: flex; align-items: center; gap: 4px; }
+.reader-takeaway { margin: 8px 0 16px; font: 24px/1.4 var(--seed-serif); color: var(--seed-ink); }
 .seeds-app .reader-meta-actions .reader-desktop-save { display: inline-flex; }
 @media (max-width: 760px) {
-  .reader-takeaway { font-size: 20px; }
+  .reader-takeaway { font-size: 22px; }
   .seeds-app .reader-meta-actions .reader-desktop-save { display: none; }
 }
 
@@ -252,4 +251,54 @@ a.growth-plot:hover { border-color: var(--seed-ink); }
 @media (max-width: 760px) {
   .seeds-app .seed-footer { flex-direction: column; align-items: flex-start; gap: 6px; }
   .footer-links { gap: 0 18px; }
+}
+
+/* Source credits stay quiet; the full passage has its own heading below. */
+.source-credit-label { font-size: 12px; color: var(--seed-muted); }
+.seeds-app .reader-credit { align-items: baseline; gap: 0 8px; }
+.seeds-app.is-reading .reader-reflection>.reader-section-label { text-transform: none; letter-spacing: 0; font-size: 12px; }
+.seeds-app.is-reading .seed-illustration-leading figcaption p { margin-block: 3px 0; }
+
+/* Finishing belongs to the reader; the next seed never silently finishes this one. */
+.reader-completion .reader-finish { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 24px; padding-bottom: 22px; border-bottom: 1px solid var(--seed-rule); }
+.reader-finish>div { flex: 1 1 230px; }
+.reader-finish strong { font: 25px/1.25 var(--seed-serif); font-weight: 400; color: var(--seed-ink); }
+.reader-finish p { margin: 7px 0 0; font-size: 13px; line-height: 1.65; color: var(--seed-muted); }
+.reader-finish .seed-secondary { flex-shrink: 0; }
+.reader-completion .path-transition { font: 15px/1.7 'DM Sans', sans-serif; color: var(--seed-muted); margin-bottom: 18px; }
+.reader-completion .path-ending { display: block; margin: 0 0 22px; }
+.path-ending h2 { font: 29px/1.2 var(--seed-serif); margin: 0 0 12px; font-weight: 400; }
+.path-ending p { font-size: 15px; line-height: 1.8; margin: 0 0 12px; }
+.path-ending small { font-size: 12px; color: var(--seed-muted); }
+
+/* The garden opens on things the reader has kept; progress is optional. */
+.seeds-app .garden-intro { display: grid; grid-template-columns: 105px minmax(0, 1fr); gap: 20px; padding-bottom: 22px; margin-bottom: 12px; }
+.seeds-app .garden-illustration { width: 105px; height: 105px; }
+.seeds-app .garden-intro h1 { font-size: 48px; }
+.seeds-app .garden-intro p { margin-bottom: 0; }
+.seeds-app .garden-tabs { margin-top: 0; }
+.garden-tools { border-top: 1px solid var(--seed-rule); margin-top: 36px; padding-top: 8px; }
+.garden-progress-disclosure>summary { display: flex; align-items: center; justify-content: space-between; min-height: 56px; gap: 16px; cursor: pointer; list-style: none; color: var(--seed-ink); font-size: 14px; }
+.garden-progress-disclosure>summary::-webkit-details-marker { display: none; }
+.garden-progress-disclosure[open]>summary svg { transform: rotate(180deg); }
+.garden-progress-disclosure .garden-growth { margin-top: 8px; }
+.garden-tools .garden-privacy { font-size: 12px; line-height: 1.7; max-width: 600px; }
+.garden-return { display: flex; align-items: center; gap: 15px; padding: 18px 22px; margin-block: 24px; border: 1px solid var(--seed-rule); border-radius: 8px 22px 8px 8px; background: var(--coastal-label-paper); box-shadow: var(--coastal-shadow); color: var(--seed-ink); }
+.garden-return>span { flex: 1; }
+.garden-return strong { display: block; font: 24px/1.2 var(--seed-serif); font-weight: 400; }
+.garden-return small { display: block; margin-top: 5px; font-size: 12px; color: var(--seed-muted); }
+.garden-return>svg { flex-shrink: 0; color: var(--seed-green); }
+@media (max-width: 760px) {
+  .seeds-app .garden-intro { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
+  .seeds-app .garden-illustration { width: 76px; height: 88px; flex-shrink: 0; }
+  .seeds-app .garden-intro h1 { font-size: 39px; margin: 5px 0; }
+  .seeds-app .garden-intro .seed-eyebrow { display: none; }
+  .seeds-app .garden-intro p { font-size: 13px; line-height: 1.6; }
+  .seeds-app .garden-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; padding-inline: 6px; }
+  .seeds-app .garden-tabs button { justify-content: center; min-width: 0; padding-inline: 2px; min-height: 46px; font-size: 13px; white-space: nowrap; }
+}
+
+.garden-finished-heading { font: 32px/1.2 var(--seed-serif); font-weight: 400; margin-block: 0 22px; }
+@media (max-width: 359px) {
+ .seeds-app .garden-tabs button { flex-direction: column; gap: 3px; padding-block: 10px; }
 }

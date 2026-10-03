@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-02",
+  "mode": "built-in image_gen; no model override",
+  "seed": 77,
+  "review": "approved",
+  "reason": "At mobile width the original phone was too small. The replacement keeps the same coastal setting and enlarges the ordinary object that supports a pause before replying.",
+  "images": [
+    {
+      "master": "seed-077-v2.png",
+      "source": "/Users/main/.codex/generated_images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-4f74e148-6432-4d1d-a726-1533d88e0843.png",
+      "prompt": "Use case: precise-object-edit. Edit target: the supplied Seed 77 painting. Make a new refined landscape 3:2 illustration for a small mobile reading app. The lesson is pausing before replying: bring the face-down unbranded phone and its sunlit wooden table into the central foreground so the phone is immediately recognizable even at 320px width. Recompose closer to the table: phone fills roughly a quarter of the frame width in the lower middle; one ceramic blue-floral cup to its right, a small portion of the linen chair at left. Retain the same cozy hand-painted gouache, textured warm peach plaster, breezy open wooden window, bright turquoise sea, tropical island, pink Hawaiian clouds, soft sunlight and leaf shadows. Keep depth, warmth, calm, natural object perspective. Simplify distant decor; no extra props. No people, hands, text, logos, letters, symbols or watermarks. The image should express an ordinary pause before speaking, never a sacred figure or unseen reality. This is the Day version; leave room for a matching lighting-only Starlight edit."
+    },
+    {
+      "master": "seed-077-v2-starlight.png",
+      "source": "/Users/main/.codex/generated_images/01a0dbb4-60e4-7f52-bed2-5b6c5a5b7e22/exec-03d448a5-c51d-4cdd-a190-b36cb40f9ed5.png",
+      "prompt": "Use case: lighting-weather. Edit target: the supplied refined Seed 77 Day painting. Create its Starlight companion. Preserve exactly the phone, cup, chair, table, window, island, flowers, foliage, composition, perspective, dimensions, gouache brushwork and every object placement. Change only lighting and sky: luminous deep periwinkle blue with many delicate bright stars, cozy rosy pink clouds, soft turquoise moonlit sea and gentle golden indoor lamplight falling from off-frame left onto the warm wooden table and peach plaster. Phone and cup remain clearly readable. Keep the interior bright and welcoming with rich warm colors; no gloomy darkness, muddy gray, purple tint over everything, or black silhouettes. No new lamp or props, people, letters, logos or watermarks. One landscape 3:2 painting, same geometry as the reference."
+    }
+  ],
+  "verification": "Both outputs visually inspected. Matched object geometry; enlarged phone readable on phone-width preview. Warm interior and pink coastal sky retained."
+}

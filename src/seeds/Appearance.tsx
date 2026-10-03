@@ -2,13 +2,15 @@ import { createContext, useCallback, useContext, useEffect, useId, useRef, useSt
 import { flushSync } from 'react-dom';
 import { Check, DeviceMobile, MoonStars, Sun, X } from '@phosphor-icons/react';
 import { assetUrl } from '../assetUrl';
+import { READING_KEY, loadReading, validateReading, type ReadingPreferences } from './readingPreferences';
 import { APPEARANCE_KEY, PICTURES_KEY, illustrationPath, loadPictures, loadPreference, parsePreference, resolveAppearance, scenePath, type Appearance, type AppearancePreference } from './appearanceState';
 
 const AppearanceContext = createContext<{
   appearance: Appearance; preference: AppearancePreference; pending: boolean; message: string;
   choose: (preference: AppearancePreference) => void;
+  reading: ReadingPreferences; readingMessage: string; changeReading: (change: Partial<ReadingPreferences>) => void;
   pictures: boolean; pictureMessage: string; choosePictures: (visible: boolean) => void;
-}>({ appearance: 'day', preference: 'device', pending: false, message: '', choose: () => {}, pictures: true, pictureMessage: '', choosePictures: () => {} });
+}>({ appearance: 'day', preference: 'device', pending: false, message: '', choose: () => {}, reading: { size: 1, spacing: 'comfortable', contrast: false }, readingMessage: '', changeReading: () => {}, pictures: true, pictureMessage: '', choosePictures: () => {} });
 export const useAppearance = () => useContext(AppearanceContext);
 
 async function prepareVisibleArtwork(appearance: Appearance) {
@@ -42,6 +44,20 @@ export function AppearanceProvider({ children }: { children: ReactNode }) {
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState('');
   const [pictures, setPictures] = useState(loadPictures);
+  const [reading, setReading] = useState(loadReading);
+  const [readingMessage, setReadingMessage] = useState('');
+  const changeReading = (change: Partial<ReadingPreferences>) => {
+    const next = validateReading({ ...reading, ...change });
+    try { localStorage.setItem(READING_KEY, JSON.stringify(next)); setReadingMessage(''); }
+    catch { setReadingMessage('Reading settings changed for this visit. This browser could not save them.'); }
+    setReading(next);
+  };
+  useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.readingSize = String(reading.size);
+    root.dataset.readingSpacing = reading.spacing;
+    root.dataset.readingContrast = reading.contrast ? 'strong' : 'normal';
+  }, [reading]);
   const [pictureMessage, setPictureMessage] = useState('');
   const choosePictures = (visible: boolean) => {
     setPictures(visible);
@@ -84,12 +100,13 @@ export function AppearanceProvider({ children }: { children: ReactNode }) {
     const onStorage = (event: StorageEvent) => {
       if (event.key === APPEARANCE_KEY || event.key === null) void apply(parsePreference(event.newValue), false);
       if (event.key === PICTURES_KEY || event.key === null) setPictures(loadPictures());
+      if (event.key === READING_KEY || event.key === null) setReading(loadReading());
     };
     media.addEventListener('change', onDevice);
     window.addEventListener('storage', onStorage);
     return () => { ++generation.current; media.removeEventListener('change', onDevice); window.removeEventListener('storage', onStorage); };
   }, [apply]);
-  return <AppearanceContext.Provider value={{ appearance, preference, pending, message, choose: next => void apply(next, true), pictures, pictureMessage, choosePictures }}>{children}</AppearanceContext.Provider>;
+  return <AppearanceContext.Provider value={{ appearance, preference, pending, message, choose: next => void apply(next, true), pictures, pictureMessage, choosePictures, reading, readingMessage, changeReading }}>{children}</AppearanceContext.Provider>;
 }
 
 const choices = [
@@ -98,23 +115,29 @@ const choices = [
   { value: 'device', title: 'Device', description: 'Follow your device’s light or dark setting.', Icon: DeviceMobile },
 ] as const;
 
-export function AppearanceControl({ large, onLarge, iconOnly = false }: { large?: boolean; onLarge?: () => void; iconOnly?: boolean }) {
-  const { appearance, preference, pending, message, choose, pictures, pictureMessage, choosePictures } = useAppearance();
+export function AppearanceControl({ reader = false, iconOnly = false }: { reader?: boolean; iconOnly?: boolean }) {
+  const { appearance, preference, pending, message, choose, pictures, pictureMessage, choosePictures, reading, readingMessage, changeReading } = useAppearance();
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const titleId = useId();
   const Icon = appearance === 'starlight' ? MoonStars : Sun;
   return <div className={`seed-appearance${iconOnly ? ' is-icon-only' : ''}`}>
-    <button ref={trigger} className="appearance-trigger" aria-label={onLarge ? 'Reading settings' : `Appearance: ${appearance === 'starlight' ? 'Starlight' : 'Day'}`} aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}><Icon size={iconOnly ? 20 : 18}/><span className={iconOnly ? 'seed-sr-only' : undefined}>{onLarge ? 'Reading settings' : 'Appearance'}</span></button>
+    <button ref={trigger} className="appearance-trigger" aria-label={reader ? 'Reading settings' : `Appearance: ${appearance === 'starlight' ? 'Starlight' : 'Day'}`} aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}><Icon size={iconOnly ? 20 : 18}/><span className={iconOnly ? 'seed-sr-only' : undefined}>{reader ? 'Reading settings' : 'Appearance'}</span></button>
     <dialog ref={dialog} className="appearance-dialog" aria-labelledby={titleId} onClose={() => trigger.current?.focus({ preventScroll: true })} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
-      <div className="appearance-heading"><h2 id={titleId}>{onLarge ? 'Reading settings' : 'Your light, your pace.'}</h2><button className="seed-icon-button" aria-label="Close appearance" onClick={() => dialog.current?.close()}><X size={20}/></button></div>
+      <div className="appearance-heading"><h2 id={titleId}>{reader ? 'Reading settings' : 'Your light, your pace.'}</h2><button className="seed-icon-button" aria-label="Close appearance" onClick={() => dialog.current?.close()}><X size={20}/></button></div>
       <p>A different light. The same peaceful place.</p>
       <fieldset><legend className="seed-sr-only">Appearance</legend>{choices.map(({ value, title, description, Icon }) => <label key={value} className="appearance-choice">
         <input type="radio" name="seed-appearance" value={value} checked={preference === value} onChange={() => choose(value)}/><Icon size={24}/><span><strong>{title}</strong><small>{description}</small></span><Check size={18} className="appearance-check"/>
       </label>)}</fieldset>
       <p className="appearance-status" role="status">{pending ? 'Preparing your scenery…' : message || (preference === 'device' ? `Your device is using ${appearance === 'starlight' ? 'Starlight' : 'Day'}.` : 'Your choice stays with you in this browser.')}</p>
       {message && <button className="seed-text-button" onClick={() => choose(preference)}>Try again</button>}
-      {onLarge && <label className="appearance-pictures"><input type="checkbox" checked={large} onChange={onLarge}/><span>Larger reading text<small>For the explanation, book entry and source notes.</small></span></label>}
+      {reader && <div className="reading-preferences">
+        <fieldset><legend>Text size</legend><div className="reading-options">{['Small', 'Standard', 'Large', 'Largest'].map((label, size) => <label key={label}><input type="radio" name="reading-size" checked={reading.size === size} onChange={() => changeReading({ size })}/><span>{label}</span></label>)}</div></fieldset>
+        <fieldset><legend>Line spacing</legend><div className="reading-options">{(['comfortable', 'open'] as const).map(spacing => <label key={spacing}><input type="radio" name="reading-spacing" checked={reading.spacing === spacing} onChange={() => changeReading({ spacing })}/><span>{spacing === 'open' ? 'More space' : 'Comfortable'}</span></label>)}</div></fieldset>
+        <label className="appearance-pictures"><input type="checkbox" checked={reading.contrast} onChange={event => changeReading({ contrast: event.target.checked })}/><span>Stronger text contrast</span></label>
+        <p className="reading-type-preview">Take a little time. Let a good thought take root.</p>
+        {readingMessage && <p className="appearance-status" role="status">{readingMessage}</p>}
+      </div>}
       <label className="appearance-pictures"><input type="checkbox" checked={pictures} onChange={event => choosePictures(event.target.checked)}/><span>Show seed pictures<small>The captions stay when pictures are hidden.</small></span></label>
       {pictureMessage && <p className="appearance-status" role="status">{pictureMessage}</p>}
       <button className="seed-secondary appearance-done" onClick={() => dialog.current?.close()}>Done</button>

@@ -82,6 +82,8 @@ export async function seedCard(seed: Seed, scene: string, appearance: Appearance
   context.font = '400 28px "DM Sans", sans-serif';
   const title = wrap(context, `Seed ${seed.id} · ${seed.title}`, WIDTH - margin * 2)[0];
   context.fillText(title, margin, HEIGHT - 92);
+  context.font = '400 25px "DM Sans", sans-serif';
+  context.fillText('App-written reflection · Original passage in the app', margin, HEIGHT - 47);
 
   return new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Could not draw the card')), 'image/jpeg', 0.9));
 }
@@ -89,7 +91,7 @@ export async function seedCard(seed: Seed, scene: string, appearance: Appearance
 // Share the card through the device's share sheet where it accepts images,
 // fall back to sharing the link, and finally to saving the picture.
 export async function shareSeed(seed: Seed, scene: string, appearance: Appearance, url: string): Promise<'shared' | 'saved' | 'cancelled'> {
-  const text = `${seed.takeaway}\n\n${seed.title} · Timeless Seeds`;
+  const text = `${seed.takeaway}\n\nApp-written reflection · ${seed.title} · Timeless Seeds`;
   const blob = await seedCard(seed, scene, appearance);
   const file = new File([blob], `timeless-seed-${seed.id}.jpg`, { type: 'image/jpeg' });
   try {

@@ -7,6 +7,7 @@ import './reading-room.css';
 import './starlight.css';
 import './first-visit.css';
 import './reading-refinements.css';
+import './coastal-refinement.css';
 import { AppearanceProvider } from './Appearance';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><AppearanceProvider><SeedsApp /></AppearanceProvider></StrictMode>);

@@ -1,0 +1,1482 @@
+{
+  "date": "2026-10-02",
+  "method": "Side-by-side Day/Starlight contact-sheet review of all 111 subjects. Retain the established coastal world and meaningful time-of-day sequences. The supplied source text is unchanged.",
+  "captionRefinements": 69,
+  "paintingsReplaced": [
+    77
+  ],
+  "visualStories": [
+    4,
+    30,
+    46,
+    48,
+    55,
+    77,
+    109
+  ],
+  "seeds": [
+    {
+      "id": 1,
+      "title": "Ask Allah for protection",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-001",
+          "starlight": "assets/timeless-seeds/illustrations/seed-001-starlight",
+          "subject": "A watchful brown dog stands behind a wooden garden gate, with a shepherd’s crook leaning against the near post and a sunny bay beyond."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "A heart that takes Allah seriously",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-002",
+          "starlight": "assets/timeless-seeds/illustrations/seed-002-starlight",
+          "subject": "A green prayer mat and folded cloth in a sunlit coastal room, with an open window and a gently moving curtain."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Keep asking Allah for help",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A young shoot needs repeated care. Keep asking Allah for help while you wait.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-003",
+          "starlight": "assets/timeless-seeds/illustrations/seed-003-starlight",
+          "subject": "One small green shoot grows in a freshly watered garden bed beside a metal watering can."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Allah knows every part of your life",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-004",
+          "starlight": "assets/timeless-seeds/illustrations/seed-004-starlight",
+          "subject": "A falling green leaf above a cutaway of ordinary soil, where one tan grain lies beneath the surface."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Keep learning, even after doing good",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The shoes are small beside the mountains. Keep a humble view of yourself, and stay willing to learn.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-005",
+          "starlight": "assets/timeless-seeds/illustrations/seed-005-starlight",
+          "subject": "A pair of everyday blue shoes rests on a path beneath broad green mountains and a pink-clouded sky."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Patience takes practice",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-006",
+          "starlight": "assets/timeless-seeds/illustrations/seed-006",
+          "subject": "A bowl of dates and a glass of water wait on a wooden table beside a bright coastal window."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Remember where the journey ends",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-007",
+          "starlight": "assets/timeless-seeds/illustrations/seed-007",
+          "subject": "A small boat carrying bundles rests near a sunny shore, with a simple cemetery among the trees beyond."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Use the time you have",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A bag rests at a stopping place. Use what you need here without forgetting the journey ahead.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-008",
+          "starlight": "assets/timeless-seeds/illustrations/seed-008-starlight",
+          "subject": "A travel bag, water bottle and walking shoes rest beside a path that continues toward the coast."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Draw closer through worship",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-009",
+          "starlight": "assets/timeless-seeds/illustrations/seed-009-starlight",
+          "subject": "A green prayer mat and a small blank card in a quiet room open to a sunny garden and sea."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Return after a mistake",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The footprints turn toward the open way home. You can turn back after a wrong choice.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-010",
+          "starlight": "assets/timeless-seeds/illustrations/seed-010-starlight",
+          "subject": "Footprints turn from a dusty side path toward a green garden path and a welcoming coastal home."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Hope during hardship",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The repaired bowl can still hold something good. Bring your need for healing to Allah with hope.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-011",
+          "starlight": "assets/timeless-seeds/illustrations/seed-011-starlight",
+          "subject": "A carefully repaired ceramic bowl holds clear water and a flowering branch on a sunlit wooden table."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Help someone with a real need",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-012",
+          "starlight": "assets/timeless-seeds/illustrations/seed-012-starlight",
+          "subject": "A cloth bag filled with bread, fruit and vegetables waits at an ordinary front door."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Expect good from Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "An empty chair makes room for a quiet moment. Being alone does not have to end your hope in Allah.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-013",
+          "starlight": "assets/timeless-seeds/illustrations/seed-013-starlight",
+          "subject": "A comfortable empty chair sits beside a sunny open window overlooking a quiet coastal street."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Make an effort and seek Allah’s help",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The spade and watering can are ready for use. Make a real effort and ask Allah for help.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-014",
+          "starlight": "assets/timeless-seeds/illustrations/seed-014-starlight",
+          "subject": "A spade and watering can stand beside freshly worked soil and young plants in a coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Faith does not remove every sadness",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The tissues belong beside the prayer mat too. Sadness and faith can exist together.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-015",
+          "starlight": "assets/timeless-seeds/illustrations/seed-015-starlight",
+          "subject": "A box of tissues sits beside a green prayer mat in a softly sunlit room."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Return to forgiveness and the Quran",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-016",
+          "starlight": "assets/timeless-seeds/illustrations/seed-016-starlight",
+          "subject": "A closed plain green book rests on a clean wooden table beside a comfortable reading chair."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Trust Allah when you need help",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A basket of food waits at a doorway. Help may arrive through someone you did not expect.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-017",
+          "starlight": "assets/timeless-seeds/illustrations/seed-017-starlight",
+          "subject": "A covered meal and a pair of walking shoes wait beside a sunlit front door."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Take the Hereafter seriously",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Sand keeps falling while the page is still open. Let the time you have lead to a good action.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-018",
+          "starlight": "assets/timeless-seeds/illustrations/seed-018-starlight",
+          "subject": "A sand timer and a notebook open to blank pages rest on a sunlit desk by a coastal window."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Read the Quran with attention",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A book waits in a quiet place. Give the Quran your attention as well as your time.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-019",
+          "starlight": "assets/timeless-seeds/illustrations/seed-019-starlight",
+          "subject": "A sealed envelope lies beside a closed plain book and a reading lamp on a sunlit desk."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Remember who protects you",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-020",
+          "starlight": "assets/timeless-seeds/illustrations/seed-020-starlight",
+          "subject": "A small leafy sapling is tied gently to a wooden support in a bright coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Give prayer its place",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The mat has a place in this room. Give prayer a real place in your day.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-021",
+          "starlight": "assets/timeless-seeds/illustrations/seed-021-starlight",
+          "subject": "A sea-green prayer mat has clear floor space in a sunny room, with a work bag and blank calendar set to the side."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Ask sincerely for forgiveness",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Footprints lead back toward home. Let asking for forgiveness become an honest return.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-022",
+          "starlight": "assets/timeless-seeds/illustrations/seed-022-starlight",
+          "subject": "Footprints lead from a fork in a garden path back toward an open front door."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Keep going when worship feels hard",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The steps rise one at a time. Keep practicing a good habit, even when it feels hard.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-023",
+          "starlight": "assets/timeless-seeds/illustrations/seed-023-starlight",
+          "subject": "A garden path climbs through flowers, with a stone bench beside its lower steps and open sea beyond."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Remember Allah to soften the heart",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Water reaches the soil a little at a time. Keep giving remembrance a place in your day.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-024",
+          "starlight": "assets/timeless-seeds/illustrations/seed-024-starlight",
+          "subject": "A watering can pours a gentle stream onto dry soil around a flowering green plant."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Tell Allah what is on your heart",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-025",
+          "starlight": "assets/timeless-seeds/illustrations/seed-025-starlight",
+          "subject": "An ordinary wooden walking staff leans against a stone wall beside a green pasture where a few sheep graze."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Do not keep putting off repentance",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Dry twigs feed a small flame. Do not dismiss a wrong because it seems small; turn away before it grows.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-026",
+          "starlight": "assets/timeless-seeds/illustrations/seed-026-starlight",
+          "subject": "A tiny flame begins on one dry twig among fallen leaves at the edge of a bright, living garden."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Give your heart what it needs",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-027",
+          "starlight": "assets/timeless-seeds/illustrations/seed-027-starlight",
+          "subject": "A golden fish swims underwater in a clear turquoise pond, surrounded by smooth stones and floating lily leaves."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Allah’s commands are for your good",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The garden has clear borders and room to grow. Allah’s guidance is for your good.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-028",
+          "starlight": "assets/timeless-seeds/illustrations/seed-028-starlight",
+          "subject": "A low stone border protects a bed of young green plants, with a clear walking path around it."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Choose what lasts",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "There is only so much room in the bag. Think about what you put first when choices compete.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-029",
+          "starlight": "assets/timeless-seeds/illustrations/seed-029-starlight",
+          "subject": "A travel bag holds a shirt, water bottle, towel and plain notebook, while decorative trinkets remain on a shelf."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Grow the richness of the heart",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Strong roots support the fruit above. Nourish your faith and let it grow into good actions.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-030",
+          "starlight": "assets/timeless-seeds/illustrations/seed-030-starlight",
+          "subject": "A healthy fruit tree bears ripe mangoes above a soil cutaway showing its strong roots."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Put what you learn into practice",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The book and tools are together. Put something you have learned into practice.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-031",
+          "starlight": "assets/timeless-seeds/illustrations/seed-031-starlight",
+          "subject": "A closed green notebook rests beside gardening tools arranged on a sunlit wooden work table."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Bring your attention into prayer",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-032",
+          "starlight": "assets/timeless-seeds/illustrations/seed-032-starlight",
+          "subject": "A green prayer mat occupies a quiet floor space, with a phone and a blank checklist set aside on a low table."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Know your part and trust Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The river keeps moving. Do your part, and trust Allah with what you cannot control.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-033",
+          "starlight": "assets/timeless-seeds/illustrations/seed-033-starlight",
+          "subject": "A clear stream flows around rocks beside an empty cup resting on a stone at the bank."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Ask for mercy and guidance",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "An ant and a fish each need provision. Allah provides for the smallest creatures; turn to Him for help.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-034",
+          "starlight": "assets/timeless-seeds/illustrations/seed-034-starlight",
+          "subject": "An ant stands beside its burrow on a pond bank while a fish swims fully submerged in the clear water below."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Do not give up on dua",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-035",
+          "starlight": "assets/timeless-seeds/illustrations/seed-035-starlight",
+          "subject": "A green prayer mat and a closed plain book on a wooden stand form a quiet place beside a sunny open window."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Care for the life of your heart",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-036",
+          "starlight": "assets/timeless-seeds/illustrations/seed-036-starlight",
+          "subject": "A closed plain book on a low table, a prayer mat and everyday shoes beside an open door in a sunny coastal home."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Notice the gifts you already have",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-037",
+          "starlight": "assets/timeless-seeds/illustrations/seed-037-starlight",
+          "subject": "A blue patterned cup, ordinary green leaves and a plain book sit by a bright window overlooking the sea and sky."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Value health, safety, and food",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A meal, shoes, and a secure doorway hold everyday gifts. Notice what is supporting your life today.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-038",
+          "starlight": "assets/timeless-seeds/illustrations/seed-038-starlight",
+          "subject": "A bowl of breakfast food and a cup sit on a low table, with walking shoes beside a well-kept closed front door."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Work on pleasing Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A plant still needs care after it starts growing. Keep caring for your actions without congratulating yourself.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-039",
+          "starlight": "assets/timeless-seeds/illustrations/seed-039-starlight",
+          "subject": "A small potted plant receives water beside an empty plain pot and a trowel on a sunlit work table."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Gratitude in ease, patience in hardship",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-040",
+          "starlight": "assets/timeless-seeds/illustrations/seed-040-starlight",
+          "subject": "A single firmly rooted green tree stands in a passing shower, with rain on one side and soft sunlight breaking through on the other."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Keep praying through a long difficulty",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The watering can stays beside the plant. Keep dua and patience part of a long wait.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-041",
+          "starlight": "assets/timeless-seeds/illustrations/seed-041-starlight",
+          "subject": "A healthy flowering plant and a watering can stand beside an open window as rain clears over the coast."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Learn from Luqman’s advice",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A tiny grain can disappear beside a stone. Even a small deed matters.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-042",
+          "starlight": "assets/timeless-seeds/illustrations/seed-042-starlight",
+          "subject": "One tiny golden mustard seed rests on a light stone, beside a bowl of seeds, a cup and a basket of greens."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "title": "Remember that this world is a journey",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The bag is ready beside the path. Remember the journey instead of endlessly collecting more.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-043",
+          "starlight": "assets/timeless-seeds/illustrations/seed-043-starlight",
+          "subject": "A modest travel bag rests beside a long coastal path crossed by the shadow of a tree."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Do not take closeness to Allah for granted",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-044",
+          "starlight": "assets/timeless-seeds/illustrations/seed-044-starlight",
+          "subject": "Two ordinary garden paths part at a green, flower-filled junction overlooking the sea."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "title": "Faith is tested by difficulty",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Rain reaches a living tree. Faith and difficulty can be present at the same time.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-045",
+          "starlight": "assets/timeless-seeds/illustrations/seed-045-starlight",
+          "subject": "A flexible young tree bends in a passing shower, with rain still falling and clear sky visible beyond."
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "title": "The birds go out to seek food",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-046-morning",
+          "starlight": "assets/timeless-seeds/illustrations/seed-046-morning",
+          "subject": "Two brown birds set out from a nest on a leafy branch above a coastal garden at dawn."
+        },
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-046-evening",
+          "starlight": "assets/timeless-seeds/illustrations/seed-046-evening",
+          "subject": "At sunset, one brown bird rests beside the nest while a second bird flies back toward it."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Faith helps you face life’s storms",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The boat meets rough water. Hold on to faith while you face the storm.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-047",
+          "starlight": "assets/timeless-seeds/illustrations/seed-047-starlight",
+          "subject": "A small seaworthy boat travels through rain and choppy turquoise water toward a visible shoreline."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Be gentle like a bee and steady like a plant",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/coastal/plant-and-bee",
+          "starlight": "assets/timeless-seeds/coastal/starlight/plant-and-bee",
+          "subject": "A young plant bends in the breeze, while a bee rests lightly on a flower."
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Keep holding to patience",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-049",
+          "starlight": "assets/timeless-seeds/illustrations/seed-049-starlight",
+          "subject": "Three green leaves at different stages of opening grow from one branch in a sunny coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Hope in Allah’s forgiveness",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-050",
+          "starlight": "assets/timeless-seeds/illustrations/seed-050-starlight",
+          "subject": "A wide blue sky with pink clouds stretches above a small patch of growing plants and a coastal home."
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "title": "Remember Allah when you ask for help",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-051",
+          "starlight": "assets/timeless-seeds/illustrations/seed-051-starlight",
+          "subject": "A school backpack, water bottle and everyday shoes sit beside a green prayer mat in a sunny home."
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "title": "Keep going toward your purpose",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The path continues beyond the resting bag. Keep going toward a worthwhile purpose.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-052",
+          "starlight": "assets/timeless-seeds/illustrations/seed-052-starlight",
+          "subject": "A travel bag and wooden walking stick wait beside a long path toward two meeting stretches of coastal water."
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "title": "Build good habits before a trial",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A book and prayer mat are already in place. Build good habits before a difficult day arrives.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-053",
+          "starlight": "assets/timeless-seeds/illustrations/seed-053-starlight",
+          "subject": "A well-kept prayer mat and a closed plain book on a stand sit in a sunny room, with a coat ready by the open door."
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "title": "Know Allah and let it shape your life",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Look closely at the blossoms and fruit. Pay attention to creation and remember its Creator.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-054",
+          "starlight": "assets/timeless-seeds/illustrations/seed-054-starlight",
+          "subject": "An almond branch carries pale pink blossoms, green leaves and an almond fruit against a clear blue coastal sky."
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "title": "Take useful action instead of staying in regret",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The young shoot still needs water. Give your attention to the useful work you can do now.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-055",
+          "starlight": "assets/timeless-seeds/illustrations/seed-055-starlight",
+          "subject": "A trowel, watering can and empty gardening gloves rest beside a newly planted row, with an old empty pot behind."
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "title": "Remember the promise of ease",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A blossom rests in a repaired bowl. Keep hope in Allah’s promise of ease during hardship.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-056",
+          "starlight": "assets/timeless-seeds/illustrations/seed-056-starlight",
+          "subject": "A carefully mended plain bowl holds clear water and a fresh white flower on a sunlit table."
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "title": "Treat others with mercy",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "There is room at the table for another person. Let mercy shape the way you treat people.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-057",
+          "starlight": "assets/timeless-seeds/illustrations/seed-057-starlight",
+          "subject": "Two cups of water and a covered plate are prepared to share on a wooden table."
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "title": "Look at why you are acting",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-058",
+          "starlight": "assets/timeless-seeds/illustrations/seed-058-starlight",
+          "subject": "Two identical parcels wrapped in plain paper and tied with string sit side by side on a wooden table."
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "title": "Thank Allah and keep talking to Him",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "An unfinished page leaves room for more. Keep turning to Allah even when you do not understand a test.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-059",
+          "starlight": "assets/timeless-seeds/illustrations/seed-059-starlight",
+          "subject": "A blank sheet of paper and a pencil rest on a quiet desk beside a bright coastal window."
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "title": "Remember who gives the gift",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The wrapping is open, but the giver still matters. Thank Allah as well as enjoying the gift.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-060",
+          "starlight": "assets/timeless-seeds/illustrations/seed-060-starlight",
+          "subject": "An opened yellow gift box with a blue ribbon holds a folded knitted gift and a flower card without words."
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "title": "Stay steady in obedience",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The path is made of many steps. Keep choosing a good practice when distractions return.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-061",
+          "starlight": "assets/timeless-seeds/illustrations/seed-061-starlight",
+          "subject": "A steady stone path continues through a bright coastal garden while smaller paths branch away."
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "title": "Pay attention to your conduct",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-062",
+          "starlight": "assets/timeless-seeds/illustrations/seed-062-starlight",
+          "subject": "A prayer mat, a simple meal and two chairs share a sunlit room opening onto a coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Strengthen the heart through worship",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A clear mirror reflects what is before it. Give your heart care through worship and remembrance.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-063",
+          "starlight": "assets/timeless-seeds/illustrations/seed-063-starlight",
+          "subject": "A clean wooden-framed mirror reflects green leaves, an open window and a bright sky."
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "title": "Raise your hands and ask",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-064",
+          "starlight": "assets/timeless-seeds/illustrations/seed-064-starlight",
+          "subject": "A prayer mat rests in a quiet, sunlit room with a breeze through the open coastal doorway."
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "title": "Think about what a trial can teach",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A few stepping stones show a way forward. Consider what you can learn and change during a trial.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-065",
+          "starlight": "assets/timeless-seeds/illustrations/seed-065-starlight",
+          "subject": "Five broad stepping stones cross a sunny flower garden beside a coastal home."
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "title": "Look at what fills your days",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Food, a book, a phone, and a prayer mat share one room. Notice which activities fill your days.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-066",
+          "starlight": "assets/timeless-seeds/illustrations/seed-066-starlight",
+          "subject": "A plain closed book, a phone and a simple meal sit beside a prayer mat in a sunny room."
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "title": "Do not measure your life against someone else’s",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-067",
+          "starlight": "assets/timeless-seeds/illustrations/seed-067",
+          "subject": "The sun shines over turquoise islands through the open window of a warm coastal home."
+        },
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-067-moon",
+          "starlight": "assets/timeless-seeds/illustrations/seed-067-moon",
+          "subject": "The full moon shines over turquoise islands through the same open coastal window beneath a bright starry sky."
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "title": "Ask Allah for help with worry",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A meal and a place to pray are still here. Bring your worry to Allah and notice the good you can do.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-068",
+          "starlight": "assets/timeless-seeds/illustrations/seed-068-starlight",
+          "subject": "An unmarked envelope rests beside a simple meal and a prayer mat near a bright coastal window."
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "title": "Remember whom you stand before in prayer",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/coastal/prayer-breeze",
+          "starlight": "assets/timeless-seeds/coastal/starlight/prayer-breeze",
+          "subject": "A prayer mat in a peaceful coastal room, with an open window and a curtain moving in the breeze."
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "title": "Look back on your day and repent",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "An open notebook waits beside the bed. Review your day honestly and turn back to Allah before sleep.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-070",
+          "starlight": "assets/timeless-seeds/illustrations/seed-070",
+          "subject": "A blank journal and pen lie beside a cozy bed and lamp, with a crescent moon and stars outside the window."
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "title": "Meet a trial with patience",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-071",
+          "starlight": "assets/timeless-seeds/illustrations/seed-071-starlight",
+          "subject": "Rain falls over a coastal garden path beside a sheltered bench, with bright pink clouds in the distance."
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "title": "Do not wait until you are older",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Two bags of different sizes sit beside a prayer mat. Worship matters at every age.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-072",
+          "starlight": "assets/timeless-seeds/illustrations/seed-072-starlight",
+          "subject": "A small backpack and a larger travel bag stand beside a prayer mat in a bright coastal room."
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "title": "Be humble about praise and listen to regret",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-073",
+          "starlight": "assets/timeless-seeds/illustrations/seed-073",
+          "subject": "A warm table lamp reveals an uneven patch of plaster on the wall of a cozy room."
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "title": "Let regret lead you back to Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A young plant grows from freshly turned soil. Let regret lead to repentance and repair.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-074",
+          "starlight": "assets/timeless-seeds/illustrations/seed-074-starlight",
+          "subject": "A water droplet falls from a leaf toward a small green shoot in rich garden soil."
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "title": "Place your deepest trust in Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The bridge offers a step across the stream. Take the responsible action available to you with trust in Allah.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-075",
+          "starlight": "assets/timeless-seeds/illustrations/seed-075-starlight",
+          "subject": "A sturdy wooden footbridge with railings crosses a clear stream in a sunny coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "title": "Stay thankful as life changes",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-076",
+          "starlight": "assets/timeless-seeds/illustrations/seed-076-starlight",
+          "subject": "Green, yellow, orange and dry brown leaves rest beside a clear uncut crystal on a sunlit windowsill."
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "title": "Think before you speak",
+      "decision": "Refine the focal scale: bring the phone into the foreground in both lighting variants.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-077-v2",
+          "starlight": "assets/timeless-seeds/illustrations/seed-077-v2-starlight",
+          "subject": "A face-down phone rests large in the foreground beside a cup on a warm wooden table, with a breezy window opening onto pink clouds and turquoise water."
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "title": "Keep returning for forgiveness",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-078",
+          "starlight": "assets/timeless-seeds/illustrations/seed-078-starlight",
+          "subject": "A plain closed book on a stand and a prayer mat sit beside an open window overlooking a bright coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "title": "Let the Quran give life to your heart",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Fresh growth reaches through the soil. Make room for the Quran to renew your heart.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-079",
+          "starlight": "assets/timeless-seeds/illustrations/seed-079-starlight",
+          "subject": "Rain waters small green shoots growing in a sunny coastal garden bed."
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "title": "Do not let every desire lead you",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A closed gate leaves time to choose another way. Pause before following a desire.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-080",
+          "starlight": "assets/timeless-seeds/illustrations/seed-080-starlight",
+          "subject": "A low metal gate stands at a garden path beside a narrower overgrown track."
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "title": "Trust Allah with what happened and what passed you by",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A path divides, and you can take only one way forward. Trust Allah with what happened and what passed you by.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-081",
+          "starlight": "assets/timeless-seeds/illustrations/seed-081-starlight",
+          "subject": "A broad coastal garden path continues past a smaller turning toward a home."
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "title": "Notice how sin affects the heart",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Pruning tools lie beside an overgrown path. Notice harmful choices and begin turning away from them.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-082",
+          "starlight": "assets/timeless-seeds/illustrations/seed-082-starlight",
+          "subject": "Pruning shears and gloves wait beside thorny brambles reaching across a garden path."
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "title": "Return to prayer",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-083",
+          "starlight": "assets/timeless-seeds/illustrations/seed-083-starlight",
+          "subject": "A clear tiled floor leads to a prayer mat in a bright room overlooking the coast."
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Put the world’s value in perspective",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-084",
+          "starlight": "assets/timeless-seeds/illustrations/seed-084-starlight",
+          "subject": "A straw hat, plain book and cup rest on a simple table overlooking a wide turquoise bay."
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "title": "Ask Allah to help your heart heal",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Water is being given to a small plant. Ask Allah for help and healing, and keep caring for your heart.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-085",
+          "starlight": "assets/timeless-seeds/illustrations/seed-085-starlight",
+          "subject": "A watering can pours clear water into a clay vessel beside a growing plant in a sunny garden."
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "title": "Stay grounded as circumstances change",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The tree stays rooted as the light changes. Stay grounded in faith as your circumstances change.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-086",
+          "starlight": "assets/timeless-seeds/illustrations/seed-086-starlight",
+          "subject": "A deeply rooted green tree stands partly in shade and partly in sunlight beside a coastal home."
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "title": "Choose friends who help your faith",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-087",
+          "starlight": "assets/timeless-seeds/illustrations/seed-087-starlight",
+          "subject": "Two empty cushioned chairs face a table with fruit, two cups and a plain closed book on a sunny coastal terrace."
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "title": "Thank Allah for blessings and watch your response to trials",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Water and a support both help the plant. Practice gratitude in ease and patience under pressure.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-088",
+          "starlight": "assets/timeless-seeds/illustrations/seed-088-starlight",
+          "subject": "Clear water reaches the roots of a flowering plant loosely tied to a wooden support in a sunny garden."
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "title": "Let faith guide the reason for your actions",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The gift is ready to leave the table. Before you give it, consider whose pleasure you seek.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-089",
+          "starlight": "assets/timeless-seeds/illustrations/seed-089-starlight",
+          "subject": "A plain paper gift bag, tissue paper, scissors and string rest on a quiet table overlooking the bright coast."
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "title": "Be sincere even when no one praises you",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The fish is at home in the water. Stay close to the guidance you need, even without anyone’s praise.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-090",
+          "starlight": "assets/timeless-seeds/illustrations/seed-090-starlight",
+          "subject": "A healthy silver and gold fish swims through clear turquoise water near an island shore."
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "title": "Turn toward the One who welcomes you",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-091",
+          "starlight": "assets/timeless-seeds/illustrations/seed-091-starlight",
+          "subject": "A closed formal blue door stands beside an open wooden doorway leading onto a sunny garden path."
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "title": "Be patient with Allah’s choice",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A closed gate stands beside a clear path. Keep patience and trust when things differ from your plan.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-092",
+          "starlight": "assets/timeless-seeds/illustrations/seed-092-starlight",
+          "subject": "Gardening tools wait beside a closed wooden gate and another open path through a sunny garden."
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "title": "Look at what you are seeking",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Ash, gold, and a clear crystal invite a closer look. Examine what you are seeking and what it does to your heart.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-093",
+          "starlight": "assets/timeless-seeds/illustrations/seed-093-starlight",
+          "subject": "A bowl of cool ash, pieces of gold and a clear uncut jewel sit on a wooden table overlooking the turquoise coast."
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "title": "Discover joy in remembering Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-094",
+          "starlight": "assets/timeless-seeds/illustrations/seed-094-starlight",
+          "subject": "A simple prayer mat and cushions rest beside flowering plants in a bright coastal room."
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "title": "Keep worship steady and balanced",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-095",
+          "starlight": "assets/timeless-seeds/illustrations/seed-095",
+          "subject": "A shaded wooden bench stands beside a coastal walking path in gentle morning light."
+        },
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-095-afternoon",
+          "starlight": "assets/timeless-seeds/illustrations/seed-095-afternoon",
+          "subject": "A wooden bench and coastal walking path glow in low, golden late-afternoon sunlight."
+        },
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-095-evening",
+          "starlight": "assets/timeless-seeds/illustrations/seed-095-evening",
+          "subject": "The same wooden bench and coastal walking path rest beneath a bright starry night sky, with warm light on the foreground."
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "title": "Respond to difficulty with trust and patience",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The stones cross the stream one step at a time. Meet difficulty with trust and patient effort.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-096",
+          "starlight": "assets/timeless-seeds/illustrations/seed-096-starlight",
+          "subject": "Six large, separated stepping stones cross a clear garden stream beside a sunny coastal home."
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "title": "Build a life through good actions",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A notebook sits beside the things of an ordinary day. Let repeated good actions shape your life’s story.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-097",
+          "starlight": "assets/timeless-seeds/illustrations/seed-097-starlight",
+          "subject": "A blank notebook and pen sit beside a simple meal and a cared-for plant on a sunny table."
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "title": "Keep your deepest reliance on Allah",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A compass rests beside a signpost. Consider where you place your trust and which guidance you follow.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-098",
+          "starlight": "assets/timeless-seeds/illustrations/seed-098-starlight",
+          "subject": "An unlettered brass compass with a red and blue needle rests beside two blank wooden signboards and a sunny garden path."
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "title": "Stay close to the Quran and follow the truth",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-099",
+          "starlight": "assets/timeless-seeds/illustrations/seed-099-starlight",
+          "subject": "Two empty chairs face an open blank notebook and pencil at a sunny coastal table."
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "title": "Examine your actions without losing hope",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "An open notebook leaves room to look again. Review your actions honestly while keeping hope.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-100",
+          "starlight": "assets/timeless-seeds/illustrations/seed-100-starlight",
+          "subject": "An open blank lined journal and pencil rest on a wooden desk overlooking a bright morning coast."
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "title": "Ask yourself what you meant",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Food, a phone, and a notebook share the table. Look at the reasons behind your ordinary choices.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-101",
+          "starlight": "assets/timeless-seeds/illustrations/seed-101-starlight",
+          "subject": "A blank journal, pencil, face-down phone and simple meal share a quiet sunny table."
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "title": "Keep hope alive when you make dua",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-102",
+          "starlight": "assets/timeless-seeds/illustrations/seed-102-starlight",
+          "subject": "A quiet prayer mat and plain closed books rest beside a window with a new flower bud outside and a bright coastal view."
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "title": "Bring your sadness to Allah with hope",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-103",
+          "starlight": "assets/timeless-seeds/illustrations/seed-103-starlight",
+          "subject": "A folded cloth and glass of water rest on a wooden bench beside a quiet sunny garden path."
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "title": "Remember that possessions do not last",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A fallen leaf lies beside a cup. Enjoy what you have without expecting it to last forever.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-104",
+          "starlight": "assets/timeless-seeds/illustrations/seed-104-starlight",
+          "subject": "A well-used ceramic cup and a fallen golden leaf sit on a stone wall with living greenery and a bright coast behind them."
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "title": "Stay kind through changing days",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "The table is set to share. Keep kindness and generosity part of your changing days.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-105",
+          "starlight": "assets/timeless-seeds/illustrations/seed-105-starlight",
+          "subject": "A simple meal and plates wait to be shared beside a window where light rain falls over the bright garden."
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "title": "Take responsibility and seek Allah’s pleasure",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "Shoes and a parcel are ready at the door. Take your next useful step for Allah’s sake.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-106",
+          "starlight": "assets/timeless-seeds/illustrations/seed-106-starlight",
+          "subject": "Walking shoes and a wrapped parcel stand beside a prayer mat at a sunny coastal doorway."
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "title": "Care about your response to a test",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A young tree bends against its support. Give care to how you respond while difficulty is still present.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-107",
+          "starlight": "assets/timeless-seeds/illustrations/seed-107-starlight",
+          "subject": "A young leafy branch bends gently beside a loose tie and wooden support in a sunny coastal garden."
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "title": "Ten ways to seek Allah’s love",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": null,
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-108",
+          "starlight": "assets/timeless-seeds/illustrations/seed-108-starlight",
+          "subject": "A plain closed book on a wooden stand beside a green prayer mat, with a lamp and an open window overlooking the sunny sea."
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "title": "Do not let a loss fill your whole life",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "One pot is broken; other plants still need care. Acknowledge the loss and gently notice what remains.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-109",
+          "starlight": "assets/timeless-seeds/illustrations/seed-109-starlight",
+          "subject": "A broken clay pot sits to one side of a table, leaving room for living plants, gardening gloves and a watering can."
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "title": "Understand grief, worry, and attachment",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A basket and a bundle wait beside the path. Notice the burdens you carry and the good that still remains.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-110",
+          "starlight": "assets/timeless-seeds/illustrations/seed-110-starlight",
+          "subject": "An empty carrying basket and a smaller cloth bundle sit beside a book, cup and hat on a sunny table."
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "title": "Resist desires that lead to disobedience",
+      "decision": "Retain the reviewed composition and Day/Starlight relationship.",
+      "caption": "A gate marks a place to pause. Stop before following a desire that leads toward disobedience.",
+      "frames": [
+        {
+          "day": "assets/timeless-seeds/illustrations/seed-111",
+          "starlight": "assets/timeless-seeds/illustrations/seed-111-starlight",
+          "subject": "A low gate closes a small side path while the broad main path continues through a sunny coastal garden."
+        }
+      ]
+    }
+  ]
+}
