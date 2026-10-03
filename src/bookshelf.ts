@@ -1,6 +1,18 @@
 /** Add standalone companions here; the Ihya's forty books remain one collection. */
 export const companionBooks = [
   {
+    id: 'beautiful-names',
+    title: 'The Beautiful Names',
+    author: 'A companion to al-Ghazali',
+    description: 'Know Allah through His Names: 99 illustrated readings, connected paths, and a personal reading room.',
+    path: 'beautiful-names/',
+    coverLabel: 'Beautiful Names',
+    coverStyle: 'names',
+    coverImage: 'assets/beautiful-names/art/cover-day.webp',
+    coverNightImage: 'assets/beautiful-names/art/cover-night.webp',
+    coverSubtitle: 'A garden for knowing Him',
+  },
+  {
     id: 'inner-dimensions',
     title: 'Inner Dimensions of the Prayer',
     author: 'Ibn al-Qayyim',

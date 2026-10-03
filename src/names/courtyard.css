@@ -1,0 +1,173 @@
+/* Garden Folio: paired material palettes. The enamel artwork keeps its own colour. */
+body[data-palette="ink"] {
+  --paper:#1d263b; --paper-alt:#161e31; --paper-edge:#46516a;
+  --ink:#f5eddd; --muted:#c1c6d5; --gold:#d7b986; --gold-faint:#d7b98650;
+  --line:#aab5d035; --button:#ddc18d; --button-ink:#20283d; --soft:#2a344c;
+  --ambient:#090f20; --paper-shadow:0 2px 0 #526079,0 5px 0 #182035,0 7px 0 #3a465e,0 22px 60px #0008;
+}
+body[data-palette="aubergine"] {
+  --paper:#332536; --paper-alt:#281e2b; --paper-edge:#675069;
+  --ink:#f8ebeb; --muted:#d4bfce; --gold:#dabb93; --gold-faint:#dabb9350;
+  --line:#c4a6bf38; --button:#dfbe97; --button-ink:#332438; --soft:#443148;
+  --ambient:#1c1320; --paper-shadow:0 2px 0 #745a73,0 5px 0 #291e2d,0 7px 0 #513d54,0 22px 60px #0008;
+}
+body[data-palette="charcoal"] {
+  --paper:#2d2b2b; --paper-alt:#242223; --paper-edge:#5e5753;
+  --ink:#f4eddf; --muted:#cbc4ba; --gold:#d7ba8b; --gold-faint:#d7ba8b50;
+  --line:#c5bbaa35; --button:#dbc298; --button-ink:#302b28; --soft:#3c3937;
+  --ambient:#181617; --paper-shadow:0 2px 0 #70665e,0 5px 0 #262324,0 7px 0 #514944,0 22px 60px #0008;
+}
+body[data-palette="rosewood"] {
+  --paper:#3e292f; --paper-alt:#312126; --paper-edge:#77545b;
+  --ink:#f9ebdf; --muted:#dbc2bd; --gold:#dfb692; --gold-faint:#dfb69250;
+  --line:#d4afa838; --button:#e3bb99; --button-ink:#452c32; --soft:#51363d;
+  --ambient:#22151b; --paper-shadow:0 2px 0 #886169,0 5px 0 #302128,0 7px 0 #603e49,0 22px 60px #0008;
+}
+body[data-theme="day"][data-palette="ink"] {
+  --paper:#fff3d9; --paper-alt:#f3dfb7; --paper-edge:#bd913f;
+  --ink:#49321f; --muted:#715837; --gold:#865b20; --gold-faint:#b9853259;
+  --line:#98682438; --button:#dcb45f; --button-ink:#3b2817; --soft:#f4e2bb;
+  --ambient:#ddb368; --paper-shadow:0 2px 0 #d4b678,0 5px 0 #f8e8c5,0 7px 0 #b48940,0 22px 60px #32240859;
+}
+body[data-theme="day"][data-palette="aubergine"] {
+  --paper:#f7eff4; --paper-alt:#e8dce7; --paper-edge:#c6afc2;
+  --ink:#49334c; --muted:#70596f; --gold:#7c553c; --gold-faint:#835b414d;
+  --line:#76577433; --button:#654569; --button-ink:#fff2e9; --soft:#ebdeea;
+  --ambient:#cebace; --paper-shadow:0 2px 0 #d6c1d1,0 5px 0 #f2e8ed,0 7px 0 #b19aad,0 22px 60px #35203766;
+}
+body[data-theme="day"][data-palette="charcoal"] {
+  --paper:#f5f0e5; --paper-alt:#e8dfce; --paper-edge:#c5b69f;
+  --ink:#3b3630; --muted:#6c6257; --gold:#7b5b32; --gold-faint:#7b5b324d;
+  --line:#75665433; --button:#51483f; --button-ink:#fff4e2; --soft:#e8e0d3;
+  --ambient:#cbc3b5; --paper-shadow:0 2px 0 #d6c8b2,0 5px 0 #f2e8d9,0 7px 0 #b2a187,0 22px 60px #30292266;
+}
+body[data-theme="day"][data-palette="rosewood"] {
+  --paper:#fbeee8; --paper-alt:#eed9d1; --paper-edge:#d0aea5;
+  --ink:#59353e; --muted:#78565d; --gold:#825134; --gold-faint:#8c593b4d;
+  --line:#915f6633; --button:#824c59; --button-ink:#fff0e3; --soft:#f0dbd6;
+  --ambient:#d5bcb5; --paper-shadow:0 2px 0 #dfbfb6,0 5px 0 #f5e3dc,0 7px 0 #bd978d,0 22px 60px #46263066;
+}
+body[data-palette] {background:var(--ambient);color:var(--ink)}
+body[data-palette] .environment-shade {background:linear-gradient(180deg,color-mix(in srgb,var(--ambient) 30%,transparent),color-mix(in srgb,var(--ambient) 72%,transparent))}
+body[data-palette] .app-nav nav {background:color-mix(in srgb,var(--paper) 95%,transparent);border-color:var(--paper-edge);box-shadow:0 5px 14px #0002}
+body[data-palette] .app-nav nav button {color:var(--ink)}
+body[data-palette] .app-nav .appearance-button {border-color:var(--line)!important}
+body[data-palette] .app-brand {color:var(--ink);background:var(--paper);box-shadow:0 0 0 8px var(--paper);border-radius:2px;text-shadow:none}
+body[data-palette] .app-brand small {color:var(--muted)}
+body[data-palette] .app-brand>.icon {color:var(--gold)}
+body[data-palette] .book-overline,body[data-palette] .folio-overline {background:var(--paper);color:var(--muted);box-shadow:0 0 0 5px var(--paper);border-radius:2px;text-shadow:none}
+body[data-palette] .book-overline>span,body[data-palette] .folio-overline>span {color:inherit}
+body[data-palette] .art-enlarge-label {background:var(--paper);color:var(--ink);border-color:var(--paper-edge)}
+.palette-bar {background:#f5f1e9;color:#3c3942;gap:18px}
+.palette-bar .study-label>span {color:#77717a}
+.palette-bar .study-label>strong {font-size:24px}
+.palette-switch {display:flex;align-items:center;gap:6px}
+.palette-switch button {display:flex;align-items:center;justify-content:center;gap:8px;padding:6px 12px;min-height:44px;font-size:11px;border:1px solid transparent;border-radius:5px;background:#ebe7e1;color:#605965}
+.palette-switch button[aria-pressed="true"] {color:#292632;border-color:#958477;background:#fffaf1;box-shadow:0 2px 4px #241f2912}
+.palette-swatch {width:20px;height:20px;border-radius:50%;box-shadow:inset 0 0 0 1px #0002;flex-shrink:0}
+.swatch-ink {background:linear-gradient(135deg,#273654 50%,#e1b761 50%)}
+.swatch-aubergine {background:linear-gradient(135deg,#5b3d61 50%,#f7eff4 50%)}
+.swatch-charcoal {background:linear-gradient(135deg,#49413b 50%,#f5f0e5 50%)}
+.swatch-rosewood {background:linear-gradient(135deg,#784654 50%,#fbeee8 50%)}
+.palette-switch button[aria-pressed="true"] .palette-swatch {outline:1px solid #958477;outline-offset:3px}
+.palette-day-note {margin-top:14px!important;font-size:12px!important;color:var(--gold)}
+.courtyard-home {max-width:1180px;padding:24px 42px 60px;min-height:calc(100svh - var(--study-height) - 106px);justify-content:center}
+.courtyard-home .invitation-folio {display:grid;grid-template-columns:1.12fr 1fr;align-items:stretch;padding:0;min-height:0;border-radius:4px;overflow:visible;isolation:auto;background:var(--paper);box-shadow:var(--paper-shadow)}
+.courtyard-home .invitation-folio:before {display:none}
+.courtyard-entrance {position:relative;min-width:0;display:flex;flex-direction:column;border-right:1px solid var(--paper-edge);background:var(--paper-alt);box-shadow:8px 0 20px #0002;z-index:1}
+.courtyard-art {position:relative;padding:0;width:100%;height:100%;display:block;overflow:hidden;border-radius:3px 0 0 0;min-height:0;text-align:center}
+.courtyard-scene {width:100%;height:100%;min-height:490px;aspect-ratio:1}
+.courtyard-scene:after {content:'';position:absolute;inset:0;pointer-events:none;box-shadow:inset 6px 0 14px #0003,inset -6px 0 14px #0003,inset 0 3px 4px #0005}
+.courtyard-caption {position:absolute;left:0;right:0;bottom:0;padding:25px 8px 17px;font:italic 21px/1.4 var(--display);color:#fff3d8;text-shadow:0 1px 5px #110f18;background:linear-gradient(transparent,#131323a6);pointer-events:none}
+.stone-sill {height:8px;position:relative;flex-shrink:0;margin:0 -4px -5px;background:linear-gradient(#b7996b 0 1px,#625758 2px,#2e2a3e 6px,#161b2c);box-shadow:0 5px 9px #0005;border-radius:0 0 2px 2px}
+[data-theme="day"] .stone-sill {background:linear-gradient(#f0dab4 0 1px,#bc9e78 2px,#a58867 6px,#d4bd97)}
+.courtyard-home .folio-welcome {position:relative;padding:45px 36px 34px;display:flex;flex-direction:column;justify-content:center}
+.courtyard-home .folio-welcome h1 {font-size:clamp(51px,5.3vw,70px);margin:18px 0 23px;line-height:.98;letter-spacing:-.035em}
+.courtyard-home .folio-welcome>p:not(.home-whisper) {font-size:14px;line-height:1.9;max-width:330px}
+.courtyard-home .home-actions {margin-top:27px}
+.courtyard-home .home-whisper {text-align:left;margin-top:19px!important;max-width:280px}
+.courtyard-home .home-actions .primary {font-size:12px}
+.courtyard-home .home-actions .text-button {font-size:11px}
+.art-sheet .courtyard-scene {min-height:0;aspect-ratio:1;height:auto}
+/* Sunlit Gold is the daylight companion to Midnight Ink.
+   Keep the original enamel colour: no pale ambient veil over the garden. */
+body[data-theme="day"][data-palette="ink"] .environment-shade {
+  background:linear-gradient(180deg,transparent 40%,#3c260d20);
+}
+body[data-theme="day"][data-palette="ink"] .courtyard-home .invitation-folio {
+  background:linear-gradient(135deg,#fff6df,#f5e1ba);
+}
+body[data-theme="day"][data-palette="ink"] .primary:not([aria-pressed="true"]) {
+  background:linear-gradient(110deg,#efd091,#d4a34d 60%,#e8bd6a);
+  border-color:#a7782c;
+  box-shadow:inset 0 1px 0 #fff4cb,0 2px 0 #a8752855,0 5px 12px #7549161a;
+}
+body[data-theme="day"][data-palette="ink"] .courtyard-caption {
+  color:#fff1cb;
+  background:linear-gradient(transparent,#3c230cbd);
+  text-shadow:0 1px 4px #38200c;
+}
+body[data-theme="day"][data-palette="ink"] .stone-sill {
+  background:linear-gradient(#ffe6a9 0 1px,#d7b16a 2px,#aa7b36 6px,#d3ad67);
+}
+body[data-theme="day"][data-palette="ink"] .folio-sheet {
+  box-shadow:inset 0 1px 0 #fff9e8,var(--paper-shadow);
+}
+body[data-theme="day"][data-palette="ink"] .continuous-dock {
+  border-color:#bd913f;box-shadow:inset 0 1px #fff9e8,0 6px 20px #49301840;
+}
+@media(max-width:900px) {
+  .palette-bar {display:grid;grid-template-columns:1fr auto;padding:10px 20px;gap:9px}
+  .palette-bar .study-label {display:flex;gap:10px;align-items:baseline}
+  .palette-bar .study-label>strong {font-size:21px}
+  .palette-bar .study-notes-link {grid-column:2;grid-row:1}
+  .palette-switch {grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+  .courtyard-home {padding:20px 24px 40px}
+  .courtyard-home .folio-welcome {padding:30px 25px}
+  .courtyard-home .folio-welcome h1 {font-size:53px}
+  .courtyard-home .folio-welcome>p:not(.home-whisper) {font-size:13px}
+  .courtyard-scene {min-height:480px}
+}
+@media(max-width:600px) {
+  .palette-bar {padding:7px 12px 8px;gap:4px}
+  .palette-bar .study-label>strong {font-size:19px}
+  .palette-bar .study-label>span {display:none}
+  .palette-bar .study-notes-link {font-size:10px;min-height:28px}
+  .palette-switch {gap:4px}
+  .palette-switch button {padding:5px 2px;gap:6px;min-height:44px;font-size:9px;white-space:nowrap}
+  .palette-swatch {width:17px;height:17px}
+  .app-nav {padding:17px 20px;gap:12px}
+  .app-brand>span {font-size:20px}
+  .app-brand small {font-size:5.5px;letter-spacing:.05em}
+  .app-nav nav {padding:1px}
+  .app-nav nav button {padding:5px 7px;font-size:9px;min-height:44px}
+  .courtyard-home {padding:4px 12px 32px;min-height:0}
+  .courtyard-home .invitation-folio {display:flex;flex-direction:column;border-radius:3px}
+  .courtyard-entrance {border-right:0;box-shadow:0 6px 16px #0003}
+  .courtyard-art {height:auto;border-radius:3px 3px 0 0}
+  .courtyard-scene {aspect-ratio:1.08;min-height:0;height:auto}
+  .courtyard-scene>svg {position:absolute;inset:0}
+  .courtyard-caption {font-size:18px;padding:24px 8px 13px}
+  .courtyard-home .folio-welcome {padding:27px 26px 23px}
+  .courtyard-home .folio-welcome>.eyebrow {font-size:8px}
+  .courtyard-home .folio-welcome h1 {font-size:45px;line-height:.97;margin:10px 0 15px}
+  .courtyard-home .folio-welcome>p:not(.home-whisper) {font-size:12px;line-height:1.8;max-width:none}
+  .courtyard-home .home-actions {margin-top:20px;gap:4px}
+  .courtyard-home .home-actions .primary {min-height:50px;font-size:11px}
+  .courtyard-home .home-actions .text-button {min-height:40px;font-size:10px}
+  .courtyard-home .home-whisper {margin-top:7px!important;font-size:9px!important;max-width:none;text-align:center}
+  .folio-overline {margin-inline:5px;margin-top:3px}
+  .folio-body {padding-inline:25px}
+  .prose,.prose p {font-size:17px;line-height:1.82}
+  .prose>.opening-paragraph {font:25px/1.45 var(--display)}
+}
+@media(max-width:359px) {
+  .palette-switch button {font-size:8px;gap:5px}
+  .palette-swatch {width:15px;height:15px}
+  .app-nav {padding-inline:17px;gap:9px}
+  .app-brand>span {font-size:17px}
+  .app-brand small {font-size:5px}
+  .app-nav nav button {padding-inline:5px;font-size:8px}
+  .courtyard-home .folio-welcome {padding-inline:22px}
+  .courtyard-home .folio-welcome h1 {font-size:40px}
+}

@@ -36,6 +36,9 @@ jobs:
       - name: Verify Timeless Seeds source and illustrations
         run: npm run check:seeds
 
+      - name: Verify Beautiful Names release
+        run: npm run check:names
+
       - name: Add the single-page fallback
         run: cp dist/index.html dist/404.html
 

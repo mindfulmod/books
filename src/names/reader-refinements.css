@@ -1,0 +1,54 @@
+/* Round 1: metadata has its own row; Amiri's diacritics get real vertical room. */
+.reader-folio .folio-meta {padding-bottom:6px;min-height:50px;gap:16px}
+.reader-folio .folio-meta>.eyebrow {font-size:10px;letter-spacing:.12em;line-height:1.5}
+.reader-folio .bookmark-button {min-height:44px;padding:8px 4px;font-size:11px;gap:7px}
+.reader-folio .folio-title-area .name-heading {padding:12px 0 25px}
+.reader-folio .folio-title-area .arabic-name {font-size:64px;line-height:1.9;margin:0}
+.reader-folio .folio-title-area .name-heading h1 {margin-top:0}
+@media(max-width:600px) {
+  .reader-folio .folio-meta {min-height:48px}
+  .reader-folio .folio-meta>.eyebrow {font-size:9px}
+  .reader-folio .folio-title-area .name-heading {padding:12px 0 22px}
+  .reader-folio .folio-title-area .arabic-name {font-size:48px;line-height:1.9}
+  .reader-folio .folio-title-area .name-meaning {font-size:11px}
+}
+
+/* Round 2: reading has one utility row. Review controls stay on the home screen. */
+body[data-design="folio"][data-view="read"] .study-bar {display:none}
+body[data-design="folio"][data-view="read"] .app-nav {
+  max-width:810px;padding:18px 25px 15px;gap:16px;
+}
+.folio-reader-nav .garden-back {
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:8px 12px;flex-shrink:0;font-size:12px;
+  background:var(--paper);color:var(--ink);border:1px solid var(--gold-faint);
+  border-radius:4px;box-shadow:0 2px 8px #0002;
+}
+.folio-reader-nav .garden-back .icon {width:17px;height:17px}
+body[data-design="folio"][data-view="read"] .app-nav nav {padding:0 2px;gap:0}
+body[data-design="folio"][data-view="read"] .app-nav nav button {
+  min-width:44px;min-height:44px;padding:8px 11px;font-size:12px;
+}
+.reader-folio .folio-opening-art {height:210px}
+@media(max-width:600px) {
+  body[data-design="folio"][data-view="read"] .app-nav {padding:14px 16px 13px;gap:14px}
+  .folio-reader-nav .garden-back {font-size:11px;padding:8px 10px}
+  body[data-design="folio"][data-view="read"] .app-nav nav button {font-size:11px;padding-inline:10px}
+  .reader-folio .folio-opening-art {height:155px}
+}
+
+/* Round 3: quiet, predictable thumb controls and optional writing. */
+.reader-folio .continuous-dock {
+  width:min(360px,calc(100% - 32px));grid-template-columns:1fr 1.25fr 1fr;
+  bottom:max(10px,env(safe-area-inset-bottom));padding:4px 5px;gap:3px;
+  border-radius:5px;box-shadow:0 3px 14px #0003;
+}
+.reader-folio .continuous-dock>button {min-height:44px;font-size:11px;gap:6px;padding:6px 2px}
+.reader-folio .continuous-dock .icon {width:18px;height:18px}
+.reader-folio .dock-location {font-size:22px;line-height:1.2;white-space:nowrap;min-width:0}
+.reader-folio .pause-section {scroll-margin-top:24px}
+.reader-folio .pause-section:focus {outline:none}
+@media(max-width:359px) {
+  .reader-folio .continuous-dock>button {font-size:10px;gap:5px}
+  .reader-folio .dock-location {font-size:19px}
+}

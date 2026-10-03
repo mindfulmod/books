@@ -1,0 +1,26 @@
+/* Long, compound Names belong comfortably on the same quiet page. */
+.reader-folio .name-heading h1.compound-name {font-size:clamp(30px,7.8vw,46px);line-height:1.12;white-space:normal;max-width:16ch;margin-inline:auto;text-wrap:balance;}
+.reader-folio .name-heading .arabic-name.compound-arabic {font-size:clamp(30px,8vw,44px);line-height:1.7;white-space:normal;}
+.name-chooser strong {overflow-wrap:anywhere;}
+.name-chooser:has(strong) {min-width:0;}
+.index-group select {font:inherit;color:var(--ink);background:transparent;border:0;min-height:44px;padding:8px 22px 8px 10px;border-radius:5px;cursor:pointer;text-align:center;}
+.index-group select:focus-visible {outline:2px solid var(--gold);outline-offset:2px;}
+.index-group option {background:var(--paper);color:var(--ink);}
+.contents-list .contents-name>strong.compound-name {font-size:22px;line-height:1.12;white-space:normal;text-wrap:balance;}
+.nearby-names strong.compound-name {font-size:18px;line-height:1.15;}
+.return-name h2 {overflow-wrap:anywhere;}
+.full-edition-close {padding:22px 0 5px;border-top:1px solid var(--line);margin-top:24px;}
+.full-edition-close h3 {font-family:var(--display);font-weight:500;font-size:30px;margin:8px 0;}
+.full-edition-close p {max-width:38em;}
+@media(max-width:600px){
+ .contents-list button:has(.compound-name) {grid-template-columns:35px minmax(0,1fr) 20px;}
+ .contents-list button:has(.compound-name) .contents-arabic {grid-column:2;grid-row:2;justify-self:start;font-size:25px;line-height:1.5;}
+ .contents-list button:has(.compound-name)>.icon {grid-column:3;grid-row:1;}
+ .contents-list .contents-name>strong.compound-name {font-size:22px;}
+ .name-chooser strong {font-size:14px;line-height:1.12;}
+ .nearby-names strong.compound-name {font-size:15px;}
+}
+@media(max-width:359px){
+ .reader-folio .name-heading .arabic-name.compound-arabic {font-size:30px;}
+ .reader-folio .name-heading h1.compound-name {font-size:29px;}
+}
