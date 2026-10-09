@@ -1,0 +1,35 @@
+/* Give the first words priority while keeping each book's artwork and ornament. */
+html .system-app .publication-reader .garden-reader-opening { height:112px; margin-bottom:16px; }
+html .system-app .publication-reader>.reading-ornament { height:26px; margin:0 0 12px; }
+html .system-app .publication-reader>.reading-ornament>span { width:26px; height:26px; }
+html .system-app.system-warm .publication-opening>h1,
+html .system-app.system-warm .publication-opening>h2 { font-size:clamp(38px,4vw,50px); line-height:1.08; margin:16px 0 8px; }
+.system-app .publication-opening-subtitle { margin-bottom:14px; line-height:1.6; }
+html .system-app .publication-opening .reading-depth-selector { margin-top:14px; }
+.system-app .publication-opening .reading-depth-description { margin-top:8px; line-height:1.6; }
+.system-app .publication-reader>.reading-navigator { margin-top:16px; }
+
+/* Keep depth switching within reach throughout every section of all forty books. */
+html .system-app .publication-reader .reading-navigator.has-depth-control { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:0 18px; padding:9px 0 7px; }
+.publication-reader .reading-depth-dock { grid-column:2; grid-row:1; display:flex; align-items:center; gap:8px; color:var(--publication-muted); font:12px/1.5 var(--publication-ui); }
+.publication-reader .reading-depth-dock select { min-height:44px; padding:7px 26px 7px 10px; border:1px solid var(--publication-control-line); border-radius:8px; background:var(--publication-paper); color:var(--publication-ink); font:13px/1.5 var(--publication-ui); }
+.publication-reader .has-depth-control .reading-navigator-meta { grid-column:1; grid-row:1; }
+.publication-reader .has-depth-control .reading-navigator-track { grid-column:1/-1; margin:7px 0 4px; }
+.publication-reader .has-depth-control .reading-landmarks { grid-column:1/-1; }
+.publication-reader [tabindex="-1"]:focus { outline:none; }
+@media(max-width:767px) {
+ html .system-app.system-warm.mobile-reader .garden-reader-opening { height:88px; margin-bottom:13px; }
+ html .system-app.system-warm.mobile-reader .publication-opening>h1 { font-size:38px; margin-top:14px; }
+ html .system-app .publication-opening .reading-depth-selector { margin-top:14px; }
+ html .system-app .publication-opening .reading-page-tools button { width:36px; height:44px; min-height:44px; }
+ html .system-app .publication-reader .reading-navigator.has-depth-control { grid-template-columns:minmax(0,1fr) auto; column-gap:10px; }
+ .publication-reader .has-depth-control .reading-navigator-meta { display:none; }
+ .publication-reader .reading-depth-dock>span { position:absolute; width:1px; height:1px; clip-path:inset(50%); overflow:hidden; }
+ .publication-reader .has-depth-control .reading-landmark-select { grid-column:1; grid-row:1; min-width:0; }
+ html .system-app .publication-reader .reading-landmark-select select { min-height:44px; height:44px; width:100%; }
+ .publication-reader .has-depth-control .reading-navigator-track { grid-row:2; margin:7px 0 0; }
+}
+
+html .system-app .publication-reader>.deep-thesis { padding:22px 0 10px; margin:0; border:0; }
+html .system-app .publication-reader>.deep-thesis h3 { max-width:36ch; }
+html .system-app[data-reading-width=focused] .publication-reader>.deep-thesis { max-width:620px; }

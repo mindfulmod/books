@@ -1,0 +1,67 @@
+/* A reading opening, shared by Brief, Deep and Sources. */
+.system-app .publication-opening { margin:0 0 12px; }
+.publication-opening-meta { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.publication-opening-meta>div:first-child { min-width:0; display:grid; gap:5px; }
+.publication-opening-meta>div>span { color:var(--publication-accent); font:500 12px/1.5 var(--publication-ui); }
+.publication-opening-meta small { color:var(--publication-muted); font:12px/1.5 var(--publication-ui); }
+html .system-app .publication-opening .reading-page-tools { flex-shrink:0; display:flex; gap:3px; flex-wrap:nowrap; padding:0; border:0; }
+html .system-app .publication-opening .reading-page-tools button { display:grid; place-items:center; padding:0; width:40px; height:42px; min-height:42px; border:1px solid transparent; border-radius:50%; background:transparent; color:var(--publication-accent); }
+html .system-app .publication-opening .reading-page-tools button:hover,
+html .system-app .publication-opening .reading-page-tools button[aria-pressed=true] { background:var(--publication-panel); border-color:var(--publication-line); }
+html .system-app.system-warm .publication-opening>h1,
+html .system-app.system-warm .publication-opening>h2 { margin:25px 0 12px; color:var(--publication-ink); font:400 clamp(44px,5vw,68px)/1.02 var(--publication-serif); letter-spacing:-.025em; text-wrap:balance; }
+.system-app .publication-opening-subtitle { max-width:58ch; margin:0 0 25px; color:var(--publication-muted); font:15px/1.75 var(--publication-ui); }
+html .system-app .publication-opening .reading-depth-selector { margin:25px 0 0; }
+.system-app .publication-opening .reading-depth-label { margin:0; font:12px/1.5 var(--publication-ui); }
+.publication-opening .reading-depth-label>span { display:none; }
+html .system-app .publication-opening .reading-depth-choices { display:flex; gap:22px; border-bottom:1px solid var(--publication-line); }
+html .system-app .publication-opening .reading-depth-choices button { display:flex; flex:0 1 auto; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:10px 4px; border:0; border-bottom:2px solid transparent; border-radius:0; background:transparent; color:var(--publication-muted); }
+.publication-opening .reading-depth-choices button :is(strong,svg) { color:inherit; }
+.publication-opening .reading-depth-choices button strong { font:500 13px/1.5 var(--publication-ui); }
+.publication-opening .reading-depth-choices button svg { width:18px; height:18px; align-self:center; }
+.publication-opening .reading-depth-choices button small { position:absolute; width:1px; height:1px; padding:0; margin:-1px; clip-path:inset(50%); overflow:hidden; white-space:nowrap; }
+html .system-app .publication-opening .reading-depth-choices button[aria-pressed=true] { background:transparent; color:var(--publication-accent); border-color:var(--publication-accent); box-shadow:none; }
+html .system-app .publication-opening .reading-depth-choices button:hover { background:var(--publication-panel); }
+.system-app .publication-opening .reading-depth-description { margin:11px 0 0; font:13px/1.75 var(--publication-ui); max-width:65ch; }
+.publication-opening .reading-depth-description strong { font-weight:500; }
+html .system-app.system-warm .publication-reader>.explanation-card { border:0; background:transparent; padding:0; }
+html .system-app.system-warm .publication-reader>.explanation-card .depth-content { padding-inline:0; }
+.system-app .publication-reader>.reading-navigator { margin-top:22px; }
+html .system-app.system-warm .publication-reader :is(.deep-thesis>p,.reasoning-move p,.close-reading-grid p,.reading-distinction-paths p) { font-family:var(--publication-ui); font-weight:400; }
+html .system-app.system-warm .publication-reader .deep-thesis h3 { font-family:var(--publication-serif); font-weight:400; font-size:clamp(30px,3vw,38px); line-height:1.2; }
+html .system-app.system-warm .publication-reader .deep-section-heading h4 { font-family:var(--publication-serif); font-weight:400; font-size:32px; }
+@media(min-width:768px) {
+  html .system-app.reading-focus .system-workspace { max-width:1300px; grid-template-columns:238px minmax(0,1fr); gap:40px; padding-top:32px; }
+  html .system-app.system-warm.reading-focus .publication-contents { background:color-mix(in srgb,var(--publication-paper) 94%,transparent); }
+  .reading-focus .garden-reader-opening { height:188px; margin-bottom:28px; }
+}
+@media(max-width:767px) {
+  html .system-app.system-warm.mobile-reader .publication-reader { --garden-page-padding:24px; border-radius:24px; }
+  html .system-app.system-warm.mobile-reader .garden-reader-opening { height:120px; margin-bottom:23px; }
+  html .system-app.system-warm.mobile-reader .publication-opening>h1 { font-size:48px; line-height:1.03; margin-top:22px; text-wrap:pretty; }
+  .system-app .publication-opening-subtitle { font-size:14px; line-height:1.75; margin-bottom:20px; }
+  .publication-opening-meta { gap:8px; }
+  .publication-opening-meta>div>span,.publication-opening-meta small { font-size:12px; }
+  html .system-app .publication-opening .reading-page-tools { gap:0; }
+  html .system-app .publication-opening .reading-page-tools button { width:35px; height:40px; min-height:40px; }
+  html .system-app .publication-opening .reading-depth-selector { margin-top:22px; }
+  html .system-app .publication-opening .reading-depth-choices { gap:20px; }
+  .publication-opening .reading-depth-choices button strong { font-size:12px; }
+  .system-app .publication-opening .reading-depth-description { font-size:13px; line-height:1.75; }
+  .system-app .publication-reader>.reading-navigator { margin-top:14px; }
+  html .system-app .publication-reader>.reading-navigator { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; column-gap:14px; padding:10px 0 7px; }
+  .publication-reader .reading-navigator-meta>span:first-child { display:none; }
+  .publication-reader .reading-navigator-meta>span+span { font-size:12px; }
+  .publication-reader .reading-navigator-meta i { margin-inline:0; }
+  .publication-reader .reading-navigator-track { grid-column:1/-1; grid-row:2; margin:8px 0 0; }
+  html .system-app .publication-reader .reading-landmark-select { margin:0; }
+  .publication-reader .reading-landmark-select>span { display:none; }
+  html .system-app .publication-reader .reading-landmark-select select { min-height:38px; height:38px; margin:0; padding:6px 8px; font-size:12px; }
+}
+@media(max-width:359px) {
+  html .system-app.system-warm.mobile-reader .publication-reader { --garden-page-padding:18px; }
+  html .system-app.system-warm.mobile-reader .publication-opening>h1 { font-size:42px; }
+  html .system-app .publication-opening .reading-depth-choices { justify-content:space-between; gap:7px; }
+  .publication-opening-meta>div>span { font-size:12px; }
+  html .system-app .publication-opening .reading-page-tools button { width:32px; }
+}

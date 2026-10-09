@@ -1,0 +1,82 @@
+/* Reading comfort across all forty books, including the authored studies. */
+html .system-app .publication-reader { font-synthesis:none; }
+html .system-app :is([lang=ar],[dir=rtl]) { font-family:'Noto Naskh Arabic','Geeza Pro',serif; letter-spacing:normal; }
+html .system-app .publication-contents nav button { font-size:13px; line-height:1.55; }
+html .system-app .publication-contents>p { font-size:12px; }
+html .system-app :is(.system-brand small,.library-trigger span,.search-trigger span,.publication-contents nav button>span:first-child) { font-size:12px; }
+html .system-app :is(.misreading-note>span,.observation-note>span,.bookmark-action) { font:500 12px/1.6 var(--publication-ui); }
+html .system-app :is(.deep-thesis>span,.deep-guardrail>span,.mobile-reader-location>span,.mobile-depth-trigger>span,.mobile-stepper-label>span) { font-size:12px; line-height:1.5; letter-spacing:.025em; }
+html .system-app .mobile-depth-trigger :is(small,strong) { font-size:12px; line-height:1.4; }
+html .system-app .publication-opening .reading-page-tools button { min-width:40px; }
+html .system-app .publication-opening .reading-depth-choices button strong { font-size:14px; }
+html .system-app .publication-opening .reading-depth-description { font-size:13px; }
+html .system-app .reading-navigator-meta>span+span { font-size:12px; }
+html .system-app .reading-landmark-select select { font-size:13px; }
+html .system-app .publication-reader :is(.big-idea,.core-claim>p,.misreading-note p,.observation-note p) {
+  font-family:var(--publication-ui); line-height:var(--reader-prose-line,1.8);
+}
+html .system-app .publication-reader :is(.reasoning-move p,.deep-thesis>p,.study-reading p,.study-intro p) { max-width:66ch; }
+html .system-app .study-choices { --study-green:var(--publication-blue); }
+html .system-app .study-choices button { font-size:13px; font-weight:500; border-radius:8px; }
+html .system-app .study-choices button[aria-pressed=true] {
+  background:var(--publication-blue); border-color:var(--publication-blue); color:var(--publication-paper);
+}
+html .system-app .passage-study { --study-green:var(--publication-blue); }
+html .system-app .study-intro { padding-top:28px; }
+html .system-app .study-reading h4 { max-width:40ch; }
+html .system-app :is(.study-intro,.visual-reading>header) { position:relative; }
+html .system-app .study-intro::before {
+  content:''; display:block; width:100%; height:32px; margin-bottom:25px;
+  background:var(--publication-brass); opacity:.5;
+  mask:url('/assets/reading-geometry/eightfold-border.svg') center/64px 32px repeat-x;
+  pointer-events:none;
+}
+html .system-app .visual-reading>header { border-top:4px double var(--publication-brass); }
+html .system-app .passage-study :is(.study-mirror-scene,.prayer-leaf,.feedback-window,.return-chain) {
+  --publication-paper:var(--publication-figure-paper); --publication-panel:var(--publication-figure-paper);
+  --publication-ink:var(--publication-figure-ink); --publication-muted:var(--publication-figure-muted);
+  --publication-line:var(--publication-figure-line); --publication-brass:var(--publication-figure-brass);
+  --publication-accent:var(--publication-figure-accent); --publication-on-accent:var(--publication-figure-on-accent);
+  --reader-panel:var(--publication-figure-paper); --reader-inset:var(--publication-figure-panel);
+  --reader-ink:var(--publication-figure-ink); --reader-muted:var(--publication-figure-muted);
+  --reader-rule:var(--publication-figure-line); --reader-accent:var(--publication-figure-accent);
+  --reader-cool:var(--publication-figure-accent); --study-green:var(--publication-figure-accent);
+  --study-gold:var(--publication-figure-brass); color:var(--reader-ink); background:var(--reader-panel);
+}
+html .system-app .passage-study .return-chain button[aria-pressed=true] {
+  background:var(--publication-figure-accent); color:var(--publication-figure-on-accent); border-radius:8px;
+}
+html .system-app .return-chain i { color:var(--publication-figure-accent); }
+html .system-app .passage-study :is(.thought-path strong,.meaning-index strong,.return-chain strong,.feedback-window strong) { font-family:var(--publication-ui); font-size:20px; font-weight:500; line-height:1.45; }
+html .system-app .formation-loop>span { font:500 18px/1.45 var(--publication-ui); }
+html .system-app .study-intro>span { letter-spacing:.06em; }
+html .system-app .study-caption { font-size:13px; }
+html .system-app .visual-reading :is(.visual-reading-node-copy,.visual-reading-detail>p) { line-height:1.75; }
+html .system-app :is(.city-intro h3,.meaning-heading h4) { font-family:var(--publication-serif); font-weight:400; letter-spacing:-.015em; }
+html .system-app :is(.city-study p,.city-reading-bridge dd,.four-meanings p) { font-family:var(--publication-ui); line-height:1.8; }
+html .system-app :is(.city-explanation p,.city-intro>p) { font-size:var(--reader-prose-size,18px); line-height:var(--reader-prose-line,1.8); }
+html .system-app :is(.city-explanation h4,.city-pause h4,.city-faculty-reading h4) { font:500 22px/1.4 var(--publication-ui); }
+html .system-app .city-faculty-reading h4 { color:inherit; }
+html .system-app :is(.deep-stage-label>span,.deep-guardrail>span) { font-size:12px; color:var(--publication-brass); }
+html .system-app .city-faculty strong { font-family:var(--publication-ui); }
+html .system-app .city-faculty small { font-size:12px; line-height:1.3; }
+html .system-app .city-study .city-diagram-note { font-size:13px; line-height:1.7; }
+html .system-app .four-meanings :is(small,.meaning-branch,.meaning-compare) { font-size:13px; }
+@media(max-width:767px) {
+  html .system-app .publication-opening-meta { align-items:flex-start; }
+  html .system-app .publication-opening-meta>div:first-child { max-width:calc(100% - 128px); }
+  html .system-app .publication-opening-meta :is(span,small) { font-size:12px; }
+  html .system-app .publication-opening .reading-depth-choices { gap:18px; }
+  html .system-app .passage-study .study-choices button { flex:1 1 120px; }
+  html .system-app .study-intro h3 { font-size:34px; }
+  html .system-app .city-instrument { padding:14px; }
+  html .system-app .city-faculty { min-height:82px; gap:3px; }
+  html .system-app .city-faculty svg { width:19px; height:19px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html .system-app .passage-study * { transition:none; }
+}
+@media(max-width:360px) {
+  html .system-app .city-plan { aspect-ratio:320/380; }
+  html .system-app .city-faculty { width:32%; }
+}

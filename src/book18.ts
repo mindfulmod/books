@@ -739,7 +739,7 @@ export const book18Journeys: Journey[] = [
     id: "the-gathering", number: "03", question: "How should I sit when I listen?", title: "The manners of the gathering",
     description: "Take the five manners of audition, from choosing the time and company to keeping in step with the group. Along the way come Ghazali's rulings on dancing, crying out and tearing clothes.",
     payoff: "You can tell the listener who is overcome from the one who performs, and you see why stillness may hold more than movement.",
-    image: assetUrl("assets/system/book18-the-patches.jpg"), imageAlt: "A length of plain undyed cloth cut into neat squares, the squares stacked in small even piles.", minutes: 14, color: "#c25f50",
+    image: assetUrl("assets/ihya-garden/books/book-18-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 18.", minutes: 14, color: "#c25f50",
     nodes: [
       node("lawful-joy", "Start from lawful joy", "Eid in Aisha's house", "The Prophet let the girls sing and the Abyssinians dance.", "He stood a long time so Aisha could watch.", 8, "company"),
       node("time-place-brothers", "Time, place, brothers", "Or do not listen", "A free heart, a fitting place and like-minded company.", "Critics, the proud and fakers all disturb.", 22, "prepare"),

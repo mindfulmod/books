@@ -807,7 +807,7 @@ export const book13Journeys: Journey[] = [
     id: "the-six-contracts", number: "04", question: "What must I know before I trade?", title: "Learn the six contracts",
     description: "Walk through the law Ghazali says every earner must know: sale and its three pillars, usury, the advance sale, hire, profit-sharing and partnership.",
     payoff: "You come away able to notice where an everyday deal might go wrong, which is exactly the knowledge Ghazali says you need in order to ask.",
-    image: assetUrl("assets/system/book13-even-scales.jpg"), imageAlt: "A money-changer's balance at rest on a cloth, a few whole coins in one pan and broken pieces in the other, the beam level.", minutes: 16, color: "#586fa8",
+    image: assetUrl("assets/ihya-garden/books/book-13-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 13.", minutes: 16, color: "#586fa8",
     nodes: [
       node("an-obligation", "An obligation", "Umar's whip", "Learning the outline is a duty for every Muslim who earns.", "The detail is the mufti's business.", 5, "learn"),
       node("the-parties", "Whom you deal with", "The first pillar", "Not directly with a child, the insane, a slave without leave, or the blind.", "Whatever you hand them and they lose is your loss.", 5, "order"),

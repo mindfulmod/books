@@ -1,6 +1,7 @@
 import { ThemeButton, useReadingTheme } from "./ReadingTheme";
 import "./reading-theme.css";
 import { ReadingHome } from "./ReadingHome";
+import { ReadingGarden } from "./ReadingGarden";
 import {
   ArrowLeft,
   ArrowRight,
@@ -18,58 +19,38 @@ import {
   LinkSimple,
   ListBullets,
   MagnifyingGlass,
+  Notebook,
+  CheckCircle,
   Shield,
   Sparkle,
   Target,
   X,
 } from "@phosphor-icons/react";
-import { useEffect, useId, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
-import { DeepReadingSections } from "./reading/DeepReadingSections";
+import { useEffect, useId, useMemo, useRef, useState, useTransition, type CSSProperties, type ReactNode } from "react";
+import { DeepReadingSections, ReadingThesis } from "./reading/DeepReadingSections";
+import { depthOptions } from "./reading/ReadingDepthSelector";
+import { ReaderOpening } from "./reading/ReaderOpening";
+import { VisualReading } from "./reading/VisualReading";
+import { bookNavigation as books, type BookNavigation } from "./reading/bookNavigation";
+import { readBook, loadAllBooks } from "./reading/bookLoader";
+import { readReaderLocation, readerSearch } from "./reading/readerLocation";
+import { IllustratedLibrary, BookCollection } from "./reading/BookCollection";
+import { ReadingSettings } from "./reading/ReadingSettings";
+import { ReadingNotebook } from "./reading/ReadingNotebook";
+import { ReadingNavigator } from "./reading/ReadingNavigator";
+import { useReadingPosition } from "./reading/useReadingPosition";
+import { ReadingFinish } from "./reading/ReadingFinish";
+import { ReadingActivity } from "./reading/ReadingActivity";
+import { useReadingWorkspace } from "./reading/useReadingWorkspace";
+import { estimatedReadingMinutes, sectionKey } from "./reading/readingWorkspace";
+import { SavedReadings } from "./reading/SavedReadings";
+import { savedReadingGroups, resolveSavedReading } from "./reading/bookmarkState";
+import { useModalFocus } from "./reading/useModalFocus";
 import { ReadingDisclosure } from "./reading/ReadingDisclosure";
 import { getDeepExperience, getExplorationSections } from "./reading/deepExperiences";
 import { FourMeanings } from "./FourMeanings";
 import { assetUrl } from "./assetUrl";
-import { book01 } from "./book01";
-import { book02 } from "./book02";
-import { book03 } from "./book03";
-import { book04 } from "./book04";
-import { book05 } from "./book05";
-import { book06 } from "./book06";
-import { book07 } from "./book07";
-import { book08 } from "./book08";
-import { book09 } from "./book09";
-import { book10 } from "./book10";
-import { book11 } from "./book11";
-import { book12 } from "./book12";
-import { book13 } from "./book13";
-import { book14 } from "./book14";
-import { book15 } from "./book15";
-import { book16 } from "./book16";
-import { book17 } from "./book17";
-import { book18 } from "./book18";
-import { book19 } from "./book19";
-import { book20 } from "./book20";
-import { book21 } from "./book21";
-import { book22 } from "./book22";
-import { book23 } from "./book23";
-import { book24 } from "./book24";
-import { book25 } from "./book25";
-import { book26 } from "./book26";
-import { book27 } from "./book27";
-import { book28 } from "./book28";
-import { book29 } from "./book29";
-import { book30 } from "./book30";
-import { book31 } from "./book31";
-import { book32 } from "./book32";
-import { book33 } from "./book33";
-import { book34 } from "./book34";
-import { book35 } from "./book35";
-import { book36 } from "./book36";
-import { book37 } from "./book37";
-import { book38 } from "./book38";
-import { book39 } from "./book39";
-import { book40 } from "./book40";
-import { chapters, conceptNodes, contentSources, quarters } from "./data";
+import { chapters, conceptNodes, contentSources } from "./data";
 import type { Chapter, DeepReading, VisualModel } from "./data";
 import type { AudienceResponse, Depth, Glyph, Journey, JourneyNode, SolitudeReading, SubstitutionResponse, SystemBook } from "./systemTypes";
 
@@ -85,16 +66,11 @@ type SavedState = {
   // sequence rail needs to address a chapter directly. Cleared whenever a node is chosen.
   chapterId?: number;
   readingMode?: "journey" | "sections";
+  readingPresentation?: "full-reading";
 };
 
 
-const books = [book01, book02, book03, book04, book05, book06, book07, book08, book09, book10, book11, book12, book13, book14, book15, book16, book17, book18, book19, book20, book21, book22, book23, book24, book25, book26, book27, book28, book29, book30, book31, book32, book33, book34, book35, book36, book37, book38, book39, book40];
-
-const depthOptions: Array<{ id: Depth; label: string; short: string }> = [
-  { id: "glance", label: "In brief", short: "Brief" },
-  { id: "deep", label: "Go deep", short: "Deep" },
-  { id: "sources", label: "Grounding", short: "Source" },
-];
+const book01 = books[0];
 
 const mapPositions = {
   4: [
@@ -198,11 +174,12 @@ function fallbackDeepReading(chapter: Chapter, node: JourneyNode, book: SystemBo
 // (a 116px banner and a 235-390px sidebar), so `sizes` lets the browser take the 480w file
 // almost everywhere and skip roughly 700KB per plate.
 function Plate({ src, alt, sizes }: { src: string; alt: string; sizes: string }) {
-  const thumb = src.replace(".jpg", "-thumb.jpg");
+  const webp = src.endsWith("-1200.webp");
+  const thumb = webp ? src.replace("-1200.webp", "-320.webp") : src.replace(".jpg", "-thumb.jpg");
   return (
     <img
       src={thumb}
-      srcSet={`${thumb} 480w, ${src} 1600w`}
+      srcSet={webp ? `${thumb} 320w, ${src.replace("-1200.webp", "-640.webp")} 640w, ${src} 1200w` : `${thumb} 480w, ${src} 1600w`}
       sizes={sizes}
       width={1600}
       height={900}
@@ -1072,8 +1049,8 @@ function FoodMeasures({
 }
 
 
-const bookTotalNodes = (item: SystemBook) => item.journeys.reduce((sum, journey) => sum + journey.nodes.length, 0);
-const bookTotalIdeas = (item: SystemBook) => {
+const bookTotalNodes = (item: BookNavigation) => item.journeys.reduce((sum, journey) => sum + journey.nodes.length, 0);
+const bookTotalIdeas = (item: BookNavigation) => {
   const journeyChapterIds = new Set(item.journeys.flatMap((journey) => journey.nodes.map((node) => node.chapterId)));
   const directSections = item.chapters.filter((chapter) => !journeyChapterIds.has(chapter.id)).length;
   return bookTotalNodes(item) + directSections;
@@ -1089,7 +1066,7 @@ type SearchHit = {
   score: number;
 };
 
-// The whole corpus is already in memory, so search is a scan rather than an index. Titles and
+// Search loads the corpus on demand. Titles and
 // the section claim outrank argument prose so that a query naming a subject lands on the
 // section about it rather than on the first section that happens to mention it.
 function buildSearchHits(all: SystemBook[], raw: string): SearchHit[] {
@@ -1131,29 +1108,28 @@ function buildSearchHits(all: SystemBook[], raw: string): SearchHit[] {
 }
 
 function SearchOverlay({
-  all,
   onOpen,
   onClose,
 }: {
-  all: SystemBook[];
   onOpen: (bookId: number, chapterId: number) => void;
   onClose: () => void;
 }) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-  const hits = useMemo(() => buildSearchHits(all, query), [all, query]);
-
+  const [all, setAll] = useState<SystemBook[] | null>(null);
+  const [loadFailed, setLoadFailed] = useState(false);
   useEffect(() => {
-    inputRef.current?.focus();
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
+    let active = true;
+    loadAllBooks().then(books => { if (active) setAll(books); }, () => { if (active) setLoadFailed(true); });
+    return () => { active = false; };
+  }, []);
+  const hits = useMemo(() => all ? buildSearchHits(all, query) : [], [all, query]);
+
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useModalFocus(dialogRef, onClose, inputRef);
 
   return (
-    <div className="search-overlay" role="dialog" aria-modal="true" aria-label="Search the forty books">
+    <div ref={dialogRef} className="search-overlay" role="dialog" aria-modal="true" aria-label="Search the forty books">
       <div className="search-panel">
         <div className="search-field">
           <MagnifyingGlass size={18} weight="bold" />
@@ -1168,11 +1144,13 @@ function SearchOverlay({
           <button onClick={onClose} aria-label="Close search"><X size={17} weight="bold" /></button>
         </div>
 
-        {query.trim().length > 0 && query.trim().length < 3 && (
+        {!all && <p className="search-note" role="status">{loadFailed ? "The collection could not load. Check your connection, then reload to try again." : "Preparing search across the forty books…"}</p>}
+        {loadFailed && <button className="search-retry" onClick={() => window.location.reload()}>Reload the reading room</button>}
+        {all && query.trim().length > 0 && query.trim().length < 3 && (
           <p className="search-note">Keep typing — search starts at three characters.</p>
         )}
-        {query.trim().length >= 3 && (
-          <p className="search-note">
+        {all && query.trim().length >= 3 && (
+          <p className="search-note" role="status">
             {hits.length === 0 ? "Nothing found in the forty books." : `${hits.length}${hits.length === 40 ? "+" : ""} section${hits.length === 1 ? "" : "s"}`}
           </p>
         )}
@@ -1192,152 +1170,6 @@ function SearchOverlay({
     </div>
   );
 }
-
-function Library({
-  available,
-  currentBookId,
-  visited,
-  bookmarks,
-  onSelectBook,
-  onClose,
-}: {
-  available: SystemBook[];
-  currentBookId: number;
-  visited: string[];
-  bookmarks: string[];
-  onSelectBook: (bookId: number) => void;
-  onClose: () => void;
-}) {
-  const currentQuarter = quarters.find((quarter) => quarter.books.some((entry) => entry.id === currentBookId));
-  const [activeQuarter, setActiveQuarter] = useState(currentQuarter?.id ?? quarters[0].id);
-  const quarterListRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [onClose]);
-
-  const byId = new Map(available.map((item) => [item.id, item]));
-  const readyTotal = available.reduce((sum, item) => sum + bookTotalIdeas(item), 0);
-  const readySeen = available.reduce(
-    (sum, item) => sum + visited.filter((key) => key.startsWith(`${item.id}:`)).length,
-    0,
-  );
-
-  return (
-    <div className="library-backdrop" role="presentation" onClick={onClose}>
-      <div className="library" role="dialog" aria-modal="true" aria-labelledby="library-title" onClick={(event) => event.stopPropagation()}>
-        <header className="library-header">
-          <div>
-            <span>The library</span>
-            <h2 id="library-title">Forty books, four quarters</h2>
-            <p>
-              {available.length} of 40 books are prepared. Books without reviewed interactive content are shown closed
-              rather than filled with generated placeholder text.
-            </p>
-          </div>
-          <button className="library-close" onClick={onClose} aria-label="Close the library"><X size={17} weight="bold" /></button>
-        </header>
-
-        <div className="library-progress">
-          <span className="library-meter"><i style={{ width: `${readyTotal ? (readySeen / readyTotal) * 100 : 0}%` }} /></span>
-          <span><strong>{readySeen}</strong> of {readyTotal} ideas seen across the prepared books</span>
-        </div>
-
-        <nav className="library-quarter-nav" aria-label="Library quarters">
-          {quarters.map((quarter, index) => (
-            <button
-              key={quarter.id}
-              className={activeQuarter === quarter.id ? "active" : ""}
-              onClick={() => {
-                setActiveQuarter(quarter.id);
-                if (quarterListRef.current) quarterListRef.current.scrollTop = 0;
-              }}
-              aria-pressed={activeQuarter === quarter.id}
-            >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {quarter.title.replace("The Quarter of ", "")}
-            </button>
-          ))}
-        </nav>
-
-        <div ref={quarterListRef} className="library-quarters">
-          {quarters.map((quarter) => {
-            const ready = quarter.books.filter((entry) => byId.has(entry.id));
-            const complete = ready.length === quarter.books.length;
-            return (
-              <section key={quarter.id} className={`library-quarter${complete ? " complete" : ""}${ready.length ? "" : " empty"}${activeQuarter === quarter.id ? " selected" : ""}`}>
-                <div className="library-quarter-head">
-                  <div>
-                    <span>{complete ? "Complete" : ready.length ? `${ready.length} of ${quarter.books.length} prepared` : "Not yet prepared"}</span>
-                    <h3>{quarter.title}</h3>
-                    <p>{quarter.focus}</p>
-                  </div>
-                  <span className="library-quarter-count" aria-hidden="true">
-                    {quarter.books.map((entry) => <i key={entry.id} className={byId.has(entry.id) ? "ready" : ""} />)}
-                  </span>
-                </div>
-
-                <ul className="library-books">
-                  {quarter.books.map((entry) => {
-                    const prepared = byId.get(entry.id);
-                    if (!prepared) {
-                      return (
-                        <li key={entry.id} className="library-book closed">
-                          <span className="library-book-number">{entry.id}</span>
-                          <span className="library-book-body">
-                            <strong>{entry.title}</strong>
-                            <em>Not yet prepared</em>
-                          </span>
-                        </li>
-                      );
-                    }
-                    const total = bookTotalIdeas(prepared);
-                    const seen = visited.filter((key) => key.startsWith(`${prepared.id}:`)).length;
-                    const marks = bookmarks.filter((key) => key.startsWith(`${prepared.id}:`)).length;
-                    const isCurrent = prepared.id === currentBookId;
-                    return (
-                      <li key={entry.id} className={`library-book ready${isCurrent ? " current" : ""}`}>
-                        <button onClick={() => onSelectBook(prepared.id)} aria-current={isCurrent ? "true" : undefined}>
-                          <span className="library-book-number">{prepared.id}</span>
-                          <span className="library-book-body">
-                            <strong>{prepared.title}</strong>
-                            <em>
-                              {prepared.chapters.length} sections · {prepared.journeys.length} journeys
-                              {marks ? ` · ${marks} saved` : ""}
-                            </em>
-                            <span className="library-book-meter"><i style={{ width: `${total ? (seen / total) * 100 : 0}%` }} /></span>
-                          </span>
-                          <span className="library-book-progress">{seen}/{total}</span>
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            );
-          })}
-        </div>
-
-        <footer className="library-footer">
-          <p>
-            Each prepared book is an original English synthesis made from a complete reading of the public Arabic text.
-            It is not a translation and does not replace one. Every book carries its own source ledger and editorial note.
-          </p>
-        </footer>
-      </div>
-    </div>
-  );
-}
-
 
 function RepentanceCheck({
   test,
@@ -1763,14 +1595,15 @@ function AudienceChamber({
   );
 }
 
-function initialState(): SavedState {
+function restoreSavedState(): SavedState {
   const fallbackJourney = book01.journeys.find((item) => item.nodes.some(node => node.chapterId === book01.chapters[0].id)) ?? book01.journeys[0];
   const fallbackNode = fallbackJourney.nodes[0];
   const fallback: SavedState = {
     bookId: book01.id,
     journeyId: fallbackJourney.id,
     nodeId: fallbackNode.id,
-    depth: "glance",
+    depth: "deep",
+    readingPresentation: "full-reading",
     visited: [],
     bookmarks: [],
   };
@@ -1791,7 +1624,8 @@ function initialState(): SavedState {
         ? keys.filter((item): item is string => typeof item === "string").map((item) =>
             item.split(":").length === 2 ? `21:${item}` : item)
         : [];
-    const normalizedVisited = normalizeKeys(parsed.visited);
+    const validKeys = (keys: unknown) => [...new Set(normalizeKeys(keys))].filter(key => resolveSavedReading(books, key));
+    const normalizedVisited = validKeys(parsed.visited);
 
     return {
       chapterId: parsed.chapterId,
@@ -1799,30 +1633,53 @@ function initialState(): SavedState {
       bookId: book.id,
       journeyId: journey.id,
       nodeId: resolvedNode.id,
-      depth: current && depthOptions.some((item) => item.id === parsed.depth) ? parsed.depth! : "glance",
+      // The former default was a synopsis. Introduce the full reading once while
+      // retaining the reader's book, position, bookmarks and subsequent choices.
+      depth: parsed.readingPresentation === "full-reading" && depthOptions.some((item) => item.id === parsed.depth)
+        ? parsed.depth! : parsed.depth === "sources" ? "sources" : "deep",
+      readingPresentation: "full-reading",
       visited: normalizedVisited,
-      bookmarks: normalizeKeys(parsed.bookmarks),
+      bookmarks: validKeys(parsed.bookmarks),
     };
   } catch {
     return fallback;
   }
 }
 
+function initialState(): SavedState {
+  const restored = restoreSavedState();
+  const position = readReaderLocation(books, window.location.search);
+  if (!position) return restored;
+  const key = position.chapterId != null
+    ? chapterKey(position.bookId, position.chapterId)
+    : ideaKey(position.bookId, position.journeyId, position.nodeId);
+  return { ...restored, ...position, visited: restored.visited.includes(key) ? restored.visited : [...restored.visited, key] };
+}
+
 function SystemApp() {
   const {theme,toggle} = useReadingTheme();
+  const [openingBook, startBookTransition] = useTransition();
   const [saved, setSaved] = useState<SavedState>(initialState);
   const [activeConcept, setActiveConcept] = useState<string | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
-  const [homeOpen, setHomeOpen] = useState(true);
+  const [homeOpen, setHomeOpen] = useState(() => !readReaderLocation(books, window.location.search));
+  const wasHomeOpen = useRef(homeOpen);
+  const [readingFocus, setReadingFocus] = useState(true);
+  const { workspace, storageError, recordVisit, toggleComplete, updateNote, setPreferences } = useReadingWorkspace();
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [notebookOpen, setNotebookOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [savedReadingsOpen, setSavedReadingsOpen] = useState(false);
   const [activeTaxonomy, setActiveTaxonomy] = useState("all");
   const [activeProcess, setActiveProcess] = useState("all");
   const isMobile = useIsMobile();
-  const [mobileSurface, setMobileSurface] = useState<MobileSurface>("book");
+  const [mobileSurface, setMobileSurface] = useState<MobileSurface>(() => readReaderLocation(books, window.location.search) ? "reader" : "book");
   const [mobileTab, setMobileTab] = useState<MobileTab>("sections");
   const [depthMenuOpen, setDepthMenuOpen] = useState(false);
+  const depthTriggerRef = useRef<HTMLButtonElement>(null);
+  const depthSheetRef = useRef<HTMLElement>(null);
   const [readerChromeVisible, setReaderChromeVisible] = useState(true);
-  const book = books.find((item) => item.id === saved.bookId) ?? book01;
+  const book = readBook(saved.bookId);
   const journey = book.journeys.find((item) => item.id === saved.journeyId)
     ?? book.journeys.find((item) => item.id === book.defaultJourneyId)
     ?? book.journeys[0];
@@ -1833,7 +1690,9 @@ function SystemApp() {
   const chapter = overrideChapter ?? book.chapters.find((item) => item.id === node.chapterId)!;
   const deepExperience = getDeepExperience(book, chapter.id);
   const nodeKey = overrideChapter ? chapterKey(book.id, overrideChapter.id) : ideaKey(book.id, journey.id, node.id);
-  const isBookmarked = saved.bookmarks.includes(nodeKey);
+  const savedSections = savedReadingGroups(books, saved.bookmarks);
+  const currentBookmarks = savedSections.find(item => item.book.id === book.id && item.chapter.id === chapter.id)?.keys ?? [];
+  const isBookmarked = currentBookmarks.length > 0;
   const positions = mapPositions[journey.nodes.length as 4 | 5 | 6] ?? serpentinePositions(journey.nodes.length);
   const routePath = mapPositions[journey.nodes.length as 4 | 5 | 6]
     ? "M110 125 C230 125 250 125 350 125 S535 125 610 125 S805 125 850 235 S780 382 645 385 S440 385 330 385"
@@ -1853,8 +1712,38 @@ function SystemApp() {
   const displayedChapters = activeSectionGroup
     ? book.chapters.filter((item) => activeSectionGroup.chapterIds.includes(item.id))
     : book.chapters;
+  const contentsGroups = book.taxonomy?.groups ?? book.process?.stages ?? [{
+    id: "all", label: "Sections", description: "", color: journey.color,
+    chapterIds: book.chapters.map(item => item.id),
+  }];
 
   useEffect(() => {
+    const search = homeOpen ? '' : readerSearch({ ...saved, readingMode: saved.readingMode ?? 'sections' }, chapter.id);
+    if (window.location.search !== search) {
+      const before = new URLSearchParams(window.location.search), after = new URLSearchParams(search);
+      const sameReading = !homeOpen && ['book', 'section', 'journey', 'node'].every(key => before.get(key) === after.get(key)) && (before.get('depth') ?? 'deep') === after.get('depth');
+      // Normalising a shared URL must preserve its passage anchor and avoid a duplicate Back entry.
+      if (sameReading) window.history.replaceState(null, '', `${window.location.pathname}${search}${window.location.hash}`);
+      else window.history.pushState(null, '', `${window.location.pathname}${search}`);
+    }
+    document.title = homeOpen ? 'The reading room | Ihya' : `${chapter.shortTitle} · ${book.title} | Ihya`;
+  }, [homeOpen, book.id, chapter.id, saved.depth, saved.readingMode, saved.journeyId, saved.nodeId]);
+
+  useEffect(() => {
+    const restore = () => {
+      const position = readReaderLocation(books, window.location.search);
+      setHomeOpen(!position);
+      if (position) { setSaved(current => ({ ...current, ...position })); setMobileSurface('reader'); setReadingFocus(true); }
+      setSearchOpen(false); setLibraryOpen(false); setSavedReadingsOpen(false); setDepthMenuOpen(false); setSettingsOpen(false); setNotebookOpen(false);
+    };
+    window.addEventListener('popstate', restore);
+    return () => window.removeEventListener('popstate', restore);
+  }, []);
+
+
+  useEffect(() => {
+    if (homeOpen && !wasHomeOpen.current) window.scrollTo({ top: 0, behavior: "instant" });
+    wasHomeOpen.current = homeOpen;
     document.body.classList.toggle("reading-home-page", homeOpen);
     return () => document.body.classList.remove("reading-home-page");
   }, [homeOpen]);
@@ -1868,9 +1757,35 @@ function SystemApp() {
     try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch { /* Reading remains available when browser storage is disabled. */ }
   }, [saved]);
 
-  const openFromSearch = (bookId: number, chapterId: number) => {
+
+
+  useEffect(() => {
+    if (!depthMenuOpen) return;
+    const sheet = depthSheetRef.current;
+    const trigger = depthTriggerRef.current;
+    const controls = () => Array.from(sheet?.querySelectorAll<HTMLElement>('button:not(:disabled),[href],input,select,[tabindex="0"]') ?? []);
+    controls()[0]?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { event.preventDefault(); setDepthMenuOpen(false); }
+      if (event.key === 'Tab') {
+        const items = controls(), first = items[0], last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = overflow; trigger?.focus(); };
+  }, [depthMenuOpen]);
+
+  const openFromSearch = (bookId: number, chapterId: number, depth?: Depth) => startBookTransition(() => {
     setHomeOpen(false);
+    setReadingFocus(true);
     setSearchOpen(false);
+    setLibraryOpen(false);
+    setNotebookOpen(false);
+    setSavedReadingsOpen(false);
     const nextBook = books.find((item) => item.id === bookId);
     if (!nextBook) return;
     const target = nextBook.chapters.find((item) => item.id === chapterId) ?? nextBook.chapters[0];
@@ -1892,15 +1807,17 @@ function SystemApp() {
       ...current,
       readingMode: "sections",
       bookId: nextBook.id,
+      depth: depth ?? current.depth,
       journeyId: journey.id,
       nodeId: (node ?? journey.nodes[0]).id,
       chapterId: node ? undefined : target.id,
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
-  };
+  });
 
-  const selectBook = (bookId: number, startingDepth: Depth = "glance") => {
+  const selectBook = (bookId: number, startingDepth: Depth = "deep") => startBookTransition(() => {
     setHomeOpen(false);
+    setReadingFocus(true);
     window.scrollTo(0, 0);
     setLibraryOpen(false);
     const nextBook = books.find((item) => item.id === bookId);
@@ -1933,7 +1850,7 @@ function SystemApp() {
       depth: startingDepth,
       visited: current.visited.includes(key) ? current.visited : [...current.visited, key],
     }));
-  };
+  });
 
   const selectJourney = (next: Journey) => {
     const first = next.nodes[0];
@@ -2002,14 +1919,15 @@ function SystemApp() {
   const toggleBookmark = () => {
     setSaved((current) => ({
       ...current,
-      bookmarks: current.bookmarks.includes(nodeKey)
-        ? current.bookmarks.filter((item) => item !== nodeKey)
+      bookmarks: isBookmarked
+        ? current.bookmarks.filter((item) => !currentBookmarks.includes(item))
         : [...current.bookmarks, nodeKey],
     }));
   };
 
   const openSection = (chapterId: number) => {
     selectChapter(chapterId);
+    setReadingFocus(true);
     if (isMobile) {
       setMobileSurface("reader");
       setDepthMenuOpen(false);
@@ -2022,7 +1940,7 @@ function SystemApp() {
     setSaved(current => ({...current, depth: "deep"}));
   };
   const explorationIndex = getExplorationSections(book).length > 0 && (
-    <ReadingDisclosure title={`Explore in Deep · ${getExplorationSections(book).length} passages`} className="exploration-index">
+    <ReadingDisclosure title={`Interactive readings · ${getExplorationSections(book).length} passages`} className="exploration-index">
       <p>Follow an idea through an interactive reading, then continue into the argument.</p>
       {getExplorationSections(book).map(section => <button key={section.id} onClick={() => openDeepSection(section.id)}><span>{String(section.id).padStart(2, "0")}</span><strong>{section.shortTitle}</strong><ArrowRight size={16}/></button>)}
     </ReadingDisclosure>
@@ -2030,6 +1948,7 @@ function SystemApp() {
 
   const openNode = (next: JourneyNode) => {
     selectNode(next);
+    setReadingFocus(true);
     if (isMobile) {
       setMobileSurface("reader");
       setDepthMenuOpen(false);
@@ -2191,14 +2110,65 @@ function SystemApp() {
   const activeMobileTab: MobileTab = !isMobile
     ? "sections"
     : mobileTabs.some((item) => item.id === mobileTab) ? mobileTab : "sections";
-  const activeDepthOption = depthOptions.find((option) => option.id === saved.depth) ?? depthOptions[0];
+  const currentSectionKey = sectionKey(book.id, chapter.id);
+  const editorialTrial = Boolean(deepReading.visualAlongside);
+  const compactReadingText = saved.depth === 'sources' ? [book.editorialNote, deepReading.sourceAnchor, ...book.sources.map(source => source.note)].join(' ') : [deepReading.context, deepReading.thesis, deepReading.misreading].join(' ');
+  const compactReadingMinutes = Math.max(1, Math.ceil(compactReadingText.trim().split(/\s+/).length / 200));
+  const previousMobileLayout = useRef(isMobile);
+  useEffect(() => {
+    if (previousMobileLayout.current === isMobile) return;
+    previousMobileLayout.current = isMobile;
+    if (isMobile) setMobileSurface(readingFocus ? 'reader' : 'book');
+    else setReadingFocus(mobileSurface === 'reader');
+  }, [isMobile, mobileSurface, readingFocus]);
+  const readerActive = !homeOpen && (isMobile ? mobileSurface === 'reader' : readingFocus);
+  const rememberDepthPosition = useReadingPosition(readerActive, currentSectionKey, saved.depth);
+  const changeDepth = (depth: Depth) => {
+    rememberDepthPosition();
+    setSaved(current => ({ ...current, depth }));
+  };
+  const completedInBook = book.chapters.filter(item => workspace.completed.includes(sectionKey(book.id, item.id))).length;
+  useEffect(() => { if (readerActive) recordVisit(book.id, chapter.id); }, [readerActive, book.id, chapter.id, recordVisit]);
+  const nextBook = !inJourney ? books.find(item => item.id === book.id + 1) : undefined;
+  const finishReading = <ReadingFinish bookId={book.id} theme={theme} question={deepReading.selfAudit?.[0] ?? chapter.reflection}
+    completed={workspace.completed.includes(currentSectionKey)} onComplete={() => toggleComplete(currentSectionKey)} onReflect={() => setNotebookOpen(true)}
+    previousTitle={previousLabel} onPrevious={() => moveReader(-1)} nextTitle={nextLabel ?? (inJourney ? 'Return to the book' : nextBook?.title ?? 'Back to your bookshelf')}
+    onNext={() => {
+      if (nextItem) { moveReader(1); return; }
+      if (inJourney) { if (isMobile) returnToBook(); else exploreBook(); return; }
+      if (nextBook) { openFromSearch(nextBook.id, nextBook.chapters[0].id, 'deep'); return; }
+      setHomeOpen(true); window.scrollTo(0, 0);
+    }} />;
+  const workspaceDialogs = <>
+    {settingsOpen && <ReadingSettings value={workspace.preferences} onChange={setPreferences} theme={theme} onToggleTheme={toggle} onClose={() => setSettingsOpen(false)}/>}
+    {notebookOpen && <ReadingNotebook initialView={homeOpen ? 'all' : 'write'} books={books} currentKey={currentSectionKey} prompts={deepReading.selfAudit ?? [chapter.reflection]} notes={workspace.notes} storageError={storageError} onChange={updateNote} onOpenReading={openFromSearch} onClose={() => setNotebookOpen(false)}/>}
+  </>;
+  const readingTools = <div className="reading-page-tools" role="group" aria-label="Reading tools">
+    <button onClick={toggleBookmark} aria-pressed={isBookmarked} aria-label={isBookmarked ? 'Reading saved' : 'Save reading'} title={isBookmarked ? 'Reading saved' : 'Save reading'}><BookmarkSimple size={20} weight={isBookmarked ? 'fill' : 'regular'}/></button>
+    <button onClick={() => setNotebookOpen(true)} aria-label={workspace.notes[currentSectionKey] ? 'Your note' : 'Notebook'} title={workspace.notes[currentSectionKey] ? 'Your note' : 'Notebook'}><Notebook size={20} weight={workspace.notes[currentSectionKey] ? 'fill' : 'regular'}/></button>
+    <button onClick={() => setSavedReadingsOpen(true)} aria-label={`Saved readings${savedSections.length ? ` · ${savedSections.length}` : ''}`} title="Saved readings"><BookOpenText size={20}/></button>
+  </div>;
+  const readerOpening = <ReaderOpening bookId={book.id} bookTitle={book.title} theme={theme}
+    title={!inJourney ? chapter.shortTitle : node.label} subtitle={chapter.formalTitle}
+    position={`Section ${chapterIndex + 1} of ${book.chapters.length}${inJourney ? ` · Journey ${journey.number}` : ''}`}
+    depth={saved.depth} onDepthChange={changeDepth} tools={readingTools}
+    illustrated={readingFocus || isMobile} primary={readingFocus || isMobile}
+    titleId={saved.depth === 'deep' ? 'deep-reader-title' : undefined} />;
+  const savedDialog = savedReadingsOpen && <SavedReadings books={books} bookmarks={saved.bookmarks} onOpen={openFromSearch} onClose={() => setSavedReadingsOpen(false)}/>;
+  const exploreBook = () => { setReadingFocus(false); setSaved(current => ({ ...current, depth: 'glance' })); };
+  useEffect(() => {
+    if (!isMobile && readingFocus) {
+      window.scrollTo({ top: 0 });
+      document.querySelector('.publication-reader')?.scrollTo({ top: 0 });
+    }
+  }, [isMobile, readingFocus, book.id, chapter.id]);
   useEffect(() => {
     if (!isMobile) return;
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     setDepthMenuOpen(false);
     setReaderChromeVisible(true);
-  }, [isMobile, mobileSurface, activeMobileTab, book.id, chapter.id, journey.id, node.id, saved.depth]);
+  }, [isMobile, mobileSurface, activeMobileTab, book.id, chapter.id, journey.id, node.id]);
 
   useEffect(() => {
     if (!isMobile || mobileSurface !== "reader" || depthMenuOpen) {
@@ -2233,34 +2203,43 @@ function SystemApp() {
   }, [isMobile, mobileSurface, depthMenuOpen, book.id, chapter.id, saved.depth]);
 
 if (homeOpen) return <>
+    {openingBook && <div className="reading-pending-message" role="status">Opening your book…</div>}
     <ReadingHome theme={theme} onToggleTheme={toggle} books={books} resume={saved.visited.length ? {title:book.title,section:chapter.shortTitle} : undefined}
+      onSavedReadings={() => setSavedReadingsOpen(true)} savedCount={savedSections.length}
+      onNotebook={() => setNotebookOpen(true)}
+      activity={<ReadingActivity books={books} workspace={workspace} theme={theme} onOpen={(id,section)=>openFromSearch(id,section,saved.depth)} fallback={saved.visited.length ? {title:book.title,section:chapter.shortTitle,onOpen:()=>{setHomeOpen(false);if(isMobile)setMobileSurface("reader");window.scrollTo(0,0);}} : undefined}/>}
+      collection={<BookCollection books={books} theme={theme} workspace={workspace} imageSizes="92px" onOpen={(id,section) => openFromSearch(id,section,'deep')}/> }
       onSelect={(id, depth)=>{selectBook(id, depth); if(depth && isMobile) setMobileSurface("reader");}} onSearch={()=>setSearchOpen(true)} onResume={()=>{setHomeOpen(false); if(isMobile) setMobileSurface("reader"); window.scrollTo(0,0);}} />
-    {searchOpen && <SearchOverlay all={books} onOpen={openFromSearch} onClose={()=>setSearchOpen(false)} />}
+    {savedDialog}
+    {workspaceDialogs}
+    {searchOpen && <SearchOverlay onOpen={openFromSearch} onClose={()=>setSearchOpen(false)} />}
   </>;
 
 return (
     <div
-      className={`system-app system-warm book-${book.id}${isMobile ? ` mobile-shell mobile-${mobileSurface} tab-${activeMobileTab}${readerChromeVisible ? "" : " reader-chrome-hidden"}` : ""}`}
-      style={{ "--journey": journey.color } as CSSProperties}
+      className={`system-app system-warm book-${book.id}${!isMobile && readingFocus ? " reading-focus" : ""}${isMobile ? ` mobile-shell mobile-${mobileSurface} tab-${activeMobileTab}${readerChromeVisible ? "" : " reader-chrome-hidden"}` : ""}`}
+      style={{ "--journey": journey.color, "--reader-prose-size": `${workspace.preferences.textSize}px`, "--reader-prose-line": workspace.preferences.spacing === "open" ? 2 : 1.8 } as CSSProperties}
+      data-text-size={workspace.preferences.textSize >= 21 ? 'large' : 'standard'}
+      data-reading-width={workspace.preferences.width}
     >
+      {openingBook && <div className="reading-pending-message" role="status">Opening your book…</div>}
+      <ReadingGarden theme={theme} bookId={book.id} className="garden-backdrop" backdrop />
       <a className="system-skip" href="#system-main">Skip to reading</a>
 
       <header className="system-topbar">
         <button className="system-brand" aria-label="Ihya home" onClick={()=>{setHomeOpen(true);window.scrollTo(0,0);}}>
           <span className="brand-glyph" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-            <i />
+            <BookOpenText size={24} weight="duotone" />
           </span>
           <span>
             <strong>Ihya</strong>
-            <small>Concept edition</small>
+            <small>The reading room</small>
           </span>
         </button>
 
         <div className="book-identity">
           <ThemeButton theme={theme} onToggle={toggle}/>
+          {!isMobile && <button className="publication-text-size" aria-label="Reading comfort" aria-haspopup="dialog" onClick={() => setSettingsOpen(true)}>Aa</button>}
           <button
             className="library-trigger"
             onClick={() => setLibraryOpen(true)}
@@ -2269,7 +2248,6 @@ return (
           >
             <ListBullets size={14} weight="bold" />
             <span>Book {book.id} of 40</span>
-            <em>{books.length} prepared</em>
           </button>
           <button
             className="search-trigger"
@@ -2285,6 +2263,7 @@ return (
         </div>
 
         <div className="system-status" aria-label="Saved reading progress">
+          {!isMobile && <button className="publication-view-toggle" onClick={() => readingFocus ? exploreBook() : setReadingFocus(true)}>{readingFocus ? <Compass size={18}/> : <BookOpenText size={18}/>}<span>{readingFocus ? 'Explore this book' : 'Reading view'}</span></button>}
           <span className="status-meter"><i style={{ width: `${(visitedInBook / totalIdeas) * 100}%` }} /></span>
           <span><strong>{visitedInBook}</strong> of {totalIdeas} ideas seen</span>
           <BookmarkSimple size={18} weight={bookmarksInBook ? "fill" : "regular"} />
@@ -2292,29 +2271,22 @@ return (
         </div>
       </header>
 
-      {libraryOpen && (
-        <Library
-          available={books}
-          currentBookId={book.id}
-          visited={saved.visited}
-          bookmarks={saved.bookmarks}
-          onSelectBook={selectBook}
-          onClose={() => setLibraryOpen(false)}
-        />
-      )}
+      {savedDialog}
+      {workspaceDialogs}
+      {libraryOpen && <IllustratedLibrary books={books} theme={theme} workspace={workspace} currentBookId={book.id} onOpen={(id,section) => openFromSearch(id,section,'deep')} onClose={() => setLibraryOpen(false)}/>}
 
       {searchOpen && (
-        <SearchOverlay all={books} onOpen={openFromSearch} onClose={() => setSearchOpen(false)} />
+        <SearchOverlay onOpen={openFromSearch} onClose={() => setSearchOpen(false)} />
       )}
 
       {isMobile && mobileSurface === "book" && (
         <section className="mobile-book-home" aria-label={`${book.title} home`}>
           <div className="mobile-book-overview">
-            {book.id === 21 && <img className="book-home-plate" src={journey.image} alt="" />}
+            <ReadingGarden theme={theme} bookId={book.id} className="garden-book-opening" />
             <div>
               <span>Book {String(book.id).padStart(2, "0")} of 40</span>
               <h1>{book.title}</h1>
-              <p>{book.chapters.length} sections · {visitedInBook} {visitedInBook === 1 ? "idea" : "ideas"} seen</p>
+              <p>{book.chapters.length} sections · {completedInBook} completed</p>
             </div>
             <button onClick={() => inJourney ? openNode(node) : openSection(chapter.id)}>
               <span>{chapterIndex > 0 || (inJourney && stageIndex > 0) ? "Continue exploring" : "Begin at the beginning"}</span>
@@ -2359,31 +2331,33 @@ return (
             </div>
             <button
               className="mobile-depth-trigger"
+              ref={depthTriggerRef}
               onClick={() => setDepthMenuOpen((current) => !current)}
               aria-expanded={depthMenuOpen}
               aria-haspopup="dialog"
             >
-              <small>Depth</small>
-              <strong>{activeDepthOption.short}</strong>
+              <small>Reading</small>
+              <strong>Options</strong>
             </button>
           </header>
 
           {depthMenuOpen && (
             <div className="mobile-depth-overlay">
               <button className="mobile-depth-dismiss" onClick={() => setDepthMenuOpen(false)} aria-label="Close depth menu" />
-              <section className="mobile-depth-sheet" role="dialog" aria-modal="true" aria-label="Choose reading depth">
+              <section ref={depthSheetRef} className="mobile-depth-sheet" role="dialog" aria-modal="true" aria-label="Choose reading depth">
                 <header>
-                  <div><span>Reading depth</span><strong>How much detail do you want?</strong></div>
+                  <div><span>Reading options</span><strong>Choose a view</strong></div>
                   <button onClick={() => setDepthMenuOpen(false)} aria-label="Close depth menu"><X size={18} weight="bold" /></button>
                 </header>
                 <ThemeButton theme={theme} onToggle={toggle}/>
+                <button className="publication-text-size" aria-haspopup="dialog" onClick={() => {setDepthMenuOpen(false);setSettingsOpen(true);}}>Aa · Reading comfort</button>
                 <div>
                   {depthOptions.map((option, index) => (
                     <button
                       key={option.id}
                       className={saved.depth === option.id ? "active" : ""}
                       onClick={() => {
-                        setSaved((current) => ({ ...current, depth: option.id }));
+                        changeDepth(option.id);
                         setDepthMenuOpen(false);
                       }}
                       aria-current={saved.depth === option.id ? "true" : undefined}
@@ -2401,6 +2375,17 @@ return (
       )}
 
       <main className="system-workspace" id="system-main" tabIndex={-1}>
+        {!isMobile && readingFocus && <aside className="publication-contents" aria-label="Book contents">
+          <ReadingGarden theme={theme} bookId={book.id} className="publication-book-art" sidebar />
+          <span className="publication-eyebrow">Al-Ghazali · Book {String(book.id).padStart(2, '0')}</span>
+          <h2>{book.title}</h2>
+          <p>{completedInBook ? `${completedInBook} of ${book.chapters.length} sections completed` : `${book.chapters.length} sections · ${book.journeys.length} guided journeys`}</p>
+          <nav aria-label="Sections in this book">{contentsGroups.map(group => <div className="publication-contents-group" key={group.id}>
+            <h3>{group.label}</h3>
+            {book.chapters.filter(item => group.chapterIds.includes(item.id)).map(item => <button key={item.id} aria-current={chapter.id === item.id ? 'page' : undefined} onClick={() => openSection(item.id)}><span>{String(item.id).padStart(2, '0')}</span><span>{item.shortTitle}</span>{workspace.completed.includes(sectionKey(book.id,item.id)) ? <CheckCircle size={15} weight="fill" aria-label="Completed"/> : <ArrowRight size={14}/>}</button>)}
+          </div>)}</nav>
+          <button className="publication-explore" onClick={exploreBook}><Compass size={17}/>Explore the questions & maps</button>
+        </aside>}
         <aside className="question-panel" aria-label="Learning journeys">
           <div className="panel-kicker">
             <Compass size={17} weight="duotone" />
@@ -2422,7 +2407,7 @@ return (
                   style={{ "--card-color": item.color } as CSSProperties}
                 >
                   <span className="question-visual" aria-hidden="true">
-                    <img src={item.image.replace(".jpg", "-thumb.jpg")} alt="" loading="lazy" decoding="async" width={480} height={270} />
+                    <img src={item.image.replace(".jpg", "-thumb.jpg").replace("-1200.webp", "-320.webp")} alt="" loading="lazy" decoding="async" width={480} height={270} />
                     <span className="question-number">{item.number}</span>
                   </span>
                   <span className="question-copy">
@@ -2525,41 +2510,13 @@ return (
         )}
 
         {saved.depth !== "deep" && (
-        <aside className="depth-panel" aria-label="Explanation depth">
-          <div className="depth-heading">
-            <span>Choose resolution</span>
-            <strong>Same idea. More depth.</strong>
-          </div>
-          <div className="depth-tabs" role="tablist" aria-label="Reading depth">
-            {depthOptions.map((option) => (
-              <button
-                key={option.id}
-                className={saved.depth === option.id ? "active" : ""}
-                onClick={() => setSaved((current) => ({ ...current, depth: option.id }))}
-                role="tab"
-                aria-selected={saved.depth === option.id}
-              >
-                <span className="depth-full">{option.label}</span>
-                <span className="depth-short">{option.short}</span>
-              </button>
-            ))}
-          </div>
-
-          <article className="explanation-card" role="tabpanel">
-            <header>
-              {/* An off-journey section has no stage, and the node belongs to a different
-                  chapter — show the section's own identity rather than borrowing the node's. */}
-              <span>
-                {overrideChapter
-                  ? `Section ${chapter.id} of ${book.chapters.length} · outside the journeys`
-                  : `Section ${chapter.id} · stage ${journey.nodes.indexOf(node) + 1} of ${journey.nodes.length}`}
-              </span>
-              <h2>{overrideChapter ? chapter.shortTitle : node.label}</h2>
-              <p>{overrideChapter ? chapter.formalTitle : node.micro}</p>
-            </header>
+        <aside className={`depth-panel publication-reader${editorialTrial ? ' editorial-reading' : ''}`} aria-label="Explanation depth">
+          {readerOpening}
+          {readerActive && <ReadingNavigator readingKey={`${currentSectionKey}:${saved.depth}`} minutes={compactReadingMinutes} depth={saved.depth} onDepthChange={changeDepth} landmarks={[{id:saved.depth === 'glance' ? 'brief-idea' : 'source-grounding',label:saved.depth === 'glance' ? 'The central idea' : 'Source grounding'}]} />}
+          <article className="explanation-card">
 
             {saved.depth === "glance" && (
-              <div className="depth-content glance-content">
+              <div className="depth-content glance-content" id="brief-idea" data-reading-anchor="brief-idea">
                 <p className="big-idea">{overrideChapter ? chapter.overview : node.summary}</p>
                 <div className="core-claim">
                   <span>What this section claims</span>
@@ -2577,14 +2534,14 @@ return (
                   <strong>{overrideChapter ? deepReading.misreading : node.guardrail}</strong>
                 </div>
                 {contextualPractice}
-                <button className="continue-button" onClick={() => setSaved((current) => ({ ...current, depth: "deep" }))}>
+                <button className="continue-button" onClick={() => changeDepth('deep')}>
                   Follow the full argument <ArrowRight size={17} weight="bold" />
                 </button>
               </div>
             )}
 
             {saved.depth === "sources" && (
-              <div className="depth-content source-content">
+              <div className="depth-content source-content" id="source-grounding" data-reading-anchor="source-grounding">
                 <div className="grounding-label">
                   <BookOpenText size={21} weight="duotone" />
                   <p><strong>Grounded to Book {book.id}, section {chapter.id}</strong><span>{chapter.formalTitle}</span></p>
@@ -2616,39 +2573,30 @@ return (
         )}
 
         {saved.depth === "deep" && (
-          <section className={`deep-reader ${deepExperience?.className ?? ""}`} aria-labelledby="deep-reader-title">
-            <header className="deep-reader-top">
-              <div>
-                <span>Book {book.id} · Section {chapter.id} · Journey {journey.number}</span>
-                <h2 id="deep-reader-title">{chapter.formalTitle}</h2>
-              </div>
-              <div className="deep-reader-controls">
-                <div className="depth-tabs deep-reader-tabs" role="tablist" aria-label="Reading depth">
-                  {depthOptions.map((option) => (
-                    <button
-                      key={option.id}
-                      className={saved.depth === option.id ? "active" : ""}
-                      onClick={() => setSaved((current) => ({ ...current, depth: option.id }))}
-                      role="tab"
-                      aria-selected={saved.depth === option.id}
-                    >
-                      <span className="depth-full">{option.label}</span>
-                      <span className="depth-short">{option.short}</span>
-                    </button>
-                  ))}
-                </div>
-                <button
-                  className="deep-close"
-                  onClick={() => setSaved((current) => ({ ...current, depth: "glance" }))}
-                  aria-label="Return to the concept map"
-                >
-                  <X size={18} weight="bold" />
-                </button>
-              </div>
-            </header>
+          <section className={`deep-reader publication-reader ${deepExperience?.className ?? ""}${editorialTrial ? ' editorial-reading' : ''}`} aria-labelledby="deep-reader-title">
+            {readerOpening}
+            <ReadingThesis reading={deepReading}/>
+            {readerActive && <ReadingNavigator readingKey={currentSectionKey} depth={saved.depth} onDepthChange={changeDepth} minutes={estimatedReadingMinutes(deepReading)} landmarks={[
+              {id:'reasoning-heading',label:'The argument'},
+              ...(!deepExperience && chapter.visualModel ? [{id:'visual-reading-map',label:'Visual explanation'}] : []),
+              ...(deepReading.closeReading?.length ? [{id:'close-reading-heading',label:'Closer reading'}] : []),
+              {id:'distinction-heading',label:'Key distinction'},
+              {id:'reading-source-anchor',label:'Source notes'},
+              {id:'reading-finish',label:'Reflect & finish'},
+            ]}/>}
 
             <div className="deep-reader-body">
-              {!deepExperience?.replacesIntro && <ReadingDisclosure key={`${book.id}:${chapter.id}`} title="Section overview" className="deep-overview">
+              <article className="deep-reader-article">
+
+
+                {deepExperience?.content}
+
+                <DeepReadingSections key={`reading:${book.id}:${chapter.id}`} reading={deepReading} sources={book.sources}
+                  exploration={!deepExperience && chapter.visualModel ? <VisualReading key={`deep:${book.id}:${chapter.id}`} model={chapter.visualModel} plate={editorialTrial} /> : undefined} />
+
+                {book.id !== 21 && !isMobile && !deepExperience?.replacesPractice && interactives}
+
+              {!deepExperience?.replacesIntro && <ReadingDisclosure key={`overview:${book.id}:${chapter.id}`} title="Section overview" className="deep-overview">
               <aside className="deep-reader-summary">
                 <figure>
                   <Plate src={journey.image} alt={journey.imageAlt} sizes="(max-width: 760px) 112px, (max-width: 1030px) 250px, 250px" />
@@ -2675,30 +2623,13 @@ return (
               </aside>
               </ReadingDisclosure>}
 
-              <article className="deep-reader-article">
-                {!deepExperience?.replacesIntro && <header className="deep-thesis">
-                  <span>The argument</span>
-                  <h3>{deepReading.thesis}</h3>
-                  <p>{deepReading.context}</p>
-                </header>}
-
-                {deepExperience?.content ?? (chapter.visualModel && (
-                  <ConceptModel
-                    key={`deep:${book.id}:${chapter.id}`}
-                    model={chapter.visualModel}
-                  />
-                ))}
-
-                {book.id !== 21 && !isMobile && !deepExperience?.replacesPractice && interactives}
-
-                <DeepReadingSections key={`${book.id}:${chapter.id}`} reading={deepReading} sources={book.sources} />
-
                 {!deepExperience?.replacesPractice && contextualPractice}
                 {deepExperience?.replacesIntro && <button className={isBookmarked ? "bookmark-action active" : "bookmark-action"} onClick={toggleBookmark}><BookmarkSimple size={19} weight={isBookmarked ? "fill" : "regular"} />{isBookmarked ? "Saved to your return list" : "Save this distinction"}</button>}
               </article>
             </div>
           </section>
         )}
+      {readerActive && finishReading}
       </main>
 
       <footer className={`sequence-rail${book.taxonomy ? " has-taxonomy" : ""}${book.process ? " has-process" : ""}`} aria-label="Reading section sequence">
@@ -2765,6 +2696,8 @@ return (
           <p><small>Current section</small><strong>{chapter.shortTitle}</strong></p>
         </div>
       </footer>
+
+
 
       {isMobile && (
         <>

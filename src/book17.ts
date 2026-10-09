@@ -543,7 +543,7 @@ export const book17Journeys: Journey[] = [
     id: "what-must-i-know", number: "03", question: "What must I know before I go?", title: "Carry it in your head",
     description: "Take the provisions for both worlds, the seven dispensations and their limits, then learn to read the direction and the times from the sky.",
     payoff: "You see what a settled life had been doing for you — the mosque niche and the caller to prayer — and how a traveller does it himself.",
-    image: assetUrl("assets/system/book17-the-shadow.jpg"), imageAlt: "A straight stick upright in bare ground at midday, its short shadow marked by a small stone at the tip.", minutes: 15, color: "#c25f50",
+    image: assetUrl("assets/ihya-garden/books/book-17-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 17.", minutes: 15, color: "#c25f50",
     nodes: [
       node("the-bucket", "The bucket and the rope", "Trust is not abandoning means", "Carry food and water; setting out without them, if you cannot bear hunger, is a sin.", "The provision for the next life is knowledge.", 14, "know"),
       node("seven", "Seven dispensations", "What travel lightens", "Two in purification, two in the obligatory prayer, two in voluntary prayer, one in fasting.", "Travel also makes some things harder.", 14, "order"),

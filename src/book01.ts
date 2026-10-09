@@ -1,13 +1,13 @@
 import { assetUrl } from "./assetUrl";
-import type { Chapter, ConceptNode, VisualModel } from "./data";
+import type { Chapter, ConceptNode, DeepReading, VisualModel } from "./data";
 import type { Instrument, Journey, SourceLink, SystemBook, TaxonomyGroup } from "./systemTypes";
 
-type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: Array<{ title: string; body: string }>; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
+type Seed = { id: number; shortTitle: string; formalTitle: string; overview: string; thesis?: string; moves: DeepReading['moves']; visualAlongside?: string; closer: Array<{ title: string; body: string }>; distinction: [string, string, string, string, string]; misreading: string; reflection: string; audit: string[]; nodes: string[]; model: VisualModel };
 const bab = (id: number) => (id === 1 ? "the author's introduction" : id <= 6 ? "the first chapter" : id <= 15 ? "the second chapter" : id <= 22 ? "the third chapter" : id <= 25 ? "the fourth chapter" : id <= 31 ? "the fifth chapter" : id <= 45 ? "the sixth chapter" : "the seventh chapter");
 const makeChapter = (seed: Seed): Chapter => ({
   id: seed.id, shortTitle: seed.shortTitle, formalTitle: seed.formalTitle, overview: seed.overview,
   reflection: seed.reflection, relatedNodes: seed.nodes, visualModel: seed.model,
-  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, closeReading: seed.closer,
+  deep: { thesis: seed.thesis ?? seed.moves[0].body, context: seed.overview, moves: seed.moves, visualAlongside: seed.visualAlongside, closeReading: seed.closer,
     distinction: { title: seed.distinction[0], firstLabel: seed.distinction[1], first: seed.distinction[2], secondLabel: seed.distinction[3], second: seed.distinction[4] },
     misreading: seed.misreading, observation: seed.reflection, selfAudit: seed.audit,
     sourceAnchor: `Book 1, ${bab(seed.id)}, ${seed.formalTitle}.` },
@@ -1475,7 +1475,7 @@ export const book01Journeys: Journey[] = [
     id: "how-to-study", number: "06", question: "How should I actually go about learning?", title: "The student's ten duties",
     description: "Ghazali's full guide to studying. It covers what has to be true of you first, how to treat a teacher, and how to plan your studies when one lifetime won't cover everything.",
     payoff: "A step-by-step order for learning anything, and a two-part test for deciding what deserves your deepest effort.",
-    image: assetUrl("assets/system/book01-ten-duties.jpg"), imageAlt: "A stack of closed books on a plain desk beside a single sharpened reed pen, nothing open and nothing in use.", minutes: 14, color: "#7a6ca8",
+    image: assetUrl("assets/ihya-garden/books/book-01-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 1.", minutes: 14, color: "#7a6ca8",
     nodes: [
       node("purify-first", "Take the first", "Character before books", "Knowledge is the heart's worship, so the heart has to be clean.", "Something it can't count without, not a nice extra.", 26, "clear"),
       node("one-channel", "Take the second", "A stream undivided", "Knowledge gives you part of itself only when you give it all of yourself.", "A divided mind dries up before the field.", 27, "steady"),
@@ -1490,7 +1490,7 @@ export const book01Journeys: Journey[] = [
     id: "two-kinds-of-scholar", number: "07", question: "How do I tell a scholar of the next life?", title: "The twelve signs",
     description: "Start with the warnings about bad scholars. Then take Ghazali's twelve signs one by one, from not selling knowledge for the world to guarding against new things in religion.",
     payoff: "Twelve tests you can only run on yourself, and permission to fall short as long as you admit it.",
-    image: assetUrl("assets/system/book01-twelve-signs.jpg"), imageAlt: "A plain wooden bench outside a closed door, a pair of worn sandals set neatly beside it and a small water jug on the ground.", minutes: 18, color: "#3f7d5a",
+    image: assetUrl("assets/ihya-garden/books/book-01-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 1.", minutes: 18, color: "#3f7d5a",
     nodes: [
       node("the-rock", "Hear the warning", "The rock in the river", "Bad scholars neither drink the water nor let it through to the crops.", "Once you go into knowledge, plain safety is gone.", 32, "witness"),
       node("two-cups", "Sign one", "Not selling for the world", "This world and the next are two cups: fill one and the other empties.", "Status is worse than money.", 33, "balance"),
@@ -1508,7 +1508,7 @@ export const book01Journeys: Journey[] = [
     id: "why-knowledge-first", number: "08", question: "Why does the Ihya start with knowledge?", title: "From the rain to the well",
     description: "Begin with why the Ihya was written, and hear the praise of knowledge, learning and teaching. Follow the argument from reason, and end with reason itself: one word with four meanings.",
     payoff: "You see why knowledge comes before worship, and why Ghazali ends the book by defending reason from its own name.",
-    image: assetUrl("assets/system/book01-the-well.jpg"), imageAlt: "A stone well in open ground, its rope and bucket drawn up and resting on the rim, the bucket full of clear water.", minutes: 16, color: "#4f7fa0",
+    image: assetUrl("assets/ihya-garden/books/book-01-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 1.", minutes: 16, color: "#4f7fa0",
     nodes: [
       node("forgotten", "Why it was written", "The road forgotten", "The guides had turned to law, debate and preaching, and the road to God was folded away.", "It is dressed as a law book to draw hearts in.", 1, "know"),
       node("third-after-angels", "The verse", "Third after the angels", "God names Himself, then the angels, then the people of knowledge.", "Even here Ghazali warns what “understanding” means.", 2, "witness"),

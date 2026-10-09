@@ -1003,7 +1003,7 @@ export const book36Journeys: Journey[] = [
     id: "the-lovers", number: "06", question: "What did loving God look like in a life?", title: "Walk with the lovers",
     description: "Meet the people Ghazali gathers as lovers of God: those who wanted Him more than the Garden, who kept His secret, and who were content with whatever He sent.",
     payoff: "You see the signs of love as lived traits — night prayer, sweet obedience, fear inside love, contentment in loss — and not only as definitions.",
-    image: assetUrl("assets/system/book36-the-lovers.jpg"), imageAlt: "A plain rooftop at night under a wide field of stars, a single prayer mat laid out and an oil lamp burning low beside it.", minutes: 16, color: "#8a5a9e",
+    image: assetUrl("assets/ihya-garden/books/book-36-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 36.", minutes: 16, color: "#8a5a9e",
     nodes: [
       node("the-neighbour", "The Neighbour, then the house", "Maruf's gaze", "Maruf al-Karkhi is seen staring at God without blinking, because he worshipped from love.", "Busy with Him today, busy with Him tomorrow.", 9, "witness"),
       node("hearts-of-light", "Hearts made of light", "Fourteen on Mount Lebanon", "Invited to ask for anything, they asked only for the sight of His face.", "They reached it by thinking well of God and being alone with Him.", 17, "receive"),

@@ -708,7 +708,7 @@ export const book20Journeys: Journey[] = [
     id: "at-home", number: "02", question: "What was he like on an ordinary day?", title: "At his table and in his house",
     description: "Hear how he spoke and laughed, and sit at his table from the first blessing to the last sip. Then see what he wore, where he slept, and the jug the children drank from.",
     payoff: "You get the everyday portrait in full — the part of his example you can take up at your next meal.",
-    image: assetUrl("assets/system/book20-jug.jpg"), imageAlt: "A plain unglazed clay water jug on a mud-brick sill, a little water darkening its lip.", minutes: 17, color: "#7a6ca8",
+    image: assetUrl("assets/ihya-garden/books/book-20-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 20.", minutes: 17, color: "#7a6ca8",
     nodes: [
       node("beads", "Hear him speak", "Beads on a string", "Few words, spaced, and true in anger too.", "Silent so that others could speak.", 8, "clear"),
       node("back-teeth", "Watch him laugh", "The bedouin's question", "He laughed until his back teeth showed.", "Grave only for revelation, the Hour and warning.", 9, "receive"),

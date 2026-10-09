@@ -1158,7 +1158,7 @@ export const book34Journeys: Journey[] = [
     id: "the-rope-bed", number: "06", question: "What did the Prophet choose?", title: "Lie down on the rope bed",
     description: "Follow what was offered and what was chosen: mountains of gold, the keys of the earth, a kingdom. Then the rope bed, Fatima’s one cloak and Umar’s tears, and the images Ghazali uses to show why they chose it.",
     payoff: "You see abstinence as a choice made by people who could have had everything, and why they thought the exchange was good.",
-    image: assetUrl("assets/system/book34-the-rope-bed.jpg"), imageAlt: "A low bed woven of palm-fibre rope in a bare mud-brick room, a leather pillow at its head and morning light falling across the woven pattern.", minutes: 18, color: "#6f8f5a",
+    image: assetUrl("assets/ihya-garden/books/book-34-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 34.", minutes: 18, color: "#6f8f5a",
     nodes: [
       node("the-hag", "See the world unveiled", "The woman and the hag", "Outside, a swaying beauty; inside, an old woman who traps and chains.", "The knowers left her as one leaves someone hated.", 1, "witness"),
       node("hundred-thousand", "A hundred thousand in a day", "Aisha forgot the meat", "Having and lacking money were the same to her.", "The state above abstinence.", 2, "steady"),

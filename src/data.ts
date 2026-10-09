@@ -4,9 +4,12 @@ export type DeepReading = {
   thesis: string;
   context: string;
   moves: Array<{
+    id?: string;
     title: string;
     body: string;
   }>;
+  /** Authored placement ties a visual to the passage it explains. */
+  visualAlongside?: string;
   closeReading?: Array<{
     title: string;
     body: string;
@@ -27,10 +30,13 @@ export type DeepReading = {
 export type VisualModel = {
   kind: "spectrum" | "chain" | "pair" | "set";
   title: string;
+  prompt?: string;
   items: Array<{
     label: string;
     body: string;
     role?: "warning" | "balance" | "support";
+    symbol?: "compass" | "scales" | "book" | "spark";
+    passageId?: string;
   }>;
   caption: string;
 };

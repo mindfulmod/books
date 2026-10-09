@@ -1,0 +1,64 @@
+/* First editorial trial: Book 1, Twenty parties. Inherit the reader's theme and type preferences. */
+.system-app .editorial-reading { animation:none; }
+.editorial-reading .reasoning-spread { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:36px; align-items:center; margin:30px 0 48px; }
+.system-app .editorial-reading .reasoning-spread>.reasoning-move { grid-template-columns:1fr; gap:12px; padding:0; border:0; }
+.system-app .editorial-reading .reasoning-spread>.reasoning-move>span { font:400 48px/1 var(--publication-serif); color:var(--publication-brass); }
+.system-app .editorial-reading .reasoning-move { scroll-margin-top:240px; }
+.editorial-reading .reasoning-move:target { outline:2px solid var(--publication-line); outline-offset:12px; border-radius:2px; }
+.system-app .editorial-reading .reasoning-move strong { font:400 28px/1.2 var(--publication-serif); }
+.system-app .editorial-reading .reasoning-move p { margin-top:15px; }
+.system-app .editorial-reading .visual-reading-plate { border:1px solid var(--publication-line); border-radius:12px; background:var(--publication-paper); padding:22px; }
+.editorial-reading .visual-reading-plate>header { padding:0 0 18px; border:0; }
+.editorial-reading .visual-reading-plate>header>p { font-size:12px; }
+.editorial-reading .visual-reading-plate .visual-reading-canvas { padding:0; }
+.editorial-reading .visual-reading-plate .visual-reading-origin { border:0; border-radius:0; max-width:none; width:100%; padding:10px 12px; margin:0 0 18px; background:var(--publication-panel); box-sizing:border-box; }
+.editorial-reading .visual-reading-plate :is(.visual-reading-origin,.visual-reading-node,.visual-reading-nodes)::before,
+.editorial-reading .visual-reading-plate :is(.visual-reading-origin,.visual-reading-node)::after { display:none; }
+.editorial-reading .visual-reading-plate .visual-reading-nodes { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; padding:0; border:0; border-radius:0; }
+html .system-app .editorial-reading .visual-reading-plate .visual-reading-node { padding:16px 10px; gap:9px; border-bottom:1px solid var(--publication-line); }
+.editorial-reading .visual-reading-plate .visual-reading-node:nth-child(odd) { border-right:1px solid var(--publication-line); }
+.editorial-reading .visual-reading-plate .visual-reading-mark { width:42px; height:42px; box-shadow:none; border-color:var(--publication-line); background:transparent; }
+.editorial-reading .visual-reading-plate .visual-reading-mark>svg { width:25px; height:25px; }
+.editorial-reading .visual-reading-plate .visual-reading-node-copy { font:12px/1.6 var(--publication-ui); }
+.system-app .editorial-reading .visual-reading-plate .visual-reading-detail { display:flex; align-items:center; min-height:54px; padding:8px 0; margin:0; border:0; background:transparent; color:var(--publication-muted); font:12px/1.6 var(--publication-ui); box-sizing:border-box; }
+.editorial-reading .visual-reading-detail a { color:var(--publication-accent); text-underline-offset:4px; }
+.editorial-reading .visual-reading-plate .visual-reading-caption { margin:0; max-width:none; text-align:left; align-items:flex-start; }
+.editorial-reading .visual-reading-plate .visual-reading-convergence { display:none; }
+.system-app .editorial-reading .visual-reading-plate .visual-reading-caption p { margin:0; padding:14px 0; font-size:24px; }
+.editorial-reading .visual-reading-plate>footer { padding:10px 0; background:transparent; }
+.editorial-reading .visual-reading-plate>footer>span { max-width:24ch; }
+.system-app .editorial-reading .close-reading-grid { display:block; }
+.system-app .editorial-reading .close-reading-grid article { display:grid; grid-template-columns:30px minmax(120px,.65fr) minmax(0,1.5fr); gap:20px; padding:24px 0; border:0; border-top:1px solid var(--publication-line); }
+.system-app .editorial-reading .close-reading-grid :is(h5,p) { margin:0; }
+.system-app .editorial-reading .close-reading-grid h5 { font:400 25px/1.25 var(--publication-serif); }
+.system-app .editorial-reading .close-reading-grid article>span { padding-top:5px; }
+.system-app .editorial-reading [data-reading-anchor] { scroll-margin-top:240px; }
+.system-app .editorial-reading .reading-navigator.has-depth-control { display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:18px; }
+.editorial-reading .reading-depth-dock { grid-column:2; grid-row:1; display:flex; align-items:center; gap:8px; color:var(--publication-muted); font:12px/1.4 var(--publication-ui); }
+.editorial-reading .reading-depth-dock select { min-height:38px; border:1px solid var(--publication-line); border-radius:6px; padding:6px 24px 6px 10px; font:600 12px/1.4 var(--publication-ui); background:var(--publication-panel); color:var(--publication-ink); }
+.editorial-reading .reading-navigator-meta { grid-column:1; grid-row:1; }
+.editorial-reading .reading-navigator-track,.editorial-reading .reading-landmarks { grid-column:1/-1; }
+@media(max-width:1000px) {
+ .editorial-reading .reasoning-spread { grid-template-columns:1fr; gap:30px; }
+ .editorial-reading .visual-reading-plate { max-width:520px; width:100%; justify-self:center; }
+ .system-app .editorial-reading .reasoning-spread>.reasoning-move { grid-template-columns:36px minmax(0,1fr); gap:16px; }
+ .system-app .editorial-reading .reasoning-spread>.reasoning-move>span { font:400 24px/1.2 var(--publication-serif); }
+ .system-app .editorial-reading .close-reading-grid article { grid-template-columns:26px minmax(0,1fr); gap:12px; }
+ .editorial-reading .close-reading-grid p { grid-column:2; }
+}
+@media(max-width:767px) {
+ .system-app .editorial-reading .reasoning-move strong { font-size:25px; }
+ .editorial-reading .reading-navigator-meta>span+span { display:none; }
+ .system-app .editorial-reading .reading-navigator.has-depth-control { grid-template-columns:minmax(0,1fr) auto; row-gap:4px; }
+ .editorial-reading .reading-depth-dock { grid-row:1; }
+ .editorial-reading .reading-depth-dock>span { display:none; }
+ .editorial-reading .reading-landmark-select { grid-column:1; grid-row:1; min-width:0; }
+ .editorial-reading .reading-landmark-select select { width:100%; min-width:0; }
+ .editorial-reading .reading-navigator-meta { display:none; }
+ .system-app .editorial-reading .reading-navigator-track { grid-row:2; }
+ .system-app .editorial-reading [data-reading-anchor] { scroll-margin-top:150px; }
+}
+
+.editorial-reading .visual-reading-plate .visual-reading-caption { padding-top:14px; }
+.editorial-reading .visual-reading-plate .visual-reading-caption p { padding:0; margin-top:8px; }
+.editorial-reading .visual-reading-plate .visual-reading-selected { min-height:15px; }

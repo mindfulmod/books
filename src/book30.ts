@@ -981,7 +981,7 @@ export const book30Journeys: Journey[] = [
     id: "the-star", number: "06", question: "How far does delusion follow you?", title: "Walk from the lamp to the last breath",
     description: "Begin with the lamp and the dark sea, and follow delusion through every kind of good person: the scholar with his prescription, the worshipper with his message, the Sufi in armour, the builder with his name in brick. Then climb with Abraham past the star, and hear the saint answer Satan at the end.",
     payoff: "You see that delusion attaches to real goods, not only to sins, and that the only safe answer is Ghazali’s last one: not yet.",
-    image: assetUrl("assets/system/book30-the-star.jpg"), imageAlt: "A single bright star reflected in a still basin of water at night, the real star faint in the dark sky above it.", minutes: 18, color: "#7d6a4f",
+    image: assetUrl("assets/ihya-garden/books/book-30-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 30.", minutes: 18, color: "#7d6a4f",
     nodes: [
       node("lamp-and-sea", "The lamp and the dark sea", "Two hearts", "The clever heart is a lamp in glass; the deluded one is a man on a stormy sea who cannot see his hand.", "Delusion is effort in the dark, not a lack of effort.", 1, "know"),
       node("cash-credit", "Cash now, credit later", "Satan’s first argument", "No one prefers one dirham now to ten tomorrow; the next life is a million to one.", "Even a doubter should act as if it is real.", 3, "clear"),

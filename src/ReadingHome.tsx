@@ -1,55 +1,88 @@
+import { useState, type ReactNode } from 'react';
+import { ArrowDown, ArrowRight, BookmarkSimple, BookOpenText, Books, MagnifyingGlass, Notebook, Question, Stack } from '@phosphor-icons/react';
 import { ThemeButton, type ReadingTheme } from './ReadingTheme';
-import { useRef, useState } from 'react';
 import { ReadingOrientation } from './ReadingOrientation';
 import { companionBooks } from './bookshelf';
 import { assetUrl } from './assetUrl';
+import { ReadingGarden } from './ReadingGarden';
+import { ReaderDialog } from './reading/ReaderDialog';
 import type { Depth } from './systemTypes';
-import { ArrowRight, MagnifyingGlass } from '@phosphor-icons/react';
-import { quarters } from './data';
-import type { SystemBook } from './systemTypes';
+import type { BookNavigation } from './reading/bookNavigation';
 import './reading-home.css';
 
 type Props = {
   theme: ReadingTheme;
   onToggleTheme: () => void;
-  books: SystemBook[];
+  books: BookNavigation[];
   resume?: { title: string; section: string };
   onResume: () => void;
   onSelect: (id: number, depth?: Depth) => void;
   onSearch: () => void;
+  onSavedReadings: () => void;
+  savedCount: number;
+  onNotebook: () => void;
+  activity?: ReactNode;
+  collection: ReactNode;
 };
 
-export function ReadingHome({ books, resume, onResume, onSelect, onSearch, theme, onToggleTheme }: Props) {
-  const [showGuide, setShowGuide] = useState(() => { try { return localStorage.getItem('reading-orientation-v1') !== 'seen'; } catch { return true; } });
-  const guideTrigger = useRef<HTMLButtonElement>(null);
-  const closeGuide = () => { try { localStorage.setItem('reading-orientation-v1', 'seen'); } catch { /* This session still works without storage. */ } setShowGuide(false); requestAnimationFrame(()=>guideTrigger.current?.focus()); };
-  return <div className="reading-home">
-    <header className="home-masthead"><span>The reading room <small>A bookshelf for inward life</small></span><div className="home-header-actions"><ThemeButton theme={theme} onToggle={onToggleTheme}/><button onClick={onSearch}><MagnifyingGlass size={18}/> Search the Ihya</button></div></header>
-    <main id="home-main">
-      <section className="home-introduction">
-        <span className="home-eyebrow">Your bookshelf</span>
-        <h1>A life of practice.<br/>An inward journey.</h1>
-        <p>A growing library of reading companions. Explore the Ihya’s forty books, or spend time with a standalone work. Begin with one idea.</p>
-        <div className="home-entry-links"><a className="home-browse" href="#bookshelf-title">Browse the bookshelf ↓</a><button ref={guideTrigger} className="home-guide-trigger" aria-expanded={showGuide} onClick={()=>setShowGuide(value=>!value)}>How to read here</button></div>
-      </section>
-      {showGuide && <ReadingOrientation onClose={closeGuide} onStart={depth=>{closeGuide();onSelect(21,depth);}}/>}
-      {resume && <button className="home-resume" onClick={onResume}><span><small>Continue reading</small><strong>{resume.title}</strong><span>{resume.section}</span></span><ArrowRight size={22}/></button>}
-      <section className="home-bookshelf" aria-labelledby="bookshelf-title">
-        <h2 id="bookshelf-title">On the shelf</h2>
-        <div className="shelf-titles">
-          <a className="shelf-book" href="#home-library-title"><span className="shelf-cover shelf-cover-ihya" aria-hidden="true"><small>Al-Ghazali</small><strong>Ihya</strong><span>Forty books<br/>Four quarters</span></span><span className="shelf-book-info"><small>Collection · 40 books</small><h3>The Revival of the Religious Sciences</h3><p>Al-Ghazali</p><span>Explore worship, daily life, and the cultivation of the heart.</span><em>Browse the collection →</em></span></a>
-          {companionBooks.map(item=><a key={item.id} className="shelf-book" href={`${import.meta.env.BASE_URL}${item.path}`}><span className={`shelf-cover shelf-cover-${item.coverStyle}`} aria-hidden="true">{item.coverImage && <img className="shelf-cover-art" src={assetUrl(theme === 'dark' && item.coverNightImage ? item.coverNightImage : item.coverImage)} alt="" width={480} height={320} loading="lazy"/>}<small>{item.author}</small><strong>{item.coverLabel}</strong><span>{item.coverSubtitle}</span></span><span className="shelf-book-info"><small>Standalone companion</small><h3>{item.title}</h3><p>{item.author}</p><span>{item.description}</span><em>Open the book →</em></span></a>)}
+export function ReadingHome({ books, resume, onResume, onSelect, onSearch, onSavedReadings, savedCount, theme, onToggleTheme, onNotebook, activity, collection }: Props) {
+  const [showGuide, setShowGuide] = useState(false);
+  const closeGuide = () => setShowGuide(false);
+  return <div className="reading-home library-home">
+    <a className="library-skip" href="#home-main">Skip to the books</a>
+    <aside className="library-rail" aria-label="Reading room">
+      <a className="library-brand" href="#bookshelf-title"><span className="library-rosette" aria-hidden="true"/><span>The reading <br/>room<small>A bookshelf for inward life</small></span></a>
+      <nav className="library-nav" aria-label="Library navigation">
+        <a className="library-nav-primary" href="#bookshelf-title"><Books size={20} aria-hidden="true"/> Bookshelf <span>{companionBooks.length + 1}</span></a>
+        <a href="#home-library-title"><Stack size={20} aria-hidden="true"/> The Ihya <span>{books.length}</span></a>
+        <button onClick={onSavedReadings}><BookmarkSimple size={20} aria-hidden="true"/> Ihya saved readings{savedCount > 0 && <span>{savedCount}</span>}</button>
+        <button onClick={onNotebook}><Notebook size={20} aria-hidden="true"/> Ihya notebook</button>
+      </nav>
+      <div className="library-rail-bottom">
+        <div className="library-rail-pattern" aria-hidden="true"/>
+        <p>Make room for<br/><em>one good thought.</em></p>
+        <button onClick={()=>setShowGuide(true)} aria-haspopup="dialog"><Question size={19} aria-hidden="true"/> Reading guide</button>
+        <ThemeButton theme={theme} onToggle={onToggleTheme}/>
+      </div>
+    </aside>
+    <main id="home-main" tabIndex={-1}>
+      <header className="library-heading">
+        <div><span className="library-eyebrow">Read · Reflect · Return</span><h1>Your library</h1><p>A little reading. A little reflection. A place to return.</p></div>
+        <button className="library-search-trigger" onClick={onSearch}><MagnifyingGlass size={20} aria-hidden="true"/><span>Search the Ihya</span></button>
+      </header>
+      {activity}
+      <section className="library-shelf" aria-labelledby="bookshelf-title">
+        <div className="library-section-heading"><h2 id="bookshelf-title">On the bookshelf</h2><span>Four companions for inward life</span></div>
+        <div className="library-volumes">
+          <a className="library-volume library-volume-ihya" href="#home-library-title">
+            <div className="library-cover-stage" aria-hidden="true"><div className="library-cover">
+              <span className="library-cover-author">Al-Ghazali</span><strong className="library-cover-title">Ihya</strong><span className="library-cover-subtitle">The Revival of the <br/>Religious Sciences</span>
+              <div className="library-cover-window"><ReadingGarden theme={theme} sizes="240px"/></div><span className="library-cover-caption">Forty books · Four quarters</span>
+            </div></div>
+            <div className="library-volume-info"><span className="library-eyebrow">The complete collection</span><h3>The Revival of the <br/>Religious Sciences</h3><p>Al-Ghazali</p><span className="library-volume-description">For sustained study: arguments, visual explanations, and source notes across forty books.</span><span className="library-volume-action">Explore {books.length} books <ArrowDown size={18} aria-hidden="true"/></span></div>
+          </a>
+          {companionBooks.map(item=><a key={item.id} className={`library-volume library-volume-${item.coverStyle}`} href={`${import.meta.env.BASE_URL}${item.path}`}>
+            <div className="library-cover-stage" aria-hidden="true"><div className="library-cover">
+              <span className="library-cover-author">{item.author}</span><strong className="library-cover-title">{item.coverTitle}<br/><em>{item.coverSecondLine}</em></strong>
+              <span className="library-cover-rosette"/>
+              <div className="library-cover-window"><img src={assetUrl(theme === 'dark' && item.coverNightImage ? item.coverNightImage : item.coverImage)} alt="" width={480} height={320} decoding="async"/></div><span className="library-cover-caption">{item.coverCaption}</span>
+            </div></div>
+            <div className="library-volume-info"><span className="library-eyebrow">{item.category}</span><h3>{item.title}</h3><p>{item.author}</p><span className="library-volume-description">{item.readerDescription}</span><span className="library-volume-action">Open companion <ArrowRight size={18} aria-hidden="true"/></span></div>
+          </a>)}
         </div>
       </section>
-      <section className="home-start" aria-labelledby="start-title">
-        <div><span className="home-eyebrow">A place to begin · Book 21</span><h2 id="start-title">The Wonders<br/>of the Heart</h2><p>What do we mean by the heart? Explore the forces that shape what we notice, desire, and do.</p><button className="home-primary" onClick={()=>onSelect(21)}>Explore the heart <ArrowRight size={19}/></button></div>
-        <div className="home-start-note"><span>Read at your own depth</span><p>Get the central idea in brief. Go deeper with the argument and interactive readings. Open the sources when you want to trace a passage.</p><button onClick={()=>onSelect(1)}>Prefer to read in order?<strong>Begin with the Book of Knowledge <ArrowRight size={17}/></strong></button></div>
+      {!activity && resume && <button className="library-resume" onClick={onResume}><BookOpenText size={24} aria-hidden="true"/><span><small>Continue reading · {resume.title}</small><strong>{resume.section}</strong></span><ArrowRight size={21} aria-hidden="true"/></button>}
+      <section className="library-invitation" aria-labelledby="library-invitation-title">
+        <span className="library-rosette" aria-hidden="true"/><div><span className="library-eyebrow">At your own pace</span><h2 id="library-invitation-title">One idea is a good beginning.</h2><p>The Ihya offers a brief introduction, a deeper reading with visuals, and source notes for every section.</p></div>
+        <button onClick={()=>setShowGuide(true)} aria-haspopup="dialog">How reading works <ArrowRight size={18} aria-hidden="true"/></button>
       </section>
-      <section className="home-library" aria-labelledby="home-library-title">
-        <div className="home-library-heading"><h2 id="home-library-title">The Ihya · forty books</h2><p>Four quarters, from outward practice to inward life.</p></div>
-        {quarters.map((quarter,index)=><details key={quarter.id} className="home-quarter"><summary><span className="home-quarter-number">0{index+1}</span><span><strong>{quarter.title.replace('The Quarter of ', '')}</strong><small>Books {index*10+1}–{index*10+10}</small></span><span className="home-quarter-toggle" aria-hidden="true">+</span></summary><p>{quarter.focus}</p><ol start={index*10+1}>{quarter.books.map(entry=>{const book=books.find(item=>item.id===entry.id);return book && <li key={book.id}><button onClick={()=>onSelect(book.id)}><span>{String(book.id).padStart(2,'0')}</span><strong>{book.title}</strong><ArrowRight size={16}/></button></li>;})}</ol></details>)}
+      <section className="library-collection" aria-labelledby="home-library-title">
+        <header className="library-collection-heading"><div><span className="library-eyebrow">Al-Ghazali’s masterwork</span><h2 id="home-library-title">The Ihya collection</h2><p>Forty books. Four quarters. Many ways to begin.</p></div><button onClick={()=>onSelect(1)}>Begin with Knowledge <ArrowRight size={18} aria-hidden="true"/></button></header>
+        {collection}
+        <div className="library-heart-note"><span>Looking for a place to start?</span><button onClick={()=>onSelect(21)}>Explore The Wonders of the Heart <ArrowRight size={18} aria-hidden="true"/></button></div>
       </section>
-      <footer className="home-colophon">An interactive reading companion. The English explanations are editorial syntheses, not a translation of the Ihya. Sources and reading notes accompany each book.</footer>
+      <footer className="library-colophon"><span className="library-rosette" aria-hidden="true"/><p>The Ihya presents editorial explanations, with references for each section. Inner Dimensions pairs an illustrated guide with a complete reading companion. Timeless Seeds preserves the book’s original entries alongside separately labelled explanations. The Beautiful Names offers a reading companion to al-Ghazali’s work, with source notes and reflections.</p><a href="#bookshelf-title">Back to the bookshelf ↑</a></footer>
     </main>
+    {showGuide && <ReaderDialog title="How reading works" eyebrow="The reading room" className="library-guide-dialog" onClose={closeGuide}><ReadingOrientation onClose={closeGuide} onStart={depth=>{closeGuide();onSelect(21,depth);}}/></ReaderDialog>}
   </div>;
 }

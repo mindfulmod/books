@@ -1,0 +1,59 @@
+/* Reading controls belong beside or after the text, never on top of a diagram. */
+.reading-recovery { min-height:100dvh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:clamp(24px,8vw,120px); background:var(--publication-paper); color:var(--publication-ink); font-family:var(--publication-ui); }
+.reading-recovery>span { color:var(--publication-accent); font-size:13px; }
+.reading-recovery h1 { margin:20px 0; font:400 clamp(36px,7vw,64px)/1.1 var(--publication-serif); }
+.reading-recovery p { max-width:45ch; font-size:16px; line-height:1.8; }
+.reading-recovery button { margin-top:18px; padding:14px 22px; border:1px solid var(--publication-accent); border-radius:25px; background:var(--publication-panel); color:var(--publication-accent); cursor:pointer; }
+.reading-pending-message { position:fixed; top:18px; left:50%; transform:translateX(-50%); z-index:250; padding:14px 22px; border:1px solid var(--publication-line); border-radius:24px; background:var(--publication-paper); color:var(--publication-accent); box-shadow:var(--publication-shadow); font:600 13px/1.4 var(--publication-ui); }
+.search-retry { margin:12px 22px; padding:12px 18px; border:1px solid var(--publication-line); border-radius:22px; background:var(--publication-panel); color:var(--publication-accent); cursor:pointer; }
+.reading-page-tools { display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--publication-line); }
+html .system-app .reading-page-tools button { display:flex; align-items:center; gap:8px; min-height:42px; padding:9px 13px; border:1px solid var(--publication-line); border-radius:22px; background:var(--publication-paper); color:var(--publication-accent); font:600 12px/1.4 var(--publication-ui); cursor:pointer; }
+html .system-app .reading-page-tools button[aria-pressed=true] { background:var(--publication-panel); border-color:var(--publication-accent); }
+.home-return-actions { display:flex; justify-content:flex-end; margin:0 0 12px; }
+.home-return-actions button { display:flex; align-items:center; gap:10px; padding:12px 16px; border:1px solid var(--publication-line); border-radius:22px; background:var(--publication-paper); color:var(--publication-accent); font:600 13px/1.5 var(--publication-ui); cursor:pointer; }
+.saved-readings-backdrop { position:fixed; inset:0; z-index:200; display:grid; place-items:center; padding:24px; background:#142c286b; backdrop-filter:blur(7px); }
+.saved-readings-dialog { width:min(650px,100%); max-height:calc(100dvh - 48px); overflow:auto; overscroll-behavior:contain; border:1px solid var(--publication-line); border-radius:24px; background:var(--publication-paper); color:var(--publication-ink); box-shadow:var(--publication-shadow); font-family:var(--publication-ui); }
+.saved-readings-dialog>header { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; padding:28px; border-bottom:1px solid var(--publication-line); }
+.saved-readings-dialog header span { font:600 12px/1.5 var(--publication-ui); color:var(--publication-accent); }
+.saved-readings-dialog h2 { margin:8px 0; font:400 38px/1.1 var(--publication-serif); color:var(--publication-ink); }
+.saved-readings-dialog header p { margin:0; color:var(--publication-muted); font-size:13px; line-height:1.7; }
+.saved-readings-dialog header button { flex-shrink:0; display:grid; place-items:center; width:44px; height:44px; border:1px solid var(--publication-line); border-radius:50%; background:var(--publication-panel); color:var(--publication-accent); cursor:pointer; }
+.saved-readings-dialog ul { list-style:none; margin:0; padding:12px 20px 20px; }
+.saved-readings-dialog li+li { border-top:1px solid var(--publication-line); }
+.saved-readings-dialog li button { display:grid; grid-template-columns:22px minmax(0,1fr) 20px; align-items:center; gap:15px; width:100%; padding:20px 10px; border:0; border-radius:10px; background:none; color:var(--publication-accent); text-align:left; cursor:pointer; }
+.saved-readings-dialog li button:hover { background:var(--publication-panel); }
+.saved-readings-dialog li button>span { display:grid; gap:6px; }
+.saved-readings-dialog li small { font:12px/1.5 var(--publication-ui); color:var(--publication-muted); }
+.saved-readings-dialog li strong { font:400 25px/1.2 var(--publication-serif); color:var(--publication-ink); }
+.saved-readings-dialog li span>span { font:12px/1.6 var(--publication-ui); color:var(--publication-muted); }
+.saved-readings-empty { padding:40px; text-align:center; color:var(--publication-accent); }
+.saved-readings-empty p { margin:18px auto; max-width:32ch; font:16px/1.7 var(--publication-ui); color:var(--publication-muted); }
+.saved-readings-empty button { padding:12px 18px; border:1px solid var(--publication-line); border-radius:24px; background:var(--publication-panel); color:var(--publication-accent); cursor:pointer; }
+.saved-readings-dialog button:focus-visible { outline:2px solid var(--publication-accent); outline-offset:3px; }
+.system-app[data-text-size=large] .publication-reader :is(.visual-reading-node-copy,.visual-reading-detail>p,.reading-distinction-paths p,.reading-section-source p) { font-size:21px; line-height:1.8; }
+@media(min-width:768px) {
+  html .system-app.reading-focus .publication-nav { position:static; grid-column:2; grid-row:2; transform:none; width:100%; margin:0; box-shadow:none; }
+  html .system-app.reading-focus .system-workspace { padding-bottom:36px; }
+  html .system-app.system-warm.reading-focus .publication-contents { display:flex; flex-direction:column; height:calc(100dvh - 130px); overflow:visible; border-radius:22px; }
+  .publication-contents>nav { min-height:0; overflow:auto; flex:1; padding:3px; scrollbar-width:thin; scrollbar-color:var(--publication-line) transparent; }
+  .publication-contents>.publication-book-art { flex-shrink:0; border-radius:70px 70px 12px 12px; }
+  .publication-contents>.publication-explore { flex-shrink:0; margin-top:8px; padding-block:12px; }
+}
+@media(min-width:768px) and (max-height:740px) {
+  .reading-focus .publication-book-art { height:76px; margin-bottom:12px; }
+  .publication-contents>h2 { font-size:27px; }
+}
+@media(max-width:767px) {
+  .reading-page-tools { gap:6px; }
+  html .system-app .reading-page-tools button { font-size:12px; padding:9px 10px; }
+  .saved-readings-backdrop { padding:12px; }
+  .saved-readings-dialog { max-height:calc(100dvh - 24px); border-radius:20px; }
+  .saved-readings-dialog>header { padding:22px; }
+  .saved-readings-dialog h2 { font-size:34px; }
+  .saved-readings-dialog ul { padding-inline:12px; }
+  html .system-app.mobile-reader.reader-chrome-hidden :is(.mobile-reader-bar,.mobile-stepper):focus-within { transform:none; opacity:1; pointer-events:auto; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto!important; }
+  .system-app *,.reading-home * { scroll-behavior:auto!important; transition:none!important; animation:none!important; }
+}

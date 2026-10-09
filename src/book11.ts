@@ -812,7 +812,7 @@ export const book11Journeys: Journey[] = [
     id: "the-prophets-table", number: "04", question: "How did the Prophet eat?", title: "At the messenger's table",
     description: "Gather every picture of the Prophet at a meal that Ghazali passes on, from across the whole book. See how he sat, what he said, whom he fed and whose food he accepted.",
     payoff: "You see the messenger of God as the book's living model. He sat as a servant sits, pawned his armour to feed a guest, and left nothing over.",
-    image: assetUrl("assets/system/book11-on-the-ground.jpg"), imageAlt: "A plain leather cloth spread on bare earth, with a single shallow wooden bowl and a few dates on it, and nothing raised above the ground.", minutes: 16, color: "#586fa8",
+    image: assetUrl("assets/ihya-garden/books/book-11-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 11.", minutes: 16, color: "#586fa8",
     nodes: [
       node("on-the-cloth", "On the ground", "Never a raised table", "He set his food on the ground; Anas never saw him eat at a table.", "The cloth, sufra, recalls the last journey.", 3, "order"),
       node("as-a-servant", "As a servant", "I do not eat reclining", "He knelt, or sat on one leg, and said: I eat as a servant eats.", "The posture states who is feeding whom.", 4, "name"),

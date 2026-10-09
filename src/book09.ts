@@ -518,7 +518,7 @@ export const book09Journeys: Journey[] = [
     id: "ten-manners", number: "02", question: "Is there a right way to ask?", title: "Nine manners, and the one that decides it",
     description: "Work through the ten manners of supplication — times, states, hands, voice, plain words, pleading, certainty, persistence, praise first — and then the tenth, which the rain stories are all about.",
     payoff: "You leave knowing what to fix first, and it is probably not the wording.",
-    image: assetUrl("assets/system/book09-ten-manners.jpg"), imageAlt: "A plain clay cup held in two open hands, empty, with nothing else in the frame.", minutes: 15, color: "#bf7a35",
+    image: assetUrl("assets/ihya-garden/books/book-09-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 9.", minutes: 15, color: "#bf7a35",
     nodes: [
       node("best-hours", "Pick the hour", "Before dawn, Friday, Arafa", "The honour of times comes back to the honour of states.", "Any hour your heart is clear.", 7, "order"),
       node("hands", "Raise your hands", "Then lower your eyes", "He is shy to send them back empty.", "Wipe your face at the end.", 7, "practice"),

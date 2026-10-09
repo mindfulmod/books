@@ -906,7 +906,7 @@ export const book10Journeys: Journey[] = [
     id: "whose-day", number: "04", question: "Whose timetable is this?", title: "Six people, six litanies",
     description: "See how the litanies change with a person's state. Meet the worshipper who follows his heart and the scholar whose day moves through the organs. Then the student, the ordinary believer, the worker, the ruler, and the one absorbed in God.",
     payoff: "You can place yourself among Ghazali's six kinds, and see why all of them are roads to God that differ only in degree.",
-    image: assetUrl("assets/system/book10-many-paths.jpg"), imageAlt: "A hillside at first light with several footpaths of different widths climbing towards the same ridge.", minutes: 12, color: "#6f7fa8",
+    image: assetUrl("assets/ihya-garden/books/book-10-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 10.", minutes: 12, color: "#6f7fa8",
     nodes: [
       node("six-kinds", "Six kinds of seeker", "Which are you?", "Worshipper, scholar, student, worker, ruler, or one absorbed in God.", "Each has a different litany.", 18, "name"),
       node("follow-heart", "Follow the heart", "The angel of the sea", "Keep what affects your heart most, and move on when it tires.", "The Companions' numbers are not the measure.", 18, "mirror"),

@@ -1,0 +1,21 @@
+/* Original square-and-star constructions; source notes live beside the SVGs.
+   Ornament occupies its own space and never competes with reading text. */
+.reading-ornament {
+  display:flex; align-items:center; justify-content:center; gap:18px;
+  height:40px; margin:8px 0 24px; color:var(--publication-brass,var(--seed-green));
+  pointer-events:none;
+}
+.reading-ornament::before,.reading-ornament::after {
+  content:''; height:1px; width:72px;
+  background:linear-gradient(90deg,transparent,currentColor); opacity:.42;
+}
+.reading-ornament::after { transform:rotate(180deg); }
+.reading-ornament>span {
+  width:36px; height:36px; background:currentColor;
+  mask:url('/assets/reading-geometry/rosette.svg') center/contain no-repeat;
+}
+@media(max-width:767px) {
+  .reading-ornament { height:32px; margin:0 0 20px; gap:14px; }
+  .reading-ornament>span { width:30px; height:30px; }
+}
+@media print { .reading-ornament { display:none; } }

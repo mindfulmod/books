@@ -730,7 +730,7 @@ export const book35Journeys: Journey[] = [
     id: "the-traveller", number: "06", question: "Who is really moving things?", title: "Follow the traveller",
     description: "Walk with Ghazali's traveller from the blackened page to the divine presence, then see what that seeing does to earning, saving, theft and illness.",
     payoff: "You learn to look past the pen to the Writer, and to use causes with a heart that rests on Him.",
-    image: assetUrl("assets/system/book35-the-pen.jpg"), imageAlt: "A sheet of paper on a plain desk with a single line of fresh ink, a reed pen laid beside it, and a shaft of light falling from a high window.", minutes: 16, color: "#5f7d8c",
+    image: assetUrl("assets/ihya-garden/books/book-35-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 35.", minutes: 16, color: "#5f7d8c",
     nodes: [
       node("thank-the-pen", "Don't thank the pen", "The king's pardon", "A freed man who thanks the pen is foolish; the ant sees only the pen's tip.", "Satan's two traps: lifeless causes and living ones.", 3, "diagnose"),
       node("why-black", "Ask the paper", "Why is your face black?", "Paper blames ink, ink the pen, pen the hand, hand power, power will.", "Each says: I did not move by myself.", 4, "witness"),

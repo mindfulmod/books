@@ -1,0 +1,22 @@
+{
+  "complete_reading_text": {
+    "count": 1,
+    "sha256": "fc17fbf4a7e1b9e697b9b120a74bb2ea8bd57c3ae26536667746a6df5b343732"
+  },
+  "english_passages": {
+    "count": 59,
+    "sha256": "4681eb67062539955b3c07d48e0ba4ecaa091e3762822e64706df892f8cf9b09"
+  },
+  "arabic_originals": {
+    "count": 59,
+    "sha256": "fe3bca3575ab823773e63599548276d39d9f859859b331a7e3470cd71c64a60e"
+  },
+  "quran_verses_and_notes": {
+    "count": 111,
+    "sha256": "127de64f16f72508ff5a34a3017fa4edc948eae983644501a83d565a73a609e7"
+  },
+  "hadith_responses": {
+    "count": 5,
+    "sha256": "746171a09dc53f50e5e73d5546a6fd7e6f870cabd426cf0a234ffd216565c9d1"
+  }
+}

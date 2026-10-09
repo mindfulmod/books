@@ -827,7 +827,7 @@ body.system-page {
   text-transform: uppercase;
 }
 
-.explanation-card > header h2 {
+.explanation-card > header :is(h1,h2) {
   margin-top: 5px;
   font-size: 22px;
   line-height: 1.08;
@@ -4021,7 +4021,7 @@ body.system-page {
   background: linear-gradient(180deg, var(--reader-inset, #d6a44c), var(--journey));
 }
 
-.system-warm .explanation-card > header h2 {
+.system-warm .explanation-card > header :is(h1,h2) {
   color: var(--reader-ink, #392b1b);
   font-size: 24px;
 }
@@ -4319,7 +4319,7 @@ body.system-page {
   text-transform: uppercase;
 }
 
-.deep-reader-top h2 {
+.deep-reader-top :is(h1,h2) {
   overflow: hidden;
   margin-top: 5px;
   color: var(--reader-ink, #3b2c1c);
@@ -6510,7 +6510,7 @@ body.system-page {
     padding: 14px 16px;
   }
 
-  .deep-reader-top h2 {
+  .deep-reader-top :is(h1,h2) {
     padding-right: 36px;
     font-size: 19px;
     white-space: normal;
@@ -8196,7 +8196,7 @@ body.system-page {
 
 /* Book 21: a touch-first illuminated map of the opening distinction. */
 .four-meanings { margin: 24px 0; padding: 26px; border: 1px solid var(--reader-rule, #d7c9ae); border-radius: 24px; background: radial-gradient(ellipse at 95% 0%, var(--reader-panel, #eee5d1) 0%, transparent 50%), var(--reader-paper, #fffcf4); box-shadow: inset 0 1px 0 #fff, 0 12px 32px #71553409; overflow: hidden; }
-.meaning-heading > span { display: flex; align-items: center; gap: 7px; color: var(--reader-accent, #74613f); font: 600 10px/1.5 sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.meaning-heading > span { display: flex; align-items: center; gap: 7px; color: var(--reader-accent, #74613f); font: 600 12px/1.5 sans-serif; letter-spacing: .12em; text-transform: uppercase; }
 .meaning-heading h4 { margin: 18px 0 12px; font: 500 34px/1.06 Georgia, serif; letter-spacing: -.035em; color: var(--reader-ink, #2f332c); }
 .meaning-heading h4 em { font-weight: 400; color: var(--reader-muted, #55746f); }
 .four-meanings .meaning-heading p { margin: 0 0 22px; font: 14px/1.6 sans-serif; color: var(--reader-muted, #6b6558); }
@@ -8205,18 +8205,18 @@ body.system-page {
 .meaning-terms button[aria-pressed="true"] { background: var(--reader-paper, #fff); border-color: var(--word-color); box-shadow: 0 4px 10px #5846290a; color: var(--word-color); }
 .meaning-medallion { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--word-color); background: var(--reader-panel, #f3eee3); box-shadow: inset 0 0 0 1px #c8b99155, inset 0 0 0 4px #fffcf4; }
 .meaning-terms strong { font: 600 13px/1.3 sans-serif; }
-.meaning-terms small { font: 11px/1.3 Georgia, serif; font-style: italic; color: var(--reader-muted, #736d61); }
+.meaning-terms small { font: 12px/1.3 Georgia, serif; font-style: italic; color: var(--reader-muted, #736d61); }
 .meaning-branch { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 17px 0; color: var(--term-color); font: 12px/1.4 sans-serif; }
 .meaning-specific,.meaning-shared { position: relative; display: flex; gap: 12px; padding: 20px 16px; border-radius: 16px; }
 .meaning-specific { min-height: 170px; background: var(--reader-paper, #f5f0e5); border: 1px solid var(--reader-rule, #e0d5c0); border-top: 3px solid var(--term-color); }
 .meaning-number { flex-shrink: 0; font: 12px/1.6 Georgia, serif; opacity: .65; }
-.meaning-specific small,.meaning-shared small { display: block; font: 600 9px/1.5 sans-serif; letter-spacing: .09em; text-transform: uppercase; }
+.meaning-specific small,.meaning-shared small { display: block; font: 600 12px/1.5 sans-serif; letter-spacing: .09em; text-transform: uppercase; }
 .meaning-specific small { color: var(--reader-accent, #766649); }
 .meaning-specific h5,.meaning-shared h5 { margin: 7px 0 9px; font: 500 23px/1.12 Georgia, serif; letter-spacing: -.02em; }
 .four-meanings .meaning-specific p,.four-meanings .meaning-shared p { margin: 0; font: 14px/1.65 sans-serif; }
 .meaning-specific p { color: var(--reader-muted, #59574e); }
 .meaning-convergence { margin: 23px 0 -2px; }
-.meaning-convergence > div { display: grid; grid-template-columns: repeat(4,1fr); text-align: center; font: 11px/1.5 sans-serif; color: var(--reader-muted, #898373); }
+.meaning-convergence > div { display: grid; grid-template-columns: repeat(4,1fr); text-align: center; font: 12px/1.5 sans-serif; color: var(--reader-muted, #898373); }
 .meaning-convergence span.selected { color: var(--term-color); font-weight: 700; }
 .meaning-convergence svg { width: 100%; height: 58px; display: block; overflow: visible; }
 .meaning-convergence path { fill: none; stroke: var(--reader-ink, #d3c9b4); stroke-width: 1.4; }

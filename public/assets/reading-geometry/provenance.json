@@ -1,0 +1,12 @@
+{
+  "title": "Eightfold reading ornaments",
+  "created": "2026-10-08",
+  "authorship": "Original vector constructions for the reading companions; not reproductions of a museum object.",
+  "construction": "An eight-point outline from two equal squares rotated 45 degrees, an inscribed octagon, a smaller eight-point repeat, and a connecting square lattice.",
+  "context": "Inspired by the repeated circle-and-square geometry documented in Islamic architectural and decorative arts. Nested repeats provide detail at two scales; this is not a claim that the ornament is a historical fractal or carries a specific sacred meaning.",
+  "sources": [
+    { "title": "Geometric Patterns in Islamic Art", "institution": "The Metropolitan Museum of Art, Department of Islamic Art", "url": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art" },
+    { "title": "Unit 3: Geometric Design in Islamic Art", "institution": "The Metropolitan Museum of Art", "url": "https://www.metmuseum.org/-/media/files/learn/for%20educators/publications%20for%20educators/islamic%20teacher%20resource/unit3.pdf" }
+  ],
+  "usage": "Decorative borders and section separators only. No scripture, pseudo-calligraphy, doctrinal symbolism, or text background. Hidden from assistive technology."
+}

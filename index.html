@@ -7,7 +7,17 @@
       name="description"
       content="A visual, source-grounded interactive reading edition of Imam al-Ghazali's Revival of the Religious Sciences."
     />
-    <meta name="theme-color" content="#fbf8ef" />
+    <meta name="theme-color" content="#e8e4da" />
+    <script id="reading-theme-bootstrap">
+      (() => {
+        let saved;
+        try { saved = localStorage.getItem('reading-theme'); } catch { /* Device preference remains available. */ }
+        const theme = saved === 'light' || saved === 'dark' ? saved : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.readingTheme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#181d1e' : '#e8e4da';
+      })();
+    </script>
     <meta property="og:title" content="The Revival | Interactive reading" />
     <meta
       property="og:description"
@@ -15,7 +25,8 @@
     />
     <meta property="og:type" content="website" />
     <title>The Revival | Interactive reading</title>
-  </head>
+  <link rel="stylesheet" href="/assets/reading-fonts/fonts.css">
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

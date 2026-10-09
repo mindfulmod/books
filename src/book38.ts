@@ -867,7 +867,7 @@ export const book38Journeys: Journey[] = [
     id: "the-gate", number: "06", question: "What will the reckoning find?", title: "Walk to the gate",
     description: "Start from the scales where not a mustard seed is missed, open the day’s treasuries, meet the strivers who lived as if the Garden were above them and the Fire below, and end at the town gate where the army of the dead is waiting.",
     payoff: "You see the reckoning as close and exact, and leave with the one thing Ghazali says is never closed: a tear, and fleeing to God.",
-    image: assetUrl("assets/system/book38-the-gate.jpg"), imageAlt: "A plain stone town gate at dusk, its doors open onto an empty road, with long shadows falling inward from a low sun.", minutes: 18, color: "#6b7f5e",
+    image: assetUrl("assets/ihya-garden/books/book-38-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 38.", minutes: 18, color: "#6b7f5e",
     nodes: [
       node("mustard-seed", "Not a mustard seed", "The scales of justice", "Every atom of good and evil will be brought, and God counted what we forgot.", "Whoever reckons first finds the reckoning light.", 1, "know"),
       node("sent-back", "Sent back for a day", "The morning charge", "Count yourself as having died and been returned for one more day.", "Every breath is a jewel with no replacement.", 2, "order"),

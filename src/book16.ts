@@ -635,7 +635,7 @@ export const book16Journeys: Journey[] = [
     id: "alone-well", number: "03", question: "If I withdraw, how do I do it well?", title: "Alone, for the right reasons",
     description: "Clear away the weak proofs on both sides and test your motive against the signs of hidden pride. Then take Ghazali's short list of manners for the one who chooses to be alone.",
     payoff: "You can tell a seclusion filled with God from one that hides from people, and you know what to guard at the door of your ears.",
-    image: assetUrl("assets/system/book16-inside-the-door.jpg"), imageAlt: "A plain room seen from inside, its wooden door closed, a lamp and a water jar on the floor and morning light showing under the door.", minutes: 15, color: "#c25f50",
+    image: assetUrl("assets/ihya-garden/books/book-16-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 16.", minutes: 15, color: "#c25f50",
     nodes: [
       node("proofs-for-company", "The proofs for company", "Read for their target", "Division, bad character, rebellion and angry shunning are real sins; quiet withdrawal is none of them.", "The wolf still takes the stray who has not learned.", 3, "diagnose"),
       node("from-unbelievers", "The proofs for seclusion", "From unbelievers", "Abraham, Moses and the Prophet left those who would not listen, never the believers.", "The Prophet sought the blessing of Muslims' hands.", 4, "know"),

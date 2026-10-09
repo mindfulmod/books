@@ -1066,7 +1066,7 @@ export const book31Journeys: Journey[] = [
     id: "what-comes-after", number: "06", question: "What waits after death?", title: "Walk the four levels of the next world",
     description: "See why the next world can only be told in parables, then walk the four levels — the destroyed, the punished, the saved and the winners — and learn who comes out of the Fire and in what order.",
     payoff: "You see how every deed and every kind of faith lands somewhere, and what those who know God hope for above the Garden.",
-    image: assetUrl("assets/system/book31-four-ranks.jpg"), imageAlt: "A bright terraced garden rising in four levels from a dim lower court to a sunlit height, a single open gate at the top.", minutes: 16, color: "#6b8f5e",
+    image: assetUrl("assets/ihya-garden/books/book-31-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 31.", minutes: 16, color: "#6b8f5e",
     nodes: [
       node("sleep-and-waking", "Wake from sleep", "People are asleep", "This world is sleep beside the next, so the next reaches us only in parables.", "A parable is true in meaning, not false.", 14, "know"),
       node("the-just-king", "Meet the just king", "Four groups", "The destroyed, the punished, the saved and the winners, each by what they deserve.", "The levels within each group cannot be counted.", 14, "order"),

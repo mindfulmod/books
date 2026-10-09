@@ -938,7 +938,7 @@ export const book05Journeys: Journey[] = [
     id: "what-do-i-owe", number: "05", question: "What exactly do I owe?", title: "Work through the reckoning",
     description: "Take the six kinds of alms with their thresholds, rates and conditions. Then take the five outward duties of paying, from the intention to sharing one measure of grain among fifteen people.",
     payoff: "You can tell what is due on what, when, and to whom, and why Ghazali will not let alms be paid as a simple money transfer.",
-    image: assetUrl("assets/system/book05-the-tally.jpg"), imageAlt: "A row of small cloth bags of different sizes laid out on a wooden counter, each tied and set beside a single tally stick notched with marks.", minutes: 18, color: "#8a6d3b",
+    image: assetUrl("assets/ihya-garden/books/book-05-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 5.", minutes: 18, color: "#8a6d3b",
     nodes: [
       node("five-conditions", "Five conditions", "Before livestock pays", "Camels, cattle or sheep; grazing; a year; full ownership; the threshold.", "Debt that swallows the herd cancels it.", 2, "order"),
       node("the-camel-scale", "The camel scale", "Sheep before camels", "One sheep for five camels, rising to a settled pattern at one hundred and thirty.", "Rich means more than you need.", 2, "pattern"),

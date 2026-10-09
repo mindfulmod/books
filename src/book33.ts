@@ -782,7 +782,7 @@ export const book33Journeys: Journey[] = [
     id: "those-who-feared", number: "06", question: "Why did the best of people fear most?", title: "Walk with the fearful",
     description: "Start with the Prophet, who was the most fearful of people, then the angels and prophets, then the Companions and those after them.",
     payoff: "You see that fear grows with knowledge of God, not with sin, and why our own safety is a sign of hardness.",
-    image: assetUrl("assets/system/book33-the-fearful.jpg"), imageAlt: "A quiet prayer niche at dawn with a single worn prayer mat, its centre darkened by years of tears, and pale light falling across it.", minutes: 15, color: "#6b8f5e",
+    image: assetUrl("assets/ihya-garden/books/book-33-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 33.", minutes: 15, color: "#6b8f5e",
     nodes: [
       node("sparrow-of-the-garden", "How do you know?", "The sparrow of the Garden", "The Prophet grew angry when a dead child was called a sparrow of the Garden.", "Vouch for no one's ending.", 19, "witness"),
       node("hud-and-its-sisters", "Hud and its sisters", "Chapters that turned him grey", "The Quran is full of fears for whoever reads it with reflection.", "Four conditions in the chapter of the Afternoon.", 19, "know"),

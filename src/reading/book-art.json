@@ -1,0 +1,202 @@
+{
+  "1": {
+    "key": "book-01",
+    "focusY": 62,
+    "name": "The garden library"
+  },
+  "2": {
+    "key": "book-02",
+    "focusY": 64,
+    "name": "The rooted courtyard"
+  },
+  "3": {
+    "key": "book-03",
+    "focusY": 65,
+    "name": "The clear-water steps"
+  },
+  "4": {
+    "key": "book-04",
+    "focusY": 64,
+    "name": "A place for presence"
+  },
+  "5": {
+    "key": "book-05",
+    "focusY": 67,
+    "name": "A basket at the open door"
+  },
+  "6": {
+    "key": "book-06",
+    "focusY": 66,
+    "name": "The waiting table"
+  },
+  "7": {
+    "key": "book-07",
+    "focusY": 65,
+    "name": "Ready for the journey"
+  },
+  "8": {
+    "key": "book-08",
+    "focusY": 62,
+    "name": "The recitation alcove"
+  },
+  "9": {
+    "key": "book-09",
+    "focusY": 64,
+    "name": "The quiet fountain"
+  },
+  "10": {
+    "key": "book-10",
+    "focusY": 61,
+    "name": "The rhythm of the day"
+  },
+  "11": {
+    "key": "book-11",
+    "focusY": 70,
+    "name": "Around the shared bowl"
+  },
+  "12": {
+    "key": "book-12",
+    "focusY": 66,
+    "name": "A home made together"
+  },
+  "13": {
+    "key": "book-13",
+    "focusY": 65,
+    "name": "The honest workshop"
+  },
+  "14": {
+    "key": "book-14",
+    "focusY": 61,
+    "name": "The careful measure"
+  },
+  "15": {
+    "key": "book-15",
+    "focusY": 62,
+    "name": "Room beside the fountain"
+  },
+  "16": {
+    "key": "book-16",
+    "focusY": 62,
+    "name": "The sheltered reading nook"
+  },
+  "17": {
+    "key": "book-17",
+    "focusY": 63,
+    "name": "The path through the hills"
+  },
+  "18": {
+    "key": "book-18",
+    "focusY": 61,
+    "name": "Listening to the garden"
+  },
+  "19": {
+    "key": "book-19",
+    "focusY": 66,
+    "name": "Care for the common path"
+  },
+  "20": {
+    "key": "book-20",
+    "focusY": 66,
+    "name": "Everyday gentleness"
+  },
+  "21": {
+    "key": "book-21",
+    "focusY": 33,
+    "name": "The clear mirror"
+  },
+  "22": {
+    "key": "book-22",
+    "focusY": 42,
+    "name": "Guiding the young tree"
+  },
+  "23": {
+    "key": "book-23",
+    "focusY": 66,
+    "name": "Enough for the day"
+  },
+  "24": {
+    "key": "book-24",
+    "focusY": 66,
+    "name": "The pause before speaking"
+  },
+  "25": {
+    "key": "book-25",
+    "focusY": 65,
+    "name": "Cooling the embers"
+  },
+  "26": {
+    "key": "book-26",
+    "focusY": 64,
+    "name": "What passes, what grows"
+  },
+  "27": {
+    "key": "book-27",
+    "focusY": 66,
+    "name": "The unlatched chest"
+  },
+  "28": {
+    "key": "book-28",
+    "focusY": 65,
+    "name": "The hidden roots"
+  },
+  "29": {
+    "key": "book-29",
+    "focusY": 42,
+    "name": "The bending branch"
+  },
+  "30": {
+    "key": "book-30",
+    "focusY": 75,
+    "name": "Looking through the glass"
+  },
+  "31": {
+    "key": "book-31",
+    "focusY": 66,
+    "name": "The mended path"
+  },
+  "32": {
+    "key": "book-32",
+    "focusY": 38,
+    "name": "The ripening garden"
+  },
+  "33": {
+    "key": "book-33",
+    "focusY": 55,
+    "name": "The sheltered seedling"
+  },
+  "34": {
+    "key": "book-34",
+    "focusY": 63,
+    "name": "The sufficient room"
+  },
+  "35": {
+    "key": "book-35",
+    "focusY": 75,
+    "name": "The steady mooring"
+  },
+  "36": {
+    "key": "book-36",
+    "focusY": 61,
+    "name": "The flowering bower"
+  },
+  "37": {
+    "key": "book-37",
+    "focusY": 65,
+    "name": "The single clear spring"
+  },
+  "38": {
+    "key": "book-38",
+    "focusY": 66,
+    "name": "The gardener’s evening desk"
+  },
+  "39": {
+    "key": "book-39",
+    "focusY": 80,
+    "name": "Sky in the still water"
+  },
+  "40": {
+    "key": "book-40",
+    "focusY": 64,
+    "name": "The passing hour"
+  }
+}

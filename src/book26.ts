@@ -1093,7 +1093,7 @@ export const book26Journeys: Journey[] = [
     id: "hear-the-warners", number: "06", question: "What did those who knew the world say about it?", title: "Hear the warners",
     description: "Listen in order to the voices Ghazali gathers: the Prophet, Jesus and Moses, the Companions and the early Muslims, the great sermons, and Uways by the Euphrates.",
     payoff: "You hear the censure of the world as the people who lived it spoke it, and see the one life Ghazali holds up as its example.",
-    image: assetUrl("assets/system/book26-the-warners.jpg"), imageAlt: "A quiet riverbank at dawn with patched cloth drying on a flat stone, and beyond it a small mosque arch whose lamp is still burning.", minutes: 17, color: "#7a6aa8",
+    image: assetUrl("assets/ihya-garden/books/book-26-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 26.", minutes: 17, color: "#7a6aa8",
     nodes: [
       { id: "dead-sheep", label: "The dead sheep", micro: "Worth to God", summary: "The world is worth less to God than a dead sheep to its owners.", guardrail: "Except what is for God.", chapterId: 2, glyph: "name" },
       { id: "two-doors", label: "Two doors", micro: "Noah's answer", summary: "The longest-lived prophet found the world a house with two doors.", guardrail: "Deeds like mountains can be undone by greed.", chapterId: 4, glyph: "remember" },

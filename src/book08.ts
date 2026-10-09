@@ -749,7 +749,7 @@ export const book08Journeys: Journey[] = [
     id: "how-you-read", number: "04", question: "How should I actually be reading it?", title: "The ten outward manners",
     description: "All ten in order: how to sit, how much to recite, and how to divide and write it. Then how fast to go, when to weep and where to prostrate. Last, what to say, how loud to be, and how to make the voice beautiful.",
     payoff: "A practice you can start tonight — and the reason behind each piece of it.",
-    image: assetUrl("assets/system/book08-ten-manners.jpg"), imageAlt: "An open book on a low wooden stand, a folded cloth beside it, in even daylight with nothing else in frame.", minutes: 17, color: "#a97837",
+    image: assetUrl("assets/ihya-garden/books/book-08-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 8.", minutes: 17, color: "#a97837",
     nodes: [
       node("as-before-a-teacher", "Sit as before your teacher", "In ablution, still", "Facing the direction of prayer, head bowed, not lounging or proud.", "Reciting lying down still has merit — only less.", 4, "steady"),
       node("three-days", "Not under three days", "Four degrees", "Once or twice a week is balanced; a deep thinker may take a month.", "“He has not recited, and he has not kept silent either.”", 5, "order"),

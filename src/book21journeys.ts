@@ -93,8 +93,7 @@ export const book21Journeys: Journey[] = [
     title: "Walk the walls of the fortress",
     description: "Follow the devil's ways into the heart as Ghazali lays them out. See his touch, his hidden paths and the great gates one by one. Then the remedy, his armies, and why the whisper never quite stops.",
     payoff: "You know the enemy by his weapons rather than his pedigree, and you know which of your own gates is open.",
-    image: assetUrl("assets/system/book21-the-gates.jpg"),
-    imageAlt: "A walled fortress at dusk seen from above, many small gates in its wall standing ajar and a single lit gate facing upward.",
+    image: assetUrl("assets/ihya-garden/books/book-21-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 21.",
     minutes: 18,
     color: "#5d6b3a",
     nodes: [

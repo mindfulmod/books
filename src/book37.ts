@@ -978,7 +978,7 @@ export const book37Journeys: Journey[] = [
     id: "the-scales", number: "06", question: "What will my deeds weigh on the Day?", title: "Stand at the scales",
     description: "Follow the deeds that are weighed: the pages thrown away, the first three the Fire is lit with, a cat in the scale of good deeds, a nosebag written in the record, and the martyr who smelled the Garden before Uhud.",
     payoff: "You see the reckoning as Ghazali shows it, where what was meant decides what is found.",
-    image: assetUrl("assets/system/book37-the-scales.jpg"), imageAlt: "A great pair of scales standing in an empty courtyard at dawn, one pan holding a single pomegranate seed and sinking, the other holding a heap of gold coins and rising.", minutes: 17, color: "#7a5c8e",
+    image: assetUrl("assets/ihya-garden/books/book-37-day-1200.webp"), imageAlt: "An interpretive garden reading place for Book 37.", minutes: 17, color: "#7a5c8e",
     nodes: [
       node("thrown-away", "Throw away this page", "Sealed pages", "God throws out pages full of deeds, and writes deeds never done because they were intended.", "He looks at hearts, where intention lives.", 1, "witness"),
       node("medina", "They were with us", "Kept home by an excuse", "Their hearts went out with the army, so they shared its reward.", "The body’s going out only strengthens what the heart already has.", 5, "receive"),
