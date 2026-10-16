@@ -22,7 +22,7 @@ r("al-mumit",
     "Let remembrance of death clarify a duty or a good you keep postponing. Turn to Allah with both hope and seriousness. If you are grieving, bring that sorrow to Him and receive companionship; faith does not require grief to become brief or easy."
   ]
 ],
-"Pray to Allah and give attention to one meaningful responsibility you have been delaying.",
+"If a kind word has been left unsaid, offer it while you can. Turn to Al-Mumit in prayer, letting life’s finitude give sincerity to the words without forcing yourself into fear.",
 "What becomes clearer about my responsibility to Allah when I remember that this life will end?",
 "فلا مميت ولا محيي إلا الله",
 "The joint Al-Muhyi / Al-Mumit discussion. The reflections on grief and finite time are original applications.",
@@ -51,7 +51,7 @@ r("al-hayy",
     "Bring a changing concern to the Lord whose life does not pass away. Ask for a heart awake to knowing and worshipping Him. Let your own limited life become an occasion for gratitude and attentive service rather than something you assume you possess independently."
   ]
 ],
-"Call upon Al-Hayy with a present concern and remember the difference between His life and your received life.",
+"On waking, thank Al-Hayy for the life through which you can turn to Him again. Acknowledge that His life is never received, interrupted, or renewed as yours is, and ask for a heart awake to knowing Him.",
 "What does it mean to place my trust in the One who never ceases to live?",
 "فهو الحي المطلق",
 "Al-Hayy: complete life through unrestricted knowledge and action, distinguished from limited created life.",
@@ -80,7 +80,7 @@ r("al-qayyum",
     "Ask Al-Qayyum for help carrying a responsibility. Take the means within your reach and acknowledge what exceeds them. Remembering who truly sustains creation can make your work more faithful while leaving room to receive help and necessary rest."
   ]
 ],
-"Notice several supports behind an ordinary task and thank Al-Qayyum, who sustains them all.",
+"Before resting, put down a task you can safely leave. Entrust its care to Al-Qayyum, remembering that He sustains you and every support you depend on even when your own attention and activity cease.",
 "Where have I begun acting as though something depends on me in the way all things depend on Allah?",
 "قوامه بذاته وقوام كل شيء به",
 "Al-Qayyum: self-subsistence and the dependence of every created thing upon Allah.",
@@ -109,7 +109,7 @@ r("al-wajid",
     "Ask Allah honestly for what you need. Dependence does not make you less worthy of turning to Him; it is your condition as a creature. Thank Him for a present gift and use it well, without imagining you must first become self-sufficient."
   ]
 ],
-"Name a real need before Al-Wajid and ask Him for what is good, with gratitude for His complete sufficiency.",
+"Name an ability or resource you lack, and ask Al-Wajid for what is good. Remember that no missing knowledge, power, or perfection must first be supplied to Him before He can help you.",
 "How does Allah’s freedom from lack help me acknowledge my own need without pretence?",
 "هو الذي لا يعوزه شيء",
 "Al-Wajid: absence of any lack in divine perfection, contrasted with the partial attainments of creatures.",
@@ -196,7 +196,7 @@ r("as-samad",
     "Turn to As-Samad plainly in prayer and take appropriate means toward support. When someone turns to you, receive their trust with care. Help within your ability and direct them to further support when needed, remembering that you are both servants of the same Lord."
   ]
 ],
-"Bring one need directly to As-Samad without disguising its importance or your dependence.",
+"If someone brings you a need you cannot meet, help them find appropriate support instead of promising what you cannot give. Ask As-Samad to care for them, remembering that neither of you is the ultimate refuge.",
 "Where does my search for help lead when I remember that every helper also needs Allah?",
 "الذي يصمد إليه في الحوائج",
 "As-Samad: the One sought for needs and the limited human share of becoming a means through which needs are met.",
@@ -225,7 +225,7 @@ r("al-qadir",
     "Bring a difficult need to Al-Qadir and ask for what is good. Let His power encourage hope without turning your request into a demand. Use the ability He has given you with a sound intention and respect for the rights of others."
   ]
 ],
-"Ask Al-Qadir for help with a difficulty, then use one available means responsibly.",
+"Bring Al-Qadir a good you cannot bring about by yourself. Ask with hope in His power, while leaving the outcome to His will. Your inability to see a way is not a measure of His ability.",
 "Have I confused an outcome Allah has not brought about with a limit in His power?",
 "إن شاء فعل وإن شاء لم يفعل",
 "The joint Al-Qadir / Al-Muqtadir discussion: power in relation to will, knowledge, and limited human agency.",
@@ -254,7 +254,7 @@ r("al-muqtadir",
     "Ask Al-Muqtadir for a good beyond your own strength. Prepare, learn, and take a sound step with the means available. Your uncertainty about the whole path need not close your hope in Allah, whose power is not measured by what you can foresee."
   ]
 ],
-"Entrust a difficult aim to Al-Muqtadir and take one considered step within your ability.",
+"As you prepare for a task, notice the tools, skills, or people your ability depends on. Ask Al-Muqtadir for help using them well, remembering that His own power needs no assistance to be complete.",
 "What changes when I distinguish the limits of my ability from the completeness of Allah’s power?",
 "المقتدر أكثر مبالغة",
 "The joint Al-Qadir / Al-Muqtadir discussion: intensified expression of divine power; human means remain dependent.",
@@ -283,7 +283,7 @@ r("al-muqaddim",
     "Ask Al-Muqaddim to bring you nearer to Him. Let that request change the order of one day: make room for prayer, fulfil an owed duty, or choose sincerity over being seen first. The most visible place is not always the most faithful one."
   ]
 ],
-"Ask for nearness to Allah and place one neglected duty before an avoidable distraction.",
+"Make a place for your next prayer in the day’s plans before adding an optional activity. Ask Al-Muqaddim to bring you nearer to Him, treating progress in worship as more than getting ahead of others.",
 "Do my priorities reflect the nearness to Allah I say I seek?",
 "والمقدم عند الله تعالى هو المقرب",
 "The joint Al-Muqaddim / Al-Mu’akhkhir discussion: rank and nearness rather than a simple formula for worldly timing.",
@@ -312,7 +312,7 @@ r("al-muakhkhir",
     "Ask Allah to protect you from what distances you from Him. Where you know a duty has been delayed by your own avoidance, begin it. Where you genuinely must wait, keep seeking guidance without inventing certainty about His purpose."
   ]
 ],
-"Ask Allah for nearness and take the next honest step in a responsibility you have postponed.",
+"After an act of worship, ask Allah to accept it and grant nearness through His favour. Remember Al-Mu’akhkhir, and resist turning what you have done into a claim that you now deserve a particular standing.",
 "Am I attending to what brings me toward Allah, or only trying to explain His timing?",
 "والمراد هو التقديم والتأخير في الرتبة",
 "The joint Al-Muqaddim / Al-Mu’akhkhir discussion explicitly concerns rank. Everyday delay is treated as reflection, not a claim to interpret divine intention.",
@@ -341,7 +341,7 @@ r("al-awwal",
     "Remember Allah before entering a task. Your life, ability, and opportunity have origins you did not provide. Ask Him to guide their use, and let the beginning become an act of gratitude rather than a claim to have made yourself."
   ]
 ],
-"Before a new task, acknowledge one gift that made it possible and ask Al-Awwal to guide you.",
+"Consider a beginning you can trace, such as a plant growing from a seed. Praise Al-Awwal, whose existence never began. Let the chain of created beginnings direct your worship toward Him, without adding Him as another dependent link.",
 "What beginning in my life reveals a dependence that reaches beyond my own effort?",
 "الموجودات كلها استفادت الوجود منه",
 "The joint Al-Awwal / Al-Akhir discussion: first in the order of existence, without dependence on another.",
@@ -370,7 +370,7 @@ r("al-akhir",
     "Bring a current ambition before Allah and consider where it is taking your heart. An ordinary task can serve a lasting intention. Give it proper effort while refusing to make a passing result the final good for which you live."
   ]
 ],
-"Review one goal in light of your return to Allah, and renew the intention behind it.",
+"State the purpose of a current goal in a plain sentence. Ask how pursuing it could serve your return to Allah, and adjust the aim where needed. Let Al-Akhir give direction beyond the next achievement.",
 "Is Allah the final direction of this effort, or only someone I ask to help me reach another end?",
 "وإليه المرجع والمصير آخرا",
 "The joint Al-Awwal / Al-Akhir discussion: return to Allah and knowledge of Him as the final destination of seeking.",
@@ -399,7 +399,7 @@ r("az-zahir",
     "Look again at something familiar and consider its dependence. Allow the thought to lead toward Allah rather than stopping with admiration of the object. Praise Him for what the sign helps you understand, without demanding a special feeling from the moment."
   ]
 ],
-"Attend to one familiar part of creation and let its dependence lead you to praise its Creator.",
+"On a familiar journey, notice something you usually pass without seeing. Let its ordinary existence direct a word of praise toward Az-Zahir; no unusual event is needed for creation to point toward Him.",
 "Which signs of Allah have become easy to overlook because they are always before me?",
 "ظاهر إن طلب من خزانة العقل بطريق الاستدلال",
 "The joint Az-Zahir / Al-Batin discussion: signs apparent to reflection, with familiarity and pervasive evidence sometimes obscuring attention.",
@@ -428,7 +428,7 @@ r("al-batin",
     "Turn toward Allah through what His Names teach. You do not have to form an image to make prayer sincere. Let knowledge and reverence stay together, and remain humble when your imagination cannot supply what your mind has begun to understand."
   ]
 ],
-"Read Al-Batin with Az-Zahir, then offer a quiet prayer without trying to picture Allah.",
+"If you find yourself trying to picture Allah in prayer, return to a meaning you know is true, such as His complete knowledge. Address Al-Batin through that recognition; an image is not needed for sincere worship.",
 "Can I let knowing Allah deepen without demanding an image that contains Him?",
 "باطن إن طلب من إدراك الحواس وخزانة الخيال",
 "The joint Az-Zahir / Al-Batin discussion: divine reality beyond sensory perception and imagination. The interpersonal example is editorial.",
@@ -457,7 +457,7 @@ r("al-waali",
     "Remember Al-Waali in a responsibility you hold. Ask for help carrying it from intention through action and follow-up. Let authority make you more accountable for care, not less willing to hear a correction or share a task that exceeds your capacity."
   ]
 ],
-"Ask Al-Waali for guidance and follow through on one responsibility beyond its initial beginning.",
+"For a task you are organising, check that the next step and who will carry it out are clear. Supply a missing instruction or arrange a handover, asking Al-Waali to guide your limited responsibility within His complete governance.",
 "How does Allah’s complete governance change the way I hold my small, entrusted authority?",
 "التدبير والقدرة والفعل",
 "Al-Waali: governance through ordering, power, enactment, and preservation. The source discusses this Name after Dhu’l-Jalal despite listing it earlier.",
@@ -486,7 +486,7 @@ r("al-mutaali",
     "Praise the Supremely Exalted and remain willing to learn. Bring your hopes before Him without treating them as a measure He must fulfil to be wise or good. Let reverence make a sound correction easier to receive and arrogance harder to defend."
   ]
 ],
-"Pause over a praise of Allah’s exaltation and release one expectation you have treated as a demand upon Him.",
+"Bring an unmet expectation honestly before Allah. Praise Al-Muta‘ali without making the outcome you wanted the measure of His perfection. You can keep asking for help while acknowledging what your own understanding cannot encompass.",
 "Where am I using a created measure as though it could determine Allah’s perfection?",
 "بمعنى العلي مع نوع من المبالغة",
 "Al-Muta‘ali: the explicit reference to Al-‘Ali with intensified emphasis.",
@@ -515,7 +515,7 @@ r("al-barr",
     "Thank Al-Barr for a familiar kindness you have begun to take for granted. Thank the person through whom it came as well. Let gratitude become a dependable act of care, chosen for a real need rather than for the appearance of generosity."
   ]
 ],
-"Thank Allah for a good received through someone else, and acknowledge that person’s care.",
+"Tell someone specifically how their care helped you, especially if you had begun to take it for granted. Thank Al-Barr for the goodness and the person’s ability to offer it, letting gratitude reach its source.",
 "What familiar goodness could lead me toward Allah if I stopped receiving it without attention?",
 "الذي منه كل مبرة وإحسان",
 "Al-Barr: the source of beneficence; counsel particularly concerning parents and teachers. The boundary qualification is contemporary practical guidance.",
@@ -544,7 +544,7 @@ r("at-tawwab",
     "If a wrong has become clear, begin your return: stop it, seek forgiveness, and repair what is owed where you can. Thank Allah for the recognition that made this possible. Do not wait for a flawless feeling before taking an honest step."
   ]
 ],
-"Recognise one reminder Allah has given you, and answer it with a concrete step of repentance.",
+"When a reminder makes a wrong clear, stop defending it. Ask At-Tawwab to receive your return, and begin the correction the reminder calls for. Thank Him for awakening you before that recognition fades.",
 "What changes when I see even my desire to return as a gift from Allah?",
 "تيسير أسباب التوبة لعباده مرة بعد أخرى",
 "At-Tawwab: repeated provision of the means of repentance and acceptance of return; counsel on accepting apologies.",
@@ -573,7 +573,7 @@ r("al-muntaqim",
     "Ask Allah for forgiveness and correct a wrong within your own conduct. If you have been harmed, seek protection and fair remedies through sound means. Entrusting final justice to Him does not give you permission to make personal revenge an act of worship."
   ]
 ],
-"Bring a wrong of your own before Allah and take one safe, concrete step of repair.",
+"When tempted to get even, set aside the retaliatory act. Ask Allah for just redress, remembering Al-Muntaqim, and choose a safe, fair way to address the harm without committing a further wrong.",
 "Am I receiving Allah’s respite as an opportunity to repent or treating it as permission to continue?",
 "وذلك بعد الإعذار والإنذار",
 "Al-Muntaqim: requital after warning and respite. The historical self-deprivation anecdote is deliberately not adapted into a practice; accountability here means safe correction and repair.",

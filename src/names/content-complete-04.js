@@ -22,7 +22,7 @@ r("al-afuw",
     "Bring a known fault honestly to Al-‘Afuw. Seek pardon while attending to any right you owe another person. Where a personal grievance can be released, ask for help releasing it without denying harm, abandoning protection, or surrendering someone else’s rights."
   ]
 ],
-"Ask Al-‘Afuw for pardon, then take one honest step of repentance or restitution.",
+"Bring a minor grievance you are ready to release before Allah. Ask Al-‘Afuw for pardon and for help letting go of your own claim, without denying what happened or giving away another person’s rights.",
 "What does Allah’s power to efface sin teach me about hope after an honest admission of wrong?",
 "والعفو ينبئ عن المحو",
 "Al-‘Afuw: erasure distinguished from covering, with counsel on pardon. Boundaries and repair are contemporary clarifications.",
@@ -51,7 +51,7 @@ r("ar-rauf",
     "Bring a vulnerable need to Ar-Ra’uf without first making yourself appear stronger. Let remembering His mercy make your own care more considerate. Offer privacy, time, or a gentler explanation where it can remove unnecessary difficulty for another person."
   ]
 ],
-"Ask Ar-Ra’uf for mercy in a tender part of your life, and offer one considerate kindness in gratitude.",
+"When explaining something to a person who is struggling, slow down and leave room for questions without embarrassment. Ask Ar-Ra’uf for mercy for you both, and let tenderness shape how you share what you know.",
 "What becomes easier to bring before Allah when I remember the tenderness of His mercy?",
 "والرأفة شدة الرحمة",
 "Ar-Ra’uf: intensified mercy, explicitly related to Ar-Rahim. The examples develop the manner of practical care.",
@@ -80,7 +80,7 @@ r("malik-al-mulk",
     "Praise Malik al-Mulk and remember Him in the use of a resource or position. Attend to the rights affected by your decisions. What is temporarily in your hands can become a means of faithful service without becoming a claim to absolute control."
   ]
 ],
-"Thank Malik al-Mulk for one entrusted resource and use it more faithfully for its proper purpose.",
+"When reading news from another place, include its people in your prayer to Malik al-Mulk. Remember that His dominion includes their lives and yours; no border puts them under a different ultimate Lord.",
 "What changes in my use of this possession when I remember whose dominion it belongs to?",
 "والموجودات كلها مملكة واحدة",
 "Malik al-Mulk: complete divine dominion, the interrelation of creation, and the servant’s limited domain of conduct.",
@@ -109,7 +109,7 @@ r("dhul-jalali-wal-ikram",
     "Call upon Allah with both reverence for His majesty and hope in His generosity. Let a received honour lead you to thank Him rather than to feel superior. Treat another person with care as someone who also lives by His gifts."
   ]
 ],
-"Praise Allah for His majesty and thank Him for one form of honour or kindness you have received.",
+"In your own words, address Dhu’l-Jalal wa’l-Ikram with reverence for His majesty and hope in His generosity. Let your request express both, without treating awe as a reason to stop asking.",
 "Do reverence and gratitude meet when I turn toward the Lord of Majesty and Generosity?",
 "والكرامة فائضة منه على خلقه",
 "Dhu’l-Jalal wa’l-Ikram: majesty belonging to Allah and honour bestowed upon creation.",
@@ -138,7 +138,7 @@ r("al-muqsit",
     "Ask Al-Muqsit to guide your judgment. Where you owe credit, restitution, or an apology, begin with the right rather than your discomfort. If helping others resolve a dispute, listen carefully and do not pressure the harmed person to deny what happened."
   ]
 ],
-"Remember Al-Muqsit and act on one right you owe someone else.",
+"Return something borrowed without waiting for its owner to ask. Remember Al-Muqsit, who knows what is due even when the person owed is quiet. Offer the return as obedience to Allah, not as a favour you confer.",
 "What does justice before Allah require here that my preferred version of events leaves out?",
 "هو الذي ينتصف للمظلوم من الظالم",
 "Al-Muqsit: equity for the wronged and the counsel to exact fairness first from oneself. No claim is made here about the authentication of the source’s illustrative report.",
@@ -167,7 +167,7 @@ r("al-jami",
     "Remember the One before whom you will be gathered. Ask for an inward intention that agrees with your outward worship and conduct. Where a familiar habit contradicts a value you profess, begin a truthful correction without pretending the gap was never there."
   ]
 ],
-"Remember the final gathering before Allah and bring one action into closer agreement with your intention.",
+"In your next prayer, attend to the meaning of what you say so that words and intention move together. Ask Al-Jami‘ to gather your heart toward Him, remembering the final gathering before Allah.",
 "What do I need to make more truthful before the One who will gather us to Him?",
 "هو المؤلف بين المتماثلات والمتباينات والمتضادات",
 "Al-Jami‘: gathering diverse creation and the counsel to join inward understanding with outward conduct, patience, and insight.",
@@ -225,7 +225,7 @@ r("al-mughni",
     "Ask Al-Mughni for wholesome provision and contentment. Use what you receive responsibly and help meet another person’s real need where you can. Let generosity support their good without making their continued dependence on you its purpose."
   ]
 ],
-"Ask Al-Mughni for sufficiency and contentment, then use one received resource for a clear good.",
+"Show someone how to do a task they keep needing help with. Ask Al-Mughni to grant you both sufficiency, and welcome their growing ability rather than needing to remain indispensable to them.",
 "Can I recognise that having enough still leaves me completely dependent on Allah?",
 "فإن أقل أموره أنه محتاج إلى المغني",
 "The joint Al-Ghani / Al-Mughni discussion: enrichment never removes the creature’s dependence on the Enricher.",
@@ -254,7 +254,7 @@ r("al-mani",
     "Seek Allah’s protection from what harms your faith and life, and use sound protective means. Thank Him for prevention you can recognise. Where you set a boundary yourself, keep its purpose truthful and remain willing to correct an unfair restriction."
   ]
 ],
-"Ask Al-Mani‘ for protection and attend to one concrete means of preventing harm.",
+"Remove a hazard you can safely address, such as a loose object on a shared stair. Ask Al-Mani‘ for protection, and thank Him for the means by which harm can be prevented.",
 "What protection might I overlook because it arrives as a harm prevented rather than a visible gift?",
 "إذ المنع يراد للحفظ",
 "Al-Mani‘: prevention directed toward preservation, explicitly connected to Al-Hafiz.",
@@ -283,7 +283,7 @@ r("ad-darr",
     "Ask Allah for protection and relief, then use appropriate care and safe means of protection. If someone is suffering, offer useful support before explanation. Trust can acknowledge harm honestly while refusing either to worship its power or abandon the effort to relieve it."
   ]
 ],
-"Read Ad-Darr with An-Nafi‘, ask Allah for protection, and take one appropriate protective step.",
+"Bring a real hurt to Allah and ask for relief. Name the care or support you need and seek an appropriate means of receiving it, remembering Ad-Darr with An-Nafi‘: harm has no independent dominion beside Him.",
 "How can I recognise Allah’s dominion while responding honestly and responsibly to harm?",
 "كل ذلك أسباب مسخرة",
 "The joint Ad-Darr / An-Nafi‘ discussion: harm and benefit through dependent causes. Safety, moral responsibility, and humility about suffering are contemporary clarifications.",
@@ -312,7 +312,7 @@ r("an-nafi",
     "Ask An-Nafi‘ for what truly benefits your faith and life. Receive useful help with gratitude to Allah and to the person offering it. When you help someone else, attend to what actually serves their need rather than what makes your contribution look generous."
   ]
 ],
-"Thank An-Nafi‘ for a concrete benefit and use it in a way that honours its Giver.",
+"After offering help, ask whether it was useful and adjust what you can. Pray to An-Nafi‘ for real benefit, allowing the person’s need to matter more than how generous your contribution appears.",
 "Does recognising a helpful means lead me toward Allah, or stop my gratitude at the means itself?",
 "النفع والضر وكل ذلك منسوب إلى الله تعالى",
 "The joint Ad-Darr / An-Nafi‘ discussion: benefit and harm through dependent means. Practical usefulness is an original application.",
@@ -341,7 +341,7 @@ r("an-nur",
     "Look at a familiar sign of creation and let it lead you toward its Creator. Ask Allah for clarity that deepens recognition and guides conduct. Share what you understand truthfully, acknowledging the places where your own knowledge remains limited."
   ]
 ],
-"Ask An-Nur for clarity in knowing Him, then contemplate one created sign with attention.",
+"Explain a meaning you have learned about Allah in a plain sentence, aloud or in writing. Ask An-Nur for clarity that deepens recognition, and keep the explanation within what you actually understand.",
 "What becomes clearer when I look beyond a visible gift toward the One who makes it manifest?",
 "الظاهر في نفسه المظهر لغيره",
 "An-Nur: manifestation and the giving of existence, related to Az-Zahir; physical light is not treated as a literal account of Allah.",
@@ -370,7 +370,7 @@ r("al-hadi",
     "Ask Al-Hadi for guidance in a real uncertainty. Seek trustworthy knowledge, and be ready to act on what becomes clear even when it challenges your preference. When helping another person, explain with care and leave the heart’s guidance with Allah."
   ]
 ],
-"Ask Al-Hadi for guidance, seek a trustworthy answer, and act on one thing you already know to be right.",
+"If an honest answer challenges your preference, pause before searching for a more convenient one. Ask Al-Hadi for willingness to follow what is sound, and take the first step it requires.",
 "Am I willing to be guided toward Allah, even when that changes the direction I preferred?",
 "وهدى كل مخلوق إلى ما لا بد له منه",
 "Al-Hadi: guidance toward knowledge of Allah and toward creatures’ needs; prophets and teachers as dependent means of guidance.",
@@ -399,7 +399,7 @@ r("al-badi",
     "Recognise Al-Badi‘ in the variety and originality of creation without making any created form His likeness. Thank Him for your own ability to learn and make. Use it sincerely, credit what you receive from others, and let usefulness matter more than proving uniqueness."
   ]
 ],
-"Contemplate something distinctive in creation and praise Al-Badi‘, whose incomparability exceeds every created difference.",
+"When sharing something you made, acknowledge the help, learning, or examples you drew upon. Thank Al-Badi‘ for your ability, remembering that His creating alone requires no borrowed model or acquired skill.",
 "How is Allah’s absolute incomparability different from the originality I admire in created things?",
 "هو الذي لا عهد بمثله",
 "Al-Badi‘: absolute incomparability distinguished from relative created originality.",
@@ -428,7 +428,7 @@ r("al-baqi",
     "Let Al-Baqi be the lasting direction of what you do with a temporary life. Enjoy a present gift with gratitude while remembering that it cannot promise permanence. Give a passing day an intention of sincere worship and care."
   ]
 ],
-"Thank Allah for one temporary good and renew the intention that directs its use toward Him.",
+"As a pleasant visit or beautiful moment ends, thank Allah for it. Let gratitude for what passes deepen your devotion to Al-Baqi, whose existence does not pass away and needs no effort to preserve it.",
 "What am I asking a passing thing to provide that belongs only to the Everlasting?",
 "لا ينتهي تقدير وجوده في الاستقبال إلى آخر",
 "Al-Baqi: necessary existence and permanence beyond temporal change.",
@@ -457,7 +457,7 @@ r("al-warith",
     "Remember Al-Warith in something you hold or oversee. Ask how to use it faithfully and leave it well for those who follow. Gratitude can make stewardship more careful while loosening the illusion that possession grants permanence."
   ]
 ],
-"Remember Allah’s enduring ownership and improve the condition of one resource or responsibility that will pass onward.",
+"Before handing over a responsibility, leave clear notes and what the next person needs. Remember Al-Warith: what was in your care always belonged to Allah. Let that recognition make leaving it well an act of service.",
 "How would I care for this differently if I remembered that only Allah’s ownership is enduring?",
 "وإليه مرجع كل شيء ومصيره",
 "Al-Warith: the return of possessions after owners pass away, with divine ownership always true.",
@@ -486,7 +486,7 @@ r("ar-rashid",
     "Ask Ar-Rashid for sound direction and accept the need for counsel. Check whether the means you are choosing agree with the good you hope to serve. Remaining sincere in purpose can include changing your approach when trustworthy knowledge shows a better way."
   ]
 ],
-"Ask Allah for right direction and seek qualified counsel on one uncertainty in a current plan.",
+"Invite a knowledgeable person to point out a weakness in a plan, and revise what needs correcting. Ask Ar-Rashid for sound direction, remembering that your need for counsel is a created limit His wisdom does not share.",
 "Am I willing to receive guidance as a dependent servant rather than insist that my first plan must be right?",
 "من غير إشارة مشير",
 "Ar-Rashid: right ordering toward fitting ends without external counsel; human soundness depends on guidance.",
@@ -515,7 +515,7 @@ r("as-sabur",
     "Ask Allah for patience with what you cannot hasten and help with what you should not postpone. Keep returning to worship and sincere duty. Learning His Names can deepen this return throughout a life; reaching the final page does not exhaust knowing Him."
   ]
 ],
-"Ask As-Sabur for patience, then distinguish one thing to await from one duty to fulfil now.",
+"While waiting for an answer you cannot hasten, choose a duty you can fulfil now. Ask As-Sabur for patience, letting the wait become time for faithful action rather than pressure on another person.",
 "How does Allah’s freedom from haste and weakness help me understand what patience should mean in my own life?",
 "لا تحمله العجلة على المسارعة إلى الفعل قبل أوانه",
 "As-Sabur: action in its proper time, without haste or laziness; explicit distinction between divine patience and human struggle.",

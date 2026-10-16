@@ -38,7 +38,7 @@ export const fourthReadings = [
       }
     ],
     "reflection": "Does my attention stop at the beauty of a form, or lead me toward its Maker?",
-    "practice": "Look closely at one natural form. Let a detail you notice become a reason to praise Al-Musawwir.",
+    "practice": "Compare two familiar forms, such as a shell and a twig. Notice a detail in each, then praise Al-Musawwir for giving creation its particular forms. Let attention lead to recognition of the Giver of form.",
     "arabicExcerpt": "رتب صور الْأَشْيَاء أحسن تَرْتِيب",
     "sourceNote": "The joint Al-Khaliq, Al-Bari’, and Al-Musawwir discussion: forms, their arrangement, and the relations of parts within creation. The observational practice is original; historical cosmology and anatomy are not reproduced as modern scientific claims.",
     "verse": "59:24",
@@ -86,7 +86,7 @@ export const fourthReadings = [
       }
     ],
     "reflection": "How does Allah’s repeated forgiveness invite a more honest return from me?",
-    "practice": "Seek Al-Ghaffar’s forgiveness for one known wrong and take a concrete step away from it.",
+    "practice": "If a familiar fault returns, seek Al-Ghaffar’s forgiveness again. Prepare a different response for its usual trigger: decide how you will change the subject when gossip begins. Let renewed repentance include a way forward.",
     "arabicExcerpt": "هُوَ الَّذِي أظهر الْجَمِيل وَستر الْقَبِيح",
     "sourceNote": "Al-Ghaffar’s discussion of covering faults, read with the later Al-Ghafur passage distinguishing repeated forgiveness from its fullness. The guidance about repentance, repair, and necessary protection is contemporary companion application.",
     "verse": "20:82",
@@ -134,7 +134,7 @@ export const fourthReadings = [
       }
     ],
     "reflection": "What created power or desire have I been treating as though it were beyond Allah’s authority?",
-    "practice": "Ask Al-Qahhar for help resisting one impulse that repeatedly draws you away from what is right.",
+    "practice": "When an urge pulls you toward a known wrong, step away from its immediate invitation: close the page or leave the argument. Ask Al-Qahhar to help you obey Him rather than the urge.",
     "arabicExcerpt": "لَا مَوْجُود إِلَّا وَهُوَ مسخر تَحت قهره ومقدرته",
     "sourceNote": "Al-Qahhar: the subjection of all creation to Allah’s power, including the strongest earthly rulers. The response follows the source’s inward focus on resisting unruly desires, without presenting domination of others as a virtue.",
     "verse": "13:16",
@@ -182,7 +182,7 @@ export const fourthReadings = [
       }
     ],
     "reflection": "Am I making room to love the Giver beyond my desire for His gifts?",
-    "practice": "Thank Al-Wahhab for an unearned gift, then offer a kindness without asking for recognition.",
+    "practice": "Give a modest gift or do a useful kindness within your means, without reminding the recipient of it afterward. Seek nearness to Al-Wahhab through generosity, remembering that your giving still depends on His gifts.",
     "arabicExcerpt": "الْعَطِيَّة الخالية عَن الأعواض والأغراض",
     "sourceNote": "Al-Wahhab: giving free from repayment or ulterior need, the dependence of human generosity, and seeking Allah Himself as the highest aim. This selective reading does not reproduce the extended argument in full.",
     "verse": "3:8",
@@ -231,7 +231,7 @@ export const fourthReadings = [
       }
     ],
     "reflection": "Do I recognise guidance and knowledge as provision as readily as food or income?",
-    "practice": "Before a meal or a period of learning, remember Ar-Razzaq and thank Him for that form of provision.",
+    "practice": "At your next meal, trace a little of what brought it to you: growing, transport, preparation. Thank Ar-Razzaq, who provides through these means, and treat the food with care rather than wasting it.",
     "arabicExcerpt": "والرزق رزقان ظَاهر وَهِي الأقوات والأطعمة",
     "sourceNote": "Ar-Razzaq: the creation and conveyance of provision, including nourishment for bodies and knowledge for hearts. The practical response develops gratitude and reliance; no worldly outcome is promised by the suggested practice.",
     "verse": "51:58",

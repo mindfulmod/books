@@ -39,7 +39,7 @@ export const nextReadings = [
       }
     ],
     "reflection": "Do I allow what I know of Allah to deepen reverence for what I cannot encompass?",
-    "practice": "Learn one meaning of a Name carefully, then praise Allah for the perfection it teaches.",
+    "practice": "When you turn to someone you greatly rely on, also turn to Al-Aziz in prayer. Remember that this person’s ability to help is received from the incomparable Lord whom you both need.",
     "arabicExcerpt": "أَن يحْتَاج إِلَيْهِ كل شَيْء فِي كل شَيْء",
     "sourceNote": "Al-‘Aziz: the threefold account of incomparability, universal need for Allah, and the impossibility of fully encompassing His reality. The personal response follows its invitation toward knowledge and reverence.",
     "verse": "59:23",
@@ -86,7 +86,7 @@ export const nextReadings = [
       }
     ],
     "reflection": "Where does remembering Allah’s authority help me surrender a claim to control?",
-    "practice": "Ask Al-Jabbar for guidance in a situation you cannot control, then take one responsible step.",
+    "practice": "Notice whether a request to Allah has become a bargain: a good deed in exchange for the outcome you demand. Ask Al-Jabbar sincerely, and offer the deed as worship rather than leverage.",
     "arabicExcerpt": "وَلَا تنفذ فِيهِ مَشِيئَة أحد",
     "sourceNote": "Al-Jabbar: the will that prevails over creation and is compelled by none. This reading follows that interpretation in Al-Maqsad al-Asna, rather than the separate interpretation of mending or healing. The counsel against coercive human conduct is an editorial application.",
     "verse": "59:23",
@@ -182,7 +182,7 @@ export const nextReadings = [
       }
     ],
     "reflection": "What does the ordered detail of creation help me recognise about its Creator?",
-    "practice": "Observe one natural detail and thank Al-Khaliq for the knowledge and power its existence invites you to contemplate.",
+    "practice": "Examine how a leaf’s veins reach its edges, or how a seed’s covering holds what is within. Praise Al-Khaliq for the knowledge and measure you can begin to recognise, without claiming to understand it all.",
     "arabicExcerpt": "خَالق من حَيْثُ أَنه مُقَدّر",
     "sourceNote": "The joint Al-Khaliq, Al-Bari’, and Al-Musawwir discussion: determination, bringing into existence, and giving form. These distinctions concern one Creator. Historical natural-philosophy examples are not presented as modern scientific claims.",
     "verse": "59:24",
@@ -230,7 +230,7 @@ export const nextReadings = [
       }
     ],
     "reflection": "What changes when I recognise existence itself as a gift from Allah?",
-    "practice": "Thank Al-Bari’ for your existence, then use one received ability in a way that pleases Him.",
+    "practice": "Hold an ordinary object and consider the difference between imagining it and its actually existing. Thank Al-Bari for the existence of its materials and your own hands before considering what either can accomplish.",
     "arabicExcerpt": "وبارئ من حَيْثُ أَنه مخترع موجد",
     "sourceNote": "The joint Al-Khaliq, Al-Bari’, and Al-Musawwir discussion, particularly the distinction between determining a thing and bringing it from non-existence into existence. Human making remains dependent on created materials and powers.",
     "verse": "59:24",

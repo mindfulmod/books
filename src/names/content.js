@@ -100,7 +100,7 @@ const earlierNames = [
       }
     ],
     "reflection": "What does the mercy I have already received teach me about Allah?",
-    "practice": "Thank Allah for one mercy that came before you asked. Offer a patient response to someone who needs it.",
+    "practice": "Include in your prayer someone whose good you have found difficult to wish for. Ask Ar-Rahman to guide and care for them, remembering the mercy you received before you could ask.",
     "arabicExcerpt": "والرحمة العامة هي التي تتناول المستحق وغير المستحق",
     "sourceNote": "The joint discussion of Ar-Rahman and Ar-Rahim: complete and encompassing mercy, the Name Ar-Rahman’s particularity to Allah, and His gifts of existence, guidance, and the life to come.",
     "verse": "7:156",
@@ -141,7 +141,7 @@ const earlierNames = [
       }
     ],
     "reflection": "How does knowing the perfection of Allah’s mercy change the way I turn to Him?",
-    "practice": "Ask Allah for mercy in a specific need, then offer a practical kindness with Him in mind.",
+    "practice": "Before helping someone, ask what would actually ease their difficulty. Offer what you can manage with their dignity in mind, seeking Allah’s pleasure as someone who also depends on Ar-Rahim’s mercy.",
     "arabicExcerpt": "كمال الرحمة أن يكون نظره إلى المرحوم لأجل المرحوم",
     "sourceNote": "The joint discussion of Ar-Rahman and Ar-Rahim: mercy as willing and conferring good, free from weakness and self-concern. The concise English labels do not exhaust the distinction between these closely related Names.",
     "verse": "1:3",
@@ -186,7 +186,7 @@ const earlierNames = [
       }
     ],
     "reflection": "What changes in this responsibility when I remember that I belong to Allah?",
-    "practice": "Name one responsibility entrusted to you. Ask Al-Malik for help carrying it faithfully.",
+    "practice": "Where you have authority to decide, ask who will be affected before making the choice. Seek Al-Malik’s guidance, remembering that your authority is entrusted and that those affected belong to Him too.",
     "arabicExcerpt": "هو الذي يستغني في ذاته وصفاته عن كل موجود",
     "sourceNote": "Al-Malik: Allah’s independence in being and attributes, and creation’s dependence on Him for existence and continuance. The personal response develops the source’s counsel on governing one’s own conduct.",
     "verse": "59:23",
@@ -231,7 +231,7 @@ const earlierNames = [
       }
     ],
     "reflection": "Where have I been measuring Allah’s perfection by the limits of my own experience?",
-    "practice": "Pause over a familiar Name in prayer. Remember that Allah’s perfection exceeds your experience of its meaning.",
+    "practice": "Take a familiar praise of Allah and consider what it affirms. If a human limitation enters your picture of Him, return to the meaning of Al-Quddus: His perfection is free from that limit.",
     "arabicExcerpt": "منزه عن أوصاف كمالهم كما أنه منزه عن أوصاف نقصهم",
     "sourceNote": "Al-Quddus: transcendence beyond sense, imagination, and the limits even of creaturely perfections. This is a selective account of the source’s wider philosophical discussion, with an original invitation to reverent worship.",
     "verse": "59:23",
@@ -277,7 +277,7 @@ const earlierNames = [
       }
     ],
     "reflection": "How is Allah’s perfect soundness different from the temporary calm I usually call peace?",
-    "practice": "Ask Allah for a sound heart before one difficult conversation, then speak with truth and care.",
+    "practice": "Before replying in a difficult conversation, ask As-Salam for a sound heart. Remove the words meant only to wound, while keeping what needs to be said truthfully.",
     "arabicExcerpt": "هو الذي تسلم ذاته عن العيب وصفاته عن النقص",
     "sourceNote": "As-Salam: freedom from defect in being and attributes, and from evil intended solely for itself. The source’s extended treatment of providence is not reproduced in full. No particular purpose is assigned to an individual’s suffering.",
     "verse": "59:23",
@@ -324,7 +324,7 @@ const earlierNames = [
       }
     ],
     "reflection": "Which means of safety have I been receiving without remembering their Giver?",
-    "practice": "Thank Al-Mu’min for one means of protection and use it responsibly today.",
+    "practice": "Protect a confidence from casual retelling, especially when it would make an interesting story. Ask Al-Mu’min for security with Him, and let gratitude for His care make your company safer for others.",
     "arabicExcerpt": "فلا أمن في العالم إلا وهو مستفاد بأسباب هو متفرد بخلقها",
     "sourceNote": "Al-Mu’min: security, its created means, and guidance toward safety in the life to come. The reading does not promise immunity from worldly hardship; its prayer and practical response are original applications.",
     "verse": "59:23",
@@ -370,7 +370,7 @@ const earlierNames = [
       }
     ],
     "reflection": "What does it mean that Allah’s knowledge of me is joined with complete power and preservation?",
-    "practice": "Entrust one concern to Al-Muhaymin, then attend carefully to one responsibility within your reach.",
+    "practice": "Bring an unresolved concern to Al-Muhaymin in prayer. Remember together that He knows it completely, has power over it, and guards His creation. Ask for guidance in the part entrusted to your care.",
     "arabicExcerpt": "أَنَّهُ الْقَائِم على خلقه بأعمالهم وأرزاقهم وآجالهم",
     "sourceNote": "Al-Muhaymin: guardianship through complete knowledge, power, and preservation. The source joins these three meanings before turning to care of the heart; the reflection and practical examples are original companion writing.",
     "verse": "59:23",
@@ -411,7 +411,7 @@ const earlierNames = [
       }
     ],
     "reflection": "What does the subtlety of Allah’s care teach me beyond the gift I first noticed?",
-    "practice": "Follow one received kindness back through its quiet means, and thank Allah for what you can and cannot see.",
+    "practice": "Before offering help, choose a moment and manner that will not embarrass its recipient. Ask Al-Latif for attentiveness to the quiet details, then make the offer privately and leave room for a refusal.",
     "arabicExcerpt": "فإذا اجتمع الرفق في الفعل واللطف في الإدراك تم معنى اللطف",
     "sourceNote": "Al-Latif: knowledge of the finest needs joined with gentleness in bringing good to creatures. The source’s examples of nourishment and provision inform the reading; the observation and reflection prompts are original.",
     "verse": "42:19",
@@ -452,7 +452,7 @@ const earlierNames = [
       }
     ],
     "reflection": "Am I allowing the fullness of Allah’s forgiveness to give me courage for an honest return?",
-    "practice": "Ask Al-Ghafur for complete forgiveness and begin one repair that is yours to make.",
+    "practice": "In private prayer, acknowledge a wrong without reducing it to the easiest part to admit. Ask Al-Ghafur for complete forgiveness, remembering that He already knows the whole truth you are bringing before Him.",
     "arabicExcerpt": "فهو غفور بمعنى أنه تام المغفرة والغفران كاملها",
     "sourceNote": "Al-Ghafur: the fullness of forgiveness and its explicit distinction from the repetition expressed by Al-Ghaffar. Al-‘Afuw’s account of erasure supplies the related comparison. Repentance and restitution are contemporary applications, not translated instructions.",
     "verse": "39:53",
@@ -493,7 +493,7 @@ const earlierNames = [
       }
     ],
     "reflection": "What do Allah’s gifts teach me about loving generosity beyond the relief of need?",
-    "practice": "Remember a blessing that went beyond bare necessity, and let gratitude become a moment of love for Allah.",
+    "practice": "Receive a small delight—a blossom, a welcome, a familiar voice—and address your thanks to Al-Wadud in your own words. Stay with the Giver for a moment instead of moving straight to another pleasure.",
     "arabicExcerpt": "بل الإنعام على سبيل الابتداء من نتائج الود",
     "sourceNote": "Al-Wadud: willing good, honour, and blessings without bodily inclination or emotional dependence, and its distinction from mercy directed toward need. The personal response and suggested prayer are original companion writing.",
     "verse": "85:14",

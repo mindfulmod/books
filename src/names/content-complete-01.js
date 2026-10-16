@@ -22,7 +22,7 @@ r("allah",
     "Let learning the Names gather your heart toward Allah Himself. Ask for His gifts, and seek to know and worship the Giver. Bring the attention you have into prayer, even when it is scattered, and begin again when you notice it wandering."
   ]
 ],
-"Before prayer, remember one meaning you have learned about Allah. Let it shape what you ask of Him.",
+"Begin a prayer in your own words by acknowledging whom you are addressing. Bring your requests before Allah Himself, remembering that the One who hears you is also the One who knows, provides, and forgives.",
 "Am I seeking to know Allah Himself, as well as asking for what He gives?",
 "الذات الجامعة لصفات الإلهية كلها",
 "The opening discussion of Allah, including the Name’s comprehensiveness and the counsel on directing the heart toward Him.",
@@ -51,7 +51,7 @@ r("al-fattah",
     "Bring a difficulty to Allah and ask for guidance, without prescribing the answer. Seek trustworthy teaching and remain willing to learn. When understanding is given, use it to make a difficulty clearer for someone else, with gratitude to the One who opened it for you."
   ]
 ],
-"Ask Al-Fattah for understanding in one difficulty, then take a sincere step toward learning.",
+"Choose a sentence about Allah that you do not understand. Form a clear question and bring it to a trustworthy teacher or source. Ask Al-Fattah to open understanding, rather than hurrying past the difficulty.",
 "What might an opening toward knowing Allah mean here, beyond receiving the outcome I want?",
 "وبهدايته ينكشف كل مشكل",
 "Al-Fattah: openings through divine care and guidance; counsel on making difficult matters easier through knowledge.",
@@ -80,7 +80,7 @@ r("al-alim",
     "You can bring Allah what you cannot fully explain, because He already knows it. Let this deepen sincerity in prayer and humility in learning. Distinguish what you know from what you assume, and seek knowledge that brings you nearer to Him."
   ]
 ],
-"Bring one unspoken concern to Al-‘Alim, remembering that He knows its whole reality.",
+"When uncertain about a matter, separate what you know from what you are assuming. Bring the uncertainty to Al-‘Alim in prayer, acknowledging that His knowledge is already complete where yours ends.",
 "How does Allah’s complete knowledge change what I feel I must conceal or explain?",
 "أن يحيط بكل شيء علما",
 "Al-‘Alim: comprehensive divine knowledge and the limits, dependence, and purpose of human knowing.",
@@ -109,7 +109,7 @@ r("al-qabid",
     "When life feels narrow, ask Allah for help and use the support available to you. Let remembrance of His majesty be accompanied by hope in His mercy. You can acknowledge a real hardship while continuing to seek relief from the Lord of both withholding and expansion."
   ]
 ],
-"Read Al-Qabid with Al-Basit, then bring one present limitation to Allah in prayer.",
+"Name a present limitation plainly in prayer, without calling it proof of Allah’s rejection. Ask Al-Qabid for relief and guidance, remembering with Al-Basit that both narrowness and expansion belong to the same Lord.",
 "Can I turn toward the same Lord in constriction as I do when life feels open?",
 "ويقبض القلوب فيضيقها",
 "The joint Al-Qabid / Al-Basit discussion: withholding and expansion, awe and hope. The practical response to hardship is editorial application.",
@@ -138,7 +138,7 @@ r("al-basit",
     "When an opening comes, recognise Al-Basit before treating the gift as your own achievement. Ask for help using it well. Extra time, understanding, or resources can become a means of worship and care, without making worldly ease a measure of spiritual rank."
   ]
 ],
-"Thank Al-Basit for one opening and dedicate some of what it gives you to a sincere good.",
+"When time unexpectedly opens in your day, give some of it to an unhurried prayer or reading that turns you toward Allah. Thank Al-Basit for the room itself before filling it with more demands.",
 "What does this opening reveal to me about my dependence on Allah’s giving?",
 "ويبسطها بما يتقرب إليها من بره ولطفه وجماله",
 "The joint Al-Qabid / Al-Basit discussion, especially widening hearts through remembrance of Allah’s gifts.",
@@ -167,7 +167,7 @@ r("al-khafid",
     "Ask Allah to keep you from what distances you from Him. Begin by withdrawing your own support from falsehood or injustice. Acknowledging a wrong and correcting it can matter more than preserving the appearance of being right."
   ]
 ],
-"Ask Allah for protection from distance from Him, then correct one false or unfair contribution of your own.",
+"Correct an unfair claim you have repeated, even if admitting the error costs you approval. Ask Allah to protect you from distance from Him; remember Al-Khafid when appearing right feels more important than being truthful.",
 "Am I more concerned with my standing before Allah or with protecting my public standing?",
 "يرفع أولياءه بالتقريب ويخفض أعداءه بالإبعاد",
 "The joint Al-Khafid / Ar-Rafi‘ discussion: spiritual rank and the counsel to uphold truth and lower falsehood.",
@@ -196,7 +196,7 @@ r("ar-rafi",
     "Ask Allah for what brings you nearer to Him. Give a neglected duty its due, renew the intention behind your work, or uphold a truth that offers you no applause. Let the worth of the act rest in faithful service rather than visibility."
   ]
 ],
-"Ask Ar-Rafi‘ for nearness, then give one ordinary responsibility a more sincere intention.",
+"Carry out a small service that does not need an audience, such as clearing a shared space. Ask Ar-Rafi‘ for nearness to Him, and let the act remain free of a claim to spiritual rank.",
 "What kind of elevation am I seeking when I ask Allah to raise me?",
 "يرفع أولياءه بالتقريب",
 "The joint Al-Khafid / Ar-Rafi‘ discussion: elevation through nearness and supporting what is right.",
@@ -225,7 +225,7 @@ r("al-muizz",
     "Ask Allah for knowledge of Him and contentment with wholesome provision. Let that prayer guide a choice in which approval is pulling you away from integrity. You can respect other people without making their admiration the source of your dignity."
   ]
 ],
-"Ask Al-Mu‘izz for honour through knowing Him, then choose integrity over one opportunity to impress.",
+"Decline a request that would require a known wrong, even if pleasing the person could raise your standing. Ask Al-Mu‘izz for the honour of knowing Him and contentment that does not depend on admiration.",
 "Where am I seeking from people an honour whose true source is Allah?",
 "ورزقه القناعة",
 "The joint Al-Mu‘izz / Al-Mudhill discussion: honour through knowledge, contentment, and mastery of desire.",
@@ -254,7 +254,7 @@ r("al-mudhill",
     "Bring a consuming desire honestly before Allah. Ask Him to free your heart from what diminishes your worship and integrity. Seek real support for real needs, while learning to recognise a demand that keeps moving the promise of enough beyond reach."
   ]
 ],
-"Ask Allah for contentment and pause one choice driven mainly by comparison or the need for praise.",
+"Pause a nonessential purchase prompted by comparison. Ask Allah for contentment, and name what the purchase is supposed to prove. Remember Al-Mudhill as you seek freedom from a desire that keeps moving the meaning of enough.",
 "Which dependence is weakening my willingness to serve Allah sincerely?",
 "حتى لم يقنع بالكفاية",
 "The joint Al-Mu‘izz / Al-Mudhill discussion: craving, self-deception, and the loss of contentment. The distinction between hardship and spiritual standing is editorial clarification.",
@@ -283,7 +283,7 @@ r("as-sami",
     "Call upon Allah without needing an audience. Let knowing that He hears also bring care to your speech: leave a cruel remark unsaid and make time to hear guidance attentively. Your words matter even when no other person is present."
   ]
 ],
-"Offer a quiet prayer to As-Sami‘, then bring that awareness into your next conversation.",
+"Bring to As-Sami‘ a prayer you have hesitated to voice. Speak quietly and plainly, without polishing it for an audience. Remember that no louder voice competes with yours for Allah’s hearing.",
 "What changes when I remember that the One I call upon hears without any limitation?",
 "فيسمع السر والنجوى",
 "As-Sami‘: divine hearing beyond bodily organs; counsel on guarding speech and receiving guidance.",
@@ -312,7 +312,7 @@ r("al-basir",
     "Remember Al-Basir in a private responsibility. Give it the care you would offer in public, and take comfort that sincere good does not become unseen when people overlook it. Ask Allah to help your outward conduct and inward intention agree."
   ]
 ],
-"Complete an unnoticed duty for Allah, remembering that Al-Basir sees it fully.",
+"Attend to an easily hidden part of a task—the unfinished edge or the check nobody requested. Offer that care for Allah’s sake, remembering that Al-Basir sees it without needing anyone to point it out.",
 "How does knowing that Allah sees me change the intention behind a private action?",
 "لا يعزب عنه ما تحت الثرى",
 "Al-Basir: sight free from bodily limitation; reflection on signs and awareness of being seen.",
@@ -341,7 +341,7 @@ r("al-hakam",
     "Ask Al-Hakam for guidance, attend to the means before you, and leave final judgment with Him. Where a wrong needs repair, act. Where an outcome cannot be guaranteed, acknowledge your limit without treating that limit as a reason to abandon your duty."
   ]
 ],
-"Take one responsible means toward a good aim, then entrust the outcome to Al-Hakam.",
+"In a disagreement, decide what action is yours to take without declaring what is in the other person’s heart. Ask Al-Hakam to guide your judgment and leave the final verdict with Him.",
 "Am I allowing trust in Allah’s judgment to guide my effort as well as my acceptance?",
 "لا راد لحكمه ولا معقب لقضائه",
 "Al-Hakam: divine judgment, causes, and the explicit discussion of why trust in decree still calls for action. Historical cosmological examples are not reproduced.",
@@ -370,7 +370,7 @@ r("al-adl",
     "Worship Allah as the Just, and ask for fairness in your own limited judgments. Consider who is affected by a decision and what you owe them. Let your standards remain truthful when convenience, anger, or affection would make you bend them."
   ]
 ],
-"Ask Al-‘Adl for fairness and review one decision for a right you may have overlooked.",
+"Review a decision involving someone you like or dislike. Ask whether you would use the same standard for another person. Seek Al-‘Adl’s help to correct the bias, while acknowledging the limits of your judgment.",
 "Where do I need to distinguish trust in Allah’s justice from excuses for my own unfairness?",
 "ورتبها في مواضعها اللائقة بها وهو بذلك عدل",
 "Al-‘Adl: justice as proper placement, self-governance, and the distinction between merely giving and giving appropriately.",
@@ -399,7 +399,7 @@ r("al-khabir",
     "Ask Al-Khabir to help you recognise and correct a mixed intention. You need not make your heart appear cleaner before turning to Him. Use what you notice to act more sincerely, without turning inward attention into endless suspicion of yourself or others."
   ]
 ],
-"Before a good action, bring its intention honestly before Al-Khabir and ask for sincerity.",
+"Before a good action, name a motive you would rather hide, such as wanting praise. Bring it honestly to Al-Khabir, ask for sincerity, and proceed with the good without endlessly checking how pure you feel.",
 "What am I defending before myself that is already fully known to Allah?",
 "العلم إذا أضيف إلى الخفايا الباطنة سمي خبرة",
 "Al-Khabir: knowledge of inward realities and the counsel to know one’s own heart and its deceptions.",
@@ -428,7 +428,7 @@ r("al-halim",
     "Recognise the time Allah has given you as an opportunity for repentance. Address a wrong you have been postponing. Let remembrance of His forbearance also make your correction of others more measured, while keeping the boundaries and accountability that genuine care requires."
   ]
 ],
-"Thank Al-Halim for time to return, then take one step of repentance you have delayed.",
+"If an apology is overdue, begin it while the opportunity remains. Ask Al-Halim for forgiveness, remembering that having time to repair a wrong is His forbearance, not evidence that the wrong did not matter.",
 "Have I mistaken Allah’s forbearance toward me for a reason to postpone returning?",
 "لا يستفزه غضب",
 "Al-Halim: freedom from angry haste despite complete power. Boundaries and measured correction are contemporary applications.",
@@ -457,7 +457,7 @@ r("al-azim",
     "Praise Allah for His magnificence and bring your concerns before Him. You can care for a real difficulty while recognising that it is not the whole of reality. Let your learning make you more humble, attentive, and willing to worship."
   ]
 ],
-"Pause when you praise Allah’s greatness in prayer. Remember that no image can measure what you affirm.",
+"Look at a wide sky and allow its vastness to lead you into praise of Al-‘Azim. Then set aside the measure: no size or distance can contain the greatness of the One you worship.",
 "Does what I learn about Allah deepen my reverence or only my confidence in my own understanding?",
 "جاوز جميع حدود العقول",
 "Al-‘Azim: greatness beyond bodily extension and beyond the mind’s complete comprehension.",
@@ -486,7 +486,7 @@ r("ash-shakur",
     "Do not dismiss a modest act of worship or care because it seems too small. Offer it to Allah with sincerity and ask for acceptance. Thank Him for the ability to do it, and let that gratitude guide how you use the next gift."
   ]
 ],
-"Offer one small good sincerely to Allah, thanking Him for both the opportunity and the ability.",
+"Read a short Qur’anic passage with care instead of waiting until you can read much. Ask Ash-Shakur to accept the small offering, and thank Him for the ability and opportunity to make it.",
 "What does Allah’s rewarding of gifts He first enabled teach me about His generosity?",
 "يجازي بيسير الطاعات كثير الدرجات",
 "Ash-Shakur: multiplied reward, thanking people, and using blessings in obedience rather than wrongdoing.",
@@ -544,7 +544,7 @@ r("al-kabir",
     "Remember Al-Kabir when something created seems to occupy all your attention. Give it the care it deserves without giving it the place of your Lord. Seek knowledge of Him, and let what you learn make your service more sincere and useful."
   ]
 ],
-"Trace one ordinary support in your life back to its dependence on Allah, then offer thanks.",
+"When work or public status fills your attention, stop to praise Al-Kabir. Name the matter before Him as something created and dependent, then return to giving it appropriate care without treating it as your lord.",
 "What am I treating as self-sustaining that actually receives its existence from Allah?",
 "والكبرياء عبارة عن كمال الذات",
 "Al-Kabir: perfection and enduring existence; counsel on knowledge and character whose benefit reaches others.",
@@ -573,7 +573,7 @@ r("al-hafiz",
     "Entrust what you value to Al-Hafiz and use the means of preservation responsibly. Maintain what needs care, protect a confidence, or seek help for a real danger. Prayer and practical attention can belong to the same act of reliance."
   ]
 ],
-"Ask Al-Hafiz to preserve a good entrusted to you, then tend one means of its care.",
+"Mend or maintain something useful instead of assuming it will last without care. Ask Al-Hafiz to preserve the good entrusted to you, remembering that both its continuance and your ability to tend it are received.",
 "Where have I noticed a gift’s arrival but overlooked Allah’s continuing preservation of it?",
 "إدامة وجود الموجودات وإبقاؤها",
 "Al-Hafiz: preservation and the counsel to guard the heart, conduct, and religion. Historical physical explanations are not adopted as modern science.",
@@ -602,7 +602,7 @@ r("al-muqit",
     "Ask Al-Muqit for what truly sustains your body and heart. Make room for sound learning as well as daily food. When you help nourish another person, offer what they can actually use, with gratitude to the One who sustains you both."
   ]
 ],
-"Thank Al-Muqit for a meal and make a little room for knowledge that deepens your recognition of Him.",
+"Make room to understand a short passage of sound teaching about Allah. Ask Al-Muqit to nourish your heart through it, and carry a meaning you understood into your next prayer.",
 "Am I attending to the heart’s need for Allah as well as the body’s need for food?",
 "خالق الأقوات وموصلها إلى الأبدان",
 "Al-Muqit: bodily and inward nourishment, with the alternative explanation of knowledge joined to power.",

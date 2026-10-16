@@ -1,4 +1,4 @@
-# The Beautiful Names · edition 1.2
+# The Beautiful Names · edition 1.3
 
 Public route: https://mindfulmod.github.io/books/beautiful-names/
 
@@ -70,3 +70,11 @@ Reviewed all 99 readings for repeated examples and reflection patterns, revising
 The [complete editorial record](beautiful-names-editorial-review.md) identifies the focus considered for each Name and the distinctions between neighbouring meanings. No navigation, saved-writing format, source excerpts, or artwork changes accompany this pass.
 
 Validation for this pass: production build, 52 Beautiful Names tests, and all shared library checks passed. Representative revised questions were reviewed in daylight at 390 × 844 and at night at 320 × 740, without horizontal overflow.
+
+## Practical-response review · edition 1.3
+
+Reviewed all 99 “A way to respond” passages with their readings, revising 93 and retaining six. Each now offers a focused response through worship, praise, learning, or ordinary conduct, with a clear connection to Allah through the particular Name. More specific occasions and actions replace repeated generic instructions to do a good deed or attend to a neglected duty. Every response is at most 39 words.
+
+The [complete response review](beautiful-names-response-review.md) records the intended practical direction of every Name and the distinctions considered across neighbouring meanings. Changes live in the existing practice fields; divine explanations, source excerpts, observations, reflection questions, and saved-writing formats remain intact. The About panel identifies edition 1.3.
+
+Validation for this pass: production build, all 52 Beautiful Names tests, and shared library checks passed. Mobile previews covered night at 390 × 844 and daylight at 320 × 740, including the full longest response without horizontal overflow or text clipping.

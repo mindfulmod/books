@@ -22,7 +22,7 @@ r("al-hasib",
     "Bring your need to Al-Hasib and accept appropriate support with gratitude. You do not prove trust by refusing every means. When you care for someone else, remember that both of you depend on Allah; offer dependable help with honest limits."
   ]
 ],
-"Ask Al-Hasib for sufficiency in a real need, and receive or seek a sound means of support.",
+"Ask for specific help with a need you cannot meet alone, such as advice or assistance with a task. Thank Al-Hasib as you receive it; accepting a sound means of support can belong to reliance on Him.",
 "Do I recognise Allah’s sufficiency within the ordinary means through which He supports me?",
 "فإنه هو الذي كفاك بخلق الطعام والشراب",
 "Al-Hasib: Allah’s sufficiency through created means, illustrated by nourishment and a mother’s care.",
@@ -51,7 +51,7 @@ r("al-jalil",
     "Pause over one attribute of Allah instead of hurrying through its Name. Allow understanding to deepen love and reverence. In your conduct, seek an inward beauty of sincerity and truthfulness that matters to Him even when no one else notices."
   ]
 ],
-"Choose one attribute of Allah and praise Him slowly for its perfection.",
+"Put aside a distraction when you turn to worship. Recall whom you are worshipping: Al-Jalil, perfect in knowledge, power, and holiness. Let reverence shape the attention you bring, even when no setting feels grand.",
 "What becomes beautiful to my heart as I come to know Allah’s attributes more clearly?",
 "فالجليل المطلق هو الله عز وجل فقط",
 "Al-Jalil: perfection of attributes and the distinction between outward beauty and beauty recognised in character.",
@@ -80,7 +80,7 @@ r("al-karim",
     "Ask Allah with hope in His generosity, and thank Him for what you have received. Let that remembrance free one gift of your own from reminders of debt. Keep a promise faithfully, or offer help in a way that preserves the recipient’s dignity."
   ]
 ],
-"Bring a need directly to Al-Karim, then thank Him for a gift you did not know to expect.",
+"Bring Al-Karim a good you have hesitated to ask for. Use your own plain words, remembering that you need no introduction to Him and that His generosity exceeds what you know how to request.",
 "Do I approach Allah as the Generous, or imagine that my need must first impress Him?",
 "وإذا وعد وفى",
 "Al-Karim: the cluster of generosity, pardon, fulfilment of promises, and abundant giving.",
@@ -109,7 +109,7 @@ r("ar-raqib",
     "Remember Ar-Raqib before a private choice. Ask for sincerity and choose what you could honestly bring before Him. When your attention wanders, return gently. This awareness concerns your own responsibility before Allah, not a duty to inspect other people’s private lives."
   ]
 ],
-"Pause before one private action and remember that Allah is already fully aware of it.",
+"When you finish a task, pause before reaching for the next. Remember Ar-Raqib, whose watchfulness continued while your attention wandered, and turn back to Allah with the attention you have now.",
 "How might remembrance of Ar-Raqib make one hidden intention more sincere?",
 "الرقيب هو العليم الحفيظ",
 "Ar-Raqib: constant knowledge and preservation; counsel on awareness of Allah and attention to one’s own heart.",
@@ -138,7 +138,7 @@ r("al-mujib",
     "Bring your need plainly to Al-Mujib and remain willing to receive guidance about it. Let asking also awaken a response to what Allah asks of you: return to a known duty, leave a wrong, or answer another person’s request with honest care."
   ]
 ],
-"Make one sincere request of Allah, then attend to a duty you already know is yours.",
+"After asking Al-Mujib for help, answer a reasonable request you have left pending. Offer what you can, or explain your limits kindly. Let your own asking make you attentive to a need placed before you.",
 "Am I willing to seek Allah’s guidance as well as ask for the answer I have imagined?",
 "ينعم قبل النداء ويتفضل قبل الدعاء",
 "Al-Mujib: care before supplication; responding to Allah and answering people kindly within one’s capacity.",
@@ -167,7 +167,7 @@ r("al-wasi",
     "Turn to Al-Wasi‘ without imagining that another person’s blessing leaves less goodness available from Him. Ask for what is good and give thanks for what is given. Let confidence in His generosity make room for goodwill toward another person’s happiness."
   ]
 ],
-"Praise Allah for a blessing given to someone else, and ask Al-Wasi‘ for what is good for you.",
+"When someone shares good news, pray for Allah to bless what they have received. Let your congratulations be sincere, remembering that Al-Wasi‘ is not made less generous toward you by giving to them.",
 "Where have I imagined Allah’s generosity as though it were a limited share to compete over?",
 "وإن نظر إلى إحسانه ونعمه فلا نهاية لمقدوراته",
 "Al-Wasi‘: limitless divine knowledge and beneficence; human breadth in learning and character.",
@@ -196,7 +196,7 @@ r("al-hakim",
     "Ask Al-Hakim for understanding that leads you toward Him. Consider what your choices cultivate beyond the immediate moment, including their bearing on the life to come. Seek counsel where your knowledge ends, and put one sound lesson into practice."
   ]
 ],
-"Ask Allah for wisdom in a decision, then consider its purpose and its longer consequences.",
+"When someone shares a painful experience, listen without claiming to know why Allah allowed it. Ask Al-Hakim for wisdom in what to say, and offer the care you can understand without inventing an explanation.",
 "Is what I am learning helping me know Allah and choose a worthy direction?",
 "معرفة أفضل الأشياء بأفضل العلوم",
 "Al-Hakim: knowledge of what is highest, excellence in action, and concern for ultimate rather than merely immediate benefit.",
@@ -225,7 +225,7 @@ r("al-majid",
     "Let a gift lead you to praise Allah’s glory as well as thank Him for its benefit. Use what you have received with sincerity and generosity. A position or ability becomes more faithfully held when it serves a good beyond protecting your own importance."
   ]
 ],
-"Praise Al-Majid for His perfection, then use one gift generously without seeking recognition.",
+"When thanking Allah for a gift, let your praise reach beyond its benefit to you. Praise Al-Majid for His perfect being, beautiful acts, and abundant generosity, allowing what you received to lead toward knowing Him.",
 "Do the gifts I receive lead me to recognise the glory of their Giver?",
 "الجميل أفعاله الجزيل عطاؤه ونوله",
 "Al-Majid: nobility of being, beautiful actions, abundant giving; explicit relationship to Al-Maajid.",
@@ -254,7 +254,7 @@ r("al-baith",
     "Remember the resurrection in one ordinary choice. Seek forgiveness for a wrong, fulfil a neglected right, or learn what helps you worship more faithfully. Hope in meeting Allah can give a passing day a direction beyond what it immediately produces."
   ]
 ],
-"Remember your return to Allah and give attention to one duty you have been postponing.",
+"Before a choice you are tempted to make because nobody will discover it, remember that Al-Ba‘ith will raise you to answer before Allah. Choose with that meeting in mind, beyond the question of being caught.",
 "What changes in today’s choices when I remember that Allah will raise me to meet Him?",
 "يحيي الخلق يوم النشور",
 "Al-Ba‘ith: resurrection, its difference from the first creation, and the practical comparison of knowledge with life.",
@@ -283,7 +283,7 @@ r("ash-shahid",
     "Let knowing that Allah witnesses you make your account of an event more careful. Separate what you saw from what you inferred. When a wrong or a quiet good has gone unrecognised, bring it to Him without pretending that human recognition is the final measure."
   ]
 ],
-"Before recounting an event, remember Ash-Shahid and distinguish what you know from what you assume.",
+"Before recounting an event, remove details you are only guessing. Say clearly what you witnessed and what you did not. Remember Ash-Shahid, whose knowledge needs no embellishment from your account.",
 "How does Allah’s perfect witness change my need to control the story others hear?",
 "وإذا أضيف إلى الأمور الظاهرة فهو الشهيد",
 "Ash-Shahid: the source’s distinction among Al-‘Alim, Al-Khabir, and Ash-Shahid, and witness on the Day of Resurrection.",
@@ -312,7 +312,7 @@ r("al-haqq",
     "Worship Allah as the One whose reality does not pass away. Let that recognition make truthfulness more important than an appearance you are preserving. Correct an inaccurate impression, keep a promise, or acknowledge a need you have been disguising."
   ]
 ],
-"Praise Al-Haqq, then bring one outward claim into closer agreement with what is true.",
+"Correct an exaggeration in how you describe yourself or your work. Offer that honesty for Allah’s sake, remembering Al-Haqq: appearing impressive cannot make something true, and your worth need not rest on a false appearance.",
 "What temporary appearance am I treating as more important than truth before Allah?",
 "الموجود الحقيقي بذاته",
 "Al-Haqq: necessary and dependent existence, true knowledge and speech; the source rejects literal identification of the servant with Allah.",
@@ -341,7 +341,7 @@ r("al-wakil",
     "Ask Al-Wakil for help and guidance. Take the sound action available to you, and leave what lies beyond your power with Him. When someone entrusts a matter to you, handle it faithfully while remaining honest about the limits of your own ability."
   ]
 ],
-"Name a concern, take one appropriate step, and consciously entrust what you cannot command to Al-Wakil.",
+"Separate a current concern into what you can act on and what you cannot command. Take an appropriate step, then entrust the result to Al-Wakil, without making a particular outcome the condition of your trust.",
 "Is my trust resting in Allah’s perfection or in a guarantee of the outcome I prefer?",
 "الذي الأمور موكولة إليه",
 "Al-Wakil: complete capacity and faithfulness in what is entrusted, contrasted with limited human trusteeship.",
@@ -370,7 +370,7 @@ r("al-qawiyy",
     "Ask Al-Qawiyy for help with a duty that feels beyond you, and seek the means needed to fulfil it. When you feel capable, remember the source of that ability. Use strength for faithful service rather than making another person feel small."
   ]
 ],
-"Ask Al-Qawiyy for help, then use one ability He has given you for a clear good.",
+"Carry what someone cannot comfortably carry, or lend a skill they lack. Ask Al-Qawiyy to help you use strength in His service, remembering that the ability is His gift, not evidence of your superiority.",
 "Do I remember my dependence on Allah as readily when I feel strong as when I feel weak?",
 "القوة تدل على القدرة التامة",
 "The joint Al-Qawiyy / Al-Matin discussion: complete power and firmness of strength. Human applications remain limited and dependent.",
@@ -399,7 +399,7 @@ r("al-matin",
     "Turn to Al-Matin when your own capacity runs low. Recognising His strength can help you admit your limits without abandoning a worthwhile duty. Seek support, rest appropriately, and return to faithful action with reliance on Him rather than a claim to limitless endurance."
   ]
 ],
-"Ask Al-Matin for help sustaining a good responsibility, and choose a pace you can honestly keep.",
+"Review a worthwhile commitment that is exhausting you. Arrange a sustainable pace or ask for help rather than promising limitless effort. Ask Al-Matin to help you continue faithfully, remembering that His power is never exhausted while yours needs rest.",
 "Where would trusting Allah’s unfailing strength help me acknowledge my own limits truthfully?",
 "المتانة تدل على شدة القوة",
 "The joint Al-Qawiyy / Al-Matin discussion. The counsel on sustainable commitments is an original practical application, not a description of divine needs.",
@@ -428,7 +428,7 @@ r("al-wali",
     "Ask Allah to draw you near and help you respond to His guidance. Let love for Him shape the loyalties you cultivate. Stand beside a friend in a way that serves their real good, including a gentle correction when agreement would support a wrong."
   ]
 ],
-"Ask Al-Wali for nearness and help with one act of faithful obedience.",
+"Encourage a friend who is trying to keep a difficult, good commitment. Offer company or practical help, and ask Al-Wali to draw you both nearer to Him through support that serves faithfulness rather than mere agreement.",
 "Am I seeking Allah’s friendship as a good in itself, beyond the comfort I hope it will bring?",
 "هو المحب الناصر",
 "Al-Wali: loving support and the counsel to resist the self’s wrongful demands. Distinct from Al-Waali.",
@@ -486,7 +486,7 @@ r("al-muhsi",
     "Bring your actions before Allah with honesty, including the quiet ones. Keep a promise that could easily slip from memory, or correct a small wrong. Let awareness of Al-Muhsi deepen sincerity without turning worship into a competition over totals."
   ]
 ],
-"Remember Al-Muhsi and attend to one small responsibility that someone else may be relying on.",
+"Look back through your recent commitments for something small you said you would do. Follow through, or arrange honestly when you can. Remember Al-Muhsi, to whom no detail of what you owe is lost.",
 "What does Allah’s exact knowledge teach me about a detail I have been dismissing as insignificant?",
 "حد كل معلوم وعدده ومبلغه",
 "Al-Muhsi: exact, comprehensive knowledge; human enumeration is explicitly described as limited.",
@@ -515,7 +515,7 @@ r("al-mubdi",
     "Remember Al-Mubdi before beginning a task. Ask Him to guide the use of the life and abilities He originated. Let gratitude replace the need to describe yourself as entirely self-made, and offer the next action with a sincere intention."
   ]
 ],
-"Before starting something, thank Al-Mubdi for the existence and abilities that make your action possible.",
+"Before starting a task, thank Al-Mubdi’ for giving you existence before you could achieve anything. Offer the work as a use of that received life, without needing to describe yourself as self-made.",
 "What beginning have I credited entirely to myself without remembering its dependence on Allah?",
 "بدأ خلق الناس",
 "The joint Al-Mubdi’ / Al-Mu‘id discussion: initial creation and return. Everyday beginnings are reflective applications, not equivalents of creation.",
@@ -544,7 +544,7 @@ r("al-muid",
     "Let remembrance of the final return move you toward Allah in the present. Resume a neglected prayer or duty, seek forgiveness, and repair what your absence has affected. You can begin a truthful return without making it dramatic or waiting to feel ready."
   ]
 ],
-"Remember your return to Allah and resume one neglected good with a sincere intention.",
+"Reopen a reading about Allah that you left unfinished. Resume it with your final return before Him in mind, remembering that Al-Mu‘id has power to bring back all creation.",
 "How does knowing that Allah will bring me back change the return I can make to Him today?",
 "والأشياء كلها منه بدأت وإليه تعود",
 "The joint Al-Mubdi’ / Al-Mu‘id discussion: creation and resurrection. Resuming a practice is explicitly a contemporary reflection.",
@@ -573,7 +573,7 @@ r("al-muhyi",
     "Thank Al-Muhyi for the life through which you can know and worship Him. Give some of today’s attention to a sincere duty or to sustaining another creature’s wellbeing. Let gratitude deepen care without making you responsible for outcomes beyond your power."
   ]
 ],
-"Thank Al-Muhyi for being alive, then dedicate a little of today to worship or useful care.",
+"Water a plant that needs it, or attend to an animal already in your care. Thank Al-Muhyi for its life and your own, and offer the care as service to the Giver of life.",
 "How does receiving life as a gift from Allah change the way I use this day?",
 "ولا خالق للموت والحياة إلا الله",
 "The joint Al-Muhyi / Al-Mumit discussion and its reference back to Al-Ba‘ith on life and knowledge.",
