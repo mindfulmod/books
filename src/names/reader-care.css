@@ -1,10 +1,10 @@
 /* Legible tools and predictable focus within the established folio. */
 [hidden]{display:none!important;}
-html{scroll-padding-block:100px 110px;}
+html{scroll-padding-block:24px 110px;}
 #app :is(button,a),#sheet :is(button,a,summary,select){min-height:44px;}
 #app button,#sheet button{min-width:44px;}
 :is(button,a,input,textarea,select,summary):focus-visible{outline:3px solid var(--gold)!important;outline-offset:3px;}
-:is(button,a,input,textarea,select,summary),.prose-section,#reflection{scroll-margin-block:100px 120px;}
+:is(button,a,input,textarea,select,summary),.prose-section,#reflection{scroll-margin-block:20px 20px;}
 #app-main:focus{outline:none;}
 #sheet-title:focus{outline:none;}
 #app .eyebrow,#sheet .eyebrow{font-size:11px;letter-spacing:.075em;line-height:1.65;}
@@ -36,8 +36,9 @@ html{scroll-padding-block:100px 110px;}
 #app .source-link{font-size:13px;line-height:1.7;}
 #app .reader-guide-link{display:flex;gap:10px;align-items:center;text-align:left;margin-top:10px;font-size:12px;}
 .reader-guide-link .icon{width:16px;height:16px;flex:0 0 16px;}
+.reading-orientation .icon{width:14px;height:14px;}
 #app .reading-orientation{font:12px/1.65 Manrope;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:17px;}
-.reading-orientation button{font:12px/1.65 Manrope;color:var(--gold);text-decoration:underline;text-underline-offset:4px;}
+.reading-orientation button{display:inline-flex;align-items:center;gap:7px;font:12px/1.65 Manrope;color:var(--gold);text-decoration:underline;text-underline-offset:4px;}
 #app .return-next-reason{font:13px/1.75 Manrope;color:var(--muted);margin:10px 0 16px;}
 #app .return-revisit{width:100%;margin-top:5px;}
 #app .end-navigation>.text-button{font-size:12px;justify-self:end;}
@@ -98,11 +99,11 @@ dialog.reader-guide-sheet{width:min(610px,calc(100vw - 20px));max-height:calc(10
 .next-invitation{margin:28px 0 8px;padding-top:25px;border-top:1px solid var(--line);}
 .next-invitation h3{font:500 37px/1.08 var(--display);margin:10px 0 15px;}
 .next-invitation h3 em{font-weight:400;color:var(--gold);}
-#app .next-reason{font:13px/1.8 Manrope;color:var(--muted);margin:0 0 20px;}
+#app .next-reason{font:13px/1.8 Manrope;color:var(--muted);margin:8px 0 20px;}
 .next-reading-preview{display:grid;grid-template-columns:86px minmax(0,1fr);align-items:center;gap:18px;}
 .next-reading-art{height:100px;border-radius:40px 40px 7px 7px;overflow:hidden;}
 .next-reading-art>.scene{height:100%;}
-.next-reading-preview h4{font:500 32px/1.15 var(--display);margin:0;overflow-wrap:anywhere;}
+.next-reading-preview h3{font:500 32px/1.15 var(--display);margin:0;overflow-wrap:anywhere;}
 #app .next-reading-preview p{font:13px/1.65 Manrope;color:var(--muted);margin:8px 0 0;}
 #app .next-takeaway{font:25px/1.5 var(--display);margin:20px 0;}
 .next-reading-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
@@ -159,7 +160,7 @@ dialog.reader-guide-sheet{width:min(610px,calc(100vw - 20px));max-height:calc(10
  .remembered-reading{grid-template-columns:56px minmax(0,1fr);gap:12px;}
  .remembered-reading>.icon{display:none;}
  .next-reading-preview{grid-template-columns:65px minmax(0,1fr);gap:15px;}
- .next-reading-preview h4{font-size:29px;}
+ .next-reading-preview h3{font-size:29px;}
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto!important;}
@@ -170,3 +171,10 @@ dialog.reader-guide-sheet{width:min(610px,calc(100vw - 20px));max-height:calc(10
  :is(button,a,input,textarea,select,summary){forced-color-adjust:auto;}
  .primary,[aria-pressed=true]{border:1px solid ButtonText!important;}
 }
+
+/* An open margin note connects the explanation to an everyday observation. */
+#app .prose .notice-passage{border-left:1px solid var(--gold);padding-left:18px;margin:24px 0 0;}
+.notice-label{display:block;font:500 11px/1.7 Manrope,sans-serif;letter-spacing:.075em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+#app .reflection-question .pause-question{font-size:clamp(25px,5vw,30px);line-height:1.45;}
+#sheet .outline-tools{display:flex;align-items:center;gap:10px;margin:10px 0;}
+.outline-tools .icon{width:16px;height:16px;}

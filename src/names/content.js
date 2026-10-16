@@ -1,3 +1,4 @@
+import {contemplations} from './contemplation.js';
 import {readings as completeOne} from './content-complete-01.js';
 import {readings as completeTwo} from './content-complete-02.js';
 import {readings as completeThree} from './content-complete-03.js';
@@ -508,5 +509,12 @@ const byId = new Map([...earlierNames,...completeOne,...completeTwo,...completeT
 export const names = editionOrder.map((id,index)=>{
   const entry=byId.get(id);
   if(!entry)throw new Error(`Missing reading: ${id}`);
-  return {...entry,number:index+1};
+  const contemplation=contemplations[id];
+  return {...entry,number:index+1,
+    reflection:contemplation?.question||entry.reflection,
+    sections:entry.sections.map((section,i)=>i===1&&contemplation?{
+      ...section,noticeIndex:section.paragraphs.length,
+      paragraphs:[...section.paragraphs,contemplation.notice]
+    }:section)
+  };
 });

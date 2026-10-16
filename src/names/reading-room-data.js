@@ -47,6 +47,8 @@ export function searchReadings(names,query){
       const section=name.sections[i],text=section.paragraphs.find(p=>normalizeSearch(p).includes(needle));
       if(text||normalizeSearch(section.title).includes(needle))return [{name,section:i,snippet:text||section.paragraphs[0]}];
     }
+    const reflection=[name.practice,name.reflection].find(text=>normalizeSearch(text).includes(needle));
+    if(reflection)return [{name,section:null,target:'reflection',title:'A moment to reflect',snippet:reflection}];
     return [];
   });
 }
