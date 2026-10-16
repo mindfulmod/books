@@ -1,4 +1,4 @@
-# The Beautiful Names · edition 1.1
+# The Beautiful Names · edition 1.2
 
 Public route: https://mindfulmod.github.io/books/beautiful-names/
 
@@ -62,3 +62,11 @@ New observations and questions are original companion writing, identified as suc
 Existing paragraph anchors and three section indices are preserved. Newly kept passages include the observation; earlier saved passage snapshots retain their original wording. Automated backup tests cover both cases. No personal writing is migrated or rewritten by this edition.
 
 Manual review included a fresh-reader home, guide, Al-Malik in both themes, Al-Quddus, and the long Dhu’l-Jalal wa’l-Ikram title at 320 × 740 with largest text and open line spacing. No horizontal overflow was found in those views. These are targeted design and accessibility checks, not a guarantee of a reader’s comprehension or a substitute for observed user testing.
+
+## Editorial distinctness review · edition 1.2
+
+Reviewed all 99 readings for repeated examples and reflection patterns, revising 55 observations and 93 questions. The revisions draw attention to the particular attribute of Allah before asking for a personal response. Related Names remain related; their observations offer different points of attention without inventing separate meanings. Al-Mu’akhkhir’s example now follows the explanation of Allah-given rank and nearness, rather than centring delayed personal plans.
+
+The [complete editorial record](beautiful-names-editorial-review.md) identifies the focus considered for each Name and the distinctions between neighbouring meanings. No navigation, saved-writing format, source excerpts, or artwork changes accompany this pass.
+
+Validation for this pass: production build, 52 Beautiful Names tests, and all shared library checks passed. Representative revised questions were reviewed in daylight at 390 × 844 and at night at 320 × 740, without horizontal overflow.
