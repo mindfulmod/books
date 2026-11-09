@@ -2,12 +2,13 @@
 
 Published site: <https://mindfulmod.github.io/books/>
 
-A reading library with four companions:
+A reading library with five companions:
 
 - **The Ihya** at `/system`: all forty books, with Brief, Deep, and Sources reading depths, visual explanations, guided journeys, and a local notebook.
 - **Inner Dimensions of the Prayer** at `/inner-dimensions-of-the-prayer.html`: an illustrated guide, fourteen movements, and a complete companion with 59 English and Arabic passages.
 - **Timeless Seeds of Advice** at `/timeless-seeds.html`: 111 original readings, separate explanations, feeling and situation paths, and Day/Starlight artwork.
 - **The Beautiful Names** at `/beautiful-names/`: 99 illustrated readings with source notes, paths, and a personal reading room.
+- **Ajj Zulf Sanwari Jani Ae** at `/ajj-zulf/`: 101 Punjabi poems by Dr. Muhammad Ahmad Tabassum, each retold in plain English with a faithful translation, the original Shahmukhi text and a read-aloud transliteration. Poem content lives in `src/ajjzulf/content/`; after editing a poem, run `node scripts/ajj-zulf-index.mjs --write`.
 
 The bookshelf opens at the published root. The original `/isfahan` and `/world` architectural studies remain available as legacy routes.
 

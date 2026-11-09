@@ -1,0 +1,193 @@
+{
+  "id": "061-tears-spilled",
+  "pages": [
+    61,
+    62
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "The poison that gave me life",
+  "themes": [
+    "love",
+    "sufi",
+    "society"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "self",
+      "passing",
+      "trust"
+    ],
+    "anchors": [
+      2,
+      8,
+      9,
+      10
+    ]
+  },
+  "takeaway": "What people mean as poison can end up giving you more life.",
+  "scene": "The poet's tears have finally spilled over. He looks back at what life has cost him and the people around him, and ends with lovers who ran toward danger.",
+  "couplets": [
+    {
+      "original": [
+        "بے صبرے بے وسے ہنجو ڈلھ گئے نیں",
+        "مٹی رل گئے پا کے کیہڑا مل گئے نیں"
+      ],
+      "transliteration": [
+        "Be-sabre be-vasse hanjhu dulh gaye nain",
+        "Mitti rul gaye, paa ke kehra mull gaye nain"
+      ],
+      "translation": [
+        "Impatient, helpless tears have spilled.",
+        "They fell into the dust; what price did they fetch?"
+      ],
+      "story": "His tears couldn't wait. They spilled over and fell into the dirt. Did anyone value them? No."
+    },
+    {
+      "original": [
+        "ڈونگے پینڈے رکھ نہ کدھرے چھاواں سن",
+        "سچے جذبیاں والے لنگھدے ٹل گئے نیں"
+      ],
+      "transliteration": [
+        "Doonge painde, rukkh na kidhre, chhaavaan san",
+        "Sachche jazbiyaan vaale langhde tal gaye nain"
+      ],
+      "translation": [
+        "Long, deep journeys, with no trees and no shade anywhere,",
+        "yet people of true passion kept walking and got through."
+      ],
+      "story": "The road was long, with no trees and no shade. People with real, sincere feeling kept going and made it through anyway."
+    },
+    {
+      "original": [
+        "کیہڑے عیب لکان نوں پردے پان لئی",
+        "جندرے مونہہ نوں لگے سیتے بل گئے نیں"
+      ],
+      "transliteration": [
+        "Kehre aib lukaan nu parde paan layi",
+        "Jandre moonh nu lagge, seete bull gaye nain"
+      ],
+      "translation": [
+        "To hide what faults, to draw what curtains,",
+        "have locks been put on mouths and lips sewn shut?"
+      ],
+      "story": "People's mouths have been locked and their lips sewn shut. He asks: whose wrongdoings is this silence protecting?"
+    },
+    {
+      "original": [
+        "مجبوراں نوں آن دا فیر دلاسہ دے",
+        "سڑدی ہوئی توے دی روٹی کھل گئے نیں"
+      ],
+      "transliteration": [
+        "Majbooraan nu aan da pher dilaasa de",
+        "Sardi hoi tave di roti khul gaye nain"
+      ],
+      "translation": [
+        "Comfort the helpless again with a promise that you'll come;",
+        "they've left the bread burning on the griddle."
+      ],
+      "story": "Poor, helpless people keep being promised help that never arrives. They waited so long the bread burned on the stove."
+    },
+    {
+      "original": [
+        "گلشن ساڈی آس دا ہریا ہونا کیہہ",
+        "جھکھڑ ماروسراں تے آ کے جھل گئے نیں"
+      ],
+      "transliteration": [
+        "Gulshan saadi aas da hariya hona ki",
+        "Jhakhar maaroo siraan te aa ke jhul gaye nain"
+      ],
+      "translation": [
+        "How could the garden of our hope turn green,",
+        "when deadly storms have come and swept over our heads?"
+      ],
+      "story": "How can their hopes grow green again? Deadly storms keep blowing over their heads."
+    },
+    {
+      "original": [
+        "اہناں وچ حیاتی کدے سراہیا ناں",
+        "گور میری تے پا کے جیہڑے پھل گئے نیں"
+      ],
+      "transliteration": [
+        "Ehnaan vich hayaati kade saraahiya naa",
+        "Gor meri te paa ke jehre phull gaye nain"
+      ],
+      "translation": [
+        "They never once praised me while I was alive,",
+        "the ones who came and laid flowers on my grave."
+      ],
+      "story": "The people who put flowers on his grave never said one kind word to him while he was alive."
+    },
+    {
+      "original": [
+        "یاد تیری وچ اکھاں جھڑیاں لائیاں نیں",
+        "مٹی وچ مدھولے چہرے ڈھل گئے نیں"
+      ],
+      "transliteration": [
+        "Yaad teri vich akhaan jhariyaan laaiyaan nain",
+        "Mitti vich madhole chehre dhal gaye nain"
+      ],
+      "translation": [
+        "Remembering you, my eyes have poured down steady rain.",
+        "Faces trampled into the dust have faded away."
+      ],
+      "story": "Missing the Beloved, he has cried like monsoon rain. Faces he once knew have faded into the dust."
+    },
+    {
+      "original": [
+        "جوبن ویکھ پھلاں دا وچ گلزاراں دے",
+        "ویکھن والے دور خزاں دی بھل گئے نیں"
+      ],
+      "transliteration": [
+        "Joban vekh phullaan da vich gulzaaraan de",
+        "Vekhan vaale daur khizaan di bhul gaye nain"
+      ],
+      "translation": [
+        "Seeing the flowers in full bloom in the gardens,",
+        "the onlookers have forgotten that autumn comes."
+      ],
+      "story": "When people see flowers in full bloom, they forget autumn is on its way. Good times make people forget that everything changes."
+    },
+    {
+      "original": [
+        "پی کے ہور حیاتی میری ودھ گئی اے",
+        "شربت وچ او زہر ملا کے بھل گئے نیں"
+      ],
+      "transliteration": [
+        "Pee ke hor hayaati meri vadh gayi ae",
+        "Sharbat vich o zehar mila ke bhul gaye nain"
+      ],
+      "translation": [
+        "Drinking it, my life has grown even longer:",
+        "they mixed poison into the sweet drink by mistake."
+      ],
+      "story": "His enemies slipped poison into his drink, but it made him stronger and gave him more life. They got it wrong."
+    },
+    {
+      "original": [
+        "دار صلیباں تلواراں نوں چمن پئے",
+        "جند وارن لئی احمدؔ عاشق تل گئے نیں"
+      ],
+      "transliteration": [
+        "Daar saleebaan talwaaraan nu chumman pae",
+        "Jind vaaran layi Ahmad aashiq tul gaye nain"
+      ],
+      "translation": [
+        "They began kissing the gallows, the crosses and the swords:",
+        "Ahmad, the lovers have set out determined to give their lives."
+      ],
+      "story": "He ends with an image of fearless lovers. They kiss the gallows and the swords. They've made up their minds to give their lives for love."
+    }
+  ],
+  "deeper": "Lovers who 'kiss the gallows and the swords' is the Sufi image of martyrdom for love of God, Mansur once more. 'The poison they mixed in gave me more life' echoes a belief found throughout the book: what enemies mean for harm, God can turn into growth.\n\nThe couplet about flowers laid on a grave by people who never praised you in life is a gentle warning to love people while they are here.",
+  "why": "The line about flowers on a grave from people who never said a kind word while you were alive will stay with many readers.",
+  "prompt": "Is there someone you appreciate but haven't told? What's stopping you from telling them now?",
+  "glossary": [
+    "ghazal",
+    "mansur"
+  ],
+  "notes": [
+    "Continues onto page 62. Couplets 3–4 contain idioms that should be checked by a native reader."
+  ]
+}

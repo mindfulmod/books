@@ -1,0 +1,81 @@
+{
+  "id": "015-three-couplets",
+  "pages": [
+    15
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "A stranger who stayed a lifetime",
+  "titleOriginal": "تِن شعر",
+  "themes": [
+    "love"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "awake",
+      "nearness"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "A few minutes with the right person can change a whole life.",
+  "scene": "The heading just says 'Three couplets'. The poet remembers someone he barely knew, who sat beside him for a short time and then left.",
+  "couplets": [
+    {
+      "original": [
+        "چند گھڑیاں اوکول سی بہہ کے دل نوں اگ لا گئے",
+        "میرے بے حس ستے دل وچ پیار دی شمع جلا گئے"
+      ],
+      "transliteration": [
+        "Chand ghariyaan o kol si beh ke dil nu agg la gaye",
+        "Mere be-hiss sutte dil vich pyaar di shamaa jala gaye"
+      ],
+      "translation": [
+        "They sat by me for a few moments and set my heart on fire.",
+        "In my numb, sleeping heart they lit the candle of love."
+      ],
+      "story": "Someone sat beside him for just a few minutes. That was enough. His heart had felt numb, almost asleep, and suddenly it was burning like a lit candle."
+    },
+    {
+      "original": [
+        "نہ ای جان پچھان سی کوئی نہ سی سانجھ پنجالی",
+        "فیر وی عمر بھر دیاں یاداں میری جھولی پا گئے"
+      ],
+      "transliteration": [
+        "Na ee jaan pachhaan si koi, na si saanjh panjaali",
+        "Pher vi umar bhar diyaan yaadaan meri jholi pa gaye"
+      ],
+      "translation": [
+        "We weren't acquainted; we shared no bond at all.",
+        "Even so, they filled my lap with a lifetime of memories."
+      ],
+      "story": "They were strangers. There was no history between them, nothing they shared. And still, that person left him with memories that will last the rest of his life."
+    },
+    {
+      "original": [
+        "جے ایہہ مہنگے موتی ہوندے شائد کوئی لے لیندا",
+        "بے مُلے اکھاں دے موتی گلے دا ہار بنا گئے"
+      ],
+      "transliteration": [
+        "Je eh mehnge moti honde shaayad koi le lenda",
+        "Be-mulle akhaan de moti gale da haar bana gaye"
+      ],
+      "translation": [
+        "If these were costly pearls, perhaps someone would have bought them.",
+        "But these worthless pearls from my eyes became a necklace around my neck."
+      ],
+      "story": "His tears are like pearls. If they were real pearls, someone might at least want them. But tears are worth nothing to anybody else. So he wears them himself, like a necklace he can't take off."
+    }
+  ],
+  "deeper": "Sufis describe moments when God's presence touches a sleeping heart without warning, briefly and unforgettably. A 'stranger' who wakes the heart in a few moments and leaves only longing behind fits that experience.",
+  "why": "It captures how a short encounter can mean more than years with other people.",
+  "prompt": "Has a short meeting or conversation ever stuck with you for years? Why?",
+  "glossary": [],
+  "notes": [
+    "Couplet 2: 'saanjh panjaali' (a shared yoke) is a farming image for a bond between two people.",
+    "Couplet 3: printed 'انکھاں'; it is read as 'akhaan' (eyes), so the 'pearls' are tears."
+  ]
+}

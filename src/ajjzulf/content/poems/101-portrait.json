@@ -1,0 +1,46 @@
+{
+  "id": "101-portrait",
+  "pages": [
+    101
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "A portrait",
+  "titleOriginal": "تصویر",
+  "themes": [
+    "love"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "longing"
+    ],
+    "anchors": [
+      1
+    ]
+  },
+  "takeaway": "Missing someone can make you as still as a picture.",
+  "scene": "A single couplet. The poet looks at a picture of the person he loves.",
+  "couplets": [
+    {
+      "original": [
+        "آج دیکھ کے یار تصویر تیری بن گیا ہاں وانگ تصویر میں وی",
+        "روسے تیرے نے جگ ہنیر کیتا دل لئی پھرنا اک دلگیر میں وی"
+      ],
+      "transliteration": [
+        "Ajj dekh ke yaar tasveer teri, ban gaya haan vaang tasveer main vi",
+        "Rosse tere ne jag haner keeta, dil layi phirna ik dilgeer main vi"
+      ],
+      "translation": [
+        "Today, looking at your picture, my friend, I've become still as a picture myself.",
+        "Your sulking has darkened the world; I too go around carrying a heavy heart."
+      ],
+      "story": "Looking at the Beloved's photo today, he froze, as still as a picture himself. Because the Beloved is upset with him, the whole world feels dark, and he walks around with a heavy heart."
+    }
+  ],
+  "deeper": "A tiny love poem. Read the Sufi way, the Beloved's 'sulking' is the feeling that God has gone quiet. Sufis call it qabz, a tightening of the heart. The world goes dark, and the seeker can only stand still and wait.",
+  "why": "A single couplet with a striking image: looking at a picture until you become one.",
+  "prompt": "Is there a photo that makes you stop and stare? What does it remind you of?",
+  "glossary": [],
+  "notes": []
+}

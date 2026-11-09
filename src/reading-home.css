@@ -266,6 +266,8 @@ button.system-brand { border:0; color:inherit; text-align:left; cursor:pointer; 
 
 /* Each companion keeps a distinct cover; two columns leave titles room to breathe. */
 .library-volume-names .library-cover { --cover-paper:#283b4d; --cover-ink:#f4e8cc; }
+.library-volume-zulf .library-cover { --cover-paper:#3a2236; --cover-ink:#f6dfb4; }
+.library-volume-zulf .library-cover-window { border-color:#f6c45a44; }
 .library-volume-names .library-cover-title { font-size:27px; line-height:1.08; }
 .library-volume-names .library-cover-author { text-align:center; font-size:10px; }
 @media(min-width:1360px) { .library-recent-list { grid-template-columns:repeat(4,minmax(0,1fr)); } .library-volumes { grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; } .library-cover-stage { padding-inline:14px; } .library-cover { max-width:100%; } }

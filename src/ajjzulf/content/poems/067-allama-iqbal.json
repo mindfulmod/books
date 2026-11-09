@@ -1,0 +1,100 @@
+{
+  "id": "067-allama-iqbal",
+  "pages": [
+    67
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Allama Iqbal, poet of the nation",
+  "titleOriginal": "علامہ اقبالؒ شاعرِ ملت",
+  "themes": [
+    "tribute",
+    "homeland"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "self",
+      "awake"
+    ],
+    "anchors": [
+      2,
+      3
+    ]
+  },
+  "takeaway": "A poet's words can give a whole people the courage to stand tall.",
+  "scene": "A short tribute to Allama Muhammad Iqbal, the poet-philosopher whose ideas helped bring Pakistan into being. Dr. Ahmad's own poetry borrows many of Iqbal's images, such as the royal falcon.",
+  "couplets": [
+    {
+      "original": [
+        "علموں تے کرداروں اچا سوہنے سخن اچیرے",
+        "قوم نوں جس عطا کر دتا رعب جلال نرالا"
+      ],
+      "transliteration": [
+        "Ilmon te kirdaaron uchcha, sohne sukhan uchere",
+        "Qaum nu jis ataa kar ditta raub jalaal niraala"
+      ],
+      "translation": [
+        "Great in learning and character, with beautiful, lofty words,",
+        "he gave the nation a rare dignity and majesty."
+      ],
+      "story": "Iqbal was a giant in knowledge and in character, and his words were beautiful and inspiring. He gave his people a new sense of dignity and strength."
+    },
+    {
+      "original": [
+        "مسلم قوم نوں سب توں وکھرا درس خودی دا دتا",
+        "زندہ رہن دا سانوں دسیا عزم خیال نرالا"
+      ],
+      "transliteration": [
+        "Muslim qaum nu sab ton vakhra dars khudi da ditta",
+        "Zinda rehan da saanu dassiya azm khayaal niraala"
+      ],
+      "translation": [
+        "He gave the Muslim nation a lesson unlike any other: the lesson of selfhood (khudi).",
+        "He showed us a remarkable resolve and vision for how to truly live."
+      ],
+      "story": "His big idea was 'khudi', having a strong, God-centred sense of who you are. He taught people how to live boldly, not just survive."
+    },
+    {
+      "original": [
+        "ہر پاسے اج تیکر جس دی پھیل رہی رشنائی",
+        "اچی تھاویں رکھ گیا اے دیوا بال نرالا"
+      ],
+      "transliteration": [
+        "Har paase ajj teekar jis di phail rahi rushnaai",
+        "Uchchi thaaveen rakh gaya ae deeva baal niraala"
+      ],
+      "translation": [
+        "His light is still spreading everywhere today:",
+        "he lit a remarkable lamp and set it up high."
+      ],
+      "story": "His ideas are still lighting up the world today. It's as if he lit a special lamp and placed it high up where everyone can see it."
+    },
+    {
+      "original": [
+        "توصیفاں تعریفاں کردا ہر اک چھوٹا وڈا",
+        "احمدؔ راج اقبال دا مالک سی اقبال نرالا"
+      ],
+      "transliteration": [
+        "Tauseefaan taareefaan karda har ik chhota vadda",
+        "Ahmad raaj iqbaal da maalik si Iqbal niraala"
+      ],
+      "translation": [
+        "Everyone, young and old, sings his praises.",
+        "Ahmad, the remarkable Iqbal was master of the realm of good fortune."
+      ],
+      "story": "Everyone, young and old, praises him. The poet ends with a play on words: 'iqbal' also means 'good fortune', and Iqbal truly ruled over it."
+    }
+  ],
+  "deeper": "Iqbal's 'khudi' is a spiritual idea, not just a political one: a self made strong by its relationship with God. Dr. Ahmad's own poetry is full of Iqbal's influence, especially the royal falcon (shahbaz) soaring toward the Throne of God.",
+  "why": "It introduces readers to Iqbal, the most important poet in Pakistan's history, and to his key idea, khudi.",
+  "prompt": "What does having a strong sense of who you are mean to you?",
+  "glossary": [
+    "iqbal",
+    "khudi",
+    "qaum"
+  ],
+  "notes": [
+    "The last line puns on 'iqbal', which also means 'good fortune' or 'prosperity'."
+  ]
+}

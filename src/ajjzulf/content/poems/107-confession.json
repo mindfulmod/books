@@ -1,0 +1,66 @@
+{
+  "id": "107-confession",
+  "pages": [
+    107
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Confession",
+  "titleOriginal": "اعتراف",
+  "themes": [
+    "devotion"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "prayer",
+      "trust"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "I've done wrong my whole life. Lord, You are merciful: please forgive me.",
+  "scene": "A short, humble prayer to God. The poet admits his mistakes and asks for mercy.",
+  "couplets": [
+    {
+      "original": [
+        "تیری ذات رحیم کریم بے شک مولا کرم کر دیئیں گنہگار ہاں میں",
+        "ڈھوئی مول نہ تیرے باجھ ملدی ڈھونڈ تھکیا ہویا خوار ہاں میں"
+      ],
+      "transliteration": [
+        "Teri zaat Raheem Kareem be-shakk, Maula karam kar deeyeen, gunahgaar haan main",
+        "Dhoi mool na tere baajh mildi, dhoondh thakiya, hoya khwaar haan main"
+      ],
+      "translation": [
+        "You are surely the Merciful, the Generous; Lord, be kind to me, for I am a sinner.",
+        "There's no refuge at all except You; I'm worn out from searching, and humbled."
+      ],
+      "story": "He tells God: You are truly merciful and generous. Please be kind to me, because I've done wrong. I've looked everywhere for somewhere safe to turn, and there's nowhere except You. I'm tired and humbled."
+    },
+    {
+      "original": [
+        "عمر بیتی گناہاں دے وچہ ساری بڑے بداں نالوں بدکردار ہاں میں",
+        "روز حشر نہ کریں توں نشر احمدؔ ہے اعتراف مینوں اوگنہگار ہاں میں"
+      ],
+      "transliteration": [
+        "Umar beeti gunaahaan de vich saari, bare badaan naalon bad-kirdaar haan main",
+        "Roz-e-hashr na kareen toon nashar, Ahmad, hai aitraaf mainu, o gunahgaar haan main"
+      ],
+      "translation": [
+        "My whole life has been spent in sins; I'm worse than the worst.",
+        "On Judgment Day, don't expose me. Ahmad confesses: I am a sinner."
+      ],
+      "story": "He says he has spent his life making mistakes, and feels worse than the worst people. He asks God: on Judgment Day, please don't put my wrongs on display. I admit it. I'm a sinner."
+    }
+  ],
+  "deeper": "This is a classic prayer of repentance (tauba). Calling God Raheem (the Merciful) and Kareem (the Generous) uses two of His names from the Qur'an. Asking God not to 'expose' him on Judgment Day reflects a hadith in which God covers the faults of a believer who admits them. Humility before God, even from a man his friends praised as good and generous, is a mark of real faith in the Sufi tradition.",
+  "why": "A short, honest prayer. It shows that even good people feel they need forgiveness.",
+  "prompt": "Is there something you'd like to be forgiven for, or someone you'd like to forgive?",
+  "glossary": [
+    "tauba",
+    "hashr"
+  ],
+  "notes": []
+}

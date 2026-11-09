@@ -1,0 +1,64 @@
+{
+  "id": "099-labourer",
+  "pages": [
+    99
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The labourer",
+  "titleOriginal": "مزدور",
+  "themes": [
+    "society"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "awake",
+      "justice"
+    ],
+    "anchors": [
+      2
+    ]
+  },
+  "takeaway": "The labourer feeds the world, and still can't fill his own stomach. And he still won't sell his honour.",
+  "scene": "A poem in the voice of a working man, a 'mazdoor' or labourer, who works hard for little.",
+  "couplets": [
+    {
+      "original": [
+        "میرے لہو پسینے دے نال یارو ٹیاں جگ نوں خوشی ضرور ہے اے",
+        "روٹی پیٹ بھر کدی نئیں میں کھاوی جند ہوکیاں اتے مجبور ہے اے"
+      ],
+      "transliteration": [
+        "Mere lahu paseene de naal yaaro, ettiyaan jag nu khushi zaroor hai ae",
+        "Roti pet bhar kadi nahin main khaadi, jind haukiyaan utte majboor hai ae"
+      ],
+      "translation": [
+        "Friends, my blood and sweat certainly bring the world happiness,",
+        "yet I've never once eaten my fill; my life is stuck with sighs."
+      ],
+      "story": "The worker says: my hard work, my sweat and blood, makes other people's lives comfortable. Yet I've never once had enough to eat. My life is full of sighs."
+    },
+    {
+      "original": [
+        "انکھ آن نئیں اپنی ویچ سکدا خوشی تائیوں اساں توں دور ہے اے",
+        "محنت کراں ضمیر ناں میں ویچاں سارے جاندے احمدؔ مزدور ہے اے"
+      ],
+      "transliteration": [
+        "Ankh aan nahin apni vech sakda, khushi taaiyon asaan ton door hai ae",
+        "Mehnat karaan, zameer naa main vechaan, saare jaande Ahmad mazdoor hai ae"
+      ],
+      "translation": [
+        "I can't sell my self-respect and honour; that's why happiness stays far from me.",
+        "I work hard but won't sell my conscience; everyone knows Ahmad is a labourer."
+      ],
+      "story": "He won't sell his self-respect or his honour, and that's why happiness stays out of reach. He works hard but never sells his conscience. The poet signs off as one of them: Ahmad is a labourer too."
+    }
+  ],
+  "deeper": "Islam places great honour on honest labour. The Prophet said, 'Pay the worker his wage before his sweat dries.' The worker who won't sell his conscience, even if it keeps him poor, is shown as truly dignified.",
+  "why": "It gives a voice to people who work hard and are rarely thanked or paid fairly.",
+  "prompt": "Who does hard work that makes your life easier, and how could you show them respect?",
+  "glossary": [
+    "qita"
+  ],
+  "notes": []
+}

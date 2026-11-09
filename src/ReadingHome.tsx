@@ -52,7 +52,7 @@ export function ReadingHome({ books, resume, onResume, onSelect, onSearch, onSav
       </header>
       {activity}
       <section className="library-shelf" aria-labelledby="bookshelf-title">
-        <div className="library-section-heading"><h2 id="bookshelf-title">On the bookshelf</h2><span>Four companions for inward life</span></div>
+        <div className="library-section-heading"><h2 id="bookshelf-title">On the bookshelf</h2><span>Five companions for inward life</span></div>
         <div className="library-volumes">
           <a className="library-volume library-volume-ihya" href="#home-library-title">
             <div className="library-cover-stage" aria-hidden="true"><div className="library-cover">
@@ -81,7 +81,7 @@ export function ReadingHome({ books, resume, onResume, onSelect, onSearch, onSav
         {collection}
         <div className="library-heart-note"><span>Looking for a place to start?</span><button onClick={()=>onSelect(21)}>Explore The Wonders of the Heart <ArrowRight size={18} aria-hidden="true"/></button></div>
       </section>
-      <footer className="library-colophon"><span className="library-rosette" aria-hidden="true"/><p>The Ihya presents editorial explanations, with references for each section. Inner Dimensions pairs an illustrated guide with a complete reading companion. Timeless Seeds preserves the book’s original entries alongside separately labelled explanations. The Beautiful Names offers a reading companion to al-Ghazali’s work, with source notes and reflections.</p><a href="#bookshelf-title">Back to the bookshelf ↑</a></footer>
+      <footer className="library-colophon"><span className="library-rosette" aria-hidden="true"/><p>The Ihya presents editorial explanations, with references for each section. Inner Dimensions pairs an illustrated guide with a complete reading companion. Timeless Seeds preserves the book’s original entries alongside separately labelled explanations. The Beautiful Names offers a reading companion to al-Ghazali’s work, with source notes and reflections. Ajj Zulf retells Punjabi poems in plain English beside the original text, and marks which readings the poems themselves support.</p><a href="#bookshelf-title">Back to the bookshelf ↑</a></footer>
     </main>
     {showGuide && <ReaderDialog title="How reading works" eyebrow="The reading room" className="library-guide-dialog" onClose={closeGuide}><ReadingOrientation onClose={closeGuide} onStart={depth=>{closeGuide();onSelect(21,depth);}}/></ReaderDialog>}
   </div>;

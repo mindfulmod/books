@@ -1,0 +1,71 @@
+{
+  "id": "096-new-constitution-bhutto",
+  "pages": [
+    96
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "On the new constitution: Zulfiqar Ali Bhutto",
+  "titleOriginal": "نواں آئین تے — ذوالفقار علی بھٹو",
+  "themes": [
+    "homeland",
+    "tribute"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "prayer"
+    ],
+    "anchors": [
+      1
+    ]
+  },
+  "takeaway": "A good constitution is a gift to a nation.",
+  "scene": "Written to celebrate Pakistan's 1973 Constitution, introduced under Zulfiqar Ali Bhutto. It is still Pakistan's constitution today.",
+  "context": "A poem of its time. It was written at a particular moment in Pakistan's history and uses the political language of that moment. It is translated faithfully so you can see how people spoke then. Translating it is not the same as agreeing with every line. It celebrates the 1973 constitution and President Bhutto as the poet saw them then.",
+  "couplets": [
+    {
+      "original": [
+        "اسلامی جمہوری نالے وفاقی آئین ملیا بڑا بہترین ملیا",
+        "ساڈے ملک تے کرم کریم دا اے سانوں صدر سوہنا تے ذہین ملیا"
+      ],
+      "transliteration": [
+        "Islaami, jamhoori, naale vifaaqi, aaeen miliya bara behtareen miliya",
+        "Saade mulk te karam Kareem da ae, saanu sadar sohna te zaheen miliya"
+      ],
+      "translation": [
+        "Islamic, democratic and federal too: we've been given a constitution, a truly excellent one.",
+        "God the Generous has been kind to our country: we've been given a fine and intelligent president."
+      ],
+      "story": "Pakistan has a new constitution that makes it Islamic, democratic and federal, which the poet calls excellent. He thanks God for giving the country a smart, capable president."
+    },
+    {
+      "original": [
+        "نئیں کسے وی ویری توں کھمب کھاندا صدر بھٹو جیا شاہین ملیا",
+        "جہدے فہم فراست دے نال احمدؔ ایس ملک نوں نواں آئین ملیا"
+      ],
+      "transliteration": [
+        "Nahin kise vi vairi ton khamb khaanda, sadar Bhutto jiha shaheen miliya",
+        "Jihde fehm firaasat de naal Ahmad, is mulk nu navaan aaeen miliya"
+      ],
+      "translation": [
+        "He doesn't flinch before any enemy: we've been given a falcon like President Bhutto,",
+        "Ahmad, through whose understanding and insight this country got its new constitution."
+      ],
+      "story": "Bhutto isn't scared of any enemy. The poet calls him a falcon. It was through his wisdom that the country got its new constitution."
+    }
+  ],
+  "deeper": "A political tribute from the 1970s, best read as history. The one line of faith is thanks: 'God the Generous has been kind to our country.' For the poet, even good news in politics is a gift to thank God for.",
+  "why": "A snapshot of a historic moment: how many Pakistanis felt when the 1973 Constitution was passed.",
+  "prompt": "Why do you think it matters for a country to have clear written rules that everyone agrees on?",
+  "glossary": [
+    "qita",
+    "bhutto",
+    "constitution-1973",
+    "shaheen",
+    "karam"
+  ],
+  "notes": [
+    "Reflects the poet's view at the time (1973). The app should present it as historical."
+  ]
+}

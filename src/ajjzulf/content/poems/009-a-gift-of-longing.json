@@ -1,0 +1,64 @@
+{
+  "id": "009-a-gift-of-longing",
+  "pages": [
+    9
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The moon's parting gift",
+  "themes": [
+    "love",
+    "sufi"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "longing"
+    ],
+    "anchors": [
+      1
+    ]
+  },
+  "takeaway": "Some pain is too heavy for tears to wash away.",
+  "scene": "The beloved has gone. The poet calls them 'the moon', because they were the brightest thing in his life. They left behind only a strange kind of gift: the pain of missing them.",
+  "couplets": [
+    {
+      "original": [
+        "اَگ ہجر دی تڑپ بے چینی دے گیا چن سوغاتاں",
+        "کنج گزرنے دن اساڈے کنج گزرنیاں راتاں"
+      ],
+      "transliteration": [
+        "Agg hijr di, tarap, bechaini de gaya chann saughaataan",
+        "Kinj guzarne din asaade, kinj guzarniyaan raataan"
+      ],
+      "translation": [
+        "The moon left me gifts: the fire of parting, longing, restlessness.",
+        "How will my days pass? How will my nights pass?"
+      ],
+      "story": "When the beloved left, the only 'presents' left behind were a burning loneliness and a restless ache. The poet wonders how he will get through the days, and the nights are even worse."
+    },
+    {
+      "original": [
+        "ہنجواں نال نئیں ہولا ہوندا بھارا بھار دلے دا",
+        "پربت کدے نئیں کھردے احمدؔ لکھ ہوون برساتاں"
+      ],
+      "transliteration": [
+        "Hanjhuaan naal nahin haula honda bhaara bhaar dile da",
+        "Parbat kade nahin khurde Ahmad lakh hovan barsaataan"
+      ],
+      "translation": [
+        "Tears do not lighten the heavy weight on the heart.",
+        "Mountains never wear away, Ahmad, though a hundred thousand rains may fall."
+      ],
+      "story": "People say crying helps. Not this time. His sadness is like a mountain, and his tears are like rain. However much rain falls, the mountain is still there."
+    }
+  ],
+  "deeper": "Sufi poets often call God 'the moon': beautiful, far away, and lighting up the dark. Read that way, the 'gift' of longing is not a punishment. The ache of missing God is itself a sign that the soul belongs to Him.",
+  "why": "It's a short poem about a feeling everyone knows: grief that crying doesn't fix.",
+  "prompt": "When you're carrying something heavy, what actually helps besides time?",
+  "glossary": [
+    "qita",
+    "takhallus"
+  ],
+  "notes": []
+}

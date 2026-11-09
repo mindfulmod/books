@@ -1,0 +1,68 @@
+{
+  "id": "099-poet-iqbal",
+  "pages": [
+    99
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The poet Iqbal",
+  "titleOriginal": "شاعر اقبال",
+  "themes": [
+    "tribute",
+    "homeland"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "self",
+      "awake"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "Iqbal's name will last as long as the world does.",
+  "scene": "A second, shorter tribute to Allama Iqbal (see also page 67).",
+  "couplets": [
+    {
+      "original": [
+        "جد سوچاں پاروں وتا رب سانوں اقبال",
+        "رہبر مرد قلندر غازی اوہ شاعر اقبال"
+      ],
+      "transliteration": [
+        "Jad sochaan paaron vatta Rab saanu Iqbal",
+        "Rehbar, mard-e-qalandar, ghaazi, oh shaair Iqbal"
+      ],
+      "translation": [
+        "When God, through deep thought, gave us Iqbal,",
+        "he was a guide, a fearless man of God, a warrior: the poet Iqbal."
+      ],
+      "story": "God gave the nation Iqbal, a thinker, a guide, a fearless free spirit and a fighter for his people's dignity."
+    },
+    {
+      "original": [
+        "رہندی دنیا تیکر رہنا جیدا اچا سدا ناواں",
+        "رازدار فطرت دا احمدؔ علامہ اقبال"
+      ],
+      "transliteration": [
+        "Rehndi duniya teekar rehna jida uchcha sada naavaan",
+        "Raazdaar-e-fitrat da Ahmad, Allama Iqbal"
+      ],
+      "translation": [
+        "His name will stand high for as long as the world lasts:",
+        "Ahmad, Allama Iqbal, keeper of nature's secrets."
+      ],
+      "story": "His name will be honoured as long as the world exists. The poet calls him someone who understood the deep secrets of life and nature."
+    }
+  ],
+  "deeper": "The poem says God gave the nation Iqbal, and calls him a 'fearless man of God' and 'keeper of nature's secrets'. Iqbal taught khudi, a strong, awake self that stands up straight because it leans on God. In this book, waking up the self is often the first step toward God.",
+  "why": "A short reminder of how deeply Iqbal is honoured in Pakistan.",
+  "prompt": "Who is a thinker or writer whose ideas you think will last for a long time?",
+  "glossary": [
+    "qita",
+    "iqbal",
+    "qalandar"
+  ],
+  "notes": []
+}

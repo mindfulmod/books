@@ -1,0 +1,113 @@
+{
+  "id": "051-call-day-day",
+  "pages": [
+    51
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Call things by their real names",
+  "themes": [
+    "homeland",
+    "society"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "justice",
+      "prayer"
+    ],
+    "anchors": [
+      1,
+      4,
+      5
+    ]
+  },
+  "takeaway": "Be honest: call cruelty cruelty, and don't let people sell out your country.",
+  "scene": "This is a short, angry poem about Pakistan. The poet calls for honesty, and warns about people who claim to love the country while selling it off.",
+  "couplets": [
+    {
+      "original": [
+        "دن نوں آکھو دن ہمیشاں رات نوں آکھو رات",
+        "ظلم دے جھکھڑ نوں نہ آکھو رحمت دی برسات"
+      ],
+      "transliteration": [
+        "Din nu aakho din hameshaan, raat nu aakho raat",
+        "Zulm de jhakhar nu na aakho rehmat di barsaat"
+      ],
+      "translation": [
+        "Always call day 'day', and call night 'night'.",
+        "Don't call a storm of cruelty a rain of mercy."
+      ],
+      "story": "Be honest. If it's day, say it's day. If it's night, say it's night. When cruel things happen, don't pretend they're blessings."
+    },
+    {
+      "original": [
+        "بچ جاؤ جے بچ سکدے او ویلا کرے پکار",
+        "قوم وطن نوں ویچن والے بیٹھے لا کے گھات"
+      ],
+      "transliteration": [
+        "Bach jaao je bach sakde o, vela kare pukaar",
+        "Qaum vatan nu vechan vaale baithe la ke ghaat"
+      ],
+      "translation": [
+        "Save yourselves if you can, the times are crying out:",
+        "those who'd sell the nation and the homeland are lying in ambush."
+      ],
+      "story": "Time itself is shouting a warning. Protect yourselves. People who would sell out the country are hiding, waiting for their chance."
+    },
+    {
+      "original": [
+        "بولی وطن دی لاون نوں نیں ویری قوم دے",
+        "درد غماں دے سانجھی آکھن وطن نہ کھائے مات"
+      ],
+      "transliteration": [
+        "Boli vatan di laavan nu nain vairi qaum de",
+        "Dard ghamaan de saanjhi aakhan, vatan na khaaye maat"
+      ],
+      "translation": [
+        "The nation's enemies are ready to put the homeland up for auction,",
+        "while those who share our pain say: may the homeland never be defeated."
+      ],
+      "story": "Enemies of the people want to auction off the country to the highest bidder. The people who truly care say: we can't let our homeland lose."
+    },
+    {
+      "original": [
+        "جدھر ویکھاں نظر اٹھا کے راج لٹیرے کردے",
+        "دردمنداں نوں رب گھل دیوے دل آکھے ایہہ بات"
+      ],
+      "transliteration": [
+        "Jidhar vekhaan nazar utha ke raaj lutere karde",
+        "Dardmandaan nu Rab ghal deve, dil aakhe eh baat"
+      ],
+      "translation": [
+        "Wherever I look, robbers are ruling.",
+        "My heart says: may God send people who truly care."
+      ],
+      "story": "Everywhere he looks, thieves are in charge. His heart prays: God, please send leaders who actually care."
+    },
+    {
+      "original": [
+        "لٹ گھسٹ تے چوری ڈاکے رشوت دا اے زور",
+        "رب کرے تے اینان کولوں احمدؔ ملے نجات"
+      ],
+      "transliteration": [
+        "Lutt ghasut te chori daake, rishvat da ae zor",
+        "Rab kare te inaan kolon Ahmad mile najaat"
+      ],
+      "translation": [
+        "Looting, snatching, theft, robbery: bribery rules.",
+        "May God grant us, Ahmad, freedom from all of these."
+      ],
+      "story": "Stealing, robbery and bribery are everywhere. He ends with a prayer: may God free us from all of it."
+    }
+  ],
+  "deeper": "The poem is about honesty and corruption, but it turns to God twice. 'May God send people who truly care' and 'May God grant us freedom' from bribery. For the poet, cleaning up a country is also a prayer. Calling things by their real names is part of faith too: the Qur'an tells believers not to mix truth with falsehood (2:42).",
+  "why": "It's a call for honesty that anyone can use: name things for what they are.",
+  "prompt": "Is there something people around you pretend is fine when it really isn't?",
+  "glossary": [
+    "qaum"
+  ],
+  "notes": [
+    "Labelled 'ghazal' in the book, but its subject is the nation. Marked spiritual 'some' because of the prayers in the last two couplets."
+  ]
+}

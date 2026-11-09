@@ -1,0 +1,68 @@
+{
+  "id": "089-poison-of-sectarianism",
+  "pages": [
+    89
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The poison of sectarianism",
+  "titleOriginal": "فرقہ بندی دا زہر",
+  "themes": [
+    "society",
+    "devotion"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "justice"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "People who follow the same God and the same Prophet are killing each other. Stop.",
+  "scene": "A short, angry poem about Muslims fighting other Muslims over sect: groups that share the same God, Prophet and Qur'an but turn on each other.",
+  "couplets": [
+    {
+      "original": [
+        "ظلم جبر اغوا تے قتل ڈاکے ہر روز ایتھے ودھدے جا رہے نیں",
+        "اسی اللہ رسول قرآن والے اک دوجے تے چھری چلا رہے نیں"
+      ],
+      "transliteration": [
+        "Zulm jabar aghwa te qatal daake har roz ethe vadhde ja rahe nain",
+        "Asi Allah Rasool Quran vaale ik dooje te chhuri chala rahe nain"
+      ],
+      "translation": [
+        "Cruelty, oppression, kidnapping, murder and robbery are growing here every day.",
+        "We, the people of God, the Prophet and the Qur'an, are taking knives to each other."
+      ],
+      "story": "Violence, kidnapping, murder and robbery are getting worse every day. Worst of all, people who believe in the same God, the same Prophet and the same holy book are attacking each other."
+    },
+    {
+      "original": [
+        "وعتصموا دا حکم خدا دا اے بندے دوئی دا سبق پڑھا رہے نیں",
+        "احمدؔ اینان نوں خوف خدا دا نئیں فرقہ بندی دا زہر پھیلا رہے نیں"
+      ],
+      "transliteration": [
+        "'Va'tasimu' da hukam Khuda da ae, bande dooi da sabaq parha rahe nain",
+        "Ahmad inaan nu khauf Khuda da nahin, firqa-bandi da zehar phaila rahe nain"
+      ],
+      "translation": [
+        "God's command is 'Hold fast together', yet people are teaching the lesson of division.",
+        "Ahmad, these people have no fear of God: they are spreading the poison of sectarianism."
+      ],
+      "story": "God commands in the Qur'an: 'Hold on tight to God's rope, all together, and don't split apart.' Yet people are teaching each other to divide. The poet says they've lost their fear of God and are spreading sectarian hatred like poison."
+    }
+  ],
+  "deeper": "The poem quotes the Qur'an directly: 'Wa'tasimu bi-hablillahi jami'an wa la tafarraqu', meaning 'Hold fast, all together, to the rope of God, and do not be divided' (3:103). The poet's point is that sectarian violence is not religion but a betrayal of it, and that real fear of God would make people stop.",
+  "why": "Sectarian violence is still a serious problem. This poem uses the Qur'an itself to argue against it.",
+  "prompt": "What helps people who disagree stay united instead of turning on each other?",
+  "glossary": [
+    "qita",
+    "firqa"
+  ],
+  "notes": [
+    "'Va'tasimu' is a direct reference to Qur'an 3:103."
+  ]
+}

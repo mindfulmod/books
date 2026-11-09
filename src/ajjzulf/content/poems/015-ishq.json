@@ -1,0 +1,68 @@
+{
+  "id": "015-ishq",
+  "pages": [
+    15
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "What love does",
+  "titleOriginal": "عشق",
+  "themes": [
+    "love",
+    "sufi"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "self",
+      "awake",
+      "trust"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "Love humbles the proud, burns away what's fake, and makes what's real grow.",
+  "scene": "This short poem is simply called 'Ishq', which means deep, all-consuming love. It is a list of the things love does to a person.",
+  "couplets": [
+    {
+      "original": [
+        "عشق تاج نوں کاسہ گدائی کردا، تخت پیراں دے ہیٹھ لتاڑ دیوے",
+        "رنگ روپ جوانی دی قبر بن دا، چنوں سوہنیاں شکلاں وگاڑ دیوے"
+      ],
+      "transliteration": [
+        "Ishq taaj nu kaasa gadaai karda, takht pairaan de heth lataar deve",
+        "Rang roop jawaani di qabar ban da, channon sohniyaan shaklaan vigaar deve"
+      ],
+      "translation": [
+        "Love turns a crown into a beggar's bowl and tramples thrones underfoot.",
+        "It becomes the grave of beauty and youth, and ruins faces lovelier than the moon."
+      ],
+      "story": "Love doesn't care how important you are. It can make a king give up his crown and beg. It can make him walk away from his throne. It doesn't care about good looks either. It can wear down the most beautiful face."
+    },
+    {
+      "original": [
+        "عشق بوٹے ضمیر دے ہرے کردا، باہروں ککھ کانا سارا ساڑ دیوے",
+        "دھرتی وانگ احمدؔ جھولی رکھ لیناں، عشق دکھاں دے جنے پہاڑ دیوے"
+      ],
+      "transliteration": [
+        "Ishq boote zameer de hare karda, baahron kakkh kaana saara saar deve",
+        "Dharti vaang Ahmad jholi rakh lainaan, ishq dukhaan de jinne pahaar deve"
+      ],
+      "translation": [
+        "Love makes the plants of the conscience grow green, and burns away all the outer straw and weeds.",
+        "Like the earth, Ahmad, I will hold out my lap for every mountain of sorrow love gives me."
+      ],
+      "story": "But love also does something good. It makes your conscience, the part of you that knows right from wrong, grow green and alive. It burns away the fake, surface stuff like dry straw. So the poet says he'll accept whatever love brings. Like the earth carries mountains, he'll carry as much sorrow as love hands him."
+    }
+  ],
+  "deeper": "For Sufis, real love for God strips away the ego: pride, status and vanity, the 'crown' and the 'throne'. What is left is the true self, the conscience made green. Like the earth that holds mountains without complaint, the seeker accepts hardship as part of the path.",
+  "why": "It's a short, sharp definition of love as something that changes you, not just a nice feeling.",
+  "prompt": "Has caring about something ever made you let go of pride or something fake about yourself?",
+  "glossary": [
+    "kasa",
+    "takhallus"
+  ],
+  "notes": []
+}

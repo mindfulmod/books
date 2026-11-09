@@ -1,0 +1,550 @@
+{
+  "ghazal": {
+    "term": "Ghazal",
+    "meaning": "A poem of rhyming couplets, each one complete in itself, usually about love and longing. The last couplet normally includes the poet's pen-name."
+  },
+  "saudai": {
+    "term": "Saudai",
+    "meaning": "A pun: sauda means both a bargain and lovesick madness. The saudai is the madman who would trade his own head for love."
+  },
+  "hashr": {
+    "term": "Hashr",
+    "meaning": "The Day of Resurrection. 'Till hashr' means until the end of time."
+  },
+  "shams-tabriz": {
+    "term": "Shams Tabriz",
+    "meaning": "A Sufi saint of Multan. Legend says he was skinned alive for his faith. Poets use his story as a picture of what love for God can cost."
+  },
+  "mansur": {
+    "term": "Mansur",
+    "meaning": "Mansur al-Hallaj, a Sufi executed in 922 for saying \"I am the Truth.\" In this poetry he stands for the lover of God who pays with his life. The gallows (daar or sooli) always point to him."
+  },
+  "takhallus": {
+    "term": "Ahmad (pen-name)",
+    "meaning": "The poet signs his name, Ahmad, in the last couplet of most poems. That is how a ghazal traditionally ends."
+  },
+  "sufi-beloved": {
+    "term": "The Beloved",
+    "meaning": "In Sufi poetry, the person the poet loves often stands for God. The poem can be read both ways at once, and that is on purpose."
+  },
+  "naat": {
+    "term": "Naat",
+    "meaning": "A poem praising the Prophet Muhammad. Dr. Ahmad was known for writing them."
+  },
+  "mehfil": {
+    "term": "Mehfil",
+    "meaning": "A gathering where friends meet to recite and listen to poetry or devotional songs."
+  },
+  "isaal-e-sawab": {
+    "term": "Isaal-e-sawab",
+    "meaning": "Doing a good deed, like reciting the Qur'an, and asking God to give its reward to someone who has died."
+  },
+  "qita": {
+    "term": "Qita",
+    "meaning": "A short poem, usually four lines, that makes one complete point."
+  },
+  "chaumisra": {
+    "term": "Chaumisra",
+    "meaning": "A four-line verse. Each line is long and carries a full thought."
+  },
+  "tur": {
+    "term": "Mount Sinai (Tur)",
+    "meaning": "The mountain where Moses asked to see God. In the Qur'an, when God's light touched the mountain, it crumbled. Poets use it for a heart overwhelmed by love."
+  },
+  "heer-ranjha": {
+    "term": "Heer and Ranjha",
+    "meaning": "Punjab's most famous love story, told by Waris Shah. Ranjha loved Heer, but she was married off to a man from the Khera family. Ranjha became a wandering jogi, piercing his ears, to reach her. Sufis read the story as the soul's search for God."
+  },
+  "mirza-sahiban": {
+    "term": "Mirza and Sahiban",
+    "meaning": "A Punjabi love story. Sahiban ran away with Mirza, but while he slept she hid his arrows in a tree to protect her brothers. Her brothers caught up and killed him. It is the classic story of love betrayed."
+  },
+  "jogi": {
+    "term": "Jogi",
+    "meaning": "A wandering holy man who gives up worldly life. Jogis pierced their ears and blew a horn. Ranjha became one to reach Heer."
+  },
+  "jigar": {
+    "term": "Jigar (liver)",
+    "meaning": "In this poetry the liver, not just the heart, is where deep pain is felt. A wounded jigar means grief that goes all the way down."
+  },
+  "saqi": {
+    "term": "Saqi",
+    "meaning": "The one who pours wine at a gathering. In Sufi poetry the saqi is often God or a spiritual guide, and the 'wine' is love or closeness to God."
+  },
+  "zahid": {
+    "term": "Zahid",
+    "meaning": "A strict, outwardly pious person who avoids pleasures to earn a reward in heaven. Sufi poets often tease the zahid for loving rules more than God or people."
+  },
+  "hoor": {
+    "term": "Houris",
+    "meaning": "The beautiful companions of paradise described in the Qur'an. Poets use them for the rewards that a rule-follower is chasing."
+  },
+  "bulbul": {
+    "term": "Bulbul",
+    "meaning": "The nightingale. It sings to the rose and stands for the lover singing to the beloved."
+  },
+  "doli": {
+    "term": "Doli",
+    "meaning": "The covered palanquin that carries a bride from her parents' home to her husband's. Heer 'climbing into the Kheras' doli' means being married off to someone else."
+  },
+  "jalwa": {
+    "term": "Jalwa",
+    "meaning": "A dazzling appearance or glimpse of beauty. Sufi poets use it for God's beauty shining through everything in the world."
+  },
+  "sehra": {
+    "term": "Sehra",
+    "meaning": "A veil of flowers or pearls worn over the face at a wedding in South Asia."
+  },
+  "kasa": {
+    "term": "Kasa (begging bowl)",
+    "meaning": "The bowl a beggar or wandering dervish holds out. Turning a king's crown into a begging bowl means love humbles even the powerful."
+  },
+  "daaman": {
+    "term": "Daaman (hem)",
+    "meaning": "The edge of a garment. A lover 'holds the hem' of the beloved to beg them to stay; 'pulling the hem free' means walking away."
+  },
+  "dhikr": {
+    "term": "Dhikr",
+    "meaning": "Remembering God, often by repeating His name. In Sufi poetry 'remembering the beloved' over and over is often this."
+  },
+  "tabassum": {
+    "term": "Tabassum",
+    "meaning": "The poet's family name. It means 'a smile' in Urdu, and he sometimes plays on that meaning."
+  },
+  "raqeeb": {
+    "term": "Raqeeb (rival)",
+    "meaning": "The rival in love: the other person who is also after the beloved, or who has won them."
+  },
+  "masjood": {
+    "term": "The one the angels bowed to",
+    "meaning": "In the Qur'an, God tells the angels to bow to Adam, the first human, to honour him. Saying 'my being is the one the angels bowed to' means: human beings carry a dignity God Himself gave."
+  },
+  "sohni-mahiwal": {
+    "term": "Sohni and Mahiwal",
+    "meaning": "A Punjabi love story. Every night Sohni swam across the Chenab river on a clay pot to meet Mahiwal. One night the pot had been swapped for an unbaked one, and she drowned."
+  },
+  "chenab": {
+    "term": "Chenab",
+    "meaning": "One of the five rivers of Punjab, and the river of the Sohni-Mahiwal and Heer-Ranjha stories."
+  },
+  "vanjara": {
+    "term": "Vanjara",
+    "meaning": "A travelling trader who carries goods from village to village. Here the lovers are 'traders in pain', always carrying their load."
+  },
+  "poh-haarh": {
+    "term": "Poh and Haarh",
+    "meaning": "Months of the Punjabi calendar. Poh (Dec–Jan) is the coldest; Haarh (Jun–Jul) is the hottest."
+  },
+  "maqtal": {
+    "term": "Maqtal",
+    "meaning": "The place of execution. Lovers walking into it fearlessly is an old image of giving everything for love."
+  },
+  "jamal": {
+    "term": "Jamal",
+    "meaning": "Beauty, especially God's beauty. Sufis speak of God's Jamal (beauty) and Jalal (majesty)."
+  },
+  "rind": {
+    "term": "Rind",
+    "meaning": "A carefree drinker who ignores outward rules. In Sufi poetry the rind is the honest, free spirit who drinks the 'wine' of God's love, often praised over the stiff, showy pious man."
+  },
+  "koonj": {
+    "term": "Koonj",
+    "meaning": "The demoiselle crane, which migrates in flocks. A koonj separated from its flock and crying out is the classic Punjabi image of loneliness and longing for home."
+  },
+  "plato-aristotle": {
+    "term": "Plato and Aristotle",
+    "meaning": "The two most famous philosophers of ancient Greece. In this poetry they stand for human reason at its very best, which still loses to love."
+  },
+  "sanam": {
+    "term": "Sanam",
+    "meaning": "Literally 'idol'. A poetic word for the beloved, so beautiful they are almost worshipped."
+  },
+  "tasbeeh": {
+    "term": "Tasbeeh",
+    "meaning": "Prayer beads, used to count repetitions of God's name or short prayers."
+  },
+  "karam": {
+    "term": "Nazar-e-karam",
+    "meaning": "A 'glance of kindness': a look of grace and favour from God or a saint."
+  },
+  "arif": {
+    "term": "Arif",
+    "meaning": "A knower of God: a mystic who knows God through the heart and direct experience, not only through books."
+  },
+  "arsh": {
+    "term": "Arsh",
+    "meaning": "The Throne of God, the highest point of creation in Islamic belief. Saying the Throne shakes when a heart breaks shows how serious hurting someone is."
+  },
+  "suluk": {
+    "term": "Sidq and suluk",
+    "meaning": "Sidq is truthfulness and sincerity. Suluk is walking the spiritual path toward God. Together they mean living a sincere spiritual life."
+  },
+  "kacha-ghara": {
+    "term": "The unbaked pot",
+    "meaning": "In the Sohni and Mahiwal story, Sohni crossed the river each night on a baked clay pot. One night it was swapped for an unbaked one, which melted, and she drowned. A 'raw pot' means a weak support that will fail you."
+  },
+  "chakor": {
+    "term": "Chakor",
+    "meaning": "A partridge that, in South Asian legend, gazes at the moon all night and lives on moonlight. It stands for the lover who longs for something out of reach."
+  },
+  "parwana": {
+    "term": "Parwana",
+    "meaning": "The moth that circles a candle flame until it burns. It is one of the most famous images of a lover giving everything to the beloved."
+  },
+  "nargis": {
+    "term": "Nargis",
+    "meaning": "The narcissus flower. Poets compare it to an eye that stays open, waiting and watching."
+  },
+  "subhanallah": {
+    "term": "Subhan Allah",
+    "meaning": "'Glory be to God.' Said in wonder or praise."
+  },
+  "taj-mahal": {
+    "term": "Taj Mahal",
+    "meaning": "The famous white marble tomb in Agra, built by the emperor Shah Jahan for his wife. It is the world's best-known monument to love."
+  },
+  "mullah": {
+    "term": "Mullah",
+    "meaning": "A local religious teacher or preacher. Sufi poets often tease the mullah for preaching about the rewards of heaven instead of the love of God."
+  },
+  "sarv": {
+    "term": "Sarv (cypress)",
+    "meaning": "A tall, straight cypress tree. Poets compare a graceful, upright figure to it."
+  },
+  "jhanjar": {
+    "term": "Jhanjar",
+    "meaning": "Anklets with small bells, worn by Punjabi women. Their jingling is a classic sound of beauty and celebration."
+  },
+  "mutiyaar": {
+    "term": "Mutiyaar",
+    "meaning": "A young Punjabi woman in the bloom of youth."
+  },
+  "qiyamat": {
+    "term": "Qiyamat",
+    "meaning": "The Day of Resurrection, when the world ends. People also say 'a qiyamat' for any overwhelming, world-shaking moment."
+  },
+  "socrates": {
+    "term": "Socrates",
+    "meaning": "The ancient Greek philosopher who was sentenced to death by drinking poison (hemlock), and drank it calmly rather than give up his beliefs."
+  },
+  "panno": {
+    "term": "Punnu (Sassi-Punnu)",
+    "meaning": "A Sindhi-Punjabi love story. Sassi loved Punnu, who was carried off by his brothers while she slept. She died searching for him in the desert."
+  },
+  "kasa-saail": {
+    "term": "The beggar's bowl",
+    "meaning": "A person asking for help holds out a bowl. In devotional poetry, people stand before God like beggars, and a generous giver never sends them away empty."
+  },
+  "dastaar": {
+    "term": "Dastaar",
+    "meaning": "A turban, a sign of dignity and honour. The religious man's turban falling off means his dignity and self-control are lost."
+  },
+  "nakhuda": {
+    "term": "Nakhuda",
+    "meaning": "The captain or boatman who steers a boat. In Sufi poetry it can mean a guide; a boatman with bad intentions is a false guide."
+  },
+  "kafir": {
+    "term": "Kafir",
+    "meaning": "Literally 'one who denies' or 'unbeliever'. Sufi poets use it in a surprising way: being called a kafir by narrow-minded people for loving too much."
+  },
+  "shahrag": {
+    "term": "Shah-rag (jugular vein)",
+    "meaning": "The great vein in the neck. The Qur'an says God is 'closer to a person than their jugular vein' (50:16). A saw running across it is an image of life under deadly threat."
+  },
+  "shaheed": {
+    "term": "Shaheed",
+    "meaning": "A martyr: someone killed for their faith or for a just cause. Muslims believe a martyr's sacrifice is never wasted."
+  },
+  "maali": {
+    "term": "Maali",
+    "meaning": "The gardener. In this poetry the garden is the nation or community, and the gardener is whoever is meant to look after it."
+  },
+  "bohar": {
+    "term": "Bohar (banyan tree)",
+    "meaning": "The huge, spreading banyan tree that gives shade in Punjabi villages. People rest under it, and elders are often compared to it."
+  },
+  "qaum": {
+    "term": "Qaum",
+    "meaning": "A nation or people. In Pakistani poetry it usually means the Pakistani nation."
+  },
+  "sialan": {
+    "term": "Siyalan",
+    "meaning": "The Sial family, Heer's family in Waris Shah's story. 'A moonlit night of the Sials' recalls Heer's youth and beauty."
+  },
+  "zulf": {
+    "term": "Zulf",
+    "meaning": "The beloved's long, loose hair. In Urdu and Punjabi poetry its curls are a snare for the heart."
+  },
+  "faqir": {
+    "term": "Faqir",
+    "meaning": "A poor wandering holy man who has given up worldly things to be close to God. 'Be-nawa' means 'without a voice' or 'with nothing at all'."
+  },
+  "aab-e-hayat": {
+    "term": "Aab-e-hayat",
+    "meaning": "The water of life: a legendary spring whose water makes you live forever."
+  },
+  "munafiq": {
+    "term": "Munafiq",
+    "meaning": "A hypocrite: someone who pretends to be a friend or a believer while working against you. The Qur'an condemns hypocrisy strongly."
+  },
+  "sheshnag": {
+    "term": "Sheshnag",
+    "meaning": "A giant many-headed serpent from South Asian legend. Used here for something extremely dangerous and poisonous."
+  },
+  "yusuf": {
+    "term": "Yusuf (Joseph)",
+    "meaning": "The prophet Joseph, famous for his beauty. His brothers sold him as a slave, and he was bought in an Egyptian market. Poets say even someone as beautiful as Yusuf was sold cheaply."
+  },
+  "tauba": {
+    "term": "Tauba",
+    "meaning": "Repentance: turning away from a wrong and back to God. Sufi poets joke about 'repenting' from love's wine and then breaking that vow at the saqi's first glance."
+  },
+  "sarmad": {
+    "term": "Sarmad",
+    "meaning": "Sarmad Kashani, a 17th-century Sufi in Delhi who was beheaded by the emperor Aurangzeb. Like Mansur, he stands for the lover of God who would not hide his love."
+  },
+  "shahbaz": {
+    "term": "Shahbaz",
+    "meaning": "The royal falcon, which flies higher than any other bird. Iqbal made it a famous symbol of a bold, free soul that aims for the heights."
+  },
+  "haq": {
+    "term": "Haq",
+    "meaning": "'The Truth' or 'what is right'. Al-Haqq is also one of the names of God. Mansur's famous cry 'Ana al-Haqq' means 'I am the Truth'."
+  },
+  "maikhana": {
+    "term": "Maikhana",
+    "meaning": "A tavern or wine-house. In Sufi poetry it is the gathering place of lovers of God, where the 'wine' of divine love is served."
+  },
+  "butkhana": {
+    "term": "Butkhana",
+    "meaning": "An idol-temple. Poets use it for a place full of lifeless statues: people with hearts as cold as stone."
+  },
+  "jinnah": {
+    "term": "Quaid-e-Azam",
+    "meaning": "'The Great Leader': the title of Muhammad Ali Jinnah (1876–1948), the lawyer and statesman who led the movement that created Pakistan in 1947."
+  },
+  "ittehad": {
+    "term": "Unity, Faith, Discipline",
+    "meaning": "Jinnah's famous motto for Pakistan: Ittehad (unity), Yaqeen-e-Muhkam (firm faith) and Tanzeem (discipline)."
+  },
+  "qalandar": {
+    "term": "Qalandar",
+    "meaning": "A free-spirited holy man who cares nothing for the world's opinion. 'Mard-e-qalandar' means a fearless, independent man of God."
+  },
+  "kimiya": {
+    "term": "Kimiya (alchemy)",
+    "meaning": "The legendary art of turning dust or base metal into gold. A leader who works kimiya turns an ordinary people into something precious."
+  },
+  "sahifa": {
+    "term": "Sahifa",
+    "meaning": "A scroll or holy page. The word is also used for scriptures sent down by God."
+  },
+  "iqbal": {
+    "term": "Allama Iqbal",
+    "meaning": "Muhammad Iqbal (1877–1938), the great poet-philosopher of the subcontinent, called 'the poet of the nation'. He first imagined a separate homeland for Muslims, and his poetry about the soul's dignity inspired the creation of Pakistan."
+  },
+  "khudi": {
+    "term": "Khudi",
+    "meaning": "Iqbal's most famous idea: selfhood, or self-respect. It means a strong, God-conscious sense of who you are, not selfishness."
+  },
+  "saim-chishti": {
+    "term": "Saim Chishti",
+    "meaning": "Allama Haji Muhammad Ibrahim Saim Chishti of Faisalabad, a well-known Punjabi poet and religious scholar, and a friend of the poet."
+  },
+  "bedil-kanpuri": {
+    "term": "Bedil Kanpuri",
+    "meaning": "Syed Imdad Ali Bedil Kanpuri, a poet from the poet's literary circle, remembered here as a warm and sincere friend."
+  },
+  "pir-fazal": {
+    "term": "Pir Fazal Gujrati",
+    "meaning": "Pir Syed Fazal Shah Gujrati (d. 1989), a much-loved Punjabi Sufi poet from Gujrat, called 'the king of the ghazal'. Dr. Ahmad clearly saw him as his master in poetry."
+  },
+  "rumi-jami": {
+    "term": "Rumi and Jami",
+    "meaning": "Two of the greatest Persian Sufi poets. Rumi (13th century) wrote the Masnavi; Jami (15th century) was a later master. Comparing someone to them is the highest praise for a mystic poet."
+  },
+  "pir": {
+    "term": "Pir",
+    "meaning": "A Sufi master or spiritual guide. Followers (mureeds) learn the spiritual path from their pir."
+  },
+  "malang": {
+    "term": "Malang",
+    "meaning": "A carefree, wandering Sufi devotee who lives simply and is lost in the love of God."
+  },
+  "waris-shah": {
+    "term": "Waris Shah",
+    "meaning": "Pir Syed Waris Shah (1722–1798), the greatest Punjabi poet. His 'Heer' tells the love story of Heer and Ranjha, and it is read both as a romance and as a Sufi allegory of the soul seeking God."
+  },
+  "jhang": {
+    "term": "Jhang",
+    "meaning": "The district in Punjab where Heer lived, and where Ranjha came as a cowherd. It is the setting of the Heer-Ranjha story."
+  },
+  "qamar-chinioti": {
+    "term": "Hasan Qamar Chinioti",
+    "meaning": "A Punjabi poet from Chiniot, part of Dr. Ahmad's circle. His pen-name Qamar means 'moon'."
+  },
+  "abul-kalam-azad": {
+    "term": "Maulana Abul Kalam Azad",
+    "meaning": "Maulana Abul Kalam Azad (1888–1958), a famous Islamic scholar, writer and leader in the struggle for independence from British rule. 'Azad' means 'free'."
+  },
+  "barsi": {
+    "term": "Barsi",
+    "meaning": "The yearly anniversary of a person's death, when family and friends gather to pray for them and remember them."
+  },
+  "khair-ul-wara": {
+    "term": "Khair-ul-wara",
+    "meaning": "'The best of all creation': a loving title for the Prophet Muhammad."
+  },
+  "saifi": {
+    "term": "Imam Saifi",
+    "meaning": "Imam Saifi, a journalist and writer from the poet's circle. 'Saif' means 'sword', and the poet plays on it: 'Saif-e-Islam', the sword of Islam."
+  },
+  "aq-khan": {
+    "term": "Dr. Abdul Qadeer Khan",
+    "meaning": "Dr. Abdul Qadeer Khan (1936–2021), the scientist who led Pakistan's nuclear programme and was hailed as a national hero. In 2004, under strong US pressure, he was made to confess on television and placed under house arrest."
+  },
+  "mohsin": {
+    "term": "Mohsin",
+    "meaning": "A benefactor: someone who has done you great good. 'Mohsin-e-Pakistan' (benefactor of Pakistan) was a title given to A.Q. Khan."
+  },
+  "paradise-feet": {
+    "term": "Paradise beneath mothers' feet",
+    "meaning": "A famous saying of the Prophet Muhammad: 'Paradise lies beneath the feet of mothers.' It means that honouring and serving your mother leads to paradise."
+  },
+  "jamshed": {
+    "term": "Jamshed",
+    "meaning": "A legendary king of ancient Persia, famous for his wealth and his magic cup. Poets use him to say that even the greatest kings died and left everything behind."
+  },
+  "kausar": {
+    "term": "Kausar",
+    "meaning": "A river or pool in paradise given to the Prophet Muhammad. Believers hope to drink from it from his hand. 'Saqi-e-Kausar', the one who pours at Kausar, is a title of the Prophet."
+  },
+  "rauza": {
+    "term": "Rauza",
+    "meaning": "The Prophet Muhammad's resting place in the Mosque of the Prophet in Madinah. Pilgrims send their greetings (salaam) to him there."
+  },
+  "hajj": {
+    "term": "Hajj",
+    "meaning": "The pilgrimage to Makkah that every Muslim who is able should make once in their life. Many pilgrims also visit Madinah, the Prophet's city."
+  },
+  "habib": {
+    "term": "Habib",
+    "meaning": "'Beloved'. 'Habib-ullah', the beloved of God, is a title for the Prophet Muhammad."
+  },
+  "mushtari": {
+    "term": "Mushtari (Jupiter)",
+    "meaning": "The planet Jupiter. In old South Asian and Persian tradition it is the 'lucky star' that brings good fortune."
+  },
+  "sunnat": {
+    "term": "Sunnah",
+    "meaning": "The way of the Prophet Muhammad: what he did and taught. Travelling for good reasons is called 'a sunnah', because the Prophet himself travelled and made the Hijrah (migration) to Madinah."
+  },
+  "rukhsati": {
+    "term": "Rukhsati",
+    "meaning": "The emotional moment at the end of a South Asian wedding when the bride leaves her parents' home to go and live with her husband's family. Families often say a prayer or recite a poem for her."
+  },
+  "saure": {
+    "term": "In-laws' home",
+    "meaning": "In Punjabi culture a bride traditionally moves into her husband's family home, and is expected to respect and care for his parents and siblings."
+  },
+  "majazi-khuda": {
+    "term": "Majazi khuda",
+    "meaning": "Literally 'the earthly lord': an old South Asian way of describing a husband's place in the home. It is a cultural phrase from the time, not a religious teaching."
+  },
+  "meraj": {
+    "term": "Meraj",
+    "meaning": "The Prophet's night journey to the heavens, so 'meraj' also means the highest point or summit of something."
+  },
+  "hakeem": {
+    "term": "Hakeem",
+    "meaning": "A traditional doctor who practises herbal (Unani) medicine. The poet's father was a hakeem; the poet himself became a doctor."
+  },
+  "partition": {
+    "term": "Partition (1947)",
+    "meaning": "When British India was divided into India and Pakistan in August 1947. Millions of people crossed the new border, and many died in the violence. Pakistan's Independence Day is 14 August."
+  },
+  "gulzar-e-naz": {
+    "term": "Gulzar-e-Naz",
+    "meaning": "A person's name, probably a relative of the poet, whose death on 16 January 1986 this short Urdu poem mourns."
+  },
+  "firqa": {
+    "term": "Firqa bandi",
+    "meaning": "Sectarianism: splitting a religion into rival groups or sects that fight each other. The Qur'an tells believers to 'hold fast to the rope of God together and do not be divided' (3:103)."
+  },
+  "tariq-khalid-haider": {
+    "term": "Tariq, Khalid, Haider",
+    "meaning": "Three heroes of early Islamic history. Tariq ibn Ziyad crossed into Spain in 711; Khalid ibn al-Walid was a famous general; Haider is a title of Ali, the Prophet's cousin, known for his courage."
+  },
+  "akhand-bharat": {
+    "term": "Akhand Bharat",
+    "meaning": "'Undivided India': a slogan of those who opposed splitting British India to create Pakistan."
+  },
+  "udham": {
+    "term": "Udham",
+    "meaning": "Determined effort: hard, active striving toward a goal."
+  },
+  "kashkol": {
+    "term": "Kashkol",
+    "meaning": "A beggar's bowl. 'Breaking the kashkol' became a popular Pakistani slogan meaning 'stop depending on foreign loans and aid'."
+  },
+  "bhutto": {
+    "term": "Zulfiqar Ali Bhutto",
+    "meaning": "Zulfiqar Ali Bhutto (1928–1979), Pakistan's president and then prime minister in the 1970s. His government introduced the 1973 Constitution, which declared Pakistan an Islamic, democratic and federal republic. He was later overthrown and executed."
+  },
+  "constitution-1973": {
+    "term": "1973 Constitution",
+    "meaning": "Pakistan's constitution, passed in 1973 and still in force today, which describes the country as an Islamic, democratic and federal republic."
+  },
+  "shaheen": {
+    "term": "Shaheen",
+    "meaning": "A falcon. Like the shahbaz, a symbol of a bold, sharp-eyed and brave person."
+  },
+  "mukhammas": {
+    "term": "Mukhammas",
+    "meaning": "A poem built from stanzas of five lines."
+  },
+  "eid-moon": {
+    "term": "The Eid moon",
+    "meaning": "Eid begins when the new moon is sighted. 'Eid without the beloved' means even the biggest celebration feels empty without the person you love."
+  },
+  "firaun-musa": {
+    "term": "Pharaoh and Moses",
+    "meaning": "In the Qur'an, Pharaoh (Firaun) is the arrogant tyrant of Egypt, and Moses (Musa) is the prophet God sent to stand up to him. God parted the sea (the Nile, in the poet's telling) to save Moses's people and drown Pharaoh's army. 'A new Moses for a new Pharaoh' means a hero to defeat today's tyrants."
+  },
+  "kashmir": {
+    "term": "Kashmir",
+    "meaning": "A region in the Himalayas claimed by both Pakistan and India since 1947. Pakistanis widely see Kashmir's freedom as unfinished business from Partition."
+  },
+  "ghazi": {
+    "term": "Ghazi",
+    "meaning": "A warrior who fights for Islam and comes back alive. It is a title of honour."
+  },
+  "aaqa": {
+    "term": "Aaqa",
+    "meaning": "'Master': a loving title Muslims use for the Prophet Muhammad."
+  },
+  "babri": {
+    "term": "Babri Masjid",
+    "meaning": "A 16th-century mosque in Ayodhya, India, demolished by a Hindu nationalist mob in December 1992. Its destruction caused deep grief and anger among Muslims across South Asia."
+  },
+  "fatwa": {
+    "term": "Fatwa",
+    "meaning": "A ruling or opinion on a question of Islamic law given by a scholar. 'Fatwas of kufr' means declaring other Muslims unbelievers, a practice the poet criticises."
+  },
+  "aseer": {
+    "term": "Aseer Sohlvi",
+    "meaning": "A poet from Faisalabad who wrote this farewell poem when Dr. Ahmad left for Hajj."
+  },
+  "rishvat": {
+    "term": "Rishvat",
+    "meaning": "A bribe: money paid to someone in power to get something unfairly. Islam strongly condemns both giving and taking bribes."
+  },
+  "hilal": {
+    "term": "Hilal",
+    "meaning": "The thin new crescent moon. Sighting it marks the start of Eid."
+  },
+  "rubai": {
+    "term": "Rubai",
+    "meaning": "A four-line poem, often witty or philosophical, in which lines 1, 2 and 4 rhyme."
+  }
+}

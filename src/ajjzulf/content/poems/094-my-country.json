@@ -1,0 +1,219 @@
+{
+  "id": "094-my-country",
+  "pages": [
+    94,
+    95
+  ],
+  "form": "song",
+  "language": "pa",
+  "title": "My country",
+  "titleOriginal": "میرا دیش",
+  "themes": [
+    "homeland"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "prayer"
+    ],
+    "anchors": [
+      7
+    ]
+  },
+  "takeaway": "My country is a picture of paradise, and it's ours to love and look after.",
+  "scene": "A patriotic song with a repeated chorus: 'Eh mera desh jannat di tasveer ae', meaning 'This country of mine is a picture of paradise'. It reads like something children might sing at school on Independence Day.",
+  "couplets": [
+    {
+      "original": [
+        "ایہہ میرا دیش جنت دی تصویر اے",
+        "خلق چاہت محبت دی جاگیر اے"
+      ],
+      "transliteration": [
+        "Eh mera desh jannat di tasveer ae",
+        "Khalq chaahat mohabbat di jaageer ae"
+      ],
+      "translation": [
+        "This country of mine is a picture of paradise;",
+        "it's a homeland of kindness, affection and love."
+      ],
+      "story": "The chorus: my country looks like a picture of paradise. It's a place full of kindness and love."
+    },
+    {
+      "original": [
+        "سب توں دھرتی اے سوہنی میرے دیش دی",
+        "مہک سب توں نیاری میرے دیش دی"
+      ],
+      "transliteration": [
+        "Sab ton dharti ae sohni mere desh di",
+        "Mehak sab ton niaari mere desh di"
+      ],
+      "translation": [
+        "My country's land is the most beautiful of all;",
+        "my country's fragrance is unlike any other."
+      ],
+      "story": "His country's land is the most beautiful, and it has a smell all of its own."
+    },
+    {
+      "original": [
+        "ایہدی مٹی دی وکھری تاثیر اے",
+        "ایہہ میرا دیش جنت دی تصویر اے"
+      ],
+      "transliteration": [
+        "Ehdi mitti di vakhri taaseer ae",
+        "Eh mera desh jannat di tasveer ae"
+      ],
+      "translation": [
+        "Its soil has a special power of its own.",
+        "This country of mine is a picture of paradise."
+      ],
+      "story": "There's something special about its soil. (Chorus.)"
+    },
+    {
+      "original": [
+        "میرے دیش دا جواب نئیں جہان تے",
+        "اس دیش نوں مان اپنے جوان تے"
+      ],
+      "transliteration": [
+        "Mere desh da jawaab nahin jahaan te",
+        "Is desh nu maan apne javaan te"
+      ],
+      "translation": [
+        "There's nothing in the world to match my country;",
+        "this country is proud of its young people."
+      ],
+      "story": "Nothing in the world compares to his country, and the country is proud of its young people."
+    },
+    {
+      "original": [
+        "ایہدی عظمت بنی ساڈی توقیر اے",
+        "ایہہ میرا دیش جنت دی تصویر اے"
+      ],
+      "transliteration": [
+        "Ehdi azmat bani saadi tauqeer ae",
+        "Eh mera desh jannat di tasveer ae"
+      ],
+      "translation": [
+        "Its greatness has become our honour.",
+        "This country of mine is a picture of paradise."
+      ],
+      "story": "The country's greatness is what gives its people their dignity. (Chorus.)"
+    },
+    {
+      "original": [
+        "ایہدے رکھاں تے فصلاں تے ساوا رنگ اے",
+        "ایس دیش دی مٹی بڑی اکسیر اے"
+      ],
+      "transliteration": [
+        "Ehde rukkhaan te faslaan te saava rang ae",
+        "Is desh di mitti bari akseer ae"
+      ],
+      "translation": [
+        "Its trees and crops are green;",
+        "the soil of this country is a magic cure."
+      ],
+      "story": "Its trees and fields are green, and its soil is so good it's almost magical."
+    },
+    {
+      "original": [
+        "ایتھے لگن بہاراں دے میلے سدا",
+        "تا قیامت ایہنوں رکھے قائم خدا"
+      ],
+      "transliteration": [
+        "Ethe lagan bahaaraan de mele sada",
+        "Taa qiyaamat ehnu rakkhe qaaim Khuda"
+      ],
+      "translation": [
+        "May spring festivals always be held here;",
+        "may God keep it standing until the end of time."
+      ],
+      "story": "May the country always be full of spring and celebration, and may God keep it safe until the end of the world."
+    },
+    {
+      "original": [
+        "ایہہ ساڈے ارماناں دی جاگیر اے",
+        "ساری ملت اس توں قربان ہے"
+      ],
+      "transliteration": [
+        "Eh saade armaanaan di jaageer ae",
+        "Saari millat is ton qurbaan hai"
+      ],
+      "translation": [
+        "It is the estate of all our hopes;",
+        "the whole nation would give everything for it."
+      ],
+      "story": "It's where all their dreams live, and the whole nation would give anything for it."
+    },
+    {
+      "original": [
+        "ایہہ دھرتی پیاری پاکستان ہے",
+        "اسی رانجھے ایہدے ساڈی ایہہ ہیر اے"
+      ],
+      "transliteration": [
+        "Eh dharti pyaari Pakistan hai",
+        "Asi Raanjhe ehde, saadi eh Heer ae"
+      ],
+      "translation": [
+        "This beloved land is Pakistan;",
+        "we are its Ranjhas, and it is our Heer."
+      ],
+      "story": "This beloved land is Pakistan. Then a lovely image: we are like Ranjha, the famous lover, and our country is our Heer, the one we love."
+    },
+    {
+      "original": [
+        "ایہدے جشن آزادی مناندے رہیے",
+        "وانگ جنت ایہہ گلشن سجاندے رہیے"
+      ],
+      "transliteration": [
+        "Ehde jashn-e-azaadi manaande rahiye",
+        "Vaang jannat eh gulshan sajaande rahiye"
+      ],
+      "translation": [
+        "Let's keep celebrating its Independence Day;",
+        "let's keep decorating this garden like paradise."
+      ],
+      "story": "Let's keep celebrating our independence, and keep making our country as beautiful as paradise."
+    },
+    {
+      "original": [
+        "شاعر مشرق دے خواباں دی تعبیر اے",
+        "ایہدا پرچم میں احمدؔ جھلاندا رواں"
+      ],
+      "transliteration": [
+        "Shaair-e-Mashriq de khwaabaan di taabeer ae",
+        "Ehda parcham main Ahmad jhulaanda ravaan"
+      ],
+      "translation": [
+        "It is the dream of the Poet of the East come true.",
+        "May I, Ahmad, keep waving its flag."
+      ],
+      "story": "Pakistan is the dream of Iqbal, 'the Poet of the East', come true. The poet wants to keep waving its flag forever."
+    },
+    {
+      "original": [
+        "ایہدی چاہت دے نغمے سناندا رواں",
+        "ساڈے قائد نے بخشی ایہہ جاگیر اے"
+      ],
+      "transliteration": [
+        "Ehdi chaahat de naghme sunaanda ravaan",
+        "Saade Quaid ne bakhshi eh jaageer ae"
+      ],
+      "translation": [
+        "May I keep singing songs of love for it.",
+        "Our Leader gave us this homeland as a gift."
+      ],
+      "story": "He wants to keep singing songs about how much he loves it. This homeland was a gift from Jinnah, their great leader."
+    }
+  ],
+  "deeper": "Mostly a love song for Pakistan. Faith appears in one prayer: 'may God keep it standing until the end of time'. Calling the country 'our Heer' borrows the great Sufi love story, but here it is about loving a homeland, not about God.",
+  "why": "A simple, joyful patriotic song. The line 'we are its Ranjhas and it is our Heer' connects love of country to Punjab's greatest love story.",
+  "prompt": "What do you love most about the place you come from?",
+  "glossary": [
+    "heer-ranjha",
+    "iqbal",
+    "jinnah",
+    "qiyamat"
+  ],
+  "notes": [
+    "The chorus line is repeated after each verse in the book; here it is shown only where it falls in the couplet pairs."
+  ]
+}

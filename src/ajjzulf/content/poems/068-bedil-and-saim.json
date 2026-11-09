@@ -1,0 +1,99 @@
+{
+  "id": "068-bedil-and-saim",
+  "pages": [
+    68
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Two poet friends: Bedil and Saim",
+  "themes": [
+    "tribute"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "passing",
+      "service"
+    ],
+    "anchors": [
+      4
+    ]
+  },
+  "takeaway": "Good friends and good poets leave light behind them.",
+  "scene": "Two short four-line tributes to poets from Dr. Ahmad's own circle of friends. The first is Syed Imdad Ali Bedil Kanpuri. The second is Allama Haji Muhammad Ibrahim Saim Chishti of Faisalabad, who has passed away.",
+  "couplets": [
+    {
+      "original": [
+        "بیدلؔ دلاں نوں بخش سرور دیندا اپنے شعراں تے طرز بیانی دے نال",
+        "جان محفل دی ادب دا جو خادم شعر کہندا اے بڑی روانی دے نال"
+      ],
+      "transliteration": [
+        "Bedil dilaan nu bakhsh suroor denda apne shairaan te tarz-e-bayaani de naal",
+        "Jaan mehfil di, adab da jo khaadim, shair kehnda ae bari ravaani de naal"
+      ],
+      "translation": [
+        "Bedil fills hearts with joy through his verses and his way of speaking.",
+        "The life of every gathering, a servant of literature, he recites his poems with great flow."
+      ],
+      "story": "Bedil makes people happy with his poems and the way he reads them. He's the life of every poetry evening, and his lines flow easily."
+    },
+    {
+      "original": [
+        "حق گو خلوص دا ہے پیکر کھولے گنجلاں بڑی آسانی دے نال",
+        "چن چودھویں دا احمدؔ یار بیدلؔ ملے یاراں نوں خندہ پیشانی دے نال"
+      ],
+      "transliteration": [
+        "Haq-go, khuloos da hai paikar, khole gunjhlaan bari aasaani de naal",
+        "Chann chaudhveen da Ahmad yaar Bedil, mile yaaraan nu khanda-peshaani de naal"
+      ],
+      "translation": [
+        "He speaks the truth and is sincerity itself; he untangles knots with great ease.",
+        "Ahmad, my friend Bedil is a full moon; he greets his friends with a smiling face."
+      ],
+      "story": "He's honest and sincere, and he can solve tricky problems easily. Ahmad calls him a full moon, because he always greets his friends with a big smile."
+    },
+    {
+      "original": [
+        "صائمؔ سی محبوب دلاں دا پا گیا یار جدائیاں",
+        "شہر ادب دیاں سنجیاں گلیاں محفلاں دین دوہائیاں"
+      ],
+      "transliteration": [
+        "Saim si mehboob dilaan da, paa gaya yaar judaaiyaan",
+        "Shehar-e-adab diyaan sunjiyaan galiyaan, mehfilaan den duhaaiyaan"
+      ],
+      "translation": [
+        "Saim was the beloved of hearts, and now my friend has left us.",
+        "The streets of the city of literature are empty, and the gatherings cry out in grief."
+      ],
+      "story": "Saim was loved by everyone, and now he has died. The literary world feels like an empty city, and the poetry gatherings are crying out for him."
+    },
+    {
+      "original": [
+        "صائمؔ دے شہ پارے روشن پھیل گئیاں رشنائیاں",
+        "سدا دی احمدؔ پان حیاتی کرن جو نیک کمائیاں"
+      ],
+      "transliteration": [
+        "Saim de sheh-paare roshan, phail gaiyaan rushnaaiyaan",
+        "Sada di Ahmad paan hayaati karan jo nek kamaaiyaan"
+      ],
+      "translation": [
+        "Saim's masterpieces shine, and their light has spread everywhere.",
+        "Ahmad, those who earn by doing good gain everlasting life."
+      ],
+      "story": "Saim's best poems still shine and spread light. Ahmad says that people who spend their lives doing good live forever."
+    }
+  ],
+  "deeper": "'Those who earn by doing good gain everlasting life' is the faith that runs through the book's tributes: good deeds and good words outlive the person.",
+  "why": "These short tributes show the poet as part of a real community of writers and friends, not working alone.",
+  "prompt": "Who in your life makes every gathering better just by being there?",
+  "glossary": [
+    "qita",
+    "bedil-kanpuri",
+    "saim-chishti",
+    "mehfil",
+    "haq"
+  ],
+  "notes": [
+    "Two separate four-line tributes, stored together because they share a page and a purpose."
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "id": "043-thats-what-people-do",
+  "pages": [
+    43,
+    44
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "That's what people do",
+  "themes": [
+    "society",
+    "love"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "service"
+    ],
+    "anchors": [
+      6,
+      10
+    ]
+  },
+  "takeaway": "People can be cruel to those who were kindest to them. Be kind anyway.",
+  "scene": "Every couplet ends with 'jaande nain lok', which means 'that's what people do'. The poet looks honestly at how people behave: toward the beloved, toward their friends, and toward him.",
+  "couplets": [
+    {
+      "original": [
+        "چناں چن نوں ویکھ اکثر ہوش گوا جاندے نیں لوک",
+        "اپنے گل وچ موت دی پھاہی آپے پا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Channa, chann nu vekh aksar hosh gava jaande nain lok",
+        "Apne gal vich maut di phaahi aape pa jaande nain lok"
+      ],
+      "translation": [
+        "My moon, people often lose their senses looking at the moon;",
+        "people put the noose of death around their own necks."
+      ],
+      "story": "People see something beautiful, like the moon, and lose their heads. Sometimes they walk right into danger on their own."
+    },
+    {
+      "original": [
+        "اپنا سینہ ڈھال بنا کے سہندے وار اوہ تیراں دے",
+        "تیرے اک اشارے اتے جان لٹا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Apna seena dhaal bana ke sehnde vaar oh teeraan de",
+        "Tere ik ishaare utte jaan luta jaande nain lok"
+      ],
+      "translation": [
+        "Making their own chests into shields, they take the arrows' blows;",
+        "at one sign from you, people throw away their lives."
+      ],
+      "story": "Some people use their own bodies as shields and take the arrows. If the Beloved gives just one small sign, they'll give up their lives."
+    },
+    {
+      "original": [
+        "اسی کسے نوں کجھ نئیں کہنا اسی کسے دا کجھ نئیں لیندے",
+        "فیر وی کھبیاں سٹاں ساڈے دل تے لا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Asi kise nu kujh nahin kehna, asi kise da kujh nahin lainde",
+        "Pher vi khubbiyaan sattaan saade dil te la jaande nain lok"
+      ],
+      "translation": [
+        "I don't say anything to anyone, I don't take anything from anyone,",
+        "and still people land deep wounds on my heart."
+      ],
+      "story": "He minds his own business. He doesn't bother anyone and doesn't take anything from anyone. People still find ways to hurt him deeply."
+    },
+    {
+      "original": [
+        "نال محبت اوہدی میرے زخم جدوں وی آٹھر جان",
+        "حسدوں بغضوں قہروں غضبوں فیر دکھا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Naal mohabbat ohdi mere zakhm jadon vi aathar jaan",
+        "Hasdon bughzon qehron ghazabon pher dukha jaande nain lok"
+      ],
+      "translation": [
+        "Whenever my wounds begin to heal with the beloved's love,",
+        "out of jealousy, spite and fury, people hurt me all over again."
+      ],
+      "story": "Every time love starts to heal his wounds, people get jealous and angry, and hurt him all over again."
+    },
+    {
+      "original": [
+        "اینان سوہنیاں بھولیاں بھالیاں شکلاں اتے وس نہ جانا",
+        "سینے لا کے مست بنا کے فیر رلا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Inaan sohniyaan bholiyaan bhaaliyaan shaklaan utte vas na jaana",
+        "Seene la ke mast bana ke pher rula jaande nain lok"
+      ],
+      "translation": [
+        "Don't fall for these sweet, innocent-looking faces:",
+        "people hug you close, make you giddy, and then leave you crying."
+      ],
+      "story": "He warns: don't trust a sweet, innocent face too quickly. Some people hug you, make you feel amazing, and then leave you in tears."
+    },
+    {
+      "original": [
+        "اسی جنہاں دی خیر خیریت ہتھ اٹھا کے منگدے رہے",
+        "اوہو ساڈے دم دے ویری ویر کما جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Asi jinhaan di khair khairiyat hatth utha ke mangde rahe",
+        "Oho saade dam de vairi vair kama jaande nain lok"
+      ],
+      "translation": [
+        "The very people I prayed for, raising my hands for their wellbeing,",
+        "become my mortal enemies and earn my hostility."
+      ],
+      "story": "He used to raise his hands in prayer and ask God to keep certain people safe. Those same people turned into his worst enemies."
+    },
+    {
+      "original": [
+        "ساڈی بغل چہ بہہ کے جیہڑے عہد وفا نوں دہراون",
+        "غیراں نال اوہناں دے قصے روز سنا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Saadi baghal ch beh ke jehre ahd-e-vafa nu dohraavan",
+        "Ghairaan naal ohnaan de qisse roz suna jaande nain lok"
+      ],
+      "translation": [
+        "Those who sit right beside me, repeating their vows of loyalty,",
+        "people tell me stories every day of how they carry on with others."
+      ],
+      "story": "Some people sit right next to him promising to be loyal. Every day, other people come and tell him how those same 'friends' are betraying him behind his back."
+    },
+    {
+      "original": [
+        "جنہاں دی خاطر ہس ہس کے میں درداں نوں سہ جانا سکھیا",
+        "کیہ ہویا جے اوہو کاری زخم لگا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Jinhaan di khaatir has has ke main dardaan nu seh jaana sikhiya",
+        "Ki hoya je oho kaari zakhm laga jaande nain lok"
+      ],
+      "translation": [
+        "For their sake I learned to bear pain with a smile;",
+        "so what if those same people deal me a deadly wound?"
+      ],
+      "story": "He learned to smile through pain for the sake of certain people. Now they're the ones hurting him the most. He shrugs: so be it."
+    },
+    {
+      "original": [
+        "میں کسے نوں دوش نئیں دیندا ایہہ ریت زمانے دی",
+        "اوکھی بھیڑ بنے جس ویلے اکھ چرا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Main kise nu dosh nahin denda, eh reet zamaane di",
+        "Aukhi bheer bane jis vele akh chura jaande nain lok"
+      ],
+      "translation": [
+        "I don't blame anyone; this is just the way of the world:",
+        "when hard times come, people look away."
+      ],
+      "story": "He decides not to blame anyone. That's just how the world works. When things get hard, people pretend not to see you."
+    },
+    {
+      "original": [
+        "میں ہاں بوہڑ پرانا اوہو لوکاں نوں چھاں دیندا رہیا",
+        "ہن ایہہ ٹاہنے میرے کٹ کے اگ جلا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Main haan bohar puraana, oho lokaan nu chhaan denda rehiya",
+        "Hun eh taahne mere katt ke agg jala jaande nain lok"
+      ],
+      "translation": [
+        "I'm that old banyan tree that kept giving people shade;",
+        "now people cut my branches and burn them for firewood."
+      ],
+      "story": "This is the most moving line. He compares himself to an old banyan tree that gave shade to everyone for years. Now the same people are chopping off his branches to burn for firewood."
+    },
+    {
+      "original": [
+        "احمدؔ ایس زمانے کولوں کد تک بچیا رہ سکدا اسی",
+        "ایہہ مدھ بھریاں اکھیاں والے مست بنا جاندے نیں لوک"
+      ],
+      "transliteration": [
+        "Ahmad is zamaane kolon kad tak bachiya reh sakda si",
+        "Eh madh bhariyaan akhiyaan vaale mast bana jaande nain lok"
+      ],
+      "translation": [
+        "Ahmad, how long could I have stayed safe from this world?",
+        "These people with intoxicating eyes leave you dizzy and lost."
+      ],
+      "story": "He ends with a smile. How long could he have stayed out of trouble? There are people with eyes so beautiful they make you dizzy. Nobody can resist that forever."
+    }
+  ],
+  "deeper": "This poem is mostly about human behaviour, not mysticism. Still, it carries a quiet spiritual lesson: keep doing good even when people repay you with harm. The old banyan tree that keeps giving shade is a picture of someone who goes on serving without expecting thanks, and Islam praises that strongly. Praying for people who later turn against you, and choosing not to blame them, is the forgiveness Sufis aim for.",
+  "why": "Anyone who has been let down by friends will recognise this poem, and the banyan tree image sticks.",
+  "prompt": "Who has been a 'banyan tree' for you, giving shade without asking for anything? How can you thank them?",
+  "glossary": [
+    "ghazal",
+    "bohar"
+  ],
+  "notes": [
+    "Couplet 4: 'aathar jaan' is read as 'begin to heal'."
+  ]
+}

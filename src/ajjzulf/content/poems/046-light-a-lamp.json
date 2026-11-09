@@ -1,0 +1,184 @@
+{
+  "id": "046-light-a-lamp",
+  "pages": [
+    46,
+    47
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Light a lamp of love",
+  "themes": [
+    "love",
+    "sufi",
+    "society"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "self",
+      "justice",
+      "service",
+      "awake"
+    ],
+    "anchors": [
+      3,
+      4,
+      8,
+      9
+    ]
+  },
+  "takeaway": "Light a lamp that brightens every street, and pour other people's pain into your words.",
+  "scene": "The poet gives advice about how to live: spread light, keep your promises, and don't treat other people as slaves. He ends by telling himself what a poet is for.",
+  "couplets": [
+    {
+      "original": [
+        "گلی گلی رشنائیاں ہوون جس دے چانن نال",
+        "مہر محبت پیار وفا دا ایسا دیوا بال"
+      ],
+      "transliteration": [
+        "Gali gali rushnaaiyaan hovan jis de chaanan naal",
+        "Mehar mohabbat pyaar vafa da aisa deeva baal"
+      ],
+      "translation": [
+        "Light such a lamp of kindness, love, affection and loyalty",
+        "that its glow brightens every single street."
+      ],
+      "story": "He gives a simple instruction. Light a lamp made of kindness, love and loyalty, and make it so bright that every street in town lights up."
+    },
+    {
+      "original": [
+        "وچھڑن والا وچھڑ کے وی دور دلوں نہ ہووے",
+        "رات دنے پئے اوہدے سفنے پھردے آل دوال"
+      ],
+      "transliteration": [
+        "Vichhran vaala vichhar ke vi door dilon na hove",
+        "Raat dine pae ohde supne phirde aal dawaal"
+      ],
+      "translation": [
+        "The one who left, even after leaving, isn't far from the heart;",
+        "night and day, dreams of them keep circling around me."
+      ],
+      "story": "Someone has gone away, but they haven't left his heart. Day and night, he keeps dreaming about them."
+    },
+    {
+      "original": [
+        "عرش ہلاون والیاں کوکاں ہن تے کنیں پین",
+        "کتھے دردونڈاون والے اکھاں کرن سوال"
+      ],
+      "transliteration": [
+        "Arsh hilaavan vaaliyaan kookaan hun te kanneen pain",
+        "Kitthe dard vandaavan vaale, akhaan karan savaal"
+      ],
+      "translation": [
+        "Cries that could shake God's Throne are reaching my ears now.",
+        "Where are the ones who share pain? My eyes keep asking."
+      ],
+      "story": "He can hear people crying out in pain so loudly that it could shake heaven. His eyes keep searching: where are the people who are supposed to help carry that pain?"
+    },
+    {
+      "original": [
+        "اساں انا دا ماتم کیتا ہویا حال سودائیاں",
+        "توں وی پھوک حیا دا پردہ قولاں دی لج پال"
+      ],
+      "transliteration": [
+        "Asaan ana da maatam keeta, hoya haal saudaaiyaan",
+        "Toon vi phook hayaa da parda, qaulaan di lajj paal"
+      ],
+      "translation": [
+        "I've mourned the death of my ego and become like a madman.",
+        "You too, burn the veil of shyness and honour your promises."
+      ],
+      "story": "He has let go of his pride. He has 'buried' it, and now he looks like a crazy man. He asks the Beloved to do the same: drop the shyness and keep the promises they made."
+    },
+    {
+      "original": [
+        "کالیاں راتاں چانن بن جان چاہڑنواں چن کوئی",
+        "ایہہ کم تینوں کرنا پینا اپنا جھگا بال"
+      ],
+      "transliteration": [
+        "Kaaliyaan raataan chaanan ban jaan, chaarhnaa vaan chann koi",
+        "Eh kam tainu karna paina, apna jhugga baal"
+      ],
+      "translation": [
+        "For the dark nights to turn to light, some moon has to rise:",
+        "you'll have to do this yourself, even if it means burning down your own hut."
+      ],
+      "story": "For the darkness to end, someone has to bring the light. That someone is you. Even if it costs you everything, even your own home."
+    },
+    {
+      "original": [
+        "وچ رنداں دے بھرم رہ جاوے اج تے ساقی میرا",
+        "اپنے حسن جمال دا صدقہ دے کوئی جام ہنگال"
+      ],
+      "transliteration": [
+        "Vich rindaan de bharam reh jaave, ajj te saaqi mera",
+        "Apne husn jamaal da sadqa de koi jaam hangaal"
+      ],
+      "translation": [
+        "Today, my saqi, so I'm not shamed in front of the free spirits,",
+        "pour me a cup as charity, for the sake of your own beauty."
+      ],
+      "story": "He asks the saqi for one cup today, so he isn't embarrassed in front of everyone at the gathering. He asks for it as charity, for the sake of the saqi's own beauty."
+    },
+    {
+      "original": [
+        "اسماناں تے اڈیاں پھردیاں گرجاں نظریں آن",
+        "دھرتی دے کس خطے اندر پے گیا لوکو کال"
+      ],
+      "transliteration": [
+        "Asmaanaan te udiyaan phirdiyaan girjhaan nazreen aan",
+        "Dharti de kis khitte andar pai gaya loko kaal"
+      ],
+      "translation": [
+        "I can see vultures circling in the skies.",
+        "People, in what part of the earth has famine struck?"
+      ],
+      "story": "He looks up and sees vultures circling. Somewhere, people must be starving and dying. He asks: where? Who is suffering?"
+    },
+    {
+      "original": [
+        "بندہ بندے دا کد تیکر رب رہوے گا بنیا",
+        "توڑ دیو رساں دی سولی ایہہ پھائیاں ایہہ جال"
+      ],
+      "transliteration": [
+        "Banda bande da kad teekar Rab rahve ga baniya",
+        "Tor deo rassaan di sooli, eh phaaiyaan, eh jaal"
+      ],
+      "translation": [
+        "How long will one human being go on acting as another's god?",
+        "Break the gallows of ropes, these nooses, these nets."
+      ],
+      "story": "This is the boldest line. How long will powerful people act like gods over others? He calls on everyone to smash the ropes, nooses and traps that keep people under control."
+    },
+    {
+      "original": [
+        "احمدؔ امر حیاتی چاہویں دل وچ درد سمو",
+        "سوز گداز لوکاں دے دکھڑے شعراں دے وچ ڈھال"
+      ],
+      "transliteration": [
+        "Ahmad amar hayaati chaahveen, dil vich dard samo",
+        "Soz gudaaz lokaan de dukhre shairaan de vich dhaal"
+      ],
+      "translation": [
+        "Ahmad, if you want everlasting life, take pain into your heart:",
+        "melt down people's sorrows and pour them into your verses."
+      ],
+      "story": "He ends by telling himself what a poet's job is. If you want to live forever, Ahmad, let other people's pain into your heart. Then turn their sorrows into poems."
+    }
+  ],
+  "deeper": "'How long will one human being act as another's god?' is a direct echo of the heart of Islam's teaching on tawhid, the oneness of God. Only God is God, so no person has the right to rule others like a lord. That makes this as much a spiritual protest as a political one.\n\nThe first couplet, a lamp of love that lights every street, and the last, taking people's pain into your heart, describe the Sufi ideal of service. Love for God shows itself in love for His creatures, and 'everlasting life' comes from that, not from fame.\n\n'I've mourned the death of my ego' is about consciousness. Something in him has died, the proud self, and he grieves it like a death. Sufis say this is the death you die before you die.",
+  "why": "It joins love, faith and justice in one poem, and its closing line explains why poets write.",
+  "prompt": "What is one small 'lamp' you could light that would make your street, school or home a little brighter?",
+  "glossary": [
+    "ghazal",
+    "arsh",
+    "saudai",
+    "saqi",
+    "rind",
+    "jamal"
+  ],
+  "notes": [
+    "Couplet 4: 'ana da maatam keeta' (mourned the ego) is the poet's Sufi image of the ego's death.",
+    "Couplet 8: 'banda bande da Rab' (a human being as another's god) is a strong statement of tawhid."
+  ]
+}

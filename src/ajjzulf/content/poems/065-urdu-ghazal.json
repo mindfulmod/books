@@ -1,0 +1,162 @@
+{
+  "id": "065-urdu-ghazal",
+  "pages": [
+    65
+  ],
+  "form": "ghazal",
+  "language": "ur",
+  "title": "Every poem is about you",
+  "titleOriginal": "غزل (اردو)",
+  "themes": [
+    "love",
+    "sufi"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "longing",
+      "nearness"
+    ],
+    "anchors": [
+      2,
+      6,
+      7
+    ]
+  },
+  "takeaway": "Love may be a bad bargain, but it's the only one worth making.",
+  "scene": "This ghazal is in Urdu, not Punjabi. It's softer and more polished in tone. The poet admits that all his poetry comes from one source: his love and the pain of being apart.",
+  "couplets": [
+    {
+      "original": [
+        "مری سانسوں کو اس کے پیار کا کتنا سہارا ہے",
+        "مری آنکھوں سے اوجھل ہو مجھے یہ کب گوارا ہے"
+      ],
+      "transliteration": [
+        "Meri saanson ko us ke pyaar ka kitna sahaara hai",
+        "Meri aankhon se ojhal ho, mujhe yeh kab gawaara hai"
+      ],
+      "translation": [
+        "How much my very breathing leans on that love!",
+        "When could I ever bear for you to vanish from my sight?"
+      ],
+      "story": "His every breath depends on the Beloved's love. He can't stand the thought of them disappearing from view."
+    },
+    {
+      "original": [
+        "رکی نبضیں نہ کیونکر تیز ہوں بیمار ہجراں کی",
+        "میخانے نے ہی کیا نبضوں کو چلنے کا اشارہ ہے"
+      ],
+      "transliteration": [
+        "Ruki nabzen na kyunkar tez hon beemaar-e-hijraan ki",
+        "Maikhaane ne hi kiya nabzon ko chalne ka ishaara hai"
+      ],
+      "translation": [
+        "Why shouldn't the stopped pulse of one sick with separation race again?",
+        "It's the tavern itself that signalled the pulse to start beating."
+      ],
+      "story": "He was so sick with missing the Beloved that his pulse had almost stopped. Then the 'tavern', the gathering of love, gave his heart the signal to start beating again."
+    },
+    {
+      "original": [
+        "شب ہجراں میں گزرے ہیں جو لمحے کرب کے اکثر",
+        "بظاہر میں نے ہنس ہنس کر وہ ہر لمحہ گزارا ہے"
+      ],
+      "transliteration": [
+        "Shab-e-hijraan mein guzre hain jo lamhe karb ke aksar",
+        "Bazaahir main ne hans hans kar woh har lamha guzaara hai"
+      ],
+      "translation": [
+        "All the moments of agony in the nights of separation,",
+        "on the outside I got through each one of them laughing."
+      ],
+      "story": "Through every painful lonely night, he put on a smile. On the outside, he laughed his way through."
+    },
+    {
+      "original": [
+        "محبت اک شعلہ ہے بچا لو اس سے دامن کو",
+        "وہی سودا کیا میں نے سدا جس میں خسارہ ہے"
+      ],
+      "transliteration": [
+        "Mohabbat ik shola hai, bacha lo is se daaman ko",
+        "Wohi sauda kiya main ne sada jis mein khasaara hai"
+      ],
+      "translation": [
+        "Love is a flame; keep your clothes away from it.",
+        "I made exactly the deal that always ends in loss."
+      ],
+      "story": "He warns that love is a fire, so keep your distance or you'll catch alight. Then he admits he did the opposite. He made the one deal that always loses."
+    },
+    {
+      "original": [
+        "میں ہوں فنکار تیرے حسن تک محدود سوچوں کا",
+        "ترے ہی شعر لکھ کر غزل کو بس نکھارا ہے"
+      ],
+      "transliteration": [
+        "Main hoon fankaar tere husn tak mehdood sochon ka",
+        "Tere hi sher likh kar ghazal ko bas nikhaara hai"
+      ],
+      "translation": [
+        "I'm an artist whose thoughts reach no further than your beauty;",
+        "I've polished the ghazal only by writing verses about you."
+      ],
+      "story": "He calls himself an artist with only one subject: the Beloved's beauty. Every good poem he wrote was about them."
+    },
+    {
+      "original": [
+        "میرے ہر شعر میں ہجر و محبت کی کہانی ہے",
+        "صحیفہ پیار کا کس نے تیرے دل پر اتارا ہے"
+      ],
+      "transliteration": [
+        "Mere har sher mein hijr-o-mohabbat ki kahaani hai",
+        "Saheefa pyaar ka kis ne tere dil par utaara hai"
+      ],
+      "translation": [
+        "Every verse of mine tells a story of separation and love.",
+        "Who sent down a scripture of love upon your heart?"
+      ],
+      "story": "Every line he writes tells the same story of love and being apart. He wonders who sent down such a holy book of love onto the Beloved's heart."
+    },
+    {
+      "original": [
+        "ہوا جب بھی ہلاتی ہے میرے خستہ کواڑوں کو",
+        "گماں مجھ کو یہ ہوتا ہے مجھے تم نے پکارا ہے"
+      ],
+      "transliteration": [
+        "Hawa jab bhi hilaati hai mere khasta kiwaaron ko",
+        "Gumaan mujh ko yeh hota hai mujhe tum ne pukaara hai"
+      ],
+      "translation": [
+        "Whenever the wind rattles my worn-out doors,",
+        "I imagine it's you calling for me."
+      ],
+      "story": "Every time the wind shakes his old, worn doors, he thinks it might be the Beloved knocking and calling his name."
+    },
+    {
+      "original": [
+        "میں خوشیاں اپنے حصے کی کروں تقسیم لوگوں میں",
+        "بتا گردش میں پھر احمدؔ کیوں تیرا ستارہ ہے"
+      ],
+      "transliteration": [
+        "Main khushiyaan apne hisse ki karoon taqseem logon mein",
+        "Bata gardish mein phir Ahmad kyun tera sitaara hai"
+      ],
+      "translation": [
+        "I share out my own portion of happiness among people;",
+        "so tell me, Ahmad, why is your star still caught in bad luck?"
+      ],
+      "story": "He gives away his own happiness to other people. So he asks himself why his luck is still so bad."
+    }
+  ],
+  "deeper": "'Who sent down a scripture of love upon your heart?' uses the word for revelation (sahifa, 'utaara'), the language used for holy books sent down by God. It's a bold way of saying love itself is a kind of sacred message. The image of the wind rattling the door and the poet thinking 'you are calling me' is the seeker's constant listening for God's call.",
+  "why": "It shows the poet could write in Urdu as well as Punjabi, and its image of the wind at the door is simple and haunting.",
+  "prompt": "Is there something you're always 'listening for', a call or a message you hope will come?",
+  "glossary": [
+    "ghazal",
+    "maikhana",
+    "daaman",
+    "sahifa"
+  ],
+  "notes": [
+    "This is the only ghazal in the book that is labelled as Urdu. The top lines of the photo are slightly blurry, but readable."
+  ]
+}

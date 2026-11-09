@@ -25,7 +25,10 @@ const inner = 'inner-dimensions-of-the-prayer.html';
 assert.equal(readFileSync(path.join('dist',inner),'utf8'),readFileSync(path.join('public',inner),'utf8'),'The shipped prayer companion must match the checked source.');
 const seedsHtml=readFileSync('dist/timeless-seeds.html','utf8');
 for (const [,url] of seedsHtml.matchAll(/(?:src|href)="(\/books\/assets\/[^"\s]+)"/g)) assert(existsSync(path.join('dist',url.slice('/books/'.length))),`Missing Seeds asset ${url}`);
-console.log('Verified the Inner Dimensions delivery and Timeless Seeds entry assets.');
+const zulfHtml=readFileSync('dist/ajj-zulf/index.html','utf8');
+for (const [,url] of zulfHtml.matchAll(/(?:src|href)="(\/books\/assets\/[^"\s]+)"/g)) assert(existsSync(path.join('dist',url.slice('/books/'.length))),`Missing Ajj Zulf asset ${url}`);
+for (const file of ['lamp.svg','cover-day.svg','cover-night.svg','icon.svg']) assert(existsSync(path.join('dist/assets/ajj-zulf',file)),`Missing Ajj Zulf art ${file}`);
+console.log('Verified the Inner Dimensions delivery, Timeless Seeds and Ajj Zulf entry assets.');
 
 const fontRoot = 'dist/assets/reading-fonts';
 const fontCss = readFileSync(path.join(fontRoot, 'fonts.css'), 'utf8');
@@ -35,9 +38,9 @@ for (const [, file] of fontCss.matchAll(/url\(\.\/([^\)]+)\)/g)) {
   assert.equal(bytes.subarray(0, 4).toString(), 'wOF2', `Invalid font ${file}`);
 }
 for (const family of ['dmsans', 'instrumentserif', 'notonaskharabic']) assert(readFileSync(path.join(fontRoot, `${family}-OFL.txt`), 'utf8').includes('SIL OPEN FONT LICENSE'), `Missing license for ${family}`);
-for (const page of [html, seedsHtml, readFileSync(path.join('dist', inner), 'utf8')]) {
+for (const page of [html, seedsHtml, zulfHtml, readFileSync(path.join('dist', inner), 'utf8')]) {
   assert(page.includes('assets/reading-fonts/fonts.css'), 'Every reader must load the local font stylesheet.');
   assert(!/fonts\.(googleapis|gstatic)\.com/.test(page), 'Reader entry still depends on a remote font request.');
 }
 for (const file of ['rosette.svg', 'eightfold-border.svg', 'provenance.json']) assert(existsSync(path.join('dist/assets/reading-geometry', file)), `Missing reading ornament ${file}`);
-console.log('Verified local font files, licenses, all three font entry points, and geometric ornament assets.');
+console.log('Verified local font files, licenses, all four font entry points, and geometric ornament assets.');

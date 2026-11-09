@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Ajj Zulf Sanwari Jani Ae: Punjabi ghazals about love, longing and God by Dr. Muhammad Ahmad Tabassum, retold in plain English with the original Shahmukhi text." />
+    <meta name="theme-color" content="#f7f0e3" />
+    <meta property="og:title" content="Ajj Zulf Sanwari Jani Ae · MindfulMod" />
+    <meta property="og:description" content="101 Punjabi poems about love, longing and God, retold in plain English, with the original lines one tap away." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mindfulmod.github.io/books/ajj-zulf/" />
+    <link rel="canonical" href="https://mindfulmod.github.io/books/ajj-zulf/" />
+    <link rel="icon" href="/assets/ajj-zulf/icon.svg" type="image/svg+xml" />
+    <script>
+      (() => {
+        let choice = null;
+        try { choice = localStorage.getItem('mindfulmod-ajjzulf-appearance-v1'); } catch {}
+        const night = choice === 'night' || (choice !== 'day' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.zulfTheme = night ? 'night' : 'day';
+        document.documentElement.style.colorScheme = night ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = night ? '#191726' : '#f7f0e3';
+      })();
+    </script>
+    <style>html[data-zulf-theme="night"]{background:#191726}html[data-zulf-theme="day"]{background:#f7f0e3}</style>
+    <link rel="stylesheet" href="/assets/reading-fonts/fonts.css" />
+    <title>Ajj Zulf Sanwari Jani Ae · MindfulMod</title>
+  </head>
+  <body>
+    <div id="root"><noscript><p>Enable JavaScript to read this companion, or <a href="../">return to the bookshelf</a>.</p></noscript></div>
+    <script type="module" src="/src/ajjzulf/main.tsx"></script>
+  </body>
+</html>

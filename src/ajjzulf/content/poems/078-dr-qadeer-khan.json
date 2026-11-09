@@ -1,0 +1,67 @@
+{
+  "id": "078-dr-qadeer-khan",
+  "pages": [
+    78
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Dr. Qadeer Khan",
+  "titleOriginal": "ڈاکٹر قدیر احمد خاں",
+  "themes": [
+    "tribute",
+    "homeland",
+    "society"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "A nation that turns on its own heroes under outside pressure loses something.",
+  "scene": "A four-line poem about Dr. Abdul Qadeer Khan, the scientist many Pakistanis saw as a national hero. In 2004, under pressure from the United States, he was made to confess on television and placed under house arrest. The poet is angry about how he was treated.",
+  "context": "A poem of its time. It was written at a particular moment in Pakistan's history and uses the political language of that moment. It is translated faithfully so you can see how people spoke then. Translating it is not the same as agreeing with every line. It gives the poet's own view of how Dr. Qadeer Khan was treated in the 2000s.",
+  "couplets": [
+    {
+      "original": [
+        "ساری قوم دا ہیرو ہو گیا زیرو کس گنتی تے کیہڑے حساب آیا",
+        "گھمن گھیریاں وچ ہنیریاں دے ساڈا چمکیا روشن مہتاب آیا"
+      ],
+      "transliteration": [
+        "Saari qaum da hero ho gaya zero, kis ginti te kehre hisaab aaya",
+        "Ghumman gheriyaan vich haneriyaan de saada chamkiya roshan mahtaab aaya"
+      ],
+      "translation": [
+        "The whole nation's hero has been turned into a zero; by what count, by what calculation?",
+        "In the whirlwinds of the dark, he came to us shining like a bright moon."
+      ],
+      "story": "The whole country's hero has suddenly been treated like a nobody. The poet asks: how does that add up? In the nation's darkest times, this man shone like the moon."
+    },
+    {
+      "original": [
+        "ظالم نظر امریکہ دی ہوئی کاری وچ گردشاں شباب آیا",
+        "احمدؔ محسن عظیم قدیر ساڈا کیہڑی گلوں ہے زیرے عتاب آیا"
+      ],
+      "transliteration": [
+        "Zaalim nazar Amreeka di hoi kaari, vich gardishaan shabaab aaya",
+        "Ahmad mohsin-e-azeem Qadeer saada, kehri gallon hai zer-e-itaab aaya"
+      ],
+      "translation": [
+        "America's cruel eye struck hard, and the prime of his life fell into misfortune.",
+        "Ahmad, our great benefactor Qadeer: for what reason has he come under such wrath?"
+      ],
+      "story": "He blames America's harsh pressure for bringing a great man down in his best years. The poet asks: what did our great benefactor Qadeer do to deserve this anger?"
+    }
+  ],
+  "deeper": "",
+  "why": "It shows how ordinary Pakistanis felt about an event that was big news at the time. It's political poetry, written in the moment.",
+  "prompt": "Can you think of someone who was seen as a hero by some people and a problem by others? How do you decide what's fair?",
+  "glossary": [
+    "qita",
+    "aq-khan",
+    "mohsin",
+    "qaum"
+  ],
+  "notes": [
+    "Reflects the poet's own political view. The app should present it as a historical perspective, not editorial comment."
+  ]
+}

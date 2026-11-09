@@ -1,0 +1,346 @@
+{
+  "id": "102-my-homeland",
+  "pages": [
+    102,
+    103,
+    104
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "My homeland",
+  "titleOriginal": "میرے وطن",
+  "themes": [
+    "homeland"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "justice"
+    ],
+    "anchors": [
+      4,
+      7,
+      14
+    ]
+  },
+  "takeaway": "I will give everything to make my country beautiful, fair and free.",
+  "scene": "A long patriotic poem addressed directly to the homeland, with promises of everything the poet will do for it. Most lines end with 'paini ae', which means 'I must' or 'it has to be done'.",
+  "context": "A poem of its time. It was written at a particular moment in Pakistan's history and uses the political language of that moment. It is translated faithfully so you can see how people spoke then. Translating it is not the same as agreeing with every line. The lines about Kashmir and taking up the sword reflect the poet's era, and 'broken into pieces' most likely means the loss of East Pakistan in 1971.",
+  "couplets": [
+    {
+      "original": [
+        "اے وطن تیرے لئی مینوں جند جان لڑانی پینی اے",
+        "دکھاں دی دنیا ہے جیہڑی گلزار بنانی پینی اے"
+      ],
+      "transliteration": [
+        "Ae vatan tere layi mainu jind jaan laraani paini ae",
+        "Dukhaan di duniya hai jehri gulzaar banaani paini ae"
+      ],
+      "translation": [
+        "O homeland, for you I'll have to risk my very life;",
+        "this world of sorrows has to be turned into a garden."
+      ],
+      "story": "He tells his country: I'm ready to risk my life for you. This world full of suffering has to be turned into a garden."
+    },
+    {
+      "original": [
+        "میرے دیش دے ویرو کٹھے تساں ملک دی شان ودھانی اے",
+        "جیون لئی مرنا پیندا اے تاریخ دہرانی پینی ایں"
+      ],
+      "transliteration": [
+        "Mere desh de veero katthe, tusaan mulk di shaan vadhaani ae",
+        "Jeevan layi marna painda ae, taareekh dohraani paini ain"
+      ],
+      "translation": [
+        "Brothers of my land, together you must raise the country's honour;",
+        "to truly live, one has to be ready to die: history has to be repeated."
+      ],
+      "story": "He calls on his countrymen to work together to make the country proud. To really live, you sometimes have to be ready to sacrifice. They need to repeat the brave history of the past."
+    },
+    {
+      "original": [
+        "غدار وطن وچہ نہ رہسن بدکار وطن وچہ نہ رہسن",
+        "اے دھرتی دھوکے بازاں توں سب پاک کرانی پینی اے"
+      ],
+      "transliteration": [
+        "Ghaddaar vatan vich na rehsan, badkaar vatan vich na rehsan",
+        "Ae dharti dhoke-baazaan ton sab paak karaani paini ae"
+      ],
+      "translation": [
+        "Traitors won't remain in the homeland; wrongdoers won't remain in the homeland.",
+        "This land has to be cleansed of every cheat."
+      ],
+      "story": "There will be no place for traitors or criminals. The country must be cleaned of everyone who cheats it."
+    },
+    {
+      "original": [
+        "جیہڑے قوم وطن دے دشمن نیں پئے پھردے وانگ فرعوناں دے",
+        "اوناں وی آکر شاکٹر سب وچہ خاک ملانی پینی اے"
+      ],
+      "transliteration": [
+        "Jehre qaum vatan de dushman nain, pae phirde vaang Firaunaan de",
+        "Onaan vi aakar shaakar sab vich khaak milaani paini ae"
+      ],
+      "translation": [
+        "Those enemies of nation and homeland who strut around like Pharaohs,",
+        "all their arrogance has to be brought down into the dust."
+      ],
+      "story": "Enemies of the country walk around like Pharaoh, the arrogant tyrant from the Qur'an. Their pride has to be brought down to the ground."
+    },
+    {
+      "original": [
+        "تیرے دردی میرے دردی نیں تیرے ویری میرے ویری نیں",
+        "تیری شان دی خاطر دیس میرے ایہہ قوم جگانی پینی اے"
+      ],
+      "transliteration": [
+        "Tere dardi mere dardi nain, tere vairi mere vairi nain",
+        "Teri shaan di khaatir des mere, eh qaum jagaani paini ae"
+      ],
+      "translation": [
+        "Your friends are my friends; your enemies are my enemies.",
+        "For your honour, my country, this nation has to be woken up."
+      ],
+      "story": "Anyone who cares about the country is his friend. Anyone who hurts it is his enemy. For the country's sake, the people have to wake up."
+    },
+    {
+      "original": [
+        "میں درس محبت دا دے کے تینوں جنت وانگ سجاواں گا",
+        "خوشیاں دی گھر گھر لوکاں نوں فیر عید منانی پینی اے"
+      ],
+      "transliteration": [
+        "Main dars mohabbat da de ke tainu jannat vaang sajaavaan ga",
+        "Khushiyaan di ghar ghar lokaan nu pher Eid manaani paini ae"
+      ],
+      "translation": [
+        "By teaching the lesson of love, I'll decorate you like paradise;",
+        "people in every home will once again celebrate an Eid of happiness."
+      ],
+      "story": "He'll teach people to love each other and make the country as beautiful as paradise. Every family will feel so happy it'll be like Eid in every home."
+    },
+    {
+      "original": [
+        "میری آن توں میری شان توں سچ پوچھیں تے ایمان وی توں",
+        "مینوں جان دی بازی لا کے وی تیری آن بچانی پینی اے"
+      ],
+      "transliteration": [
+        "Meri aan toon, meri shaan toon, sach puchheen te imaan vi toon",
+        "Mainu jaan di baazi la ke vi teri aan bachaani paini ae"
+      ],
+      "translation": [
+        "You are my honour and my pride; truth be told, you're my faith too.",
+        "Even if I have to stake my life, I must protect your honour."
+      ],
+      "story": "His country is his honour, his pride, even part of his faith. He'll protect its honour even if it costs him his life."
+    },
+    {
+      "original": [
+        "لکھ روپ بدل کے پئے آون غدار تیرے میں جاناں گا",
+        "نیکاں تے وطن پرستاں دے ہتھ ڈور پھڑانی پینی اے"
+      ],
+      "transliteration": [
+        "Lakh roop badal ke pae aavan ghaddaar tere, main jaanaan ga",
+        "Neekaan te vatan-parastaan de hatth dor pharaani paini ae"
+      ],
+      "translation": [
+        "Your traitors may come in a hundred thousand disguises, but I'll recognise them.",
+        "The reins must be handed to good people who love their country."
+      ],
+      "story": "Traitors can come in many disguises, but he'll see through them. The country should be run by good people who truly love it."
+    },
+    {
+      "original": [
+        "ظالم دا ظلم مٹاون لئی نالے رشوت خور مکاون لئی",
+        "ایتھے امن دا راج لیاون لئی جند گھول گھمانی پینی اے"
+      ],
+      "transliteration": [
+        "Zaalim da zulm mitaavan layi, naale rishvat-khor mukaavan layi",
+        "Ethe aman da raaj liaavan layi, jind ghol ghumaani paini ae"
+      ],
+      "translation": [
+        "To wipe out the tyrant's cruelty, and to put an end to the bribe-takers,",
+        "to bring the rule of peace here, I have to give my life completely."
+      ],
+      "story": "To end cruelty and corruption, and to bring peace, he's ready to give everything he has."
+    },
+    {
+      "original": [
+        "میں تارے توڑ اسماناں دے تیرے قد میں آن ٹکاواں گا",
+        "میری منزل راہ وچ جو آسی ہر چیز ہٹانی پینی اے"
+      ],
+      "transliteration": [
+        "Main taare tor asmaanaan de tere qad mein aan tikaavaan ga",
+        "Meri manzil raah vich jo aasi har cheez hataani paini ae"
+      ],
+      "translation": [
+        "I'll pluck the stars from the sky and lay them at your feet;",
+        "anything that comes in the way of my goal has to be moved aside."
+      ],
+      "story": "He'll bring the stars down from the sky for his country. Anything that blocks the way will have to be moved."
+    },
+    {
+      "original": [
+        "علم ہنر دا بال کے دیوا گھر گھر چانن کرنا ایں",
+        "دکھ غماں دی گھپ ہنیری رات گوانی پینی اے"
+      ],
+      "transliteration": [
+        "Ilm hunar da baal ke deeva ghar ghar chaanan karna ain",
+        "Dukh ghamaan di ghupp haneri raat gavaani paini ae"
+      ],
+      "translation": [
+        "By lighting the lamp of knowledge and skill, I'll bring light to every home;",
+        "the pitch-dark night of pain and sorrow has to be ended."
+      ],
+      "story": "He'll spread education and skills to every home, like lighting a lamp in each house, and end the long dark night of suffering."
+    },
+    {
+      "original": [
+        "تیرے وَل جو تکے گی اوہ بھیڑی اکھ کڈ دیواں گا",
+        "میں بانکا پاکستان داہاں مینوں شان وکھانی پینی اے"
+      ],
+      "transliteration": [
+        "Tere val jo takke gi oh bheri akh kadh deevaan ga",
+        "Main baanka Pakistan da haan, mainu shaan vikhaani paini ae"
+      ],
+      "translation": [
+        "Any evil eye that looks at you with bad intent, I'll pluck it out.",
+        "I'm a proud young son of Pakistan; I have to show what I'm made of."
+      ],
+      "story": "Anyone who looks at his country with bad intentions will have to deal with him. He's a proud son of Pakistan, and he'll show it."
+    },
+    {
+      "original": [
+        "کشمیر دی ساری دھرتی تے میں جھنڈا تیرا گڈاں گا",
+        "اسلام دا غازی بن کے تے شمشیر اٹھانی پینی اے"
+      ],
+      "transliteration": [
+        "Kashmir di saari dharti te main jhanda tera gaddaan ga",
+        "Islaam da ghaazi ban ke te shamsheer uthaani paini ae"
+      ],
+      "translation": [
+        "I'll plant your flag over all the land of Kashmir;",
+        "becoming a warrior of Islam, I'll have to take up the sword."
+      ],
+      "story": "He dreams of raising Pakistan's flag across all of Kashmir, and says he'd fight for it like a soldier of Islam."
+    },
+    {
+      "original": [
+        "اے وطن اس دھرتی تے کوئی موسیٰ پیدا کرنا ایں",
+        "آج فرعون نوں ڈوبن لئی کوئی نیل چلانی پینی اے"
+      ],
+      "transliteration": [
+        "Ae vatan is dharti te koi Moosa paida karna ain",
+        "Ajj Firaun nu doban layi koi Neel chalaani paini ae"
+      ],
+      "translation": [
+        "O homeland, a Moses must be born on this land;",
+        "to drown today's Pharaoh, some Nile has to be set flowing."
+      ],
+      "story": "The country needs a new Moses, a hero to stand up to today's tyrants, the way God drowned Pharaoh in the Nile."
+    },
+    {
+      "original": [
+        "میں سینہ چیر پہاڑاں دا دریا تے نہراں کڈھاں گا",
+        "اے دھرتی سونا اگلے گی بھکھ ننگ مکانی پینی اے"
+      ],
+      "transliteration": [
+        "Main seena cheer pahaaraan da, dariya te nehraan kadhaan ga",
+        "Ae dharti sona ugle gi, bhukh nang mukaani paini ae"
+      ],
+      "translation": [
+        "I'll split open the mountains' chests and bring out rivers and canals;",
+        "this land will pour out gold; hunger and poverty have to be ended."
+      ],
+      "story": "He'll cut through mountains to bring water to the land with rivers and canals. The land will grow 'gold', rich crops, and end hunger and poverty."
+    },
+    {
+      "original": [
+        "اے وطن تیرے لئی جیناہاں اے وطن تیرے لئی مرنا ایں",
+        "تدبیر تبسم کر کے تے تقدیر بنانی پینی اے"
+      ],
+      "transliteration": [
+        "Ae vatan tere layi jeena haan, ae vatan tere layi marna ain",
+        "Tadbeer Tabassum kar ke te taqdeer banaani paini ae"
+      ],
+      "translation": [
+        "O homeland, I live for you; O homeland, I'll die for you.",
+        "Tabassum, by making a plan and working at it, destiny has to be built."
+      ],
+      "story": "He lives and would die for his country. Then he speaks to himself by name: Tabassum, a future doesn't just happen. You have to plan and work for it."
+    },
+    {
+      "original": [
+        "کی ہویا جے غداراں نے اس وطن دے ٹکڑے کر دتے",
+        "سانوں طارق خالد حیدر دی فیر شان دکھانی پینی اے"
+      ],
+      "transliteration": [
+        "Ki hoya je ghaddaaraan ne is vatan de tukre kar ditte",
+        "Saanu Tariq Khalid Haider di pher shaan dikhaani paini ae"
+      ],
+      "translation": [
+        "So what if traitors have broken this homeland into pieces?",
+        "We'll have to show the glory of Tariq, Khalid and Haider again."
+      ],
+      "story": "Traitors have split the country apart. He is probably thinking of 1971, when East Pakistan became Bangladesh. But they can be as brave as the great heroes of the past again."
+    },
+    {
+      "original": [
+        "میرے وطن دے جی دارو بن غازی وانگو شیر آؤ",
+        "ایہدی آن تے مرنا پیناں اے تاریخ دہرانی پینی اے"
+      ],
+      "transliteration": [
+        "Mere vatan de jee-daaro, ban ghaazi vaango sher aao",
+        "Ehdi aan te marna paina ae, taareekh dohraani paini ae"
+      ],
+      "translation": [
+        "Brave ones of my homeland, come like lions, like warriors!",
+        "We may have to die for its honour; history has to be repeated."
+      ],
+      "story": "He calls on the brave people of his country to step up like lions. They should protect its honour, even if it costs their lives, and repeat the brave history of the past."
+    },
+    {
+      "original": [
+        "مزدور کساںو زردار و مل بیٹھو جھگڑے جان دیؤ",
+        "ہن پاک وطن دی ستی ہوئی تقدیر جگانی پینی اے"
+      ],
+      "transliteration": [
+        "Mazdoor kisaano, zardaaro, mil baitho, jhagre jaan deo",
+        "Hun Paak vatan di sutti hoi taqdeer jagaani paini ae"
+      ],
+      "translation": [
+        "Workers, farmers and wealthy men: sit down together and let your quarrels go.",
+        "Now the sleeping destiny of this pure homeland has to be woken."
+      ],
+      "story": "He asks workers, farmers and rich people to sit down together and stop fighting. Only together can they wake up their country's future."
+    },
+    {
+      "original": [
+        "احمدؔ نے دیس دی الفت دا رنگ وچ تحریر وکھایا اے",
+        "قربانی دے جذبے دی ہن ریت نبھانی پینی اے"
+      ],
+      "transliteration": [
+        "Ahmad ne des di ulfat da rang vich tehreer vikhaaya ae",
+        "Qurbaani de jazbe di hun reet nibhaani paini ae"
+      ],
+      "translation": [
+        "Ahmad has shown the colours of love for his country in writing;",
+        "now the tradition of the spirit of sacrifice has to be kept alive."
+      ],
+      "story": "He ends by saying he has put his love for his country into words. Now people have to live it, by being willing to sacrifice for it."
+    }
+  ],
+  "deeper": "A patriotic poem, best read as history, especially the lines about Kashmir and taking up the sword. Its spiritual images are about justice. The poet wants 'a Moses' to rise and 'drown today's Pharaoh', meaning tyrants and cheats. 'You're my faith too' is a lover's exaggeration about his country, not a claim that the country replaces religion.",
+  "why": "A big-hearted promise to one's country: education, fairness, ending corruption and ending hunger. It also reflects strong feelings of the time, such as about Kashmir.",
+  "prompt": "If you could make one promise to your country or community, what would it be?",
+  "glossary": [
+    "firaun-musa",
+    "kashmir",
+    "ghazi",
+    "qaum",
+    "tariq-khalid-haider"
+  ],
+  "notes": [
+    "Continues across pages 102–104.",
+    "The Kashmir and 'warrior of Islam' lines reflect the poet's era and politics; the app should present them as historical context.",
+    "'Broken into pieces' most likely refers to the separation of East Pakistan (Bangladesh) in 1971."
+  ]
+}
