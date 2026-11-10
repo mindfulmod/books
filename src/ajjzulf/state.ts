@@ -3,8 +3,9 @@ export const STORAGE_KEY = 'mindfulmod-ajjzulf-v1';
 export const APPEARANCE_KEY = 'mindfulmod-ajjzulf-appearance-v1';
 export type Layer = 'story' | 'english' | 'original' | 'aloud';
 export const layers: Layer[] = ['story', 'english', 'original', 'aloud'];
-export type Notebook = { saved: string[]; read: string[]; notes: Record<string, string>; last: string | null; layer: Layer };
-export const emptyNotebook = (): Notebook => ({ saved: [], read: [], notes: {}, last: null, layer: 'story' });
+export type View = 'one' | 'all';
+export type Notebook = { saved: string[]; read: string[]; notes: Record<string, string>; last: string | null; layer: Layer; view: View };
+export const emptyNotebook = (): Notebook => ({ saved: [], read: [], notes: {}, last: null, layer: 'story', view: 'one' });
 
 export function validateNotebook(value: unknown, known: Set<string>): Notebook {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return emptyNotebook();
@@ -17,6 +18,7 @@ export function validateNotebook(value: unknown, known: Set<string>): Notebook {
     saved: ids(v.saved), read: ids(v.read), notes,
     last: typeof v.last === 'string' && known.has(v.last) ? v.last : null,
     layer: layers.includes(v.layer as Layer) ? v.layer as Layer : 'story',
+    view: v.view === 'all' ? 'all' : 'one',
   };
 }
 
