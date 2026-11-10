@@ -8,7 +8,7 @@ import path from 'node:path';
 const root = 'src/ajjzulf/content';
 const glossary = JSON.parse(readFileSync(path.join(root, 'glossary.json'), 'utf8'));
 const levels = ['explicit', 'sufi', 'thread', 'none'];
-const lenses = ['longing', 'nearness', 'self', 'awake', 'passing', 'trust', 'service', 'justice', 'prayer'];
+const lenses = ['longing', 'nearness', 'prophet', 'self', 'awake', 'passing', 'trust', 'service', 'justice', 'prayer'];
 
 const files = readdirSync(path.join(root, 'poems')).filter(f => f.endsWith('.json')).sort();
 const poems = files.map(file => {

@@ -14,7 +14,8 @@
     "level": "explicit",
     "lenses": [
       "self",
-      "trust"
+      "trust",
+      "prophet"
     ],
     "anchors": [
       3,
@@ -68,7 +69,7 @@
         "The beloved's generosity is famous throughout the world:",
         "they fill the beggar's bowl, and no one goes away empty-handed."
       ],
-      "story": "The Beloved is famous everywhere for being generous. Anyone who comes asking gets their bowl filled. No one leaves with nothing."
+      "story": "The Beloved is famous everywhere for being generous. Anyone who comes asking gets their bowl filled. No one leaves with nothing. Punjabi poets often speak of the Prophet ﷺ this way: it was said he never turned anyone away."
     },
     {
       "original": [
@@ -146,7 +147,7 @@
       "story": "He ends with something simple and strong. If you give yourself sincerely to the One, you'll never have to go begging from door to door."
     }
   ],
-  "deeper": "The last couplet is direct: whoever belongs sincerely to 'the One' (ik) is never left begging at other people's doors. In Punjabi Sufi poetry, 'the One' means God. The generous one who never sends a beggar away empty is another clear picture of God, who answers everyone who asks.\n\nMansur appears again as the model of fearless love. His climb to the gallows wasn't madness. It was what sincere love for God looks like when tested.",
+  "deeper": "The last couplet is direct: whoever belongs sincerely to 'the One' (ik) is never left begging at other people's doors. In Punjabi Sufi poetry, 'the One' means God. The generous one who never sends a beggar away empty is a picture of God, who answers everyone who asks. It is also how Punjabi na'ats speak of the Prophet ﷺ, the 'sohna', the beautiful one. His companions said he never answered 'no' to anyone who asked him for something (Bukhari).\n\nMansur appears again as the model of fearless love. His climb to the gallows wasn't madness. It was what sincere love for God looks like when tested.",
   "why": "It ends with a line worth memorising: give yourself fully to the One, and you'll never have to beg from anyone else.",
   "prompt": "What gives you hope that doesn't wilt, even on hard days?",
   "glossary": [
@@ -155,7 +156,8 @@
     "kasa-saail",
     "suluk",
     "sufi-beloved",
-    "sarmad"
+    "sarmad",
+    "naat"
   ],
   "notes": [
     "A second version of this ghazal is printed on page 56; it is kept here as a variant."

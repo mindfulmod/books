@@ -14,7 +14,8 @@
   "reading": {
     "level": "thread",
     "lenses": [
-      "service"
+      "service",
+      "prophet"
     ],
     "anchors": [
       1,

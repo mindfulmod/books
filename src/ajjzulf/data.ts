@@ -3,7 +3,7 @@ import glossaryData from './content/glossary.json';
 import bookData from './content/book.json';
 
 export type Level = 'explicit' | 'sufi' | 'thread' | 'none';
-export type Lens = 'longing' | 'nearness' | 'self' | 'awake' | 'passing' | 'trust' | 'service' | 'justice' | 'prayer';
+export type Lens = 'longing' | 'nearness' | 'prophet' | 'self' | 'awake' | 'passing' | 'trust' | 'service' | 'justice' | 'prayer';
 export type Couplet = { original: string[]; transliteration: string[]; translation: string[]; story: string; language?: 'pa' | 'ur' };
 export type Poem = {
   id: string; pages: number[]; form: string; language: 'pa' | 'ur'; title: string; titleOriginal?: string; author?: string;
@@ -38,6 +38,7 @@ export const levels: Record<Level, { label: string; short: string; description: 
 export const lenses: Record<Lens, { label: string; description: string }> = {
   longing: { label: 'Longing for God', description: 'The ache of being apart, and what it teaches.' },
   nearness: { label: 'God close by', description: 'Moments when the Beloved feels present everywhere.' },
+  prophet: { label: 'Love for the Prophet ﷺ', description: 'Poems that praise the Prophet Muhammad ﷺ, or that many readers hear as being about him.' },
   self: { label: 'Losing the ego', description: 'Letting the proud self go, and finding the true one.' },
   awake: { label: 'The awake heart', description: 'Waking up: the heart, the conscience, the way you see.' },
   passing: { label: 'Only God remains', description: 'The world passes. What lasts?' },
@@ -46,7 +47,7 @@ export const lenses: Record<Lens, { label: string; description: string }> = {
   justice: { label: 'Standing for what’s right', description: 'Naming cruelty and corruption, and refusing to look away.' },
   prayer: { label: 'Talking to God', description: 'Prayers, blessings and thanks.' },
 };
-export const lensOrder: Lens[] = ['awake', 'longing', 'nearness', 'self', 'passing', 'trust', 'service', 'justice', 'prayer'];
+export const lensOrder: Lens[] = ['awake', 'longing', 'nearness', 'prophet', 'self', 'passing', 'trust', 'service', 'justice', 'prayer'];
 
 export const forms: Record<string, { label: string; meaning: string }> = {
   ghazal: { label: 'Ghazal', meaning: 'Rhyming couplets, each complete in itself, usually about love and longing. The poet names himself in the last one.' },

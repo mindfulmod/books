@@ -160,7 +160,7 @@
   ],
   "couplets": 7,
   "firstLine": "اَج زُلف سنواری جانی اے، کئی دِل تڑفائے جانے نیں",
-  "words": 421
+  "words": 499
  },
  {
   "id": "014-everywhere-i-look",
@@ -171,7 +171,7 @@
   "language": "pa",
   "title": "Everywhere I look, it's you",
   "takeaway": "When you truly love, you start seeing the one you love in everything.",
-  "scene": "The poet has seen the face of the one he loves, and since that moment nothing else matters. He talks to the beloved, to the moon, and finally to himself.",
+  "scene": "The poet has seen the face of the one he loves, and since that moment nothing else matters. He talks to the beloved, to the moon, and finally to himself. Its moon pictures are also the language of na'at, poems in praise of the Prophet ﷺ.",
   "themes": [
    "love",
    "sufi"
@@ -179,11 +179,12 @@
   "level": "sufi",
   "lenses": [
    "nearness",
-   "awake"
+   "awake",
+   "prophet"
   ],
   "couplets": 5,
   "firstLine": "تیرا سوہنا چن جیہا مکھڑا جد دا نظریں آیا اے",
-  "words": 255
+  "words": 350
  },
  {
   "id": "015-ishq",
@@ -392,7 +393,7 @@
   ],
   "couplets": 9,
   "firstLine": "سجناں بوہڑ شتابی دل دیاں پیاں کہن تراٹاں",
-  "words": 367
+  "words": 409
  },
  {
   "id": "024-a-cup-of-poison",
@@ -573,8 +574,8 @@
   "form": "ghazal",
   "language": "pa",
   "title": "Love is different",
-  "takeaway": "Love follows its own rules. Its rewards and its pains are like nothing else.",
-  "scene": "Every couplet in this ghazal ends with the word 'vakhri', which means 'different' or 'one of a kind'. The poet lists all the ways love doesn't work like anything else.",
+  "takeaway": "A beauty so rare that seeing it makes you remember God.",
+  "scene": "Every couplet in this ghazal ends with the word 'vakhri', which means 'different' or 'one of a kind'. Many readers hear it as a na'at, a poem in praise of the Prophet Muhammad ﷺ. The poem never names him, but several of its pictures match the way his companions described him.",
   "themes": [
    "love",
    "sufi"
@@ -582,11 +583,12 @@
   "level": "explicit",
   "lenses": [
    "nearness",
-   "awake"
+   "awake",
+   "prophet"
   ],
   "couplets": 11,
   "firstLine": "اوہدا ناز نخرا ادا وکھری اے",
-  "words": 337
+  "words": 454
  },
  {
   "id": "033-it-looks-lovely",
@@ -648,11 +650,12 @@
   "level": "explicit",
   "lenses": [
    "self",
-   "trust"
+   "trust",
+   "prophet"
   ],
   "couplets": 8,
   "firstLine": "دردی بن کے کوئی وی درد ونڈاندا نئیں",
-  "words": 333
+  "words": 381
  },
  {
   "id": "036-spring-came-at-a-price",
@@ -1262,7 +1265,8 @@
   ],
   "level": "thread",
   "lenses": [
-   "service"
+   "service",
+   "prophet"
   ],
   "couplets": 3,
   "firstLine": "خادم خیر الوریٰ دا مرد کامل آپ صحافت دار رہیا امام سیفی",
@@ -1423,7 +1427,8 @@
   "level": "explicit",
   "lenses": [
    "nearness",
-   "prayer"
+   "prayer",
+   "prophet"
   ],
   "couplets": 4,
   "firstLine": "شمع رشد و ہدایت ول جا رہے نیں جاگے بھاگ نیں اج پروانیاں دے",
@@ -2211,7 +2216,8 @@
   "level": "explicit",
   "lenses": [
    "nearness",
-   "prayer"
+   "prayer",
+   "prophet"
   ],
   "couplets": 8,
   "firstLine": "بج حج والے کئی عاشق چمن یار دے درد دیوار چلے",

@@ -14,16 +14,19 @@
     "level": "explicit",
     "lenses": [
       "nearness",
-      "awake"
+      "awake",
+      "prophet"
     ],
     "anchors": [
+      1,
+      5,
       9,
       10,
       11
     ]
   },
-  "takeaway": "Love follows its own rules. Its rewards and its pains are like nothing else.",
-  "scene": "Every couplet in this ghazal ends with the word 'vakhri', which means 'different' or 'one of a kind'. The poet lists all the ways love doesn't work like anything else.",
+  "takeaway": "A beauty so rare that seeing it makes you remember God.",
+  "scene": "Every couplet in this ghazal ends with the word 'vakhri', which means 'different' or 'one of a kind'. Many readers hear it as a na'at, a poem in praise of the Prophet Muhammad ﷺ. The poem never names him, but several of its pictures match the way his companions described him.",
   "couplets": [
     {
       "original": [
@@ -38,7 +41,7 @@
         "The beloved's charm, playfulness and style are one of a kind;",
         "the modesty that wins hearts is one of a kind."
       ],
-      "story": "The Beloved's charm and way of being are unlike anyone else's. Even their shyness is special, and it steals people's hearts."
+      "story": "The Beloved is unlike anyone else, in charm, in grace, and most of all in modesty. That gentle modesty is what wins people's hearts."
     },
     {
       "original": [
@@ -98,7 +101,7 @@
         "Whose feet have passed this way, that such a fragrance has spread,",
         "and the air of the whole garden feels different?"
       ],
-      "story": "Someone must have walked through here. A wonderful scent has filled the air, and the whole garden suddenly feels different."
+      "story": "Someone has walked this way. Whose footsteps were they? A beautiful fragrance fills the air, and the whole garden feels different. People said the same about the Prophet ﷺ: you could tell he had passed down a street by the fragrance he left behind."
     },
     {
       "original": [
@@ -173,7 +176,7 @@
         "When I look at the beloved, I remember God.",
         "The light of this rare beauty is different."
       ],
-      "story": "This is the key line. When he looks at the beautiful Beloved, it makes him think of God. Their beauty has a light unlike any other."
+      "story": "This is the key line. When he looks at the Beloved, he remembers God. That beauty has a light unlike any other."
     },
     {
       "original": [
@@ -191,7 +194,7 @@
       "story": "He ends by describing himself. He feels everyone's pain, and all he wants is love. God simply made him that way."
     }
   ],
-  "deeper": "Two couplets make this poem's spiritual meaning plain. The mullah tempts him with the maidens of paradise, but 'my heart's desire has always been different': he wants God Himself, not His rewards. And 'when I look at the beloved, I remember God' is the Sufi idea that all earthly beauty is a reflection of God's beauty. Seeing it rightly leads the heart back to Him.\n\nThe last couplet gives a portrait of the poet as a man who carries everyone's pain. That fits what his friend wrote about him at the start of the book.",
+  "deeper": "Three couplets make this ghazal read like a na'at, a poem of love for the Prophet ﷺ. The first praises the Beloved's modesty, and the Prophet was described as more modest than a young girl behind her curtain (Bukhari). The fifth asks whose feet left this fragrance. An old report says people knew the Prophet had walked down a path by the fragrance he left (al-Darimi). The tenth says that seeing the Beloved makes him remember God. The Prophet said the best people are those who remind you of God when you see them (Ibn Majah).\n\nThe poem never names him, so the Sufi reading still works too: all beauty reflects God's beauty, and seeing it rightly turns the heart back to Him. The two readings don't compete. In this tradition, loving the Prophet is a road to loving God.\n\nThe mullah tempts the poet with the maidens of paradise, but 'my heart's desire has always been different'. He wants the Beloved, not a reward. The last couplet gives a portrait of the poet as a man who carries everyone's pain, which fits what his friend wrote about him.",
   "why": "The repeated word 'different' makes it a simple poem to follow, and it builds to one beautiful line: seeing beauty and remembering God.",
   "prompt": "When you see something beautiful, in nature, in a person or in art, what does it make you think of?",
   "glossary": [
@@ -200,7 +203,8 @@
     "mullah",
     "hoor",
     "sanam",
-    "sufi-beloved"
+    "sufi-beloved",
+    "naat"
   ],
   "notes": [
     "Printed in two columns; the right-hand column is the first line of each couplet."
