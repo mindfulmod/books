@@ -1,0 +1,108 @@
+{
+  "id": "093-knowledge",
+  "pages": [
+    93
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Knowledge",
+  "titleOriginal": "علم",
+  "themes": [
+    "society"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "awake"
+    ],
+    "anchors": [
+      2,
+      4
+    ]
+  },
+  "takeaway": "Knowledge makes you rich in a way no thief can steal.",
+  "scene": "A short poem in praise of 'ilm', which means knowledge or learning. The poet was a doctor and the father of teachers and students, and he clearly valued education deeply.",
+  "couplets": [
+    {
+      "original": [
+        "بندہ علم دے نال انسان بن دا یارو",
+        "فیر اوس نوں ملے توقیر یارو"
+      ],
+      "transliteration": [
+        "Banda ilm de naal insaan banda yaaro",
+        "Pher os nu mile tauqeer yaaro"
+      ],
+      "translation": [
+        "Friends, it's through knowledge that a person becomes truly human;",
+        "then, friends, they earn respect."
+      ],
+      "story": "Learning is what makes us fully human. And once you've learned, people respect you."
+    },
+    {
+      "original": [
+        "حق باطل دی ہو پچھان جاندی",
+        "بناں دولتوں بنے امیر یارو"
+      ],
+      "transliteration": [
+        "Haq baatil di ho pachhaan jaandi",
+        "Binaan daulton bane ameer yaaro"
+      ],
+      "translation": [
+        "You learn to tell truth from falsehood;",
+        "without any money, you become rich, friends."
+      ],
+      "story": "Knowledge helps you tell what's true from what's false. It makes you rich even if you have no money."
+    },
+    {
+      "original": [
+        "لتھے کنڈ توں بھار جہالتاں دا",
+        "کورا ملتاں لئی تنویر یارو"
+      ],
+      "transliteration": [
+        "Latthe kand ton bhaar jahaalataan da",
+        "Kora mullataan layi tanveer yaaro"
+      ],
+      "translation": [
+        "The weight of ignorance comes off your back;",
+        "it brings light to whole nations, friends."
+      ],
+      "story": "Learning takes the heavy load of ignorance off your shoulders. It brings light to whole countries."
+    },
+    {
+      "original": [
+        "جاگ پیندا اے اوہدا ضمیر یارو",
+        "چور جہوں ناں احمدؔ چرا سکے"
+      ],
+      "transliteration": [
+        "Jaag painda ae ohda zameer yaaro",
+        "Chor jihnu naa Ahmad chura sake"
+      ],
+      "translation": [
+        "A person's conscience wakes up, friends.",
+        "Ahmad, it's something no thief can steal:"
+      ],
+      "story": "Learning wakes up your conscience. And it's one treasure no thief can ever take from you."
+    },
+    {
+      "original": [
+        "علم دولت ہے اوہ جاگیر یارو"
+      ],
+      "transliteration": [
+        "Ilm daulat hai oh jaageer yaaro"
+      ],
+      "translation": [
+        "knowledge is that wealth, that estate, friends."
+      ],
+      "story": "Knowledge is the kind of wealth, the kind of property, that's yours for good."
+    }
+  ],
+  "deeper": "Seeking knowledge is a central value in Islam. The first word revealed in the Qur'an was 'Read!' (96:1), and the Prophet said seeking knowledge is a duty for every Muslim.\n\nThe poem says knowledge does two things inside a person. It 'wakes up the conscience', and it lets you 'tell truth from falsehood' (haq and baatil). So learning isn't only for getting a job. It makes you more awake, and an awake person is closer to God.",
+  "why": "An easy, uplifting poem for students: knowledge is the one treasure no one can take from you.",
+  "prompt": "What's the most valuable thing you've ever learned, something nobody could take away?",
+  "glossary": [
+    "haq"
+  ],
+  "notes": [
+    "Printed as short lines; grouped into rough couplets here. Line 3 of the third pair is partly shadowed: 'kora mullataan' is read loosely as 'whole nations' (millataan)."
+  ]
+}

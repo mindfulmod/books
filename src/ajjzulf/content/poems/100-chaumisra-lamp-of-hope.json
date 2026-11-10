@@ -1,0 +1,66 @@
+{
+  "id": "100-chaumisra-lamp-of-hope",
+  "pages": [
+    100
+  ],
+  "form": "chaumisra",
+  "language": "pa",
+  "title": "The lamp of hope went out",
+  "titleOriginal": "چومصرعہ",
+  "themes": [
+    "love"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "longing"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "Sometimes you see the shore, and the lamp of hope goes out anyway.",
+  "scene": "A four-line verse about losing hope at the last moment.",
+  "couplets": [
+    {
+      "original": [
+        "سوچ دا سورج سی ڈونگے ہنیریاں چ ڈبیا",
+        "یاد فیر آیا اے کوئی تیر دل وچ کھبیا"
+      ],
+      "transliteration": [
+        "Soch da sooraj si doonge haneriyaan ch dubiya",
+        "Yaad pher aaya ae, koi teer dil vich khubiya"
+      ],
+      "translation": [
+        "The sun of my thoughts had sunk into deep darkness;",
+        "then a memory came back, like an arrow lodged in my heart."
+      ],
+      "story": "His mind felt dark, as if the sun had set. Then a memory came back and hit him like an arrow in the heart."
+    },
+    {
+      "original": [
+        "چیر طوفاناں نوں جناں لئی کنارے مجھیا",
+        "دیکھ کے احمدؔ اہنوں آساں دا دیوا بجھیا"
+      ],
+      "transliteration": [
+        "Cheer toofaanaan nu jinhaan layi kinaare mujhiya",
+        "Dekh ke Ahmad ehnu, aasaan da deeva bujhiya"
+      ],
+      "translation": [
+        "The one for whom I cut through storms and reached the shore:",
+        "Ahmad, seeing them, the lamp of my hopes went out."
+      ],
+      "story": "He fought through storms to reach the person he loved. When he finally got there and saw them, his lamp of hope went out. It wasn't what he had hoped for."
+    }
+  ],
+  "deeper": "Read simply, this is about reaching someone you loved and finding they had changed. A Sufi reader might hear more. The seeker works through every storm, and still feels the light go out at the very end. Sufis say even that darkness belongs to the path: it teaches the heart that only God fully keeps His promises.",
+  "why": "A short, sad verse about how something you worked hard for can still let you down.",
+  "prompt": "Have you ever worked hard for something and found it wasn't what you expected? What did you learn?",
+  "glossary": [
+    "chaumisra"
+  ],
+  "notes": [
+    "The meaning of the last couplet is slightly uncertain: it may also mean that seeing the beloved was enough, so hope was no longer needed."
+  ]
+}

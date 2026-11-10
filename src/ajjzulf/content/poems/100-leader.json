@@ -1,0 +1,63 @@
+{
+  "id": "100-leader",
+  "pages": [
+    100
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The leader",
+  "titleOriginal": "لیڈر",
+  "themes": [
+    "society",
+    "humour"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Ordinary people are struggling to survive, and their leaders are sharing out the spoils.",
+  "scene": "A short satirical verse about politicians.",
+  "couplets": [
+    {
+      "original": [
+        "غم قوم دا کراں یا ملک دا میں مذہب دا کراں خیال یارو",
+        "کیہڑے کیہڑے میں دکھ درد رواں وگڑ گئے سارے خدوخال یارو"
+      ],
+      "transliteration": [
+        "Gham qaum da karaan ya mulk da main, mazhab da karaan khayaal yaaro",
+        "Kehre kehre main dukh dard rovaan, vigar gaye saare khad-o-khaal yaaro"
+      ],
+      "translation": [
+        "Friends, should I grieve for the nation, or the country, or worry about religion?",
+        "Which pains and sorrows should I weep over? Friends, everything has lost its shape."
+      ],
+      "story": "He doesn't know where to start. Should he worry about the people, the country or religion? There's so much to be upset about. Everything has gone wrong."
+    },
+    {
+      "original": [
+        "تھوڑے دناں دی زندگی نظر آوے جیناں ہو گیا بڑا محال یارو",
+        "لیڈر قوم دے دیکھنا پیا احمدؔ جتی نال پئے ونڈدے دال یارو"
+      ],
+      "transliteration": [
+        "Thore dinaan di zindagi nazar aave, jeenaan ho gaya bara muhaal yaaro",
+        "Leader qaum de dekhna piya Ahmad, jutti naal pae vandde daal yaaro"
+      ],
+      "translation": [
+        "Life looks like it'll only last a few more days; living has become very hard, friends.",
+        "Ahmad, I've had to watch the nation's leaders handing out lentils with a shoe, friends."
+      ],
+      "story": "Life has become so hard that people feel they won't survive long. Meanwhile the leaders are 'serving lentils with a shoe', a Punjabi saying for sharing out the spoils among themselves in the most careless, disrespectful way."
+    }
+  ],
+  "deeper": "",
+  "why": "Political satire that uses a funny, earthy Punjabi expression to make its point.",
+  "prompt": "What would you want a leader to pay attention to first?",
+  "glossary": [
+    "qita",
+    "qaum"
+  ],
+  "notes": [
+    "'Jutti naal daal vandna' (handing out lentils with a shoe) is a Punjabi idiom for dividing things up crudely among yourselves; it may also mean the leaders are quarrelling."
+  ]
+}

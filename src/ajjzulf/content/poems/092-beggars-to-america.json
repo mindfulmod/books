@@ -1,0 +1,79 @@
+{
+  "id": "092-beggars-to-america",
+  "pages": [
+    92
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "The beggars have gone to America",
+  "titleOriginal": "منگتے امریکہ گئے",
+  "themes": [
+    "society",
+    "homeland",
+    "humour"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "A country whose leaders live on begging and loans loses its dignity.",
+  "scene": "A sharp, funny satire. The poet mocks Pakistan's leaders for flying off to America to ask for loans and aid, as if they were beggars.",
+  "context": "A satire of its time. It mocks governments that relied on foreign aid and loans. 'Breaking the begging bowl' was a real political slogan.",
+  "couplets": [
+    {
+      "original": [
+        "ساڈے منگتیاں دی فوج امریکہ سدھاری اے",
+        "کشکول توڑ کے پھڑ لئی پٹاری اے"
+      ],
+      "transliteration": [
+        "Saade mangtiyaan di fauj Amreeka sidhaari ae",
+        "Kashkol tor ke phar layi pitaari ae"
+      ],
+      "translation": [
+        "Our army of beggars has set off for America.",
+        "They 'broke the begging bowl', and picked up a bigger basket instead."
+      ],
+      "story": "A whole team of officials has flown to America to ask for money. Politicians had promised to 'break the begging bowl', to stop depending on foreign aid. Instead, they've just swapped it for a bigger basket."
+    },
+    {
+      "original": [
+        "ایتھے ہر بندہ منگتا تے لیڈر بپاری اے",
+        "جہنوں ویکھو اوہ پیا لبھے سرداری اے"
+      ],
+      "transliteration": [
+        "Ethe har banda mangta te leader bapaari ae",
+        "Jihnu vekho oh piya labbhe sardaari ae"
+      ],
+      "translation": [
+        "Here everyone is a beggar, and the leaders are traders.",
+        "Whoever you look at is hunting for power and position."
+      ],
+      "story": "Ordinary people end up begging, while the leaders act like businessmen making deals. Everyone is chasing power."
+    },
+    {
+      "original": [
+        "اس منگن توں احمدؔ ملک دی ہوندی خواری اے",
+        "ایتھے ہر بندہ قرضائی تے لیڈر بھکاری اے"
+      ],
+      "transliteration": [
+        "Is mangan ton Ahmad mulk di hondi khwaari ae",
+        "Ethe har banda qarzaai te leader bhikaari ae"
+      ],
+      "translation": [
+        "Ahmad, all this begging brings disgrace on the country:",
+        "here every person is in debt, and every leader is a beggar."
+      ],
+      "story": "All this begging makes the whole country look bad. Every ordinary person is in debt, and every leader is basically a beggar."
+    }
+  ],
+  "deeper": "",
+  "why": "Political satire that's still relevant: the debate about countries relying on foreign loans.",
+  "prompt": "Why does depending on others for money affect a person's or a country's dignity?",
+  "glossary": [
+    "kashkol"
+  ],
+  "notes": [
+    "Satire of Pakistani governments' reliance on US aid and IMF loans; 'kashkol torna' (breaking the begging bowl) was a real political slogan."
+  ]
+}

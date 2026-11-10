@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: { main: 'index.html', timelessSeeds: 'timeless-seeds.html', beautifulNames: 'beautiful-names/index.html' },
+      input: { main: 'index.html', timelessSeeds: 'timeless-seeds.html', beautifulNames: 'beautiful-names/index.html', ajjZulf: 'ajj-zulf/index.html' },
     },
   },
 }));

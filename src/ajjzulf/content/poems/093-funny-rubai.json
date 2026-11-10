@@ -1,0 +1,62 @@
+{
+  "id": "093-funny-rubai",
+  "pages": [
+    93
+  ],
+  "form": "rubai",
+  "language": "pa",
+  "title": "How to get rich (a joke)",
+  "titleOriginal": "مزاحیہ رباعی",
+  "themes": [
+    "humour",
+    "society"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "A joke with a sting: in a corrupt system, honest people struggle.",
+  "scene": "The heading means 'A humorous rubai', a four-line comic poem. The poet, a doctor himself, sarcastically gives 'advice' on how to get ahead.",
+  "couplets": [
+    {
+      "original": [
+        "پانی پانی کر گئی آج دے فرزانے دی گل",
+        "زندہ رہن واسطے راہ شرافت دے نہ چل"
+      ],
+      "transliteration": [
+        "Paani paani kar gayi ajj de farzaane di gall",
+        "Zinda rehan vaaste raah sharaafat de na chal"
+      ],
+      "translation": [
+        "Today's wise man's advice left me red-faced with shame:",
+        "'If you want to survive, don't walk the path of decency.'"
+      ],
+      "story": "A 'clever' person gave him some advice so shameless it made him blush: if you want to get by, forget about being honest and decent."
+    },
+    {
+      "original": [
+        "ڈاکٹر بن ڈاکو بن افسر یا چپڑاسی بن",
+        "جا وکیلاں کولوں سکھ سائل نوں کھاون دے ول"
+      ],
+      "transliteration": [
+        "Doctor ban, daaku ban, afsar ya chapraasi ban",
+        "Ja vakeelaan kolon sikh saail nu khaavan de vall"
+      ],
+      "translation": [
+        "Become a doctor, a bandit, an officer or an office peon;",
+        "go and learn from the lawyers how to eat up your clients."
+      ],
+      "story": "The joke goes on: become a doctor, a robber, an official or even an office errand-boy, it's all the same. And go learn from lawyers how to squeeze every penny out of the people who come to you for help."
+    }
+  ],
+  "deeper": "",
+  "why": "It's funny, and it makes a serious point. The poet, himself a doctor, includes doctors in the joke.",
+  "prompt": "Is it harder to be honest when it seems like dishonest people get ahead? Why stay honest anyway?",
+  "glossary": [
+    "rubai"
+  ],
+  "notes": [
+    "Satire: the 'advice' is meant ironically."
+  ]
+}

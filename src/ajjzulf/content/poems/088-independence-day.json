@@ -1,0 +1,109 @@
+{
+  "id": "088-independence-day",
+  "pages": [
+    88
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "14 August: Independence Day",
+  "titleOriginal": "14 اگست یوم آزادی",
+  "themes": [
+    "homeland"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Freedom was won with courage and sacrifice. Remember what it cost.",
+  "scene": "A celebration of 14 August 1947, the day Pakistan became independent. The poet remembers how the British left and how Jinnah led the people to freedom.",
+  "context": "A poem of its time. It was written at a particular moment in Pakistan's history and uses the political language of that moment. It is translated faithfully so you can see how people spoke then. Translating it is not the same as agreeing with every line. The line about Hindu moneylenders reflects the bitterness of 1947, not a judgement on Hindus today.",
+  "couplets": [
+    {
+      "original": [
+        "گلشن وچہ بہاراں آئیاں کلیاں رنگ نکھارے",
+        "پرچم چن ستارے والا ہر تھاں لشکاں مارے"
+      ],
+      "transliteration": [
+        "Gulshan vich bahaaraan aaiyaan, kaliyaan rang nikhaare",
+        "Parcham chann sitaare vaala har thaan lishkaan maare"
+      ],
+      "translation": [
+        "Spring has come to the garden; the buds are glowing with colour.",
+        "The flag with the crescent moon and star is shining everywhere."
+      ],
+      "story": "It feels like spring has arrived, with flowers in full colour. Pakistan's green flag with its moon and star is flying and shining everywhere."
+    },
+    {
+      "original": [
+        "گورے بھجے ہندو لالے رام رام کہہ دوڑے",
+        "میرے قائد قائد اعظم جو ہر جدوں کھلارے"
+      ],
+      "transliteration": [
+        "Gore bhajje, Hindu laale Raam Raam keh daure",
+        "Mere Quaid, Quaid-e-Azam, jauhar jadon khilaare"
+      ],
+      "translation": [
+        "The British fled, and the Hindu moneylenders ran off crying 'Ram, Ram!'",
+        "when my leader, Quaid-e-Azam, showed what he was made of."
+      ],
+      "story": "When Jinnah showed his true strength and skill, the British left, and the powerful moneylenders who had controlled the economy ran off in a hurry."
+    },
+    {
+      "original": [
+        "فہم فراست حسن تدبر حوصلیاں دا مالک",
+        "ہر اوکڑ نوں پیا لتاڑے ویری نوں للکارے"
+      ],
+      "transliteration": [
+        "Fehm firaasat husn-e-tadabbur hausliyaan da maalik",
+        "Har aukar nu piya lataare, vairi nu lalkaare"
+      ],
+      "translation": [
+        "A master of understanding, insight, wise planning and courage,",
+        "he trampled every obstacle underfoot and challenged the enemy."
+      ],
+      "story": "Jinnah was clever, wise and brave. He crushed every obstacle in his way and stood up to anyone who opposed him."
+    },
+    {
+      "original": [
+        "اک دے آکھے اک مٹھ ہو کے جان دی بازی لائی",
+        "پاکستان ایہہ منزل ساڈی ہر کوئی پیا پکارے"
+      ],
+      "transliteration": [
+        "Ik de aakhe ik mutth ho ke jaan di baazi laai",
+        "Pakistan eh manzil saadi, har koi piya pukaare"
+      ],
+      "translation": [
+        "At one man's word, united as a single fist, they staked their lives;",
+        "'Pakistan is our goal!' everyone cried out."
+      ],
+      "story": "When Jinnah called, people came together like one fist and risked their lives. Everyone shouted the same thing: 'Pakistan is our goal!'"
+    },
+    {
+      "original": [
+        "لکھاں مرداں احمدؔ چمیاں ہس ہس داراں آپی",
+        "کڈے اچ کر وکھائے تاریخی ورتارے"
+      ],
+      "transliteration": [
+        "Lakhaan mardaan Ahmad chummiyaan has has daaraan aapi",
+        "Kadde uchch kar vikhaaye taareekhi vartaare"
+      ],
+      "translation": [
+        "Ahmad, hundreds of thousands of brave men smilingly kissed the gallows themselves;",
+        "they showed history what great deeds look like."
+      ],
+      "story": "Hundreds of thousands of people gave their lives for freedom without fear, as if they were smiling at the gallows. They wrote one of history's great stories."
+    }
+  ],
+  "deeper": "",
+  "why": "It shows how the generation that lived through 1947 felt about independence: proud, grateful and aware of the cost.",
+  "prompt": "What freedoms do you have that someone else had to fight for?",
+  "glossary": [
+    "partition",
+    "jinnah"
+  ],
+  "notes": [
+    "Couplet 2 reflects the poet's 1947-era political perspective, including a sharp phrase about Hindu moneylenders. The app should present it as historical context.",
+    "'Lakhaan' means hundreds of thousands."
+  ]
+}

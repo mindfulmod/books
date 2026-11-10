@@ -1,0 +1,74 @@
+{
+  "id": "099-wake-up",
+  "pages": [
+    99
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Wake up!",
+  "titleOriginal": "جاگو",
+  "themes": [
+    "homeland",
+    "society"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "The sun has risen. Times have changed. Wake up and get to work.",
+  "scene": "An untitled call to action at the top of page 99. It sounds like a rousing chant: 'Jaago!', which means 'Wake up!'",
+  "couplets": [
+    {
+      "original": [
+        "جوانو جاگو جاگو قوم دے پاسبانو جاگو",
+        "گوڑی نیند وچ ستے نوجوانو جاگو"
+      ],
+      "transliteration": [
+        "Javaano jaago, jaago, qaum de paasbaano jaago",
+        "Goorhi neend vich sutte naujavaano jaago"
+      ],
+      "translation": [
+        "Young people, wake up, wake up! Guardians of the nation, wake up!",
+        "Young ones sunk in deep sleep, wake up!"
+      ],
+      "story": "He shouts to the young people of the country: wake up! You're meant to be the country's guardians, but you're fast asleep."
+    },
+    {
+      "original": [
+        "جاگو جاگو میرے مزدور کسانو جاگو",
+        "چڑھے ہوئے سورج دی چمک نوں دیکھو"
+      ],
+      "transliteration": [
+        "Jaago jaago mere mazdoor kisaano jaago",
+        "Charhe hoe sooraj di chamak nu dekho"
+      ],
+      "translation": [
+        "Wake up, wake up, my workers and farmers, wake up!",
+        "Look at the shining of the risen sun."
+      ],
+      "story": "Wake up, workers and farmers! The sun is already high in the sky."
+    },
+    {
+      "original": [
+        "آج دے بدلے موسم نوں احمدؔ پچھانو جاگو"
+      ],
+      "transliteration": [
+        "Ajj de badle mausam nu Ahmad pachhaano, jaago"
+      ],
+      "translation": [
+        "Ahmad says: recognise how the times have changed today, and wake up!"
+      ],
+      "story": "Times have changed. Notice it, and wake up!"
+    }
+  ],
+  "deeper": "",
+  "why": "Short, loud and energetic. It's easy to imagine it being chanted.",
+  "prompt": "What's something you've been 'asleep' about that you want to wake up to?",
+  "glossary": [
+    "qaum"
+  ],
+  "notes": [
+    "Untitled five-line verse at the top of page 99; it may continue a poem from page 98."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "098-mukhammas",
+  "pages": [
+    98
+  ],
+  "form": "mukhammas",
+  "language": "pa",
+  "title": "Eid without you",
+  "titleOriginal": "مخمس بند",
+  "themes": [
+    "love",
+    "sufi"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "self",
+      "longing"
+    ],
+    "anchors": [
+      3
+    ]
+  },
+  "takeaway": "Drinking poison is easier than living without the one you love.",
+  "scene": "A five-line stanza (mukhammas). The poet says the pain of separation is harder than anything, even death, and that Eid itself means nothing without the beloved.",
+  "couplets": [
+    {
+      "original": [
+        "سوکھا زہر دا جام کر نوش لینا نئیں جام فراق دا پی ہوندا",
+        "عید دید بن یار دے نئیں ہوندی چن چڑھے نہ چڑھے تے کیہ کی ہوندا"
+      ],
+      "transliteration": [
+        "Saukha zehar da jaam kar nosh laina, nahin jaam firaaq da pee honda",
+        "Eid deed bin yaar de nahin hondi, chann charhe na charhe te ki ki honda"
+      ],
+      "translation": [
+        "It's easy to drink a cup of poison; the cup of separation can't be drunk.",
+        "Without seeing the beloved there is no Eid; whether the moon rises or not, what difference does it make?"
+      ],
+      "story": "Drinking poison would be easier than being apart from the one he loves. Eid starts when the new moon is seen, but for him there's no Eid without seeing the Beloved. Moon or no moon, nothing changes."
+    },
+    {
+      "original": [
+        "خوشی ہووے نہ اوناں دیوانیاں نوں جتھے جام فراق دا پی ہوندا",
+        "سجناں باجھ نہ زخم جدائی والا ہتھیں اپنی کدی سی ہوندا"
+      ],
+      "transliteration": [
+        "Khushi hove na onaan deewaaniyaan nu, jitthe jaam firaaq da pee honda",
+        "Sajnaan baajh na zakhm judaai vaala, hatthin apni kadi see honda"
+      ],
+      "translation": [
+        "Those lovers can't be happy anywhere the cup of separation has been drunk.",
+        "Without the beloved, the wound of parting can never be stitched up by your own hand."
+      ],
+      "story": "People who are in love can't be happy once they've had to say goodbye. You can't sew up that kind of wound yourself. Only the Beloved can heal it."
+    },
+    {
+      "original": [
+        "اپنا آپ مٹا کے ویکھ احمدؔ بحر عشق وچہ کس طراں جی ہوندا"
+      ],
+      "transliteration": [
+        "Apna aap mita ke vekh Ahmad, behr-e-ishq vich kis taraan jee honda"
+      ],
+      "translation": [
+        "Ahmad, erase your self, and then see how one lives in the ocean of love."
+      ],
+      "story": "He ends with a challenge. Let go of your ego completely, Ahmad, and then you'll learn how to live in the ocean of love."
+    }
+  ],
+  "deeper": "'Erase your self, and see how one lives in the ocean of love' is the Sufi teaching of fana. It means dissolving the ego so that only love, only God, remains. 'No Eid without seeing the beloved' is a famous devotional image: real celebration is meeting God, or the Prophet, not just the calendar date.",
+  "why": "It shows how one of Islam's happiest festivals can feel empty without love, a feeling many people know.",
+  "prompt": "Has a celebration ever felt empty because someone was missing?",
+  "glossary": [
+    "mukhammas",
+    "eid-moon"
+  ],
+  "notes": [
+    "A single five-line stanza; split into pairs for reading."
+  ]
+}

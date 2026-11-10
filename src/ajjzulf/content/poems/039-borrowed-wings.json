@@ -1,0 +1,206 @@
+{
+  "id": "039-borrowed-wings",
+  "pages": [
+    39,
+    40
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Borrowed wings",
+  "themes": [
+    "love",
+    "society"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "longing",
+      "self"
+    ],
+    "anchors": [
+      5,
+      6,
+      9
+    ]
+  },
+  "takeaway": "Words can hurt or heal, and you can't fly far on borrowed wings.",
+  "scene": "A gentle ghazal about words, promises and the small things that keep love going. Every couplet ends with 'honde nain', which means 'that's how it is'.",
+  "couplets": [
+    {
+      "original": [
+        "کوڑے بول سجن انگارے ہوندے نیں",
+        "پھلاں ورگے بول پیارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Kaurre bol sajan angaare honde nain",
+        "Phullaan varge bol pyaare honde nain"
+      ],
+      "translation": [
+        "Bitter words, my friend, are burning coals;",
+        "words like flowers are lovely."
+      ],
+      "story": "Harsh words burn like hot coals. Kind words are as lovely as flowers. Words matter."
+    },
+    {
+      "original": [
+        "ٹھنڈے ٹھنڈے ہوکے ہاواں عاشق بھردے نیں",
+        "وچ دلاں دے سوچ شرارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Thande thande hauke haavaan aashiq bharde nain",
+        "Vich dilaan de soch sharaare honde nain"
+      ],
+      "translation": [
+        "Lovers heave cold, cold sighs,",
+        "but inside their hearts their thoughts are sparks."
+      ],
+      "story": "On the outside, lovers just sigh quietly. On the inside, their thoughts are flying like sparks from a fire."
+    },
+    {
+      "original": [
+        "دلوں بجھانوں دل دیاں لگیاں سن دے نئیں",
+        "انج تے بھردے یار ہنگارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Dilon bujhaanon dil diyaan lagiyaan sunde nahin",
+        "Inj te bharde yaar hungaare honde nain"
+      ],
+      "translation": [
+        "Deep down they don't really hear what the heart is feeling,",
+        "though, sure, friends say 'mm-hmm'."
+      ],
+      "story": "People nod along and say 'mm-hmm' when you tell them how you feel. But they aren't really listening."
+    },
+    {
+      "original": [
+        "انج وی ڈب جاندے نیں مارے کرماں دے",
+        "دو ہتھ نیڑے جدوں کنارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Inj vi dubb jaande nain maare karmaan de",
+        "Do hatth nere jadon kinaare honde nain"
+      ],
+      "translation": [
+        "The unlucky drown even like this,",
+        "when the shore is just two arm's lengths away."
+      ],
+      "story": "Some unlucky people drown when the shore is just a few feet away. They come so close and still don't make it."
+    },
+    {
+      "original": [
+        "پل پل وادھا ہووے درد وچھوڑے دا",
+        "پیار کرن وچ کدوں خسارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Pal pal vaadha hove dard vichhore da",
+        "Pyaar karan vich kadon khasaare honde nain"
+      ],
+      "translation": [
+        "The pain of separation grows by the moment,",
+        "but when has loving ever been a loss?"
+      ],
+      "story": "Missing someone hurts more every minute. Still, loving is never a mistake. You never truly lose by loving."
+    },
+    {
+      "original": [
+        "اہناں کیہ اڑنا تے کدتک اڈناایں",
+        "جنہاں منگے پنکھ ادھارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Ehnaan ki urna te kad tak udna ain",
+        "Jinhaan mange pankh udhaare honde nain"
+      ],
+      "translation": [
+        "How can they fly, and how long will they last in the air,",
+        "whose wings are borrowed, begged on credit?"
+      ],
+      "story": "People who fly on borrowed wings won't stay up long. If your strength isn't really yours, it'll let you down."
+    },
+    {
+      "original": [
+        "آویں نہ بھاویں وعدہ کر کے آون دا",
+        "پیار دے لاندے یار سہارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Aaveen na bhaaven, vaada kar ke aavan da",
+        "Pyaar de laande yaar sahaare honde nain"
+      ],
+      "translation": [
+        "Don't come if you don't want to, but at least promise you'll come:",
+        "lovers live by leaning on promises."
+      ],
+      "story": "Even if the Beloved doesn't come, a promise to come would help. Lovers can live on hope alone."
+    },
+    {
+      "original": [
+        "عشق دی گٹھڑی چکی پھرن سودائیاں وانگ",
+        "سنیا عاشق لعلاں دے ونجارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Ishq di gathri chukki phiran saudaaiyaan vaang",
+        "Suniya aashiq laalaan de vanjaare honde nain"
+      ],
+      "translation": [
+        "They wander around like madmen, carrying a bundle of love on their backs;",
+        "I've heard that lovers are traders in rubies."
+      ],
+      "story": "Lovers walk around like crazy people with a sack of love on their backs. People say lovers are really jewel traders. What they carry is precious."
+    },
+    {
+      "original": [
+        "اسماناں تے پان کمنداں جنہاں نے",
+        "پیراں ہیٹھ لتاڑے تارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Asmaanaan te paan kamandaan jinhaan ne",
+        "Pairaan heth lataare taare honde nain"
+      ],
+      "translation": [
+        "Those who throw their climbing ropes up to the sky",
+        "have the stars trampled under their feet."
+      ],
+      "story": "People who aim for the sky end up with the stars beneath their feet. Aim high, and you go further than you imagined."
+    },
+    {
+      "original": [
+        "دل تڑفے تے بہندے نیں پلکاں تے",
+        "کنے نیڑے یار دے تارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Dil tarfe te behnde nain palkaan te",
+        "Kinne nere yaar de taare honde nain"
+      ],
+      "translation": [
+        "When the heart aches, they settle on the eyelashes:",
+        "how close the beloved's stars are."
+      ],
+      "story": "When his heart hurts, tears sit on his eyelashes like little stars. In those moments the Beloved feels very close."
+    },
+    {
+      "original": [
+        "ہتھ منصف دے پھاتا احمدؔ سوچ رہیاں",
+        "سچ تے جھوٹ دے کدوں نتارے ہوندے نیں"
+      ],
+      "transliteration": [
+        "Hatth munsif de phaata Ahmad soch rehaan",
+        "Sach te jhoot de kadon nitaare honde nain"
+      ],
+      "translation": [
+        "Ahmad, caught in the judge's hands, I keep wondering:",
+        "when will truth and lies ever be sorted out?"
+      ],
+      "story": "He ends feeling trapped, like someone stuck in front of a judge. He wonders when anyone will finally separate truth from lies."
+    }
+  ],
+  "deeper": "'When has loving ever been a loss?' is the hopeful heart of this poem: Sufis teach that love for God is never wasted, even when it hurts. 'Those who throw their ropes up to the sky have the stars under their feet' is a call to aim high in spirit. 'Borrowed wings' is a sharp lesson about relying on other people's approval or borrowed beliefs instead of real, personal faith. The last couplet longs for the Day when truth and lies will finally be separated, which only God can do.",
+  "why": "It's full of short, quotable truths about words, listening and relying on yourself, which feel very modern.",
+  "prompt": "What's something you rely on that might be 'borrowed wings'? What would make it truly yours?",
+  "glossary": [
+    "ghazal",
+    "vanjara",
+    "saudai"
+  ],
+  "notes": [
+    "The ghazal continues onto page 40."
+  ]
+}

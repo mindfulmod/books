@@ -1,0 +1,61 @@
+{
+  "id": "098-todays-youth",
+  "pages": [
+    98
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Today's young people",
+  "titleOriginal": "آج دا نوجوان",
+  "themes": [
+    "society",
+    "homeland"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Young people could change their country's future, if they stopped wasting themselves.",
+  "scene": "The poet worries about young men in his time: full of potential, but wasting it on drugs, vanity and arrogance.",
+  "couplets": [
+    {
+      "original": [
+        "گبھرو قوم دی بدل تقدیر سکدے پر ایہہ ملک دی خاک اڈائی پھردے",
+        "رہندے ہر ویلے جے نشیاں وچ شیشے کنگیاں جیب وچہ پائی پھردے"
+      ],
+      "transliteration": [
+        "Gabhru qaum di badal taqdeer sakde, par eh mulk di khaak udaai phirde",
+        "Rehnde har vele je nashiyaan vich, sheeshe kanghiyaan jeb vich paai phirde"
+      ],
+      "translation": [
+        "Young men could change the nation's destiny, but they go around kicking up the country's dust.",
+        "They're high on drugs all the time, and walk about with mirrors and combs in their pockets."
+      ],
+      "story": "Young men could change the country's future. Instead, they waste time wandering about, using drugs, and carrying mirrors and combs to check their hair."
+    },
+    {
+      "original": [
+        "ظلمت خودی تکبر دا بھار بھارا غافل موہنڈیاں دے اتے چائی پھردے",
+        "سر عام ایہہ خون دا بھا پچھدے بوچڑ خانے چہ جیویں قصائی پھردے"
+      ],
+      "transliteration": [
+        "Zulmat khudi takabbur da bhaar bhaara, ghaafil mohndiyaan de utte chaai phirde",
+        "Sar-e-aam eh khoon da bhaa puchhde, boochar-khaane ch jiven qasaai phirde"
+      ],
+      "translation": [
+        "Careless, they carry the heavy weight of darkness, ego and arrogance on their shoulders.",
+        "In broad daylight they ask the going rate for blood, like butchers walking around a slaughterhouse."
+      ],
+      "story": "They carry around heavy loads of pride and arrogance. Some have become so violent that they talk about hurting people as casually as butchers in a slaughterhouse."
+    }
+  ],
+  "deeper": "",
+  "why": "A worried father's view of a lost generation. Today's readers can ask whether the same worries still apply.",
+  "prompt": "What do you think young people today could change, if they put their energy into it?",
+  "glossary": [
+    "qita",
+    "qaum"
+  ],
+  "notes": []
+}

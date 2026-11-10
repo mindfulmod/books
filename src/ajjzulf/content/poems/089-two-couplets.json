@@ -1,0 +1,66 @@
+{
+  "id": "089-two-couplets",
+  "pages": [
+    89
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "The grave will ask",
+  "titleOriginal": "دو شعر",
+  "themes": [
+    "society",
+    "devotion"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "passing",
+      "service"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "Don't hurt anyone, and do good. That's all that will count in the end.",
+  "scene": "The heading just says 'Two couplets'. It is short, simple advice about how to live, remembering that everyone dies.",
+  "couplets": [
+    {
+      "original": [
+        "دشمن سجن مردے جاندے اساں وی مر جانا ایں",
+        "کسے دا دل دکھائیے نہ بدی تے ویر کمائیے نہ"
+      ],
+      "transliteration": [
+        "Dushman sajan marde jaande, asaan vi mar jaana ain",
+        "Kise da dil dukhaaiye na, badi te vair kamaaiye na"
+      ],
+      "translation": [
+        "Enemies and friends keep dying, and we will die too.",
+        "Let's not hurt anyone's heart; let's not earn evil and enmity."
+      ],
+      "story": "Enemies die and friends die, and one day we'll die too. So don't hurt anybody's feelings, and don't make enemies by doing wrong."
+    },
+    {
+      "original": [
+        "کم نیکی دا کیتا احمدؔ کم حشر نوں آنا ایں",
+        "جس ویلے پے جانا قبرے فر بندے پچھتانا ایں"
+      ],
+      "transliteration": [
+        "Kam neki da keeta Ahmad kam hashr nu aana ain",
+        "Jis vele pai jaana qabre, phar bande pachhtaana ain"
+      ],
+      "translation": [
+        "Ahmad, the good you've done will help you on Judgment Day;",
+        "when you're laid in the grave, that's when a person regrets."
+      ],
+      "story": "The good things you do will help you when God judges everyone. Once you're in the grave, it's too late. That's when people wish they'd done better."
+    }
+  ],
+  "deeper": "A simple statement of Islamic ethics: remember death, avoid hurting others, and do good, because only good deeds will 'come to use' on the Day of Judgment. The Prophet called remembering death 'the destroyer of pleasures', a way to keep life in perspective.",
+  "why": "Four lines that sum up a whole way of living.",
+  "prompt": "If you knew your words would be remembered forever, what would you say differently today?",
+  "glossary": [
+    "hashr"
+  ],
+  "notes": []
+}

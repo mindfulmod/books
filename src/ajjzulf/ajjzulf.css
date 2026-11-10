@@ -1,0 +1,266 @@
+/* Ajj Zulf: lamp light on paper by day, a lamp in the dark by night. */
+:root, :root[data-zulf-theme="day"] {
+  --paper: #f7f0e3; --sheet: #fffaf1; --sheet-2: #f2e7d4; --ink: #2d2333; --ink-soft: #5d5260; --ink-faint: #8a7f86;
+  --line: #e2d4bd; --accent: #a8432f; --accent-ink: #fff8ef; --flame: #d98a2b; --glow: #f3c46b33;
+  --explicit: #a8432f; --sufi: #7a4f9a; --thread: #3f7a6a; --none: #8a7f86;
+  --shadow: 0 1px 2px #3a28200d, 0 8px 24px #3a282012;
+  --serif: 'Instrument Serif', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif;
+  --script: 'Noto Naskh Arabic', 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+}
+:root[data-zulf-theme="night"] {
+  --paper: #191726; --sheet: #221f33; --sheet-2: #2b2740; --ink: #f1e8da; --ink-soft: #c3b8c9; --ink-faint: #8f86a0;
+  --line: #3a3452; --accent: #f0a35b; --accent-ink: #1d1626; --flame: #f3b55c; --glow: #f3b55c1f;
+  --explicit: #f0a35b; --sufi: #c39be0; --thread: #7fc4ae; --none: #8f86a0;
+  --shadow: 0 1px 2px #0006, 0 10px 30px #0005;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; margin: 0; }
+h1 { font-size: clamp(38px, 6vw, 62px); letter-spacing: -.01em; }
+h2 { font-size: clamp(26px, 3.4vw, 34px); }
+h3 { font-size: 23px; }
+:focus-visible { outline: 3px solid var(--flame); outline-offset: 3px; border-radius: 6px; }
+[data-route-heading]:focus { outline: none; }
+.zulf-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.zulf-skip { position: absolute; left: 16px; top: -60px; background: var(--ink); color: var(--paper); padding: 10px 14px; border-radius: 8px; z-index: 20; }
+.zulf-skip:focus { top: 12px; }
+
+.zulf-app { min-height: 100vh; display: flex; flex-direction: column; }
+.zulf-app > main { flex: 1; width: 100%; max-width: 1120px; margin: 0 auto; padding: 24px 24px 72px; }
+
+.zulf-script { font-family: var(--script); line-height: 2.1; unicode-bidi: isolate; }
+
+/* Header */
+.zulf-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 20px; padding: 12px 24px; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.zulf-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--accent); }
+.zulf-brand span { font-family: var(--serif); font-size: 24px; line-height: 1; color: var(--ink); }
+.zulf-brand small { display: block; font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-top: 3px; }
+.zulf-header nav { display: flex; gap: 4px; margin-left: auto; }
+.zulf-header nav a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 8px 12px; border-radius: 999px; font-size: 15px; color: var(--ink-soft); }
+.zulf-header nav a:hover { background: var(--sheet-2); color: var(--ink); }
+.zulf-header nav a[aria-current="page"] { background: var(--sheet-2); color: var(--ink); font-weight: 600; }
+.zulf-count { background: var(--accent); color: var(--accent-ink); border-radius: 999px; font-size: 12px; min-width: 20px; padding: 0 6px; text-align: center; }
+.zulf-icon-button { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--line); background: var(--sheet); cursor: pointer; }
+.zulf-icon-button:hover { border-color: var(--flame); }
+
+/* Buttons */
+.zulf-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.zulf-primary, .zulf-secondary { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 16px; cursor: pointer; border: 1px solid transparent; }
+.zulf-primary { background: var(--accent); color: var(--accent-ink); }
+.zulf-primary:hover { filter: brightness(1.06); }
+.zulf-secondary { background: var(--sheet); border-color: var(--line); color: var(--ink); }
+.zulf-secondary:hover { border-color: var(--flame); }
+.zulf-secondary:disabled { opacity: .5; cursor: not-allowed; }
+.zulf-text-button { background: none; border: 0; color: var(--ink-soft); text-decoration: underline; cursor: pointer; padding: 8px; }
+.zulf-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+
+/* Home */
+.zulf-hero { display: grid; grid-template-columns: 1.25fr .75fr; gap: 32px; align-items: center; padding: 40px 0 24px; }
+.zulf-hero h1 em { display: block; font-style: italic; color: var(--accent); }
+.zulf-hero-original { font-size: 26px; margin: 8px 0 0; color: var(--ink-soft); }
+.zulf-lead { font-size: 19px; color: var(--ink-soft); max-width: 36em; margin: 12px 0 28px; }
+.zulf-hero-art img { width: 100%; height: auto; max-width: 420px; display: block; margin: 0 auto; filter: drop-shadow(0 20px 40px var(--glow)); }
+.zulf-section { margin-top: 64px; }
+.zulf-section-head { max-width: 46em; margin-bottom: 24px; }
+.zulf-section-head h1, .zulf-section-head h2 { margin: 8px 0 10px; }
+.zulf-section-head p { color: var(--ink-soft); margin: 0; }
+.zulf-start { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.zulf-start a { display: flex; align-items: center; gap: 16px; padding: 16px 18px; background: var(--sheet); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; box-shadow: var(--shadow); height: 100%; }
+.zulf-start a:hover, .zulf-lenses a:hover, .zulf-levels a:hover, .zulf-card a:hover { border-color: var(--flame); }
+.zulf-start a > span:nth-child(2) { flex: 1; }
+.zulf-start strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.2; }
+.zulf-start small { display: block; color: var(--ink-soft); font-size: 14.5px; margin-top: 2px; }
+.zulf-start-number { font-family: var(--serif); font-size: 30px; color: var(--flame); width: 28px; text-align: center; }
+.zulf-layers { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: layer; }
+.zulf-layers li { padding: 18px; border-radius: 16px; background: var(--sheet-2); counter-increment: layer; }
+.zulf-layers li::before { content: counter(layer); display: block; font-family: var(--serif); font-size: 28px; color: var(--flame); }
+.zulf-layers strong { display: block; font-size: 17px; }
+.zulf-layers span { color: var(--ink-soft); font-size: 15px; }
+.zulf-levels, .zulf-lenses { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.zulf-levels { grid-template-columns: repeat(4, 1fr); }
+.zulf-lenses { grid-template-columns: repeat(3, 1fr); }
+.zulf-levels a, .zulf-lenses a { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px; border-radius: 16px; background: var(--sheet); border: 1px solid var(--line); text-decoration: none; box-shadow: var(--shadow); }
+.zulf-levels strong, .zulf-lenses strong { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.15; }
+.zulf-levels span:not(.zulf-level-dot), .zulf-lenses span { color: var(--ink-soft); font-size: 15px; flex: 1; }
+.zulf-levels small, .zulf-lenses small { color: var(--ink-faint); font-size: 13.5px; }
+.zulf-level-dot { display: inline-block; width: 10px; height: 10px; border-radius: 999px; background: var(--none); flex: none; }
+.zulf-level-dot.level-explicit { background: var(--explicit); }
+.zulf-level-dot.level-sufi { background: var(--sufi); }
+.zulf-level-dot.level-thread { background: var(--thread); }
+.zulf-level-dot.level-none { background: transparent; border: 2px solid var(--none); }
+.zulf-price { margin-top: 72px; text-align: center; padding: 48px 24px; border-radius: 24px; background: radial-gradient(circle at 50% 0, var(--glow), transparent 70%), var(--sheet-2); }
+.zulf-price p { margin: 0; color: var(--ink-soft); }
+.zulf-price blockquote { font-family: var(--serif); font-size: clamp(30px, 4.5vw, 44px); margin: 8px 0 16px; line-height: 1.15; }
+.zulf-price a { display: inline-flex; gap: 6px; align-items: center; color: var(--accent); font-weight: 600; text-decoration: none; }
+
+/* Contents */
+.zulf-tools { display: grid; gap: 12px; margin-bottom: 8px; }
+.zulf-search { display: flex; align-items: center; gap: 10px; background: var(--sheet); border: 1px solid var(--line); border-radius: 999px; padding: 4px 6px 4px 16px; max-width: 520px; }
+.zulf-search input { flex: 1; border: 0; background: none; font: inherit; color: var(--ink); min-height: 40px; outline: none; min-width: 0; }
+.zulf-search .zulf-icon-button { width: 32px; height: 32px; }
+.zulf-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.zulf-filters a { display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; font-size: 14.5px; color: var(--ink-soft); background: var(--sheet); }
+.zulf-filters a[aria-current="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.zulf-filters a[aria-current="true"] .zulf-level-dot.level-none { border-color: var(--paper); }
+.zulf-result-count { color: var(--ink-faint); font-size: 14.5px; margin: 16px 0; }
+.zulf-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.zulf-card a { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px; border-radius: 16px; background: var(--sheet); border: 1px solid var(--line); text-decoration: none; box-shadow: var(--shadow); }
+.zulf-card h3 { font-size: 24px; }
+.zulf-card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; flex: 1; }
+.zulf-card-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.zulf-read { display: inline-flex; align-items: center; gap: 3px; color: var(--thread); }
+.zulf-card-original { font-size: 18px; color: var(--ink-faint); line-height: 1.8; text-align: right; }
+.zulf-card-foot { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-faint); margin-top: 6px; }
+.zulf-card-foot svg { margin-left: auto; color: var(--accent); }
+.zulf-card-author { font-style: italic; }
+.zulf-empty { text-align: center; padding: 48px 16px; }
+.zulf-empty p { color: var(--ink-soft); }
+.zulf-empty-line { color: var(--ink-soft); }
+
+/* Reader */
+.zulf-app > main.zulf-reader { max-width: 820px; }
+.zulf-reader-top { display: flex; justify-content: space-between; align-items: center; font-size: 14.5px; color: var(--ink-faint); margin-bottom: 16px; }
+.zulf-reader-top a { display: inline-flex; gap: 6px; align-items: center; text-decoration: none; color: var(--ink-soft); }
+.zulf-sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: 24px; padding: clamp(22px, 5vw, 56px); box-shadow: var(--shadow); }
+.zulf-poem-head { position: relative; padding-bottom: 8px; }
+.zulf-poem-head h1 { margin: 10px 0 4px; padding-right: 96px; }
+.zulf-poem-original-title { font-size: 24px; margin: 0; color: var(--ink-soft); }
+.zulf-guest { margin: 8px 0 0; color: var(--ink-soft); font-size: 15px; }
+.zulf-takeaway { font-family: var(--serif); font-size: clamp(23px, 3vw, 28px); line-height: 1.3; color: var(--accent); margin: 18px 0 0; }
+.zulf-save { position: absolute; top: 30px; right: 0; display: inline-flex; gap: 6px; align-items: center; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--sheet); cursor: pointer; font-size: 14.5px; }
+.zulf-save[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.zulf-loading { color: var(--ink-faint); padding: 32px 0; }
+.zulf-sheet section { margin-top: 36px; }
+.zulf-sheet section h2 { margin-bottom: 10px; }
+.zulf-scene p, .zulf-why p { margin: 0; font-size: 18px; }
+.zulf-context { margin-top: 24px; padding: 14px 18px; border-left: 3px solid var(--flame); background: var(--sheet-2); border-radius: 0 12px 12px 0; font-size: 15.5px; color: var(--ink-soft); }
+.zulf-context strong { color: var(--ink); }
+.zulf-poem-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.zulf-poem-bar h2 { margin: 0 !important; }
+.zulf-layer-switch { display: inline-flex; background: var(--sheet-2); border-radius: 999px; padding: 4px; gap: 2px; }
+.zulf-layer-switch button { border: 0; background: none; padding: 7px 14px; border-radius: 999px; cursor: pointer; font-size: 14.5px; color: var(--ink-soft); }
+.zulf-layer-switch button[aria-checked="true"] { background: var(--sheet); color: var(--ink); font-weight: 600; box-shadow: var(--shadow); }
+.zulf-layer-hint { color: var(--ink-faint); font-size: 14px; margin: 10px 0 0; }
+.zulf-couplets { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 4px; }
+.zulf-couplet { position: relative; padding: 18px 0 18px 46px; border-top: 1px solid var(--line); }
+.zulf-couplet:first-child { border-top: 0; }
+.zulf-couplet-number { position: absolute; left: 0; top: 16px; font-family: var(--serif); font-size: 24px; color: var(--ink-faint); width: 32px; text-align: center; }
+.zulf-anchor { position: absolute; left: 8px; top: 50px; color: var(--flame); }
+.zulf-couplet.is-anchor { background: linear-gradient(90deg, var(--glow), transparent 60%); border-radius: 12px; }
+.zulf-lang-tag { display: inline-block; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; margin-bottom: 6px; }
+.zulf-story { margin: 0; font-size: 18.5px; line-height: 1.65; }
+.zulf-english, .zulf-aloud { display: grid; gap: 2px; }
+.zulf-english span { font-family: var(--serif); font-size: 22px; line-height: 1.35; }
+.zulf-aloud span { font-style: italic; color: var(--ink-soft); font-size: 17px; }
+.zulf-original { display: grid; gap: 0; text-align: right; }
+.zulf-original .zulf-script { font-size: 25px; }
+.zulf-lines { margin-top: 10px; }
+.zulf-lines summary { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; font-size: 14px; color: var(--accent); font-weight: 600; list-style: none; padding: 4px 0; }
+.zulf-lines summary::-webkit-details-marker { display: none; }
+.zulf-lines[open] summary svg { transform: rotate(180deg); }
+.zulf-lines-body { margin-top: 10px; padding: 14px 18px; background: var(--sheet-2); border-radius: 12px; display: grid; gap: 12px; }
+.zulf-lines-body > * + * { padding-top: 12px; border-top: 1px solid var(--line); }
+.zulf-lines .zulf-english span { font-size: 19px; }
+.zulf-lines .zulf-original .zulf-script { font-size: 22px; }
+.zulf-lines .zulf-aloud span { font-size: 15.5px; }
+.zulf-variant { margin-top: 20px; padding: 14px 18px; border: 1px dashed var(--line); border-radius: 14px; }
+.zulf-variant summary { cursor: pointer; font-weight: 600; display: flex; gap: 6px; align-items: center; }
+.zulf-variant p { color: var(--ink-soft); }
+.zulf-deeper { padding: 24px; border-radius: 18px; background: var(--sheet-2); border-top: 4px solid var(--none); }
+.zulf-deeper.level-explicit { border-top-color: var(--explicit); }
+.zulf-deeper.level-sufi { border-top-color: var(--sufi); }
+.zulf-deeper.level-thread { border-top-color: var(--thread); }
+.zulf-deeper h2 { margin-top: 8px !important; }
+.zulf-deeper p { margin: 0 0 12px; font-size: 17.5px; }
+.zulf-level-note { color: var(--ink-soft); font-size: 15.5px !important; font-style: italic; }
+.zulf-lens-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.zulf-lens-chips a { font-size: 14px; padding: 5px 12px; border-radius: 999px; background: var(--sheet); border: 1px solid var(--line); text-decoration: none; }
+.zulf-lens-chips a:hover { border-color: var(--flame); }
+.zulf-words dl { margin: 0; display: grid; gap: 12px; }
+.zulf-words dt { font-weight: 600; }
+.zulf-words dd { margin: 2px 0 0; color: var(--ink-soft); font-size: 16px; }
+.zulf-reflect p { font-family: var(--serif); font-size: 24px; line-height: 1.3; margin: 0 0 14px; }
+.zulf-reflect label { display: block; font-size: 14px; color: var(--ink-faint); margin-bottom: 6px; }
+.zulf-reflect textarea, .zulf-export textarea { width: 100%; font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; resize: vertical; }
+.zulf-warning { color: var(--accent); font-size: 14.5px; }
+.zulf-translator { margin-top: 28px; font-size: 15px; color: var(--ink-soft); }
+.zulf-translator summary { cursor: pointer; display: inline-flex; gap: 5px; align-items: center; font-weight: 600; }
+.zulf-finish { margin-top: 32px; display: flex; justify-content: center; }
+.zulf-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.zulf-pager a { display: flex; align-items: center; gap: 10px; text-decoration: none; padding: 12px; border-radius: 14px; }
+.zulf-pager a:hover { background: var(--sheet-2); }
+.zulf-pager a.is-next { justify-content: flex-end; text-align: right; }
+.zulf-pager small { display: block; font-size: 12.5px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .08em; }
+.zulf-pager span { font-family: var(--serif); font-size: 20px; line-height: 1.2; }
+.zulf-pager small { font-family: var(--sans); }
+
+/* Notebook & about */
+.zulf-progress { height: 8px; border-radius: 999px; background: var(--sheet-2); margin-top: 16px; overflow: hidden; }
+.zulf-progress span { display: block; height: 100%; background: var(--flame); border-radius: 999px; }
+.zulf-notebook section, .zulf-about section { margin-top: 40px; }
+.zulf-notebook h2 { margin-bottom: 16px; }
+.zulf-thoughts { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.zulf-thoughts li { padding: 16px 18px; background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; }
+.zulf-thoughts a { display: flex; justify-content: space-between; text-decoration: none; font-family: var(--serif); font-size: 21px; }
+.zulf-thoughts p { margin: 6px 0 0; white-space: pre-wrap; color: var(--ink-soft); }
+.zulf-export { padding: 20px; border-radius: 16px; background: var(--sheet-2); }
+.zulf-export p { margin: 0 0 12px; color: var(--ink-soft); }
+.zulf-export textarea { margin-top: 14px; }
+.zulf-about-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: start; }
+.zulf-about-grid h2 { margin: 32px 0 10px; }
+.zulf-about-grid h2:first-child { margin-top: 0; }
+.zulf-about-grid p { margin: 0 0 12px; }
+.zulf-dedication { margin: 0 0 12px; padding: 16px 20px; background: var(--sheet-2); border-radius: 14px; text-align: right; font-size: 20px; }
+.zulf-small { font-size: 14px; color: var(--ink-faint); }
+.zulf-about-book { position: sticky; top: 90px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 24px; border-radius: 20px; background: var(--sheet); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.zulf-about-book img { width: 160px; height: auto; }
+.zulf-about-title { font-size: 24px; }
+.zulf-about-book strong { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.15; }
+.zulf-about-book dl { width: 100%; text-align: left; margin: 16px 0 8px; display: grid; gap: 8px; font-size: 14.5px; }
+.zulf-about-book dt { color: var(--ink-faint); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.zulf-about-book dd { margin: 0; }
+
+.zulf-footer { border-top: 1px solid var(--line); padding: 24px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; font-size: 14.5px; color: var(--ink-faint); }
+.zulf-footer p { margin: 0; display: inline-flex; gap: 6px; align-items: center; }
+.zulf-footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.zulf-footer a { color: var(--ink-soft); text-decoration: none; display: inline-flex; gap: 4px; align-items: center; }
+
+@media (max-width: 860px) {
+  .zulf-hero { grid-template-columns: 1fr; padding-top: 16px; }
+  .zulf-hero-art { order: -1; }
+  .zulf-hero-art img { max-width: 220px; }
+  .zulf-levels, .zulf-layers { grid-template-columns: repeat(2, 1fr); }
+  .zulf-lenses { grid-template-columns: repeat(2, 1fr); }
+  .zulf-about-grid { grid-template-columns: 1fr; }
+  .zulf-about-book { position: static; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .zulf-app > main { padding: 16px 16px 56px; }
+  .zulf-header { padding: 10px 16px; gap: 10px; flex-wrap: wrap; }
+  .zulf-header nav { order: 3; width: 100%; margin: 0; justify-content: space-between; }
+  .zulf-header nav a { padding: 6px 8px; font-size: 14.5px; }
+  .zulf-header .zulf-icon-button { margin-left: auto; }
+  .zulf-start, .zulf-lenses, .zulf-levels, .zulf-layers { grid-template-columns: 1fr; }
+  .zulf-sheet { border-radius: 18px; }
+  .zulf-poem-head h1 { padding-right: 0; }
+  .zulf-save { position: static; margin-top: 16px; }
+  .zulf-filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 2px 16px; scrollbar-width: none; }
+  .zulf-filters::-webkit-scrollbar { display: none; }
+  .zulf-filters a { flex: none; }
+  .zulf-layer-switch { width: 100%; }
+  .zulf-layer-switch button { flex: 1; padding: 7px 4px; font-size: 13.5px; }
+  .zulf-couplet { padding-left: 34px; }
+  .zulf-couplet-number { width: 24px; font-size: 20px; }
+  .zulf-anchor { left: 4px; }
+  .zulf-original .zulf-script { font-size: 22px; }
+  .zulf-pager { grid-template-columns: 1fr; }
+  .zulf-footer { padding: 20px 16px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .zulf-card a, .zulf-start a, .zulf-lenses a, .zulf-levels a { transition: border-color .15s, transform .15s; }
+  .zulf-card a:hover, .zulf-start a:hover { transform: translateY(-2px); }
+}

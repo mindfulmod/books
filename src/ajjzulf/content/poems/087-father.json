@@ -1,0 +1,61 @@
+{
+  "id": "087-father",
+  "pages": [
+    87
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Father",
+  "titleOriginal": "حکیم حاجی اللہ دتہ باپ",
+  "themes": [
+    "family",
+    "elegy"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Without a father, a mother, siblings and children, the world can feel very dark.",
+  "scene": "A short poem for the poet's father, Hakeem Haji Allah Ditta, a traditional herbal doctor. The heading lists his name and says simply 'Father'.",
+  "couplets": [
+    {
+      "original": [
+        "باپ مرتے شفقت بجھے ماواں باجھ ناں چھاواں",
+        "بندے دی کنڈ ننگی ہووے یاروباجھ بھراواں"
+      ],
+      "transliteration": [
+        "Baap marte shafqat bujhe, maavaan baajh naa chhaavaan",
+        "Bande di kand nangi hove yaaro, baajh bharaavaan"
+      ],
+      "translation": [
+        "When a father dies, his tenderness goes out; without mothers there is no shade.",
+        "Friends, a person's back is left exposed without brothers."
+      ],
+      "story": "When your father dies, the warmth of his care goes out like a light. Without your mother, there's no shade from life's heat. Without brothers, it feels like no one is watching your back."
+    },
+    {
+      "original": [
+        "بھیناں پتراں باجھوں لگن بجیاں ساریاں تھاواں",
+        "احمدؔ اینان باجھ ہنیرا ہردم ہو کے ہاواں"
+      ],
+      "transliteration": [
+        "Bhainaan puttraan baajhon lagan bujjiyaan saariyaan thaavaan",
+        "Ahmad inaan baajh hanera, har dam hauke haavaan"
+      ],
+      "translation": [
+        "Without sisters and sons, every place feels dark and dead.",
+        "Ahmad, without them it's darkness, and every breath is a sob and a sigh."
+      ],
+      "story": "Without sisters and children, everywhere feels empty and dark. Without family, the poet says, life is darkness, and every breath feels like a sigh."
+    }
+  ],
+  "deeper": "",
+  "why": "A short, honest list of what family means: each person gives a different kind of protection.",
+  "prompt": "Who in your family 'watches your back'? Who gives you 'shade'?",
+  "glossary": [
+    "qita",
+    "hakeem"
+  ],
+  "notes": []
+}

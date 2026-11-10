@@ -1,0 +1,111 @@
+{
+  "id": "010-whats-the-use",
+  "pages": [
+    10
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "What's the use?",
+  "themes": [
+    "love",
+    "society"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "longing"
+    ],
+    "anchors": [
+      2,
+      3
+    ]
+  },
+  "takeaway": "In a world full of fakes, don't waste your heart on people who'll sell you out.",
+  "scene": "The poet is tired of being let down. Each line asks the same bitter question: what's the point? He uses two famous Punjabi love stories to show how love ends in betrayal.",
+  "couplets": [
+    {
+      "original": [
+        "ایتھے آس امیداں دا گلشن، توں یار سجا کے کیہ کرنا",
+        "ایہہ سونے چاندی دے لوبھی، متراں سنگ دغا کماندے نیں"
+      ],
+      "transliteration": [
+        "Ethe aas umeedaan da gulshan, toon yaar saja ke ki karna",
+        "Eh sone chaandi de lobhi, mitraan sang dagha kamaande nain"
+      ],
+      "translation": [
+        "Friend, what's the use of planting a garden of hopes here?",
+        "These people are greedy for gold and silver; they betray even their friends."
+      ],
+      "story": "Why bother building up your hopes around here? People only care about money, and they'll cheat their own friends to get it."
+    },
+    {
+      "original": [
+        "توں انج دیاں غم خواراں نوں، دکھ درد سنا کے کیہ کرنا",
+        "کیہ ناد وجانی سکھنی ایں، کیہ فیدہ کے جانے دا"
+      ],
+      "transliteration": [
+        "Toon inj diyaan gham-khaaraan nu, dukh dard suna ke ki karna",
+        "Ki naad vajaani sikhni ain, ki faida ke jaane da"
+      ],
+      "translation": [
+        "What's the use of telling your pain to 'friends' like these?",
+        "Why learn to blow the jogi's horn? What good will it do you?"
+      ],
+      "story": "Why pour out your heart to people who only pretend to care? He asks why anyone would learn the ways of a wandering jogi, like Ranjha did for Heer, if it gets you nowhere."
+    },
+    {
+      "original": [
+        "جے ہیر ہو جانی کھیڑیاں دی، ایویں کن پڑوا کے کیہ کرنا",
+        "خود ترکش جنڈیں ٹنگ صاحباں، مرزے نوں آپ کُہاندی اے"
+      ],
+      "transliteration": [
+        "Je Heer ho jaani Kheriyaan di, aiven kann parva ke ki karna",
+        "Khud tarkash jandeen tang Sahibaan, Mirze nu aap kuhaandi ae"
+      ],
+      "translation": [
+        "If Heer is going to end up with the Kheras anyway, why pierce your ears for nothing?",
+        "Sahiban herself hangs Mirza's quiver in the tree, and gets him killed."
+      ],
+      "story": "In the old story, Ranjha pierced his ears and became a jogi to win Heer back, but she was married to another family anyway. In another story, Sahiban hid her lover Mirza's arrows in a tree, and her brothers killed him. The poet's point: even in the great love stories, love ends in loss or betrayal."
+    },
+    {
+      "original": [
+        "ایتھے پیر پیر تے دھوکا اے، دھوکے وچ آ کے کیہ کرنا",
+        "اگ ہرجائیاں نے لا احمدؔ میرے دل وچ بھانبڑ بالے نیں"
+      ],
+      "transliteration": [
+        "Ethe pair pair te dhokha ae, dhokhe vich aa ke ki karna",
+        "Agg harjaaiyaan ne la Ahmad mere dil vich bhaambar baale nain"
+      ],
+      "translation": [
+        "Here there is deceit at every step; what's the use of being fooled?",
+        "Ahmad, the faithless ones lit a fire and set my heart blazing."
+      ],
+      "story": "There's a trick waiting at every step, so why fall for it? Unfaithful people have already set his heart on fire."
+    },
+    {
+      "original": [
+        "اوہ ہن تے آخر رک جاون، تایاں نوں تا کے کیہ کرنا"
+      ],
+      "transliteration": [
+        "Oh hun te aakhir ruk jaavan, taayaan nu ta ke ki karna"
+      ],
+      "translation": [
+        "Let them stop now, at last. What's the use of heating what's already burning?"
+      ],
+      "story": "He asks them to stop. His heart is already on fire. Why keep adding heat?"
+    }
+  ],
+  "deeper": "Heer and Ranjha is the great Sufi story of Punjab. Ranjha giving up everything to become a jogi is read as the seeker giving up the world for God. When the poet asks 'what's the use?', it can also be the cry of someone who looked for faithful people and found none. That pushes him toward the only love that never betrays.",
+  "why": "It shows how Punjabi poets use old love stories the way we might use famous movie scenes, to say a lot in one line.",
+  "prompt": "Is it ever worth trusting people again after being let down? What would make it worth it?",
+  "glossary": [
+    "heer-ranjha",
+    "jogi",
+    "mirza-sahiban"
+  ],
+  "notes": [
+    "Couplet 2, line 2: printed 'کیہ نادو جانی'. It is read as 'naad vajaani' (blowing the jogi's horn), which fits the Ranjha image in the next line. This reading needs checking.",
+    "The poem has an odd number of lines; the last line stands alone."
+  ]
+}

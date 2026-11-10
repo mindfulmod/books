@@ -1,0 +1,64 @@
+{
+  "id": "075-abul-kalam-azad",
+  "pages": [
+    75
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Maulana Abul Kalam Azad",
+  "titleOriginal": "مولانا ابوالکلام آزاد",
+  "themes": [
+    "tribute",
+    "homeland"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Some people's lives and deaths both become examples for others.",
+  "scene": "A four-line tribute to Maulana Abul Kalam Azad, a great scholar and freedom fighter. The poet plays on his name, Azad, which means 'free'.",
+  "couplets": [
+    {
+      "original": [
+        "مرحبا صد مرحبا ملک قوم لئی جان لڑان والے",
+        "ساری قوم پئی اتھرو کیردی اے غم قوم وچ عمر گوان والے"
+      ],
+      "transliteration": [
+        "Marhaba sad marhaba, mulk qaum layi jaan laraan vaale",
+        "Saari qaum pai athru kerdi ae, gham-e-qaum vich umar gavaan vaale"
+      ],
+      "translation": [
+        "Bravo, a hundred times bravo, you who risked your life for country and nation!",
+        "The whole nation is shedding tears for you, who spent your life grieving for your people."
+      ],
+      "story": "He salutes Azad, who risked everything for his country and his people. Now the whole nation is crying for the man who spent his whole life worrying about them."
+    },
+    {
+      "original": [
+        "رہی تیری حیاتی مثال جگ وچ موت تیری وی اک مثال رہنی",
+        "احمدؔ بھلے گا کیوں آزادؔ مینوں خوب جوت آزادی جگان والے"
+      ],
+      "transliteration": [
+        "Rahi teri hayaati misaal jag vich, maut teri vi ik misaal rehni",
+        "Ahmad bhule ga kyon Azad mainu, khoob jot azaadi jagaan vaale"
+      ],
+      "translation": [
+        "Your life was an example to the world, and your death will be an example too.",
+        "Ahmad asks: why would I ever forget Azad, who lit the flame of freedom so brightly?"
+      ],
+      "story": "His life set an example for the world, and so did the way he died. The poet asks how he could ever forget Azad, the 'free' man who lit the flame of freedom so brightly."
+    }
+  ],
+  "deeper": "",
+  "why": "It introduces a hero of the freedom struggle and shows how the poet admired scholars who served their people.",
+  "prompt": "Whose life would you call an example? What would you want people to learn from yours?",
+  "glossary": [
+    "qita",
+    "abul-kalam-azad",
+    "qaum"
+  ],
+  "notes": [
+    "Plays on 'Azad', which means 'free'."
+  ]
+}

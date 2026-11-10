@@ -1,0 +1,159 @@
+{
+  "id": "091-effort",
+  "pages": [
+    91,
+    92
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Effort",
+  "titleOriginal": "ادھم",
+  "themes": [
+    "society"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "self"
+    ],
+    "anchors": [
+      5,
+      6
+    ]
+  },
+  "takeaway": "The goal comes to those who work for it and keep going, not to those who stop and rest.",
+  "scene": "Four short four-line verses under the title 'Udham', meaning 'effort' or 'striving'. Each gives a small lesson about working hard, following your heart, and missing people.",
+  "couplets": [
+    {
+      "original": [
+        "جدوں کجھ سربند کر لین آہری",
+        "وگدے وین دریاواں دے رکدے نیں"
+      ],
+      "transliteration": [
+        "Jadon kujh sarband kar lain aahri",
+        "Vagde vain dariyaavaan de rukde nain"
+      ],
+      "translation": [
+        "When hard-working people make up their minds to do something,",
+        "even flowing rivers stop in their tracks."
+      ],
+      "story": "When people who work hard decide to do something, they can achieve the impossible, even stopping a flowing river."
+    },
+    {
+      "original": [
+        "لک بنیاں منزلاں ہوون نیڑے",
+        "گھریں بیٹھیاں پند نہ مکدے نیں"
+      ],
+      "transliteration": [
+        "Lakk banniyaan manzilaan hovan nere",
+        "Ghareen baithiyaan pandh na mukde nain"
+      ],
+      "translation": [
+        "When you tie your belt and get ready, the goal comes near;",
+        "the journey never ends while you sit at home."
+      ],
+      "story": "Once you roll up your sleeves and get going, the goal gets closer. But if you just sit at home, the journey never gets shorter."
+    },
+    {
+      "original": [
+        "منزل اس دے ہس کے پیر چمدی",
+        "جیہڑا ہس کے اوکڑاں سہہ جاندا"
+      ],
+      "transliteration": [
+        "Manzil us de has ke pair chumdi",
+        "Jehra has ke aukraan seh jaanda"
+      ],
+      "translation": [
+        "The goal happily kisses the feet of the one",
+        "who smiles and puts up with hardship."
+      ],
+      "story": "The goal happily comes to people who face hard times with a smile."
+    },
+    {
+      "original": [
+        "راہی اوہ نہ منزل تے پج سکدا",
+        "چھاں رکھاں دی مانن جو بہہ جاندا"
+      ],
+      "transliteration": [
+        "Raahi oh na manzil te puj sakda",
+        "Chhaan rukkhaan di maanan jo beh jaanda"
+      ],
+      "translation": [
+        "That traveller can never reach the goal",
+        "who sits down to enjoy the shade of the trees."
+      ],
+      "story": "A traveller who keeps stopping to rest in the shade will never arrive."
+    },
+    {
+      "original": [
+        "سدا جت ہوندی ایتھے جذبیاں دی",
+        "نری عقل تے سوچ بیکار ہوندی"
+      ],
+      "transliteration": [
+        "Sada jitt hondi ethe jazbiyaan di",
+        "Nari aql te soch bekaar hondi"
+      ],
+      "translation": [
+        "Here, it's always passion that wins;",
+        "mere cleverness and thinking are useless on their own."
+      ],
+      "story": "In the end, it's people with passion and heart who win. Being clever isn't enough by itself."
+    },
+    {
+      "original": [
+        "عقلاں کنڈھے تے بہہ حیران ہوون",
+        "بناں جذبیوں نئیں بیڑی پار ہوندی"
+      ],
+      "transliteration": [
+        "Aqlaan kandhe te beh hairaan hovan",
+        "Binaan jazbiyon nahin beri paar hondi"
+      ],
+      "translation": [
+        "Reason sits on the riverbank, amazed:",
+        "without passion, no boat ever gets across."
+      ],
+      "story": "The clever, careful people sit on the riverbank wondering how it's done. Without passion, no boat ever makes it to the other side."
+    },
+    {
+      "original": [
+        "دن لنگھدے جاندے گھٹ وٹ کے",
+        "فیر راتاں آن ستاندیاں نیں"
+      ],
+      "transliteration": [
+        "Din langhde jaande ghutt vatt ke",
+        "Pher raataan aan sataandiyaan nain"
+      ],
+      "translation": [
+        "The days pass by somehow, holding it in;",
+        "then the nights come and torment me."
+      ],
+      "story": "During the day he manages to hold his feelings in. Then night comes, and the sadness hits."
+    },
+    {
+      "original": [
+        "ٹر جان والے بھل جان والے",
+        "فیر تیریاں یاداں اوہدیاں نیں"
+      ],
+      "transliteration": [
+        "Tur jaan vaale, bhul jaan vaale",
+        "Pher teriyaan yaadaan ohdiyaan nain"
+      ],
+      "translation": [
+        "Those who leave, those who forget,",
+        "and still the memories are yours, are theirs."
+      ],
+      "story": "People leave, and people forget. The memories of them stay behind anyway."
+    }
+  ],
+  "deeper": "The verse about passion (jazba) winning where reason stays on the bank echoes a Sufi theme found throughout the book. The heart, not cold calculation alone, carries you across, whether to a worldly goal or to God.",
+  "why": "Short, quotable advice about effort and passion that would fit on a poster in any classroom.",
+  "prompt": "What's a goal you've been 'sitting in the shade' on? What's one step you could take today?",
+  "glossary": [
+    "qita",
+    "udham"
+  ],
+  "notes": [
+    "Four separate four-line verses: three on page 91 and one at the top of page 92.",
+    "The last verse (page 92) is about missing people rather than effort; it is grouped here because it has no title of its own."
+  ]
+}

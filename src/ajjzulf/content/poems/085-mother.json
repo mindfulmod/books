@@ -1,0 +1,128 @@
+{
+  "id": "085-mother",
+  "pages": [
+    85,
+    86
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Mother",
+  "titleOriginal": "ماں — اپنی ماں حاجن عمراں بی بی دی یاد وچ",
+  "themes": [
+    "family",
+    "elegy"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "nearness",
+      "service"
+    ],
+    "anchors": []
+  },
+  "takeaway": "You only truly understand what your mother was once she's gone.",
+  "scene": "Three short poems about mothers. The first is written 'in memory of my mother, Hajjan Umran Bibi'. The heading calls her 'Hajjan', a woman who has made the Hajj pilgrimage. The poet lost her, and these lines are about what that loss taught him.",
+  "couplets": [
+    {
+      "original": [
+        "کدھرے لگھیں ماں دی گود دور گا مر جائے ماں تے پتہ تھر لگداا اے",
+        "پیار ٹھنڈ سکون تے ٹھار الفت ملے کسے نہ تھاں پتہ لگداا اے"
+      ],
+      "transliteration": [
+        "Kidhre labhin maan di god doonga, mar jaaye maan te pata phir lagda ae",
+        "Pyaar thand sakoon te thaar ulfat mile kise na thaan, pata lagda ae"
+      ],
+      "translation": [
+        "Where will you ever find a mother's deep lap again? When your mother dies, then you find out.",
+        "Love, coolness, peace and soothing affection can't be found anywhere else; then you find out."
+      ],
+      "story": "Where will you ever find a lap as safe as your mother's? You only realise it after she dies. Then you discover that nobody else can give you that same love, calm and comfort."
+    },
+    {
+      "original": [
+        "جہدی مثل مثال نظیر کوئی نئیں لتھ جاوے اوہ چھاں تے پتہ لگداا اے",
+        "سینہ جگر جدائی تھیں سڑے احمدؔ پھڑے کوئی نہ بانہہ پتہ لگداا اے"
+      ],
+      "transliteration": [
+        "Jihdi misl misaal nazeer koi nahin, latth jaave oh chhaan te pata lagda ae",
+        "Seena jigar judaai thin sare Ahmad, phare koi na baanh, pata lagda ae"
+      ],
+      "translation": [
+        "She has no equal, no match, no comparison; when that shade is lifted, you find out.",
+        "Ahmad, when your chest and soul burn with separation and no one takes your arm, you find out."
+      ],
+      "story": "Nobody can compare to a mother. When her 'shade' is taken away, you feel the full heat of life. When you're hurting and there's no one to take your arm and help you up, that's when you understand what you lost."
+    },
+    {
+      "original": [
+        "سینے وچہ پیار خلوص دل دا اکھیاں وچہ محبت دا جام ملدا",
+        "دیندی کدی دعا ماں تھکدی نئیں اوہدا پیار خلوص بے دام ہوندا"
+      ],
+      "transliteration": [
+        "Seene vich pyaar khuloos dil da, akhiyaan vich mohabbat da jaam milda",
+        "Dendi kadi duaa maan thakdi nahin, ohda pyaar khuloos be-daam honda"
+      ],
+      "translation": [
+        "In her heart, sincere love; in her eyes, you find a cup full of affection.",
+        "A mother never gets tired of praying for you; her love and sincerity cost nothing."
+      ],
+      "story": "A mother's heart is full of honest love, and her eyes are full of affection. She never gets tired of praying for you, and she never asks for anything in return."
+    },
+    {
+      "original": [
+        "چشمہ اوس دے منعق دا سدا جاری دے دعا اوہدی دا اثر دوام ہوندا",
+        "الفت ماں دی کتھے نہ ملدی اے ایہہ جذبہ پاک بے مثال بے دام ملدا"
+      ],
+      "transliteration": [
+        "Chashma os de mushfiq da sada jaari, de duaa ohdi da asar dawaam honda",
+        "Ulfat maan di kitthe na mildi ae, eh jazba paak be-misaal be-daam milda"
+      ],
+      "translation": [
+        "The spring of her tenderness always keeps flowing; the effect of her prayers lasts forever.",
+        "A mother's love can't be found anywhere else: this pure feeling, beyond compare, comes free."
+      ],
+      "story": "Her care is like a spring that never runs dry, and her prayers keep working long after she's gone. You can't find a mother's love anywhere else. It's pure, there's nothing like it, and it's free."
+    },
+    {
+      "original": [
+        "ماواں ٹھنڈیاں چھاواں نے جگ اندر ثانی کوئی نئیں وچہ جہاں اندر",
+        "سچا پیار خلوص بے لوث خدمت اوجا مہ تیرے اوچا شان ایہدا"
+      ],
+      "transliteration": [
+        "Maavaan thandiyaan chhaavaan ne jag andar, saani koi nahin vich jahaan andar",
+        "Sachcha pyaar, khuloos, be-laus khidmat, uchcha muqaam tere, uchcha shaan ehda"
+      ],
+      "translation": [
+        "Mothers are cool shade in this world; there's no one like them anywhere.",
+        "True love, sincerity, selfless service: her place is high, and her honour is high."
+      ],
+      "story": "Mothers are like cool shade on a hot day. There's no one like them in the whole world. Their love is true, and they serve without expecting anything back. Their place is very high."
+    },
+    {
+      "original": [
+        "جھلے درد اولاد لئی تے جان وارے کون دے گا بھلا احسان ایہدا",
+        "ما ناکناں ودھایا رحمان ایہدا"
+      ],
+      "transliteration": [
+        "Jhale dard aulaad layi te jaan vaare, kaun de ga bhala ehsaan ehda",
+        "Maan, kinna vadhaaya Rehmaan ehda"
+      ],
+      "translation": [
+        "She bears pain for her children and would give her life for them; who could ever repay her kindness?",
+        "O mother, how greatly the Merciful One has raised her rank!"
+      ],
+      "story": "A mother goes through pain for her children and would die for them. Who could ever pay that back? God, the Most Merciful, has raised mothers so high."
+    }
+  ],
+  "deeper": "The last line, 'how greatly the Merciful One (Rahman) has raised her', links a mother's love to God's. In Islamic thought God's name ar-Rahman comes from the same root as the word for womb (rahm). The Prophet taught that God's mercy is greater even than a mother's for her child. A mother's prayers having lasting effect (asar-e-dawaam) reflects the belief that a parent's prayer for a child is especially answered.",
+  "why": "Almost everyone will connect with this. It's simple, direct and deeply felt, and it's about the person who loves you first.",
+  "prompt": "What's one thing your mother, or someone who mothered you, has done that you've never thanked them for?",
+  "glossary": [
+    "hajj",
+    "paradise-feet"
+  ],
+  "notes": [
+    "Three short pieces (pp.85–86) are grouped here as one poem about mothers.",
+    "The final stanza appears to be cut off at the bottom of page 86; the last line is incomplete."
+  ]
+}

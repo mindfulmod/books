@@ -1,0 +1,228 @@
+{
+  "id": "030-i-am-the-sun",
+  "pages": [
+    30,
+    31
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "I am the sun",
+  "themes": [
+    "love",
+    "sufi",
+    "society"
+  ],
+  "reading": {
+    "level": "sufi",
+    "lenses": [
+      "awake",
+      "service",
+      "self"
+    ],
+    "anchors": [
+      4,
+      9,
+      10
+    ]
+  },
+  "takeaway": "Burn in your own fire long enough and you become a light for others.",
+  "scene": "Sadness surrounds the poet like storm clouds, and the town has made life hard for him. Halfway through, he realises that all this burning has turned him into something bright.",
+  "couplets": [
+    {
+      "original": [
+        "چار چوفیرے غم دے بدل ہاواں ہوکے چیکاں",
+        "کر چھڈیا اے جینا اوکھا شہر دیاں وسنیکاں"
+      ],
+      "transliteration": [
+        "Chaar chufere gham de badal, haavaan, hauke, cheekaan",
+        "Kar chhadiya ae jeena aukha shehar diyaan vasneekaan"
+      ],
+      "translation": [
+        "All around me, clouds of sorrow, sighs, sobs and screams.",
+        "The people of this town have made living hard."
+      ],
+      "story": "Everywhere he looks there's sadness, like dark clouds full of sighs and cries. The people of his town have made his life really hard."
+    },
+    {
+      "original": [
+        "شوہ غماں دا ٹھاٹھاں مارے جنگل بیلے شوکن",
+        "کچے گھڑے تے ٹھلن والا سجن پیا اڈیکاں"
+      ],
+      "transliteration": [
+        "Shauh ghamaan da thaathaan maare, jangal bele shookan",
+        "Kachche ghare te thalan vaala sajan piya udeekaan"
+      ],
+      "translation": [
+        "The river of sorrow surges in waves; the forests and riverbanks howl.",
+        "I'm waiting for the beloved who'll set out across it on an unbaked pot."
+      ],
+      "story": "His sadness is like a river in flood, crashing in waves while the wind howls through the trees. He waits, like Sohni's lover in the old story, for someone brave enough to cross even on a pot that might melt."
+    },
+    {
+      "original": [
+        "نموں جھانے حیرت اندر متھے تے ہتھ مارے",
+        "ہتھ میرے دیاں ویکھ کے پاہندے ڈنگیا سدھیاں لیکاں"
+      ],
+      "transliteration": [
+        "Namon jhaane hairat andar matthe te hatth maare",
+        "Hatth mere diyaan vekh ke paandhe dingiyaan sidhiyaan leekaan"
+      ],
+      "translation": [
+        "Bowing his head in amazement, he struck his forehead with his hand,",
+        "when the fortune-teller read my palm and saw its crooked and straight lines."
+      ],
+      "story": "A fortune-teller read his palm. He was so shocked by what he saw in the lines that he hung his head and slapped his own forehead. His fate must be that rough."
+    },
+    {
+      "original": [
+        "اپنی اگ وچ سڑ بل کے میں آپے سورج ہویاں",
+        "ستے بخت سیاہ میرے وی مار اٹھے نیں چیکاں"
+      ],
+      "transliteration": [
+        "Apni agg vich sar bal ke main aape sooraj hoyaan",
+        "Sutte bakht siyaah mere vi maar utthe nain cheekaan"
+      ],
+      "translation": [
+        "Burning and burning in my own fire, I've become a sun myself.",
+        "Even my dark, sleeping luck has woken up screaming."
+      ],
+      "story": "This is the turning point. He has burned in his own fire for so long that he has turned into a sun, giving off light. Even his bad luck, which had been 'asleep', jumped up in shock."
+    },
+    {
+      "original": [
+        "غازہ ہر سوہنے دے مکھ تے میرے ڈھول پیارے دا",
+        "جیہڑی دھوڑ اڈائی میری رل مل یار شریکاں"
+      ],
+      "transliteration": [
+        "Ghaaza har sohne de mukh te mere dhol pyaare da",
+        "Jehri dhoorr udaai meri ral mil yaar shareekaan"
+      ],
+      "translation": [
+        "The make-up on every lovely face comes from my dear beloved:",
+        "the very dust that my friends and rivals kicked up against me."
+      ],
+      "story": "His rivals and so-called friends ganged up and dragged his name through the dirt. But that 'dust' turned into the powder that makes every beautiful face shine. Their attacks only made him and his love more famous."
+    },
+    {
+      "original": [
+        "اپنے دل وچ پیار تیرے دا تاج محل بنایا",
+        "ایس توں ودھ کے ہور میں تیریاں جراں کیہ پھٹیکاں"
+      ],
+      "transliteration": [
+        "Apne dil vich pyaar tere da Taaj Mahal banaaya",
+        "Is ton vadh ke hor main teriyaan jaraan ki phateekaan"
+      ],
+      "translation": [
+        "I've built a Taj Mahal of your love inside my heart.",
+        "What more could I do to honour you than this?"
+      ],
+      "story": "Inside his heart, he built a monument to the Beloved as beautiful as the Taj Mahal. He asks what more he could possibly do to show his love."
+    },
+    {
+      "original": [
+        "چن دے نال ہو سانجھ گئی اے تاریاں نال بھیالی",
+        "بخشے نے جگراتے ایسے میرے یار شفیقاں"
+      ],
+      "transliteration": [
+        "Chann de naal ho saanjh gayi ae, taariyaan naal bhiaali",
+        "Bakhshe ne jagraate aise mere yaar shafeeqaan"
+      ],
+      "translation": [
+        "I've become partners with the moon and friends with the stars:",
+        "that's how many sleepless nights my kind friends have given me."
+      ],
+      "story": "He's been awake so many nights that the moon and the stars have become his friends. He calls the people who caused this his 'kind friends', which is sarcastic."
+    },
+    {
+      "original": [
+        "سکے رکھاں وانگوں بندے رکھے رکھے جاپن",
+        "خورے کتھے اڈ پڈ گئیاں دلاں چوں سانجھ پریتاں"
+      ],
+      "transliteration": [
+        "Sukke rukkhaan vaangon bande rukkhe rukkhe jaapan",
+        "Khoore kitthe ud pud gaiyaan dilaan chon saanjh preetaan"
+      ],
+      "translation": [
+        "People seem dry and cold, like withered trees.",
+        "Who knows where the warmth and closeness in people's hearts has flown off to?"
+      ],
+      "story": "People seem cold and dry now, like dead trees. He wonders where all the warmth and friendship people used to have went."
+    },
+    {
+      "original": [
+        "میں سورج ہاں اوجیہاں روشنیاں ورتاواں",
+        "تیرے وانگوں روز نہ چناں بدلاں پیا تریکاں"
+      ],
+      "transliteration": [
+        "Main sooraj haan, o jihaan roshniyaan vartaavaan",
+        "Tere vaangon roz na channa badlaan piya treekaan"
+      ],
+      "translation": [
+        "I'm the sun: I share out my light the same way to everyone.",
+        "Unlike you, moon, I don't keep changing my dates."
+      ],
+      "story": "He compares himself to the sun and the beloved to the moon. The sun shines the same for everyone, every day. The moon keeps changing shape and showing up at different times."
+    },
+    {
+      "original": [
+        "قطرہ وی غم پی نہ سکدے خورے نیں اوہ کیہڑے",
+        "بحر غماں دا پی جاندے نیں مونہہ نال لا کے ڈیکاں"
+      ],
+      "transliteration": [
+        "Qatra vi gham pee na sakde, khoore nain oh kehre",
+        "Behr ghamaan da pee jaande nain moonh naal la ke deekaan"
+      ],
+      "translation": [
+        "Some can't swallow even a drop of sorrow; who knows who those people are?",
+        "Others drink down an entire ocean of grief in great gulps."
+      ],
+      "story": "Some people can't handle even a tiny bit of sadness. Others swallow whole oceans of it. He's clearly one of the second kind."
+    },
+    {
+      "original": [
+        "جوگ لواں تے کن پڑواواں کدے لئی پٹ چیراں",
+        "مہر محبت پیار وفا دیاں بدل گئیاں سب ریتاں"
+      ],
+      "transliteration": [
+        "Jog lavaan te kann parvaavaan, kade layi patt cheeraan",
+        "Mehar mohabbat pyaar vafa diyaan badal gaiyaan sab reetaan"
+      ],
+      "translation": [
+        "Should I become a jogi and pierce my ears? Should I tear open my thigh for someone?",
+        "All the old customs of kindness, love and loyalty have changed."
+      ],
+      "story": "In the old stories, lovers made huge sacrifices. Ranjha pierced his ears to become a jogi, and another lover cut flesh from his own thigh to feed his beloved. But who would he do that for now? The old ways of love and loyalty are gone."
+    },
+    {
+      "original": [
+        "باریاں بوہے ڈھو لئے لوکاں سنجی وستی ساری",
+        "ایتھوں دے لوکاں دیاں احمدؔ خورے نے کیہ نیتاں"
+      ],
+      "transliteration": [
+        "Baariyaan boohe dho laye lokaan, sunji vasti saari",
+        "Ethon de lokaan diyaan Ahmad khoore ne ki neetaan"
+      ],
+      "translation": [
+        "People have shut their windows and doors; the whole town is deserted.",
+        "Ahmad, who knows what the people here really intend?"
+      ],
+      "story": "Everyone has closed their doors and windows, and the whole town feels empty. He ends unsure: who knows what anyone here is really thinking?"
+    }
+  ],
+  "deeper": "'Burning in my own fire, I've become a sun' is a powerful Sufi image. The seeker who endures the fire of longing for God is purified by it, and becomes a source of light for others. 'I share out my light the same way to everyone' echoes the Sufi ideal of loving all people equally, the way God's sun shines on everyone.\n\nThe complaints about a cold, shut-up town give the other side: a world that has forgotten love needs people who have been through the fire.\n\nIt is also a poem about becoming aware. Pain doesn't destroy him. It wakes his 'sleeping luck' and turns him into a light that shines on everyone equally. Pain that wakes you up is a common idea in Sufi poetry.",
+  "why": "It shows how pain can turn into strength, and it's honest about how lonely being 'different' can feel.",
+  "prompt": "Has something hard you went through ever made you better at helping other people?",
+  "glossary": [
+    "ghazal",
+    "kacha-ghara",
+    "sohni-mahiwal",
+    "taj-mahal",
+    "jogi",
+    "heer-ranjha",
+    "raqeeb"
+  ],
+  "notes": [
+    "Couplet 11: 'patt cheeraan' (tear open the thigh) alludes to the Mahiwal story, in which Mahiwal fed Sohni meat cut from his own thigh.",
+    "Couplet 3: the subject who strikes his forehead is read as the palm-reader."
+  ]
+}

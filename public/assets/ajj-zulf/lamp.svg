@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-label="An oil lamp, a moth and the Eid crescent">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="46%" r="50%"><stop offset="0" stop-color="#f6c766" stop-opacity=".55"/><stop offset=".55" stop-color="#e8964a" stop-opacity=".14"/><stop offset="1" stop-color="#e8964a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#f6c45a"/><stop offset="1" stop-color="#e0702c"/></linearGradient>
+    <linearGradient id="clay" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8603d"/><stop offset="1" stop-color="#8e3a26"/></linearGradient>
+  </defs>
+  <circle cx="210" cy="196" r="200" fill="url(#halo)"/>
+  <path d="M318 58a46 46 0 1 0 38 72 38 38 0 1 1-38-72z" fill="#f2d48a"/>
+  <g fill="#f2d48a"><circle cx="92" cy="92" r="3"/><circle cx="136" cy="54" r="2"/><circle cx="66" cy="160" r="2"/><circle cx="364" cy="196" r="2.5"/><circle cx="262" cy="40" r="2"/></g>
+  <path d="M210 150c-20 30-24 52-12 70 6 9 18 9 24 0 12-18 8-40-12-70z" fill="url(#flame)"/>
+  <path d="M210 186c-7 12-8 21-3 28 2 3 4 3 6 0 5-7 4-16-3-28z" fill="#fff8de"/>
+  <path d="M96 252c18-10 44-14 64-14h100c20 0 46 4 64 14 6 3 6 10 0 14-26 32-70 46-114 46s-88-14-114-46c-6-4-6-11 0-14z" fill="url(#clay)"/>
+  <path d="M96 252c18-10 44-14 64-14h100c20 0 46 4 64 14-20 10-62 16-114 16s-94-6-114-16z" fill="#e08a58"/>
+  <path d="M206 226h8l4 16h-16z" fill="#5b2b1d"/>
+  <path d="M120 268c24 18 56 26 90 26s66-8 90-26" fill="none" stroke="#f2b37c" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <ellipse cx="210" cy="332" rx="96" ry="10" fill="#8e3a26" opacity=".18"/>
+  <g transform="translate(276 150) rotate(-18)">
+    <path d="M0 0c-16-18-36-20-40-8-3 10 14 16 40 8z" fill="#efe2c7" opacity=".9"/>
+    <path d="M0 0c16-18 36-20 40-8 3 10-14 16-40 8z" fill="#efe2c7" opacity=".9"/>
+    <path d="M0 0c-10 10-22 18-26 12s8-12 26-12zM0 0c10 10 22 18 26 12S18 0 0 0z" fill="#d8c6a2"/>
+    <ellipse cx="0" cy="2" rx="3" ry="9" fill="#6b4a3a"/>
+  </g>
+</svg>

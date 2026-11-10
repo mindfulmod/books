@@ -1,0 +1,67 @@
+{
+  "id": "078-woman",
+  "pages": [
+    78
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Woman",
+  "titleOriginal": "عورت",
+  "themes": [
+    "society",
+    "family"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "service"
+    ],
+    "anchors": [
+      2
+    ]
+  },
+  "takeaway": "Women build nations, light up dark times, and paradise lies at a mother's feet.",
+  "scene": "A short poem in praise of women. Every line ends with the word 'aurat', which means 'woman'.",
+  "couplets": [
+    {
+      "original": [
+        "ادنےٰ اعلیٰ دی ماں عظیم ہوندی ملک قوم دی کرے تعمیر عورت",
+        "جدوں مرد راہوں کو راہ ہوون بنے ہنیریاں وچ تنویر عورت"
+      ],
+      "transliteration": [
+        "Adna aala di maan azeem hondi, mulk qaum di kare taameer aurat",
+        "Jadon mard raahon kuraah hovan, bane haneriyaan vich tanveer aurat"
+      ],
+      "translation": [
+        "The mother of the humble and of the great is great; woman builds the country and the nation.",
+        "When men stray from the path, woman becomes the light in the darkness."
+      ],
+      "story": "Every person, important or ordinary, has a mother, and mothers are great. Women build nations. When men lose their way, a woman becomes the light that guides them through the dark."
+    },
+    {
+      "original": [
+        "عورت مرد لئی نصف ایمان ہوندی دے پاک قرآن توقیر عورت",
+        "تاج تخت کیہ جنت ہے وچ قدماں بدل قوماں دے دے تقدیر عورت"
+      ],
+      "transliteration": [
+        "Aurat mard layi nisf imaan hondi, de Paak Quran tauqeer aurat",
+        "Taaj takht ki, jannat hai vich qadmaan, badal qaumaan de de taqdeer aurat"
+      ],
+      "translation": [
+        "For a man, woman is half his faith; the holy Qur'an gives woman honour.",
+        "Never mind crowns and thrones: paradise lies at her feet. Woman can change the destiny of nations."
+      ],
+      "story": "For a man, a good wife completes half his faith, and the Qur'an gives women honour. Forget crowns and thrones: the Prophet said paradise lies at a mother's feet. Women can change the future of whole nations."
+    }
+  ],
+  "deeper": "The poem draws on well-known Islamic teachings. These include the Qur'an's honouring of women, the saying that marriage 'completes half of faith', and the Prophet's words that 'paradise lies beneath the feet of mothers'. Here they are used to praise women as builders of families and nations.",
+  "why": "A short, proud poem in praise of women's role in society, written by a father of daughters.",
+  "prompt": "Which woman in your life has been a 'light in the dark' for you or your family?",
+  "glossary": [
+    "paradise-feet",
+    "qaum"
+  ],
+  "notes": [
+    "'Nisf imaan' (half of faith) refers to the hadith that marriage completes half of one's religion."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "080-the-work-of-the-young",
+  "pages": [
+    80
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Everyone has a job to do",
+  "titleOriginal": "جوان دا کم",
+  "themes": [
+    "homeland",
+    "society"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Young people, farmers, workers and soldiers each have a part in building a country.",
+  "scene": "The title means 'The work of the young'. In four lines the poet lists what each group of people should do for the country.",
+  "couplets": [
+    {
+      "original": [
+        "ہمت نال تقدیر نوں بدل دینا میری قوم دے شیر جواناں دا کم",
+        "بھکھ ننگ دی الکھ مکا دینی میرے دیش دے ویر کساناں دا کم"
+      ],
+      "transliteration": [
+        "Himmat naal taqdeer nu badal dena meri qaum de sher javaanaan da kam",
+        "Bhukh nang di alakh muka deni mere desh de veer kisaanaan da kam"
+      ],
+      "translation": [
+        "Changing destiny with courage is the job of my nation's lion-hearted young people.",
+        "Ending hunger and poverty for good is the job of my country's brother farmers."
+      ],
+      "story": "Young people's job is to change the country's future through courage. Farmers' job is to make sure nobody goes hungry or without clothes."
+    },
+    {
+      "original": [
+        "روشن جگ تے وطن دا نام کرنا محنت کش دلیر انساناں دا کم",
+        "جان وطن توں احمدؔ قربان کرنا پاک فوج دے پاسباناں دا کم"
+      ],
+      "transliteration": [
+        "Roshan jag te vatan da naam karna mehnat-kash daler insaanaan da kam",
+        "Jaan vatan ton Ahmad qurbaan karna Paak fauj de paasbaanaan da kam"
+      ],
+      "translation": [
+        "Making the homeland's name shine in the world is the job of brave, hard-working people.",
+        "Ahmad, giving one's life for the homeland is the job of the guardians in Pakistan's army."
+      ],
+      "story": "Hard-working people make the country's name shine around the world. The soldiers who guard the country are ready to give their lives for it."
+    }
+  ],
+  "deeper": "",
+  "why": "A simple picture of a country where everyone, young people, farmers, workers and soldiers, has a part to play.",
+  "prompt": "What's your 'job' in making your community better?",
+  "glossary": [
+    "qita",
+    "qaum"
+  ],
+  "notes": [
+    "Printed again, almost word for word, on page 100."
+  ],
+  "variant": {
+    "pages": [
+      100
+    ],
+    "summary": "Printed again, almost word for word, on page 100.",
+    "extraCouplets": []
+  }
+}

@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "check": "npm run check:ihya && npm run check:theme && npm run check:workspace && npm run check:inner && npm run check:seeds",
+    "check": "npm run check:ihya && npm run check:theme && npm run check:workspace && npm run check:inner && npm run check:seeds && npm run check:ajjzulf",
     "check:ihya": "node scripts/check-ihya.mjs",
     "check:build": "node scripts/check-build.mjs",
     "sync:catalog": "node scripts/sync-book-navigation.mjs",
@@ -15,6 +15,7 @@
     "check:workspace": "node scripts/check-reading-workspace.mjs",
     "check:inner": "python3 scripts/check-inner-dimensions.py && node scripts/check-inner-appearance.mjs",
     "check:seeds": "node scripts/check-timeless-seeds.mjs && node scripts/check-seeds-appearance.mjs",
+    "check:ajjzulf": "node scripts/ajj-zulf-index.mjs",
     "check:names": "node --test src/names/*.test.mjs && node scripts/check-beautiful-names.mjs"
   },
   "dependencies": {

@@ -1,0 +1,63 @@
+{
+  "id": "096-basket-of-snakes",
+  "pages": [
+    96
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "A basket of snakes",
+  "titleOriginal": "قطعہ",
+  "themes": [
+    "society",
+    "homeland"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Leaders without a conscience will sell anything, even their own people.",
+  "scene": "A short, bitter four-line poem about corrupt leaders, printed straight after the Bhutto poem.",
+  "couplets": [
+    {
+      "original": [
+        "ایہہ تے لیڈر نرے مداری نیں",
+        "زہری سپاں دی اک پٹاری نیں"
+      ],
+      "transliteration": [
+        "Eh te leader nire madaari nain",
+        "Zehri sappaan di ik pitaari nain"
+      ],
+      "translation": [
+        "These leaders are nothing but street performers;",
+        "they're a basket of poisonous snakes."
+      ],
+      "story": "He says the leaders are like street magicians putting on a show. Behind the show, they're a basket of poisonous snakes."
+    },
+    {
+      "original": [
+        "بے ضمیرے ایہہ قوم نوں پئے ویچن",
+        "بے حیائی دے ایہہ بیوپاری نیں"
+      ],
+      "transliteration": [
+        "Be-zameere eh qaum nu pae vechan",
+        "Be-hayaai de eh beopaari nain"
+      ],
+      "translation": [
+        "Without a conscience, they're selling off the nation;",
+        "they're dealers in shamelessness."
+      ],
+      "story": "They have no conscience, and they're selling out the country. Shamelessness is their business."
+    }
+  ],
+  "deeper": "",
+  "why": "Sharp and short. It shows how frustrated ordinary people felt with corrupt politicians.",
+  "prompt": "What qualities do you think a good leader must have?",
+  "glossary": [
+    "qita",
+    "qaum"
+  ],
+  "notes": [
+    "A 'madaari' is a street performer, often a snake-charmer, which links to the 'basket of snakes' in the next line."
+  ]
+}

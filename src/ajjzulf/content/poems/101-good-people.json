@@ -1,0 +1,62 @@
+{
+  "id": "101-good-people",
+  "pages": [
+    101
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "'Good' people",
+  "titleOriginal": "اچھے لوگ",
+  "themes": [
+    "society",
+    "humour"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "A sarcastic joke: in a corrupt world, the corrupt get called 'good people'.",
+  "scene": "A sarcastic verse. The poet pretends he would be counted among the 'good people' if only he were corrupt.",
+  "couplets": [
+    {
+      "original": [
+        "انکھ آن نوں رکھ کے اک پاسے جھولی چک یا بدکردار ہوندا",
+        "رشوت خور سمگلر رسہ گیر ہوندا جھوٹھا قوم دا یا غم خوار ہوندا"
+      ],
+      "transliteration": [
+        "Ankh aan nu rakh ke ik paase, jholi chukk ya bad-kirdaar honda",
+        "Rishvat-khor, smuggler, rassa-geer honda, jhoota qaum da ya gham-khaar honda"
+      ],
+      "translation": [
+        "If I'd put my self-respect and honour aside and become a bootlicker or a crook,",
+        "a bribe-taker, a smuggler, a cattle thief, a fake 'friend of the nation',"
+      ],
+      "story": "He imagines giving up his self-respect and becoming a flatterer or a crook. He pictures someone who takes bribes, smuggles, steals, or pretends to care about the country while lying."
+    },
+    {
+      "original": [
+        "ہوندا بلیکیا مل مالک خون چوسنا میرا بیوپار ہوندا",
+        "احمدؔ روشن زمانے وی دسدی اے اچے لوکاں چ میرا شمار ہوندا"
+      ],
+      "transliteration": [
+        "Honda blackiya, mill maalik, khoon choosna mera beopaar honda",
+        "Ahmad roshan zamaane vi dasdi ae, achhe lokaan ch mera shumaar honda"
+      ],
+      "translation": [
+        "if I'd been a black-marketeer, a mill-owner, and blood-sucking were my trade,",
+        "Ahmad, even this 'enlightened' age shows: I'd be counted among the 'good people'."
+      ],
+      "story": "Or if he'd been a black-market dealer or a factory owner who 'sucked people's blood'. Then, he says sarcastically, today's so-called modern world would call him one of the 'good people'."
+    }
+  ],
+  "deeper": "",
+  "why": "Biting sarcasm about how society sometimes rewards the wrong people.",
+  "prompt": "Do you think society sometimes praises people for the wrong reasons? Can you think of an example?",
+  "glossary": [
+    "qita"
+  ],
+  "notes": [
+    "Satire: the title 'Good people' is ironic."
+  ]
+}

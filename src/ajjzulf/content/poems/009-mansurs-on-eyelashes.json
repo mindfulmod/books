@@ -1,0 +1,78 @@
+{
+  "id": "009-mansurs-on-eyelashes",
+  "pages": [
+    9
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Tears hanging like Mansur",
+  "themes": [
+    "love",
+    "sufi"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "longing",
+      "self"
+    ],
+    "anchors": [
+      1,
+      2
+    ]
+  },
+  "takeaway": "True love suffers quietly instead of complaining.",
+  "scene": "The poet has heard that a real lover doesn't complain. He tries to stay quiet, but his tears give him away.",
+  "couplets": [
+    {
+      "original": [
+        "سُنیا ہو کے ہاڑے کرنا یار عشق دا نئیں دستور",
+        "یاد تیری دیاں تکھیاں رشماں ساڑ دتا اے دل دا طور"
+      ],
+      "transliteration": [
+        "Suniya hau ke haare karna yaar ishq da nahin dastoor",
+        "Yaad teri diyaan tikkhiyaan rashmaan saar ditta ae dil da Toor"
+      ],
+      "translation": [
+        "I've heard, friend, that sighing and pleading is not love's way.",
+        "The sharp rays of your memory have burned the Mount Sinai of my heart."
+      ],
+      "story": "He's been told that real lovers don't moan and beg. But just remembering the beloved hits him like blinding light. It burns his heart the way God's light burned the mountain when Moses asked to see Him."
+    },
+    {
+      "original": [
+        "سبھے الّھے پھٹ جگر دے روندے نے ہر دم مجبور",
+        "احمدؔ پلکاں دی سولی تے ٹنگے رہندے نیں منصور"
+      ],
+      "transliteration": [
+        "Sabbhe alle phatt jigar de ronde ne har dam majboor",
+        "Ahmad palkaan di sooli te tange rehnde nain Mansoor"
+      ],
+      "translation": [
+        "All the fresh wounds deep inside keep weeping, helpless.",
+        "Ahmad, Mansurs stay hanging on the gallows of my eyelashes."
+      ],
+      "story": "His wounds are still fresh, and they won't stop hurting. Then comes a striking picture. His tears hang on his eyelashes like Mansur hanging on the gallows. Each tear is like a martyr for love, hanging there without saying a word."
+    }
+  ],
+  "deeper": "This short poem is full of signals for God. Mount Sinai is where Moses asked to see God, and the mountain could not bear His light. Mansur al-Hallaj was executed for losing himself in God. The poet says remembering the Beloved is like that light, too much for a human heart. The tears are not weakness. Like Mansur, they are love that cannot stay hidden.",
+  "why": "In four lines the poet joins two of the biggest images in Sufi poetry, Sinai and Mansur, and connects them to something small and human: tears caught on eyelashes.",
+  "prompt": "Can you think of a time a feeling was too big to hide, however hard you tried?",
+  "glossary": [
+    "qita",
+    "tur",
+    "mansur",
+    "jigar",
+    "sufi-beloved"
+  ],
+  "notes": [
+    "This qita appears again, almost word for word, on page 101 under the title 'Judai' (Separation)."
+  ],
+  "variant": {
+    "pages": [
+      101
+    ],
+    "summary": "Printed again on page 101 under the title 'Judai' (Separation), with only small wording changes.",
+    "extraCouplets": []
+  }
+}

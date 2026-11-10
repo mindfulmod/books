@@ -1,0 +1,63 @@
+{
+  "id": "088-grief-for-gulzar-e-naz",
+  "pages": [
+    88
+  ],
+  "form": "qita",
+  "language": "ur",
+  "title": "Even Tabassum cried",
+  "titleOriginal": "اظہار غم (گلزار ناز 16-1-86)",
+  "themes": [
+    "elegy",
+    "family"
+  ],
+  "reading": {
+    "level": "none",
+    "lenses": [],
+    "anchors": []
+  },
+  "takeaway": "Even someone whose name means 'smile' can be brought to tears.",
+  "scene": "A short Urdu poem titled 'An expression of grief', written for Gulzar-e-Naz, who died on 16 January 1986.",
+  "couplets": [
+    {
+      "original": [
+        "غم کے ہر ایک اشک کو مژگاں میں پرونا آیا",
+        "دل کے دکھ درد کو آہوں میں سمونا آیا"
+      ],
+      "transliteration": [
+        "Gham ke har ek ashk ko mizhgaan mein pirona aaya",
+        "Dil ke dukh dard ko aahon mein samona aaya"
+      ],
+      "translation": [
+        "I learned to thread every tear of grief onto my eyelashes;",
+        "I learned to fold the heart's pain into my sighs."
+      ],
+      "story": "He has learned to string his tears along his eyelashes like beads, and to pour all his heart's pain into his sighs."
+    },
+    {
+      "original": [
+        "یوں تیرے غم میں گزرے ہیں لمحات میرے",
+        "دیکھ کے پریشان تبسم کو بھی رونا آیا"
+      ],
+      "transliteration": [
+        "Yoon tere gham mein guzre hain lamhaat mere",
+        "Dekh ke pareshaan, Tabassum ko bhi rona aaya"
+      ],
+      "translation": [
+        "This is how my moments have passed, grieving for you:",
+        "seeing such distress, even Tabassum (a smile) began to cry."
+      ],
+      "story": "This is how he has spent his time since the loss. Then the play on his name: 'Tabassum' means 'smile', so even the smile itself started crying."
+    }
+  ],
+  "deeper": "",
+  "why": "Short and moving, with a clever play on the poet's own name.",
+  "prompt": "How do you show grief? Do you let yourself cry?",
+  "glossary": [
+    "gulzar-e-naz",
+    "tabassum"
+  ],
+  "notes": [
+    "The date (16-1-86) is printed with the title."
+  ]
+}

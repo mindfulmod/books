@@ -1,0 +1,212 @@
+{
+  "id": "032-something-different",
+  "pages": [
+    32
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Love is different",
+  "themes": [
+    "love",
+    "sufi"
+  ],
+  "reading": {
+    "level": "explicit",
+    "lenses": [
+      "nearness",
+      "awake",
+      "prophet"
+    ],
+    "anchors": [
+      1,
+      5,
+      9,
+      10,
+      11
+    ]
+  },
+  "takeaway": "A beauty so rare that seeing it makes you remember God.",
+  "scene": "Every couplet in this ghazal ends with the word 'vakhri', which means 'different' or 'one of a kind'. Many readers hear it as a na'at, a poem in praise of the Prophet Muhammad ﷺ. The poem never names him, but several of its pictures match the way his companions described him.",
+  "couplets": [
+    {
+      "original": [
+        "اوہدا ناز نخرا ادا وکھری اے",
+        "جو موہندی دلاں نوں حیا وکھری اے"
+      ],
+      "transliteration": [
+        "Ohda naaz nakhra ada vakhri ae",
+        "Jo mohndi dilaan nu, hayaa vakhri ae"
+      ],
+      "translation": [
+        "The beloved's charm, playfulness and style are one of a kind;",
+        "the modesty that wins hearts is one of a kind."
+      ],
+      "story": "The Beloved is unlike anyone else, in charm, in grace, and most of all in modesty. That gentle modesty is what wins people's hearts."
+    },
+    {
+      "original": [
+        "اساں دل سی منگیا اوہنے توڑ دتا",
+        "لگا روگ وکھرا، دوا وکھری اے"
+      ],
+      "transliteration": [
+        "Asaan dil si mangiya, ohne tor ditta",
+        "Laga rog vakhra, dawa vakhri ae"
+      ],
+      "translation": [
+        "I asked for a heart, and they broke mine.",
+        "This illness is different, and so is its cure."
+      ],
+      "story": "He asked for the Beloved's heart, and got his own broken instead. Love is a strange illness, and its medicine is just as strange."
+    },
+    {
+      "original": [
+        "تڑپ دل نوں دتی جگر ساڑ دتا",
+        "محبت دی ویکھو جزاء وکھری اے"
+      ],
+      "transliteration": [
+        "Tarap dil nu ditti, jigar saar ditta",
+        "Mohabbat di vekho jazaa vakhri ae"
+      ],
+      "translation": [
+        "It gave my heart restlessness and burned me inside.",
+        "Look: love's reward is different."
+      ],
+      "story": "Love made his heart restless and burned him up inside. Most things reward you with comfort. Love rewards you with this, and somehow he still wants it."
+    },
+    {
+      "original": [
+        "سدا لٹکے رہندے نیں پلکاں تے موتی",
+        "یاراں دی یارو عطا وکھری اے"
+      ],
+      "transliteration": [
+        "Sada latke rehnde nain palkaan te moti",
+        "Yaaraan di yaaro ataa vakhri ae"
+      ],
+      "translation": [
+        "Pearls always hang on my eyelashes.",
+        "Friends, the Beloved's gifts are different."
+      ],
+      "story": "There are always 'pearls', tears, hanging on his eyelashes. The Beloved's presents aren't like anyone else's."
+    },
+    {
+      "original": [
+        "کہدے پیر پائیاں ایہہ پھیلی اے خشبو",
+        "کہ سارے چمن دی فضا وکھری اے"
+      ],
+      "transliteration": [
+        "Kihde pair paaiyaan eh phaili ae khushboo",
+        "Ke saare chaman di fazaa vakhri ae"
+      ],
+      "translation": [
+        "Whose feet have passed this way, that such a fragrance has spread,",
+        "and the air of the whole garden feels different?"
+      ],
+      "story": "Someone has walked this way. Whose footsteps were they? A beautiful fragrance fills the air, and the whole garden feels different. People said the same about the Prophet ﷺ: you could tell he had passed down a street by the fragrance he left behind."
+    },
+    {
+      "original": [
+        "عشقے دے لانبو دا ہے ساڑ وکھرا",
+        "وچھوڑے دی ہوندی سزا وکھری اے"
+      ],
+      "transliteration": [
+        "Ishqe de laambu da hai saar vakhra",
+        "Vichhore di hondi sazaa vakhri ae"
+      ],
+      "translation": [
+        "The burn of love's flames is different;",
+        "the punishment of separation is different."
+      ],
+      "story": "Love's fire burns in its own way. Being apart from someone you love is a punishment like no other."
+    },
+    {
+      "original": [
+        "کدی ٹھارے سینہ کدی ساڑ سٹے",
+        "محبت رسم تے جفا وکھری اے"
+      ],
+      "transliteration": [
+        "Kadi thaare seena, kadi saar sutte",
+        "Mohabbat rasm te jafaa vakhri ae"
+      ],
+      "translation": [
+        "Sometimes it cools the chest, sometimes it burns it to ash.",
+        "Love's customs, and its cruelty, are different."
+      ],
+      "story": "One minute love calms you down, the next it sets you on fire. It follows its own rules, even when it hurts you."
+    },
+    {
+      "original": [
+        "میں تارو عشق دے سمندر چ ڈگا",
+        "میرے عشق دی انتہا وکھری اے"
+      ],
+      "transliteration": [
+        "Main taaroo ishq de samundar ch digga",
+        "Mere ishq di intehaa vakhri ae"
+      ],
+      "translation": [
+        "I'm a swimmer who fell into the ocean of love;",
+        "how far my love goes is different."
+      ],
+      "story": "He's like a swimmer who fell into an ocean of love. No one can measure how deep his love goes."
+    },
+    {
+      "original": [
+        "ذکر چھوہ کے حوراں دا پرچاوے ملاں",
+        "میرے دل دی چاہت صدا وکھری اے"
+      ],
+      "transliteration": [
+        "Zikr chhoh ke hooraan da parchaave mullaan",
+        "Mere dil di chaahat sadaa vakhri ae"
+      ],
+      "translation": [
+        "The mullah tries to win me over by talking about the maidens of paradise,",
+        "but my heart's desire has always been different."
+      ],
+      "story": "The preacher tries to tempt him with talk of paradise and its rewards. It doesn't work. What his heart wants has always been something else."
+    },
+    {
+      "original": [
+        "میں ویکھاں صنم تے خدا یاد آوے",
+        "نرالے حسن دی ضیا وکھری اے"
+      ],
+      "transliteration": [
+        "Main vekhaan sanam te Khuda yaad aave",
+        "Niraale husn di ziyaa vakhri ae"
+      ],
+      "translation": [
+        "When I look at the beloved, I remember God.",
+        "The light of this rare beauty is different."
+      ],
+      "story": "This is the key line. When he looks at the Beloved, he remembers God. That beauty has a light unlike any other."
+    },
+    {
+      "original": [
+        "احمدؔ سب دا درد دی محبت دا بھکھا",
+        "طبیعت بنائی خدا وکھری اے"
+      ],
+      "transliteration": [
+        "Ahmad sab da dardi, mohabbat da bhukkha",
+        "Tabiyat banaai Khuda vakhri ae"
+      ],
+      "translation": [
+        "Ahmad feels everyone's pain and is hungry for love:",
+        "God made his nature different."
+      ],
+      "story": "He ends by describing himself. He feels everyone's pain, and all he wants is love. God simply made him that way."
+    }
+  ],
+  "deeper": "Three couplets make this ghazal read like a na'at, a poem of love for the Prophet ﷺ. The first praises the Beloved's modesty, and the Prophet was described as more modest than a young girl behind her curtain (Bukhari). The fifth asks whose feet left this fragrance. An old report says people knew the Prophet had walked down a path by the fragrance he left (al-Darimi). The tenth says that seeing the Beloved makes him remember God. The Prophet said the best people are those who remind you of God when you see them (Ibn Majah).\n\nThe poem never names him, so the Sufi reading still works too: all beauty reflects God's beauty, and seeing it rightly turns the heart back to Him. The two readings don't compete. In this tradition, loving the Prophet is a road to loving God.\n\nThe mullah tempts the poet with the maidens of paradise, but 'my heart's desire has always been different'. He wants the Beloved, not a reward. The last couplet gives a portrait of the poet as a man who carries everyone's pain, which fits what his friend wrote about him.",
+  "why": "The repeated word 'different' makes it a simple poem to follow, and it builds to one beautiful line: seeing beauty and remembering God.",
+  "prompt": "When you see something beautiful, in nature, in a person or in art, what does it make you think of?",
+  "glossary": [
+    "ghazal",
+    "jigar",
+    "mullah",
+    "hoor",
+    "sanam",
+    "sufi-beloved",
+    "naat"
+  ],
+  "notes": [
+    "Printed in two columns; the right-hand column is the first line of each couplet."
+  ]
+}

@@ -1,0 +1,2339 @@
+[
+ {
+  "id": "006-for-saeeda",
+  "pages": [
+   6,
+   7,
+   8
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "For Saeeda, the daughter who gathered his poems",
+  "author": "M.A. Azad Khokhar",
+  "takeaway": "A daughter's love turned her father's scattered poems into this book.",
+  "scene": "This poem is not by Dr. Ahmad. It was written by his close friend, Azad Khokhar, after Dr. Ahmad died. It is addressed to the doctor's daughter, Saeeda Akhtar, a teacher of the Qur'an, who collected her father's poems so they would not be lost. It is the best picture we have of the poet as a person.",
+  "themes": [
+   "elegy",
+   "family"
+  ],
+  "level": "thread",
+  "lenses": [
+   "prayer",
+   "passing"
+  ],
+  "couplets": 10,
+  "firstLine": "باپ تیرے دیاں گلاں دھیئے سانوں یاد تے رہنیاں نیں",
+  "words": 519
+ },
+ {
+  "id": "009-a-gift-of-longing",
+  "pages": [
+   9
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The moon's parting gift",
+  "takeaway": "Some pain is too heavy for tears to wash away.",
+  "scene": "The beloved has gone. The poet calls them 'the moon', because they were the brightest thing in his life. They left behind only a strange kind of gift: the pain of missing them.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 2,
+  "firstLine": "اَگ ہجر دی تڑپ بے چینی دے گیا چن سوغاتاں",
+  "words": 102
+ },
+ {
+  "id": "009-mansurs-on-eyelashes",
+  "pages": [
+   9
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Tears hanging like Mansur",
+  "takeaway": "True love suffers quietly instead of complaining.",
+  "scene": "The poet has heard that a real lover doesn't complain. He tries to stay quiet, but his tears give him away.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "longing",
+   "self"
+  ],
+  "couplets": 2,
+  "firstLine": "سُنیا ہو کے ہاڑے کرنا یار عشق دا نئیں دستور",
+  "words": 143
+ },
+ {
+  "id": "009-thousands-of-enemies",
+  "pages": [
+   9
+  ],
+  "form": "chaumisra",
+  "language": "pa",
+  "title": "Not one became mine",
+  "takeaway": "Sometimes the people closest to you watch you burn and laugh.",
+  "scene": "The poet describes his heart as a poor man's hut. Someone he loved set it on fire, and the people around him just watched.",
+  "themes": [
+   "love",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 2,
+  "firstLine": "میرے دل غریب دا جھگا ساڑ دتا محبوب دلدار میرے",
+  "words": 125
+ },
+ {
+  "id": "010-whats-the-use",
+  "pages": [
+   10
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "What's the use?",
+  "takeaway": "In a world full of fakes, don't waste your heart on people who'll sell you out.",
+  "scene": "The poet is tired of being let down. Each line asks the same bitter question: what's the point? He uses two famous Punjabi love stories to show how love ends in betrayal.",
+  "themes": [
+   "love",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 5,
+  "firstLine": "ایتھے آس امیداں دا گلشن، توں یار سجا کے کیہ کرنا",
+  "words": 210
+ },
+ {
+  "id": "011-spring-has-come",
+  "pages": [
+   11,
+   12
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Spring has come, saqi",
+  "takeaway": "Nothing in this world lasts, so love fully now, and don't fear the end.",
+  "scene": "The rain clouds have finally come after a long dry spell, and spring is here. The poet turns to the saqi, the one pouring at the gathering, and starts talking about life, death and love.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "self",
+   "service"
+  ],
+  "couplets": 10,
+  "firstLine": "بڑے چراں پچھوں بدلی چڑھی اج اے، ویکھ ساقیا آئی بہار ہے وے",
+  "words": 503
+ },
+ {
+  "id": "013-ajj-zulf",
+  "pages": [
+   13
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Today the tresses will be combed",
+  "takeaway": "Real love asks a lot of you. People who truly love keep going anyway.",
+  "scene": "Picture a street in a Punjabi village. Word has gone around that the most beautiful girl in town is going to comb out her long hair today. The young men who are in love with her are already waiting outside. The poet tells it as if a battle is about to start.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "self"
+  ],
+  "couplets": 7,
+  "firstLine": "اَج زُلف سنواری جانی اے، کئی دِل تڑفائے جانے نیں",
+  "words": 499
+ },
+ {
+  "id": "014-everywhere-i-look",
+  "pages": [
+   14
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Everywhere I look, it's you",
+  "takeaway": "When you truly love, you start seeing the one you love in everything.",
+  "scene": "The poet has seen the face of the one he loves, and since that moment nothing else matters. He talks to the beloved, to the moon, and finally to himself. Its moon pictures are also the language of na'at, poems in praise of the Prophet ﷺ.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "nearness",
+   "awake",
+   "prophet"
+  ],
+  "couplets": 5,
+  "firstLine": "تیرا سوہنا چن جیہا مکھڑا جد دا نظریں آیا اے",
+  "words": 350
+ },
+ {
+  "id": "015-ishq",
+  "pages": [
+   15
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "What love does",
+  "titleOriginal": "عشق",
+  "takeaway": "Love humbles the proud, burns away what's fake, and makes what's real grow.",
+  "scene": "This short poem is simply called 'Ishq', which means deep, all-consuming love. It is a list of the things love does to a person.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "self",
+   "awake",
+   "trust"
+  ],
+  "couplets": 2,
+  "firstLine": "عشق تاج نوں کاسہ گدائی کردا، تخت پیراں دے ہیٹھ لتاڑ دیوے",
+  "words": 145
+ },
+ {
+  "id": "015-three-couplets",
+  "pages": [
+   15
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "A stranger who stayed a lifetime",
+  "titleOriginal": "تِن شعر",
+  "takeaway": "A few minutes with the right person can change a whole life.",
+  "scene": "The heading just says 'Three couplets'. The poet remembers someone he barely knew, who sat beside him for a short time and then left.",
+  "themes": [
+   "love"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "awake",
+   "nearness"
+  ],
+  "couplets": 3,
+  "firstLine": "چند گھڑیاں اوکول سی بہہ کے دل نوں اگ لا گئے",
+  "words": 125
+ },
+ {
+  "id": "016-why-else",
+  "pages": [
+   16
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Why else would I?",
+  "takeaway": "The pain you put up with shows what you really love.",
+  "scene": "The poet is answering everyone who thinks he's foolish. Each couplet asks 'why else would I…?' as if to say: what I've been through proves how much I love.",
+  "themes": [
+   "love"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 8,
+  "firstLine": "جے پیار کسے نال ہوندا نہ میں جندڑی رول گواندا کیوں",
+  "words": 279
+ },
+ {
+  "id": "017-one-memory",
+  "pages": [
+   17
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "One memory left",
+  "takeaway": "One real encounter can make you forget everything else.",
+  "scene": "The beloved looked at the poet only once. That one look changed everything, and then the beloved smiled and walked away.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "nearness",
+   "longing"
+  ],
+  "couplets": 6,
+  "firstLine": "ساقی نظر دے نال کجھ ایسی پلا گیا اے",
+  "words": 256
+ },
+ {
+  "id": "018-my-heart-went-to-him",
+  "pages": [
+   18
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "My heart went over to him",
+  "takeaway": "Love can be the illness and the cure at the same time.",
+  "scene": "The poet complains, half laughing, that his own heart has betrayed him. It left him and went to live with the beloved.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "trust",
+   "self"
+  ],
+  "couplets": 8,
+  "firstLine": "میرا دل ایہہ یارو بڑا بے وفا اے",
+  "words": 265
+ },
+ {
+  "id": "019-dont-let-your-anger-cool",
+  "pages": [
+   19,
+   20
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Hold nothing back",
+  "takeaway": "A true lover would rather be hurt by the beloved than ignored.",
+  "scene": "The poet speaks to a beloved who has been 'killing' him with indifference and sharp looks. Instead of begging for mercy, he dares them to go on.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "trust",
+   "longing"
+  ],
+  "couplets": 9,
+  "firstLine": "اَج چنے وی ہین ارمان دل دے، پورے کر لے قاتلا رہ نہ جان",
+  "words": 389
+ },
+ {
+  "id": "020-crime-of-loving",
+  "pages": [
+   20
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Guilty of loving",
+  "takeaway": "If the world was made out of love, how can loving be a crime?",
+  "scene": "The poet looks back at his youth. He trusted someone's promises, and it cost him. Now he asks how loving someone could ever be the wrong thing to do.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "self",
+   "awake"
+  ],
+  "couplets": 9,
+  "firstLine": "کسے دے قول تے اعتبار کر کے",
+  "words": 377
+ },
+ {
+  "id": "021-traders-in-pain",
+  "pages": [
+   21,
+   22
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Traders in pain",
+  "takeaway": "Give your heart fully, and let the river decide whether you sink or cross.",
+  "scene": "The poet describes what lovers are like: sighing, burning, carrying their pain from place to place like travelling traders. Then the beloved suddenly walks into his courtyard.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "trust",
+   "self"
+  ],
+  "couplets": 11,
+  "firstLine": "سینے دے وچ ٹھنڈیاں ہاواں اکھیاں وچ انگارے",
+  "words": 465
+ },
+ {
+  "id": "022-the-lonely-crane",
+  "pages": [
+   22,
+   23
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "The crane that lost its flock",
+  "takeaway": "The cleverest minds in history lost to love. Don't think you're the exception.",
+  "scene": "The beloved promised to come back soon, and never did. The poet waits through endless nights, and compares himself to a crane that has lost its flock.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 9,
+  "firstLine": "سجناں بوہڑ شتابی دل دیاں پیاں کہن تراٹاں",
+  "words": 409
+ },
+ {
+  "id": "024-a-cup-of-poison",
+  "pages": [
+   24,
+   25
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Don't come near, I'm on fire",
+  "takeaway": "Don't take away the ache; it's the only thing I have left of you.",
+  "scene": "The poet warns people away. He is burning with the pain of being separated from someone he loves, and he doesn't want the fire to spread. By the end he is speaking straight to God.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "longing",
+   "self",
+   "justice",
+   "prayer"
+  ],
+  "couplets": 9,
+  "firstLine": "میں ہاں اگ ہجر دا سڑیا میرے کول نہ آؤ",
+  "words": 409
+ },
+ {
+  "id": "025-nothing-lasts-forever",
+  "pages": [
+   25
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "No one owns anything forever",
+  "takeaway": "Looks, youth and power are all on loan. Don't be proud of them.",
+  "scene": "This ghazal is printed in two columns. Each row is one couplet. The poet looks at the world and sees that nothing in it lasts.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "passing",
+   "longing",
+   "prayer"
+  ],
+  "couplets": 9,
+  "firstLine": "ننگے پیر تے جسیاں اتے لیر نئیں",
+  "words": 238
+ },
+ {
+  "id": "026-every-breath",
+  "pages": [
+   26
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Every breath says your name",
+  "takeaway": "When love is complete, there's no 'me' left, only you.",
+  "scene": "The poet describes the place where the saqi, the one who pours love, has set up camp. Everyone gathers there, strict and free-spirited alike.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "self",
+   "nearness",
+   "awake"
+  ],
+  "couplets": 7,
+  "firstLine": "اوہ ساقی محبوب دلاں دا جس تھاں لائے ڈیرے",
+  "words": 308
+ },
+ {
+  "id": "027-gods-throne-shakes",
+  "pages": [
+   27
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "When a heart breaks, heaven shakes",
+  "takeaway": "Be careful with people's hearts. God takes a broken heart seriously.",
+  "scene": "The poet feels alone in a world full of liars. He talks to the beloved, to the saqi, and to anyone who thinks hurting someone's heart doesn't matter.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "nearness",
+   "justice"
+  ],
+  "couplets": 8,
+  "firstLine": "کیہ دساں میں ایہہ کی جھلی نال نمانے دل دے",
+  "words": 319
+ },
+ {
+  "id": "028-thank-god-for-the-ache",
+  "pages": [
+   28
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Thank God for the ache",
+  "takeaway": "The ability to feel deeply, even when it hurts, is a gift from God.",
+  "scene": "The poet starts by doing something surprising. Instead of complaining about his pain, he thanks God for it.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "longing",
+   "trust"
+  ],
+  "couplets": 6,
+  "firstLine": "تڑپ دل دی جگر دا سوز دتا، میں رب دا شکر ہزار کیتا",
+  "words": 343
+ },
+ {
+  "id": "029-its-not-good",
+  "pages": [
+   29
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Some things just aren't right",
+  "takeaway": "A gentle list of things a good person doesn't do.",
+  "scene": "This ghazal is printed in two columns, and every couplet ends with the same phrase: 'it isn't good.' It reads like a list of advice, sometimes to the beloved, sometimes to everyone.",
+  "themes": [
+   "love",
+   "society"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice",
+   "nearness"
+  ],
+  "couplets": 11,
+  "firstLine": "ہر اک تے وس جانا بیبا چنگا نئیں",
+  "words": 280
+ },
+ {
+  "id": "030-i-am-the-sun",
+  "pages": [
+   30,
+   31
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "I am the sun",
+  "takeaway": "Burn in your own fire long enough and you become a light for others.",
+  "scene": "Sadness surrounds the poet like storm clouds, and the town has made life hard for him. Halfway through, he realises that all this burning has turned him into something bright.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "awake",
+   "service",
+   "self"
+  ],
+  "couplets": 12,
+  "firstLine": "چار چوفیرے غم دے بدل ہاواں ہوکے چیکاں",
+  "words": 501
+ },
+ {
+  "id": "032-something-different",
+  "pages": [
+   32
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Love is different",
+  "takeaway": "A beauty so rare that seeing it makes you remember God.",
+  "scene": "Every couplet in this ghazal ends with the word 'vakhri', which means 'different' or 'one of a kind'. Many readers hear it as a na'at, a poem in praise of the Prophet Muhammad ﷺ. The poem never names him, but several of its pictures match the way his companions described him.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "nearness",
+   "awake",
+   "prophet"
+  ],
+  "couplets": 11,
+  "firstLine": "اوہدا ناز نخرا ادا وکھری اے",
+  "words": 454
+ },
+ {
+  "id": "033-it-looks-lovely",
+  "pages": [
+   33
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "That's when beauty shines",
+  "takeaway": "Beauty is in the details: a look, a laugh, a kind act.",
+  "scene": "This is a light, musical ghazal. Every couplet ends with 'sohni lagdi ae', which means 'that's when it looks lovely'. The poet paints a picture of a beautiful Punjabi girl and everything that makes her shine.",
+  "themes": [
+   "love"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice"
+  ],
+  "couplets": 8,
+  "firstLine": "اترے دل توں پار تے سوہنی لگدی اے",
+  "words": 273
+ },
+ {
+  "id": "034-smile-once",
+  "pages": [
+   34
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Smile at me, just once",
+  "takeaway": "Sometimes all a person needs is one kind look.",
+  "scene": "This ghazal is printed in two columns, and each row is one couplet. The poet asks the beloved for a single smile, then remembers everything love has already cost him.",
+  "themes": [
+   "love"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "awake"
+  ],
+  "couplets": 12,
+  "firstLine": "کدی تے ویکھ سجناں مسکرا کے",
+  "words": 330
+ },
+ {
+  "id": "035-mansur-didnt-climb-for-nothing",
+  "pages": [
+   35
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Mansur didn't climb for nothing",
+  "takeaway": "Real love isn't scared of hard times. It walks straight through them.",
+  "scene": "The poet describes how a true lover lives: with no peace except the beloved, generous to everyone who asks, and unafraid of what love might cost.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "self",
+   "trust",
+   "prophet"
+  ],
+  "couplets": 8,
+  "firstLine": "دردی بن کے کوئی وی درد ونڈاندا نئیں",
+  "words": 381
+ },
+ {
+  "id": "036-spring-came-at-a-price",
+  "pages": [
+   36,
+   37
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Spring didn't come for free",
+  "takeaway": "Every beautiful thing that blooms was watered by someone's sacrifice.",
+  "scene": "The garden is blooming, and people think it just happened. The poet knows the truth: he fed those flowers with his own blood.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "trust"
+  ],
+  "couplets": 12,
+  "firstLine": "اپنا خون جگر دا دتا پھلاں نوں کئی وار",
+  "words": 466
+ },
+ {
+  "id": "038-what-makes-us-human",
+  "pages": [
+   38
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "What makes us human",
+  "takeaway": "Being human means keeping your promises, living with purpose, and being one heart with others.",
+  "scene": "This ghazal is printed in two columns. It begins almost like a lesson about what makes a good person, then turns into a love poem.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "service",
+   "trust",
+   "awake"
+  ],
+  "couplets": 8,
+  "firstLine": "کسے نال پیار دا پیمان ہونا",
+  "words": 262
+ },
+ {
+  "id": "039-borrowed-wings",
+  "pages": [
+   39,
+   40
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Borrowed wings",
+  "takeaway": "Words can hurt or heal, and you can't fly far on borrowed wings.",
+  "scene": "A gentle ghazal about words, promises and the small things that keep love going. Every couplet ends with 'honde nain', which means 'that's how it is'.",
+  "themes": [
+   "love",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "self"
+  ],
+  "couplets": 11,
+  "firstLine": "کوڑے بول سجن انگارے ہوندے نیں",
+  "words": 311
+ },
+ {
+  "id": "041-i-keep-watching",
+  "pages": [
+   41,
+   42
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "What I've been watching",
+  "takeaway": "Look around honestly. Injustice can't last, and the blood of the innocent is never wasted.",
+  "scene": "Every couplet ends with 'vekh rehaan', which means 'I keep watching'. The poet is a witness. He describes what he sees in his country and his time, and much of it is painful.",
+  "themes": [
+   "society",
+   "love"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice",
+   "awake"
+  ],
+  "couplets": 10,
+  "firstLine": "میں زندگی دی شہ رگ اتے چل دے آرے ویکھ رہیاں",
+  "words": 387
+ },
+ {
+  "id": "043-thats-what-people-do",
+  "pages": [
+   43,
+   44
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "That's what people do",
+  "takeaway": "People can be cruel to those who were kindest to them. Be kind anyway.",
+  "scene": "Every couplet ends with 'jaande nain lok', which means 'that's what people do'. The poet looks honestly at how people behave: toward the beloved, toward their friends, and toward him.",
+  "themes": [
+   "society",
+   "love"
+  ],
+  "level": "thread",
+  "lenses": [
+   "service"
+  ],
+  "couplets": 11,
+  "firstLine": "چناں چن نوں ویکھ اکثر ہوش گوا جاندے نیں لوک",
+  "words": 346
+ },
+ {
+  "id": "045-no-time-for-love",
+  "pages": [
+   45,
+   46
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Don't love me, I belong to my country",
+  "takeaway": "Sometimes duty to your people comes before your own heart.",
+  "scene": "This poem turns the love poems around. Someone beautiful is interested in the poet. He tells them, kindly but firmly: I can't. My life belongs to my country and its people, and there's work to do.",
+  "themes": [
+   "homeland",
+   "society"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 9,
+  "firstLine": "مینوں پیار کریں نہ شوخ نظر ایہہ دنیا میرے پیار دی نئیں",
+  "words": 268
+ },
+ {
+  "id": "046-light-a-lamp",
+  "pages": [
+   46,
+   47
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Light a lamp of love",
+  "takeaway": "Light a lamp that brightens every street, and pour other people's pain into your words.",
+  "scene": "The poet gives advice about how to live: spread light, keep your promises, and don't treat other people as slaves. He ends by telling himself what a poet is for.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "self",
+   "justice",
+   "service",
+   "awake"
+  ],
+  "couplets": 9,
+  "firstLine": "گلی گلی رشنائیاں ہوون جس دے چانن نال",
+  "words": 385
+ },
+ {
+  "id": "048-who-will-bring-the-light",
+  "pages": [
+   48
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Who will bring the light of peace?",
+  "takeaway": "When darkness spreads, someone has to go and find the light.",
+  "scene": "This ghazal is printed in two columns, and each row is one couplet. It mixes heartbreak with worry about a country sliding into darkness and cruelty.",
+  "themes": [
+   "society",
+   "love",
+   "sufi"
+  ],
+  "level": "thread",
+  "lenses": [
+   "nearness",
+   "justice"
+  ],
+  "couplets": 11,
+  "firstLine": "اوہدے نے ہاسے یار تڑفا رہے نیں",
+  "words": 319
+ },
+ {
+  "id": "049-a-big-tangle",
+  "pages": [
+   49
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "The world is a big tangle",
+  "takeaway": "One day you'll have to leave this world, so don't get too tangled up in it.",
+  "scene": "This ghazal is printed in two columns, and each row is one couplet. The poet's hopes have collapsed, and he thinks about how short and messy life in this world is.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "passing",
+   "self"
+  ],
+  "couplets": 9,
+  "firstLine": "میری آساں دا مندر ڈھہ گیا اے",
+  "words": 266
+ },
+ {
+  "id": "050-snakes-in-the-city",
+  "pages": [
+   50
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Beware the two-faced",
+  "takeaway": "Watch out for hypocrites. They're more dangerous than any snake.",
+  "scene": "The poet looks at the villages and cities around him and sees fakeness everywhere. People pretend to be something they're not.",
+  "themes": [
+   "society",
+   "love"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice",
+   "self"
+  ],
+  "couplets": 6,
+  "firstLine": "پنڈ وی ریا فریب دے نیں شہر جاپدے",
+  "words": 189
+ },
+ {
+  "id": "051-call-day-day",
+  "pages": [
+   51
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Call things by their real names",
+  "takeaway": "Be honest: call cruelty cruelty, and don't let people sell out your country.",
+  "scene": "This is a short, angry poem about Pakistan. The poet calls for honesty, and warns about people who claim to love the country while selling it off.",
+  "themes": [
+   "homeland",
+   "society"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice",
+   "prayer"
+  ],
+  "couplets": 5,
+  "firstLine": "دن نوں آکھو دن ہمیشاں رات نوں آکھو رات",
+  "words": 166
+ },
+ {
+  "id": "052-everyone-changed",
+  "pages": [
+   52,
+   53
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Everyone changed",
+  "takeaway": "When everything around you changes, love is what's left standing.",
+  "scene": "Things have turned against the poet. His friends have changed, even the seasons seem different, and his love story has become town gossip.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "passing",
+   "longing"
+  ],
+  "couplets": 9,
+  "firstLine": "جئ بدلی اے تقدیر میری لئے بدل طور سب یاراں نے",
+  "words": 353
+ },
+ {
+  "id": "057-falcons-of-love",
+  "pages": [
+   57,
+   58
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Falcons of love",
+  "takeaway": "People who ride on hardship reach the goal, and love's falcons fly all the way to heaven.",
+  "scene": "The poet has spent long, painful hours waiting for the one he loves. He thinks about who actually reaches the goal in life and in love.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "longing",
+   "nearness"
+  ],
+  "couplets": 11,
+  "firstLine": "جو یار دی اڈیک وچ سجناں گزاریاں",
+  "words": 330
+ },
+ {
+  "id": "059-your-days-will-pass-too",
+  "pages": [
+   59,
+   60
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Your days will pass too",
+  "takeaway": "Hard times pass for everyone, and loyal, sincere people are rare. Treasure them.",
+  "scene": "The poet reminds someone proud that good times and bad times pass for everyone. Then he looks around at a world that has become hard and cold.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "passing",
+   "nearness",
+   "justice"
+  ],
+  "couplets": 11,
+  "firstLine": "تیرے دن وی لنگھ جاون گے میرے وی لنگھ جانے",
+  "words": 392
+ },
+ {
+  "id": "061-tears-spilled",
+  "pages": [
+   61,
+   62
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "The poison that gave me life",
+  "takeaway": "What people mean as poison can end up giving you more life.",
+  "scene": "The poet's tears have finally spilled over. He looks back at what life has cost him and the people around him, and ends with lovers who ran toward danger.",
+  "themes": [
+   "love",
+   "sufi",
+   "society"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "self",
+   "passing",
+   "trust"
+  ],
+  "couplets": 10,
+  "firstLine": "بے صبرے بے وسے ہنجو ڈلھ گئے نیں",
+  "words": 271
+ },
+ {
+  "id": "065-urdu-ghazal",
+  "pages": [
+   65
+  ],
+  "form": "ghazal",
+  "language": "ur",
+  "title": "Every poem is about you",
+  "titleOriginal": "غزل (اردو)",
+  "takeaway": "Love may be a bad bargain, but it's the only one worth making.",
+  "scene": "This ghazal is in Urdu, not Punjabi. It's softer and more polished in tone. The poet admits that all his poetry comes from one source: his love and the pain of being apart.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "nearness"
+  ],
+  "couplets": 8,
+  "firstLine": "مری سانسوں کو اس کے پیار کا کتنا سہارا ہے",
+  "words": 250
+ },
+ {
+  "id": "066-quaid-e-azam",
+  "pages": [
+   66
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Quaid-e-Azam Muhammad Ali Jinnah",
+  "titleOriginal": "قائد اعظم محمد علی جناح بانی پاکستان",
+  "takeaway": "One wise and determined leader can wake up a whole nation.",
+  "scene": "This is the first of several tributes in the book to people the poet admired. It honours Muhammad Ali Jinnah, the founder of Pakistan, known as Quaid-e-Azam, 'the Great Leader'.",
+  "themes": [
+   "tribute",
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "self"
+  ],
+  "couplets": 5,
+  "firstLine": "حکمت فہم فراست دے نال جہنے مسلم قوم دی بدل تقدیر دتی",
+  "words": 204
+ },
+ {
+  "id": "067-allama-iqbal",
+  "pages": [
+   67
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Allama Iqbal, poet of the nation",
+  "titleOriginal": "علامہ اقبالؒ شاعرِ ملت",
+  "takeaway": "A poet's words can give a whole people the courage to stand tall.",
+  "scene": "A short tribute to Allama Muhammad Iqbal, the poet-philosopher whose ideas helped bring Pakistan into being. Dr. Ahmad's own poetry borrows many of Iqbal's images, such as the royal falcon.",
+  "themes": [
+   "tribute",
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "self",
+   "awake"
+  ],
+  "couplets": 4,
+  "firstLine": "علموں تے کرداروں اچا سوہنے سخن اچیرے",
+  "words": 143
+ },
+ {
+  "id": "068-bedil-and-saim",
+  "pages": [
+   68
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Two poet friends: Bedil and Saim",
+  "takeaway": "Good friends and good poets leave light behind them.",
+  "scene": "Two short four-line tributes to poets from Dr. Ahmad's own circle of friends. The first is Syed Imdad Ali Bedil Kanpuri. The second is Allama Haji Muhammad Ibrahim Saim Chishti of Faisalabad, who has passed away.",
+  "themes": [
+   "tribute"
+  ],
+  "level": "thread",
+  "lenses": [
+   "passing",
+   "service"
+  ],
+  "couplets": 4,
+  "firstLine": "بیدلؔ دلاں نوں بخش سرور دیندا اپنے شعراں تے طرز بیانی دے نال",
+  "words": 125
+ },
+ {
+  "id": "069-pir-fazal-gujrati",
+  "pages": [
+   69,
+   70
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "The king of the ghazal: Pir Fazal Gujrati",
+  "titleOriginal": "غزل دا بادشاہ پیر سید فضل شاہ گجراتی رحمۃ اللہ علیہ",
+  "takeaway": "A true master teaches by who he is, not only by what he writes.",
+  "scene": "An elegy for Pir Syed Fazal Shah Gujrati, a famous Sufi poet called 'the king of the ghazal'. Dr. Ahmad clearly saw him as his own teacher and guide.",
+  "themes": [
+   "tribute",
+   "elegy",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "service",
+   "self"
+  ],
+  "couplets": 11,
+  "firstLine": "ڈگیا میرے سر دا سائیں رس گئیاں تقدیراں",
+  "words": 347
+ },
+ {
+  "id": "071-waris-shah",
+  "pages": [
+   71
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Waris Shah, who lit up Punjab",
+  "titleOriginal": "پیر سید وارث شاہ رحمۃ اللہ علیہ",
+  "takeaway": "Great poetry keeps giving light for centuries.",
+  "scene": "A tribute to Waris Shah, the 18th-century Punjabi poet who wrote 'Heer', the most famous love story in Punjab. Almost every Punjabi poet looks up to him, and Dr. Ahmad is no exception.",
+  "themes": [
+   "tribute",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing",
+   "awake"
+  ],
+  "couplets": 7,
+  "firstLine": "چانن تیری سخن وری دا پھیلیا چار چوفیرے",
+  "words": 227
+ },
+ {
+  "id": "072-hasan-qamar-chinioti",
+  "pages": [
+   72
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Hasan Qamar of Chiniot",
+  "titleOriginal": "حسن قمر چنیوٹی",
+  "takeaway": "Friends who wrote together leave pearls behind them.",
+  "scene": "A short tribute to Hasan Qamar Chinioti, a poet friend. Below it, the editor adds a note: 'The Doctor also wrote many sorrowful verses for friends who left this passing world. Some are recorded here as a sample.' The poems that follow are elegies.",
+  "themes": [
+   "tribute",
+   "elegy"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 3,
+  "firstLine": "سخن وری دا قمرؔ تے بادشاہ سی پاندا تاریاں اتے کمند ہے سی",
+  "words": 75
+ },
+ {
+  "id": "073-haji-ashiq-hussain",
+  "pages": [
+   73
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "For Haji Ashiq Hussain Ashiq",
+  "titleOriginal": "حاجی عاشق حسین عاشق نوں اینان شعراں نال یاد کردے نیں",
+  "takeaway": "When a true friend dies, the house of the heart goes quiet.",
+  "scene": "The heading says: 'He remembers Haji Ashiq Hussain Ashiq with these verses.' This is an elegy for a dear friend who has died.",
+  "themes": [
+   "elegy",
+   "tribute"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 4,
+  "firstLine": "ساڑ جگر دا داغ دلے دا ہنجو ہوکے ہاڑے",
+  "words": 98
+ },
+ {
+  "id": "074-sheikh-iftikhar-naseem",
+  "pages": [
+   74
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "For Sheikh Iftikhar Ahmad Naseem",
+  "titleOriginal": "شیخ افتخار احمد نسیم",
+  "takeaway": "Death isn't the end for good people. It's the road to real life.",
+  "scene": "An elegy for Sheikh Iftikhar Ahmad Naseem, a poet friend who wrote naats, poems in praise of the Prophet. The poet plays on his pen-name: 'Naseem' means a gentle breeze.",
+  "themes": [
+   "elegy",
+   "tribute"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "passing",
+   "prayer"
+  ],
+  "couplets": 4,
+  "firstLine": "ایس فانی جہان توں جان والے، پھیرا فیر نہ آپ نے پاؤنا ایں",
+  "words": 186
+ },
+ {
+  "id": "075-abul-kalam-azad",
+  "pages": [
+   75
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Maulana Abul Kalam Azad",
+  "titleOriginal": "مولانا ابوالکلام آزاد",
+  "takeaway": "Some people's lives and deaths both become examples for others.",
+  "scene": "A four-line tribute to Maulana Abul Kalam Azad, a great scholar and freedom fighter. The poet plays on his name, Azad, which means 'free'.",
+  "themes": [
+   "tribute",
+   "homeland"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "مرحبا صد مرحبا ملک قوم لئی جان لڑان والے",
+  "words": 64
+ },
+ {
+  "id": "075-imam-saifi",
+  "pages": [
+   75
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Imam Saifi: first anniversary",
+  "titleOriginal": "سلسل ادب قبلہ صحافت دار رہیا امام سیفی — پہلی برسی",
+  "takeaway": "A sincere life of service keeps your name alive.",
+  "scene": "Written for the first anniversary of the death of Imam Saifi, a respected journalist and writer. The poem lists the qualities that made him special.",
+  "themes": [
+   "elegy",
+   "tribute"
+  ],
+  "level": "thread",
+  "lenses": [
+   "service",
+   "prophet"
+  ],
+  "couplets": 3,
+  "firstLine": "خادم خیر الوریٰ دا مرد کامل آپ صحافت دار رہیا امام سیفی",
+  "words": 146
+ },
+ {
+  "id": "076-miss-hussain",
+  "pages": [
+   76,
+   77
+  ],
+  "form": "nazm",
+  "language": "ur",
+  "title": "Farewell to Miss Hussain, a beloved teacher",
+  "titleOriginal": "مس حسین صاحبہ",
+  "takeaway": "A good teacher is a lamp. When they leave, the whole school feels it.",
+  "scene": "Two poems for a teacher, Miss Hussain, who was leaving the Government Girls High School in Gojra. The first is a short Punjabi verse. The second is in Urdu, and the heading says the poet wrote it 'at the request of my daughter Tanveer-un-Nisa'. His daughter was one of Miss Hussain's students, and she asked her father to write a farewell poem.",
+  "themes": [
+   "tribute",
+   "family"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 11,
+  "firstLine": "جنہاں دی محنت دے صدقے سی قائم دیکھی ہریالی",
+  "words": 199
+ },
+ {
+  "id": "078-dr-qadeer-khan",
+  "pages": [
+   78
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Dr. Qadeer Khan",
+  "titleOriginal": "ڈاکٹر قدیر احمد خاں",
+  "takeaway": "A nation that turns on its own heroes under outside pressure loses something.",
+  "scene": "A four-line poem about Dr. Abdul Qadeer Khan, the scientist many Pakistanis saw as a national hero. In 2004, under pressure from the United States, he was made to confess on television and placed under house arrest. The poet is angry about how he was treated.",
+  "themes": [
+   "tribute",
+   "homeland",
+   "society"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "ساری قوم دا ہیرو ہو گیا زیرو کس گنتی تے کیہڑے حساب آیا",
+  "words": 59
+ },
+ {
+  "id": "078-principal-agha-sadiq",
+  "pages": [
+   78
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Farewell to Principal Agha Sadiq Hussain Shah",
+  "titleOriginal": "محترم آغا صادق حسین شاہ پرنسپل کالج",
+  "takeaway": "Good leaders bring spring with them, and take a little of it when they go.",
+  "scene": "A four-line farewell to a college principal, Agha Sadiq Hussain Shah, who was leaving his post.",
+  "themes": [
+   "tribute"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "محفل دی جان تے شمع علم دی منیا ایتھوں جا رہے ہین",
+  "words": 56
+ },
+ {
+  "id": "078-woman",
+  "pages": [
+   78
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Woman",
+  "titleOriginal": "عورت",
+  "takeaway": "Women build nations, light up dark times, and paradise lies at a mother's feet.",
+  "scene": "A short poem in praise of women. Every line ends with the word 'aurat', which means 'woman'.",
+  "themes": [
+   "society",
+   "family"
+  ],
+  "level": "thread",
+  "lenses": [
+   "service"
+  ],
+  "couplets": 2,
+  "firstLine": "ادنےٰ اعلیٰ دی ماں عظیم ہوندی ملک قوم دی کرے تعمیر عورت",
+  "words": 115
+ },
+ {
+  "id": "079-love-of-money",
+  "pages": [
+   79,
+   80
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "In love with money",
+  "titleOriginal": "دولت نال پیار",
+  "takeaway": "A nation can't grow when people love money more than their country.",
+  "scene": "A short, sharp poem about greed. Everyone seems to be grabbing what they can for themselves.",
+  "themes": [
+   "society",
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "passing",
+   "justice"
+  ],
+  "couplets": 4,
+  "firstLine": "ہر کوئی لٹ کھسٹ تے لگا ریت دے محل اسار رہیا اے",
+  "words": 139
+ },
+ {
+  "id": "079-to-those-going-abroad",
+  "pages": [
+   79
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "To those leaving for other countries",
+  "titleOriginal": "غیر ملک نوں جاندیاں نوں",
+  "takeaway": "Wherever you go, make your country proud and don't forget the people who love you.",
+  "scene": "Many Pakistanis go abroad to work and study. This poem is the poet's advice to a loved one who is leaving: be good, be proud of where you're from, and don't forget home.",
+  "themes": [
+   "homeland",
+   "family"
+  ],
+  "level": "thread",
+  "lenses": [
+   "self",
+   "prayer"
+  ],
+  "couplets": 4,
+  "firstLine": "وچھڑ جاوناں سجن پیاریاں توں گل ایہہ کوئی صبر قرار دی نئیں",
+  "words": 163
+ },
+ {
+  "id": "080-saim-chishti-hajj",
+  "pages": [
+   80,
+   81
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Saim Chishti leaves for Hajj",
+  "titleOriginal": "جناب صائم چشتی دی حج روانگی",
+  "takeaway": "Lucky are the ones who get to stand at the Prophet's door. Send your greetings with them.",
+  "scene": "The poet's friend, the poet and scholar Saim Chishti, is setting out on Hajj, the pilgrimage to Makkah and Madinah. The poet celebrates his good fortune and asks him to carry a message.",
+  "themes": [
+   "devotion",
+   "tribute"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "nearness",
+   "prayer",
+   "prophet"
+  ],
+  "couplets": 4,
+  "firstLine": "شمع رشد و ہدایت ول جا رہے نیں جاگے بھاگ نیں اج پروانیاں دے",
+  "words": 246
+ },
+ {
+  "id": "080-the-work-of-the-young",
+  "pages": [
+   80
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Everyone has a job to do",
+  "titleOriginal": "جوان دا کم",
+  "takeaway": "Young people, farmers, workers and soldiers each have a part in building a country.",
+  "scene": "The title means 'The work of the young'. In four lines the poet lists what each group of people should do for the country.",
+  "themes": [
+   "homeland",
+   "society"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "ہمت نال تقدیر نوں بدل دینا میری قوم دے شیر جواناں دا کم",
+  "words": 47
+ },
+ {
+  "id": "081-mubashra-school",
+  "pages": [
+   81,
+   82
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Daughter Mubashra's school",
+  "titleOriginal": "دھی مبشرہ دی فرمائش",
+  "takeaway": "A good school feels like a mother's lap.",
+  "scene": "The heading says 'At daughter Mubashra's request'. Mubashra asked her father to write a poem for her school, and it celebrates the school and its teachers. A note at the end says the full poem was long, so only part of it could be printed.",
+  "themes": [
+   "family",
+   "tribute"
+  ],
+  "level": "thread",
+  "lenses": [
+   "prayer"
+  ],
+  "couplets": 7,
+  "firstLine": "رنگ رنگ دے مہکدے پھل ایتھے، کھڑی ہوئی اے عجب گلزار ایتھے",
+  "words": 237
+ },
+ {
+  "id": "081-raza-ali-wedding",
+  "pages": [
+   81
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "A blessing for my son's wedding",
+  "titleOriginal": "ڈاکٹر احمد تبسم دے گھر والے — اپنے سونہے پتر رضا علی احمد دے ویاہ اتے دعا",
+  "takeaway": "A father's prayer: may every day of your life feel like Eid.",
+  "scene": "This section is headed 'Dr. Ahmad Tabassum's family'. The first poem is a prayer the poet wrote for the wedding of his handsome son, Raza Ali Ahmad.",
+  "themes": [
+   "family"
+  ],
+  "level": "thread",
+  "lenses": [
+   "prayer"
+  ],
+  "couplets": 2,
+  "firstLine": "سدا جگ اندر خشی نال وسیں ہر روز تیرا روز عید دار ہے",
+  "words": 126
+ },
+ {
+  "id": "082-naseem-akhtar-abroad",
+  "pages": [
+   82
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "To my dear daughter Naseem, going abroad",
+  "titleOriginal": "اپنی عزیزہ بیٹی نسیم اختر دے نال",
+  "takeaway": "Travel well, and remember that you carry your country's name with you.",
+  "scene": "The poet's daughter Naseem Akhtar is leaving to live in another country. He gives her his blessing and some advice.",
+  "themes": [
+   "family",
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "awake"
+  ],
+  "couplets": 2,
+  "firstLine": "غیر ملک نوں جاندیا جا خیریں سفر سنت حبیب یزدان دی اے",
+  "words": 108
+ },
+ {
+  "id": "083-nasreen-rukhsati",
+  "pages": [
+   83
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "For my daughter Nasreen on her wedding day",
+  "titleOriginal": "اپنی بیٹی نسرین اختر دی رخصتی تے شعری نذرانہ",
+  "takeaway": "A father's advice to his daughter as she leaves home: be kind, be brave, and never forget God.",
+  "scene": "In South Asian weddings, the 'rukhsati' is the emotional moment when the bride leaves her parents' home for her husband's. Here the poet gives his daughter Nasreen Akhtar a poem as a gift: part blessing, part advice for her new life.",
+  "themes": [
+   "family"
+  ],
+  "level": "thread",
+  "lenses": [
+   "service",
+   "trust"
+  ],
+  "couplets": 5,
+  "firstLine": "جگ اندر خشی سدا نال وسیں پالے ویر بھیناں سبھے کہندیاں نیں",
+  "words": 209
+ },
+ {
+  "id": "084-sobia-rukhsati",
+  "pages": [
+   84,
+   85
+  ],
+  "form": "nazm",
+  "language": "ur",
+  "title": "Farewell to Sobia on her wedding day",
+  "titleOriginal": "ثوبیہ بیٹی دی رخصتی",
+  "takeaway": "May God protect you. Be patient, be kind, and you'll find peace.",
+  "scene": "Another wedding farewell, this time in Urdu, for a daughter of the family named Sobia (perhaps a granddaughter or niece). As she leaves for her new home, the poet blesses her and gives advice.",
+  "themes": [
+   "family"
+  ],
+  "level": "thread",
+  "lenses": [
+   "service",
+   "trust",
+   "prayer"
+  ],
+  "couplets": 11,
+  "firstLine": "بابل کے گھر کی زینت خوشیوں کا باب ہے تو",
+  "words": 281
+ },
+ {
+  "id": "085-mother",
+  "pages": [
+   85,
+   86
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Mother",
+  "titleOriginal": "ماں — اپنی ماں حاجن عمراں بی بی دی یاد وچ",
+  "takeaway": "You only truly understand what your mother was once she's gone.",
+  "scene": "Three short poems about mothers. The first is written 'in memory of my mother, Hajjan Umran Bibi'. The heading calls her 'Hajjan', a woman who has made the Hajj pilgrimage. The poet lost her, and these lines are about what that loss taught him.",
+  "themes": [
+   "family",
+   "elegy"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "nearness",
+   "service"
+  ],
+  "couplets": 6,
+  "firstLine": "کدھرے لگھیں ماں دی گود دور گا مر جائے ماں تے پتہ تھر لگداا اے",
+  "words": 274
+ },
+ {
+  "id": "087-father",
+  "pages": [
+   87
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Father",
+  "titleOriginal": "حکیم حاجی اللہ دتہ باپ",
+  "takeaway": "Without a father, a mother, siblings and children, the world can feel very dark.",
+  "scene": "A short poem for the poet's father, Hakeem Haji Allah Ditta, a traditional herbal doctor. The heading lists his name and says simply 'Father'.",
+  "themes": [
+   "family",
+   "elegy"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "باپ مرتے شفقت بجھے ماواں باجھ ناں چھاواں",
+  "words": 58
+ },
+ {
+  "id": "087-seasons-change",
+  "pages": [
+   87
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Only God remains",
+  "takeaway": "Seasons change and people leave, but God remains forever.",
+  "scene": "Two short four-line verses on page 87, with no titles. The first mourns the loss of good friends. The second reflects on how everything changes except God.",
+  "themes": [
+   "elegy",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "passing"
+  ],
+  "couplets": 4,
+  "firstLine": "چنگے ساتھی ٹر جان تے ہوئے جگ ہنیر",
+  "words": 157
+ },
+ {
+  "id": "088-grief-for-gulzar-e-naz",
+  "pages": [
+   88
+  ],
+  "form": "qita",
+  "language": "ur",
+  "title": "Even Tabassum cried",
+  "titleOriginal": "اظہار غم (گلزار ناز 16-1-86)",
+  "takeaway": "Even someone whose name means 'smile' can be brought to tears.",
+  "scene": "A short Urdu poem titled 'An expression of grief', written for Gulzar-e-Naz, who died on 16 January 1986.",
+  "themes": [
+   "elegy",
+   "family"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "غم کے ہر ایک اشک کو مژگاں میں پرونا آیا",
+  "words": 49
+ },
+ {
+  "id": "088-independence-day",
+  "pages": [
+   88
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "14 August: Independence Day",
+  "titleOriginal": "14 اگست یوم آزادی",
+  "takeaway": "Freedom was won with courage and sacrifice. Remember what it cost.",
+  "scene": "A celebration of 14 August 1947, the day Pakistan became independent. The poet remembers how the British left and how Jinnah led the people to freedom.",
+  "themes": [
+   "homeland"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 5,
+  "firstLine": "گلشن وچہ بہاراں آئیاں کلیاں رنگ نکھارے",
+  "words": 119
+ },
+ {
+  "id": "089-poison-of-sectarianism",
+  "pages": [
+   89
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The poison of sectarianism",
+  "titleOriginal": "فرقہ بندی دا زہر",
+  "takeaway": "People who follow the same God and the same Prophet are killing each other. Stop.",
+  "scene": "A short, angry poem about Muslims fighting other Muslims over sect: groups that share the same God, Prophet and Qur'an but turn on each other.",
+  "themes": [
+   "society",
+   "devotion"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "justice"
+  ],
+  "couplets": 2,
+  "firstLine": "ظلم جبر اغوا تے قتل ڈاکے ہر روز ایتھے ودھدے جا رہے نیں",
+  "words": 126
+ },
+ {
+  "id": "089-two-couplets",
+  "pages": [
+   89
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "The grave will ask",
+  "titleOriginal": "دو شعر",
+  "takeaway": "Don't hurt anyone, and do good. That's all that will count in the end.",
+  "scene": "The heading just says 'Two couplets'. It is short, simple advice about how to live, remembering that everyone dies.",
+  "themes": [
+   "society",
+   "devotion"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "passing",
+   "service"
+  ],
+  "couplets": 2,
+  "firstLine": "دشمن سجن مردے جاندے اساں وی مر جانا ایں",
+  "words": 93
+ },
+ {
+  "id": "090-pakistan-will-be",
+  "pages": [
+   90
+  ],
+  "form": "song",
+  "language": "pa",
+  "title": "Pakistan will come to be",
+  "titleOriginal": "بن کے رہے گا پاکستان",
+  "takeaway": "When a people unite with courage and faith, nothing can stop them.",
+  "scene": "'Ban ke rahe ga Pakistan', 'Pakistan will come to be', was a famous slogan of the 1940s independence movement. This poem is written like a marching song, with that line repeated as a chorus. It imagines the days before 1947, when people were fighting for the new country.",
+  "themes": [
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "trust"
+  ],
+  "couplets": 13,
+  "firstLine": "ساڈی غیرت ساڈی آن",
+  "words": 217
+ },
+ {
+  "id": "091-effort",
+  "pages": [
+   91,
+   92
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Effort",
+  "titleOriginal": "ادھم",
+  "takeaway": "The goal comes to those who work for it and keep going, not to those who stop and rest.",
+  "scene": "Four short four-line verses under the title 'Udham', meaning 'effort' or 'striving'. Each gives a small lesson about working hard, following your heart, and missing people.",
+  "themes": [
+   "society"
+  ],
+  "level": "thread",
+  "lenses": [
+   "self"
+  ],
+  "couplets": 8,
+  "firstLine": "جدوں کجھ سربند کر لین آہری",
+  "words": 176
+ },
+ {
+  "id": "092-beggars-to-america",
+  "pages": [
+   92
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "The beggars have gone to America",
+  "titleOriginal": "منگتے امریکہ گئے",
+  "takeaway": "A country whose leaders live on begging and loans loses its dignity.",
+  "scene": "A sharp, funny satire. The poet mocks Pakistan's leaders for flying off to America to ask for loans and aid, as if they were beggars.",
+  "themes": [
+   "society",
+   "homeland",
+   "humour"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 3,
+  "firstLine": "ساڈے منگتیاں دی فوج امریکہ سدھاری اے",
+  "words": 75
+ },
+ {
+  "id": "093-funny-rubai",
+  "pages": [
+   93
+  ],
+  "form": "rubai",
+  "language": "pa",
+  "title": "How to get rich (a joke)",
+  "titleOriginal": "مزاحیہ رباعی",
+  "takeaway": "A joke with a sting: in a corrupt system, honest people struggle.",
+  "scene": "The heading means 'A humorous rubai', a four-line comic poem. The poet, a doctor himself, sarcastically gives 'advice' on how to get ahead.",
+  "themes": [
+   "humour",
+   "society"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "پانی پانی کر گئی آج دے فرزانے دی گل",
+  "words": 65
+ },
+ {
+  "id": "093-knowledge",
+  "pages": [
+   93
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Knowledge",
+  "titleOriginal": "علم",
+  "takeaway": "Knowledge makes you rich in a way no thief can steal.",
+  "scene": "A short poem in praise of 'ilm', which means knowledge or learning. The poet was a doctor and the father of teachers and students, and he clearly valued education deeply.",
+  "themes": [
+   "society"
+  ],
+  "level": "thread",
+  "lenses": [
+   "awake"
+  ],
+  "couplets": 5,
+  "firstLine": "بندہ علم دے نال انسان بن دا یارو",
+  "words": 156
+ },
+ {
+  "id": "094-my-country",
+  "pages": [
+   94,
+   95
+  ],
+  "form": "song",
+  "language": "pa",
+  "title": "My country",
+  "titleOriginal": "میرا دیش",
+  "takeaway": "My country is a picture of paradise, and it's ours to love and look after.",
+  "scene": "A patriotic song with a repeated chorus: 'Eh mera desh jannat di tasveer ae', meaning 'This country of mine is a picture of paradise'. It reads like something children might sing at school on Independence Day.",
+  "themes": [
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "prayer"
+  ],
+  "couplets": 12,
+  "firstLine": "ایہہ میرا دیش جنت دی تصویر اے",
+  "words": 248
+ },
+ {
+  "id": "096-basket-of-snakes",
+  "pages": [
+   96
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "A basket of snakes",
+  "titleOriginal": "قطعہ",
+  "takeaway": "Leaders without a conscience will sell anything, even their own people.",
+  "scene": "A short, bitter four-line poem about corrupt leaders, printed straight after the Bhutto poem.",
+  "themes": [
+   "society",
+   "homeland"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "ایہہ تے لیڈر نرے مداری نیں",
+  "words": 35
+ },
+ {
+  "id": "096-gardeners-of-literature",
+  "pages": [
+   96,
+   97
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "Gardeners of literature",
+  "takeaway": "Good people keep spreading their 'fragrance' long after they're gone.",
+  "scene": "An untitled verse that seems to remember a writer friend, perhaps Naseem (whose name means 'breeze'), who looked after the 'garden' of poetry.",
+  "themes": [
+   "tribute",
+   "elegy"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 4,
+  "firstLine": "گلشن وچہ اوہ پھل نویکلے سن",
+  "words": 76
+ },
+ {
+  "id": "096-new-constitution-bhutto",
+  "pages": [
+   96
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "On the new constitution: Zulfiqar Ali Bhutto",
+  "titleOriginal": "نواں آئین تے — ذوالفقار علی بھٹو",
+  "takeaway": "A good constitution is a gift to a nation.",
+  "scene": "Written to celebrate Pakistan's 1973 Constitution, introduced under Zulfiqar Ali Bhutto. It is still Pakistan's constitution today.",
+  "themes": [
+   "homeland",
+   "tribute"
+  ],
+  "level": "thread",
+  "lenses": [
+   "prayer"
+  ],
+  "couplets": 2,
+  "firstLine": "اسلامی جمہوری نالے وفاقی آئین ملیا بڑا بہترین ملیا",
+  "words": 93
+ },
+ {
+  "id": "097-the-world",
+  "pages": [
+   97
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "The world",
+  "titleOriginal": "دنیا",
+  "takeaway": "The world looks beautiful, but don't get trapped by it: it's a place you're only passing through.",
+  "scene": "A short poem about 'dunya', the world, meaning worldly life. The poet admits it is beautiful, and warns that it is also a trap.",
+  "themes": [
+   "sufi",
+   "society"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "passing"
+  ],
+  "couplets": 5,
+  "firstLine": "دنیا کوڑہ مقام ہے راہیاں دا",
+  "words": 174
+ },
+ {
+  "id": "098-mukhammas",
+  "pages": [
+   98
+  ],
+  "form": "mukhammas",
+  "language": "pa",
+  "title": "Eid without you",
+  "titleOriginal": "مخمس بند",
+  "takeaway": "Drinking poison is easier than living without the one you love.",
+  "scene": "A five-line stanza (mukhammas). The poet says the pain of separation is harder than anything, even death, and that Eid itself means nothing without the beloved.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "self",
+   "longing"
+  ],
+  "couplets": 3,
+  "firstLine": "سوکھا زہر دا جام کر نوش لینا نئیں جام فراق دا پی ہوندا",
+  "words": 145
+ },
+ {
+  "id": "098-todays-youth",
+  "pages": [
+   98
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Today's young people",
+  "titleOriginal": "آج دا نوجوان",
+  "takeaway": "Young people could change their country's future, if they stopped wasting themselves.",
+  "scene": "The poet worries about young men in his time: full of potential, but wasting it on drugs, vanity and arrogance.",
+  "themes": [
+   "society",
+   "homeland"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "گبھرو قوم دی بدل تقدیر سکدے پر ایہہ ملک دی خاک اڈائی پھردے",
+  "words": 51
+ },
+ {
+  "id": "099-labourer",
+  "pages": [
+   99
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The labourer",
+  "titleOriginal": "مزدور",
+  "takeaway": "The labourer feeds the world, and still can't fill his own stomach. And he still won't sell his honour.",
+  "scene": "A poem in the voice of a working man, a 'mazdoor' or labourer, who works hard for little.",
+  "themes": [
+   "society"
+  ],
+  "level": "thread",
+  "lenses": [
+   "awake",
+   "justice"
+  ],
+  "couplets": 2,
+  "firstLine": "میرے لہو پسینے دے نال یارو ٹیاں جگ نوں خوشی ضرور ہے اے",
+  "words": 103
+ },
+ {
+  "id": "099-poet-iqbal",
+  "pages": [
+   99
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The poet Iqbal",
+  "titleOriginal": "شاعر اقبال",
+  "takeaway": "Iqbal's name will last as long as the world does.",
+  "scene": "A second, shorter tribute to Allama Iqbal (see also page 67).",
+  "themes": [
+   "tribute",
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "self",
+   "awake"
+  ],
+  "couplets": 2,
+  "firstLine": "جد سوچاں پاروں وتا رب سانوں اقبال",
+  "words": 96
+ },
+ {
+  "id": "099-wake-up",
+  "pages": [
+   99
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Wake up!",
+  "titleOriginal": "جاگو",
+  "takeaway": "The sun has risen. Times have changed. Wake up and get to work.",
+  "scene": "An untitled call to action at the top of page 99. It sounds like a rousing chant: 'Jaago!', which means 'Wake up!'",
+  "themes": [
+   "homeland",
+   "society"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 3,
+  "firstLine": "جوانو جاگو جاگو قوم دے پاسبانو جاگو",
+  "words": 43
+ },
+ {
+  "id": "100-chaumisra-lamp-of-hope",
+  "pages": [
+   100
+  ],
+  "form": "chaumisra",
+  "language": "pa",
+  "title": "The lamp of hope went out",
+  "titleOriginal": "چومصرعہ",
+  "takeaway": "Sometimes you see the shore, and the lamp of hope goes out anyway.",
+  "scene": "A four-line verse about losing hope at the last moment.",
+  "themes": [
+   "love"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 2,
+  "firstLine": "سوچ دا سورج سی ڈونگے ہنیریاں چ ڈبیا",
+  "words": 112
+ },
+ {
+  "id": "100-leader",
+  "pages": [
+   100
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "The leader",
+  "titleOriginal": "لیڈر",
+  "takeaway": "Ordinary people are struggling to survive, and their leaders are sharing out the spoils.",
+  "scene": "A short satirical verse about politicians.",
+  "themes": [
+   "society",
+   "humour"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "غم قوم دا کراں یا ملک دا میں مذہب دا کراں خیال یارو",
+  "words": 64
+ },
+ {
+  "id": "101-good-people",
+  "pages": [
+   101
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "'Good' people",
+  "titleOriginal": "اچھے لوگ",
+  "takeaway": "A sarcastic joke: in a corrupt world, the corrupt get called 'good people'.",
+  "scene": "A sarcastic verse. The poet pretends he would be counted among the 'good people' if only he were corrupt.",
+  "themes": [
+   "society",
+   "humour"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "انکھ آن نوں رکھ کے اک پاسے جھولی چک یا بدکردار ہوندا",
+  "words": 61
+ },
+ {
+  "id": "101-portrait",
+  "pages": [
+   101
+  ],
+  "form": "verses",
+  "language": "pa",
+  "title": "A portrait",
+  "titleOriginal": "تصویر",
+  "takeaway": "Missing someone can make you as still as a picture.",
+  "scene": "A single couplet. The poet looks at a picture of the person he loves.",
+  "themes": [
+   "love"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 1,
+  "firstLine": "آج دیکھ کے یار تصویر تیری بن گیا ہاں وانگ تصویر میں وی",
+  "words": 75
+ },
+ {
+  "id": "102-my-homeland",
+  "pages": [
+   102,
+   103,
+   104
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "My homeland",
+  "titleOriginal": "میرے وطن",
+  "takeaway": "I will give everything to make my country beautiful, fair and free.",
+  "scene": "A long patriotic poem addressed directly to the homeland, with promises of everything the poet will do for it. Most lines end with 'paini ae', which means 'I must' or 'it has to be done'.",
+  "themes": [
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice"
+  ],
+  "couplets": 20,
+  "firstLine": "اے وطن تیرے لئی مینوں جند جان لڑانی پینی اے",
+  "words": 555
+ },
+ {
+  "id": "105-tribute-to-dr-ahmad",
+  "pages": [
+   105
+  ],
+  "form": "nazm",
+  "language": "ur",
+  "title": "A friend's tribute to Dr. Ahmad Tabassum",
+  "titleOriginal": "حاجی الحرمین الشریف ڈاکٹر محمد احمد تبسم صاحب",
+  "author": "Qari Syed Hussain",
+  "takeaway": "A man remembered for serving people, helping the poor and feeling others' pain.",
+  "scene": "This poem is not by Dr. Ahmad. It was written in Urdu by his close friend Qari Syed Hussain, as a tribute to him. The heading calls him 'Haji al-Haramain', meaning he had made the pilgrimage to both holy mosques, in Makkah and Madinah. The note under the title says: 'He is my dear old friend and benefactor. Because of his kindness to me, I express my heartfelt feelings.'",
+  "themes": [
+   "tribute"
+  ],
+  "level": "thread",
+  "lenses": [
+   "service",
+   "prayer"
+  ],
+  "couplets": 8,
+  "firstLine": "محمد احمد کتنا پیارا نام ہے",
+  "words": 200
+ },
+ {
+  "id": "106-farewell-for-hajj",
+  "pages": [
+   106,
+   107
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "A farewell gift as Dr. Ahmad leaves for Hajj",
+  "titleOriginal": "نذرانہ الوداع حج — اسیر سوہلوی فیصل آباد",
+  "author": "Aseer Sohlvi, Faisalabad",
+  "takeaway": "Lucky are the lovers who set off to see the Prophet's city.",
+  "scene": "This poem is by Aseer Sohlvi of Faisalabad, a friend of Dr. Ahmad. It was written as a farewell when Dr. Ahmad set out on Hajj. It mirrors the poem Dr. Ahmad himself wrote when his friend Saim Chishti left for Hajj (page 80).",
+  "themes": [
+   "devotion",
+   "tribute"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "nearness",
+   "prayer",
+   "prophet"
+  ],
+  "couplets": 8,
+  "firstLine": "بج حج والے کئی عاشق چمن یار دے درد دیوار چلے",
+  "words": 319
+ },
+ {
+  "id": "107-confession",
+  "pages": [
+   107
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Confession",
+  "titleOriginal": "اعتراف",
+  "takeaway": "I've done wrong my whole life. Lord, You are merciful: please forgive me.",
+  "scene": "A short, humble prayer to God. The poet admits his mistakes and asks for mercy.",
+  "themes": [
+   "devotion"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "prayer",
+   "trust"
+  ],
+  "couplets": 2,
+  "firstLine": "تیری ذات رحیم کریم بے شک مولا کرم کر دیئیں گنہگار ہاں میں",
+  "words": 143
+ },
+ {
+  "id": "107-maulvi-ji-babri-masjid",
+  "pages": [
+   107
+  ],
+  "form": "nazm",
+  "language": "pa",
+  "title": "Maulvi ji, and the Babri Mosque",
+  "titleOriginal": "مولوی جی بابری مسجد",
+  "takeaway": "Stop calling each other unbelievers. Our real challenges need us united.",
+  "scene": "The poet speaks to a 'maulvi', a local religious preacher, who keeps declaring other Muslims unbelievers. He points to the destruction of the Babri Mosque in India in 1992 as proof that Muslims need unity, not infighting.",
+  "themes": [
+   "society",
+   "devotion"
+  ],
+  "level": "explicit",
+  "lenses": [
+   "justice"
+  ],
+  "couplets": 3,
+  "firstLine": "لا لا کفر دے فتوے مولوی جی ہر اک نوں کافر بنائی نہ جا",
+  "words": 153
+ },
+ {
+  "id": "108-abdul-razzaq-london",
+  "pages": [
+   108
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "For Abdul Razzaq, leaving for London",
+  "titleOriginal": "عبدالرزاق دی لندن روانگی تے — قطعہ",
+  "takeaway": "Be happy where you're going, and don't forget the people who love you here.",
+  "scene": "A short farewell for someone named Abdul Razzaq, who was moving to London.",
+  "themes": [
+   "family",
+   "homeland"
+  ],
+  "level": "none",
+  "lenses": [],
+  "couplets": 2,
+  "firstLine": "اینان پیار دے گندھیاں ہاراں نوں",
+  "words": 43
+ },
+ {
+  "id": "108-bribery",
+  "pages": [
+   108
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Bribery",
+  "titleOriginal": "رشوت",
+  "takeaway": "A country where bribery is normal can never hold its head up.",
+  "scene": "A short poem about bribery, one of the problems the poet comes back to again and again.",
+  "themes": [
+   "society",
+   "homeland"
+  ],
+  "level": "thread",
+  "lenses": [
+   "justice"
+  ],
+  "couplets": 2,
+  "firstLine": "جس ملک وچہ رشوت عام ہووے نام اوس دا ذلیل و خوار ہووے",
+  "words": 83
+ },
+ {
+  "id": "109-a-wish-on-eid",
+  "pages": [
+   109
+  ],
+  "form": "qita",
+  "language": "ur",
+  "title": "A wish on Eid",
+  "titleOriginal": "عید پر آرزو",
+  "takeaway": "How can you celebrate Eid when the one you love isn't with you?",
+  "scene": "The last page of the book: two short verses about spending Eid without the beloved. The first is in Urdu, the second in Punjabi.",
+  "themes": [
+   "love",
+   "sufi"
+  ],
+  "level": "sufi",
+  "lenses": [
+   "longing"
+  ],
+  "couplets": 4,
+  "firstLine": "فرقت کی آگ تھی کڑی اشکوں کے ساتھ ساتھ",
+  "words": 152
+ }
+]

@@ -1,0 +1,204 @@
+{
+  "id": "029-its-not-good",
+  "pages": [
+    29
+  ],
+  "form": "ghazal",
+  "language": "pa",
+  "title": "Some things just aren't right",
+  "themes": [
+    "love",
+    "society"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "justice",
+      "nearness"
+    ],
+    "anchors": [
+      8,
+      11
+    ]
+  },
+  "takeaway": "A gentle list of things a good person doesn't do.",
+  "scene": "This ghazal is printed in two columns, and every couplet ends with the same phrase: 'it isn't good.' It reads like a list of advice, sometimes to the beloved, sometimes to everyone.",
+  "couplets": [
+    {
+      "original": [
+        "ہر اک تے وس جانا بیبا چنگا نئیں",
+        "ریت دے محل بنانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Har ik te vas jaana beeba changa nahin",
+        "Ret de mehal banaana beeba changa nahin"
+      ],
+      "translation": [
+        "Falling for everyone you meet isn't good, dear.",
+        "Building palaces out of sand isn't good, dear."
+      ],
+      "story": "Don't fall for every person you meet. And don't build your hopes on something that won't hold, like a palace made of sand."
+    },
+    {
+      "original": [
+        "انج تے شرم حیا وی ہوندی چنگی اے",
+        "اوہلیوں تیر چلانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Inj te sharm hayaa vi hondi changi ae",
+        "Ohleyon teer chalaana beeba changa nahin"
+      ],
+      "translation": [
+        "Modesty and shyness are good, of course,",
+        "but shooting arrows from behind a screen isn't good, dear."
+      ],
+      "story": "Being modest and shy is fine. But hiding behind it while you hurt people with sneaky glances isn't fair."
+    },
+    {
+      "original": [
+        "شوخیاں تے انگڑائیاں ٹوہر جوانی دے",
+        "لنگھدیاں اگاں لانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Shokhiyaan te angraaiyaan, tohr jawaani de",
+        "Langhdiyaan aggaan laana beeba changa nahin"
+      ],
+      "translation": [
+        "Playfulness and stretching, the swagger of youth:",
+        "setting fires as you walk past isn't good, dear."
+      ],
+      "story": "Being young, playful and confident is natural. But walking past people and setting their hearts on fire on purpose isn't kind."
+    },
+    {
+      "original": [
+        "ہار شنگار بناں وی چنگے لگدے او",
+        "ایویں بھار اٹھانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Haar shingaar binaa vi change lagde o",
+        "Aiven bhaar uthaana beeba changa nahin"
+      ],
+      "translation": [
+        "You look lovely even without jewellery and make-up;",
+        "carrying all that weight for nothing isn't good, dear."
+      ],
+      "story": "He tells the beloved: you look beautiful without all the jewellery and make-up. You don't need to weigh yourself down with it."
+    },
+    {
+      "original": [
+        "جھلک دکھا کے سوہنے پھل جیہے مکھڑے دی",
+        "سولاں تے ٹنگ جانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Jhalak dikha ke sohne phull jehe mukhre di",
+        "Soolaan te tang jaana beeba changa nahin"
+      ],
+      "translation": [
+        "Showing a glimpse of your lovely, flower-like face,",
+        "and then leaving me hung on thorns, isn't good, dear."
+      ],
+      "story": "Letting someone see your beautiful face for a moment, then leaving them hanging in pain, isn't fair."
+    },
+    {
+      "original": [
+        "آس دا مندر ڈھا کے پیار دی گلی نوں",
+        "سنجا کر کے جانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Aas da mandar dha ke pyaar di gali nu",
+        "Sunja kar ke jaana beeba changa nahin"
+      ],
+      "translation": [
+        "Knocking down the temple of hope,",
+        "and leaving love's street empty, isn't good, dear."
+      ],
+      "story": "Tearing down someone's hopes, then walking away and leaving the street of love empty, isn't right."
+    },
+    {
+      "original": [
+        "تھل دی ریت چناں دا پانی کہندا اے",
+        "عشق دا روگ لگانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Thal di ret Chanaan da paani kehnda ae",
+        "Ishq da rog lagaana beeba changa nahin"
+      ],
+      "translation": [
+        "The desert sand and the Chenab's water both say:",
+        "catching the sickness of love isn't good, dear."
+      ],
+      "story": "The desert sand and the river Chenab have seen many lovers suffer, from the Punjabi love stories. They both warn: don't catch the 'disease' of love."
+    },
+    {
+      "original": [
+        "ظلم ستم دا تسبہ کھولیو عالم توں",
+        "بھکھیاں توں کھو کھانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Zulm sitam da tasma kholeyo aalim ton",
+        "Bhukhiyaan ton kho khaana beeba changa nahin"
+      ],
+      "translation": [
+        "Learned one, loosen the noose of cruelty and oppression:",
+        "snatching food from the hungry isn't good, dear."
+      ],
+      "story": "He turns to people with learning and power. Stop being cruel. Taking food from hungry people is wrong."
+    },
+    {
+      "original": [
+        "پیراں وچ نہ دل دیاں کرچاں چبھ جاون",
+        "شیشہ توڑ کے جانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Pairaan vich na dil diyaan kirchaan chubh jaavan",
+        "Sheesha tor ke jaana beeba changa nahin"
+      ],
+      "translation": [
+        "Careful the splinters of a heart don't pierce your own feet:",
+        "smashing the glass and walking away isn't good, dear."
+      ],
+      "story": "A broken heart is like broken glass. If you smash it and walk off, the sharp pieces might end up cutting your own feet."
+    },
+    {
+      "original": [
+        "من میرے وچ پیاری تیری مورت اے",
+        "پیار دا مندر ڈھانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Man mere vich pyaari teri moorat ae",
+        "Pyaar da mandar dhaana beeba changa nahin"
+      ],
+      "translation": [
+        "Your dear image lives in my heart:",
+        "tearing down the temple of love isn't good, dear."
+      ],
+      "story": "The beloved's picture lives inside his heart, like an image in a temple. Destroying that temple would be wrong."
+    },
+    {
+      "original": [
+        "دل دے محرم باجھوں احمدؔ ہر اگے",
+        "رونا تے کرلانا بیبا چنگا نئیں"
+      ],
+      "transliteration": [
+        "Dil de mehram baajhon Ahmad har agge",
+        "Rona te karlaana beeba changa nahin"
+      ],
+      "translation": [
+        "Ahmad, in front of anyone except the one who knows your heart,",
+        "crying and wailing isn't good, dear."
+      ],
+      "story": "He ends with advice for himself. Don't cry in front of just anyone, Ahmad. Save your tears for the one person who truly understands your heart."
+    }
+  ],
+  "deeper": "The last couplet has a Sufi echo: pour out your heart only to the one who truly knows it. For a believer, that means bringing your grief to God, not complaining to everyone. The couplet about snatching food from the hungry is a direct moral teaching found throughout Islam.",
+  "why": "The repeated ending, 'it isn't good', makes it easy to follow and fun to read aloud. It mixes flirtatious advice with serious lessons about kindness.",
+  "prompt": "If you wrote your own 'it isn't good' list for how people treat each other, what would be on it?",
+  "glossary": [
+    "ghazal",
+    "chenab"
+  ],
+  "notes": [
+    "'Beeba' is an affectionate Punjabi address, roughly 'dear' or 'good one'.",
+    "Printed in two columns; each row is read as one couplet."
+  ]
+}

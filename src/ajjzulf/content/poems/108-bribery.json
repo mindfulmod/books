@@ -1,0 +1,67 @@
+{
+  "id": "108-bribery",
+  "pages": [
+    108
+  ],
+  "form": "qita",
+  "language": "pa",
+  "title": "Bribery",
+  "titleOriginal": "رشوت",
+  "themes": [
+    "society",
+    "homeland"
+  ],
+  "reading": {
+    "level": "thread",
+    "lenses": [
+      "justice"
+    ],
+    "anchors": [
+      2
+    ]
+  },
+  "takeaway": "A country where bribery is normal can never hold its head up.",
+  "scene": "A short poem about bribery, one of the problems the poet comes back to again and again.",
+  "couplets": [
+    {
+      "original": [
+        "جس ملک وچہ رشوت عام ہووے نام اوس دا ذلیل و خوار ہووے",
+        "سرخ رو نہ ہوئے جہان اندر جینا اوس لئی سدا دشوار ہووے"
+      ],
+      "transliteration": [
+        "Jis mulk vich rishvat aam hove, naam os da zaleel-o-khwaar hove",
+        "Surkh-roo na hoe jahaan andar, jeena os layi sada dushvaar hove"
+      ],
+      "translation": [
+        "A country where bribery is common has its name disgraced and humiliated;",
+        "it never stands with honour in the world, and life there is always hard."
+      ],
+      "story": "A country where bribery is normal gets a bad name. It can never stand proudly in the world, and life there stays hard for everyone."
+    },
+    {
+      "original": [
+        "پئیا گل وچہ طوق ہے لعنتاں دا ہن پھلن آگے اک ہووے",
+        "پاکستان اس لعنت توں پاک ہووے احمدؔ ملک دا بیڑا پار ہووے"
+      ],
+      "transliteration": [
+        "Paya gal vich tauq hai laanataan da, hun phalan aage ik hove",
+        "Pakistan is laanat ton paak hove, Ahmad, mulk da beera paar hove"
+      ],
+      "translation": [
+        "A collar of curses has been put around its neck; now let it at least stop spreading.",
+        "May Pakistan be cleansed of this curse, Ahmad, so the country's boat can reach the shore."
+      ],
+      "story": "Bribery hangs around the country's neck like a collar of shame. He prays that Pakistan will be free of it, so the country can finally 'reach the shore' and succeed."
+    }
+  ],
+  "deeper": "The Prophet said, 'God's curse is on the one who gives a bribe and the one who takes it.' The poet's word 'laanat' (curse) echoes that saying exactly.",
+  "why": "A clear, short statement about how corruption hurts everyone.",
+  "prompt": "How does corruption, even small-scale, affect ordinary people?",
+  "glossary": [
+    "qita",
+    "rishvat"
+  ],
+  "notes": [
+    "Line 2 of the second couplet is partly unclear; the general sense is kept."
+  ]
+}
